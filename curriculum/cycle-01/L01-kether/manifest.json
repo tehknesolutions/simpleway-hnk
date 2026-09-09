@@ -1,0 +1,29 @@
+{
+  "lesson_id": "HNK-L01",
+  "sphere": "Kether",
+  "version": "1.0.0",
+  "source_status": "PUBLICATION-FROZEN",
+  "repository_status": "RECOVERED_PARTIAL_PUBLICATION_SOURCE_CONFIRMED",
+  "pedagogy": {
+    "opi_expected": 10,
+    "teacher_drills_expected": 72,
+    "validated_by_recovered_loader": true,
+    "raw_payload_recovered": false
+  },
+  "watch_lexemes": ["SARASALA", "VAMAVALA", "VAMAZAMU"],
+  "recovered_sources": [
+    "recovered/hnk_lesson1_release.dart",
+    "recovered/index.html"
+  ],
+  "missing_sources": [
+    "lesson1.release.v1.json",
+    "data/lesson1-data.js",
+    "hnk-runtime.js",
+    "app.js",
+    "styles.css",
+    "manifest.webmanifest"
+  ],
+  "promotion_rule": "Do not recreate the missing 10 cards or 72 drills from memory. Locate original payload or approve a new versioned authored release.",
+  "language_authority": "@hnk/linguas",
+  "glyph_authority": "@hnk/glyphs"
+}
