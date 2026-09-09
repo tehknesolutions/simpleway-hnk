@@ -1,0 +1,38 @@
+{
+  "snapshot_id": "HNK-L01-LANGUAGE-SNAPSHOT-2026-09-09",
+  "source": {
+    "repository": "tehknesolutions/codex-hnk",
+    "path": "packages/hnk-linguas/src/index.mjs",
+    "registry_version": "1.0.0-preproduction",
+    "registry_status": "RECOVERED_BETA_REGISTRY",
+    "registry_source": "PROJECT_RECOVERY_2026-09-08"
+  },
+  "lesson_id": "L01",
+  "rules": {
+    "authority_classes_must_remain_distinct": true,
+    "watch_not_silently_promoted": true,
+    "reference_not_ordinary_frozen_lexeme": true,
+    "unknown_phrase_meaning_remains_null": true
+  },
+  "lexemes": [
+    {"id":"LEX-001","transliteration":"VAMAKALA","meaning":{"pt":"apelido / nome familiar","en":"nickname / familiar name"},"authority":"FROZEN","certainty":"RECOVERED"},
+    {"id":"LEX-002","transliteration":"SARADAYA","meaning":{"pt":"origem / local de nascimento","en":"origin / birthplace"},"authority":"FROZEN","certainty":"RECOVERED"},
+    {"id":"LEX-003","transliteration":"VALIVAN","meaning":{"pt":"escritório","en":"office"},"authority":"FROZEN","certainty":"RECOVERED"},
+    {"id":"LEX-004","transliteration":"PARAZAMO","meaning":{"pt":"escola / domínio de estudo","en":"school / study domain"},"authority":"FROZEN","certainty":"RECOVERED"},
+    {"id":"LEX-005","transliteration":"VAMUSARO","meaning":{"pt":"descanso / período de lazer","en":"rest / leisure period"},"authority":"FROZEN","certainty":"RECOVERED"},
+    {"id":"LEX-006","transliteration":"SARASALA","meaning":{"pt":"tempo / duração","en":"time / duration"},"authority":"WATCH","certainty":"RECOVERED"},
+    {"id":"LEX-007","transliteration":"VAMAVALA","meaning":{"pt":"hobby / atividade de prazer","en":"hobby / pleasure activity"},"authority":"WATCH","certainty":"RECOVERED"},
+    {"id":"LEX-008","transliteration":"VAMAZAMU","meaning":{"pt":"canto / expressão harmônica","en":"singing / harmonic expression"},"authority":"WATCH","certainty":"RECOVERED"},
+    {"id":"LEX-033","transliteration":"HENUVOKODAN","meaning":{"pt":"nome do idioma / sistema HNK","en":"name of the HNK language / system"},"authority":"REFERENCE","certainty":"RECOVERED"}
+  ],
+  "phrases": [
+    {"id":"PHR-001","transliteration":"KALA YA EN ES KU KE","meaning":{"pt":"Qual é o seu nome?","en":"What is your name?"},"certainty":"APPROXIMATE","status":"RECOVERED"},
+    {"id":"PHR-002","transliteration":"AN ZAMI ZAMO","meaning":{"pt":"Eu falo / uso linguagem.","en":"I speak / use language."},"certainty":"APPROXIMATE","status":"RECOVERED"},
+    {"id":"PHR-003","transliteration":"EN ZAMI HENUVOKODAN KE","meaning":{"pt":"Você fala HENUVOKODAN?","en":"Do you speak HENUVOKODAN?"},"certainty":"APPROXIMATE","status":"RECOVERED"},
+    {"id":"PHR-004","transliteration":"EN SARI LO KU KE","meaning":null,"certainty":"UNRECOVERED","status":"RECOVERED"},
+    {"id":"PHR-005","transliteration":"EN DA KU KE","meaning":null,"certainty":"UNRECOVERED","status":"RECOVERED"},
+    {"id":"PHR-006","transliteration":"EN ZAMI KU ZAMO KE","meaning":null,"certainty":"UNRECOVERED","status":"RECOVERED"},
+    {"id":"PHR-007","transliteration":"AN ZAMI HENUVOKODAN","meaning":null,"certainty":"UNRECOVERED","status":"RECOVERED"}
+  ],
+  "counts": {"lexemes":9,"phrases":7,"frozen":5,"watch":3,"reference":1}
+}
