@@ -19,8 +19,10 @@ This prevents recovery evidence from being mistaken for current implementation.
 
 - **MISSING** — target slot exists, HNK payload is not reproducibly implemented.
 - **AUTHORED** — HNK content exists in the current repo.
-- **VALIDATED** — authored content passed its declared gate.
+- **VALIDATED** — authored content passed its declared whole-slot gate.
 - **FROZEN** — current payload is versioned, validated and publication-frozen.
+
+Technical subchecks may pass while a slot remains `AUTHORED` if semantic/human promotion is still pending.
 
 ## Current state — 2026-09-09
 
@@ -44,9 +46,12 @@ Target: **1,008 pedagogical slots**.
 - source phrase: `PHR-001`
 - source certainty: `APPROXIMATE`
 - current state: `AUTHORED`
-- validation: `PENDING`
+- question technical validation: `PASS`
+- whole-slot validation: `HOLD`
+- HNK40 structural sequence: **14 G-IDs, 0 unresolved transliteration units**
+- answer design: candidate bare proper-name slot `[PERSONAL_NAME]`, adding no invented HNK function words.
 
-It is intentionally **not** `VALIDATED` yet because the recovered gloss is approximate, the G01-G40 sequence is not yet attached to this course binding, the governed answer pattern is missing, and human linguistic review is still required.
+It remains intentionally below `VALIDATED` because the recovered phrase gloss is approximate and the v1.1 answer strategy still requires human linguistic promotion. Candidate D glyph visuals remain preproduction; only G-IDs are treated as structural authority here.
 
 ## Historical Lesson 1 evidence
 
@@ -59,21 +64,40 @@ They are **not** counted as current `FROZEN` because the raw v1.0 HNK payload is
 
 ## Allocation
 
-`cycle1-allocation.v1.json` expands the Cycle 1 contract into deterministic tracker quotas. The contract itself explicitly fixes 10 OPI, 5 stories, 4 Q&A, 5 structures, 72 Activation and 22 review items per Lesson.
+`cycle1-allocation.v1.json` expands the Cycle 1 contract/canon into deterministic tracker quotas.
 
-For tracker determinism, V1 derives an even allocation of:
+The recovered canonical target table explicitly states:
 
-- 3 teacher notes per Lesson (`21 = 3 x 7`);
-- 2 structure headers per Lesson (`14 = 2 x 7`).
+- 21 teacher notes = `7 x 3` → **3 per Lesson**;
+- 70 OPI = `7 x 10` → **10 per Lesson**;
+- 35 stories = `7 x 5` → **5 per Lesson**;
+- 28 Q&A = `7 x 4` → **4 per Lesson**;
+- 14 structure headers = `7 x 2` → **2 per Lesson**;
+- 35 structures = `7 x 5` → **5 per Lesson**;
+- 504 Activation = `7 x 72` → **72 per Lesson**;
+- 154 review = `7 x 22` → **22 per Lesson**.
 
-This produces the following vocabulary allocation while preserving the exact lesson totals:
+Therefore **3 teacher notes and 2 structure headers per Lesson are source-confirmed, not tracker assumptions**.
+
+Given those confirmed allocations plus canonical lesson totals, the remaining vocabulary allocation is mathematically constrained to:
 
 - L01: 32 vocabulary slots;
 - L02-L06: 16 each;
 - L07: 32;
 - total: 144.
 
-This is labeled `DERIVED_ALLOCATION_NOT_CURRICULUM_CANON` and must be revised if an authoritative source proves a different per-Lesson distribution.
+That vocabulary distribution remains labeled as a source-constrained mathematical derivation until an authoritative source explicitly enumerates all 144 vocabulary slots per Lesson.
+
+## Interrogative recovery state
+
+Current conservative recovery analysis supports:
+
+- `KE` — strong candidate for a clause-final interrogative operator;
+- `KU` — candidate **content-question component/interrogative variable**, without assigning it specifically to WHAT, WHERE, WHO or HOW;
+- `EN` — inferred second-person referent;
+- `SARI`, `LO`, `DA` — unresolved.
+
+Unknown recovered phrases `PHR-004`, `PHR-005` and `PHR-006` remain unassigned to specific OPI prompts. They are not mapped by curriculum order or visual similarity.
 
 ## Commands
 
@@ -81,6 +105,7 @@ This is labeled `DERIVED_ALLOCATION_NOT_CURRICULUM_CANON` and must be revised if
 npm run progress
 npm run progress:write
 npm run validate:progress
+npm run validate:l01-opi001
 npm test
 ```
 
