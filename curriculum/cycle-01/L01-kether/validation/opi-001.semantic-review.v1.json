@@ -1,0 +1,103 @@
+{
+  "review_id": "SWHNK-L01-OPI-001-WHOLE-SLOT-SEMANTIC-REVIEW-V1",
+  "slot_id": "L01-OPI-001",
+  "status": "HOLD_APPROXIMATE_GLOSS_TOKEN_ALIGNMENT_UNRECOVERED",
+  "english_prompt": "What's your name?",
+  "hnk": "KALA YA EN ES KU KE",
+  "source_phrase": {
+    "id": "PHR-001",
+    "status": "RECOVERED",
+    "certainty": "APPROXIMATE",
+    "meaning": {"pt":"Qual é o seu nome?","en":"What is your name?"}
+  },
+  "recovery_sweep": {
+    "file_library": {
+      "lesson1_release_loader_found": true,
+      "lesson1_release_payload_found": false,
+      "lesson1_data_js_found": false,
+      "exact_token_alignment_found": false,
+      "note": "Recovered loader proves the historical release used hnk_question, hnk_answer, glyph and segment fields, but the referenced payload is absent."
+    },
+    "google_drive": {
+      "lesson1_release_payload_found": false,
+      "lesson1_data_js_found": false,
+      "exact_phrase_source_with_token_glosses_found": false
+    },
+    "github": {
+      "lesson1_release_payload_found": false,
+      "project_scoped_exact_phrase_source_with_token_glosses_found": false
+    },
+    "conclusion": "No stronger source currently recovers token-level semantics for the historical phrase."
+  },
+  "token_alignment": [
+    {
+      "token": "KALA",
+      "semantic_state": "INFERRED_STRONG_MORPHOLOGICAL_DOMAIN",
+      "candidate_role": "name / name-domain",
+      "evidence": [
+        "PHR-001 whole-sentence approximate gloss is What is your name?",
+        "FROZEN lexeme VAMAKALA means nickname / familiar name and transparently contains KALA."
+      ],
+      "canonical_gloss_assigned": false
+    },
+    {
+      "token": "YA",
+      "semantic_state": "UNRECOVERED",
+      "candidate_role": null,
+      "canonical_gloss_assigned": false
+    },
+    {
+      "token": "EN",
+      "semantic_state": "INFERRED_DISTRIBUTIONAL",
+      "candidate_role": "second-person referent",
+      "canonical_gloss_assigned": false
+    },
+    {
+      "token": "ES",
+      "semantic_state": "UNRECOVERED",
+      "candidate_role": null,
+      "canonical_gloss_assigned": false
+    },
+    {
+      "token": "KU",
+      "semantic_state": "INFERRED_DISTRIBUTIONAL",
+      "candidate_role": "interrogative content selector/determiner",
+      "exact_wh_value": null,
+      "canonical_gloss_assigned": false
+    },
+    {
+      "token": "KE",
+      "semantic_state": "INFERRED_STRONG_DISTRIBUTIONAL",
+      "candidate_role": "clause-final interrogative operator",
+      "canonical_gloss_assigned": false
+    }
+  ],
+  "evidence_balance": {
+    "whole_sentence_semantic_match": "STRONG_BUT_APPROXIMATE_RECOVERED",
+    "structural_g_id_encoding": "PASS",
+    "answer_strategy": "BARE_PERSONAL_NAME_NON_INVENTIVE_CANDIDATE",
+    "token_alignment_completeness": "INCOMPLETE",
+    "unresolved_tokens": ["YA", "ES"],
+    "inferred_not_canonical_tokens": ["KALA", "EN", "KU", "KE"]
+  },
+  "decision": {
+    "implementation_state_before": "AUTHORED",
+    "implementation_state_after": "AUTHORED",
+    "whole_slot_validated": false,
+    "frozen": false,
+    "reason": "The recovered whole-sentence gloss and structural encoding strongly support the intended card, but exact historical token alignment remains incomplete and no human semantic promotion has occurred."
+  },
+  "promotion_conditions": [
+    "Recover a stronger historical source with token alignment, OR explicitly approve the inferred analysis as the governed v1.1 grammar interpretation.",
+    "Resolve or explicitly govern the roles of YA and ES.",
+    "Human-review the bare-name answer strategy as sufficient for the whole pedagogical slot.",
+    "Do not convert KALA, EN, KU or KE inferred roles into recovered canon merely to pass this gate."
+  ],
+  "progress_effect": {
+    "L01_OPI_AUTHORED": 10,
+    "L01_OPI_VALIDATED": 0,
+    "GLOBAL_AUTHORED": 10,
+    "GLOBAL_VALIDATED": 0
+  },
+  "next_gate": "SWHNK-L01-OPI-004-WHOLE-SLOT-REVIEW-V1"
+}
