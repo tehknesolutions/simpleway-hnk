@@ -1,0 +1,34 @@
+{
+  "model_id": "SWHNK-C1-PROGRESS-MODEL-V1",
+  "status": "ACTIVE",
+  "implementation_states": [
+    {"id":"MISSING","rank":0,"meaning":"Target slot exists, but no reproducible HNK pedagogical content is currently present for the slot."},
+    {"id":"AUTHORED","rank":1,"meaning":"HNK pedagogical content exists in the current repository but has not passed the required validation gate."},
+    {"id":"VALIDATED","rank":2,"meaning":"Current reproducible HNK pedagogical content has passed its declared validation gate but is not publication-frozen."},
+    {"id":"FROZEN","rank":3,"meaning":"Current reproducible HNK pedagogical content is versioned, validated and publication-frozen in the current repository."}
+  ],
+  "evidence_states": [
+    {"id":"NONE","meaning":"No source-backed evidence is currently registered for this slot."},
+    {"id":"STRUCTURE_RECOVERED","meaning":"The target/shape/count is source-backed, but HNK payload is not recovered."},
+    {"id":"SOURCE_CONFIRMED","meaning":"Historical source confirms pedagogical HNK content existed, but does not prove publication freeze."},
+    {"id":"SOURCE_CONFIRMED_FROZEN","meaning":"Historical source confirms the item belonged to a publication-frozen release, even if the raw payload is no longer present in this repository."}
+  ],
+  "scaffold_axis": {
+    "values":[false,true],
+    "meaning":"A slot may be scaffolded in the current course architecture while still having implementation_state=MISSING if its HNK payload is null/unbound."
+  },
+  "counting_rules": [
+    "Do not promote historical evidence into current implementation state.",
+    "Do not count a lexical binding as a curriculum vocabulary slot unless a governed mapping to that specific slot exists.",
+    "Do not count WATCH, CANDIDATE or GATE forms as FROZEN lexical coverage.",
+    "Do not count an English target prompt as authored HNK content when HNK fields remain null.",
+    "A slot can be SOURCE_CONFIRMED_FROZEN and simultaneously MISSING in current implementation if the historical frozen payload is not reproducibly recovered.",
+    "Overall implementation percentages use the 1,008 pedagogical slots as denominator.",
+    "Lexical coverage is reported separately as a proxy until 144 governed vocabulary-slot mappings exist."
+  ],
+  "lexical_proxy": {
+    "denominator":144,
+    "numerator_definition":"unique recovered Master Lexicon forms linked to at least one Cycle 1 Lesson",
+    "not_equivalent_to":"governed vocabulary-slot completion"
+  }
+}
