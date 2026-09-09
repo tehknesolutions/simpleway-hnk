@@ -1,0 +1,74 @@
+{
+  "review_id": "SWHNK-L01-OPI-005-WHOLE-SLOT-REVIEW-V1",
+  "slot_id": "L01-OPI-005",
+  "status": "HOLD_AUTHORED_LOCATIVE_CANDIDATE_NOT_SEMANTICALLY_PROMOTED",
+  "english_prompt": "Where do you work?",
+  "hnk": "EN VALI KUVAN KE",
+  "structural_encoding": {
+    "state": "PASS",
+    "glyph_ids": ["G02","G12","G31","G01","G14","G03","G23","G05","G31","G01","G12","G23","G02"],
+    "unresolved_transliteration_units": []
+  },
+  "semantic_components": [
+    {
+      "form": "VALI",
+      "id": "LEX-013",
+      "authority": "FROZEN",
+      "meaning": {"pt":"trabalho / trabalhar","en":"work"},
+      "source_lessons": ["L02","L03"],
+      "L01_use": "GOVERNED_CURRICULUM_REBIND",
+      "semantic_change": false,
+      "state": "SOURCE_BACKED_LEXEME_GOVERNED_REUSE"
+    },
+    {
+      "form": "KUVAN",
+      "id": "AUTH-001",
+      "authority": "CANDIDATE",
+      "semantic_role": "WHERE-like locative variable",
+      "historical_recovery_claim": false,
+      "state": "GOVERNED_AUTHORSHIP"
+    },
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"clause-final interrogative operator"}
+  ],
+  "semantic_assessment": {
+    "frozen_prompt_goal": "ask for the learner's work location",
+    "candidate_compositional_reading": "you + work + where + question",
+    "intent_coverage": "STRONG_FUNCTIONAL_MATCH",
+    "exact_historical_sentence_recovered": false,
+    "curriculum_rebind_changes_meaning": false,
+    "candidate_dependency_visible": true
+  },
+  "answer_strategy": {
+    "source": "location-answer-pattern.v1.json",
+    "pattern": "[PLACE]",
+    "state": "SUFFICIENT_AUTHORING_CANDIDATE",
+    "hnk_function_words_added": false
+  },
+  "checks": {
+    "structural_gids": "PASS",
+    "work_core_source_backed": "PASS",
+    "L01_rebind_governed_without_semantic_change": "PASS",
+    "locative_intent_represented": "PASS_BY_AUTHORED_CANDIDATE",
+    "answer_strategy_non_inventive": "PASS",
+    "historical_sentence_equivalence": "NOT_RECOVERED",
+    "KUVAN_authority": "CANDIDATE",
+    "EN_KE_grammar": "INFERRED",
+    "human_semantic_promotion": "PENDING"
+  },
+  "decision": {
+    "implementation_state_before": "AUTHORED",
+    "implementation_state_after": "AUTHORED",
+    "whole_slot_validated": false,
+    "frozen": false,
+    "reason": "The work core and L01 rebind are governed and the locative composition is strong, but KUVAN and the EN/KE beginner interrogative frame still await explicit semantic promotion."
+  },
+  "progress_effect": {"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "shared_promotion_gate_with": ["L01-OPI-004"],
+  "promotion_conditions": [
+    "Explicit human approval of KUVAN for L01 locative interrogation.",
+    "Explicit acceptance of EN ... KE as the v1.1 beginner interrogative frame.",
+    "Do not rewrite VALI historical source lessons when approving its L01 curriculum reuse."
+  ],
+  "next_gate": "SWHNK-L01-LOCATIVE-QUESTION-HUMAN-PROMOTION-BATCH-V1"
+}
