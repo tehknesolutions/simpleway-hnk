@@ -5,8 +5,11 @@ async function json(path) {
   return JSON.parse(await readFile(new URL(`../${path}`, import.meta.url), 'utf8'));
 }
 
-const queue = await json('curriculum/cycle-01/L01-kether/authoring/lesson.authoring.v1.1.json');
-const snapshot = await json('curriculum/cycle-01/L01-kether/authoring/lexicon.bindings.snapshot.json');
+const base = 'curriculum/cycle-01/L01-kether/authoring';
+const queue = await json(`${base}/lesson.authoring.v1.1.json`);
+const snapshot = await json(`${base}/lexicon.bindings.snapshot.json`);
+const binding = await json(`${base}/binding-pass.v1.json`);
+const requirements = await json(`${base}/semantic-requirements.v1.json`);
 
 const expectedOpi = [
   "What's your name?",
@@ -70,6 +73,35 @@ assert.deepEqual(byAuthority.REFERENCE.map(x => x.transliteration), ['HENUVOKODA
 assert.equal(snapshot.phrases.filter(x => x.meaning === null).length, 4);
 assert.equal(snapshot.phrases.filter(x => x.certainty === 'APPROXIMATE').length, 3);
 
+assert.equal(binding.binding_pass_id, 'SWHNK-L01-BINDING-PASS-V1');
+assert.equal(binding.status, 'COVERAGE_MAPPED_AUTHORING_REQUIRED');
+assert.equal(binding.policy.new_forms_created, false);
+assert.equal(binding.opi.length, 10);
+assert.equal(binding.metrics.cards_with_any_recovered_support, 8);
+assert.equal(binding.metrics.cards_fully_bound, 0);
+assert.equal(binding.metrics.cards_missing_core_semantics, 2);
+assert.equal(binding.metrics.cards_using_watch_support, 3);
+assert.equal(binding.metrics.cards_requiring_completion_authoring, 10);
+assert.ok(binding.opi.every(x => x.publishable === false));
+
+assert.equal(requirements.queue_id, 'SWHNK-L01-SEMANTIC-REQUIREMENTS-V1');
+assert.equal(requirements.status, 'OPEN_REQUIREMENTS_NO_NEW_FORMS');
+assert.equal(requirements.rules.this_file_creates_no_hnk_forms, true);
+assert.equal(requirements.lexical_requirements.length, 8);
+assert.equal(requirements.grammar_requirements.length, 8);
+assert.equal(requirements.metrics.lexical_authoring_required, 6);
+assert.equal(requirements.metrics.cross_lesson_rebind_reviews, 1);
+assert.equal(requirements.metrics.gate_reviews, 1);
+assert.equal(requirements.next_gate, 'SWHNK-L01-AUTHORING-DECISIONS-V1');
+
+const vali = requirements.lexical_requirements.find(x => x.id === 'L01-REQ-LEX-005');
+assert.equal(vali.existing_registry_candidate.form, 'VALI');
+assert.equal(vali.state, 'REBIND_REVIEW_REQUIRED');
+const vame = requirements.lexical_requirements.find(x => x.id === 'L01-REQ-LEX-007');
+assert.equal(vame.existing_registry_candidate.form, 'VAME');
+assert.equal(vame.existing_registry_candidate.authority, 'GATE');
+assert.equal(vame.state, 'GATE_REVIEW_REQUIRED');
+
 console.log('PASS SWHNK-L01-AUTHORING-V1');
-console.log('10 OPI structural slots | 72 Activation slots | 9 lexemes | 7 phrases');
-console.log('All new HNK authoring fields remain null/unbound until governed binding.');
+console.log('10 OPI | 72 Activation slots | 9 lexemes | 7 phrases | binding coverage locked');
+console.log('No new HNK form has been created; semantic and grammar requirements remain governed.');
