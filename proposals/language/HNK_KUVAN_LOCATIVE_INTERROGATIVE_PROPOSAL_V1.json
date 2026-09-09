@@ -1,0 +1,78 @@
+{
+  "proposal_id":"HNK-KUVAN-LOCATIVE-INTERROGATIVE-PROPOSAL-V1",
+  "status":"AUTHORING_PROPOSAL_NOT_CANON",
+  "target_if_approved":"tehknesolutions/codex-hnk/packages/hnk-linguas",
+  "candidate": {
+    "form":"KUVAN",
+    "proposed_meaning":{"pt":"variável interrogativa locativa; equivalente funcional aproximado de onde/em que lugar","en":"locative interrogative variable; approximate functional equivalent of where/in what place"},
+    "proposed_type":"GRAMMATICAL_COMPOUND",
+    "proposed_authority":"CANDIDATE",
+    "certainty":"AUTHORED_DERIVATION",
+    "historical_recovery_claim":false,
+    "glyph_ids":["G23","G05","G31","G01","G12"],
+    "safe_units":["K","U","V","A","N"],
+    "phonotactic_shape":"CVCVC",
+    "safe_transliteration_complete":true,
+    "master_lexicon_exact_collision":false
+  },
+  "derivation": {
+    "left":"KU",
+    "left_state":"RECOVERED_FORM_COMPONENT / INFERRED_CONSERVATIVE_ROLE",
+    "left_role":"content variable / content-question component; NOT currently glossed as a specific WH word",
+    "right":"VAN",
+    "right_state":"RECOVERED_RECURRING_SEGMENT / INFERRED_STRONG_MORPHOLOGICAL_ROLE",
+    "right_role":"location/place formative hypothesis",
+    "composition":"KU + VAN -> KUVAN",
+    "semantic_rationale":"specialize a generic content variable by a locative domain formative rather than falsely declaring recovered KU = WHERE",
+    "compounding_rule_state":"PROPOSED_NOT_PRODUCTIVE_CANON"
+  },
+  "evidence": {
+    "KU_distribution":["PHR-001","PHR-004","PHR-005","PHR-006"],
+    "KE_question_distribution":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+    "VAN_family":[
+      {"form":"VALIVAN","meaning":"office","relation":"VALI work -> VALIVAN office is strong place-formation evidence"},
+      {"form":"TAYOVAN","meaning":"city"},
+      {"form":"PAROVAN","meaning":"library"},
+      {"form":"VANI","meaning":null,"note":"WATCH; not used as semantic confirmation"}
+    ]
+  },
+  "proposed_test_frames": [
+    {
+      "opi":"L01-OPI-005",
+      "current_candidate":"EN VALI KU KE",
+      "proposed_v2":"EN VALI KUVAN KE",
+      "intended_reading":"Where do you work?",
+      "advantage":"Separates locative variable from generic KU and avoids collision with a future activity/content question.",
+      "state":"PROPOSAL_ONLY"
+    },
+    {
+      "opi":"L01-OPI-004",
+      "current_candidate":"EN SARADAYA KU KE",
+      "proposed_v2":"EN SARADAYA KUVAN KE",
+      "intended_reading":"Where were you born? / Your birthplace is where?",
+      "advantage":"Makes locative intent explicit in the authored system rather than assigning WHERE directly to KU.",
+      "state":"PROPOSAL_ONLY"
+    }
+  ],
+  "not_solved_by_this_candidate": [
+    "WHAT/activity distinction for L01-OPI-006",
+    "WHO for L01-OPI-007",
+    "HOW/AGE for L01-OPI-003",
+    "comitative WITH relation",
+    "exact historical meanings of SARI/LO/DA"
+  ],
+  "promotion_gate": [
+    "Approve a narrowly scoped compositional rule allowing KU + semantic-domain formative compounds.",
+    "Confirm VAN may be used productively for locative specialization rather than only observed inside lexicalized forms.",
+    "Human linguistic review of KUVAN sound/form and semantic transparency.",
+    "Add as CANDIDATE, never FROZEN, on first registry entry.",
+    "Update Cycle 1 bindings only after canonical registry change.",
+    "Run collision and HNK40 round-trip checks in canonical owner repo."
+  ],
+  "progress_effect": {
+    "current_AUTHORED_slots":5,
+    "change":0,
+    "reason":"KUVAN is a language-system proposal and is not yet applied to an OPI binding."
+  },
+  "next_gate":"SWHNK-HNK-COMPOSITIONAL-INTERROGATIVE-RULE-V1"
+}
