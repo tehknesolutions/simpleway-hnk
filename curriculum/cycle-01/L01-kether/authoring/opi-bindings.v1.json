@@ -1,12 +1,13 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_4_OF_10",
+  "status": "AUTHORING_ACTIVE_5_OF_10",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
     "authored_candidate_must_not_be_mislabeled_as_recovered": true,
     "approximate_phrase_gloss_requires_validation_before_promotion": true,
     "watch_usage_must_remain_visible": true,
+    "curriculum_rebind_must_remain_distinct_from_recovered_provenance": true,
     "glyph_ids_required_before_validated_state": true,
     "historical_v1_0_payload_not_reconstructed": true
   },
@@ -64,6 +65,24 @@
       "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-04-Q1","authoring/lexicon.bindings.snapshot.json#LEX-002"]
     },
     {
+      "slot_id":"L01-OPI-005",
+      "course_prompt_id":"L01-OPI-05",
+      "opi_english":"Where do you work?",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE_WITH_GOVERNED_REBIND",
+      "candidate_id":"CAND-L01-OPI-05-Q1",
+      "hnk_question":"EN VALI KU KE",
+      "lexeme_ids":["LEX-013"],
+      "lexeme_authority":["FROZEN"],
+      "lexeme_binding_origin":["GOVERNED_CURRICULUM_REBIND"],
+      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "implementation_state":"AUTHORED",
+      "validation_state":"HOLD_WH_SEMANTICS",
+      "glyph_ids":["G02","G12","G31","G01","G14","G03","G23","G05","G23","G02"],
+      "answer_pattern":null,
+      "promotion_blockers":["KU exact WH semantics remain unresolved.","Question frame is v1.1 authorship.","Work-location answer strategy unresolved."],
+      "provenance":["authoring/opi-005.candidate.v1.json","authoring/curriculum-rebinds.v1.json#LEX-013","tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs@dc2169df88be767be4de8856adbada44897927ad"]
+    },
+    {
       "slot_id":"L01-OPI-008",
       "course_prompt_id":"L01-OPI-08",
       "opi_english":"What are your hobbies?",
@@ -84,13 +103,14 @@
   ],
   "metrics": {
     "opi_target":10,
-    "authored":4,
+    "authored":5,
     "authored_recovered_phrase":1,
-    "authored_v1_1_candidates":3,
+    "authored_v1_1_candidates":4,
     "question_technical_pass":1,
+    "governed_rebind_usage":1,
     "watch_test_only":1,
     "validated":0,
     "frozen":0
   },
-  "next_gate":"SWHNK-L01-OPI-05-VALI-REBIND-V1"
+  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V1"
 }
