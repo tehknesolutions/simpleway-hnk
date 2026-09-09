@@ -1,0 +1,41 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V9",
+  "as_of":"2026-09-09",
+  "status":"L01_OPI_AUTHORING_COMPLETE_10_OF_10_VALIDATION_PENDING",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":10,"VALIDATED":0,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.0079,"AUTHORED":0.9921,"VALIDATED":0.0,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies":{
+    "recovered":{"forms":31,"target":144,"percent":21.5278},
+    "governed":{"recovered_forms":31,"authored_candidates":3,"unique_assets":34,"target":144,"percent":23.6111},
+    "authored_candidates":[
+      {"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},
+      {"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false},
+      {"id":"AUTH-003","form":"KUON","authority":"CANDIDATE","historical_recovery_claim":false,"dependency":"LEX-026 ON remains GATE"}
+    ]
+  },
+  "L01":{
+    "target":155,
+    "AUTHORED":10,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":6.4516,
+    "opi":{"target":10,"AUTHORED":10,"percent":100.0,"missing":[]},
+    "historical_frozen_evidence":82
+  },
+  "cycle1_opi":{"target":70,"AUTHORED":10,"percent":14.2857},
+  "new_authored_slot":{
+    "slot":"L01-OPI-007",
+    "english":"Where do you live and who do you live with?",
+    "hnk_question_sequence":["EN VANI KUVAN KE","EN VANI KUON KE"],
+    "VANI":{"id":"LEX-031","authority":"WATCH","master_lexicon_meaning":null,"test_semantic_hypothesis":"live/reside"},
+    "KUVAN":{"id":"AUTH-001","authority":"CANDIDATE"},
+    "KUON":{"id":"AUTH-003","authority":"CANDIDATE","dependency":"ON remains GATE"},
+    "overt_with_particle_added":false,
+    "state":"AUTHORED_HOLD"
+  },
+  "remaining_opi_hard_gaps":[],
+  "validation_summary":{"whole_slot_validated":0,"whole_slot_frozen":0,"rule":"10/10 authorship does not imply semantic validation or publication freeze."},
+  "next_gate":"SWHNK-L01-OPI-10-OF-10-AUTHORED-REVIEW-V1"
+}
