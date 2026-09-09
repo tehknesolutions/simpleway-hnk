@@ -1,6 +1,6 @@
 {
   "matrix_id":"SWHNK-L01-OPI-VALIDATION-MATRIX-V1",
-  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_2_OF_10_VALIDATED",
+  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_4_OF_10_VALIDATED",
   "lesson_id":"L01",
   "progress_model":"MISSING -> AUTHORED -> VALIDATED -> FROZEN",
   "whole_slot_validation_requirements":[
@@ -11,7 +11,8 @@
     "GATE dependencies require explicit policy before normal validation.",
     "A sufficient pedagogical answer strategy must exist.",
     "G-IDs, not Candidate D drawings, are structural authority.",
-    "VALIDATED is not FROZEN; publication freeze is later."
+    "VALIDATED is not FROZEN; publication freeze is later.",
+    "Scoped course validation does not change language authority or historical recovery provenance."
   ],
   "cards":[
     {"slot_id":"L01-OPI-001","english":"What's your name?","hnk":["KALA YA EN ES KU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-001.semantic-review.v1.json","blockers":["Approximate gloss; YA/ES unresolved; inferred token roles not promoted."]},
@@ -19,16 +20,16 @@
     {"slot_id":"L01-OPI-003","english":"How old are you?","hnk":["EN KU SARASALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-003.semantic-review.v1.json","blockers":["SARASALA WATCH; contextual age reading; number system open."]},
     {"slot_id":"L01-OPI-004","english":"Where were you born?","hnk":["EN SARADAYA KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","review_record":"opi-004.semantic-review.v1.json","validation_transition":"opi-004-005.validated-transition.v1.json","remaining_freeze_blockers":["KUVAN remains CANDIDATE.","Publication freeze is separate."]},
     {"slot_id":"L01-OPI-005","english":"Where do you work?","hnk":["EN VALI KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","review_record":"opi-005.semantic-review.v1.json","validation_transition":"opi-004-005.validated-transition.v1.json","remaining_freeze_blockers":["KUVAN remains CANDIDATE.","VALI rebind provenance must stay explicit.","Publication freeze is separate."]},
-    {"slot_id":"L01-OPI-006","english":"What do you do at work/school?","hnk":["EN KU VALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-006.semantic-review.v1.json","blockers":["VALA CANDIDATE; KU inferred; contextual work/school relation and response inventory require approval."]},
+    {"slot_id":"L01-OPI-006","english":"What do you do at work/school?","hnk":["EN KU VALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WITH_CONTEXT","review_state":"REVIEWED_VALIDATED","review_record":"opi-006.semantic-review.v1.json","validation_transition":"opi-006-008.validated-transition.v1.json","remaining_freeze_blockers":["VALA remains CANDIDATE.","EN KU X KE remains scoped course grammar.","Publication freeze is separate."]},
     {"slot_id":"L01-OPI-007","english":"Where do you live and who do you live with?","hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-007.semantic-review.v1.json","blockers":["VANI meaning null with residence hypothesis; KUON CANDIDATE depends on ON=GATE; co-resident valency authored."]},
-    {"slot_id":"L01-OPI-008","english":"What are your hobbies?","hnk":["EN KU VAMAVALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-008.semantic-review.v1.json","blockers":["VAMAVALA WATCH; KU/EN relation inferred; answer inventory open."]},
+    {"slot_id":"L01-OPI-008","english":"What are your hobbies?","hnk":["EN KU VAMAVALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WATCH_VISIBLE","review_state":"REVIEWED_VALIDATED","review_record":"opi-008.semantic-review.v1.json","validation_transition":"opi-006-008.validated-transition.v1.json","remaining_freeze_blockers":["VAMAVALA remains WATCH.","EN KU X KE remains scoped course grammar.","Publication freeze is separate."]},
     {"slot_id":"L01-OPI-009","english":"Do you like to sing?","hnk":["EN VAME VAMAZAMU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-009.semantic-review.v1.json","blockers":["VAME GATE; VAMAZAMU WATCH; yes/no response strategy unresolved."]},
-    {"slot_id":"L01-OPI-010","english":"What do you do on weekends?","hnk":["EN KU VALA KE"],"hnk_context":"VAMUSARO","validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-010.semantic-review.v1.json","blockers":["VAMUSARO is broader than weekend; VALA CANDIDATE; contextual equivalence approximate."]}
+    {"slot_id":"L01-OPI-010","english":"What do you do on weekends?","hnk":["EN KU VALA KE"],"hnk_context":"VAMUSARO","validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-010.semantic-review.v1.json","blockers":["VAMUSARO is broader than weekend; contextual equivalence is approximate even though EN KU VALA KE is now validated in OPI 6 scope."]}
   ],
   "reviewed_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
-  "validated_slots":["L01-OPI-004","L01-OPI-005"],
-  "reviewed_hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
-  "applied_human_batch":"locative-question-human-promotion-batch.v1.json",
-  "summary":{"target":10,"authored_or_better":10,"authored_current_state":8,"structural_static_pass":10,"reviewed":10,"validated":2,"validated_percent":20.0,"frozen":0,"next_batch_candidates":["L01-OPI-006","L01-OPI-008"],"high_risk_hold":["L01-OPI-003","L01-OPI-007","L01-OPI-009","L01-OPI-010"]},
-  "next_gate":"SWHNK-L01-VALIDATION-BATCH-2-V1"
+  "validated_slots":["L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008"],
+  "reviewed_hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-007","L01-OPI-009","L01-OPI-010"],
+  "applied_human_batches":["locative-question-human-promotion-batch.v1.json","content-question-human-promotion-batch.v1.json"],
+  "summary":{"target":10,"authored_or_better":10,"authored_current_state":6,"structural_static_pass":10,"reviewed":10,"validated":4,"validated_percent":40.0,"frozen":0,"next_batch_candidates":["L01-OPI-010","L01-OPI-002"],"high_risk_hold":["L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-3-SELECTION-V1"
 }
