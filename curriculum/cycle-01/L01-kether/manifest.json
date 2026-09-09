@@ -23,6 +23,11 @@
     "styles.css",
     "manifest.webmanifest"
   ],
+  "rules": {
+    "non_invention": true,
+    "raw_payload_must_be_source_recovered": true,
+    "frozen_content_requires_version_bump": true
+  },
   "promotion_rule": "Do not recreate the missing 10 cards or 72 drills from memory. Locate original payload or approve a new versioned authored release.",
   "language_authority": "@hnk/linguas",
   "glyph_authority": "@hnk/glyphs"
