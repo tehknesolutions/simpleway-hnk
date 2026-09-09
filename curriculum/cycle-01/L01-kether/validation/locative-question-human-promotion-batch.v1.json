@@ -1,13 +1,27 @@
 {
   "batch_id": "SWHNK-L01-LOCATIVE-QUESTION-HUMAN-PROMOTION-BATCH-V1",
-  "status": "AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status": "APPROVED_FOR_SCOPED_COURSE_VALIDATION",
   "scope": ["L01-OPI-004", "L01-OPI-005"],
+  "approval": {
+    "recorded_at": "2026-09-09",
+    "approval_source": "CURRENT_PROJECT_CONVERSATION_USER_CONTINUATION_APPROVAL",
+    "user_instruction": "siga",
+    "interpreted_scope": "Execute the immediately recommended synchronization and scoped human gate for OPI 4 and 5.",
+    "decisions_approved": ["DEC-L01-LOC-001", "DEC-L01-LOC-002", "DEC-L01-LOC-003"],
+    "not_approved": [
+      "KUVAN promotion to FROZEN",
+      "historical recovery claim for KUVAN",
+      "universal HNK grammar claim for EN ... KE",
+      "publication freeze"
+    ]
+  },
   "purpose": "Separate course-use semantic validation from historical recovery and from language-authority promotion.",
-  "decisions_requested": [
+  "decisions": [
     {
       "id": "DEC-L01-LOC-001",
       "statement": "Accept AUTH-001 KUVAN as the governed v1.1 locative interrogative variable for Lesson 1 course use.",
-      "if_approved": {
+      "decision": "APPROVED",
+      "effect": {
         "KUVAN_authority": "CANDIDATE_UNCHANGED",
         "historical_recovery_claim": false,
         "course_use": "APPROVED_FOR_VALIDATED_L01_LOCATIVE_FRAMES",
@@ -17,7 +31,8 @@
     {
       "id": "DEC-L01-LOC-002",
       "statement": "Accept EN ... KE as the governed v1.1 beginner question frame for these two locative cards: EN as second-person referent and KE as clause-final interrogative operator.",
-      "if_approved": {
+      "decision": "APPROVED",
+      "effect": {
         "historical_recovery_claim": false,
         "grammar_scope": "L01_OPI_004_AND_005",
         "universal_HNK_grammar_claim": false
@@ -26,7 +41,8 @@
     {
       "id": "DEC-L01-LOC-003",
       "statement": "Accept bare [PLACE] as a sufficient beginner answer pattern for these location questions, without adding an unrecovered copula, preposition or case marker.",
-      "if_approved": {
+      "decision": "APPROVED",
+      "effect": {
         "answer_pattern": "[PLACE]",
         "hnk_function_words_added": false
       }
@@ -50,14 +66,14 @@
     "answer_pattern": "location-answer-pattern.v1.json"
   },
   "explicit_non_effects": [
-    "Does not mark KUVAN as recovered historical HNK.",
-    "Does not promote KUVAN from CANDIDATE to FROZEN.",
-    "Does not declare EN or KE universal HNK grammar outside the approved course scope.",
-    "Does not recover the missing v1.0 raw payload.",
-    "Does not freeze either OPI; FROZEN remains a later publication gate."
+    "KUVAN is not marked as recovered historical HNK.",
+    "KUVAN remains CANDIDATE, not FROZEN.",
+    "EN or KE are not declared universal HNK grammar outside the approved course scope.",
+    "The missing v1.0 raw payload is not considered recovered.",
+    "Neither OPI is FROZEN; publication freeze remains a later gate."
   ],
-  "projected_effect_if_all_three_decisions_are_approved": {
-    "L01_OPI_AUTHORED": 10,
+  "applied_effect": {
+    "L01_OPI_authored_or_better": 10,
     "L01_OPI_VALIDATED_before": 0,
     "L01_OPI_VALIDATED_after": 2,
     "L01_OPI_VALIDATED_percent_after": 20.0,
@@ -67,7 +83,5 @@
     "FROZEN_after": 0,
     "candidate_authorities_changed": 0
   },
-  "application_rule": "Do not apply projected VALIDATED transitions unless explicit human approval is recorded for this exact batch or equivalent scoped decisions.",
-  "next_gate_if_approved": "SWHNK-L01-OPI-004-005-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved": "KEEP_OPI_004_005_AUTHORED_HOLD"
+  "next_gate": "SWHNK-L01-OPI-004-005-VALIDATED-TRANSITION-V1"
 }
