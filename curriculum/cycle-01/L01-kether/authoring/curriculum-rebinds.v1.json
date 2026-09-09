@@ -1,0 +1,29 @@
+{
+  "rebind_set_id":"SWHNK-L01-CURRICULUM-REBINDS-V1",
+  "status":"APPLIED_TO_CANONICAL_CYCLE1_OVERLAY",
+  "owner":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs",
+  "principle":"Curriculum rebinds expand teachable lesson scope without rewriting recovered Master Lexicon provenance.",
+  "rebinds":[
+    {
+      "lexeme_id":"LEX-013",
+      "form":"VALI",
+      "meaning":{"pt":"trabalho / trabalhar","en":"work"},
+      "authority":"FROZEN",
+      "recovered_lessons":["L02","L03"],
+      "governed_added_lesson":"L01",
+      "reason":"L01 includes the canonical OPI intents 'Where do you work?' and 'What do you do at work/school?'. Reusing the already-FROZEN work lexeme avoids inventing a duplicate form.",
+      "semantic_change":false,
+      "authority_change":false,
+      "provenance_rewritten":false,
+      "canonical_overlay_commit":"dc2169df88be767be4de8856adbada44897927ad"
+    }
+  ],
+  "coverage_effect": {
+    "L01_before":9,
+    "L01_after":10,
+    "unique_cycle1_forms_before":31,
+    "unique_cycle1_forms_after":31,
+    "vocabulary_proxy_percent":21.5278
+  },
+  "next_use":"L01-OPI-005 and L01-OPI-006 may reference VALI in governed authoring candidates."
+}
