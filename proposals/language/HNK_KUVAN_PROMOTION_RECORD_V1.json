@@ -1,0 +1,47 @@
+{
+  "record_id":"HNK-KUVAN-PROMOTION-RECORD-V1",
+  "status":"PROMOTED_TO_CANONICAL_AUTHORED_REGISTRY_AS_CANDIDATE",
+  "date":"2026-09-09",
+  "decision":"APPROVE_AS_CANDIDATE_ONLY",
+  "source_proposal":"HNK_KUVAN_LOCATIVE_INTERROGATIVE_PROPOSAL_V1.json",
+  "rule_proposal":"HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1.json",
+  "canonical_owner":"tehknesolutions/codex-hnk/packages/hnk-linguas",
+  "canonical_registry":"@hnk/linguas/authored",
+  "canonical_id":"AUTH-001",
+  "form":"KUVAN",
+  "authority":"CANDIDATE",
+  "historical_recovery_claim":false,
+  "meaning_state":"AUTHORED_DERIVATION",
+  "glyph_ids":["G23","G05","G31","G01","G12"],
+  "promotion_effect": {
+    "recovered_cycle1_forms_before":31,
+    "recovered_cycle1_forms_after":31,
+    "authored_cycle1_candidates_before":0,
+    "authored_cycle1_candidates_after":1,
+    "governed_unique_language_assets_before":31,
+    "governed_unique_language_assets_after":32,
+    "recovered_proxy_percent":21.5278,
+    "governed_asset_proxy_percent":22.2222
+  },
+  "applied_course_bindings":[
+    {"slot":"L01-OPI-004","form":"EN SARADAYA KUVAN KE","state":"AUTHORED_HOLD"},
+    {"slot":"L01-OPI-005","form":"EN VALI KUVAN KE","state":"AUTHORED_HOLD"}
+  ],
+  "boundaries": [
+    "KUVAN is not FROZEN.",
+    "KUVAN is not a recovered historical form.",
+    "KU remains unresolved by exact WH type in recovered evidence.",
+    "VAN is not globally productive by this decision.",
+    "PHR-004/005/006 keep null glosses.",
+    "OPI-004/005 remain below VALIDATED while EN/KE and answer strategies are not fully governed."
+  ],
+  "canonical_commits": {
+    "authored_registry_created":"037b1a927bb6c0dbd4bed60e255cfd7987c31653",
+    "package_exported":"387d475eb499924f678624449fccdcc9d9d610f2",
+    "cycle1_coverage_updated":"683f0cffd145152afaba442f19d1c36e6824eb1b",
+    "cycle1_types_updated":"47d65322b21cc338a4ba969a8879139627a30c31",
+    "authored_tests_added":"d5ee58b5f81250a3c43911355b7f84576b9f8243",
+    "cycle1_tests_updated":"71d774952257abfca3bd6fb3e51750520d56840f"
+  },
+  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V2"
+}
