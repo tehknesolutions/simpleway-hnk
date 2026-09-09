@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#060b10">
+<title>HENUVOKODAN · Lesson 1 Product v1</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><div class="topbar-inner">
+  <div class="brand">HNK · LÍNGUAS<small>LESSON 1 · PUBLICATION FREEZE v1.0</small></div>
+  <div class="spacer"></div>
+  <button class="mode-btn" data-mode="student">Aluno</button>
+  <button class="mode-btn" data-mode="teacher">Professor</button>
+  <button class="icon-btn" id="openKeyboard">⌨ HNK</button>
+  <button class="icon-btn" id="printBtn">Imprimir</button>
+  <div class="progress-ring" id="progressRing" style="--progress:0deg"><span id="progressText">0%</span></div>
+</div></header>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="side-card"><div class="side-title">Lesson 1</div><strong id="lessonCount">10 blocos</strong>
+    <p class="muted" style="font-size:12px">Identidade · origem · vida · ação · linguagem</p></div>
+  <div class="side-card"><div class="side-title">Etapas</div><div id="steps"></div></div>
+  <div class="side-card"><div class="side-title">Sessão</div>
+    <button class="step-link" id="resetBtn"><span class="step-num">↺</span><span>Zerar progresso</span></button></div>
+</aside>
+
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">M03-G.4 · Productization</div>
+  <h1>HENUVOKODAN<br>Lesson 1</h1>
+  <p>Uma experiência única para aprender HNK como língua: primeiro intenção, som e resposta; depois glifo, ponte multilíngue e — quando fizer sentido — a camada CODEX.</p>
+  <div class="hero-actions"><span class="badge">HNK-SIMPLE</span><span class="badge">Esperanto</span><span class="badge">Hebraico + translit.</span><span class="badge">Grego Koiné + translit.</span></div>
+  <div id="appError" class="muted"></div>
+</section>
+
+<section id="lesson"></section>
+
+<section class="student-only">
+  <div class="eyebrow">Practice engine</div>
+  <h2>Fixação ativa</h2>
+  <div id="exercise"></div>
+</section>
+
+<section class="card lesson-card" id="releaseNote">
+        <div class="eyebrow">Publication Freeze</div>
+        <h2>Lesson 1 v1.0</h2>
+        <p class="muted">Cânone OPI 10/10 congelado. Três formas permanecem em observação de sala de aula: SARASALA, VAMAVALA e VAMAZAMU.</p>
+        </section>
+        <section id="teacherPanel"></section>
+</main>
+</div>
+</div>
+
+<div class="keyboard-modal" id="keyboardModal">
+  <div class="keyboard-panel">
+    <div class="card-head"><div><div class="eyebrow">HNK INPUT SYSTEM</div><h2 style="margin:4px 0">Sacred 10×4</h2></div><button class="icon-btn" id="closeKeyboard">Fechar</button></div>
+    <div id="worldBtns" class="worlds"></div>
+    <div id="keyboardGrid" class="keyboard-grid"></div>
+    <div class="hnk keyboard-output" id="keyboardOutput"></div>
+    <div class="segment" id="keyboardTranslit"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="pill-btn" id="keyboardBack">⌫</button><button class="pill-btn" id="keyboardSpace">Espaço</button><button class="pill-btn" id="keyboardClear">Limpar</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="./data/lesson1-data.js"></script>
+<script src="./hnk-runtime.js"></script>
+<script src="./app.js"></script>
+</body></html>
