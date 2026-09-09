@@ -1,0 +1,42 @@
+{
+  "rule_id": "HNK-RESIDENCE-VALENCY-RULE-V1",
+  "status": "AUTHORING_RULE_PROPOSAL_NOT_CANON",
+  "purpose": "Model residence location and co-resident questions without inventing an English-calque comitative particle.",
+  "predicate": {
+    "form": "VANI",
+    "lexeme_id": "LEX-031",
+    "authority": "WATCH",
+    "historical_meaning": null,
+    "test_semantic_hypothesis": "live/reside"
+  },
+  "frames": [
+    {
+      "id": "RESIDENCE-LOCATION-Q",
+      "schema": "EN VANI KUVAN KE",
+      "intended_function": "Where do you live?",
+      "dependencies": ["VANI semantic hypothesis", "AUTH-001 KUVAN", "EN/KE inferred grammar"],
+      "status": "EXPERIMENTAL"
+    },
+    {
+      "id": "RESIDENCE-CORESIDENT-Q",
+      "schema": "EN VANI KUON KE",
+      "intended_function": "Who do you live with?",
+      "dependencies": ["VANI semantic hypothesis", "KUON person-interrogative candidate", "co-resident complement valency", "EN/KE inferred grammar"],
+      "status": "EXPERIMENTAL"
+    }
+  ],
+  "valency_decision": {
+    "residence_predicate_accepts_location_complement": true,
+    "residence_predicate_accepts_co_resident_complement_in_test_frame": true,
+    "overt_comitative_particle_required": false,
+    "reason": "Avoid inventing a free equivalent of English WITH before historical evidence or a broader comitative system exists."
+  },
+  "semantic_safety": {
+    "does_not_change_LEX_031_meaning": true,
+    "does_not_promote_VANI": true,
+    "does_not_create_WITH_lexeme": true,
+    "does_not_claim_historical_valency": true,
+    "test_only": true
+  },
+  "next_gate": "SWHNK-L01-OPI-007-EXPERIMENTAL-AUTHORING-V1"
+}
