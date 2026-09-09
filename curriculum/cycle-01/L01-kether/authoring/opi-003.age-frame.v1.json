@@ -1,0 +1,54 @@
+{
+  "design_id":"SWHNK-L01-OPI-003-AGE-CONSTRUCTION-V1",
+  "status":"AUTHORED_CANDIDATE_HOLD",
+  "opi":"L01-OPI-03",
+  "english_intent":"How old are you?",
+  "implementation_state":"AUTHORED",
+  "hnk_question":"EN KU SARASALA KE",
+  "semantic_reframe": {
+    "pt":"Qual é o seu tempo/duração? — leitura contextual de idade",
+    "en":"What is your time/duration? — contextual age reading",
+    "new_age_lexeme_created":false
+  },
+  "components": [
+    {"form":"EN","state":"RECOVERED_FORM_INFERRED_ROLE","role":"second-person referent"},
+    {"form":"KU","state":"RECOVERED_FORM_INFERRED_STRONGER_ROLE","role":"pre-nominal interrogative content selector"},
+    {"form":"SARASALA","id":"LEX-006","state":"RECOVERED_WATCH","authority":"WATCH","role":"time / duration semantic core"},
+    {"form":"KE","state":"RECOVERED_FORM_INFERRED_STRONG_ROLE","role":"clause-final interrogative operator"}
+  ],
+  "glyph_ids":["G02","G12","G23","G05","G26","G01","G15","G01","G26","G01","G14","G01","G23","G02"],
+  "answer_pattern": {
+    "id":"AGE-VALUE-V1",
+    "pattern":"[AGE_VALUE]",
+    "status":"AUTHORING_CANDIDATE",
+    "hnk_function_words_added":false,
+    "number_system_dependency":"OPEN"
+  },
+  "principles": {
+    "construction_before_new_age_noun":true,
+    "watch_usage_visible":true,
+    "semantic_equivalence_over_word_for_word_translation":true,
+    "no_new_age_lexeme":true
+  },
+  "validation_state":"HOLD_WATCH_AND_CONTEXTUAL_SEMANTICS",
+  "promotion_blockers": [
+    "SARASALA remains WATCH.",
+    "KU pre-nominal selector role remains inferred.",
+    "EN/KE grammatical roles remain inferred.",
+    "Age reading from time/duration is contextual and needs pedagogical/human validation.",
+    "HNK number/age-value strategy is not yet governed."
+  ],
+  "provenance": [
+    "authoring/grammar-design-pass.v1.json#GRD-005",
+    "recovery/ku-zamo-contrastive-analysis.v1.json",
+    "recovery/wh-system-recovery.v1.json",
+    "authoring/lexicon.bindings.snapshot.json#LEX-006"
+  ],
+  "progress_effect": {
+    "AUTHORED_slots_before":6,
+    "AUTHORED_slots_after":7,
+    "VALIDATED_slots_after":0,
+    "FROZEN_slots_after":0
+  },
+  "next_gate":"SWHNK-L01-OPI-007-RESIDENCE-COMITATIVE-V1"
+}
