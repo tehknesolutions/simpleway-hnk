@@ -1,0 +1,29 @@
+{
+  "review_id":"SWHNK-L01-OPI-006-CONTEXTUAL-FIDELITY-REVIEW-V1",
+  "slot_id":"L01-OPI-006",
+  "status":"HOLD_CONTEXTUAL_EQUIVALENCE_AND_AUTHORED_ACTIVITY_CANDIDATE",
+  "english_prompt":"What do you do at work/school?",
+  "hnk":"EN KU VALA KE",
+  "structural_encoding":{"state":"PASS","glyph_ids":["G02","G12","G23","G05","G31","G01","G14","G01","G23","G02"],"unresolved_transliteration_units":[]},
+  "semantic_components":[
+    {"form":"VALA","id":"AUTH-002","authority":"CANDIDATE","meaning":{"pt":"atividade / ação realizada","en":"activity / performed action"},"historical_recovery_claim":false},
+    {"form":"KU","authority":"INFERRED_NOT_CANONICAL","semantic_role":"pre-nominal interrogative content selector"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"clause-final interrogative operator"}
+  ],
+  "semantic_assessment":{
+    "candidate_reading":"What/which activity is yours?",
+    "frozen_prompt_goal":"elicit what the learner does in the work/school domain",
+    "work_school_relation_inside_HNK_sentence":false,
+    "work_school_relation_supplied_by_discourse_context":true,
+    "english_auxiliary_DO_calqued":false,
+    "functional_match_if_context_is_explicit":"STRONG",
+    "exact_translation_claim":false
+  },
+  "answer_strategy":{"pattern":"[ACTIVITY_DESCRIPTION]","state":"AUTHORING_CANDIDATE","hnk_function_words_added":false,"validation_limitation":"The activity response vocabulary/phrase inventory is not yet closed for this card."},
+  "checks":{"structural_gids":"PASS","no_DO_calque":"PASS","activity_domain_represented":"PASS_BY_AUTHORED_CANDIDATE","context_contract":"PASS_IF_UI_OR_TEACHER_CONTEXT_IS_EXPLICIT","answer_strategy":"PARTIAL","VALA_authority":"CANDIDATE","KU_EN_KE_grammar":"INFERRED","human_contextual_equivalence_approval":"PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"The HNK-specific semantic reframe is coherent and avoids an English DO calque, but validation requires explicit acceptance of the contextual equivalence, continued visibility of VALA=CANDIDATE, and a sufficient activity-response inventory."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_conditions":["Explicit pedagogical approval that the work/school domain may be supplied by card/discourse context.","Explicit scoped approval of VALA and the EN KU X KE content-question frame for L01 course use without historical-canon claims.","Close or define the acceptable activity-answer inventory for the beginner card."],
+  "next_gate":"SWHNK-L01-OPI-010-CONTEXTUAL-FIDELITY-REVIEW-V1"
+}
