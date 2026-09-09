@@ -1,0 +1,23 @@
+{
+  "pattern_id": "SWHNK-L01-LOCATION-ANSWER-PATTERN-V1",
+  "status": "AUTHORING_CANDIDATE_NON_INVENTIVE",
+  "pattern": "[PLACE]",
+  "scope": ["L01-OPI-004", "L01-OPI-005", "L01-OPI-007-A"],
+  "design": {
+    "bare_place_reply": true,
+    "hnk_function_words_added": false,
+    "copula_added": false,
+    "preposition_added": false,
+    "case_marker_added": false,
+    "reason": "A bare place-name answer satisfies the beginner OPI response goal while avoiding unrecovered locative/case/copular grammar."
+  },
+  "runtime": {
+    "glyph_ids": null,
+    "reason": "Dynamic place-name slot; each instantiated proper/common place must be encoded through HNK40 runtime and any proper-name bridge policy that applies."
+  },
+  "validation_boundary": {
+    "this_pattern_validates_question_semantics": false,
+    "this_pattern_promotes_KUVAN": false,
+    "this_pattern_claims_historical_answer_grammar": false
+  }
+}
