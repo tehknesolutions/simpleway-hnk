@@ -1,0 +1,34 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V5",
+  "as_of":"2026-09-09",
+  "status":"KUVAN_CANDIDATE_PROMOTED_AND_APPLIED",
+  "target_slots":1008,
+  "implementation":{"MISSING":1003,"AUTHORED":5,"VALIDATED":0,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.504,"AUTHORED":0.496,"VALIDATED":0.0,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "scaffold":{"slots":82,"percent":8.1349},
+  "language_asset_proxies": {
+    "recovered":{"forms":31,"target":144,"percent":21.5278},
+    "governed":{"recovered_forms":31,"authored_candidates":1,"unique_assets":32,"target":144,"percent":22.2222},
+    "authored_candidates":[{"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false}]
+  },
+  "L01": {
+    "target":155,
+    "AUTHORED":5,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":3.2258,
+    "opi":{"target":10,"AUTHORED":5,"percent":50.0},
+    "teachable_recovered_or_rebound_lexemes":10,
+    "authored_language_candidates":1,
+    "historical_frozen_evidence":82
+  },
+  "cycle1_opi":{"target":70,"AUTHORED":5,"percent":7.1429},
+  "locative_disambiguation": {
+    "L01-OPI-004":"EN SARADAYA KUVAN KE",
+    "L01-OPI-005":"EN VALI KUVAN KE",
+    "L01-OPI-008":"EN VAMAVALA KU KE",
+    "effect":"KUVAN specializes authored locative questions while recovered KU remains unresolved by exact WH type."
+  },
+  "next_gate":"SWHNK-L01-KU-ZAMO-CONTRASTIVE-ANALYSIS-V1"
+}
