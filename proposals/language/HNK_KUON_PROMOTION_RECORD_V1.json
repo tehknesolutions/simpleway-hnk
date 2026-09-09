@@ -1,0 +1,40 @@
+{
+  "promotion_id": "HNK-KUON-PROMOTION-RECORD-V1",
+  "status": "PROMOTED_TO_CANONICAL_AUTHORED_REGISTRY_AS_CANDIDATE",
+  "canonical_registry": "@hnk/linguas/authored",
+  "canonical_id": "AUTH-003",
+  "form": "KUON",
+  "authority": "CANDIDATE",
+  "historical_recovery_claim": false,
+  "certainty": "AUTHORED_DERIVATION_WITH_GATED_COMPONENT",
+  "glyph_ids": ["G23", "G05", "G04", "G12"],
+  "dependency": {
+    "form": "ON",
+    "lexeme_id": "LEX-026",
+    "authority": "GATE",
+    "promotion_effect_on_dependency": "NONE"
+  },
+  "canonical_commits": {
+    "authored_registry": "a85e97cc2ee8fe8968d55c6c18462cb722cc0eaa",
+    "authored_types": "7af6473f30c7ee451cc4dbf63abc408094b626d4",
+    "authored_tests": "e2b97442ee917161b64372a815ef8f63214f6dbb",
+    "cycle1_coverage": "8dfa752aaa51d2e4f69738b82c35156a36dc70e4",
+    "cycle1_tests": "45208cdf7ced43577c07399e0aa9c92d35043262"
+  },
+  "promotion_effect": {
+    "recovered_cycle1_forms_before": 31,
+    "recovered_cycle1_forms_after": 31,
+    "authored_cycle1_candidates_before": 2,
+    "authored_cycle1_candidates_after": 3,
+    "governed_unique_language_assets_before": 33,
+    "governed_unique_language_assets_after": 34,
+    "governed_asset_proxy_percent_after": 23.6111
+  },
+  "boundaries": [
+    "KUON is authored, not recovered.",
+    "ON remains GATE and is not semantically promoted by KUON.",
+    "KU is not retroactively defined as WHO.",
+    "KUON must not become FROZEN while its gated dependency remains unresolved."
+  ],
+  "first_test_scope": "L01-OPI-007"
+}
