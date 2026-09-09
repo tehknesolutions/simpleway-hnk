@@ -28,16 +28,35 @@ Technical subchecks may pass while a slot remains `AUTHORED` if semantic/human p
 
 Target: **1,008 pedagogical slots**.
 
-- `AUTHORED`: **1 / 1,008 = 0.0992%**.
+- `AUTHORED`: **5 / 1,008 = 0.4960%**.
 - `VALIDATED`: **0 / 1,008**.
 - Current reproducible `FROZEN`: **0 / 1,008**.
 - Historical `SOURCE_CONFIRMED_FROZEN`: **82 / 1,008 = 8.1349%**.
 - Scaffolded in the reconstructed L01 lane: **82 / 1,008 = 8.1349%**.
-- Master Lexicon forms linked to Cycle 1: **31**.
+- Master Lexicon unique forms linked to Cycle 1: **31**.
 - Lexical proxy: **31 / 144 = 21.5278%**.
 - Recovered phrases: **7**.
+- L01 total teachable language bindings: **10 = 9 recovered + 1 governed curriculum rebind (`VALI`)**.
 
-### First current AUTHORED slot
+### Current authored OPI
+
+| Slot | HNK | Origin | Gate |
+|---|---|---|---|
+| `L01-OPI-001` | `KALA YA EN ES KU KE` | recovered `PHR-001` | technical pass / semantic HOLD |
+| `L01-OPI-002` | `EN VAMAKALA KE` | v1.1 candidate, FROZEN lexical core | HOLD grammar |
+| `L01-OPI-004` | `EN SARADAYA KU KE` | v1.1 candidate, FROZEN lexical core | HOLD WH semantics |
+| `L01-OPI-005` | `EN VALI KU KE` | v1.1 candidate + governed `VALI` rebind | HOLD WH semantics |
+| `L01-OPI-008` | `EN VAMAVALA KU KE` | v1.1 test candidate, WATCH lexical core | HOLD WATCH + WH |
+
+Therefore:
+
+- L01 OPI authorship: **5 / 10 = 50%**;
+- Cycle 1 OPI authorship: **5 / 70 = 7.1429%**;
+- L01 total-slot authorship: **5 / 155 = 3.2258%**.
+
+None of these five is yet counted as a fully `VALIDATED` OPI.
+
+### OPI 1 technical validation
 
 `L01-OPI-001` / `L01-OPI-01`:
 
@@ -45,13 +64,12 @@ Target: **1,008 pedagogical slots**.
 - recovered HNK: `KALA YA EN ES KU KE`
 - source phrase: `PHR-001`
 - source certainty: `APPROXIMATE`
-- current state: `AUTHORED`
+- HNK40 structural sequence: **14 G-IDs, 0 unresolved transliteration units**
 - question technical validation: `PASS`
 - whole-slot validation: `HOLD`
-- HNK40 structural sequence: **14 G-IDs, 0 unresolved transliteration units**
 - answer design: candidate bare proper-name slot `[PERSONAL_NAME]`, adding no invented HNK function words.
 
-It remains intentionally below `VALIDATED` because the recovered phrase gloss is approximate and the v1.1 answer strategy still requires human linguistic promotion. Candidate D glyph visuals remain preproduction; only G-IDs are treated as structural authority here.
+Candidate D glyph visuals remain preproduction; only G-IDs are treated as structural authority here.
 
 ## Historical Lesson 1 evidence
 
@@ -86,7 +104,7 @@ Given those confirmed allocations plus canonical lesson totals, the remaining vo
 - L07: 32;
 - total: 144.
 
-That vocabulary distribution remains labeled as a source-constrained mathematical derivation until an authoritative source explicitly enumerates all 144 vocabulary slots per Lesson.
+That vocabulary distribution remains a source-constrained mathematical derivation until an authoritative source explicitly enumerates all 144 vocabulary slots per Lesson.
 
 ## Interrogative recovery state
 
@@ -99,6 +117,20 @@ Current conservative recovery analysis supports:
 
 Unknown recovered phrases `PHR-004`, `PHR-005` and `PHR-006` remain unassigned to specific OPI prompts. They are not mapped by curriculum order or visual similarity.
 
+A critical consequence is that `EN VALI KU KE` cannot safely be reused for both OPI 5 (`Where do you work?`) and OPI 6 (`What do you do at work/school?`). Until the content-question system distinguishes these intents, identical-form semantic collisions are blocked.
+
+## Curriculum rebinds
+
+`VALI = work / trabalhar` remains recovered in the Master Lexicon with source lessons L02/L03. The Cycle 1 language layer now explicitly allows it in L01 through `HNK_CYCLE1_CURRICULUM_REBINDS`.
+
+This:
+
+- does **not** change the form;
+- does **not** change its FROZEN authority;
+- does **not** rewrite recovered provenance;
+- does **not** increase the number of unique Cycle 1 forms beyond 31;
+- increases L01 teachable binding coverage from 9 to 10.
+
 ## Commands
 
 ```bash
@@ -109,20 +141,11 @@ npm run validate:l01-opi001
 npm test
 ```
 
-`npm run progress` prints the current computed summary.
-
-`npm run progress:write` generates:
-
-- `progress/generated/cycle1-slots.v1.json` — all 1,008 tracker slots;
-- `progress/generated/cycle1-progress.snapshot.v1.json` — computed dashboard snapshot.
-
 ## Lexical proxy warning
 
 `31 / 144` is **not** vocabulary-slot completion.
 
-The numerator is the number of unique recovered Master Lexicon forms associated with at least one Cycle 1 Lesson. A governed mapping between those forms and the 144 curriculum vocabulary slots has not yet been completed.
-
-Therefore the tracker reports lexical asset coverage separately from pedagogical slot implementation.
+The numerator is the number of unique recovered Master Lexicon forms associated with at least one Cycle 1 Lesson. Governed curriculum rebinds may improve per-Lesson coverage without increasing this number.
 
 ## Progress rule
 
