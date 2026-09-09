@@ -1,0 +1,46 @@
+{
+  "record_id":"HNK-VALA-PROMOTION-RECORD-V1",
+  "status":"PROMOTED_TO_CANONICAL_AUTHORED_REGISTRY_AS_CANDIDATE",
+  "date":"2026-09-09",
+  "decision":"APPROVE_AS_CANDIDATE_ONLY",
+  "source_proposal":"HNK_VALA_ACTIVITY_NOUN_PROPOSAL_V1.json",
+  "canonical_owner":"tehknesolutions/codex-hnk/packages/hnk-linguas",
+  "canonical_registry":"@hnk/linguas/authored",
+  "canonical_id":"AUTH-002",
+  "form":"VALA",
+  "authority":"CANDIDATE",
+  "historical_recovery_claim":false,
+  "meaning_state":"AUTHORED_BACK_ANALYSIS",
+  "glyph_ids":["G31","G01","G14","G01"],
+  "promotion_effect": {
+    "recovered_cycle1_forms_before":31,
+    "recovered_cycle1_forms_after":31,
+    "authored_cycle1_candidates_before":1,
+    "authored_cycle1_candidates_after":2,
+    "governed_unique_language_assets_before":32,
+    "governed_unique_language_assets_after":33,
+    "recovered_proxy_percent":21.5278,
+    "governed_asset_proxy_percent":22.9167
+  },
+  "intended_course_application": {
+    "slot":"L01-OPI-006",
+    "frame":"EN KU VALA KE",
+    "semantic_reframe":"What is your activity? / Which activity is yours?",
+    "relationship_to_frozen_english":"Contextual HNK beginner equivalent for 'What do you do at work/school?' after the work/school topic has been established."
+  },
+  "boundaries": [
+    "VALA is not FROZEN.",
+    "VALA is not a recovered historical morpheme.",
+    "This decision does not establish A=noun or I=verb as universal HNK morphology.",
+    "VAMAVALA remains WATCH and is not decomposed canonically by this decision.",
+    "OPI 6 must remain below VALIDATED while KU and the nominal frame are not fully governed."
+  ],
+  "canonical_commits": {
+    "authored_registry_updated":"d38d49fe836119d98ce34d3e8c76ae1cfdd06e58",
+    "authored_types_updated":"8adc58562fd7ed7fa05986ff7201acb70e592b04",
+    "authored_tests_updated":"ec5b4028dffec6d732f03961cd72ee5535c77d5b",
+    "cycle1_coverage_updated":"5eca282061b624202c930bd585c195579407b167",
+    "cycle1_tests_updated":"3eff1cdbb37eb07ead61fcfe748487f8ae2a8bb5"
+  },
+  "next_gate":"SWHNK-L01-OPI-006-AUTHORING-V2"
+}
