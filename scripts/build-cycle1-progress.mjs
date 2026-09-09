@@ -122,17 +122,29 @@ const summary = {
   scaffolded_percent: pct(scaffolded, slots.length),
   historical_frozen_evidence_floor: frozenHistorical,
   historical_frozen_evidence_floor_percent: pct(frozenHistorical, slots.length),
-  lexical_proxy: {
-    unique_cycle1_forms: lexical.unique_forms_linked_to_cycle1,
-    curriculum_vocabulary_target: lexical.curriculum_vocabulary_target,
-    percent: pct(lexical.unique_forms_linked_to_cycle1, lexical.curriculum_vocabulary_target),
+  language_asset_proxies: {
+    recovered: {
+      unique_cycle1_forms: lexical.unique_recovered_forms_linked_to_cycle1,
+      curriculum_vocabulary_target: lexical.curriculum_vocabulary_target,
+      percent: pct(lexical.unique_recovered_forms_linked_to_cycle1, lexical.curriculum_vocabulary_target)
+    },
+    governed: {
+      unique_cycle1_language_assets: lexical.governed_unique_language_assets,
+      authored_candidate_forms: lexical.authored_candidate_forms_linked_to_cycle1,
+      authored_candidates: lexical.authored_candidate_forms,
+      curriculum_vocabulary_target: lexical.curriculum_vocabulary_target,
+      percent: pct(lexical.governed_unique_language_assets, lexical.curriculum_vocabulary_target)
+    },
     warning: lexical.warning
   },
-  recovered_language_assets: {
+  language_assets: {
     master_lexicon_registry_forms: lexical.master_lexicon_registry_forms,
-    cycle1_linked_forms: lexical.unique_forms_linked_to_cycle1,
+    recovered_cycle1_forms: lexical.unique_recovered_forms_linked_to_cycle1,
+    authored_cycle1_candidates: lexical.authored_candidate_forms_linked_to_cycle1,
+    governed_unique_cycle1_assets: lexical.governed_unique_language_assets,
     recovered_phrases: lexical.recovered_phrases,
     lesson_bindings: lexical.lesson_bindings,
+    lesson_authored_candidates: lexical.lesson_authored_candidates,
     gate: lexical.gate
   },
   per_lesson: perLesson,
@@ -140,7 +152,9 @@ const summary = {
   interpretation: {
     current_frozen_is_reproducible: true,
     historical_frozen_evidence_is_not_current_payload: true,
-    lexical_proxy_is_not_vocabulary_slot_completion: true
+    recovered_proxy_is_not_vocabulary_slot_completion: true,
+    governed_asset_proxy_is_not_vocabulary_slot_completion: true,
+    authored_candidates_are_not_recovered_forms: true
   }
 };
 
