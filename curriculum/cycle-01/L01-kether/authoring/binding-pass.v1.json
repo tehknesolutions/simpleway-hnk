@@ -1,0 +1,134 @@
+{
+  "binding_pass_id": "SWHNK-L01-BINDING-PASS-V1",
+  "lesson_id": "HNK-L01",
+  "status": "COVERAGE_MAPPED_AUTHORING_REQUIRED",
+  "source_snapshot": "lexicon.bindings.snapshot.json",
+  "policy": {
+    "new_forms_created": false,
+    "cross_lesson_imports_automatic": false,
+    "approximate_phrases_not_promoted_to_frozen": true,
+    "watch_usage_must_remain_labeled": true
+  },
+  "opi": [
+    {
+      "id": "L01-OPI-01",
+      "english": "What's your name?",
+      "coverage": "RECOVERED_PHRASE_APPROXIMATE",
+      "lexeme_ids": [],
+      "phrase_ids": ["PHR-001"],
+      "semantic_support": ["name question"],
+      "missing": ["canonical HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-02",
+      "english": "Do you have a nickname?",
+      "coverage": "RECOVERED_FROZEN_PARTIAL",
+      "lexeme_ids": ["LEX-001"],
+      "phrase_ids": [],
+      "semantic_support": ["nickname / familiar name"],
+      "missing": ["complete HNK question pattern", "complete HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-03",
+      "english": "How old are you?",
+      "coverage": "MISSING_AUTHORING_REQUIRED",
+      "lexeme_ids": [],
+      "phrase_ids": [],
+      "semantic_support": [],
+      "missing": ["age semantic unit", "complete HNK question pattern", "complete HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-04",
+      "english": "Where were you born?",
+      "coverage": "RECOVERED_FROZEN_PARTIAL",
+      "lexeme_ids": ["LEX-002"],
+      "phrase_ids": [],
+      "semantic_support": ["origin / birthplace"],
+      "missing": ["complete HNK question pattern", "complete HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-05",
+      "english": "Where do you work?",
+      "coverage": "RECOVERED_FROZEN_PARTIAL",
+      "lexeme_ids": ["LEX-003"],
+      "phrase_ids": [],
+      "semantic_support": ["office"],
+      "missing": ["work/action semantic unit in L01 scope", "complete HNK question pattern", "complete HNK answer pattern"],
+      "cross_lesson_note": "LEX-013 VALI is FROZEN for L02/L03 in the current Master Lexicon; rebinding it to L01 requires explicit curriculum governance.",
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-06",
+      "english": "What do you do at work/school?",
+      "coverage": "RECOVERED_FROZEN_PARTIAL",
+      "lexeme_ids": ["LEX-003", "LEX-004"],
+      "phrase_ids": [],
+      "semantic_support": ["office", "school / study domain"],
+      "missing": ["do/action semantic unit", "complete HNK question pattern", "complete HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-07",
+      "english": "Where do you live and who do you live with?",
+      "coverage": "MISSING_AUTHORING_REQUIRED",
+      "lexeme_ids": [],
+      "phrase_ids": [],
+      "semantic_support": [],
+      "missing": ["live/reside semantic unit", "companion/with relation", "complete HNK question pattern", "complete HNK answer pattern"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-08",
+      "english": "What are your hobbies?",
+      "coverage": "RECOVERED_WATCH_PARTIAL",
+      "lexeme_ids": ["LEX-007"],
+      "phrase_ids": [],
+      "semantic_support": ["hobby / pleasure activity"],
+      "missing": ["complete HNK question pattern", "complete HNK answer pattern"],
+      "watch": ["VAMAVALA"],
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-09",
+      "english": "Do you like to sing?",
+      "coverage": "RECOVERED_WATCH_PARTIAL",
+      "lexeme_ids": ["LEX-008"],
+      "phrase_ids": [],
+      "semantic_support": ["singing / harmonic expression"],
+      "missing": ["like/preference semantic unit in L01 scope", "complete HNK question pattern", "complete HNK answer pattern"],
+      "watch": ["VAMAZAMU"],
+      "cross_lesson_note": "LEX-025 VAME is GATE in L04 and must not be imported or promoted silently.",
+      "publishable": false
+    },
+    {
+      "id": "L01-OPI-10",
+      "english": "What do you do on weekends?",
+      "coverage": "RECOVERED_PARTIAL_MIXED_AUTHORITY",
+      "lexeme_ids": ["LEX-005", "LEX-006"],
+      "phrase_ids": [],
+      "semantic_support": ["rest / leisure period", "time / duration"],
+      "missing": ["weekend semantic unit", "do/action semantic unit", "complete HNK question pattern", "complete HNK answer pattern"],
+      "watch": ["SARASALA"],
+      "publishable": false
+    }
+  ],
+  "auxiliary_recovered_phrases": [
+    {"phrase_id":"PHR-002","role":"language-use practice","direct_opi_binding":false},
+    {"phrase_id":"PHR-003","role":"HENUVOKODAN language-use question","direct_opi_binding":false}
+  ],
+  "unmapped_unknown_gloss_phrases": ["PHR-004", "PHR-005", "PHR-006", "PHR-007"],
+  "metrics": {
+    "opi_total": 10,
+    "cards_with_any_recovered_support": 8,
+    "cards_fully_bound": 0,
+    "cards_missing_core_semantics": 2,
+    "cards_using_watch_support": 3,
+    "cards_with_approximate_phrase_support": 1,
+    "cards_requiring_completion_authoring": 10
+  },
+  "decision": "OPEN_SEMANTIC_REQUIREMENTS_QUEUE"
+}
