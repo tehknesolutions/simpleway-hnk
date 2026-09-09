@@ -1,0 +1,83 @@
+{
+  "review_id": "SWHNK-L01-OPI-004-WHOLE-SLOT-REVIEW-V1",
+  "slot_id": "L01-OPI-004",
+  "status": "HOLD_AUTHORED_LOCATIVE_CANDIDATE_NOT_SEMANTICALLY_PROMOTED",
+  "english_prompt": "Where were you born?",
+  "hnk": "EN SARADAYA KUVAN KE",
+  "structural_encoding": {
+    "state": "PASS",
+    "glyph_ids": ["G02","G12","G26","G01","G15","G01","G19","G01","G40","G01","G23","G05","G31","G01","G12","G23","G02"],
+    "unresolved_transliteration_units": []
+  },
+  "semantic_components": [
+    {
+      "form": "SARADAYA",
+      "id": "LEX-002",
+      "authority": "FROZEN",
+      "meaning": {"pt":"origem / local de nascimento","en":"origin / birthplace"},
+      "semantic_role": "birthplace core",
+      "state": "SOURCE_BACKED"
+    },
+    {
+      "form": "KUVAN",
+      "id": "AUTH-001",
+      "authority": "CANDIDATE",
+      "meaning": {"pt":"variável interrogativa locativa","en":"locative interrogative variable"},
+      "semantic_role": "WHERE-like locative variable",
+      "historical_recovery_claim": false,
+      "state": "GOVERNED_AUTHORSHIP"
+    },
+    {
+      "form": "EN",
+      "authority": "INFERRED_NOT_CANONICAL",
+      "semantic_role": "second-person referent"
+    },
+    {
+      "form": "KE",
+      "authority": "INFERRED_NOT_CANONICAL",
+      "semantic_role": "clause-final interrogative operator"
+    }
+  ],
+  "semantic_assessment": {
+    "frozen_prompt_goal": "ask for the learner's birthplace",
+    "candidate_compositional_reading": "you + birthplace + where + question",
+    "intent_coverage": "STRONG_FUNCTIONAL_MATCH",
+    "exact_historical_sentence_recovered": false,
+    "exact_historical_grammar_recovered": false,
+    "candidate_dependency_visible": true
+  },
+  "answer_strategy": {
+    "source": "location-answer-pattern.v1.json",
+    "pattern": "[PLACE]",
+    "state": "SUFFICIENT_AUTHORING_CANDIDATE",
+    "hnk_function_words_added": false
+  },
+  "checks": {
+    "structural_gids": "PASS",
+    "birthplace_core_source_backed": "PASS",
+    "locative_intent_represented": "PASS_BY_AUTHORED_CANDIDATE",
+    "answer_strategy_non_inventive": "PASS",
+    "historical_sentence_equivalence": "NOT_RECOVERED",
+    "KUVAN_authority": "CANDIDATE",
+    "EN_KE_grammar": "INFERRED",
+    "human_semantic_promotion": "PENDING"
+  },
+  "decision": {
+    "implementation_state_before": "AUTHORED",
+    "implementation_state_after": "AUTHORED",
+    "whole_slot_validated": false,
+    "frozen": false,
+    "reason": "The semantic composition is strong and the answer pattern is now closed, but KUVAN is authored CANDIDATE and the EN/KE grammar has not received explicit human semantic promotion."
+  },
+  "progress_effect": {
+    "L01_OPI_AUTHORED": 10,
+    "L01_OPI_VALIDATED": 0,
+    "GLOBAL_VALIDATED": 0
+  },
+  "promotion_conditions": [
+    "Explicit human approval of KUVAN for the L01 locative interrogative role or broader governed promotion.",
+    "Explicit acceptance of EN ... KE as the v1.1 beginner interrogative frame.",
+    "Preserve the distinction between authored v1.1 grammar and unrecovered historical v1.0 payload."
+  ],
+  "next_gate": "SWHNK-L01-OPI-005-WHOLE-SLOT-REVIEW-V1"
+}
