@@ -1,0 +1,44 @@
+{
+  "allocation_id": "SWHNK-C1-DERIVED-ALLOCATION-V1",
+  "status": "DERIVED_ALLOCATION_NOT_CURRICULUM_CANON",
+  "contract": "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json",
+  "derivation": {
+    "fixed_per_lesson_from_contract": {
+      "opi": 10,
+      "story": 5,
+      "qa": 4,
+      "structures": 5,
+      "activation": 72,
+      "review": 22
+    },
+    "even_distribution_assumptions": {
+      "teacher_notes": 3,
+      "structure_headers": 2
+    },
+    "assumption_reason": "The contract provides cycle totals of 21 teacher notes and 14 structure headers but does not explicitly assign them per Lesson. An even 3x7 and 2x7 distribution is used only to make the 1,008-slot tracker deterministic and is reversible if source curriculum proves a different distribution.",
+    "vocabulary_distribution_math": "After fixed categories + derived teacher/header allocation, L01 and L07 require 32 vocabulary slots; L02-L06 require 16 each. This yields 32 + (5*16) + 32 = 144 vocabulary slots and exactly matches all lesson_target_totals. L07 additionally carries 3 final seals."
+  },
+  "lessons": {
+    "L01": {"sphere":"Kether","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":32,"activation":72,"review":22,"final_seals":0,"total":155},
+    "L02": {"sphere":"Chokhmah","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":16,"activation":72,"review":22,"final_seals":0,"total":139},
+    "L03": {"sphere":"Binah","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":16,"activation":72,"review":22,"final_seals":0,"total":139},
+    "L04": {"sphere":"Chesed","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":16,"activation":72,"review":22,"final_seals":0,"total":139},
+    "L05": {"sphere":"Gevurah","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":16,"activation":72,"review":22,"final_seals":0,"total":139},
+    "L06": {"sphere":"Yesod","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":16,"activation":72,"review":22,"final_seals":0,"total":139},
+    "L07": {"sphere":"Malkuth","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":32,"activation":72,"review":22,"final_seals":3,"total":158}
+  },
+  "cycle_totals": {
+    "teacher_notes":21,
+    "opi":70,
+    "story":35,
+    "qa":28,
+    "structure_headers":14,
+    "structures":35,
+    "vocabulary":144,
+    "activation":504,
+    "review":154,
+    "final_seals":3,
+    "total":1008
+  },
+  "rule": "This file allocates tracker slots only. It does not authorize HNK lexical forms, translations, grammar or promotion."
+}
