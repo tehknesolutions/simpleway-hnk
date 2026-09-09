@@ -1,0 +1,49 @@
+{
+  "proposal_id": "HNK-KUON-PERSON-INTERROGATIVE-PROPOSAL-V1",
+  "status": "AUTHORING_PROPOSAL_NOT_CANON",
+  "candidate": {
+    "form": "KUON",
+    "proposed_meaning": {
+      "pt": "qual pessoa / quem",
+      "en": "which person / who"
+    },
+    "proposed_type": "GRAMMATICAL_COMPOUND",
+    "proposed_authority": "CANDIDATE",
+    "certainty": "AUTHORED_DERIVATION_WITH_GATED_COMPONENT",
+    "historical_recovery_claim": false,
+    "glyph_ids": ["G23", "G05", "G04", "G12"],
+    "safe_units": ["K", "U", "O", "N"],
+    "phonotactic_shape": "CVC",
+    "safe_transliteration_complete": true
+  },
+  "derivation": {
+    "left": "KU",
+    "left_state": "RECOVERED_FORM_COMPONENT / INFERRED_CONTENT_SELECTOR_ROLE",
+    "right": "ON",
+    "right_lexeme_id": "LEX-026",
+    "right_authority": "GATE",
+    "right_state": "RECOVERED_PRONOUN_REFERENT_UNDER_TEST",
+    "composition": "KU + ON -> KUON",
+    "semantic_rationale": "Specialize the generic content selector toward a person/referent domain without retroactively declaring KU=WHO or ON=PERSON as recovered canon."
+  },
+  "risk": {
+    "depends_on_GATE_component": true,
+    "gender_behavior_of_ON_unresolved": true,
+    "multi_referent_behavior_of_ON_unresolved": true,
+    "usage_scope": "EXPERIMENTAL_ONLY_UNTIL_HUMAN_REVIEW"
+  },
+  "boundaries": {
+    "does_not_promote_ON": true,
+    "does_not_define_ON_as_generic_person_historically": true,
+    "does_not_define_KU_as_WHO_historically": true,
+    "does_not_assign_glosses_to_PHR_004_005_006": true
+  },
+  "first_test_scope": ["L01-OPI-007"],
+  "promotion_gate": [
+    "Register only as authored CANDIDATE.",
+    "Preserve dependency on ON=GATE in metadata and tests.",
+    "Human review of whether KUON is acceptable for person interrogation.",
+    "No promotion to FROZEN while ON referent behavior remains unresolved."
+  ],
+  "next_gate": "SWHNK-HNK-KUON-CANDIDATE-PROMOTION-V1"
+}
