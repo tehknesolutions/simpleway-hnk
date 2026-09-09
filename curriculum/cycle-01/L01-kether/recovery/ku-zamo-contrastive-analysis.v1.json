@@ -1,0 +1,75 @@
+{
+  "analysis_id":"SWHNK-L01-KU-ZAMO-CONTRASTIVE-ANALYSIS-V1",
+  "status":"RECOVERY_INFERENCE_NOT_CANON",
+  "method":"minimal contrast across recovered phrases with approximate gloss support",
+  "evidence": [
+    {
+      "id":"PHR-002",
+      "form":"AN ZAMI ZAMO",
+      "approximate_gloss":"I speak / use language.",
+      "supported_alignment": {
+        "AN":"first-person referent hypothesis",
+        "ZAMI":"speak/language-use predicate hypothesis",
+        "ZAMO":"language/content-domain noun hypothesis"
+      }
+    },
+    {
+      "id":"PHR-003",
+      "form":"EN ZAMI HENUVOKODAN KE",
+      "approximate_gloss":"Do you speak HENUVOKODAN?",
+      "supported_alignment": {
+        "EN":"second-person referent hypothesis",
+        "ZAMI":"speak/language-use predicate hypothesis",
+        "HENUVOKODAN":"specific language object",
+        "KE":"interrogative operator hypothesis"
+      }
+    },
+    {
+      "id":"PHR-006",
+      "form":"EN ZAMI KU ZAMO KE",
+      "gloss":null,
+      "structural_contrast_with_PHR_003":"HENUVOKODAN is replaced by KU ZAMO while EN, ZAMI and KE remain stable."
+    }
+  ],
+  "inference": {
+    "KU": {
+      "previous_role":"generic content-question component / variable",
+      "refined_role":"INTERROGATIVE_CONTENT_SELECTOR_OR_DETERMINER",
+      "likely_position":"PRE_NOMINAL_WITHIN_CONTENT_PHRASE",
+      "confidence":"INFERRED_STRONGER_THAN_PREVIOUS",
+      "canonical":false,
+      "exact_english_gloss":null,
+      "not_authorized_as_single_fixed_word":["WHAT","WHICH","WHERE","WHO","HOW"],
+      "reason":"PHR-003 supplies a specific language object; PHR-006 places KU immediately before ZAMO in the corresponding object position. If ZAMO carries the recovered approximate language-domain reading from PHR-002, KU ZAMO is structurally compatible with an interrogative content phrase such as 'what/which language'."
+    },
+    "ZAMO": {
+      "refined_role":"LANGUAGE_OR_LANGUAGE_DOMAIN_NOUN",
+      "confidence":"INFERRED_STRONG",
+      "canonical":false,
+      "reason":"PHR-002 approximate gloss plus PHR-003/006 contrast supports a language-domain object role, but the exact lexical range is not source-recovered."
+    },
+    "KU_ZAMO": {
+      "role":"INTERROGATIVE_LANGUAGE_CONTENT_PHRASE",
+      "approximate_function":"what/which language",
+      "confidence":"INFERRED_STRONG",
+      "canonical":false,
+      "historical_exact_gloss_claim":false
+    }
+  },
+  "consequences": [
+    "Do not move KU to a specific historical gloss; preserve null exact gloss.",
+    "Prefer KU before a nominal content head in new test candidates when the intended relation is 'which/what X'.",
+    "Re-evaluate L01-OPI-008 ordering: EN KU VAMAVALA KE is structurally more consistent than EN VAMAVALA KU KE if VAMAVALA is the nominal content head.",
+    "Do not infer that every KU+N sequence is grammatical; each use remains authored/test-only until governed.",
+    "KUVAN remains a separately authored locative specialization and is not historical evidence for KU itself."
+  ],
+  "does_not_resolve": [
+    "exact meaning of PHR-006",
+    "exact lexical meaning of ZAMO",
+    "copula/possession strategy",
+    "activity predicate for OPI 6",
+    "WHO/comitative for OPI 7",
+    "age construction for OPI 3"
+  ],
+  "next_gate":"SWHNK-L01-OPI-008-KU-PRENOMINAL-REVISION-V1"
+}
