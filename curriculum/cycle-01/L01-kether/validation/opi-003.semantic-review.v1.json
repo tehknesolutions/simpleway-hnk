@@ -1,0 +1,21 @@
+{
+  "review_id":"SWHNK-L01-OPI-003-AGE-NUMBER-REVIEW-V1",
+  "slot_id":"L01-OPI-003",
+  "status":"HOLD_WATCH_CONTEXTUAL_AGE_AND_NUMBER_SYSTEM_OPEN",
+  "english_prompt":"How old are you?",
+  "hnk":"EN KU SARASALA KE",
+  "structural_encoding":{"state":"PASS","glyph_ids":["G02","G12","G23","G05","G26","G01","G15","G01","G26","G01","G14","G01","G23","G02"],"unresolved_transliteration_units":[]},
+  "semantic_components":[
+    {"form":"SARASALA","id":"LEX-006","authority":"WATCH","meaning":{"pt":"tempo / duração","en":"time / duration"},"state":"RECOVERED_WATCH"},
+    {"form":"KU","authority":"INFERRED_NOT_CANONICAL","semantic_role":"content selector"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"question operator"}
+  ],
+  "semantic_assessment":{"frozen_prompt_goal":"elicit the learner's age","candidate_reading":"what/which is your time-duration? with contextual age interpretation","time_duration_core_match":"RELATED_NOT_EXACT","age_construction_historically_recovered":false,"new_age_lexeme_required":false,"contextual_age_design_possible":true},
+  "answer_strategy":{"pattern":"[AGE_VALUE]","state":"BLOCKED_BY_NUMBER_SYSTEM","number_system_dependency":"OPEN","year_unit_dependency":"OPEN_OR_CONTEXTUAL"},
+  "checks":{"structural_gids":"PASS","time_duration_core":"PASS_WATCH","age_semantic_equivalence":"HOLD_CONTEXTUAL","number_representation":"HOLD","age_value_answer":"HOLD","SARASALA_authority":"WATCH","KU_EN_KE_grammar":"INFERRED","human_age_construction_approval":"PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"The analytic age route remains preferable to inventing an AGE noun, but whole-slot validation is blocked by WATCH authority, contextual rather than exact semantics, and the unresolved HNK number/age-value system."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_conditions":["Define or recover the HNK beginner number system needed for age values.","Explicitly approve a time/duration-based age construction for L01 or replace it with a better governed construction.","Review SARASALA WATCH status separately; do not silently promote it from course pressure."],
+  "next_gate":"SWHNK-L01-OPI-009-PREFERENCE-GATE-REVIEW-V1"
+}
