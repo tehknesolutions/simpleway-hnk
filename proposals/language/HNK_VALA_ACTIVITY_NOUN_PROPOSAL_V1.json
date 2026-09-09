@@ -1,0 +1,57 @@
+{
+  "proposal_id":"HNK-VALA-ACTIVITY-NOUN-PROPOSAL-V1",
+  "status":"AUTHORING_PROPOSAL_NOT_CANON",
+  "candidate": {
+    "form":"VALA",
+    "proposed_meaning":{"pt":"atividade / ação realizada; núcleo nominal genérico de atividade","en":"activity / performed action; generic activity nominal head"},
+    "proposed_type":"LEXICAL_NOUN",
+    "proposed_authority":"CANDIDATE",
+    "certainty":"AUTHORED_BACK_ANALYSIS",
+    "historical_recovery_claim":false,
+    "glyph_ids":["G31","G01","G14","G01"],
+    "phonotactic_shape":"CVCV",
+    "safe_transliteration_complete":true,
+    "master_lexicon_exact_collision":false
+  },
+  "morphological_evidence": [
+    {
+      "form":"VAMAVALA",
+      "meaning":"hobby / pleasure activity",
+      "authority":"WATCH",
+      "observation":"The surface form contains final VALA and the recovered meaning explicitly includes activity. This supports, but does not prove, an activity-noun back-analysis."
+    },
+    {
+      "form":"VALI",
+      "meaning":"work / trabalhar",
+      "authority":"FROZEN",
+      "observation":"VALI shares VAL- and belongs to the action/work domain. Independent corpus analysis already found strong correlation between final -I and action/verbal readings."
+    },
+    {
+      "forms":["PARAZAMI","PARAZAMO"],
+      "meanings":["study / estudar","school / study domain"],
+      "observation":"The I/O contrast shows that final-vowel alternation can correlate with action versus domain readings in at least one recovered family, supporting investigation of VAL-I versus VAL-A without making that alternation a universal rule."
+    }
+  ],
+  "analysis_boundary": {
+    "recovered_morpheme_VALA":false,
+    "productive_A_noun_rule":false,
+    "productive_I_verb_rule":false,
+    "claim":"VALA is a new authored candidate selected because it minimizes phonological novelty and has transparent corpus-facing rationale; it is not presented as a recovered historical morpheme."
+  },
+  "intended_course_use": {
+    "primary":"L01-OPI-006",
+    "candidate_frame":"EN KU VALA KE",
+    "semantic_reframe":"What is your activity? / Which activity is yours?",
+    "relation_to_english_prompt":"Contextual HNK-specific beginner equivalent for 'What do you do at work/school?', avoiding an invented auxiliary/light verb DO and avoiding an ungoverned AT relation.",
+    "requires_context":true
+  },
+  "promotion_gate": [
+    "Keep VALA distinct from recovered VAMAVALA and VALI provenance.",
+    "Start only as CANDIDATE.",
+    "Validate strict HNK40 round-trip G31-G01-G14-G01.",
+    "Audit confusion risk with VALI, VAMAVALA and VALIVAN.",
+    "Use only in test/authored OPI frames until human linguistic validation.",
+    "Do not infer a universal A=noun or I=verb morphology from this candidate."
+  ],
+  "next_gate":"SWHNK-HNK-VALA-CANDIDATE-PROMOTION-V1"
+}
