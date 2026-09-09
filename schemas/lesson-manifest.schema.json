@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://simpleway.hnk/schema/lesson-manifest-v1.json",
+  "title": "SimpleWay HNK Lesson Manifest v1",
+  "type": "object",
+  "required": [
+    "lesson_id",
+    "sphere",
+    "status",
+    "language_bindings",
+    "recovered_phrases",
+    "rules"
+  ],
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "pattern": "^HNK-L0[1-7]$"
+    },
+    "sphere": {
+      "enum": ["Kether", "Chokhmah", "Binah", "Chesed", "Gevurah", "Yesod", "Malkuth"]
+    },
+    "status": {
+      "enum": [
+        "PUBLICATION-FROZEN",
+        "RECOVERED_PARTIAL_PUBLICATION_SOURCE_CONFIRMED",
+        "LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD",
+        "LEXICON_PARTIAL_GATED",
+        "EVIDENCE_GATE",
+        "NO_RECOVERED_LEXEMES"
+      ]
+    },
+    "language_bindings": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "recovered_phrases": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "rules": {
+      "type": "object",
+      "required": ["non_invention"],
+      "properties": {
+        "non_invention": {"const": true}
+      }
+    }
+  },
+  "additionalProperties": true
+}
