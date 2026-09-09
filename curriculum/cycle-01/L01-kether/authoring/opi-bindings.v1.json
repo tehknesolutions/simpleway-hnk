@@ -1,6 +1,6 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_NOT_VALIDATED",
+  "status": "AUTHORING_ACTIVE_PARTIAL_TECHNICAL_VALIDATION",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
@@ -19,24 +19,39 @@
       "phrase_source_status": "RECOVERED",
       "phrase_certainty": "APPROXIMATE",
       "implementation_state": "AUTHORED",
-      "validation_state": "PENDING",
-      "glyph_ids": null,
-      "answer_pattern": null,
+      "validation_state": "TECHNICAL_PASS_SEMANTIC_HOLD",
+      "glyph_ids": ["G23","G01","G14","G01","G40","G01","G02","G12","G02","G26","G23","G05","G23","G02"],
+      "glyph_segmentation": [
+        {"token":"KALA","glyph_ids":["G23","G01","G14","G01"]},
+        {"token":"YA","glyph_ids":["G40","G01"]},
+        {"token":"EN","glyph_ids":["G02","G12"]},
+        {"token":"ES","glyph_ids":["G02","G26"]},
+        {"token":"KU","glyph_ids":["G23","G05"]},
+        {"token":"KE","glyph_ids":["G23","G02"]}
+      ],
+      "answer_pattern": {
+        "id":"BARE-PROPER-NAME-V1",
+        "pattern":"[PERSONAL_NAME]",
+        "status":"AUTHORING_CANDIDATE",
+        "hnk_function_words_added":false
+      },
+      "validation_record": "../validation/opi-001.validation.v1.json",
       "promotion_blockers": [
         "Phrase gloss is APPROXIMATE rather than exact recovered token alignment.",
-        "G01-G40 sequence has not yet been generated/verified in this binding.",
-        "Answer pattern is not yet governed.",
-        "Human linguistic review is required before VALIDATED."
+        "Bare-proper-name answer strategy is governed v1.1 authorship, not recovered v1.0 answer payload.",
+        "Human linguistic review is required before whole-slot VALIDATED."
       ],
       "provenance": [
         "authoring/lexicon.bindings.snapshot.json#PHR-001",
-        "authoring/lesson.authoring.v1.1.json#L01-OPI-01"
+        "authoring/lesson.authoring.v1.1.json#L01-OPI-01",
+        "tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs@e9390d1b1828f839f7b7f7fec29910cc40eb197b"
       ]
     }
   ],
   "metrics": {
     "opi_target": 10,
     "authored": 1,
+    "question_technical_pass": 1,
     "validated": 0,
     "frozen": 0
   }
