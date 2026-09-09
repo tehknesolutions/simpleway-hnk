@@ -1,28 +1,39 @@
 {
   "batch_id":"SWHNK-L01-VALIDATION-BATCH-2-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
+  "approval":{
+    "source":"USER_EXPLICIT_CONTINUE_APPROVAL_IN_PROJECT_FLOW",
+    "recorded_on":"2026-09-09",
+    "scope_only":["L01-OPI-006","L01-OPI-008"],
+    "language_authority_promotion":false,
+    "historical_recovery_claim_created":false
+  },
   "scope":["L01-OPI-006","L01-OPI-008"],
   "purpose":"Validate the emerging EN KU X KE content-question family for two beginner cards without converting inferred grammar, WATCH lexemes or authored candidates into recovered/FROZEN canon.",
-  "decisions_requested":[
+  "decisions":[
     {
       "id":"DEC-L01-CONTENT-001",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept EN KU X KE as a governed v1.1 content-question frame for OPI 6 and 8 only, with KU functioning as a pre-nominal content selector in this scoped course usage.",
-      "if_approved":{"historical_recovery_claim":false,"grammar_scope":["L01-OPI-006","L01-OPI-008"],"universal_HNK_grammar_claim":false,"KU_exact_historical_gloss":null}
+      "effect":{"historical_recovery_claim":false,"grammar_scope":["L01-OPI-006","L01-OPI-008"],"universal_HNK_grammar_claim":false,"KU_exact_historical_gloss":null}
     },
     {
       "id":"DEC-L01-CONTENT-002",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept AUTH-002 VALA for validated OPI 6 course use as the generic activity head while keeping its language authority CANDIDATE.",
-      "if_approved":{"VALA_authority":"CANDIDATE_UNCHANGED","historical_recovery_claim":false,"course_use":"APPROVED_FOR_L01_OPI006","global_productivity":"NOT_GRANTED"}
+      "effect":{"VALA_authority":"CANDIDATE_UNCHANGED","historical_recovery_claim":false,"course_use":"APPROVED_FOR_L01_OPI006","global_productivity":"NOT_GRANTED"}
     },
     {
       "id":"DEC-L01-CONTENT-003",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept LEX-007 VAMAVALA for validated OPI 8 course use while keeping its language authority WATCH unless separately promoted.",
-      "if_approved":{"VAMAVALA_authority":"WATCH_UNCHANGED","course_use":"APPROVED_FOR_L01_OPI008","language_authority_promotion":"NONE"}
+      "effect":{"VAMAVALA_authority":"WATCH_UNCHANGED","course_use":"APPROVED_FOR_L01_OPI008","language_authority_promotion":"NONE"}
     },
     {
       "id":"DEC-L01-CONTENT-004",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept explicit card/discourse context as sufficient to supply the work/school domain for OPI 6, and accept bare activity/hobby response slots as beginner answer patterns without adding unrecovered function words.",
-      "if_approved":{"OPI006_context":"WORK_OR_SCHOOL_CARD_CONTEXT","OPI006_answer":"[ACTIVITY_DESCRIPTION]","OPI008_answer":"[HOBBY_OR_PLEASURE_ACTIVITY]","hnk_function_words_added":false}
+      "effect":{"OPI006_context":"WORK_OR_SCHOOL_CARD_CONTEXT","OPI006_answer":"[ACTIVITY_DESCRIPTION]","OPI008_answer":"[HOBBY_OR_PLEASURE_ACTIVITY]","hnk_function_words_added":false}
     }
   ],
   "evidence":{
@@ -37,7 +48,7 @@
     "Does not freeze OPI 6 or 8.",
     "Does not change the missing v1.0 payload status."
   ],
-  "projected_effect_if_all_decisions_approved":{
+  "applied_effect":{
     "L01_OPI_authored_or_better":10,
     "L01_OPI_VALIDATED_before":2,
     "L01_OPI_VALIDATED_after":4,
@@ -48,7 +59,6 @@
     "FROZEN_after":0,
     "language_authority_changes":0
   },
-  "application_rule":"Do not transition OPI 6 or 8 to VALIDATED unless explicit human approval is recorded for this exact batch or equivalent scoped decisions.",
-  "next_gate_if_approved":"SWHNK-L01-OPI-006-008-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_OPI_006_008_AUTHORED_HOLD"
+  "application_rule":"Applied only to OPI 6 and 8. Any reuse of EN KU X KE, VALA or VAMAVALA outside this scope requires a separate governed decision.",
+  "next_gate":"SWHNK-L01-OPI-006-008-VALIDATED-TRANSITION-V1"
 }
