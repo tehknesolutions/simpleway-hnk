@@ -1,0 +1,17 @@
+{
+  "lesson_id": "HNK-L06",
+  "sphere": "Yesod",
+  "status": "NO_RECOVERED_LEXEMES",
+  "language_bindings": 0,
+  "recovered_phrases": 0,
+  "curriculum_structure": "DEFINED",
+  "mapping_lock": "L06=Yesod",
+  "rules": {
+    "non_invention": true,
+    "unknown_hnk_forms_remain_null": true,
+    "new_forms_require_governance": true,
+    "older_provisional_sphere_mappings_forbidden": true
+  },
+  "language_authority": "@hnk/linguas",
+  "glyph_authority": "@hnk/glyphs"
+}
