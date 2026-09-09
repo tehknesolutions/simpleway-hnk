@@ -1,6 +1,6 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_5_OF_10_KUVAN_APPLIED",
+  "status": "AUTHORING_ACTIVE_5_OF_10_KUVAN_AND_KU_POSITION_REFINED",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
@@ -90,19 +90,19 @@
       "slot_id":"L01-OPI-008",
       "course_prompt_id":"L01-OPI-08",
       "opi_english":"What are your hobbies?",
-      "binding_origin":"V1_1_AUTHORING_CANDIDATE",
-      "candidate_id":"CAND-L01-OPI-08-Q1",
-      "hnk_question":"EN VAMAVALA KU KE",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE_REVISED_FROM_CONTRASTIVE_RECOVERY",
+      "candidate_id":"CAND-L01-OPI-08-Q2",
+      "hnk_question":"EN KU VAMAVALA KE",
       "lexeme_ids":["LEX-007"],
       "lexeme_authority":["WATCH"],
-      "grammar_hypotheses":["EN second-person referent","KU unresolved generic content-question component","KE final interrogative operator"],
+      "grammar_hypotheses":["EN second-person referent","KU inferred pre-nominal interrogative content selector","VAMAVALA nominal content head","KE final interrogative operator"],
       "implementation_state":"AUTHORED",
       "usage_scope":"TEST_ONLY_WATCH_VISIBLE",
-      "validation_state":"HOLD_WATCH_AND_WH",
-      "glyph_ids":["G02","G12","G31","G01","G11","G01","G31","G01","G14","G01","G23","G05","G23","G02"],
+      "validation_state":"HOLD_WATCH_AND_INFERRED_GRAMMAR",
+      "glyph_ids":["G02","G12","G23","G05","G31","G01","G11","G01","G31","G01","G14","G01","G23","G02"],
       "answer_pattern":null,
-      "promotion_blockers":["VAMAVALA remains WATCH.","KU exact generic content-question semantics unresolved.","Possessive relation and answer strategy require validation."],
-      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-08-Q1","authoring/lexicon.bindings.snapshot.json#LEX-007"]
+      "promotion_blockers":["VAMAVALA remains WATCH.","KU pre-nominal selector role is inferred from PHR-003/PHR-006 contrast, not canonically recovered.","Possessive/copular relation and answer strategy require validation."],
+      "provenance":["recovery/ku-zamo-contrastive-analysis.v1.json","recovery/wh-system-recovery.v1.json","authoring/lexicon.bindings.snapshot.json#LEX-007"]
     }
   ],
   "metrics": {
