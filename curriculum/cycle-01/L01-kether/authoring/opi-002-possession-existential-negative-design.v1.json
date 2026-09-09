@@ -1,0 +1,23 @@
+{
+  "design_id":"SWHNK-L01-POSSESSION-EXISTENTIAL-NEGATIVE-DESIGN-V1",
+  "status":"DESIGN_REQUIRED_NO_VALIDATION_TRANSITION",
+  "scope":["L01-OPI-002"],
+  "english_prompt":"Do you have a nickname?",
+  "current_hnk":"EN VAMAKALA KE",
+  "source_backed_core":{"form":"VAMAKALA","id":"LEX-001","authority":"FROZEN","meaning":"nickname / familiar name"},
+  "problem_statement":"The current HNK frame strongly evokes the nickname domain but does not contain a recovered possession/existential relation equivalent to English HAVE, and the negative no-nickname response path is not governed.",
+  "design_principles":[
+    "Do not create an English-calque HAVE verb by default.",
+    "Prefer an analytic possession/existence strategy if it can be governed from recovered grammar or a minimal authored rule.",
+    "A beginner yes/no card must support both an affirmative nickname answer and a no-nickname answer before whole-slot validation.",
+    "Do not infer the roles of YA/ES from PHR-001 solely to close this card.",
+    "Do not promote WATCH/GATE material silently."
+  ],
+  "candidate_routes":[
+    {"route":"SEMANTIC_REFRAME","description":"Treat EN VAMAKALA KE as a course-level Your nickname? / nickname? interview question and define explicit positive and null/negative answer behavior.","risk":"May underrepresent the original HAVE semantics unless the pedagogical equivalence is explicitly approved.","state":"REVIEW_REQUIRED"},
+    {"route":"POSSESSION_OR_EXISTENCE_RULE","description":"Recover or author a minimal possession/existence construction that can express having/no nickname without an English-specific auxiliary.","risk":"Requires new grammar governance and negative polarity design.","state":"DESIGN_REQUIRED"}
+  ],
+  "answer_requirements":{"affirmative":{"minimum":"[NICKNAME]","status":"AVAILABLE"},"negative":{"minimum":null,"status":"MISSING_GOVERNED_FORM_OR_STRATEGY"}},
+  "validation_effect":{"current":"AUTHORED_HOLD","after_this_design_file":"AUTHORED_HOLD","validated":false},
+  "next_gate":"SWHNK-L01-NEGATION-EXISTENCE-MICROGRAMMAR-V1"
+}
