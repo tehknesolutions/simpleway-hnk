@@ -1,0 +1,43 @@
+{
+  "evidence_id": "SWHNK-C1-EVIDENCE-OVERRIDES-V1",
+  "status": "ACTIVE",
+  "source_date": "2026-09-09",
+  "defaults": {
+    "implementation_state": "MISSING",
+    "evidence_state": "STRUCTURE_RECOVERED",
+    "scaffolded": false
+  },
+  "overrides": [
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[1,10]},
+      "implementation_state":"MISSING",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards. The new v1.1 authoring queue contains the 10 frozen English prompts, but HNK question/answer bindings are null and the raw v1.0 payload is not recovered."
+    },
+    {
+      "selector": {"lesson":"L01","category":"activation","range":[1,72]},
+      "implementation_state":"MISSING",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 72 teacher drills. The v1.1 lane contains 72 slot IDs, but HNK drill payload is not recovered/authored."
+    }
+  ],
+  "lexical_evidence": {
+    "master_lexicon_registry_forms":33,
+    "unique_forms_linked_to_cycle1":31,
+    "unbound_forms":2,
+    "recovered_phrases":7,
+    "curriculum_vocabulary_target":144,
+    "lesson_bindings":{"L01":9,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
+    "lesson_recovered_phrases":{"L01":7,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
+    "gate":"HOLD_INCOMPLETE_BINDING",
+    "warning":"31/144 is a lexical coverage proxy only. It is not 31 completed curriculum vocabulary slots."
+  },
+  "source_references": [
+    "../docs/SIMPLEWAY_HNK_INVENTORY_V1.md",
+    "../curriculum/cycle-01/L01-kether/manifest.json",
+    "../curriculum/cycle-01/L01-kether/authoring/lesson.authoring.v1.1.json",
+    "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
+  ]
+}
