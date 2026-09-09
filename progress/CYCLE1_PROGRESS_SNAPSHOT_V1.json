@@ -1,0 +1,71 @@
+{
+  "snapshot_id": "SWHNK-C1-PROGRESS-SNAPSHOT-V1",
+  "as_of": "2026-09-09",
+  "status": "BASELINE_FROZEN",
+  "target_slots": 1008,
+  "implementation": {
+    "MISSING": 1008,
+    "AUTHORED": 0,
+    "VALIDATED": 0,
+    "FROZEN": 0,
+    "percent": {
+      "MISSING": 100.0,
+      "AUTHORED": 0.0,
+      "VALIDATED": 0.0,
+      "FROZEN": 0.0
+    },
+    "interpretation": "No HNK pedagogical payload is currently both present and governed into the 1,008 target slots in the reconstructed repository. This does not erase historical release evidence."
+  },
+  "historical_evidence": {
+    "STRUCTURE_RECOVERED": 926,
+    "SOURCE_CONFIRMED": 0,
+    "SOURCE_CONFIRMED_FROZEN": 82,
+    "NONE": 0,
+    "source_confirmed_frozen_percent": 8.1349,
+    "source_confirmed_frozen_breakdown": {
+      "L01_OPI": 10,
+      "L01_ACTIVATION": 72
+    },
+    "interpretation": "The recovered Lesson 1 v1.0 source proves these 82 slots belonged to a PUBLICATION-FROZEN release, but the raw HNK payload is not currently recovered."
+  },
+  "scaffold": {
+    "slots_scaffolded": 82,
+    "percent": 8.1349,
+    "breakdown": {"L01_OPI":10,"L01_ACTIVATION":72},
+    "interpretation": "The new L01 v1.1 lane has deterministic slots/prompts for these items, while HNK payload remains null/unbound."
+  },
+  "lexical_proxy": {
+    "master_lexicon_forms": 33,
+    "unique_forms_linked_to_cycle1": 31,
+    "curriculum_vocabulary_target": 144,
+    "percent": 21.5278,
+    "recovered_phrases": 7,
+    "warning": "This is a language-asset coverage proxy, not 31 completed vocabulary curriculum slots."
+  },
+  "language_bindings_by_lesson": {
+    "L01": {"sphere":"Kether","bindings":9,"phrases":7},
+    "L02": {"sphere":"Chokhmah","bindings":11,"phrases":0},
+    "L03": {"sphere":"Binah","bindings":8,"phrases":0},
+    "L04": {"sphere":"Chesed","bindings":9,"phrases":0},
+    "L05": {"sphere":"Gevurah","bindings":0,"phrases":0},
+    "L06": {"sphere":"Yesod","bindings":0,"phrases":0},
+    "L07": {"sphere":"Malkuth","bindings":0,"phrases":0}
+  },
+  "per_lesson_tracker": {
+    "L01": {"target":155,"implementation_missing":155,"historical_frozen_evidence":82,"scaffolded":82},
+    "L02": {"target":139,"implementation_missing":139,"historical_frozen_evidence":0,"scaffolded":0},
+    "L03": {"target":139,"implementation_missing":139,"historical_frozen_evidence":0,"scaffolded":0},
+    "L04": {"target":139,"implementation_missing":139,"historical_frozen_evidence":0,"scaffolded":0},
+    "L05": {"target":139,"implementation_missing":139,"historical_frozen_evidence":0,"scaffolded":0},
+    "L06": {"target":139,"implementation_missing":139,"historical_frozen_evidence":0,"scaffolded":0},
+    "L07": {"target":158,"implementation_missing":158,"historical_frozen_evidence":0,"scaffolded":0}
+  },
+  "gates": {
+    "cycle": "HOLD_INCOMPLETE_BINDING",
+    "l01_raw_payload": "OPEN_RECOVERY",
+    "l03": "HOLD_INSUFFICIENT_EVIDENCE",
+    "l04": "HOLD_INSUFFICIENT_EVIDENCE",
+    "l05_l07": "NO_RECOVERED_LEXEMES"
+  },
+  "next_progress_event": "The first implementation percentage increase occurs when a governed HNK payload is bound to one or more target slots in the current repo. AUTHORED may increase before VALIDATED/FROZEN."
+}
