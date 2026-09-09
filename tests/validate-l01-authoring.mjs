@@ -60,7 +60,10 @@ assert.equal(snapshot.lexemes.length, 9);
 assert.equal(snapshot.phrases.length, 7);
 assert.deepEqual(snapshot.counts, { lexemes: 9, phrases: 7, frozen: 5, watch: 3, reference: 1 });
 
-const byAuthority = Object.groupBy(snapshot.lexemes, x => x.authority);
+const byAuthority = snapshot.lexemes.reduce((acc, entry) => {
+  (acc[entry.authority] ??= []).push(entry);
+  return acc;
+}, {});
 assert.equal(byAuthority.FROZEN.length, 5);
 assert.deepEqual(byAuthority.WATCH.map(x => x.transliteration), ['SARASALA', 'VAMAVALA', 'VAMAZAMU']);
 assert.deepEqual(byAuthority.REFERENCE.map(x => x.transliteration), ['HENUVOKODAN']);
