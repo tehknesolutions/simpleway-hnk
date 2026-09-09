@@ -1,0 +1,51 @@
+{
+  "rule_id":"HNK-COMPOSITIONAL-INTERROGATIVE-RULE-V1",
+  "status":"AUTHORING_RULE_PROPOSAL_NOT_CANON",
+  "purpose":"Allow narrowly governed semantic specialization of an interrogative content variable without assigning unrecovered exact WH meanings to historical tokens.",
+  "form": {
+    "schema":"KU + DOMAIN_FORMATIVE -> KU{DOMAIN}",
+    "orthography":"closed compound by default when the resulting form passes HNK phonotactic and collision checks",
+    "head_semantics":"domain formative specializes the semantic role of the content variable",
+    "productivity":"CLOSED_LIST_ONLY",
+    "automatic_generation":false
+  },
+  "prerequisites": {
+    "KU":"must remain labeled as inferred content-variable component, not historical WHAT/WHERE/WHO",
+    "domain_formative":"must have independent recovered distributional evidence for its domain role",
+    "result":"must be an explicit AUTHORING_PROPOSAL with its own provenance and promotion gate"
+  },
+  "allowed_v1": [
+    {
+      "compound":"KUVAN",
+      "left":"KU",
+      "domain_formative":"VAN",
+      "domain":"LOCATION_PLACE",
+      "intended_function":"locative content variable / WHERE-like",
+      "status":"PROPOSED",
+      "evidence_strength":"TWO_INFERRED_COMPONENTS_WITH_STRONG_DISTRIBUTIONAL_SUPPORT"
+    }
+  ],
+  "not_allowed_v1": [
+    {"pattern":"KU + ON","reason":"ON is GATE and its pronoun/referent semantics are unresolved; do not derive WHO."},
+    {"pattern":"KU + SARASALA","reason":"SARASALA is WATCH and no compounding evidence licenses an AGE/HOW-LONG interrogative."},
+    {"pattern":"KU + I","reason":"Final I is only a morphological correlation hypothesis, not an approved independent ACTION formative."},
+    {"pattern":"KU + arbitrary glyph sequence","reason":"Sound symbolism or phonetic convenience cannot assign semantics."}
+  ],
+  "validation_requirements": [
+    "exact Master Lexicon collision check",
+    "near-form/confusion audit",
+    "HNK40 strict round-trip where romanization is available",
+    "phonotactic profile check",
+    "authority starts at CANDIDATE",
+    "source and authoring provenance remain distinct",
+    "human approval before canonical registry application"
+  ],
+  "semantic_safety": {
+    "does_not_retroactively_define_KU":true,
+    "does_not_make_VAN_productive_globally":true,
+    "does_not_assign_meanings_to_PHR_004_005_006":true,
+    "does_not_promote_any_WATCH_GATE_form":true
+  },
+  "first_application_proposal":"HNK_KUVAN_LOCATIVE_INTERROGATIVE_PROPOSAL_V1.json",
+  "next_gate":"HUMAN_PROMOTION_OR_ADDITIONAL_SOURCE_EVIDENCE"
+}
