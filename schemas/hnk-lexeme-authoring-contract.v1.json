@@ -1,0 +1,115 @@
+{
+  "contract_id": "HNK-LEXEME-AUTHORING-CONTRACT-V1",
+  "version": "1.0.0",
+  "status": "ACTIVE_FOR_CANDIDATE_AUTHORING",
+  "scope": "SimpleWay HNK candidate authoring; canonical promotion remains owned by codex-hnk/@hnk/linguas",
+  "authorities": {
+    "language_registry": "tehknesolutions/codex-hnk/packages/hnk-linguas/src/index.mjs",
+    "glyph_runtime": "tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs",
+    "rosetta_structure": "HNK Rosetta Conformance Case 1.1"
+  },
+  "principles": [
+    "SEMANTICS_BEFORE_FORM",
+    "NO_HISTORICAL_CLAIM_FOR_NEW_AUTHORSHIP",
+    "GID_FIRST",
+    "IPA_FROM_AUTHORITATIVE_GLYPHS",
+    "NO_UNSAFE_TRANSLITERATION_GUESS",
+    "COLLISION_CHECK_REQUIRED",
+    "MORPHOLOGICAL_RATIONALE_REQUIRED_OR_EXPLICIT_PRIMITIVE",
+    "CANDIDATE_FIRST_NEVER_DIRECT_FROZEN",
+    "LESSON_BINDING_IS_SEPARATE_FROM_LEXICAL_AUTHORITY",
+    "HUMAN_PROMOTION_GATE_REQUIRED"
+  ],
+  "known_runtime_boundary": {
+    "hnk40_glyph_count": 40,
+    "glyph_id_range": "G01-G40",
+    "safe_transliteration_units": ["A","E","I","O","U","H","M","N","L","R","B","D","P","T","K","S","TS","V","Z","Y"],
+    "safe_transliteration_gids": ["G01","G02","G03","G04","G05","G07","G11","G12","G14","G15","G18","G19","G21","G22","G23","G26","G30","G31","G32","G40"],
+    "safe_transliteration_note": "The current safe parser intentionally covers only explicitly mapped units. Candidate authoring may reference any authoritative G01-G40 by glyph ID, but must not invent romanization for an unmapped glyph.",
+    "visual_state": "PREPRODUCTION_NOT_OFFICIAL"
+  },
+  "rosetta_usage": {
+    "allowed_node_roles": ["root","mod","join","seq","syl","word","sigil","alt","zero"],
+    "join_modes": ["AFF","COART","SIM","LINK"],
+    "modifier_kinds": ["pho","air","loc","man","sec","vow","qnt","pro"],
+    "rule": "Rosetta structures encode composition/analysis. They do not assign lexical semantics to glyph roots by themselves."
+  },
+  "candidate_required_fields": [
+    "candidate_id",
+    "concept_id",
+    "meaning_pt",
+    "meaning_en",
+    "semantic_definition",
+    "semantic_scope",
+    "formation_type",
+    "glyph_ids",
+    "ipa",
+    "transliteration",
+    "transliteration_state",
+    "morphological_rationale",
+    "collision_state",
+    "proposed_lessons",
+    "authority",
+    "certainty",
+    "provenance",
+    "human_review"
+  ],
+  "formation_types": [
+    "PRIMITIVE_AUTHORED",
+    "DERIVED_FROM_APPROVED_MORPHEMES",
+    "COMPOUND_FROM_APPROVED_LEXEMES",
+    "LOAN_ADAPTATION",
+    "HISTORICAL_RECOVERY"
+  ],
+  "candidate_defaults": {
+    "authority": "CANDIDATE",
+    "certainty": "AUTHORED_NOT_RECOVERED",
+    "human_review": "REQUIRED",
+    "collision_state": "UNCHECKED",
+    "transliteration": null,
+    "transliteration_state": "UNSET_UNTIL_SAFE"
+  },
+  "gates": [
+    {
+      "id": "A1_SEMANTIC_SPEC",
+      "requires": ["concept uniquely defined", "positive scope", "exclusions/non-synonyms documented"]
+    },
+    {
+      "id": "A2_FORMATION_DECISION",
+      "requires": ["formation type selected", "morphological rationale or explicit primitive decision"]
+    },
+    {
+      "id": "A3_GLYPH_COMPOSITION",
+      "requires": ["all glyph IDs within G01-G40", "no glyph semantic meaning inferred from visual shape"]
+    },
+    {
+      "id": "A4_PHONOLOGY",
+      "requires": ["IPA derived from authoritative glyph runtime", "pronounceability review", "no unresolved guessed unit"]
+    },
+    {
+      "id": "A5_TRANSLITERATION",
+      "requires": ["strict safe-parser roundtrip when only mapped units are used", "otherwise transliteration remains null or requires a separately governed mapping"]
+    },
+    {
+      "id": "A6_COLLISION",
+      "requires": ["exact-form collision check", "near-form/confusion review", "meaning collision review"]
+    },
+    {
+      "id": "A7_COURSE_BINDING",
+      "requires": ["proposed lesson links", "pedagogical need", "WATCH/GATE dependencies explicit"]
+    },
+    {
+      "id": "A8_HUMAN_PROMOTION",
+      "requires": ["explicit human approval before promotion beyond CANDIDATE"]
+    }
+  ],
+  "prohibitions": [
+    "Do not derive lexical meaning from numerology alone.",
+    "Do not derive lexical meaning from glyph visual appearance alone.",
+    "Do not infer token grammar from an approximate recovered phrase.",
+    "Do not copy a FROZEN lexeme to another lesson without an explicit binding decision.",
+    "Do not promote a GATE or WATCH form silently.",
+    "Do not claim a newly authored form was historically recovered.",
+    "Do not assign a romanization to an unmapped G-ID by intuition."
+  ]
+}
