@@ -53,13 +53,17 @@ assert.equal(semanticReview.progress_effect.L01_OPI_VALIDATED, 0);
 
 const binding = bindings.bindings.find(x => x.slot_id === 'L01-OPI-001');
 assert.ok(binding);
+assert.equal(binding.implementation_state, 'AUTHORED');
 assert.deepEqual(binding.glyph_ids, expectedGlyphIds);
 assert.equal(binding.validation_state, 'TECHNICAL_PASS_SEMANTIC_HOLD');
 assert.equal(binding.answer_pattern.pattern, '[PERSONAL_NAME]');
-assert.equal(bindings.metrics.authored, 10);
-assert.equal(bindings.metrics.question_technical_pass, 1);
-assert.equal(bindings.metrics.validated, 0);
-assert.equal(bindings.metrics.frozen, 0);
 
-console.log('PASS SWHNK-L01-OPI-001-TECHNICAL-AND-SEMANTIC-REVIEW-V1');
-console.log('Question G-ID sequence passes; KALA has strong name-domain evidence; YA/ES remain unresolved; whole-slot validation remains HOLD; L01 stays 10 AUTHORED / 0 VALIDATED.');
+// The OPI 1 slot remains HOLD even as other slots progress globally.
+assert.equal(bindings.metrics.authored_or_better, 10);
+assert.equal(bindings.metrics.authored_current_state, 6);
+assert.equal(bindings.metrics.validated, 4);
+assert.equal(bindings.metrics.frozen, 0);
+assert.ok(!bindings.metrics.validated_opi.includes('L01-OPI-001'));
+
+console.log('PASS SWHNK-L01-OPI-001-TECHNICAL-AND-SEMANTIC-REVIEW-V2');
+console.log('OPI001 remains AUTHORED-HOLD with YA/ES unresolved; global L01 state is 10 authored-or-better / 4 validated / 0 frozen.');
