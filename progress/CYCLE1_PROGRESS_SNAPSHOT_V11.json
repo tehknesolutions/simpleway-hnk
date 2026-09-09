@@ -1,0 +1,18 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V11",
+  "as_of":"2026-09-09",
+  "package":"simpleway-hnk@0.13.0",
+  "status":"L01_OPI_10_OF_10_REVIEWED_4_OF_10_VALIDATED",
+  "target_slots":1008,
+  "implementation_exclusive":{"MISSING":998,"AUTHORED":6,"VALIDATED":4,"FROZEN":0},
+  "implementation_percent_exclusive":{"MISSING":99.0079,"AUTHORED":0.5952,"VALIDATED":0.3968,"FROZEN":0.0},
+  "maturity_cumulative":{"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":0.9921,"VALIDATED_OR_BETTER":4,"VALIDATED_OR_BETTER_PERCENT":0.3968,"FROZEN":0,"FROZEN_PERCENT":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies":{"recovered":{"forms":31,"target":144,"percent":21.5278},"governed":{"recovered_forms":31,"authored_candidates":3,"unique_assets":34,"target":144,"percent":23.6111},"authored_candidates":[{"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-003","form":"KUON","authority":"CANDIDATE","historical_recovery_claim":false,"dependency":"LEX-026 ON remains GATE"}]},
+  "L01":{"target":155,"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":4,"FROZEN":0,"authored_or_better_percent":6.4516,"validated_or_better_percent":2.5806,"opi":{"target":10,"AUTHORED_OR_BETTER":10,"AUTHORED_CURRENT_STATE":6,"VALIDATED":4,"VALIDATED_PERCENT":40.0,"FROZEN":0,"validated_slots":["L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008"],"hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-007","L01-OPI-009","L01-OPI-010"]},"historical_frozen_evidence":82},
+  "cycle1_opi":{"target":70,"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":14.2857,"VALIDATED_OR_BETTER":4,"VALIDATED_OR_BETTER_PERCENT":5.7143},
+  "applied_validation_batches":[{"id":"SWHNK-L01-LOCATIVE-QUESTION-HUMAN-PROMOTION-BATCH-V1","slots":["L01-OPI-004","L01-OPI-005"],"authority_changes":0},{"id":"SWHNK-L01-VALIDATION-BATCH-2-V1","slots":["L01-OPI-006","L01-OPI-008"],"authority_changes":0}],
+  "validation_boundaries":{"KUVAN":"CANDIDATE_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","KU_exact_historical_gloss":null,"VANI":{"authority":"WATCH","master_lexicon_meaning":null},"KUON":"CANDIDATE_WITH_ON_GATE_DEPENDENCY","historical_v1_payload_recovered":false},
+  "next_batch_selection":{"candidates":["L01-OPI-010","L01-OPI-002"],"reason":"OPI10 can reuse the now-validated EN KU VALA KE frame but still needs explicit acceptance of leisure-period vs weekend fidelity; OPI2 has a strong FROZEN nickname core but still needs a governed possession/existential and negative-response policy."},
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-3-SELECTION-V1"
+}
