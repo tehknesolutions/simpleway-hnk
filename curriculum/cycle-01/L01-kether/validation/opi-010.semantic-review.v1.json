@@ -1,0 +1,31 @@
+{
+  "review_id":"SWHNK-L01-OPI-010-CONTEXTUAL-FIDELITY-REVIEW-V1",
+  "slot_id":"L01-OPI-010",
+  "status":"HOLD_APPROXIMATE_LEISURE_CONTEXT_NOT_EXACT_WEEKEND",
+  "english_prompt":"What do you do on weekends?",
+  "hnk_context":"VAMUSARO",
+  "hnk_question":"EN KU VALA KE",
+  "structural_encoding":{"context_glyph_ids":["G31","G01","G11","G05","G26","G01","G15","G04"],"question_glyph_ids":["G02","G12","G23","G05","G31","G01","G14","G01","G23","G02"],"state":"PASS"},
+  "semantic_components":[
+    {"form":"VAMUSARO","id":"LEX-005","authority":"FROZEN","meaning":{"pt":"descanso / período de lazer","en":"rest / leisure period"},"role":"discourse/UI context only","weekend_gloss_claim":false},
+    {"form":"VALA","id":"AUTH-002","authority":"CANDIDATE","meaning":{"pt":"atividade / ação realizada","en":"activity / performed action"},"historical_recovery_claim":false},
+    {"form":"KU","authority":"INFERRED_NOT_CANONICAL","semantic_role":"content selector"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"question operator"}
+  ],
+  "semantic_assessment":{
+    "frozen_prompt_goal":"elicit habitual weekend activities",
+    "current_HNK_reframe":"In your rest/leisure period: what is your activity?",
+    "functional_overlap":"SUBSTANTIAL",
+    "exact_weekend_equivalence":"NO",
+    "temporal_ON_weekends_relation_encoded":false,
+    "VAMUSARO_relabelled_as_weekend":false,
+    "semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT"
+  },
+  "answer_strategy":{"pattern":"[ACTIVITY_DESCRIPTION]","state":"AUTHORING_CANDIDATE","hnk_function_words_added":false,"inventory_closed":false},
+  "checks":{"structural_gids":"PASS","VAMUSARO_source_meaning_preserved":"PASS","weekend_false_equivalence_avoided":"PASS","contextual_functional_overlap":"PASS","exact_prompt_equivalence":"HOLD","VALA_authority":"CANDIDATE","KU_EN_KE_grammar":"INFERRED","answer_inventory":"OPEN","human_pedagogical_equivalence_approval":"PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"The card is pedagogically plausible as a leisure-period contextual reframe, but it does not encode weekend exactly and therefore cannot be validated as equivalent without explicit human acceptance or a governed weekend/temporal system."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_options":["Explicitly accept the broader rest/leisure-period contextual equivalent for this beginner card while preserving the English source prompt and approximation label.","Author/recover an exact weekend or temporal-frequency system and revise the HNK card.","Close the activity-answer inventory."],
+  "next_gate":"SWHNK-L01-OPI-008-WATCH-CONTENT-QUESTION-REVIEW-V1"
+}
