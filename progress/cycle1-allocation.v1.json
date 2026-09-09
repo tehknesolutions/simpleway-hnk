@@ -1,22 +1,32 @@
 {
-  "allocation_id": "SWHNK-C1-DERIVED-ALLOCATION-V1",
-  "status": "DERIVED_ALLOCATION_NOT_CURRICULUM_CANON",
+  "allocation_id": "SWHNK-C1-SOURCE-CONSTRAINED-ALLOCATION-V1",
+  "status": "SOURCE_CONSTRAINED_DERIVED_ALLOCATION",
   "contract": "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json",
+  "canonical_source": "HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1.md",
   "derivation": {
-    "fixed_per_lesson_from_contract": {
+    "source_confirmed_per_lesson": {
+      "teacher_notes": 3,
       "opi": 10,
       "story": 5,
       "qa": 4,
+      "structure_headers": 2,
       "structures": 5,
       "activation": 72,
       "review": 22
     },
-    "even_distribution_assumptions": {
-      "teacher_notes": 3,
-      "structure_headers": 2
+    "source_evidence": {
+      "teacher_notes": "Canonical target table states 21 = 7 x 3.",
+      "structure_headers": "Canonical target table states 14 = 7 x 2.",
+      "opi": "Canonical target table states 70 = 7 x 10.",
+      "story": "Canonical target table states 35 = 7 x 5.",
+      "qa": "Canonical target table states 28 = 7 x 4.",
+      "structures": "Canonical target table states 35 = 7 x 5.",
+      "activation": "Canonical target table states 504 = 7 x 72.",
+      "review": "Canonical target table states 154 = 7 x 22."
     },
-    "assumption_reason": "The contract provides cycle totals of 21 teacher notes and 14 structure headers but does not explicitly assign them per Lesson. An even 3x7 and 2x7 distribution is used only to make the 1,008-slot tracker deterministic and is reversible if source curriculum proves a different distribution.",
-    "vocabulary_distribution_math": "After fixed categories + derived teacher/header allocation, L01 and L07 require 32 vocabulary slots; L02-L06 require 16 each. This yields 32 + (5*16) + 32 = 144 vocabulary slots and exactly matches all lesson_target_totals. L07 additionally carries 3 final seals."
+    "vocabulary_distribution_state": "DERIVED_FROM_SOURCE_CONSTRAINTS",
+    "vocabulary_distribution_math": "Given source-confirmed per-Lesson categories, canonical lesson target totals L1=155, L2-L6=139, L7=158, and 3 final seals on L7, the remaining vocabulary allocation is L01=32, L02-L06=16 each, L07=32. This yields 144 exactly.",
+    "important_boundary": "The 3 teacher notes and 2 structure headers per Lesson are no longer assumptions. Vocabulary per-Lesson allocation remains a mathematical derivation unless a source table explicitly enumerating all 144 vocabulary slots is recovered."
   },
   "lessons": {
     "L01": {"sphere":"Kether","teacher_notes":3,"opi":10,"story":5,"qa":4,"structure_headers":2,"structures":5,"vocabulary":32,"activation":72,"review":22,"final_seals":0,"total":155},
