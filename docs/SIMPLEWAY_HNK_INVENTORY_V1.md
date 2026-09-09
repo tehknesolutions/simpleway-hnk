@@ -2,7 +2,8 @@
 
 **Data de consolidação:** 2026-09-09  
 **Estado:** RECOVERY + GOVERNED COURSE AUTHORING  
-**Política:** separar estrutura pedagógica, conteúdo linguístico recuperado, autoria nova, rebinds curriculares e cânone visual.
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V9`  
+**Pacote:** `simpleway-hnk@0.10.0`
 
 ## 1. Ciclo 1 — contrato estrutural
 
@@ -16,196 +17,158 @@
 - L06 — Yesod
 - L07 — Malkuth
 
-O cânone/contrato aprovado fecha o Ciclo 1 em **1.008 elementos pedagógicos**:
+O contrato aprovado fecha o Ciclo 1 em **1.008 elementos pedagógicos**:
 
-- 21 orientações docentes = 3 por Lesson;
-- 70 OPI = 10 por Lesson;
-- 35 cenas/histórias = 5 por Lesson;
-- 28 Q&A = 4 por Lesson;
-- 14 cabeçalhos estruturais = 2 por Lesson;
-- 35 estruturas = 5 por Lesson;
-- 144 entradas de vocabulário no ciclo;
-- 504 Activation = 72 por Lesson;
-- 154 revisões = 22 por Lesson;
+- 21 orientações docentes;
+- 70 OPI;
+- 35 cenas/histórias;
+- 28 Q&A;
+- 14 cabeçalhos estruturais;
+- 35 estruturas;
+- 144 entradas de vocabulário;
+- 504 Activation;
+- 154 revisões;
 - 3 selos finais: Verbum → Logos → Dialogos.
 
-A meta `144` é curricular. Não significa que cada forma recuperada no Master Lexicon corresponda automaticamente a um slot pedagógico.
+A meta 144 é curricular e não equivale automaticamente a 144 formas únicas HNK.
 
-## 2. Lesson 1 — estado histórico e reconstrução atual
+## 2. Lesson 1 — evidência histórica
 
-Há evidência recuperada de uma release HNK Lesson 1 v1 com status `PUBLICATION-FROZEN`.
-
-Elementos historicamente comprovados:
+Há evidência recuperada de uma release HNK Lesson 1 v1 `PUBLICATION-FROZEN` com:
 
 - 10 cards OPI;
 - 72 teacher drills;
-- modelo contendo pergunta HNK, glifos/segmentos, resposta HNK e answer slot;
-- pontes de Esperanto, Hebraico e Grego Koiné com transliteração;
-- três lexemas em WATCH: `SARASALA`, `VAMAVALA`, `VAMAZAMU`;
-- protótipo/produto web com modo Aluno e Professor;
-- teclado HNK 10×4;
-- practice engine.
+- campos para pergunta/resposta HNK, glifos e segmentos;
+- pontes de Esperanto, Hebraico e Grego Koiné;
+- três lexemas WATCH na L01: `SARASALA`, `VAMAVALA`, `VAMAZAMU`;
+- produto web com modo Aluno/Professor, teclado HNK e practice engine.
 
 O payload bruto v1.0 ainda não foi recuperado. Por isso os 82 itens históricos são `SOURCE_CONFIRMED_FROZEN`, mas não são contados como `FROZEN` reproduzíveis no repo atual.
 
-### L01 v1.1 — autoria governada atual
+## 3. Lesson 1 v1.1 — OPI authorship
 
-Estado atual dos OPI:
+Todos os 10 prompts congelados possuem agora um payload HNK governado e reproduzível:
 
-| OPI | HNK atual | Origem | Estado |
-|---|---|---|---|
-| 01 | `KALA YA EN ES KU KE` | `PHR-001` recuperado | AUTHORED · technical pass / semantic HOLD |
-| 02 | `EN VAMAKALA KE` | candidato v1.1, núcleo FROZEN | AUTHORED · HOLD |
-| 03 | — | construção de idade ainda aberta | MISSING |
-| 04 | `EN SARADAYA KU KE` | candidato v1.1, núcleo FROZEN | AUTHORED · HOLD WH |
-| 05 | `EN VALI KU KE` | candidato v1.1 + rebind governado de `VALI` | AUTHORED · HOLD WH |
-| 06 | — | frame de atividade bloqueado por colisão semântica | MISSING |
-| 07 | — | morar/quem/com; recuperação de `VANI` priorizada | MISSING |
-| 08 | `EN VAMAVALA KU KE` | candidato v1.1 com WATCH visível | AUTHORED · TEST ONLY / HOLD |
-| 09 | — | preferência; `VAME` permanece GATE | MISSING |
-| 10 | — | weekend/composto ainda não governado | MISSING |
+| OPI | HNK v1.1 | Estado |
+|---:|---|---|
+| 01 | `KALA YA EN ES KU KE` | AUTHORED · recovered phrase / semantic HOLD |
+| 02 | `EN VAMAKALA KE` | AUTHORED · FROZEN lexical core / grammar HOLD |
+| 03 | `EN KU SARASALA KE` | AUTHORED · WATCH / contextual age HOLD |
+| 04 | `EN SARADAYA KUVAN KE` | AUTHORED · KUVAN CANDIDATE HOLD |
+| 05 | `EN VALI KUVAN KE` | AUTHORED · governed VALI rebind + KUVAN HOLD |
+| 06 | `EN KU VALA KE` | AUTHORED · VALA CANDIDATE / contextual activity HOLD |
+| 07A | `EN VANI KUVAN KE` | AUTHORED · VANI semantic hypothesis + KUVAN HOLD |
+| 07B | `EN VANI KUON KE` | AUTHORED · VANI semantic hypothesis + KUON/ON gate dependency HOLD |
+| 08 | `EN KU VAMAVALA KE` | AUTHORED · WATCH / inferred KU HOLD |
+| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · GATE + WATCH experimental HOLD |
+| 10 | context `VAMUSARO` + `EN KU VALA KE` | AUTHORED · approximate contextual equivalent HOLD |
 
-Portanto, neste momento:
+OPI 7 is one pedagogical card represented by two HNK microquestions because the English prompt contains two semantic goals.
 
-- L01 OPI `AUTHORED`: **5/10 = 50%**;
-- Cycle 1 OPI `AUTHORED`: **5/70 = 7,1429%**;
-- slots pedagógicos globais `AUTHORED`: **5/1.008 = 0,4960%**;
+Current counts:
+
+- L01 OPI `AUTHORED`: **10/10 = 100%**;
+- Cycle 1 OPI `AUTHORED`: **10/70 = 14.2857%**;
+- global pedagogical slots `AUTHORED`: **10/1.008 = 0.9921%**;
 - `VALIDATED`: **0/1.008**;
-- `FROZEN` reproduzível atual: **0/1.008**;
-- evidência histórica congelada: **82/1.008 = 8,1349%**.
+- reproducible `FROZEN`: **0/1.008**;
+- historical frozen evidence: **82/1.008 = 8.1349%**.
 
-## 3. Lesson 2
+`10/10 AUTHORED` is not a publication claim. It means every OPI slot now has a governed v1.1 payload; semantic/human promotion remains pending.
 
-Existe scaffold recuperado `HNK-L02`, versão `0.0.1`, estado histórico `DRAFT-SCAFFOLD`.
+## 4. OPI 7 — source boundary
 
-- existem 11 bindings lexicais recuperados associados a L02;
-- não existe uma Lesson 2 pedagógica congelada equivalente à L01 no artefato recuperado;
-- conteúdo não vazio exige fonte curricular aprovada e content freeze versionado.
+Historical SimpleWay material confirms residence as a real Cycle 1 semantic domain: `I live` belongs to Lesson 1 and `She lives` recurs later in Cycle 1.
 
-## 4. Lessons 3 e 4
+However, no recovered HNK source found so far proves `VANI = live/reside`.
 
-- L03: 8 bindings; mistura FROZEN, WATCH e CANDIDATE; gate de evidência insuficiente.
-- L04: 9 bindings; predominantemente GATE; promoção de runtime bloqueada até evidência/revisão humana.
+Therefore:
 
-Esses materiais são evidência de trabalho, não Lessons congeladas completas.
+- `LEX-031 VANI` remains `WATCH` with Master Lexicon meaning `null`;
+- `VANI ≈ live/reside` exists only as an explicit semantic hypothesis for the OPI 7 test lane;
+- `AUTH-001 KUVAN` remains CANDIDATE;
+- `AUTH-003 KUON` remains CANDIDATE and depends on `LEX-026 ON` remaining GATE;
+- `KUON` does not retroactively define `KU=WHO` or `ON=person` in recovered canon;
+- no lexical equivalent of English `WITH` was invented;
+- co-resident meaning is modeled only by an experimental residence-predicate valency;
+- no curriculum rebind of VANI was created.
 
-## 5. Lessons 5, 6 e 7
+## 5. OPI 10 — source boundary
 
-A estrutura curricular existe, mas o corpus atual não contém lexemas HNK recuperados ligados a L05, L06 ou L07.
+`VAMUSARO` remains exactly `rest / leisure period`, not `weekend`.
 
-Regra: valores linguísticos ausentes permanecem `null` até recuperação de fonte ou autoria formal governada. `FAITH`, `PURPOSE` e `PEACE` são alvos curriculares ingleses, não lexemas HNK automaticamente autorizados.
+The OPI 10 v1.1 card uses `VAMUSARO` only as a discourse/UI context and asks `EN KU VALA KE`. Semantic fidelity remains `APPROXIMATE_CONTEXTUAL_EQUIVALENT` and HOLD.
 
-## 6. Corpus linguístico e cobertura
+## 6. Corpus linguístico
 
-Master Lexicon:
+Recovered Master Lexicon:
 
-- 33 formas no registro;
-- 31 formas únicas vinculadas a pelo menos uma Lesson do Ciclo 1;
-- 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`);
-- 7 frases recuperadas, todas atualmente associadas à L01;
+- 33 forms total;
+- 31 unique forms linked to at least one Cycle 1 Lesson;
+- 2 unbound recovered forms: `VAMATAYA`, `KALIFORNIA`;
+- 7 recovered phrases;
 - gate global `HOLD_INCOMPLETE_BINDING`.
 
-### Proveniência recuperada vs rebind curricular
+Governed authored registry `@hnk/linguas/authored`:
 
-`VALI = trabalho / trabalhar` é `FROZEN` e foi recuperado originalmente em L02/L03. O layer canônico de Cycle 1 agora possui um **rebind curricular explícito** que também permite ensiná-lo em L01.
+1. `AUTH-001 KUVAN` — locative interrogative specialization — `CANDIDATE`;
+2. `AUTH-002 VALA` — generic activity nominal head — `CANDIDATE`;
+3. `AUTH-003 KUON` — person-interrogative specialization — `CANDIDATE`, depends on `ON=GATE`.
 
-Esse rebind:
+Coverage proxies:
 
-- não altera a forma `VALI`;
-- não altera o significado;
-- não altera a autoridade FROZEN;
-- não reescreve a proveniência histórica;
-- não aumenta o número de formas únicas do ciclo;
-- aumenta a cobertura ensinável da L01 de 9 para 10 bindings.
+- recovered: **31/144 = 21.5278%**;
+- recovered + authored candidates: **34/144 = 23.6111%**.
 
-Cobertura atual:
+These ratios are language-asset proxies only; they are not vocabulary-slot completion.
 
-| Lesson | Bindings recuperados | Rebinds governados | Total ensinável | Frases recuperadas |
-|---|---:|---:|---:|---:|
-| L01 | 9 | 1 | **10** | 7 |
-| L02 | 11 | 0 | 11 | 0 |
-| L03 | 8 | 0 | 8 | 0 |
-| L04 | 9 | 0 | 9 | 0 |
-| L05 | 0 | 0 | 0 | 0 |
-| L06 | 0 | 0 | 0 | 0 |
-| L07 | 0 | 0 | 0 | 0 |
+## 7. Lesson-level language coverage
 
-A proxy lexical continua **31/144 = 21,5278%**, pois reuso curricular não cria uma nova forma única.
+Recovered/rebound lexical coverage remains:
 
-## 7. Interrogativos — estado de recuperação/autoria
+| Lesson | Recovered/rebound lexemes | Authored candidates | Recovered phrases |
+|---|---:|---:|---:|
+| L01 | 10 = 9 recovered + 1 governed VALI rebind | 3 | 7 |
+| L02 | 11 | 0 | 0 |
+| L03 | 8 | 0 | 0 |
+| L04 | 9 | 0 | 0 |
+| L05 | 0 | 0 | 0 |
+| L06 | 0 | 0 | 0 |
+| L07 | 0 | 0 | 0 |
 
-A análise distribucional atual sustenta, sem promoção canônica:
+`VANI` use in OPI 7 is a semantic test hypothesis and does not increase L01 recovered/rebound lexeme count.
 
-- `KE` — forte candidato a operador interrogativo final;
-- `KU` — componente/variável de pergunta de conteúdo; significado WH específico ainda `null`;
-- `EN` — referente de segunda pessoa inferido;
-- `SARI`, `LO`, `DA` — não resolvidos.
+## 8. Lessons 2–7
 
-Não há fonte atual que autorize `KU = WHAT`, `WHERE`, `WHO` ou `HOW` especificamente.
+- L02: recovered lexical work exists; historical pedagogical scaffold remains incomplete compared with L01.
+- L03: 8 bindings; mixed FROZEN/WATCH/CANDIDATE; evidence gate remains insufficient.
+- L04: 9 bindings; predominantly GATE; promotion blocked pending evidence/human review.
+- L05–L07: curriculum structure exists but no recovered HNK lexemes are assigned. Missing values remain null until source recovery or explicit governed authorship.
 
-A comparação de `PHR-003` e `PHR-006` aumenta o valor de `KU` como variável de conteúdo, mas não recupera sua glosa exata. Os três frames sem glosa continuam não atribuídos a OPI específicos.
+## 9. HNK40
 
-### Proposta composicional `KUVAN`
+`@hnk/glyphs` remains the structural owner of G01–G40, IPA and safe transliteration/runtime.
 
-Há uma proposta nova, claramente marcada como **autoria e não recuperação**, para:
+Candidate D visual assets remain `PREPRODUCTION_NOT_OFFICIAL`. G-IDs are structural authority; current drawings are not yet official visual canon.
 
-`KU + VAN → KUVAN`
+## 10. SimpleWay English boundary
 
-Função proposta: variável interrogativa locativa / equivalente funcional aproximado de “onde”.
+`hnk-english-app` remains an authorized reference for course methodology, architecture, Student/Teacher flow, UX/UI, drills, vocabulary organization and progression.
 
-Base:
+Do not add HNK-language corpus files to the English repo.
 
-- `KU`: hipótese de variável de conteúdo;
-- `VAN`: hipótese morfológica locativa apoiada por `VALIVAN`, `TAYOVAN` e `PAROVAN`;
-- forma `KUVAN`: padrão fonotático CVCVC;
-- G-IDs: `G23·G05·G31·G01·G12`;
-- nenhuma colisão exata encontrada no Master Lexicon atual.
+## 11. Authority model
 
-`KUVAN` **não está no cânone** e não foi aplicado aos OPI. A regra composicional permanece `CLOSED_LIST_ONLY` e exige promoção humana antes de qualquer mudança no Master Lexicon.
+- `codex-hnk/packages/hnk-linguas` — recovered registry, authored-candidate registry and Cycle 1 language governance;
+- `codex-hnk/packages/hnk-glyphs` — HNK40 structural runtime;
+- `simpleway-hnk` — course/product/curriculum authoring and validation;
+- SimpleWay Cycle 1 canon/contract — pedagogical target architecture;
+- recovered Lesson 1 release — historical product evidence.
 
-## 8. OPI 6 — gate de atividade
+## 12. Current gate
 
-O OPI `What do you do at work/school?` permanece `MISSING` deliberadamente.
+Current gate:
 
-`EN VALI KU KE` foi rejeitado para o OPI 6 porque essa mesma forma já é o candidato do OPI 5. Sem distinguir pergunta locativa de pergunta de atividade, reutilizá-la criaria ambiguidade não governada.
+`SWHNK-L01-OPI-10-OF-10-AUTHORED-REVIEW-V1`
 
-Também permanecem em HOLD, não bindados ao OPI 6:
-
-- `EN VALIVAN KU KE`;
-- `EN PARAZAMO KU KE`;
-- `EN PARAZAMI KU KE`.
-
-Não é necessário criar automaticamente um lexema equivalente ao inglês auxiliar/light `do`. O problema é estrutural/semântico antes de ser lexical.
-
-## 9. Escrita HNK / HNK40
-
-No `codex-hnk`, `@hnk/glyphs` mantém:
-
-- G01–G40 como IDs estruturais autoritativos;
-- IPA/fonemas e parser de transliteração;
-- Candidate D Freeze Pass 1 congelado 40/40;
-- PUA candidato apenas para transporte;
-- regra de não adivinhar unidades não resolvidas;
-- `TS` como unidade atômica G30.
-
-O estado visual permanece `PREPRODUCTION_NOT_OFFICIAL`. Promoção humana ainda é necessária antes de `VISUAL-CANON-V2`.
-
-## 10. Relação com SimpleWay English
-
-`hnk-english-app` continua sendo referência autorizada para metodologia, arquitetura, fluxo Aluno/Professor, UX/UI, exercícios e progressão. Não adicionar conteúdo HNK ao repositório de inglês.
-
-## 11. Fontes de autoridade
-
-1. `codex-hnk/packages/hnk-linguas` — registry linguístico e layer de cobertura/rebinds.
-2. `codex-hnk/packages/hnk-glyphs` — runtime estrutural HNK40.
-3. `HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1` / contract — arquitetura pedagógica do Ciclo 1.
-4. release recuperada HNK Lesson 1 — evidência histórica do produto L01.
-5. `simpleway-hnk/proposals/language` — autoria e hipóteses explícitas, nunca confundidas com recuperação.
-
-## 12. Gate corrente
-
-A esteira atual está em:
-
-`SWHNK-HNK-COMPOSITIONAL-INTERROGATIVE-RULE-V1`
-
-Próxima decisão linguística relevante: promover/rejeitar a regra composicional e `KUVAN` como `CANDIDATE`, ou recuperar evidência adicional que resolva o sistema WH sem autoria nova.
+Next objective: review the ten authored cards as a set, define whole-slot validation criteria, and begin moving only the strongest cards from `AUTHORED` toward `VALIDATED` without changing WATCH/CANDIDATE/GATE authorities silently.
