@@ -1,0 +1,56 @@
+{
+  "transition_id": "SWHNK-L01-OPI-004-005-VALIDATED-TRANSITION-V1",
+  "status": "APPLIED",
+  "applied_at": "2026-09-09",
+  "source_batch": "locative-question-human-promotion-batch.v1.json",
+  "slots": [
+    {
+      "slot_id": "L01-OPI-004",
+      "english": "Where were you born?",
+      "hnk": "EN SARADAYA KUVAN KE",
+      "from": "AUTHORED",
+      "to": "VALIDATED",
+      "answer_pattern": "[PLACE]",
+      "validation_scope": "SIMPLEWAY_HNK_L01_V1_1_COURSE_USE",
+      "language_authority_effect": "NONE",
+      "historical_recovery_effect": "NONE"
+    },
+    {
+      "slot_id": "L01-OPI-005",
+      "english": "Where do you work?",
+      "hnk": "EN VALI KUVAN KE",
+      "from": "AUTHORED",
+      "to": "VALIDATED",
+      "answer_pattern": "[PLACE]",
+      "validation_scope": "SIMPLEWAY_HNK_L01_V1_1_COURSE_USE",
+      "language_authority_effect": "NONE",
+      "historical_recovery_effect": "NONE"
+    }
+  ],
+  "approved_conventions": {
+    "KUVAN": {
+      "course_role": "L01 locative interrogative variable",
+      "authority": "CANDIDATE",
+      "historical_recovery_claim": false,
+      "global_productivity": false
+    },
+    "EN_KE_frame": {
+      "course_role": "second-person beginner question frame for OPI 4 and 5",
+      "historical_recovery_claim": false,
+      "universal_HNK_grammar_claim": false
+    },
+    "answer_pattern": {
+      "value": "[PLACE]",
+      "function_words_added": false
+    }
+  },
+  "metrics_after": {
+    "L01_OPI_authored_or_better": 10,
+    "L01_OPI_VALIDATED": 2,
+    "L01_OPI_VALIDATED_percent": 20.0,
+    "GLOBAL_VALIDATED": 2,
+    "GLOBAL_VALIDATED_percent": 0.1984,
+    "FROZEN": 0
+  },
+  "next_gate": "SWHNK-L01-VALIDATION-BATCH-2-V1"
+}
