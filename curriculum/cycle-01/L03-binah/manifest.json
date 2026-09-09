@@ -1,0 +1,25 @@
+{
+  "lesson_id": "HNK-L03",
+  "sphere": "Binah",
+  "status": "LEXICON_PARTIAL_GATED",
+  "language_bindings": 8,
+  "recovered_phrases": 0,
+  "authority_distribution": {
+    "FROZEN": 3,
+    "WATCH": 3,
+    "CANDIDATE": 2
+  },
+  "evidence_gate": {
+    "automated_decision": "HOLD_INSUFFICIENT_EVIDENCE",
+    "runtime_activation": false,
+    "human_promotion_required": true
+  },
+  "curriculum_target_note": "Cycle contract adds the English structure target 'I usually...'; this does not authorize an HNK translation by inference.",
+  "rules": {
+    "non_invention": true,
+    "candidate_is_not_frozen": true,
+    "watch_is_not_frozen": true
+  },
+  "language_authority": "@hnk/linguas",
+  "glyph_authority": "@hnk/glyphs"
+}
