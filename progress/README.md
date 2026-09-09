@@ -1,129 +1,106 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Current checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V7`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V8`  
 **Date:** 2026-09-09  
-**Package:** `simpleway-hnk@0.8.0`
+**Package:** `simpleway-hnk@0.9.0`
 
 ## Progress model
 
-Historical evidence and current reproducible implementation are separate.
-
 `MISSING -> AUTHORED -> VALIDATED -> FROZEN`
 
-A slot may be `AUTHORED` while remaining below `VALIDATED` because WATCH/CANDIDATE/GATE material, inferred grammar, answer strategies or human review are still open.
+Historical evidence and current reproducible implementation are separate. `AUTHORED` does not imply semantic validation or publication readiness.
 
-## Current Cycle 1 dashboard
+## Current dashboard
 
-Target: **1,008 pedagogical slots**.
+Cycle 1 target: **1,008 pedagogical slots**.
 
-- `AUTHORED`: **8 / 1,008 = 0.7937%**
+- `AUTHORED`: **9 / 1,008 = 0.8929%**
 - `VALIDATED`: **0 / 1,008**
 - current reproducible `FROZEN`: **0 / 1,008**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82 / 1,008 = 8.1349%**
-- scaffolded L01 slots: **82 / 1,008 = 8.1349%**
 
-Language-asset proxies:
+Language assets:
 
-- recovered Cycle 1 forms: **31 / 144 = 21.5278%**
+- recovered Cycle 1 forms: **31 / 144 = 21.5278% proxy**
 - governed authored candidates: **2** — `KUVAN`, `VALA`
-- governed unique language assets: **33 / 144 = 22.9167%**
+- governed unique language assets: **33 / 144 = 22.9167% proxy**
 - recovered phrases: **7**
 
-These are asset-coverage proxies, **not vocabulary-slot completion**.
+These are language-asset proxies, not completed vocabulary slots.
 
-## Lesson 1 — OPI
+## Lesson 1 OPI
 
-L01 OPI authorship: **8 / 10 = 80%**.  
-Cycle 1 OPI authorship: **8 / 70 = 11.4286%**.  
-L01 total-slot authorship: **8 / 155 = 5.1613%**.
+- L01 OPI authorship: **9 / 10 = 90%**
+- Cycle 1 OPI authorship: **9 / 70 = 12.8571%**
+- L01 total-slot authorship: **9 / 155 = 5.8065%**
 
-| OPI | HNK | Main authority/gate |
+| OPI | Current HNK design | State |
 |---:|---|---|
-| 01 | `KALA YA EN ES KU KE` | recovered PHR-001 · semantic HOLD |
-| 02 | `EN VAMAKALA KE` | FROZEN core · grammar HOLD |
-| 03 | `EN KU SARASALA KE` | SARASALA WATCH · contextual age HOLD |
-| 04 | `EN SARADAYA KUVAN KE` | FROZEN core + KUVAN CANDIDATE |
-| 05 | `EN VALI KUVAN KE` | FROZEN VALI rebind + KUVAN CANDIDATE |
-| 06 | `EN KU VALA KE` | VALA CANDIDATE · contextual activity HOLD |
-| 07 | — | **MISSING** · residence + WHO + WITH |
-| 08 | `EN KU VAMAVALA KE` | VAMAVALA WATCH · inferred KU frame |
-| 09 | `EN VAME VAMAZAMU KE` | VAME GATE + VAMAZAMU WATCH · experimental |
-| 10 | — | **MISSING** · weekend/temporal-leisure relation |
+| 01 | `KALA YA EN ES KU KE` | AUTHORED · recovered phrase / semantic HOLD |
+| 02 | `EN VAMAKALA KE` | AUTHORED · FROZEN core / grammar HOLD |
+| 03 | `EN KU SARASALA KE` | AUTHORED · WATCH / contextual age HOLD |
+| 04 | `EN SARADAYA KUVAN KE` | AUTHORED · KUVAN CANDIDATE HOLD |
+| 05 | `EN VALI KUVAN KE` | AUTHORED · VALI rebind + KUVAN HOLD |
+| 06 | `EN KU VALA KE` | AUTHORED · VALA CANDIDATE / contextual activity HOLD |
+| 07 | — | **MISSING · residence + WHO + WITH** |
+| 08 | `EN KU VAMAVALA KE` | AUTHORED · WATCH / inferred KU HOLD |
+| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · GATE + WATCH experimental HOLD |
+| 10 | context `VAMUSARO` + `EN KU VALA KE` | AUTHORED · approximate contextual leisure-period HOLD |
 
 No OPI is yet fully `VALIDATED`.
 
-## Recovered vs authored language
+## OPI 10 boundary
 
-### Recovered layer
+The frozen English prompt remains `What do you do on weekends?`.
 
-The recovered Master Lexicon remains **33 forms total**, with **31 unique forms linked to Cycle 1**. New authorship does not change that historical count.
+HNK v1.1 does **not** claim `VAMUSARO = weekend`. Instead:
 
-`VALI = work / trabalhar` remains historically recovered for L02/L03. The Cycle 1 layer permits teaching it in L01 through an explicit curriculum rebind; provenance is not rewritten.
+- `VAMUSARO` retains its recovered FROZEN meaning `rest / leisure period`;
+- it is used as a separate discourse/UI context label;
+- the question remains `EN KU VALA KE`;
+- the semantic reframe is approximately `In your rest/leisure period: what is your activity?`;
+- exact HNK `weekend` remains unrecovered/unauthored.
 
-### Governed authored layer
+Therefore OPI 10 is `AUTHORED`, but its semantic fidelity remains HOLD.
 
-`@hnk/linguas/authored` currently contains:
-
-1. `AUTH-001 KUVAN` — locative interrogative specialization, `CANDIDATE`, not recovered.
-2. `AUTH-002 VALA` — generic activity nominal head, `CANDIDATE`, authored by corpus-facing back-analysis, not recovered.
-
-Recovered forms, curriculum rebinds and authored candidates remain separate metrics.
-
-## Interrogative recovery
-
-Current evidence supports only a non-canonical analysis:
-
-- `KE` — strong candidate clause-final interrogative operator;
-- `EN` — inferred second-person referent;
-- `KU` — inferred pre-nominal interrogative content selector/determiner;
-- `ZAMO` — inferred language/language-domain noun;
-- `SARI`, `LO`, `DA` — unresolved.
-
-The contrast:
-
-- `EN ZAMI HENUVOKODAN KE`
-- `EN ZAMI KU ZAMO KE`
-
-supports the structural reading of `KU ZAMO` as a content phrase compatible with “what/which language”, but does **not** recover a fixed English gloss for `KU`.
-
-`KU` must therefore not be labeled historically as WHAT, WHICH, WHERE, WHO or HOW.
-
-## Historical Lesson 1 evidence
-
-The recovered release proves a `PUBLICATION-FROZEN` L01 v1 with:
-
-- 10 OPI;
-- 72 teacher drills;
-- HNK question/answer/glyph/segment fields in the data model.
-
-The raw `lesson1.release.v1.json` / `lesson1-data.js` payload is still missing, so the historical 82 frozen-evidence slots are not counted as current reproducible `FROZEN` implementation.
-
-## Remaining OPI gates
-
-### OPI 07
+## The final missing OPI — OPI 07
 
 `Where do you live and who do you live with?`
 
-Open requirements:
+Three unresolved components remain:
 
-- live/reside predicate or equivalent construction;
-- WHO/person interrogative;
-- comitative WITH relation.
+1. `LIVE_RESIDE_OR_EQUIVALENT`
+2. `WHO_PERSON_INTERROGATIVE`
+3. `COMITATIVE_WITH`
 
-`VANI` is a recovered WATCH form with `meaning = null`. Morphology makes it a high-value recovery target, but **it must not be assigned “live/reside” without evidence**.
+Available evidence is insufficient:
 
-### OPI 10
+- `KUVAN` can support the locative interrogative dimension, but not the live/reside predicate;
+- `VANI` is a recovered WATCH form with exact gloss `null`; it must **not** be assigned `live/reside` by morphological plausibility alone;
+- `ON` is a GATE pronoun/referent form and must not be converted into WHO;
+- current compositional governance explicitly does not license `KU + ON` as WHO;
+- no recovered comitative/WITH relation has been found.
 
-`What do you do on weekends?`
+The correct state is therefore one explicit hard gap rather than false 10/10 completion.
 
-Relevant assets:
+## Authored language registry
 
-- `VAMUSARO` — FROZEN rest/leisure period;
-- `SARASALA` — WATCH time/duration;
-- `VALA` — authored CANDIDATE activity noun;
-- `KU` — inferred content selector.
+Canonical owner: `@hnk/linguas/authored`.
 
-No recovered source currently says `VAMUSARO = weekend`, and no governed temporal relation yet licenses a standalone weekend phrase. OPI 10 remains MISSING rather than forcing an unsupported compound.
+- `AUTH-001 KUVAN` — locative interrogative specialization, `CANDIDATE`, not recovered.
+- `AUTH-002 VALA` — generic activity nominal head, `CANDIDATE`, not recovered.
+
+The recovered-form count remains 31.
+
+## Historical L01 evidence
+
+Recovered v1.0 proves:
+
+- 10 OPI;
+- 72 teacher drills;
+- HNK question/answer/glyph/segment fields in the release model.
+
+The raw payload is still missing, so those 82 historical frozen-evidence slots are not counted as current `FROZEN` implementation.
 
 ## Commands
 
@@ -136,8 +113,8 @@ npm run validate:interrogatives
 npm test
 ```
 
-GitHub Actions has previously failed before executing test steps, so versioned tests must not be described as remotely green unless an actual runner execution is observed.
+GitHub Actions has previously failed before executing steps, so versioned tests must not be described as remotely green without an observed successful runner execution.
 
-## Progress rule
+## Rule
 
-Every percentage increase must correspond to a concrete repo transition. No authored form is mislabeled as recovered; no WATCH/CANDIDATE/GATE material is silently promoted; unknown glosses stay unknown until source recovery or explicit governed authorship.
+No authored form is mislabeled as recovered; no WATCH/CANDIDATE/GATE item is silently promoted; unknown meanings stay unknown until source recovery or explicit governed authorship.
