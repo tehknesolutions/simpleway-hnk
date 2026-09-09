@@ -1,0 +1,68 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V10",
+  "as_of":"2026-09-09",
+  "status":"L01_OPI_REVIEW_COMPLETE_FIRST_VALIDATION_BATCH_APPLIED",
+  "target_slots":1008,
+  "implementation_state_counts":{"MISSING":998,"AUTHORED":8,"VALIDATED":2,"FROZEN":0},
+  "implementation_state_percent":{"MISSING":99.0079,"AUTHORED":0.7937,"VALIDATED":0.1984,"FROZEN":0.0},
+  "maturity_cumulative":{
+    "AUTHORED_OR_BETTER":10,
+    "AUTHORED_OR_BETTER_percent":0.9921,
+    "VALIDATED_OR_BETTER":2,
+    "VALIDATED_OR_BETTER_percent":0.1984,
+    "FROZEN":0,
+    "FROZEN_percent":0.0
+  },
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"note":"Historical evidence does not equal current reproducible FROZEN payload."},
+  "language_asset_proxies":{
+    "recovered":{"forms":31,"target":144,"percent":21.5278},
+    "governed":{"recovered_forms":31,"authored_candidates":3,"unique_assets":34,"target":144,"percent":23.6111},
+    "authored_candidates":[
+      {"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},
+      {"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false},
+      {"id":"AUTH-003","form":"KUON","authority":"CANDIDATE","historical_recovery_claim":false,"dependency":"ON remains GATE"}
+    ]
+  },
+  "L01":{
+    "target":155,
+    "implementation_state_counts":{"MISSING":145,"AUTHORED":8,"VALIDATED":2,"FROZEN":0},
+    "maturity":{"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_percent":6.4516,"VALIDATED_OR_BETTER":2,"VALIDATED_OR_BETTER_percent":1.2903,"FROZEN":0},
+    "opi":{
+      "target":10,
+      "reviewed":10,
+      "AUTHORED_current_state":8,
+      "VALIDATED":2,
+      "FROZEN":0,
+      "AUTHORED_OR_BETTER":10,
+      "AUTHORED_OR_BETTER_percent":100.0,
+      "VALIDATED_OR_BETTER_percent":20.0,
+      "validated_slots":["L01-OPI-004","L01-OPI-005"],
+      "reviewed_hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"]
+    },
+    "historical_frozen_evidence":82
+  },
+  "cycle1_opi":{
+    "target":70,
+    "MISSING":60,
+    "AUTHORED_current_state":8,
+    "VALIDATED":2,
+    "FROZEN":0,
+    "AUTHORED_OR_BETTER":10,
+    "AUTHORED_OR_BETTER_percent":14.2857,
+    "VALIDATED_OR_BETTER":2,
+    "VALIDATED_OR_BETTER_percent":2.8571
+  },
+  "first_validation_batch":{
+    "batch":"SWHNK-L01-LOCATIVE-QUESTION-HUMAN-PROMOTION-BATCH-V1",
+    "transition":"SWHNK-L01-OPI-004-005-VALIDATED-TRANSITION-V1",
+    "validated":[
+      {"slot":"L01-OPI-004","hnk":"EN SARADAYA KUVAN KE","answer":"[PLACE]"},
+      {"slot":"L01-OPI-005","hnk":"EN VALI KUVAN KE","answer":"[PLACE]"}
+    ],
+    "authority_changes":0,
+    "KUVAN_authority_after":"CANDIDATE",
+    "historical_recovery_claim_added":false
+  },
+  "next_validation_batch_candidates":["L01-OPI-006","L01-OPI-008"],
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-2-V1"
+}
