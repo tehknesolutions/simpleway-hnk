@@ -9,7 +9,8 @@
     "non_invention": true,
     "unknown_values_remain_null": true,
     "frozen_content_requires_version_bump": true,
-    "visual_canon_required_for_final_glyph_promotion": true
+    "visual_canon_required_for_final_glyph_promotion": true,
+    "curriculum_rebinds_do_not_rewrite_recovered_provenance": true
   },
   "targets": {
     "lessons": 7,
@@ -24,12 +25,12 @@
     "total": 1008
   },
   "lessons": [
-    {"id":"HNK-L01","sphere":"Kether","path":"L01-kether/manifest.json","language_bindings":9,"recovered_phrases":7,"state":"RECOVERED_PARTIAL_PUBLICATION_SOURCE_CONFIRMED"},
-    {"id":"HNK-L02","sphere":"Chokhmah","path":"L02-chokhmah/manifest.json","language_bindings":11,"recovered_phrases":0,"state":"LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD"},
-    {"id":"HNK-L03","sphere":"Binah","path":"L03-binah/manifest.json","language_bindings":8,"recovered_phrases":0,"state":"LEXICON_PARTIAL_GATED"},
-    {"id":"HNK-L04","sphere":"Chesed","path":"L04-chesed/manifest.json","language_bindings":9,"recovered_phrases":0,"state":"EVIDENCE_GATE"},
-    {"id":"HNK-L05","sphere":"Gevurah","path":"L05-gevurah/manifest.json","language_bindings":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"},
-    {"id":"HNK-L06","sphere":"Yesod","path":"L06-yesod/manifest.json","language_bindings":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"},
-    {"id":"HNK-L07","sphere":"Malkuth","path":"L07-malkuth/manifest.json","language_bindings":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"}
+    {"id":"HNK-L01","sphere":"Kether","path":"L01-kether/manifest.json","language_bindings":10,"recovered_bindings":9,"governed_rebinds":1,"recovered_phrases":7,"state":"RECOVERED_PLUS_GOVERNED_REBIND_AUTHORING"},
+    {"id":"HNK-L02","sphere":"Chokhmah","path":"L02-chokhmah/manifest.json","language_bindings":11,"recovered_bindings":11,"governed_rebinds":0,"recovered_phrases":0,"state":"LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD"},
+    {"id":"HNK-L03","sphere":"Binah","path":"L03-binah/manifest.json","language_bindings":8,"recovered_bindings":8,"governed_rebinds":0,"recovered_phrases":0,"state":"LEXICON_PARTIAL_GATED"},
+    {"id":"HNK-L04","sphere":"Chesed","path":"L04-chesed/manifest.json","language_bindings":9,"recovered_bindings":9,"governed_rebinds":0,"recovered_phrases":0,"state":"EVIDENCE_GATE"},
+    {"id":"HNK-L05","sphere":"Gevurah","path":"L05-gevurah/manifest.json","language_bindings":0,"recovered_bindings":0,"governed_rebinds":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"},
+    {"id":"HNK-L06","sphere":"Yesod","path":"L06-yesod/manifest.json","language_bindings":0,"recovered_bindings":0,"governed_rebinds":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"},
+    {"id":"HNK-L07","sphere":"Malkuth","path":"L07-malkuth/manifest.json","language_bindings":0,"recovered_bindings":0,"governed_rebinds":0,"recovered_phrases":0,"state":"NO_RECOVERED_LEXEMES"}
   ]
 }
