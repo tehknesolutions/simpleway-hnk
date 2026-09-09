@@ -1,0 +1,70 @@
+{
+  "snapshot_id": "SWHNK-C1-PROGRESS-SNAPSHOT-V4",
+  "as_of": "2026-09-09",
+  "status": "FIVE_AUTHORED_OPI_SLOTS_VALI_REBIND_APPLIED",
+  "target_slots": 1008,
+  "implementation": {
+    "MISSING": 1003,
+    "AUTHORED": 5,
+    "VALIDATED": 0,
+    "FROZEN": 0,
+    "percent": {
+      "MISSING": 99.5040,
+      "AUTHORED": 0.4960,
+      "VALIDATED": 0.0,
+      "FROZEN": 0.0
+    }
+  },
+  "authored_slots": [
+    {"slot_id":"L01-OPI-001","hnk":"KALA YA EN ES KU KE","origin":"RECOVERED_PHRASE","authority":"RECOVERED_APPROXIMATE","validation":"TECHNICAL_PASS_SEMANTIC_HOLD"},
+    {"slot_id":"L01-OPI-002","hnk":"EN VAMAKALA KE","origin":"V1_1_AUTHORING_CANDIDATE","lexical_authority":"FROZEN","validation":"HOLD_GRAMMAR_CANDIDATE"},
+    {"slot_id":"L01-OPI-004","hnk":"EN SARADAYA KU KE","origin":"V1_1_AUTHORING_CANDIDATE","lexical_authority":"FROZEN","validation":"HOLD_WH_SEMANTICS"},
+    {"slot_id":"L01-OPI-005","hnk":"EN VALI KU KE","origin":"V1_1_AUTHORING_CANDIDATE_WITH_GOVERNED_REBIND","lexical_authority":"FROZEN","binding_origin":"GOVERNED_CURRICULUM_REBIND","validation":"HOLD_WH_SEMANTICS"},
+    {"slot_id":"L01-OPI-008","hnk":"EN VAMAVALA KU KE","origin":"V1_1_AUTHORING_CANDIDATE","lexical_authority":"WATCH","usage_scope":"TEST_ONLY_WATCH_VISIBLE","validation":"HOLD_WATCH_AND_WH"}
+  ],
+  "historical_evidence": {
+    "SOURCE_CONFIRMED_FROZEN":82,
+    "percent":8.1349,
+    "breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},
+    "note":"Historical frozen evidence remains independent of current implementation state."
+  },
+  "scaffold":{"slots":82,"percent":8.1349},
+  "lexical_proxy": {
+    "unique_forms_linked_to_cycle1":31,
+    "target":144,
+    "percent":21.5278,
+    "recovered_phrases":7,
+    "L01_total_teachable_bindings":10,
+    "L01_recovered_bindings":9,
+    "L01_governed_rebinds":1,
+    "warning":"Proxy only; governed rebinds may improve lesson coverage without increasing unique recovered forms."
+  },
+  "L01": {
+    "target":155,
+    "MISSING":150,
+    "AUTHORED":5,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":3.2258,
+    "historical_frozen_evidence":82,
+    "scaffolded":82
+  },
+  "opi": {
+    "cycle_target":70,
+    "MISSING":65,
+    "AUTHORED":5,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":7.1429,
+    "L01_authored_percent":50.0,
+    "historical_frozen_evidence":10
+  },
+  "language_recovery": {
+    "generic_interrogative_operator_candidate":"KE",
+    "content_question_component_candidate":"KU",
+    "specific_WH_forms_recovered":0,
+    "question_technical_pass":1,
+    "governed_VALI_rebind":true
+  },
+  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V1"
+}
