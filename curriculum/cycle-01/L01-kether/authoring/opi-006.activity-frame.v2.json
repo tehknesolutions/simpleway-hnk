@@ -1,0 +1,61 @@
+{
+  "design_id":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V2",
+  "status":"AUTHORED_CANDIDATE_HOLD",
+  "opi":"L01-OPI-06",
+  "english_intent":"What do you do at work/school?",
+  "implementation_state":"AUTHORED",
+  "hnk_question":"EN KU VALA KE",
+  "semantic_reframe": {
+    "pt":"Qual é a sua atividade? / Que atividade é a sua?",
+    "en":"What is your activity? / Which activity is yours?",
+    "context_requirement":"The work/school domain is established by the surrounding OPI sequence; the HNK frame does not invent an AT relation or an auxiliary/light DO."
+  },
+  "components": [
+    {"form":"EN","state":"RECOVERED_FORM_INFERRED_ROLE","role":"second-person referent"},
+    {"form":"KU","state":"RECOVERED_FORM_INFERRED_STRONGER_ROLE","role":"pre-nominal interrogative content selector"},
+    {"form":"VALA","id":"AUTH-002","state":"GOVERNED_AUTHORED_CANDIDATE","authority":"CANDIDATE","role":"generic activity nominal head"},
+    {"form":"KE","state":"RECOVERED_FORM_INFERRED_STRONG_ROLE","role":"clause-final interrogative operator"}
+  ],
+  "glyph_ids":["G02","G12","G23","G05","G31","G01","G14","G01","G23","G02"],
+  "principles": {
+    "do_not_calque_english_auxiliary_do":true,
+    "do_not_invent_locative_preposition":true,
+    "semantic_equivalence_over_word_for_word_translation":true,
+    "contextual_beginner_frame_allowed":true,
+    "authored_candidate_must_remain_visible":true
+  },
+  "why_v2_is_better_than_v1": [
+    "KUVAN now separates locative questions in OPI 4/5, removing the former EN VALI KU KE collision.",
+    "PHR-003/PHR-006 contrast provides stronger evidence for KU before a nominal content head.",
+    "VALA supplies a governed activity nominal head without inventing a verb equivalent to English DO.",
+    "The frame reuses the topic context instead of requiring an unrecovered AT/IN relation."
+  ],
+  "validation_state":"HOLD_AUTHORED_CANDIDATE_AND_INFERRED_GRAMMAR",
+  "promotion_blockers": [
+    "VALA is CANDIDATE, not FROZEN.",
+    "KU pre-nominal selector role is inferred, not canonically recovered.",
+    "EN/KE grammatical roles remain inferred.",
+    "Context-dependent omission of work/school domain requires pedagogical/human validation.",
+    "Answer pattern remains to be governed."
+  ],
+  "answer_pattern": {
+    "id":"ACTIVITY-DESCRIPTION-V1",
+    "pattern":"[ACTIVITY_DESCRIPTION]",
+    "status":"AUTHORING_CANDIDATE",
+    "hnk_function_words_added":false
+  },
+  "provenance": [
+    "recovery/ku-zamo-contrastive-analysis.v1.json",
+    "recovery/wh-system-recovery.v1.json",
+    "../../../proposals/language/HNK_VALA_ACTIVITY_NOUN_PROPOSAL_V1.json",
+    "../../../proposals/language/HNK_VALA_PROMOTION_RECORD_V1.json",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-002"
+  ],
+  "progress_effect": {
+    "AUTHORED_slots_before":5,
+    "AUTHORED_slots_after":6,
+    "VALIDATED_slots_after":0,
+    "FROZEN_slots_after":0
+  },
+  "next_gate":"SWHNK-L01-OPI-003-AGE-CONSTRUCTION-V1"
+}
