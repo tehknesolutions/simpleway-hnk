@@ -1,6 +1,6 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_5_OF_10",
+  "status": "AUTHORING_ACTIVE_5_OF_10_KUVAN_APPLIED",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
@@ -28,7 +28,7 @@
       "answer_pattern": {"id":"BARE-PROPER-NAME-V1","pattern":"[PERSONAL_NAME]","status":"AUTHORING_CANDIDATE","hnk_function_words_added":false},
       "validation_record": "../validation/opi-001.validation.v1.json",
       "promotion_blockers": ["Approximate recovered gloss lacks exact token alignment.","Answer strategy is governed v1.1 authorship, not recovered v1.0 payload.","Human linguistic review required."],
-      "provenance": ["authoring/lexicon.bindings.snapshot.json#PHR-001","authoring/lesson.authoring.v1.1.json#L01-OPI-01","tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs@e9390d1b1828f839f7b7f7fec29910cc40eb197b"]
+      "provenance": ["authoring/lexicon.bindings.snapshot.json#PHR-001","authoring/lesson.authoring.v1.1.json#L01-OPI-01","tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs"]
     },
     {
       "slot_id":"L01-OPI-002",
@@ -51,36 +51,40 @@
       "slot_id":"L01-OPI-004",
       "course_prompt_id":"L01-OPI-04",
       "opi_english":"Where were you born?",
-      "binding_origin":"V1_1_AUTHORING_CANDIDATE",
-      "candidate_id":"CAND-L01-OPI-04-Q1",
-      "hnk_question":"EN SARADAYA KU KE",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE_WITH_AUTHORED_LANGUAGE_ASSET",
+      "candidate_id":"CAND-L01-OPI-04-Q2",
+      "hnk_question":"EN SARADAYA KUVAN KE",
       "lexeme_ids":["LEX-002"],
       "lexeme_authority":["FROZEN"],
-      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "authored_candidate_ids":["AUTH-001"],
+      "authored_candidate_authority":["CANDIDATE"],
+      "grammar_hypotheses":["EN second-person referent","KUVAN governed authored locative content variable","KE final interrogative operator"],
       "implementation_state":"AUTHORED",
-      "validation_state":"HOLD_WH_SEMANTICS",
-      "glyph_ids":["G02","G12","G26","G01","G15","G01","G19","G01","G40","G01","G23","G05","G23","G02"],
+      "validation_state":"HOLD_AUTHORED_CANDIDATE_GRAMMAR",
+      "glyph_ids":["G02","G12","G26","G01","G15","G01","G19","G01","G40","G01","G23","G05","G31","G01","G12","G23","G02"],
       "answer_pattern":null,
-      "promotion_blockers":["KU is not yet specifically identified as WHERE/WHAT.","Content-question frame is authored, not historically recovered.","Location answer strategy unresolved."],
-      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-04-Q1","authoring/lexicon.bindings.snapshot.json#LEX-002"]
+      "promotion_blockers":["KUVAN is CANDIDATE, not FROZEN.","EN/KE grammatical analyses remain inferred rather than canonical.","Location answer strategy unresolved."],
+      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-04-Q1","authoring/lexicon.bindings.snapshot.json#LEX-002","tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-001"]
     },
     {
       "slot_id":"L01-OPI-005",
       "course_prompt_id":"L01-OPI-05",
       "opi_english":"Where do you work?",
-      "binding_origin":"V1_1_AUTHORING_CANDIDATE_WITH_GOVERNED_REBIND",
-      "candidate_id":"CAND-L01-OPI-05-Q1",
-      "hnk_question":"EN VALI KU KE",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE_WITH_GOVERNED_REBIND_AND_AUTHORED_LANGUAGE_ASSET",
+      "candidate_id":"CAND-L01-OPI-05-Q2",
+      "hnk_question":"EN VALI KUVAN KE",
       "lexeme_ids":["LEX-013"],
       "lexeme_authority":["FROZEN"],
       "lexeme_binding_origin":["GOVERNED_CURRICULUM_REBIND"],
-      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "authored_candidate_ids":["AUTH-001"],
+      "authored_candidate_authority":["CANDIDATE"],
+      "grammar_hypotheses":["EN second-person referent","KUVAN governed authored locative content variable","KE final interrogative operator"],
       "implementation_state":"AUTHORED",
-      "validation_state":"HOLD_WH_SEMANTICS",
-      "glyph_ids":["G02","G12","G31","G01","G14","G03","G23","G05","G23","G02"],
+      "validation_state":"HOLD_AUTHORED_CANDIDATE_GRAMMAR",
+      "glyph_ids":["G02","G12","G31","G01","G14","G03","G23","G05","G31","G01","G12","G23","G02"],
       "answer_pattern":null,
-      "promotion_blockers":["KU exact WH semantics remain unresolved.","Question frame is v1.1 authorship.","Work-location answer strategy unresolved."],
-      "provenance":["authoring/opi-005.candidate.v1.json","authoring/curriculum-rebinds.v1.json#LEX-013","tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs@dc2169df88be767be4de8856adbada44897927ad"]
+      "promotion_blockers":["KUVAN is CANDIDATE, not FROZEN.","EN/KE grammatical analyses remain inferred rather than canonical.","Work-location answer strategy unresolved."],
+      "provenance":["authoring/opi-005.candidate.v1.json","authoring/curriculum-rebinds.v1.json#LEX-013","tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs","tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-001"]
     },
     {
       "slot_id":"L01-OPI-008",
@@ -91,13 +95,13 @@
       "hnk_question":"EN VAMAVALA KU KE",
       "lexeme_ids":["LEX-007"],
       "lexeme_authority":["WATCH"],
-      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "grammar_hypotheses":["EN second-person referent","KU unresolved generic content-question component","KE final interrogative operator"],
       "implementation_state":"AUTHORED",
       "usage_scope":"TEST_ONLY_WATCH_VISIBLE",
       "validation_state":"HOLD_WATCH_AND_WH",
       "glyph_ids":["G02","G12","G31","G01","G11","G01","G31","G01","G14","G01","G23","G05","G23","G02"],
       "answer_pattern":null,
-      "promotion_blockers":["VAMAVALA remains WATCH.","KU exact content-question semantics unresolved.","Possessive relation and answer strategy require validation."],
+      "promotion_blockers":["VAMAVALA remains WATCH.","KU exact generic content-question semantics unresolved.","Possessive relation and answer strategy require validation."],
       "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-08-Q1","authoring/lexicon.bindings.snapshot.json#LEX-007"]
     }
   ],
@@ -108,9 +112,10 @@
     "authored_v1_1_candidates":4,
     "question_technical_pass":1,
     "governed_rebind_usage":1,
+    "authored_language_candidate_usage":2,
     "watch_test_only":1,
     "validated":0,
     "frozen":0
   },
-  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V1"
+  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V2"
 }
