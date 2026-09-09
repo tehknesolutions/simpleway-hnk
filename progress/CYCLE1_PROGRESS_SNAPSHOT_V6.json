@@ -1,0 +1,37 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V6",
+  "as_of":"2026-09-09",
+  "status":"SIX_AUTHORED_OPI_TWO_AUTHORED_LANGUAGE_CANDIDATES",
+  "target_slots":1008,
+  "implementation":{"MISSING":1002,"AUTHORED":6,"VALIDATED":0,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.4048,"AUTHORED":0.5952,"VALIDATED":0.0,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies": {
+    "recovered":{"forms":31,"target":144,"percent":21.5278},
+    "governed":{"recovered_forms":31,"authored_candidates":2,"unique_assets":33,"target":144,"percent":22.9167},
+    "authored_candidates":[
+      {"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE"},
+      {"id":"AUTH-002","form":"VALA","authority":"CANDIDATE"}
+    ]
+  },
+  "L01": {
+    "target":155,
+    "AUTHORED":6,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":3.871,
+    "opi":{"target":10,"AUTHORED":6,"percent":60.0},
+    "teachable_recovered_or_rebound_lexemes":10,
+    "authored_language_candidates":2
+  },
+  "cycle1_opi":{"target":70,"AUTHORED":6,"percent":8.5714},
+  "new_authored_slot": {
+    "slot":"L01-OPI-006",
+    "english":"What do you do at work/school?",
+    "hnk":"EN KU VALA KE",
+    "semantic_reframe":"What is your activity? / Which activity is yours?",
+    "state":"AUTHORED_HOLD",
+    "candidate_asset":"AUTH-002 VALA"
+  },
+  "next_gate":"SWHNK-L01-OPI-003-AGE-CONSTRUCTION-V1"
+}
