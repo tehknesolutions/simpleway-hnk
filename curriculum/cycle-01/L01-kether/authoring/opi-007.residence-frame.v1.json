@@ -1,0 +1,94 @@
+{
+  "candidate_id": "CAND-L01-OPI-07-Q1",
+  "status": "AUTHORED_CANDIDATE_HOLD",
+  "slot_id": "L01-OPI-007",
+  "course_prompt_id": "L01-OPI-07",
+  "opi_english": "Where do you live and who do you live with?",
+  "design": {
+    "strategy": "TWO_MICROQUESTIONS_ONE_OPI_CARD",
+    "reason": "The English prompt contains two semantic goals. Splitting them avoids forcing an unrecovered conjunction/comitative structure into one HNK sentence.",
+    "historical_v1_payload_claim": false
+  },
+  "recovered_form_dependency": {
+    "lexeme_id": "LEX-031",
+    "form": "VANI",
+    "authority": "WATCH",
+    "master_lexicon_meaning": null,
+    "semantic_hypothesis": "live / reside",
+    "semantic_hypothesis_source": "../../../../proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json",
+    "curriculum_rebind_created": false
+  },
+  "questions": [
+    {
+      "id": "L01-OPI-007-A",
+      "intent": "Where do you live?",
+      "hnk": "EN VANI KUVAN KE",
+      "glyph_ids": ["G02", "G12", "G31", "G01", "G12", "G03", "G23", "G05", "G31", "G01", "G12", "G23", "G02"],
+      "dependencies": [
+        "EN second-person referent hypothesis",
+        "LEX-031 VANI WATCH semantic hypothesis",
+        "AUTH-001 KUVAN CANDIDATE",
+        "KE final interrogative-operator hypothesis"
+      ],
+      "answer_pattern": {
+        "id": "RESIDENCE-LOCATION-V1",
+        "pattern": "[PLACE]",
+        "status": "AUTHORING_CANDIDATE"
+      }
+    },
+    {
+      "id": "L01-OPI-007-B",
+      "intent": "Who do you live with?",
+      "hnk": "EN VANI KUON KE",
+      "glyph_ids": ["G02", "G12", "G31", "G01", "G12", "G03", "G23", "G05", "G04", "G12", "G23", "G02"],
+      "dependencies": [
+        "EN second-person referent hypothesis",
+        "LEX-031 VANI WATCH semantic hypothesis",
+        "AUTH-003 KUON CANDIDATE with ON=GATE dependency",
+        "experimental residence co-resident valency",
+        "KE final interrogative-operator hypothesis"
+      ],
+      "answer_pattern": {
+        "id": "CORESIDENT-REFERENT-V1",
+        "pattern": "[PERSON_OR_PEOPLE]",
+        "status": "AUTHORING_CANDIDATE"
+      }
+    }
+  ],
+  "comitative_design": {
+    "overt_with_particle_added": false,
+    "rule": "VANI may accept a co-resident complement in this experimental frame.",
+    "rule_source": "../../../../proposals/language/HNK_RESIDENCE_VALENCY_RULE_V1.json",
+    "historical_valency_claim": false
+  },
+  "implementation_state": "AUTHORED",
+  "usage_scope": "EXPERIMENTAL_WATCH_CANDIDATE_AND_GATE_DEPENDENCIES_VISIBLE",
+  "validation_state": "HOLD_WATCH_SEMANTIC_HYPOTHESIS_AUTHORED_CANDIDATE_AND_GATED_DEPENDENCY",
+  "promotion_blockers": [
+    "VANI remains WATCH with master-lexicon meaning null.",
+    "VANI=live/reside is a semantic hypothesis, not recovered gloss.",
+    "KUON is CANDIDATE and depends on ON remaining GATE.",
+    "Residence co-resident valency is authored and test-only.",
+    "EN/KE analyses remain inferred.",
+    "Human linguistic/pedagogical validation is required."
+  ],
+  "progress_effect": {
+    "AUTHORED_slots_before": 9,
+    "AUTHORED_slots_after": 10,
+    "L01_OPI_authored_before": 9,
+    "L01_OPI_authored_after": 10,
+    "VALIDATED_slots_after": 0,
+    "FROZEN_slots_after": 0
+  },
+  "provenance": [
+    "../recovery/opi-007.archaeology.v2.json",
+    "../../../../proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json",
+    "../../../../proposals/language/HNK_KUON_PERSON_INTERROGATIVE_PROPOSAL_V1.json",
+    "../../../../proposals/language/HNK_KUON_PROMOTION_RECORD_V1.json",
+    "../../../../proposals/language/HNK_RESIDENCE_VALENCY_RULE_V1.json",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/index.mjs#LEX-031",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-001",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-003"
+  ],
+  "next_gate": "SWHNK-L01-OPI-10-OF-10-AUTHORED-REVIEW-V1"
+}
