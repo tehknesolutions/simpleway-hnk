@@ -1,0 +1,140 @@
+{
+  "analysis_id": "SWHNK-L01-TOKEN-HYPOTHESES-V1",
+  "status": "RECOVERY_HYPOTHESES_NOT_CANON",
+  "method": "distributional comparison across recovered phrases; no token is promoted to lexeme or grammar solely by this file",
+  "source": "authoring/lexicon.bindings.snapshot.json",
+  "confidence_scale": ["CONTEXTUAL", "INFERRED", "AMBIGUOUS", "UNKNOWN"],
+  "rules": {
+    "creates_lexemes": false,
+    "creates_grammar_canon": false,
+    "approximate_gloss_cannot_yield_exact_token_meaning": true,
+    "unknown_gloss_phrases_may_support_distribution_only": true,
+    "human_or_source_confirmation_required": true
+  },
+  "phrases": [
+    {"id":"PHR-001","form":"KALA YA EN ES KU KE","gloss_en":"What is your name?","gloss_certainty":"APPROXIMATE"},
+    {"id":"PHR-002","form":"AN ZAMI ZAMO","gloss_en":"I speak / use language.","gloss_certainty":"APPROXIMATE"},
+    {"id":"PHR-003","form":"EN ZAMI HENUVOKODAN KE","gloss_en":"Do you speak HENUVOKODAN?","gloss_certainty":"APPROXIMATE"},
+    {"id":"PHR-004","form":"EN SARI LO KU KE","gloss_en":null,"gloss_certainty":"UNRECOVERED"},
+    {"id":"PHR-005","form":"EN DA KU KE","gloss_en":null,"gloss_certainty":"UNRECOVERED"},
+    {"id":"PHR-006","form":"EN ZAMI KU ZAMO KE","gloss_en":null,"gloss_certainty":"UNRECOVERED"},
+    {"id":"PHR-007","form":"AN ZAMI HENUVOKODAN","gloss_en":null,"gloss_certainty":"UNRECOVERED"}
+  ],
+  "hypotheses": [
+    {
+      "token":"AN",
+      "hypothesis":"FIRST_PERSON_SINGULAR_OR_FIRST_PERSON_SUBJECT",
+      "confidence":"INFERRED",
+      "evidence":["PHR-002 begins AN and has approximate gloss beginning 'I'","PHR-007 shares AN ZAMI with a non-question declarative shape"],
+      "counterevidence":[],
+      "promotion":"SOURCE_OR_HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "token":"EN",
+      "hypothesis":"SECOND_PERSON_SINGULAR_OR_ADDRESSEE_SUBJECT",
+      "confidence":"INFERRED",
+      "evidence":["PHR-003 begins EN and has approximate gloss 'Do you...'","PHR-001 contains EN in a question translated approximately with 'your'","PHR-004/005/006 also begin EN and share question-like terminal KE"],
+      "counterevidence":["PHR-001 position is not clause-initial, so EN may have a broader second-person/possessive role rather than a fixed subject-pronoun role"],
+      "promotion":"SOURCE_OR_HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "token":"ZAMI",
+      "hypothesis":"SPEAK_OR_LANGUAGE_USE_PREDICATE",
+      "confidence":"INFERRED",
+      "evidence":["PHR-002 AN ZAMI ZAMO ≈ 'I speak / use language.'","PHR-003 EN ZAMI HENUVOKODAN KE ≈ 'Do you speak HENUVOKODAN?'","PHR-007 repeats AN ZAMI HENUVOKODAN"],
+      "counterevidence":[],
+      "promotion":"SOURCE_OR_HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "token":"KE",
+      "hypothesis":"CLAUSE_FINAL_INTERROGATIVE_MARKER_OR_QUESTION_OPERATOR",
+      "confidence":"INFERRED",
+      "evidence":["Both recovered phrases with approximate interrogative glosses, PHR-001 and PHR-003, end in KE","PHR-004/005/006 also end in KE, forming a consistent distributional question-like class","PHR-002 and PHR-007 do not end in KE"],
+      "counterevidence":["Exact glosses for PHR-004/005/006 are unrecovered"],
+      "promotion":"SOURCE_OR_HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "token":"ZAMO",
+      "hypothesis":"LANGUAGE_OR_GENERIC_LANGUAGE_OBJECT",
+      "confidence":"AMBIGUOUS",
+      "evidence":["PHR-002 ends ZAMO under approximate gloss 'language'","PHR-006 contains ZAMI ... ZAMO in a question-like frame"],
+      "counterevidence":["Only one phrase with recovered approximate gloss directly supports this meaning","ZAMO could encode a broader object/category/function"],
+      "promotion":"MORE_EVIDENCE_REQUIRED"
+    },
+    {
+      "token":"KU",
+      "hypothesis":"UNRESOLVED_HIGH_FREQUENCY_GRAMMATICAL_TOKEN",
+      "confidence":"UNKNOWN",
+      "evidence":["Appears in PHR-001, PHR-004, PHR-005 and PHR-006"],
+      "counterevidence":["Only PHR-001 has an approximate gloss and its internal alignment is not recovered"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"KALA",
+      "hypothesis":"UNRESOLVED_NAME_QUESTION_COMPONENT",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-001 only"],
+      "counterevidence":["Single occurrence inside a multi-token approximate gloss"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"YA",
+      "hypothesis":"UNRESOLVED_NAME_QUESTION_COMPONENT",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-001 only"],
+      "counterevidence":["Single occurrence inside a multi-token approximate gloss"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"ES",
+      "hypothesis":"UNRESOLVED_NAME_QUESTION_COMPONENT",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-001 only"],
+      "counterevidence":["Single occurrence inside a multi-token approximate gloss"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"SARI",
+      "hypothesis":"UNRESOLVED",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-004"],
+      "counterevidence":["PHR-004 exact gloss unrecovered"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"LO",
+      "hypothesis":"UNRESOLVED",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-004"],
+      "counterevidence":["PHR-004 exact gloss unrecovered"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    },
+    {
+      "token":"DA",
+      "hypothesis":"UNRESOLVED",
+      "confidence":"UNKNOWN",
+      "evidence":["Occurs in PHR-005"],
+      "counterevidence":["PHR-005 exact gloss unrecovered"],
+      "promotion":"DO_NOT_ASSIGN_MEANING"
+    }
+  ],
+  "structural_hypotheses": [
+    {
+      "hypothesis":"SUBJECT_PREDICATE_OBJECT_COMPATIBLE_ORDER_IN_LANGUAGE_USE_CLAUSES",
+      "confidence":"INFERRED",
+      "evidence":["AN ZAMI ZAMO","EN ZAMI HENUVOKODAN KE","AN ZAMI HENUVOKODAN"],
+      "note":"This supports S-P-O compatibility for this micro-domain; it does not yet establish a universal HNK basic word order."
+    },
+    {
+      "hypothesis":"QUESTION_OPERATOR_COMPATIBLE_WITH_CLAUSE_FINAL_POSITION",
+      "confidence":"INFERRED",
+      "evidence":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+      "note":"KE is the candidate token, but remains a recovery hypothesis until promoted."
+    }
+  ],
+  "recommended_recovery_actions": [
+    "Search historical sources for AN/EN/ZAMI/KE token definitions.",
+    "If no stronger source is found, submit AN/EN/ZAMI/KE as explicit RECOVERED-HYPOTHESIS promotion candidates, not as newly invented forms.",
+    "Keep KALA/YA/ES/KU/SARI/LO/DA unresolved until additional evidence or new-version authorship."
+  ]
+}
