@@ -1,0 +1,148 @@
+{
+  "design_id": "SWHNK-L01-GRAMMAR-DESIGN-PASS-V1",
+  "status": "CANDIDATE_DESIGN_NOT_CANON",
+  "basis": {
+    "grammar_candidate": "../../../../proposals/language/HNK_GRAMMAR_CANDIDATE_V1.json",
+    "grammar_foundation": "../../../../proposals/language/HNK_GRAMMAR_FOUNDATION_V1.md",
+    "token_hypotheses": "../recovery/token-hypotheses.v1.json",
+    "semantic_requirements": "semantic-requirements.v1.json"
+  },
+  "principles": {
+    "semantic_equivalence_over_english_word_for_word_calque": true,
+    "analytic_first": true,
+    "recovered_evidence_preferred_over_new_authorship": true,
+    "new_structure_may_be_candidate_in_v1_1_but_not_historical_v1_0": true
+  },
+  "decisions": [
+    {
+      "id":"GRD-001",
+      "topic":"BASIC_DECLARATIVE_ORDER",
+      "decision":"S_P_O_COMPATIBLE_AS_L01_DEFAULT",
+      "scope":"simple transitive language-use/activity clauses",
+      "evidence":"AN ZAMI ZAMO / EN ZAMI HENUVOKODAN KE / AN ZAMI HENUVOKODAN",
+      "confidence":"INFERRED_PLUS_DESIGN",
+      "canonical":false,
+      "note":"Does not yet claim universal HNK word order."
+    },
+    {
+      "id":"GRD-002",
+      "topic":"YES_NO_QUESTION",
+      "decision":"SAME_CLAUSE_PLUS_FINAL_QUESTION_OPERATOR",
+      "candidate_operator":"KE",
+      "evidence":"Known approximate interrogatives end in KE; declaratives do not.",
+      "confidence":"INFERRED_PLUS_DESIGN",
+      "canonical":false
+    },
+    {
+      "id":"GRD-003",
+      "topic":"PERSON_MARKERS",
+      "decision":"INVARIANT_PERSON_FORMS_PREFERRED_IN_BEGINNER_GRAMMAR",
+      "candidates":{"first_singular":"AN","second_person":"EN"},
+      "evidence_state":"INFERRED_DISTRIBUTIONAL",
+      "possession_use_of_EN":"UNRESOLVED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-004",
+      "topic":"GENERIC_ENGLISH_DO",
+      "decision":"DO_NOT_CREATE_LEXEME_BY_DEFAULT",
+      "reason":"English auxiliary/light 'do' in OPI prompts is not itself a required HNK semantic unit. HNK may ask directly for activity/action content.",
+      "affected_opi":["L01-OPI-06","L01-OPI-10"],
+      "requirement_resolution":"L01-REQ-LEX-006 becomes STRUCTURAL_DESIGN, not mandatory lexical authorship.",
+      "canonical":false
+    },
+    {
+      "id":"GRD-005",
+      "topic":"AGE",
+      "decision":"TREAT_AS_CONSTRUCTION_BEFORE_NEW_AGE_NOUN",
+      "reason":"Many languages express age through a construction rather than a dedicated lexical noun. Existing SARASALA = time/duration may be relevant but does not license a derivation.",
+      "required_components":["person reference","quantity/age value strategy","state/duration relation"],
+      "new_age_lexeme_required":false,
+      "state":"CONSTRUCTION_DESIGN_REQUIRED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-006",
+      "topic":"LIVE_RESIDE",
+      "decision":"PRIORITIZE_VANI_RECOVERY_BEFORE_NEW_FORM",
+      "recovered_form":"VANI",
+      "current_authority":"WATCH",
+      "current_gloss":null,
+      "reason":"VANI is historical/tested evidence and morphology makes it a high-value locative-verb hypothesis, but no meaning is assigned yet.",
+      "canonical":false
+    },
+    {
+      "id":"GRD-007",
+      "topic":"CONTENT_INTERROGATIVES",
+      "decision":"DO_NOT_ASSIGN_WH_FORMS_YET",
+      "reason":"KALA/YA/ES/KU/SARI/LO/DA remain unresolved; forcing new WHAT/WHERE/WHO forms could duplicate recovered grammar.",
+      "question_operator_candidate":"KE",
+      "content_word_position":"UNRESOLVED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-008",
+      "topic":"COMITATIVE",
+      "decision":"ANALYTIC_RELATION_PREFERRED_FOR_BEGINNER_DESIGN",
+      "form":null,
+      "reason":"A free relation/particle is easier to teach and avoids premature case morphology, but no historical form has been recovered.",
+      "state":"CANDIDATE_STRUCTURE_FORM_REQUIRED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-009",
+      "topic":"POSSESSION",
+      "decision":"DO_NOT_SPLIT_EN_INTO_SUBJECT_AND_POSSESSIVE_FORMS_WITHOUT_EVIDENCE",
+      "reason":"EN appears in both second-person question and name-question contexts; an invariant second-person marker is possible, but exact relation is unresolved.",
+      "state":"RECOVERY_ANALYSIS_REQUIRED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-010",
+      "topic":"NEGATION",
+      "decision":"REQUIRED_BY_L01_CURRICULUM_BUT_FORM_UNRECOVERED",
+      "english_structure":"I don't...",
+      "design_preference":"single analytic negation operator with predicate scope",
+      "form":null,
+      "state":"NEW_CANDIDATE_GRAMMATICAL_FORM_REQUIRED_UNLESS_RECOVERED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-011",
+      "topic":"WEEKEND",
+      "decision":"KEEP_SEMANTIC_REQUIREMENT_OPEN",
+      "reason":"VAMUSARO (rest/leisure period) and SARASALA (time/duration) are relevant, but no approved compounding rule licenses WEEKEND yet.",
+      "form":null,
+      "state":"LEXICAL_OR_COMPOUND_DESIGN_REQUIRED",
+      "canonical":false
+    },
+    {
+      "id":"GRD-012",
+      "topic":"LIKE_PREFERENCE",
+      "decision":"KEEP_VAME_GATED",
+      "form":"VAME",
+      "authority":"GATE",
+      "state":"VALIDATE_OR_AUTHOR_ALTERNATIVE_CONSTRUCTION",
+      "canonical":false
+    }
+  ],
+  "requirement_reclassification": {
+    "before": {
+      "lexical_authoring_required": 6,
+      "cross_lesson_rebind_reviews": 1,
+      "gate_reviews": 1
+    },
+    "after": {
+      "mandatory_new_lexeme_design": 1,
+      "construction_or_grammar_design": 4,
+      "historical_recovery_priority": 1,
+      "cross_lesson_rebind_reviews": 1,
+      "gate_reviews": 1
+    },
+    "mandatory_new_lexeme_design_items":["WEEKEND"],
+    "construction_or_grammar_design_items":["AGE","COMITATIVE_WITH","WHO_PERSON_INTERROGATIVE","GENERIC_DO_ACTION"],
+    "historical_recovery_priority_items":["LIVE_RESIDE via VANI"],
+    "note":"WHO still needs a semantic form eventually, but is grouped with interrogative-system design rather than independent word invention at this stage. GENERIC_DO may require no HNK lexeme at all."
+  },
+  "next_gate":"SWHNK-L01-RECOVERED-GRAMMAR-PROMOTION-REVIEW-V1"
+}
