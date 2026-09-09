@@ -150,11 +150,12 @@ Esses percentuais são proxies de ativos linguísticos, não conclusão dos 144 
 
 ## 10. Gate corrente
 
-`SWHNK-L01-VALIDATION-BATCH-3-SELECTION-V1`
+A seleção do Batch 3 foi concluída. O gate corrente agora é:
 
-Próximos candidatos recomendados:
+`SWHNK-L01-OPI-010-CONTEXTUAL-EQUIVALENCE-HUMAN-BATCH-V1`
 
-1. **OPI 10** — o frame de atividade já tem precedente validado no OPI 6; falta decidir se `VAMUSARO` como contexto de descanso/lazer é aceitável como equivalente contextual explicitamente rotulado de “weekends”, ou se precisamos autorar primeiro um sistema temporal mais exato.
-2. **OPI 2** — núcleo `VAMAKALA` forte/FROZEN, mas requer decisão de posse/existência e caminho de resposta negativa.
+O batch do OPI 10 está **preparado, mas não aplicado**. A decisão é estritamente pedagógico-semântica: aceitar ou não `VAMUSARO` — mantendo seu significado FROZEN de **descanso/período de lazer** — como contexto mais amplo e explicitamente rotulado para o prompt inglês “What do you do on weekends?”. A aprovação projetaria a L01 para **5/10 OPI VALIDATED = 50%**, sem criar palavra para weekend e sem alterar autoridade linguística.
+
+Em paralelo, OPI 2 foi movido para `SWHNK-L01-POSSESSION-EXISTENTIAL-NEGATIVE-DESIGN-V1`; ele não deve entrar em novo batch de validação até existir uma estratégia governada para posse/existência e resposta negativa.
 
 OPI 3, 7 e 9 permanecem como os casos de maior risco linguístico.
