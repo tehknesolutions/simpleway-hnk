@@ -9,7 +9,7 @@ Historical evidence and current reproducible implementation are deliberately sep
 A historical Lesson may be proven to have been publication-frozen while its raw payload is currently missing. In that case:
 
 - `evidence_state = SOURCE_CONFIRMED_FROZEN`;
-- `implementation_state = MISSING` until the HNK payload is actually recovered or re-authored and governed in the current repository.
+- current implementation remains independent until the HNK payload is recovered or re-authored and governed in this repository.
 
 This prevents recovery evidence from being mistaken for current implementation.
 
@@ -22,16 +22,33 @@ This prevents recovery evidence from being mistaken for current implementation.
 - **VALIDATED** — authored content passed its declared gate.
 - **FROZEN** — current payload is versioned, validated and publication-frozen.
 
-## Current baseline — 2026-09-09
+## Current state — 2026-09-09
 
 Target: **1,008 pedagogical slots**.
 
+- `AUTHORED`: **1 / 1,008 = 0.0992%**.
+- `VALIDATED`: **0 / 1,008**.
 - Current reproducible `FROZEN`: **0 / 1,008**.
 - Historical `SOURCE_CONFIRMED_FROZEN`: **82 / 1,008 = 8.1349%**.
 - Scaffolded in the reconstructed L01 lane: **82 / 1,008 = 8.1349%**.
 - Master Lexicon forms linked to Cycle 1: **31**.
 - Lexical proxy: **31 / 144 = 21.5278%**.
 - Recovered phrases: **7**.
+
+### First current AUTHORED slot
+
+`L01-OPI-001` / `L01-OPI-01`:
+
+- English: `What's your name?`
+- recovered HNK: `KALA YA EN ES KU KE`
+- source phrase: `PHR-001`
+- source certainty: `APPROXIMATE`
+- current state: `AUTHORED`
+- validation: `PENDING`
+
+It is intentionally **not** `VALIDATED` yet because the recovered gloss is approximate, the G01-G40 sequence is not yet attached to this course binding, the governed answer pattern is missing, and human linguistic review is still required.
+
+## Historical Lesson 1 evidence
 
 The 82 historical frozen-evidence slots are:
 
