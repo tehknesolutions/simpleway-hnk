@@ -1,0 +1,39 @@
+{
+  "candidate_id":"CAND-L01-OPI-05-Q1",
+  "status":"AUTHORING_CANDIDATE_NOT_CANON",
+  "opi":"L01-OPI-05",
+  "english_intent":"Where do you work?",
+  "hnk":"EN VALI KU KE",
+  "segments":["EN","VALI","KU","KE"],
+  "glyph_ids":["G02","G12","G31","G01","G14","G03","G23","G05","G23","G02"],
+  "lexical_support":[
+    {
+      "id":"LEX-013",
+      "form":"VALI",
+      "meaning":{"pt":"trabalho / trabalhar","en":"work"},
+      "authority":"FROZEN",
+      "recovered_lessons":["L02","L03"],
+      "L01_binding_origin":"GOVERNED_CURRICULUM_REBIND"
+    }
+  ],
+  "grammar_support":[
+    "EN = inferred second-person referent",
+    "KU = unresolved content-question component; NOT specifically promoted as WHERE",
+    "KE = inferred strong clause-final interrogative operator"
+  ],
+  "semantic_design":"Uses the HNK work predicate directly and avoids a separate calque for English auxiliary 'do'.",
+  "new_lexemes_created":0,
+  "implementation_state_if_bound":"AUTHORED",
+  "validation":"HOLD_WH_SEMANTICS",
+  "promotion_blockers":[
+    "KU exact WH semantics remain unresolved.",
+    "Question frame is v1.1 authorship, not recovered v1.0 payload.",
+    "Work-location answer strategy remains unresolved.",
+    "Human linguistic review required before VALIDATED."
+  ],
+  "provenance":[
+    "curriculum-rebinds.v1.json#LEX-013",
+    "../recovery/wh-system-recovery.v1.json",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs@dc2169df88be767be4de8856adbada44897927ad"
+  ]
+}
