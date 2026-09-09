@@ -1,10 +1,12 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_PARTIAL_TECHNICAL_VALIDATION",
+  "status": "AUTHORING_ACTIVE_4_OF_10",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
+    "authored_candidate_must_not_be_mislabeled_as_recovered": true,
     "approximate_phrase_gloss_requires_validation_before_promotion": true,
+    "watch_usage_must_remain_visible": true,
     "glyph_ids_required_before_validated_state": true,
     "historical_v1_0_payload_not_reconstructed": true
   },
@@ -13,6 +15,7 @@
       "slot_id": "L01-OPI-001",
       "course_prompt_id": "L01-OPI-01",
       "opi_english": "What's your name?",
+      "binding_origin":"RECOVERED_PHRASE",
       "phrase_id": "PHR-001",
       "hnk_question": "KALA YA EN ES KU KE",
       "meaning": {"pt":"Qual é o seu nome?","en":"What is your name?"},
@@ -21,38 +24,73 @@
       "implementation_state": "AUTHORED",
       "validation_state": "TECHNICAL_PASS_SEMANTIC_HOLD",
       "glyph_ids": ["G23","G01","G14","G01","G40","G01","G02","G12","G02","G26","G23","G05","G23","G02"],
-      "glyph_segmentation": [
-        {"token":"KALA","glyph_ids":["G23","G01","G14","G01"]},
-        {"token":"YA","glyph_ids":["G40","G01"]},
-        {"token":"EN","glyph_ids":["G02","G12"]},
-        {"token":"ES","glyph_ids":["G02","G26"]},
-        {"token":"KU","glyph_ids":["G23","G05"]},
-        {"token":"KE","glyph_ids":["G23","G02"]}
-      ],
-      "answer_pattern": {
-        "id":"BARE-PROPER-NAME-V1",
-        "pattern":"[PERSONAL_NAME]",
-        "status":"AUTHORING_CANDIDATE",
-        "hnk_function_words_added":false
-      },
+      "answer_pattern": {"id":"BARE-PROPER-NAME-V1","pattern":"[PERSONAL_NAME]","status":"AUTHORING_CANDIDATE","hnk_function_words_added":false},
       "validation_record": "../validation/opi-001.validation.v1.json",
-      "promotion_blockers": [
-        "Phrase gloss is APPROXIMATE rather than exact recovered token alignment.",
-        "Bare-proper-name answer strategy is governed v1.1 authorship, not recovered v1.0 answer payload.",
-        "Human linguistic review is required before whole-slot VALIDATED."
-      ],
-      "provenance": [
-        "authoring/lexicon.bindings.snapshot.json#PHR-001",
-        "authoring/lesson.authoring.v1.1.json#L01-OPI-01",
-        "tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs@e9390d1b1828f839f7b7f7fec29910cc40eb197b"
-      ]
+      "promotion_blockers": ["Approximate recovered gloss lacks exact token alignment.","Answer strategy is governed v1.1 authorship, not recovered v1.0 payload.","Human linguistic review required."],
+      "provenance": ["authoring/lexicon.bindings.snapshot.json#PHR-001","authoring/lesson.authoring.v1.1.json#L01-OPI-01","tehknesolutions/codex-hnk/packages/hnk-glyphs/src/index.mjs@e9390d1b1828f839f7b7f7fec29910cc40eb197b"]
+    },
+    {
+      "slot_id":"L01-OPI-002",
+      "course_prompt_id":"L01-OPI-02",
+      "opi_english":"Do you have a nickname?",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE",
+      "candidate_id":"CAND-L01-OPI-02-Q1",
+      "hnk_question":"EN VAMAKALA KE",
+      "lexeme_ids":["LEX-001"],
+      "lexeme_authority":["FROZEN"],
+      "grammar_hypotheses":["EN second-person referent","KE final interrogative operator","analytic nominal yes/no frame"],
+      "implementation_state":"AUTHORED",
+      "validation_state":"HOLD_GRAMMAR_CANDIDATE",
+      "glyph_ids":["G02","G12","G31","G01","G11","G01","G23","G01","G14","G01","G23","G02"],
+      "answer_pattern":null,
+      "promotion_blockers":["Nominal yes/no frame is authored, not historically recovered.","Possession/have semantics require human validation.","Answer strategy unresolved."],
+      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-02-Q1","authoring/lexicon.bindings.snapshot.json#LEX-001"]
+    },
+    {
+      "slot_id":"L01-OPI-004",
+      "course_prompt_id":"L01-OPI-04",
+      "opi_english":"Where were you born?",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE",
+      "candidate_id":"CAND-L01-OPI-04-Q1",
+      "hnk_question":"EN SARADAYA KU KE",
+      "lexeme_ids":["LEX-002"],
+      "lexeme_authority":["FROZEN"],
+      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "implementation_state":"AUTHORED",
+      "validation_state":"HOLD_WH_SEMANTICS",
+      "glyph_ids":["G02","G12","G26","G01","G15","G01","G19","G01","G40","G01","G23","G05","G23","G02"],
+      "answer_pattern":null,
+      "promotion_blockers":["KU is not yet specifically identified as WHERE/WHAT.","Content-question frame is authored, not historically recovered.","Location answer strategy unresolved."],
+      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-04-Q1","authoring/lexicon.bindings.snapshot.json#LEX-002"]
+    },
+    {
+      "slot_id":"L01-OPI-008",
+      "course_prompt_id":"L01-OPI-08",
+      "opi_english":"What are your hobbies?",
+      "binding_origin":"V1_1_AUTHORING_CANDIDATE",
+      "candidate_id":"CAND-L01-OPI-08-Q1",
+      "hnk_question":"EN VAMAVALA KU KE",
+      "lexeme_ids":["LEX-007"],
+      "lexeme_authority":["WATCH"],
+      "grammar_hypotheses":["EN second-person referent","KU unresolved content-question component","KE final interrogative operator"],
+      "implementation_state":"AUTHORED",
+      "usage_scope":"TEST_ONLY_WATCH_VISIBLE",
+      "validation_state":"HOLD_WATCH_AND_WH",
+      "glyph_ids":["G02","G12","G31","G01","G11","G01","G31","G01","G14","G01","G23","G05","G23","G02"],
+      "answer_pattern":null,
+      "promotion_blockers":["VAMAVALA remains WATCH.","KU exact content-question semantics unresolved.","Possessive relation and answer strategy require validation."],
+      "provenance":["authoring/question-frame-candidates.v1.json#CAND-L01-OPI-08-Q1","authoring/lexicon.bindings.snapshot.json#LEX-007"]
     }
   ],
   "metrics": {
-    "opi_target": 10,
-    "authored": 1,
-    "question_technical_pass": 1,
-    "validated": 0,
-    "frozen": 0
-  }
+    "opi_target":10,
+    "authored":4,
+    "authored_recovered_phrase":1,
+    "authored_v1_1_candidates":3,
+    "question_technical_pass":1,
+    "watch_test_only":1,
+    "validated":0,
+    "frozen":0
+  },
+  "next_gate":"SWHNK-L01-OPI-05-VALI-REBIND-V1"
 }
