@@ -3,7 +3,7 @@
   "sphere": "Kether",
   "version": "1.0.0",
   "source_status": "PUBLICATION-FROZEN",
-  "repository_status": "RECOVERED_PARTIAL_PUBLICATION_SOURCE_CONFIRMED",
+  "repository_status": "RECOVERED_PARTIAL_PUBLICATION_SOURCE_CONFIRMED_AUTHORING_V1_1_OPEN",
   "pedagogy": {
     "opi_expected": 10,
     "teacher_drills_expected": 72,
@@ -23,12 +23,22 @@
     "styles.css",
     "manifest.webmanifest"
   ],
+  "authoring": {
+    "version": "1.1.0-authoring",
+    "status": "AUTHORING_QUEUE",
+    "queue": "authoring/lesson.authoring.v1.1.json",
+    "language_snapshot": "authoring/lexicon.bindings.snapshot.json",
+    "binding_pass": "authoring/binding-pass.v1.json",
+    "semantic_requirements": "authoring/semantic-requirements.v1.json",
+    "next_gate": "SWHNK-L01-AUTHORING-DECISIONS-V1"
+  },
   "rules": {
     "non_invention": true,
     "raw_payload_must_be_source_recovered": true,
-    "frozen_content_requires_version_bump": true
+    "frozen_content_requires_version_bump": true,
+    "historical_v1_0_must_not_be_overwritten": true
   },
-  "promotion_rule": "Do not recreate the missing 10 cards or 72 drills from memory. Locate original payload or approve a new versioned authored release.",
+  "promotion_rule": "Do not recreate the missing v1.0 payload from memory. Continue new work only in the governed v1.1 authoring lane until human promotion.",
   "language_authority": "@hnk/linguas",
   "glyph_authority": "@hnk/glyphs"
 }
