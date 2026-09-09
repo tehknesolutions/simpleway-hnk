@@ -10,33 +10,36 @@
     {"selector":{"lesson":"L01","category":"opi","range":[2,2]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-002 uses governed candidate `EN VAMAKALA KE` with FROZEN VAMAKALA and inferred grammar."},
     {"selector":{"lesson":"L01","category":"opi","range":[4,4]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-004 uses `EN SARADAYA KUVAN KE`; SARADAYA is recovered FROZEN and KUVAN is canonical authored CANDIDATE AUTH-001."},
     {"selector":{"lesson":"L01","category":"opi","range":[5,5]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-005 uses `EN VALI KUVAN KE`; VALI is FROZEN through explicit L01 curriculum rebind and KUVAN is AUTH-001 CANDIDATE."},
-    {"selector":{"lesson":"L01","category":"opi","range":[8,8]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-008 revised to `EN KU VAMAVALA KE` after PHR-003/PHR-006 contrast. VAMAVALA remains WATCH; KU pre-nominal content-selector role remains inferred/test-only."}
+    {"selector":{"lesson":"L01","category":"opi","range":[6,6]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-006 uses contextual HNK frame `EN KU VALA KE`; VALA is canonical authored CANDIDATE AUTH-002 and KU remains inferred pre-nominal content selector. Slot remains HOLD below VALIDATED."},
+    {"selector":{"lesson":"L01","category":"opi","range":[8,8]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-008 uses `EN KU VAMAVALA KE` after PHR-003/PHR-006 contrast. VAMAVALA remains WATCH; KU role remains inferred/test-only."}
   ],
   "lexical_evidence": {
     "master_lexicon_registry_forms":33,
     "unique_recovered_forms_linked_to_cycle1":31,
     "unbound_recovered_forms":2,
-    "authored_candidate_forms_linked_to_cycle1":1,
-    "authored_candidate_forms":["KUVAN"],
-    "governed_unique_language_assets":32,
+    "authored_candidate_forms_linked_to_cycle1":2,
+    "authored_candidate_forms":["KUVAN","VALA"],
+    "governed_unique_language_assets":33,
     "recovered_phrases":7,
     "curriculum_vocabulary_target":144,
     "recovered_proxy_percent":21.5278,
-    "governed_asset_proxy_percent":22.2222,
+    "governed_asset_proxy_percent":22.9167,
     "lesson_bindings":{"L01":10,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
     "lesson_recovered_bindings":{"L01":9,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
     "lesson_governed_rebinds":{"L01":1,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
-    "lesson_authored_candidates":{"L01":1,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
+    "lesson_authored_candidates":{"L01":2,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "lesson_recovered_phrases":{"L01":7,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "gate":"HOLD_INCOMPLETE_BINDING",
-    "warning":"31/144 is the recovered-form proxy; 32/144 is the governed-language-asset proxy after one authored CANDIDATE. Neither equals completed curriculum vocabulary slots."
+    "warning":"31/144 is the recovered-form proxy; 33/144 is the governed-language-asset proxy after two authored CANDIDATE forms. Neither equals completed curriculum vocabulary slots."
   },
   "source_references": [
     "../docs/SIMPLEWAY_HNK_INVENTORY_V1.md",
     "../curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/opi-006.activity-frame.v2.json",
     "../curriculum/cycle-01/L01-kether/recovery/ku-zamo-contrastive-analysis.v1.json",
     "../proposals/language/HNK_KUVAN_PROMOTION_RECORD_V1.json",
-    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-001",
+    "../proposals/language/HNK_VALA_PROMOTION_RECORD_V1.json",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
     "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
   ]
 }
