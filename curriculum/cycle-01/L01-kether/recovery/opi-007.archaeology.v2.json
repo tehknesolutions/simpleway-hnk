@@ -1,0 +1,58 @@
+{
+  "recovery_id": "SWHNK-L01-OPI-007-RESIDENCE-COMITATIVE-RECOVERY-V2",
+  "status": "ARCHAEOLOGY_EXHAUSTED_AUTHORING_ALLOWED_WITH_HOLD",
+  "opi": "L01-OPI-07",
+  "english_prompt": "Where do you live and who do you live with?",
+  "source_findings": {
+    "simpleway_cycle1_curricular_evidence": [
+      "Historical SimpleWay audit material explicitly treats I live as a Lesson 1 presentation verb.",
+      "Historical Cycle 1 material also uses She lives in Florida in Lesson 4, confirming residence as a recurring Cycle 1 semantic domain."
+    ],
+    "hnk_recovered_form": {
+      "id": "LEX-031",
+      "form": "VANI",
+      "authority": "WATCH",
+      "meaning": null,
+      "source_lessons": ["L02"],
+      "conclusion": "Recovered evidence proves the form existed and was monitored, but does not recover a residence gloss."
+    },
+    "drive_archaeology": {
+      "hnk_language_project_folder_found": true,
+      "language_architecture_document_found": true,
+      "correlative_grid_design_confirmed": true,
+      "exact_VANI_gloss_found": false,
+      "exact_HNK_who_form_found": false,
+      "exact_HNK_with_form_found": false,
+      "historical_simpleway_chat_contains_HNK_OPI7_payload": false
+    },
+    "github_archaeology": {
+      "cycle1_official_content_generated_indexed": false,
+      "import_cycle1_official_content_indexed": false,
+      "exact_HNK_OPI7_payload_found": false
+    }
+  },
+  "morphological_evidence": {
+    "VAN": {
+      "hypothesis": "location/place formative",
+      "support": ["VALIVAN=office", "TAYOVAN=city", "PAROVAN=library"],
+      "state": "INFERRED_STRONG_NOT_PRODUCTIVE_CANON"
+    },
+    "final_I": {
+      "hypothesis": "action/verbal correlation",
+      "support_examples": ["VALI", "PARAZAMI", "PARI", "DAYI", "SALI", "SAROSARI"],
+      "state": "INFERRED_CORRELATION_NOT_UNIVERSAL_RULE"
+    },
+    "VANI": {
+      "analysis": "VAN + I is compatible with a locative-action interpretation such as live/reside, but this is semantic hypothesis only.",
+      "historical_gloss_claim": false
+    }
+  },
+  "authoring_decision": {
+    "do_not_modify_LEX_031_meaning": true,
+    "allow_test_semantic_hypothesis_for_VANI": true,
+    "allow_new_person_interrogative_candidate": true,
+    "avoid_new_comitative_particle": true,
+    "model_co_resident_as_residence_predicate_valency": true
+  },
+  "next_gate": "SWHNK-L01-OPI-007-EXPERIMENTAL-AUTHORING-V1"
+}
