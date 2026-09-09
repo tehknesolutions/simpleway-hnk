@@ -1,0 +1,45 @@
+{
+  "design_id":"SWHNK-L01-OPI-009-PREFERENCE-FRAME-V1",
+  "status":"AUTHORED_EXPERIMENTAL_GATE_HOLD",
+  "opi":"L01-OPI-09",
+  "english_intent":"Do you like to sing?",
+  "implementation_state":"AUTHORED",
+  "hnk_question":"EN VAME VAMAZAMU KE",
+  "components": [
+    {"form":"EN","state":"RECOVERED_FORM_INFERRED_ROLE","role":"second-person referent"},
+    {"form":"VAME","id":"LEX-025","state":"GATE","authority":"GATE","role":"literal like / preference predicate under test","source_lessons":["L04"]},
+    {"form":"VAMAZAMU","id":"LEX-008","state":"WATCH","authority":"WATCH","role":"singing / harmonic expression","source_lessons":["L01"]},
+    {"form":"KE","state":"RECOVERED_FORM_INFERRED_STRONG_ROLE","role":"clause-final interrogative operator"}
+  ],
+  "glyph_ids":["G02","G12","G31","G01","G11","G02","G31","G01","G11","G01","G32","G01","G11","G05","G23","G02"],
+  "grammar_model":"EN + preference predicate + activity object + KE",
+  "evidence_model":"S-P-O compatibility from recovered language-use clauses; VAME and VAMAZAMU retain their GATE/WATCH labels.",
+  "cross_lesson_use": {
+    "VAME_rebound_to_L01":false,
+    "usage":"EXPERIMENTAL_REFERENCE_ONLY",
+    "reason":"A GATE form may be exercised in an explicitly labeled test candidate without being promoted or added to ordinary L01 teachable lexicon."
+  },
+  "validation_state":"HOLD_GATE_WATCH_AND_INFERRED_GRAMMAR",
+  "usage_scope":"EXPERIMENTAL_GATE_AND_WATCH_VISIBLE",
+  "promotion_blockers": [
+    "VAME remains GATE and is not rebound/promoted by this frame.",
+    "VAMAZAMU remains WATCH.",
+    "EN/KE and S-P-O generalization remain inferred.",
+    "Preference semantics of VAME require human evidence before ordinary course publication.",
+    "Answer pattern remains unresolved."
+  ],
+  "answer_pattern":null,
+  "provenance": [
+    "authoring/grammar-design-pass.v1.json#GRD-012",
+    "authoring/binding-pass.v1.json#L01-OPI-09",
+    "authoring/lexicon.bindings.snapshot.json#LEX-008",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/index.mjs#LEX-025"
+  ],
+  "progress_effect": {
+    "AUTHORED_slots_before":7,
+    "AUTHORED_slots_after":8,
+    "VALIDATED_slots_after":0,
+    "FROZEN_slots_after":0
+  },
+  "next_gate":"SWHNK-L01-OPI-007-AND-010-REMAINING-GAPS-V1"
+}
