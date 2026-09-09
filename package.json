@@ -1,11 +1,12 @@
 {
   "name": "simpleway-hnk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "validate:cycle1": "node tests/validate-cycle1.mjs",
-    "test": "npm run validate:cycle1"
+    "validate:l01-authoring": "node tests/validate-l01-authoring.mjs",
+    "test": "npm run validate:cycle1 && npm run validate:l01-authoring"
   },
   "engines": {
     "node": ">=20"
