@@ -1,0 +1,66 @@
+{
+  "contract_id": "HNK-C1-NUM-CONTRACT-V1",
+  "status": "APPROVED_FOR_IMPLEMENTATION",
+  "cycle": 1,
+  "lessons": 7,
+  "baseline_total": 995,
+  "target_total": 1008,
+  "target_formulae": ["7*144", "14*72"],
+  "category_targets": {
+    "teacher_notes": 21,
+    "opi": 70,
+    "story": 35,
+    "qa": 28,
+    "structure_headers": 14,
+    "structures": 35,
+    "vocabulary": 144,
+    "activation": 504,
+    "review": 154,
+    "final_seals": 3
+  },
+  "per_lesson_invariants": {
+    "opi": 10,
+    "story": 5,
+    "qa": 4,
+    "structures": 5,
+    "activation": 72,
+    "review": 22
+  },
+  "additions": [
+    {"lesson": 1, "category": "opi", "count": 1, "content": "What do you do on weekends?"},
+    {"lesson": 1, "category": "story", "count": 1, "content": "Separate hobbies/music as scene 5"},
+    {"lesson": 1, "category": "structures", "count": 1, "content": "I don't..."},
+    {"lesson": 2, "category": "structures", "count": 1, "content": "I didn't..."},
+    {"lesson": 3, "category": "structures", "count": 1, "content": "I usually..."},
+    {"lesson": 4, "category": "structures", "count": 1, "content": "Does he/she...?"},
+    {"lesson": 5, "category": "structures", "count": 1, "content": "I'm not going to..."},
+    {"lesson": 7, "category": "vocabulary", "count": 3, "content": ["FAITH", "PURPOSE", "PEACE"]},
+    {"lesson": 7, "category": "final_seals", "count": 3, "content": ["VERBUM", "LOGOS", "DIALOGOS"]}
+  ],
+  "lesson_target_totals": {
+    "L1": 155,
+    "L2": 139,
+    "L3": 139,
+    "L4": 139,
+    "L5": 139,
+    "L6": 139,
+    "L7": 158
+  },
+  "promotion_gates": {
+    "exact_total_required": true,
+    "exact_category_targets_required": true,
+    "exact_per_lesson_invariants_required": true,
+    "frozen_content_requires_version_bump": true,
+    "automated_metrics_required": [
+      "items",
+      "vocabulary_entries",
+      "unique_words",
+      "word_tokens",
+      "characters",
+      "digital_root",
+      "a1z26",
+      "hnk_glyph_sum",
+      "provenance"
+    ]
+  }
+}
