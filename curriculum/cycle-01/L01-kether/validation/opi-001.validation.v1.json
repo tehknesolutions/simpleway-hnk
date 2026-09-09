@@ -1,0 +1,63 @@
+{
+  "validation_id": "SWHNK-L01-OPI-001-VALIDATION-V1",
+  "slot_id": "L01-OPI-001",
+  "course_prompt_id": "L01-OPI-01",
+  "status": "TECHNICAL_PASS_SEMANTIC_HOLD",
+  "source_phrase": {
+    "phrase_id": "PHR-001",
+    "transliteration": "KALA YA EN ES KU KE",
+    "meaning": {"pt":"Qual é o seu nome?","en":"What is your name?"},
+    "source_status": "RECOVERED",
+    "certainty": "APPROXIMATE"
+  },
+  "hnk40_authority": {
+    "repository": "tehknesolutions/codex-hnk",
+    "path": "packages/hnk-glyphs/src/index.mjs",
+    "source_blob_sha": "e9390d1b1828f839f7b7f7fec29910cc40eb197b",
+    "runtime_status": "PREPRODUCTION_NOT_OFFICIAL",
+    "structural_ids_authoritative": true,
+    "visual_canon_claimed": false
+  },
+  "segmentation": [
+    {"token":"KALA","safe_units":["K","A","L","A"],"glyph_ids":["G23","G01","G14","G01"]},
+    {"token":"YA","safe_units":["Y","A"],"glyph_ids":["G40","G01"]},
+    {"token":"EN","safe_units":["E","N"],"glyph_ids":["G02","G12"]},
+    {"token":"ES","safe_units":["E","S"],"glyph_ids":["G02","G26"]},
+    {"token":"KU","safe_units":["K","U"],"glyph_ids":["G23","G05"]},
+    {"token":"KE","safe_units":["K","E"],"glyph_ids":["G23","G02"]}
+  ],
+  "glyph_ids": ["G23","G01","G14","G01","G40","G01","G02","G12","G02","G26","G23","G05","G23","G02"],
+  "glyph_count": 14,
+  "unresolved_transliteration_units": [],
+  "roundtrip": {
+    "safe_transliteration_resolved": true,
+    "spaces_are_word_boundaries_not_glyphs": true,
+    "expected_text": "KALA YA EN ES KU KE"
+  },
+  "answer_strategy": {
+    "id": "BARE-PROPER-NAME-V1",
+    "status": "AUTHORING_CANDIDATE",
+    "pattern": "[PERSONAL_NAME]",
+    "hnk_function_words_added": false,
+    "rationale": "A bare personal-name reply satisfies the beginner conversational intent without inventing an unrecovered copula, possession rule or name predicate.",
+    "glyph_ids": null,
+    "glyph_ids_reason": "Dynamic proper-name slot; glyph sequence depends on the learner name and must be encoded through HNK40 runtime when instantiated."
+  },
+  "checks": {
+    "source_phrase_recovered": "PASS",
+    "english_intent_matches_approximate_gloss": "PASS_WITH_APPROXIMATE_SOURCE",
+    "all_transliteration_units_safe": "PASS",
+    "glyph_id_generation": "PASS",
+    "structural_visual_boundary_preserved": "PASS",
+    "answer_strategy_non_inventive": "PASS_AS_V1_1_AUTHORING_DESIGN",
+    "exact_historical_token_alignment": "HOLD",
+    "human_linguistic_review": "PENDING"
+  },
+  "promotion": {
+    "implementation_state": "AUTHORED",
+    "question_technical_validation": "PASS",
+    "slot_validation": "HOLD",
+    "reason": "The HNK question is structurally verified, but the recovered gloss is approximate and the v1.1 answer strategy still requires human linguistic promotion before the whole OPI slot can become VALIDATED.",
+    "next_gate": "SWHNK-L01-OPI-RECOVERY-MATRIX-V1"
+  }
+}
