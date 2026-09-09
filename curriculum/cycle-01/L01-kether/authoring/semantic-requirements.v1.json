@@ -1,0 +1,170 @@
+{
+  "queue_id": "SWHNK-L01-SEMANTIC-REQUIREMENTS-V1",
+  "lesson_id": "HNK-L01",
+  "status": "OPEN_REQUIREMENTS_NO_NEW_FORMS",
+  "source": "binding-pass.v1.json",
+  "rules": {
+    "this_file_creates_no_hnk_forms": true,
+    "existing_cross_lesson_form_requires_rebind_review": true,
+    "gate_form_requires_promotion_review": true,
+    "grammar_morphemes_must_not_be_inferred_from_phrase_shape": true
+  },
+  "lexical_requirements": [
+    {
+      "id": "L01-REQ-LEX-001",
+      "concept": "AGE",
+      "pt": "idade",
+      "used_by": ["L01-OPI-03"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-002",
+      "concept": "LIVE_RESIDE",
+      "pt": "morar / residir",
+      "used_by": ["L01-OPI-07"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-003",
+      "concept": "COMITATIVE_WITH",
+      "pt": "com / relação de companhia",
+      "used_by": ["L01-OPI-07"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-004",
+      "concept": "WHO_PERSON_INTERROGATIVE",
+      "pt": "quem",
+      "used_by": ["L01-OPI-07"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-005",
+      "concept": "WORK_WORKING",
+      "pt": "trabalho / trabalhar",
+      "used_by": ["L01-OPI-05", "L01-OPI-06"],
+      "state": "REBIND_REVIEW_REQUIRED",
+      "existing_registry_candidate": {
+        "lexeme_id": "LEX-013",
+        "form": "VALI",
+        "authority": "FROZEN",
+        "current_lessons": ["L02", "L03"]
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-006",
+      "concept": "GENERIC_DO_ACTION",
+      "pt": "fazer / ação genérica",
+      "used_by": ["L01-OPI-06", "L01-OPI-10"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-007",
+      "concept": "LIKE_PREFERENCE",
+      "pt": "gostar / preferência",
+      "used_by": ["L01-OPI-09"],
+      "state": "GATE_REVIEW_REQUIRED",
+      "existing_registry_candidate": {
+        "lexeme_id": "LEX-025",
+        "form": "VAME",
+        "authority": "GATE",
+        "current_lessons": ["L04"]
+      },
+      "priority": "P0"
+    },
+    {
+      "id": "L01-REQ-LEX-008",
+      "concept": "WEEKEND",
+      "pt": "fim de semana",
+      "used_by": ["L01-OPI-10"],
+      "state": "AUTHORING_REQUIRED",
+      "existing_registry_candidate": null,
+      "priority": "P1"
+    }
+  ],
+  "grammar_requirements": [
+    {
+      "id": "L01-REQ-GRM-001",
+      "function": "NAME_QUESTION_AND_ANSWER",
+      "used_by": ["L01-OPI-01"],
+      "evidence": ["PHR-001"],
+      "evidence_state": "APPROXIMATE_PHRASE_RECOVERED",
+      "state": "ANALYSIS_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-002",
+      "function": "YES_NO_QUESTION",
+      "used_by": ["L01-OPI-02", "L01-OPI-09"],
+      "evidence": ["PHR-003"],
+      "evidence_state": "APPROXIMATE_PHRASE_RECOVERED",
+      "state": "ANALYSIS_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-003",
+      "function": "AGE_QUESTION",
+      "used_by": ["L01-OPI-03"],
+      "evidence": [],
+      "evidence_state": "NO_RECOVERED_PATTERN",
+      "state": "AUTHORING_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-004",
+      "function": "WHERE_QUESTION",
+      "used_by": ["L01-OPI-04", "L01-OPI-05", "L01-OPI-07"],
+      "evidence": [],
+      "evidence_state": "NO_CONFIRMED_TOKEN_LEVEL_ANALYSIS",
+      "state": "AUTHORING_OR_SOURCE_RECOVERY_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-005",
+      "function": "WHAT_DO_QUESTION",
+      "used_by": ["L01-OPI-06", "L01-OPI-10"],
+      "evidence": [],
+      "evidence_state": "NO_RECOVERED_PATTERN",
+      "state": "AUTHORING_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-006",
+      "function": "POSSESSIVE_HOBBY_QUESTION",
+      "used_by": ["L01-OPI-08"],
+      "evidence": [],
+      "evidence_state": "NO_CONFIRMED_PATTERN",
+      "state": "AUTHORING_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-007",
+      "function": "WHO_WITH_COMPOUND_QUESTION",
+      "used_by": ["L01-OPI-07"],
+      "evidence": [],
+      "evidence_state": "NO_RECOVERED_PATTERN",
+      "state": "AUTHORING_REQUIRED"
+    },
+    {
+      "id": "L01-REQ-GRM-008",
+      "function": "PERSONAL_ANSWER_SLOTS",
+      "used_by": ["L01-OPI-01", "L01-OPI-02", "L01-OPI-03", "L01-OPI-04", "L01-OPI-05", "L01-OPI-06", "L01-OPI-07", "L01-OPI-08", "L01-OPI-09", "L01-OPI-10"],
+      "evidence": [],
+      "evidence_state": "RAW_V1_ANSWER_PATTERNS_NOT_RECOVERED",
+      "state": "SOURCE_RECOVERY_OR_NEW_VERSION_AUTHORING_REQUIRED"
+    }
+  ],
+  "metrics": {
+    "lexical_requirements": 8,
+    "lexical_authoring_required": 6,
+    "cross_lesson_rebind_reviews": 1,
+    "gate_reviews": 1,
+    "grammar_requirements": 8
+  },
+  "next_gate": "SWHNK-L01-AUTHORING-DECISIONS-V1"
+}
