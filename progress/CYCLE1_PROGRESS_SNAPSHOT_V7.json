@@ -1,0 +1,41 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V7",
+  "as_of":"2026-09-09",
+  "status":"EIGHT_OF_TEN_L01_OPI_AUTHORED",
+  "target_slots":1008,
+  "implementation":{"MISSING":1000,"AUTHORED":8,"VALIDATED":0,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.2063,"AUTHORED":0.7937,"VALIDATED":0.0,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "scaffold":{"slots":82,"percent":8.1349},
+  "language_asset_proxies":{
+    "recovered":{"forms":31,"target":144,"percent":21.5278},
+    "governed":{"recovered_forms":31,"authored_candidates":2,"unique_assets":33,"target":144,"percent":22.9167},
+    "authored_candidates":[
+      {"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},
+      {"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false}
+    ]
+  },
+  "L01":{
+    "target":155,
+    "AUTHORED":8,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":5.1613,
+    "opi":{"target":10,"AUTHORED":8,"percent":80.0,"missing":["L01-OPI-007","L01-OPI-010"]},
+    "teachable_recovered_or_rebound_lexemes":10,
+    "authored_language_candidates":2,
+    "historical_frozen_evidence":82
+  },
+  "cycle1_opi":{"target":70,"AUTHORED":8,"percent":11.4286},
+  "authored_opi":[
+    {"slot":"L01-OPI-001","hnk":"KALA YA EN ES KU KE","gate":"HOLD"},
+    {"slot":"L01-OPI-002","hnk":"EN VAMAKALA KE","gate":"HOLD"},
+    {"slot":"L01-OPI-003","hnk":"EN KU SARASALA KE","gate":"WATCH_HOLD"},
+    {"slot":"L01-OPI-004","hnk":"EN SARADAYA KUVAN KE","gate":"CANDIDATE_HOLD"},
+    {"slot":"L01-OPI-005","hnk":"EN VALI KUVAN KE","gate":"CANDIDATE_HOLD"},
+    {"slot":"L01-OPI-006","hnk":"EN KU VALA KE","gate":"CANDIDATE_HOLD"},
+    {"slot":"L01-OPI-008","hnk":"EN KU VAMAVALA KE","gate":"WATCH_HOLD"},
+    {"slot":"L01-OPI-009","hnk":"EN VAME VAMAZAMU KE","gate":"GATE_WATCH_HOLD"}
+  ],
+  "next_gate":"SWHNK-L01-OPI-007-AND-010-REMAINING-GAPS-V1"
+}
