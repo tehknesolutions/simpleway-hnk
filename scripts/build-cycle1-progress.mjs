@@ -74,6 +74,20 @@ function pct(n, d) {
   return d === 0 ? 0 : Number(((n / d) * 100).toFixed(4));
 }
 
+function maturityCounts(items) {
+  const authoredOrBetter = items.filter(s => ['AUTHORED','VALIDATED','FROZEN'].includes(s.implementation_state)).length;
+  const validatedOrBetter = items.filter(s => ['VALIDATED','FROZEN'].includes(s.implementation_state)).length;
+  const frozen = items.filter(s => s.implementation_state === 'FROZEN').length;
+  return {
+    authored_or_better: authoredOrBetter,
+    validated_or_better: validatedOrBetter,
+    frozen,
+    authored_or_better_percent: pct(authoredOrBetter, items.length),
+    validated_or_better_percent: pct(validatedOrBetter, items.length),
+    frozen_percent: pct(frozen, items.length)
+  };
+}
+
 const implementationIds = model.implementation_states.map(s => s.id);
 const evidenceIds = model.evidence_states.map(s => s.id);
 const implementation = countBy(slots, 'implementation_state', implementationIds);
@@ -87,6 +101,7 @@ for (const lesson of Object.keys(allocation.lessons)) {
     sphere: allocation.lessons[lesson].sphere,
     target: lessonSlots.length,
     implementation: countBy(lessonSlots, 'implementation_state', implementationIds),
+    maturity: maturityCounts(lessonSlots),
     evidence: countBy(lessonSlots, 'evidence_state', evidenceIds),
     scaffolded: lessonSlots.filter(s => s.scaffolded).length
   };
@@ -98,6 +113,7 @@ for (const category of categoryOrder) {
   perCategory[category] = {
     target: categorySlots.length,
     implementation: countBy(categorySlots, 'implementation_state', implementationIds),
+    maturity: maturityCounts(categorySlots),
     evidence: countBy(categorySlots, 'evidence_state', evidenceIds),
     scaffolded: categorySlots.filter(s => s.scaffolded).length
   };
@@ -107,7 +123,7 @@ const frozenHistorical = evidenceCounts.SOURCE_CONFIRMED_FROZEN ?? 0;
 const lexical = evidence.lexical_evidence;
 
 const summary = {
-  snapshot_id: 'SWHNK-C1-PROGRESS-SNAPSHOT-V1',
+  snapshot_id: 'SWHNK-C1-PROGRESS-GENERATED-V1',
   generated_from: [
     'progress/cycle1-allocation.v1.json',
     'progress/progress-model.v1.json',
@@ -116,6 +132,7 @@ const summary = {
   target_slots: slots.length,
   implementation,
   implementation_percent: Object.fromEntries(Object.entries(implementation).map(([k, v]) => [k, pct(v, slots.length)])),
+  maturity: maturityCounts(slots),
   evidence: evidenceCounts,
   evidence_percent: Object.fromEntries(Object.entries(evidenceCounts).map(([k, v]) => [k, pct(v, slots.length)])),
   scaffolded,
@@ -147,14 +164,18 @@ const summary = {
     lesson_authored_candidates: lexical.lesson_authored_candidates,
     gate: lexical.gate
   },
+  validation_evidence: evidence.validation_evidence ?? null,
   per_lesson: perLesson,
   per_category: perCategory,
   interpretation: {
+    implementation_states_are_exclusive: true,
+    maturity_counts_are_cumulative: true,
     current_frozen_is_reproducible: true,
     historical_frozen_evidence_is_not_current_payload: true,
     recovered_proxy_is_not_vocabulary_slot_completion: true,
     governed_asset_proxy_is_not_vocabulary_slot_completion: true,
-    authored_candidates_are_not_recovered_forms: true
+    authored_candidates_are_not_recovered_forms: true,
+    course_validation_does_not_change_language_authority: true
   }
 };
 
