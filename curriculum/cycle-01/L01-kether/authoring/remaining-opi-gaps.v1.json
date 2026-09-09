@@ -1,63 +1,51 @@
 {
   "analysis_id":"SWHNK-L01-REMAINING-OPI-GAPS-V1",
-  "status":"ONE_CONTEXTUAL_ROUTE_ONE_HARD_LANGUAGE_GAP",
+  "status":"CLOSED_BY_GOVERNED_EXPERIMENTAL_AUTHORING_VALIDATION_PENDING",
   "as_of":"2026-09-09",
-  "current_authored_opi":8,
-  "remaining":[
+  "current_authored_opi":10,
+  "remaining":[],
+  "resolved":[
     {
       "slot":"L01-OPI-007",
       "english":"Where do you live and who do you live with?",
-      "state":"HARD_LANGUAGE_GAP",
-      "available_support":[
-        {"form":"KUVAN","id":"AUTH-001","role":"locative interrogative specialization","authority":"CANDIDATE"},
-        {"form":"VANI","id":"LEX-031","role":null,"authority":"WATCH","note":"Recovered form, exact gloss unrecovered; must NOT be assigned live/reside by morphology alone."},
-        {"form":"ON","id":"LEX-026","role":"pronoun/referent under test","authority":"GATE","note":"Cannot be converted into WHO or combined with KU by current governed rule."}
+      "previous_state":"HARD_LANGUAGE_GAP",
+      "resolution":"EXPLICIT_MULTI_PART_AUTHORING_WITH_SOURCE_BOUNDARIES",
+      "payload":["EN VANI KUVAN KE","EN VANI KUON KE"],
+      "components":[
+        {"form":"VANI","id":"LEX-031","authority":"WATCH","master_lexicon_meaning":null,"test_role":"live/reside semantic hypothesis only"},
+        {"form":"KUVAN","id":"AUTH-001","authority":"CANDIDATE","role":"locative interrogative variable"},
+        {"form":"KUON","id":"AUTH-003","authority":"CANDIDATE","role":"person interrogative variable","dependency":"ON remains GATE"}
       ],
-      "missing_semantics":["LIVE_RESIDE_OR_EQUIVALENT","WHO_PERSON_INTERROGATIVE","COMITATIVE_WITH"],
-      "forbidden_shortcuts":[
-        "VANI = live/reside by morphology alone",
-        "KU ON = WHO; KU+ON is explicitly outside the approved compositional rule",
-        "ON = person/who from GATE evidence",
-        "inventing a WITH particle merely to close the OPI count"
-      ],
-      "decision":"KEEP_MISSING_UNTIL_RECOVERY_OR_EXPLICIT_MULTI_PART_AUTHORING",
-      "next_recovery_priority":"VANI historical gloss/source"
+      "comitative_strategy":"No WITH particle authored; co-resident meaning is encoded only as experimental residence-predicate valency.",
+      "historical_claims":{
+        "VANI_live_reside_recovered":false,
+        "KUON_recovered":false,
+        "comitative_valency_recovered":false
+      },
+      "validation_state":"HOLD_WATCH_SEMANTIC_HYPOTHESIS_AUTHORED_CANDIDATE_AND_GATED_DEPENDENCY",
+      "source":"opi-007.residence-frame.v1.json"
     },
     {
       "slot":"L01-OPI-010",
       "english":"What do you do on weekends?",
-      "state":"CONTEXTUAL_AUTHORING_ROUTE_AVAILABLE",
-      "available_support":[
-        {"form":"VAMUSARO","id":"LEX-005","meaning":"rest / leisure period","authority":"FROZEN"},
-        {"form":"SARASALA","id":"LEX-006","meaning":"time / duration","authority":"WATCH"},
-        {"form":"VALA","id":"AUTH-002","meaning":"generic activity nominal head","authority":"CANDIDATE"},
-        {"form":"KU","role":"inferred pre-nominal interrogative content selector","authority":"RECOVERED_FORM_INFERRED_ROLE"}
-      ],
-      "source_boundary":"No recovered source equates VAMUSARO with weekend, and no governed temporal preposition/relation currently encodes ON/DURING weekends.",
-      "safe_design":"Use VAMUSARO as an explicit discourse/UI context label, not as the lexical translation of weekend and not as a syntactic argument inside the HNK question. Within that context, ask EN KU VALA KE.",
-      "candidate_payload":{
-        "hnk_context":"VAMUSARO",
-        "context_gloss":"rest / leisure period",
-        "hnk_question":"EN KU VALA KE",
-        "semantic_reframe":"In your rest/leisure period: what is your activity?",
-        "exact_weekend_translation_claim":false
-      },
-      "decision":"AUTHOR_TEST_ONLY_CONTEXTUAL_CARD",
-      "validation_requirements":[
-        "Keep VAMUSARO meaning exactly rest/leisure period, not weekend.",
-        "Keep VALA CANDIDATE visible.",
-        "Treat context label separately from sentence grammar.",
-        "Require human pedagogical review for semantic fidelity to the frozen English weekend prompt."
-      ]
+      "previous_state":"CONTEXTUAL_AUTHORING_ROUTE_AVAILABLE",
+      "resolution":"CONTEXTUAL_LEISURE_PERIOD_CARD",
+      "hnk_context":"VAMUSARO",
+      "hnk_question":"EN KU VALA KE",
+      "exact_weekend_translation_claim":false,
+      "validation_state":"HOLD_SEMANTIC_FIDELITY_AND_AUTHORED_CANDIDATE",
+      "source":"opi-010.weekend-context.v1.json"
     }
   ],
-  "projected_if_OPI10_authored":{
-    "L01_OPI_AUTHORED":9,
-    "L01_OPI_PERCENT":90.0,
-    "CYCLE1_OPI_AUTHORED":9,
-    "CYCLE1_OPI_PERCENT":12.8571,
-    "GLOBAL_AUTHORED_SLOTS":9,
-    "GLOBAL_AUTHORED_PERCENT":0.8929
+  "final_authorship_state":{
+    "L01_OPI_AUTHORED":10,
+    "L01_OPI_PERCENT":100.0,
+    "CYCLE1_OPI_AUTHORED":10,
+    "CYCLE1_OPI_PERCENT":14.2857,
+    "GLOBAL_AUTHORED_SLOTS":10,
+    "GLOBAL_AUTHORED_PERCENT":0.9921,
+    "VALIDATED":0,
+    "FROZEN_REPRODUCIBLE":0
   },
-  "rule":"Do not force OPI 7 to reach 10/10. A clean 9/10 with one explicit hard gap is preferable to false linguistic completion."
+  "rule":"10/10 AUTHORED means every frozen OPI prompt now has a reproducible governed HNK payload. It does not mean the ten payloads are semantically validated or publication-frozen. WATCH/CANDIDATE/GATE and semantic-hypothesis dependencies must remain visible until explicit promotion."
 }
