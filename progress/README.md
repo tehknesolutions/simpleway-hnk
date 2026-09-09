@@ -1,119 +1,105 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V9`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V10`  
 **Date:** 2026-09-09  
-**Package:** `simpleway-hnk@0.10.0`
+**Package:** `simpleway-hnk@0.12.0`
 
 ## Progress model
 
 `MISSING -> AUTHORED -> VALIDATED -> FROZEN`
 
-Historical evidence and current reproducible implementation remain separate. `AUTHORED` means a governed HNK payload exists in the repository; it does **not** mean semantic validation or publication readiness.
+Implementation states are exclusive. Maturity is cumulative: a `VALIDATED` slot is also counted as `AUTHORED_OR_BETTER`.
 
 ## Current dashboard
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
-- `AUTHORED`: **10 / 1,008 = 0.9921%**
-- `VALIDATED`: **0 / 1,008**
-- current reproducible `FROZEN`: **0 / 1,008**
-- historical `SOURCE_CONFIRMED_FROZEN`: **82 / 1,008 = 8.1349%**
-- scaffolded reconstructed L01 lane: **82 / 1,008 = 8.1349%**
+Exclusive current states:
 
-Language assets:
+- `MISSING`: **998 / 1,008 = 99.0079%**
+- `AUTHORED`: **8 / 1,008 = 0.7937%**
+- `VALIDATED`: **2 / 1,008 = 0.1984%**
+- reproducible `FROZEN`: **0 / 1,008**
 
-- recovered Cycle 1 forms: **31 / 144 = 21.5278% proxy**
-- governed authored candidates: **3** — `KUVAN`, `VALA`, `KUON`
-- governed unique language assets: **34 / 144 = 23.6111% proxy**
+Cumulative maturity:
+
+- `AUTHORED_OR_BETTER`: **10 / 1,008 = 0.9921%**
+- `VALIDATED_OR_BETTER`: **2 / 1,008 = 0.1984%**
+- `FROZEN`: **0 / 1,008**
+
+Historical evidence remains separate:
+
+- `SOURCE_CONFIRMED_FROZEN`: **82 / 1,008 = 8.1349%**
+- breakdown: 10 historical L01 OPI + 72 historical L01 Activation drills
+- raw v1.0 payload remains unrecovered, so these 82 are not current reproducible `FROZEN` slots.
+
+## Lesson 1 OPI
+
+All 10 cards have been authored and individually reviewed.
+
+- `AUTHORED_OR_BETTER`: **10/10 = 100%**
+- `VALIDATED_OR_BETTER`: **2/10 = 20%**
+- `FROZEN`: **0/10**
+
+| OPI | HNK v1.1 | Current state |
+|---:|---|---|
+| 01 | `KALA YA EN ES KU KE` | AUTHORED · reviewed HOLD |
+| 02 | `EN VAMAKALA KE` | AUTHORED · reviewed HOLD |
+| 03 | `EN KU SARASALA KE` | AUTHORED · reviewed HOLD |
+| 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** for scoped L01 v1.1 use |
+| 05 | `EN VALI KUVAN KE` | **VALIDATED** for scoped L01 v1.1 use |
+| 06 | `EN KU VALA KE` | AUTHORED · reviewed HOLD |
+| 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · reviewed HOLD |
+| 08 | `EN KU VAMAVALA KE` | AUTHORED · reviewed HOLD |
+| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · reviewed HOLD |
+| 10 | context `VAMUSARO` + `EN KU VALA KE` | AUTHORED · reviewed HOLD |
+
+The first validation batch covered OPI 4 and 5. It explicitly approved, only for this course scope:
+
+- `KUVAN` as the L01 locative interrogative variable;
+- `EN ... KE` as the beginner second-person question frame for these two cards;
+- bare `[PLACE]` as the answer pattern.
+
+This validation does **not** promote `KUVAN` from `CANDIDATE`, does not claim historical recovery, and does not freeze the cards.
+
+## Cycle 1 OPI progress
+
+Across the 70 OPI target:
+
+- `AUTHORED_OR_BETTER`: **10/70 = 14.2857%**
+- `VALIDATED_OR_BETTER`: **2/70 = 2.8571%**
+- `FROZEN`: **0/70**
+
+## Language assets
+
+- recovered Cycle 1 forms: **31/144 = 21.5278% proxy**
+- authored candidates: **3** — `KUVAN`, `VALA`, `KUON`
+- governed unique language assets: **34/144 = 23.6111% proxy**
 - recovered phrases: **7**
 
-These are language-asset coverage proxies, not completed curricular vocabulary slots.
+These are language-asset proxies, not completed vocabulary-slot percentages.
 
-## Lesson 1 OPI — authorship complete
+## Review results
 
-- L01 OPI authorship: **10 / 10 = 100%**
-- Cycle 1 OPI authorship: **10 / 70 = 14.2857%**
-- L01 total-slot authorship: **10 / 155 = 6.4516%**
+All 10 OPI have review records. The eight current HOLD cards are blocked for different reasons:
 
-| OPI | Current HNK design | State |
-|---:|---|---|
-| 01 | `KALA YA EN ES KU KE` | AUTHORED · recovered phrase / semantic HOLD |
-| 02 | `EN VAMAKALA KE` | AUTHORED · FROZEN core / grammar HOLD |
-| 03 | `EN KU SARASALA KE` | AUTHORED · WATCH / contextual age HOLD |
-| 04 | `EN SARADAYA KUVAN KE` | AUTHORED · KUVAN CANDIDATE HOLD |
-| 05 | `EN VALI KUVAN KE` | AUTHORED · VALI rebind + KUVAN HOLD |
-| 06 | `EN KU VALA KE` | AUTHORED · VALA CANDIDATE / contextual activity HOLD |
-| 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · VANI semantic hypothesis + KUON CANDIDATE / HOLD |
-| 08 | `EN KU VAMAVALA KE` | AUTHORED · WATCH / inferred KU HOLD |
-| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · GATE + WATCH experimental HOLD |
-| 10 | context `VAMUSARO` + `EN KU VALA KE` | AUTHORED · approximate contextual leisure-period HOLD |
+- OPI 1: approximate historical gloss; `YA` and `ES` unresolved;
+- OPI 2: possession/HAVE and negative-response path unresolved;
+- OPI 3: `SARASALA` WATCH plus number/age system open;
+- OPI 6: `VALA` CANDIDATE plus contextual work/school equivalence and response inventory;
+- OPI 7: `VANI` meaning null, `KUON` CANDIDATE, `ON=GATE`, experimental co-resident valency;
+- OPI 8: `VAMAVALA` WATCH plus inferred content-question grammar;
+- OPI 9: `VAME` GATE, `VAMAZAMU` WATCH, yes/no strategy open;
+- OPI 10: leisure-period context is broader than exact weekend semantics.
 
-**No OPI is yet fully `VALIDATED`.** Authorship completion and validation completion are deliberately separate gates.
+## Next validation batch
 
-## OPI 07 boundary
+Recommended next candidates:
 
-Frozen English prompt: `Where do you live and who do you live with?`
+1. `L01-OPI-006` — activity question;
+2. `L01-OPI-008` — hobbies question.
 
-The HNK v1.1 design uses two microquestions because the English card contains two semantic goals:
-
-1. `EN VANI KUVAN KE` — test reading: `Where do you live?`
-2. `EN VANI KUON KE` — test reading: `Who do you live with?`
-
-Governance:
-
-- `VANI` remains recovered `LEX-031`, authority `WATCH`, Master Lexicon meaning **null**;
-- `VANI ≈ live/reside` exists only as a semantic hypothesis for this test lane;
-- `KUVAN` remains `AUTH-001 CANDIDATE`;
-- `KUON` is `AUTH-003 CANDIDATE`, derived from `KU + ON` with an explicit dependency on `ON` remaining `GATE`;
-- `KUON` does not retroactively make `KU = WHO` or `ON = person` in recovered canon;
-- no HNK equivalent of English `WITH` was invented;
-- co-resident meaning is modeled only through an experimental valency of the residence predicate;
-- human linguistic/pedagogical validation remains mandatory.
-
-Historical SimpleWay material confirms that `I live` belongs to Lesson 1 and `She lives` recurs in Cycle 1, but no recovered source found so far assigns that meaning to `VANI`.
-
-## OPI 10 boundary
-
-The frozen English prompt remains `What do you do on weekends?`.
-
-HNK v1.1 does **not** claim `VAMUSARO = weekend`. Instead:
-
-- `VAMUSARO` retains its recovered FROZEN meaning `rest / leisure period`;
-- it is used as a separate discourse/UI context label;
-- the question remains `EN KU VALA KE`;
-- semantic fidelity remains approximate and HOLD.
-
-## Authored language registry
-
-Canonical owner: `@hnk/linguas/authored`.
-
-- `AUTH-001 KUVAN` — locative interrogative specialization, `CANDIDATE`, not recovered.
-- `AUTH-002 VALA` — generic activity nominal head, `CANDIDATE`, not recovered.
-- `AUTH-003 KUON` — person-interrogative specialization, `CANDIDATE`, depends on `ON=GATE`, not recovered.
-
-Recovered-form count remains **31**. Adding authored candidates does not rewrite historical recovery metrics.
-
-## Historical L01 evidence
-
-Recovered v1.0 proves:
-
-- 10 OPI;
-- 72 teacher drills;
-- HNK question/answer/glyph/segment fields existed in the release model.
-
-The raw v1.0 payload is still missing, so those 82 historical frozen-evidence slots are not counted as current `FROZEN` implementation.
-
-## What 10/10 means
-
-`10/10 AUTHORED` means every frozen English OPI slot now has a reproducible governed HNK v1.1 design.
-
-It does **not** mean:
-
-- 10/10 historical HNK translations were recovered;
-- 10/10 are linguistically validated;
-- WATCH or GATE material was promoted;
-- Candidate D glyph visuals became official visual canon;
-- Lesson 1 as a whole is complete — Activation, vocabulary, stories, Q&A, structures and review remain separate tracker categories.
+They share the emerging `EN KU X KE` content-question family, so a single tightly scoped human decision may validate both while keeping `VALA` CANDIDATE and `VAMAVALA` WATCH unless separately promoted.
 
 ## Commands
 
@@ -123,11 +109,16 @@ npm run progress:write
 npm run validate:progress
 npm run validate:l01-opi001
 npm run validate:interrogatives
+npm run validate:opi-matrix
 npm test
 ```
 
-GitHub Actions has previously failed before executing steps, so versioned tests must not be described as remotely green without an observed successful runner execution.
+`npm run progress` now reports both exclusive implementation states and cumulative maturity metrics.
+
+## CI boundary
+
+GitHub Actions has previously failed before executing steps and recent commits have shown no remote checks/runs. Versioned tests must not be described as remotely green until an actual runner execution succeeds.
 
 ## Rule
 
-No authored form is mislabeled as recovered; no WATCH/CANDIDATE/GATE item is silently promoted; unknown historical meanings stay unknown until source recovery or an explicit governed promotion decision.
+Course validation does not rewrite historical recovery or language authority. No authored form is mislabeled as recovered; no WATCH/CANDIDATE/GATE item is silently promoted; unknown historical meanings stay unknown until source recovery or explicit governed promotion.
