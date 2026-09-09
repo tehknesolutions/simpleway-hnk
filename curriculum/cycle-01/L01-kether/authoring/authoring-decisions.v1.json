@@ -1,0 +1,116 @@
+{
+  "decision_id": "SWHNK-L01-AUTHORING-DECISIONS-V1",
+  "lesson_id": "HNK-L01",
+  "status": "DECISIONS_LOCKED_CANDIDATE_DESIGN_NEXT",
+  "contract": "../../../../schemas/hnk-lexeme-authoring-contract.v1.json",
+  "decisions": [
+    {
+      "requirement_id": "L01-REQ-LEX-005",
+      "concept": "WORK_WORKING",
+      "decision": "PROPOSE_EXISTING_LEXEME_REBIND",
+      "lexeme_id": "LEX-013",
+      "form": "VALI",
+      "current_authority": "FROZEN",
+      "current_lessons": ["L02", "L03"],
+      "proposed_lessons": ["L01", "L02", "L03"],
+      "rationale": "The existing FROZEN lexeme is an exact semantic match. Reuse is more conservative than authoring a duplicate synonym solely for L01.",
+      "canonical_registry_changed": false,
+      "next_action": "prepare explicit codex-hnk lesson-binding proposal"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-007",
+      "concept": "LIKE_PREFERENCE",
+      "decision": "KEEP_EXISTING_FORM_GATED_DO_NOT_REBIND",
+      "lexeme_id": "LEX-025",
+      "form": "VAME",
+      "current_authority": "GATE",
+      "current_lessons": ["L04"],
+      "rationale": "A GATE form cannot become L01 course vocabulary by convenience. L01 preference semantics remain unmet until VAME is validated/promoted or a separate governed candidate is authored.",
+      "canonical_registry_changed": false,
+      "next_action": "keep L01 requirement open"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-001",
+      "concept": "AGE",
+      "decision": "OPEN_NEW_CANDIDATE_DESIGN",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "semantic spec then formation design under HNK-LEXEME-AUTHORING-CONTRACT-V1"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-002",
+      "concept": "LIVE_RESIDE",
+      "decision": "OPEN_NEW_CANDIDATE_DESIGN",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "semantic spec then formation design under HNK-LEXEME-AUTHORING-CONTRACT-V1"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-003",
+      "concept": "COMITATIVE_WITH",
+      "decision": "OPEN_GRAMMATICAL_OR_LEXICAL_DESIGN",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "decide whether HNK realizes comitative as free word, particle, affix, or construction before form authoring"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-004",
+      "concept": "WHO_PERSON_INTERROGATIVE",
+      "decision": "OPEN_GRAMMATICAL_OR_LEXICAL_DESIGN",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "define interrogative system before assigning a form"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-006",
+      "concept": "GENERIC_DO_ACTION",
+      "decision": "OPEN_NEW_CANDIDATE_DESIGN",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "determine whether generic DO is lexical or a light-verb/grammar construction"
+    },
+    {
+      "requirement_id": "L01-REQ-LEX-008",
+      "concept": "WEEKEND",
+      "decision": "OPEN_NEW_CANDIDATE_DESIGN_P1",
+      "form": null,
+      "formation_type": null,
+      "authority": "CANDIDATE",
+      "next_action": "prefer compound from approved temporal/rest morphemes if morphology later supports it; otherwise explicit primitive/loan decision"
+    }
+  ],
+  "grammar_decisions": [
+    {
+      "id": "DEC-GRM-001",
+      "function": "TOKEN_LEVEL_ANALYSIS_OF_RECOVERED_PHRASES",
+      "decision": "DO_NOT_INFER_YET",
+      "applies_to": ["PHR-001", "PHR-003"],
+      "reason": "Recovered gloss certainty is APPROXIMATE and no source-backed token segmentation/grammar was recovered."
+    },
+    {
+      "id": "DEC-GRM-002",
+      "function": "INTERROGATIVE_SYSTEM",
+      "decision": "DESIGN_BEFORE_NEW_INTERROGATIVE_FORMS",
+      "applies_to": ["NAME_QUESTION_AND_ANSWER", "YES_NO_QUESTION", "AGE_QUESTION", "WHERE_QUESTION", "WHAT_DO_QUESTION", "WHO_WITH_COMPOUND_QUESTION"]
+    },
+    {
+      "id": "DEC-GRM-003",
+      "function": "PERSONAL_ANSWER_SLOTS",
+      "decision": "NEW_V1_1_AUTHORING_ALLOWED_BUT_NOT_V1_0_RECONSTRUCTION",
+      "reason": "Historical v1.0 answer payload remains unrecovered."
+    }
+  ],
+  "metrics": {
+    "existing_lexeme_rebind_proposals": 1,
+    "existing_gate_forms_held": 1,
+    "new_candidate_designs_open": 4,
+    "grammar_or_lexical_designs_open": 2,
+    "new_forms_created_in_this_decision": 0
+  },
+  "next_gate": "SWHNK-HNK-GRAMMAR-FOUNDATION-V1"
+}
