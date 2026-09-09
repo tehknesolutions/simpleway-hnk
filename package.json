@@ -1,6 +1,6 @@
 {
   "name": "simpleway-hnk",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,7 +14,5 @@
     "progress:write": "node scripts/build-cycle1-progress.mjs --write",
     "test": "npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": {"node": ">=20"}
 }
