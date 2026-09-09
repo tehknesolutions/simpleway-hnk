@@ -1,0 +1,23 @@
+{
+  "review_id":"SWHNK-L01-OPI-007-RESIDENCE-SEMANTIC-REVIEW-V1",
+  "slot_id":"L01-OPI-007",
+  "status":"HOLD_MEANING_NULL_RESIDENCE_HYPOTHESIS_AND_GATED_PERSON_INTERROGATIVE",
+  "english_prompt":"Where do you live and who do you live with?",
+  "hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],
+  "design":"TWO_MICROQUESTIONS_ONE_OPI_CARD",
+  "structural_encoding":{"state":"PASS","glyph_id_sequences":[["G02","G12","G31","G01","G12","G03","G23","G05","G31","G01","G12","G23","G02"],["G02","G12","G31","G01","G12","G03","G23","G05","G04","G12","G23","G02"]]},
+  "semantic_components":[
+    {"form":"VANI","id":"LEX-031","authority":"WATCH","master_lexicon_meaning":null,"test_semantic_hypothesis":"live / reside","historical_gloss_recovered":false},
+    {"form":"KUVAN","id":"AUTH-001","authority":"CANDIDATE","semantic_role":"locative interrogative variable","historical_recovery_claim":false},
+    {"form":"KUON","id":"AUTH-003","authority":"CANDIDATE","semantic_role":"person interrogative variable","historical_recovery_claim":false,"dependency":{"form":"ON","id":"LEX-026","authority":"GATE"}},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"question operator"}
+  ],
+  "semantic_assessment":{"residence_domain_in_cycle1":"SOURCE_CONFIRMED_CURRICULUM","VANI_residence_mapping":"HYPOTHESIS_ONLY","location_question_functional_match":"STRONG_IF_VANI_HYPOTHESIS_ACCEPTED","coresident_question_functional_match":"PLAUSIBLE_IF_VANI_KUON_AND_VALENCY_ACCEPTED","overt_WITH_particle_created":false,"co_resident_valency_historical_claim":false},
+  "answer_strategy":{"location":{"pattern":"[PLACE]","state":"AVAILABLE_NON_INVENTIVE"},"coresident":{"pattern":"[PERSON_OR_PEOPLE]","state":"AVAILABLE_NON_INVENTIVE"},"hnk_function_words_added":false},
+  "checks":{"structural_gids":"PASS","residence_curriculum_domain":"PASS","VANI_historical_semantics":"HOLD_MEANING_NULL","KUVAN_authority":"CANDIDATE","KUON_authority":"CANDIDATE","ON_dependency":"GATE","co_resident_valency":"AUTHORED_TEST_ONLY","answer_patterns":"PASS_AS_BARE_DYNAMIC_VALUES","human_semantic_approval":"MANDATORY_PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"This is the highest-risk L01 OPI: the form VANI is genuinely recovered but semantically unglossed, KUON is authored from a gated component, and co-resident valency is new. Structural and pedagogical engineering cannot substitute for explicit semantic approval here."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_conditions":["Recover or explicitly approve the VANI=live/reside semantic interpretation while preserving provenance.","Explicitly approve KUON for person interrogation while ON remains visibly GATE or separately resolve ON.","Approve the residence co-resident valency without claiming it was historical grammar.","Keep the two-microquestion card design or explicitly authorize a different governed conjunction/comitative construction."],
+  "next_gate":"SWHNK-L01-OPI-VALIDATION-REVIEW-COMPLETE-V1"
+}
