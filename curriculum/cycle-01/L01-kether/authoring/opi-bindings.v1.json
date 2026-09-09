@@ -1,6 +1,6 @@
 {
   "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
-  "status": "AUTHORING_ACTIVE_5_OF_10_KUVAN_AND_KU_POSITION_REFINED",
+  "status": "AUTHORING_ACTIVE_6_OF_10",
   "lesson_id": "L01",
   "rules": {
     "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
@@ -87,6 +87,26 @@
       "provenance":["authoring/opi-005.candidate.v1.json","authoring/curriculum-rebinds.v1.json#LEX-013","tehknesolutions/codex-hnk/packages/hnk-linguas/src/cycle1.mjs","tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-001"]
     },
     {
+      "slot_id":"L01-OPI-006",
+      "course_prompt_id":"L01-OPI-06",
+      "opi_english":"What do you do at work/school?",
+      "binding_origin":"V1_1_CONTEXTUAL_SEMANTIC_REFRAME_WITH_AUTHORED_LANGUAGE_ASSET",
+      "candidate_id":"CAND-L01-OPI-06-Q2",
+      "hnk_question":"EN KU VALA KE",
+      "authored_candidate_ids":["AUTH-002"],
+      "authored_candidate_authority":["CANDIDATE"],
+      "grammar_hypotheses":["EN second-person referent","KU inferred pre-nominal interrogative content selector","VALA governed authored generic activity noun","KE final interrogative operator"],
+      "semantic_reframe":{"pt":"Qual é a sua atividade? / Que atividade é a sua?","en":"What is your activity? / Which activity is yours?"},
+      "context_requirement":"Work/school topic is established by surrounding OPI context; no invented AT relation or auxiliary/light DO is added.",
+      "implementation_state":"AUTHORED",
+      "usage_scope":"TEST_ONLY_AUTHORED_CANDIDATE_VISIBLE",
+      "validation_state":"HOLD_AUTHORED_CANDIDATE_AND_INFERRED_GRAMMAR",
+      "glyph_ids":["G02","G12","G23","G05","G31","G01","G14","G01","G23","G02"],
+      "answer_pattern":{"id":"ACTIVITY-DESCRIPTION-V1","pattern":"[ACTIVITY_DESCRIPTION]","status":"AUTHORING_CANDIDATE","hnk_function_words_added":false},
+      "promotion_blockers":["VALA is CANDIDATE, not FROZEN.","KU pre-nominal selector role remains inferred.","Context-dependent semantic reframe needs pedagogical/human validation.","EN/KE grammatical roles remain inferred."],
+      "provenance":["authoring/opi-006.activity-frame.v2.json","recovery/ku-zamo-contrastive-analysis.v1.json","tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-002"]
+    },
+    {
       "slot_id":"L01-OPI-008",
       "course_prompt_id":"L01-OPI-08",
       "opi_english":"What are your hobbies?",
@@ -107,15 +127,15 @@
   ],
   "metrics": {
     "opi_target":10,
-    "authored":5,
+    "authored":6,
     "authored_recovered_phrase":1,
-    "authored_v1_1_candidates":4,
+    "authored_v1_1_candidates":5,
     "question_technical_pass":1,
     "governed_rebind_usage":1,
-    "authored_language_candidate_usage":2,
+    "authored_language_candidate_usage":3,
     "watch_test_only":1,
     "validated":0,
     "frozen":0
   },
-  "next_gate":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V2"
+  "next_gate":"SWHNK-L01-OPI-003-AGE-CONSTRUCTION-V1"
 }
