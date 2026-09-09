@@ -13,7 +13,7 @@
       "implementation_state":"MISSING",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards. The new v1.1 authoring queue contains the 10 frozen English prompts, but HNK question/answer bindings are null and the raw v1.0 payload is not recovered."
+      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards. The new v1.1 authoring queue contains the 10 frozen English prompts, but most HNK question/answer bindings remain null and the raw v1.0 payload is not recovered."
     },
     {
       "selector": {"lesson":"L01","category":"activation","range":[1,72]},
@@ -21,6 +21,13 @@
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
       "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 72 teacher drills. The v1.1 lane contains 72 slot IDs, but HNK drill payload is not recovered/authored."
+    },
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[1,1]},
+      "implementation_state":"AUTHORED",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"L01-OPI-001 is now explicitly bound in authoring/opi-bindings.v1.json to recovered PHR-001 `KALA YA EN ES KU KE` with APPROXIMATE recovered meaning 'What is your name?'. It remains AUTHORED, not VALIDATED, until glyph sequence, answer pattern and human linguistic review are complete."
     }
   ],
   "lexical_evidence": {
@@ -38,6 +45,7 @@
     "../docs/SIMPLEWAY_HNK_INVENTORY_V1.md",
     "../curriculum/cycle-01/L01-kether/manifest.json",
     "../curriculum/cycle-01/L01-kether/authoring/lesson.authoring.v1.1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json",
     "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
   ]
 }
