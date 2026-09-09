@@ -1,0 +1,62 @@
+{
+  "lesson_id": "HNK-L01",
+  "sphere": "Kether",
+  "version": "1.1.0-authoring",
+  "status": "AUTHORING_QUEUE",
+  "inherits_from": {
+    "source_version": "1.0.0",
+    "source_status": "PUBLICATION-FROZEN",
+    "inheritance_scope": ["frozen_english_opi_order", "opi_count", "activation_count"],
+    "raw_v1_payload_recovered": false
+  },
+  "authority": {
+    "language": "tehknesolutions/codex-hnk/packages/hnk-linguas",
+    "glyphs": "tehknesolutions/codex-hnk/packages/hnk-glyphs",
+    "lesson_snapshot": "lexicon.bindings.snapshot.json"
+  },
+  "rules": {
+    "non_invention": true,
+    "null_until_bound": true,
+    "watch_requires_label": true,
+    "reference_not_ordinary_lexeme": true,
+    "new_hnk_form_requires_governance": true,
+    "v1_0_history_must_not_be_overwritten": true
+  },
+  "student_cards": [
+    {"id":"L01-OPI-01","opi_english":"What's your name?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-02","opi_english":"Do you have a nickname?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-03","opi_english":"How old are you?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-04","opi_english":"Where were you born?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-05","opi_english":"Where do you work?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-06","opi_english":"What do you do at work/school?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-07","opi_english":"Where do you live and who do you live with?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-08","opi_english":"What are your hobbies?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-09","opi_english":"Do you like to sing?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"},
+    {"id":"L01-OPI-10","opi_english":"What do you do on weekends?","source_state":"FROZEN_PROMPT_RECOVERED","meaning_pt":null,"hnk_question":null,"hnk_phrase_id":null,"hnk_answer_pattern":null,"lexeme_ids":[],"glyph_ids":null,"binding_state":"UNBOUND_AUTHORING"}
+  ],
+  "activation_slot_ids": [
+    "L01-ACT-001","L01-ACT-002","L01-ACT-003","L01-ACT-004","L01-ACT-005","L01-ACT-006","L01-ACT-007","L01-ACT-008","L01-ACT-009","L01-ACT-010","L01-ACT-011","L01-ACT-012",
+    "L01-ACT-013","L01-ACT-014","L01-ACT-015","L01-ACT-016","L01-ACT-017","L01-ACT-018","L01-ACT-019","L01-ACT-020","L01-ACT-021","L01-ACT-022","L01-ACT-023","L01-ACT-024",
+    "L01-ACT-025","L01-ACT-026","L01-ACT-027","L01-ACT-028","L01-ACT-029","L01-ACT-030","L01-ACT-031","L01-ACT-032","L01-ACT-033","L01-ACT-034","L01-ACT-035","L01-ACT-036",
+    "L01-ACT-037","L01-ACT-038","L01-ACT-039","L01-ACT-040","L01-ACT-041","L01-ACT-042","L01-ACT-043","L01-ACT-044","L01-ACT-045","L01-ACT-046","L01-ACT-047","L01-ACT-048",
+    "L01-ACT-049","L01-ACT-050","L01-ACT-051","L01-ACT-052","L01-ACT-053","L01-ACT-054","L01-ACT-055","L01-ACT-056","L01-ACT-057","L01-ACT-058","L01-ACT-059","L01-ACT-060",
+    "L01-ACT-061","L01-ACT-062","L01-ACT-063","L01-ACT-064","L01-ACT-065","L01-ACT-066","L01-ACT-067","L01-ACT-068","L01-ACT-069","L01-ACT-070","L01-ACT-071","L01-ACT-072"
+  ],
+  "activation_slot_template": {
+    "category": null,
+    "prompt_pt": null,
+    "hnk": null,
+    "lexeme_ids": [],
+    "phrase_ids": [],
+    "glyph_ids": null,
+    "binding_state": "UNBOUND_AUTHORING"
+  },
+  "targets": {"opi":10,"activation":72},
+  "promotion_gate": {
+    "all_opi_bound_or_explicitly_approved": true,
+    "all_activation_slots_authored": true,
+    "watch_usage_explicit": true,
+    "glyphs_generated_from_authoritative_ids": true,
+    "human_review_required": true
+  }
+}
