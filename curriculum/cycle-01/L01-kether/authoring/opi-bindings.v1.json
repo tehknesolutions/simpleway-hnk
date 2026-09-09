@@ -1,0 +1,43 @@
+{
+  "binding_set_id": "SWHNK-L01-OPI-BINDINGS-V1",
+  "status": "AUTHORING_ACTIVE_NOT_VALIDATED",
+  "lesson_id": "L01",
+  "rules": {
+    "recovered_phrase_may_enter_authored_state_without_being_marked_validated": true,
+    "approximate_phrase_gloss_requires_validation_before_promotion": true,
+    "glyph_ids_required_before_validated_state": true,
+    "historical_v1_0_payload_not_reconstructed": true
+  },
+  "bindings": [
+    {
+      "slot_id": "L01-OPI-001",
+      "course_prompt_id": "L01-OPI-01",
+      "opi_english": "What's your name?",
+      "phrase_id": "PHR-001",
+      "hnk_question": "KALA YA EN ES KU KE",
+      "meaning": {"pt":"Qual é o seu nome?","en":"What is your name?"},
+      "phrase_source_status": "RECOVERED",
+      "phrase_certainty": "APPROXIMATE",
+      "implementation_state": "AUTHORED",
+      "validation_state": "PENDING",
+      "glyph_ids": null,
+      "answer_pattern": null,
+      "promotion_blockers": [
+        "Phrase gloss is APPROXIMATE rather than exact recovered token alignment.",
+        "G01-G40 sequence has not yet been generated/verified in this binding.",
+        "Answer pattern is not yet governed.",
+        "Human linguistic review is required before VALIDATED."
+      ],
+      "provenance": [
+        "authoring/lexicon.bindings.snapshot.json#PHR-001",
+        "authoring/lesson.authoring.v1.1.json#L01-OPI-01"
+      ]
+    }
+  ],
+  "metrics": {
+    "opi_target": 10,
+    "authored": 1,
+    "validated": 0,
+    "frozen": 0
+  }
+}
