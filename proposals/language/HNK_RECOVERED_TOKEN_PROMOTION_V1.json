@@ -1,0 +1,67 @@
+{
+  "proposal_id": "HNK-RECOVERED-TOKEN-PROMOTION-V1",
+  "status": "PROPOSAL_NOT_APPLIED_TO_CANON",
+  "target_registry": "tehknesolutions/codex-hnk/packages/hnk-linguas",
+  "source_analysis": "curriculum/cycle-01/L01-kether/recovery/token-hypotheses.v1.json",
+  "principle": "Promote recovered FORM evidence separately from inferred MEANING evidence.",
+  "candidates": [
+    {
+      "form":"AN",
+      "form_provenance":"RECOVERED_IN_PHRASES",
+      "proposed_type":"GRAMMATICAL_LEXEME",
+      "proposed_meaning":{"pt":"eu / primeira pessoa singular ou sujeito de 1ª pessoa","en":"I / first-person singular or first-person subject"},
+      "meaning_state":"INFERRED_DISTRIBUTIONAL",
+      "proposed_authority":"CANDIDATE",
+      "proposed_certainty":"INFERRED",
+      "lessons":["L01"],
+      "evidence":["PHR-002","PHR-007"],
+      "risk":"Exact scope (subject-only vs general first-person pronoun) is unresolved."
+    },
+    {
+      "form":"EN",
+      "form_provenance":"RECOVERED_IN_PHRASES",
+      "proposed_type":"GRAMMATICAL_LEXEME",
+      "proposed_meaning":{"pt":"você/seu — referente de segunda pessoa, função exata ainda aberta","en":"you/your — second-person referent, exact grammatical function still open"},
+      "meaning_state":"INFERRED_DISTRIBUTIONAL",
+      "proposed_authority":"CANDIDATE",
+      "proposed_certainty":"INFERRED",
+      "lessons":["L01"],
+      "evidence":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+      "risk":"Subject and possessive uses may be distinct grammatical analyses of the same form or may reflect a broader second-person marker."
+    },
+    {
+      "form":"ZAMI",
+      "form_provenance":"RECOVERED_IN_PHRASES",
+      "proposed_type":"LEXICAL_OR_PREDICATE_FORM",
+      "proposed_meaning":{"pt":"falar / usar linguagem","en":"speak / use language"},
+      "meaning_state":"INFERRED_DISTRIBUTIONAL",
+      "proposed_authority":"CANDIDATE",
+      "proposed_certainty":"INFERRED",
+      "lessons":["L01"],
+      "evidence":["PHR-002","PHR-003","PHR-006","PHR-007"],
+      "risk":"Broader semantic range beyond language-use predicate is unresolved."
+    },
+    {
+      "form":"KE",
+      "form_provenance":"RECOVERED_IN_PHRASES",
+      "proposed_type":"GRAMMATICAL_PARTICLE",
+      "proposed_meaning":{"pt":"operador/marcador interrogativo, provavelmente em posição final","en":"question/interrogative operator, probably clause-final"},
+      "meaning_state":"INFERRED_DISTRIBUTIONAL",
+      "proposed_authority":"CANDIDATE",
+      "proposed_certainty":"INFERRED",
+      "lessons":["L01"],
+      "evidence":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+      "negative_evidence":["PHR-002","PHR-007"],
+      "risk":"Exact interrogative scope and whether KE marks all question types remain unresolved."
+    }
+  ],
+  "must_not_promote": ["KALA","YA","ES","KU","SARI","LO","DA","ZAMO"],
+  "must_not_promote_reason": "Current evidence is insufficient for stable token-level meaning assignment.",
+  "application_gate": [
+    "human review of each inferred meaning",
+    "strict transliteration/glyph-ID validation",
+    "collision check against Master Lexicon",
+    "registry validation updates must be intentional",
+    "Cycle 1 counts must distinguish recovered-form additions from curricular vocabulary slots"
+  ]
+}
