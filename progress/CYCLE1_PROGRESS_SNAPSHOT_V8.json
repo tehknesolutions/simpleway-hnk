@@ -1,0 +1,15 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V8",
+  "as_of":"2026-09-09",
+  "status":"NINE_OF_TEN_L01_OPI_AUTHORED_ONE_HARD_GAP",
+  "target_slots":1008,
+  "implementation":{"MISSING":999,"AUTHORED":9,"VALIDATED":0,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.1071,"AUTHORED":0.8929,"VALIDATED":0.0,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies":{"recovered":{"forms":31,"target":144,"percent":21.5278},"governed":{"recovered_forms":31,"authored_candidates":2,"unique_assets":33,"target":144,"percent":22.9167},"authored_candidates":[{"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE"},{"id":"AUTH-002","form":"VALA","authority":"CANDIDATE"}]},
+  "L01":{"target":155,"AUTHORED":9,"VALIDATED":0,"FROZEN":0,"authored_percent":5.8065,"opi":{"target":10,"AUTHORED":9,"percent":90.0,"missing":["L01-OPI-007"]},"historical_frozen_evidence":82},
+  "cycle1_opi":{"target":70,"AUTHORED":9,"percent":12.8571},
+  "new_authored_slot":{"slot":"L01-OPI-010","english":"What do you do on weekends?","hnk_context":"VAMUSARO","context_meaning":"rest / leisure period","hnk_question":"EN KU VALA KE","semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT","weekend_translation_claim":false,"state":"AUTHORED_HOLD"},
+  "remaining_hard_gap":{"slot":"L01-OPI-007","english":"Where do you live and who do you live with?","missing":["LIVE_RESIDE_OR_EQUIVALENT","WHO_PERSON_INTERROGATIVE","COMITATIVE_WITH"],"high_value_recovery_target":"VANI exact historical gloss","decision":"KEEP_MISSING"},
+  "next_gate":"SWHNK-L01-OPI-007-RESIDENCE-COMITATIVE-RECOVERY-V2"
+}
