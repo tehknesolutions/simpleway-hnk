@@ -1,13 +1,16 @@
 {
   "name": "simpleway-hnk",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "validate:cycle1": "node tests/validate-cycle1.mjs",
     "validate:l01-authoring": "node tests/validate-l01-authoring.mjs",
     "validate:language-proposals": "node tests/validate-language-proposals.mjs",
-    "test": "npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals"
+    "validate:progress": "node tests/validate-progress-tracker.mjs",
+    "progress": "node scripts/build-cycle1-progress.mjs",
+    "progress:write": "node scripts/build-cycle1-progress.mjs --write",
+    "test": "npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress"
   },
   "engines": {
     "node": ">=20"
