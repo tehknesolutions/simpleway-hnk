@@ -1,0 +1,64 @@
+{
+  "design_id":"SWHNK-L01-OPI-006-ACTIVITY-FRAME-V1",
+  "status":"DESIGN_GATE_NO_SLOT_PROMOTION",
+  "opi":"L01-OPI-06",
+  "english_intent":"What do you do at work/school?",
+  "implementation_state":"MISSING",
+  "reason_not_authored":"No current source-backed or governed HNK construction distinguishes an activity/content question from the locative/content-question candidates already used elsewhere.",
+  "principles": {
+    "do_not_calque_english_auxiliary_do":true,
+    "do_not_assign_KU_specific_WH_meaning":true,
+    "do_not_reuse_identical_HNK_form_for_distinct_OPI_intents_without_polysemy_rule":true,
+    "do_not_promote_unknown_recovered_phrase_by_curriculum_order":true
+  },
+  "available_lexical_support": [
+    {"id":"LEX-013","form":"VALI","meaning":"work / trabalhar","authority":"FROZEN","L01_binding":"GOVERNED_CURRICULUM_REBIND"},
+    {"id":"LEX-003","form":"VALIVAN","meaning":"office","authority":"FROZEN","L01_binding":"RECOVERED"},
+    {"id":"LEX-004","form":"PARAZAMO","meaning":"school / study domain","authority":"FROZEN","L01_binding":"RECOVERED"},
+    {"id":"LEX-012","form":"PARAZAMI","meaning":"study / estudar","authority":"WATCH","L01_binding":false,"note":"Recovered in L02/L03; no L01 rebind currently approved."}
+  ],
+  "candidate_probes_rejected_or_held": [
+    {
+      "form":"EN VALI KU KE",
+      "decision":"REJECT_FOR_OPI006_CURRENTLY",
+      "reason":"Identical to current OPI-005 authored candidate. With KU not distinguished as WHERE versus WHAT/activity, the same form cannot safely carry two different beginner OPI intents.",
+      "collision_with":"L01-OPI-005"
+    },
+    {
+      "form":"EN VALIVAN KU KE",
+      "decision":"HOLD_NOT_BOUND",
+      "reason":"VALIVAN supplies the office/location domain but no recovered grammar establishes that this frame asks for an activity performed there rather than information about the office itself."
+    },
+    {
+      "form":"EN PARAZAMO KU KE",
+      "decision":"HOLD_NOT_BOUND",
+      "reason":"PARAZAMO supplies school/study domain but no recovered grammar establishes that this frame asks what activity the learner performs there."
+    },
+    {
+      "form":"EN PARAZAMI KU KE",
+      "decision":"HOLD_NOT_BOUND",
+      "reason":"PARAZAMI is WATCH and not bound to L01; additionally this would narrow the school branch to studying and would not solve the work branch."
+    }
+  ],
+  "recovered_phrase_clue": {
+    "phrase_id":"PHR-006",
+    "form":"EN ZAMI KU ZAMO KE",
+    "exact_gloss":null,
+    "distributional_value":"HIGH",
+    "observation":"Compared with PHR-003 `EN ZAMI HENUVOKODAN KE`, PHR-006 suggests KU participates in a variable/content position around a known predicate/domain. This supports content-question architecture but does not recover a specific WHAT/WHICH gloss.",
+    "may_bind_to_OPI006":false
+  },
+  "minimum_required_to_unlock": {
+    "option_A_recovery":"Recover an exact gloss/token alignment showing how HNK asks for activity/content, potentially from PHR-004/005/006 or the missing v1.0 payload.",
+    "option_B_governed_grammar":"Explicitly author and approve a content-variable/activity construction distinct enough from the locative question construction.",
+    "option_C_curriculum_reframe":"Approve a semantically equivalent HNK-specific beginner question that elicits work/school activity without copying English auxiliary structure."
+  },
+  "new_lexeme_required":false,
+  "new_grammar_or_recovery_required":true,
+  "progress_effect": {
+    "AUTHORED_slots_before":5,
+    "AUTHORED_slots_after":5,
+    "reason":"Design evidence increased, but no reproducible HNK OPI payload met the AUTHORED threshold."
+  },
+  "next_gate":"SWHNK-L01-CONTENT-QUESTION-DISAMBIGUATION-V1"
+}
