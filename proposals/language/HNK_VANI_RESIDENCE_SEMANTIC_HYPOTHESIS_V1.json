@@ -1,0 +1,44 @@
+{
+  "proposal_id": "HNK-VANI-RESIDENCE-SEMANTIC-HYPOTHESIS-V1",
+  "status": "WATCH_SEMANTIC_HYPOTHESIS_NOT_LEXICON_PROMOTION",
+  "target_form": {
+    "id": "LEX-031",
+    "form": "VANI",
+    "current_authority": "WATCH",
+    "current_meaning": null,
+    "current_source_lessons": ["L02"]
+  },
+  "proposed_test_interpretation": {
+    "pt": "morar / residir / viver em um lugar",
+    "en": "live / reside / dwell in a place"
+  },
+  "evidence": {
+    "curriculum": [
+      "Historical SimpleWay Cycle 1 material explicitly includes I live in Lesson 1.",
+      "Historical SimpleWay Cycle 1 material includes She lives in Florida in Lesson 4."
+    ],
+    "morphology": {
+      "VAN": "strong inferred location/place formative from VALIVAN, TAYOVAN, PAROVAN",
+      "final_I": "observed action/verbal correlation across multiple recovered forms",
+      "analysis": "VAN + I is compatible with a locative-action semantic reading."
+    },
+    "historical_form_presence": "VANI is already a recovered WATCH form; no new phonological form is being invented."
+  },
+  "boundaries": {
+    "historical_gloss_recovered": false,
+    "modify_master_lexicon_meaning": false,
+    "promote_authority": false,
+    "curriculum_rebind_created": false,
+    "may_be_used_in_test_only_OPI": true,
+    "must_display_WATCH_and_semantic_hypothesis_labels": true
+  },
+  "test_scope": ["L01-OPI-007"],
+  "glyph_ids": ["G31", "G01", "G12", "G03"],
+  "promotion_gate": [
+    "Human linguistic approval of the residence interpretation.",
+    "Prefer historical source recovery if it later becomes available.",
+    "Do not set LEX-031 meaning until an explicit semantic promotion decision is made.",
+    "Do not elevate WATCH merely because the OPI test is pedagogically useful."
+  ],
+  "next_gate": "SWHNK-L01-VANI-SEMANTIC-TEST-V1"
+}
