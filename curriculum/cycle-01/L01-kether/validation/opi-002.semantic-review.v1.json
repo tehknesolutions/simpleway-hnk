@@ -1,0 +1,43 @@
+{
+  "review_id":"SWHNK-L01-OPI-002-POSSESSION-FRAME-REVIEW-V1",
+  "slot_id":"L01-OPI-002",
+  "status":"HOLD_NICKNAME_CORE_STRONG_POSSESSION_AND_NEGATIVE_RESPONSE_UNRESOLVED",
+  "english_prompt":"Do you have a nickname?",
+  "hnk":"EN VAMAKALA KE",
+  "structural_encoding":{"state":"PASS","glyph_ids":["G02","G12","G31","G01","G11","G01","G23","G01","G14","G01","G23","G02"],"unresolved_transliteration_units":[]},
+  "semantic_components":[
+    {"form":"VAMAKALA","id":"LEX-001","authority":"FROZEN","meaning":{"pt":"apelido / nome familiar","en":"nickname / familiar name"},"state":"SOURCE_BACKED"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"clause-final interrogative operator"}
+  ],
+  "semantic_assessment":{
+    "nickname_domain_coverage":"STRONG",
+    "candidate_minimal_reading":"you + nickname + question; functionally comparable to Your nickname? / Do you have a nickname? in beginner interview context",
+    "HAVE_possession_operator_recovered":false,
+    "existential_relation_recovered":false,
+    "semantic_reframe_required_for_current_form":true,
+    "exact_historical_sentence_recovered":false
+  },
+  "answer_paths":{
+    "affirmative":{"pattern":"[NICKNAME]","state":"AVAILABLE_NON_INVENTIVE","hnk_function_words_added":false},
+    "negative":{"pattern":null,"state":"UNRESOLVED","reason":"No governed L01 negative/existential response equivalent to no nickname has been recovered/authored yet."},
+    "whole_card_answer_strategy_complete":false
+  },
+  "checks":{
+    "structural_gids":"PASS",
+    "nickname_core_source_backed":"PASS",
+    "affirmative_bare_nickname_answer":"PASS_AS_AUTHORING_CANDIDATE",
+    "possession_semantics":"HOLD",
+    "negative_answer_path":"HOLD",
+    "EN_KE_grammar":"INFERRED",
+    "human_semantic_reframe_approval":"PENDING"
+  },
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"The lexical core is strong, but the current HNK form lacks a recovered possession/existential relation and the negative response path is not governed. Validating only affirmative nickname answers would under-cover the frozen English card."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_options":[
+    "Explicitly approve the semantic reframe from Do you have a nickname? to the beginner-function equivalent Your nickname? and define how no-nickname is handled.",
+    "Recover or author a possession/existential construction plus a negative answer strategy.",
+    "Do not invent an English-calque HAVE verb solely to close this card."
+  ],
+  "next_gate":"SWHNK-L01-OPI-006-CONTEXTUAL-FIDELITY-REVIEW-V1"
+}
