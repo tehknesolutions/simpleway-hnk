@@ -1,19 +1,21 @@
 {
-  "evidence_id": "SWHNK-C1-EVIDENCE-OVERRIDES-V1",
-  "status": "ACTIVE",
-  "source_date": "2026-09-09",
-  "defaults": {"implementation_state":"MISSING","evidence_state":"STRUCTURE_RECOVERED","scaffolded":false},
-  "overrides": [
-    {"selector":{"lesson":"L01","category":"opi","range":[1,10]},"implementation_state":"MISSING","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"Recovered v1.0 source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards; current implementation is tracked separately."},
-    {"selector":{"lesson":"L01","category":"activation","range":[1,72]},"implementation_state":"MISSING","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"Recovered v1.0 source proves exactly 72 frozen teacher drills; current drill payload is not recovered/authored."},
-    {"selector":{"lesson":"L01","category":"opi","range":[1,1]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-001 binds recovered PHR-001 `KALA YA EN ES KU KE`; technical HNK40 pass, semantic HOLD."},
-    {"selector":{"lesson":"L01","category":"opi","range":[2,2]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-002 uses governed candidate `EN VAMAKALA KE` with FROZEN VAMAKALA and inferred grammar."},
-    {"selector":{"lesson":"L01","category":"opi","range":[4,4]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-004 uses `EN SARADAYA KUVAN KE`; SARADAYA is recovered FROZEN and KUVAN is canonical authored CANDIDATE AUTH-001."},
-    {"selector":{"lesson":"L01","category":"opi","range":[5,5]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-005 uses `EN VALI KUVAN KE`; VALI is FROZEN through explicit L01 curriculum rebind and KUVAN is AUTH-001 CANDIDATE."},
-    {"selector":{"lesson":"L01","category":"opi","range":[6,6]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-006 uses contextual HNK frame `EN KU VALA KE`; VALA is canonical authored CANDIDATE AUTH-002 and KU remains inferred pre-nominal content selector. Slot remains HOLD below VALIDATED."},
-    {"selector":{"lesson":"L01","category":"opi","range":[8,8]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"L01-OPI-008 uses `EN KU VAMAVALA KE` after PHR-003/PHR-006 contrast. VAMAVALA remains WATCH; KU role remains inferred/test-only."}
+  "evidence_id":"SWHNK-C1-EVIDENCE-OVERRIDES-V1",
+  "status":"ACTIVE",
+  "source_date":"2026-09-09",
+  "defaults":{"implementation_state":"MISSING","evidence_state":"STRUCTURE_RECOVERED","scaffolded":false},
+  "overrides":[
+    {"selector":{"lesson":"L01","category":"opi","range":[1,10]},"implementation_state":"MISSING","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"Recovered v1.0 source proves 10 frozen OPI cards; current implementation tracked separately."},
+    {"selector":{"lesson":"L01","category":"activation","range":[1,72]},"implementation_state":"MISSING","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"Recovered v1.0 source proves 72 frozen teacher drills; current drill payload not recovered/authored."},
+    {"selector":{"lesson":"L01","category":"opi","range":[1,1]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"PHR-001 `KALA YA EN ES KU KE`; technical pass, semantic HOLD."},
+    {"selector":{"lesson":"L01","category":"opi","range":[2,2]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN VAMAKALA KE`; FROZEN lexical core with inferred grammar."},
+    {"selector":{"lesson":"L01","category":"opi","range":[3,3]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN KU SARASALA KE`; contextual age construction using WATCH SARASALA without creating a new age lexeme."},
+    {"selector":{"lesson":"L01","category":"opi","range":[4,4]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN SARADAYA KUVAN KE`; FROZEN SARADAYA + authored CANDIDATE KUVAN AUTH-001."},
+    {"selector":{"lesson":"L01","category":"opi","range":[5,5]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN VALI KUVAN KE`; governed VALI rebind + authored CANDIDATE KUVAN AUTH-001."},
+    {"selector":{"lesson":"L01","category":"opi","range":[6,6]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN KU VALA KE`; contextual activity frame using authored CANDIDATE VALA AUTH-002."},
+    {"selector":{"lesson":"L01","category":"opi","range":[8,8]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN KU VAMAVALA KE`; VAMAVALA remains WATCH and KU role remains inferred/test-only."},
+    {"selector":{"lesson":"L01","category":"opi","range":[9,9]},"implementation_state":"AUTHORED","evidence_state":"SOURCE_CONFIRMED_FROZEN","scaffolded":true,"reason":"`EN VAME VAMAZAMU KE`; experimental frame with VAME GATE and VAMAZAMU WATCH, neither promoted/rebound."}
   ],
-  "lexical_evidence": {
+  "lexical_evidence":{
     "master_lexicon_registry_forms":33,
     "unique_recovered_forms_linked_to_cycle1":31,
     "unbound_recovered_forms":2,
@@ -30,16 +32,15 @@
     "lesson_authored_candidates":{"L01":2,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "lesson_recovered_phrases":{"L01":7,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "gate":"HOLD_INCOMPLETE_BINDING",
-    "warning":"31/144 is the recovered-form proxy; 33/144 is the governed-language-asset proxy after two authored CANDIDATE forms. Neither equals completed curriculum vocabulary slots."
+    "warning":"31/144 is recovered-form proxy; 33/144 is governed-language-asset proxy. Neither equals completed curriculum vocabulary slots."
   },
-  "source_references": [
-    "../docs/SIMPLEWAY_HNK_INVENTORY_V1.md",
+  "source_references":[
     "../curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/opi-003.age-frame.v1.json",
     "../curriculum/cycle-01/L01-kether/authoring/opi-006.activity-frame.v2.json",
-    "../curriculum/cycle-01/L01-kether/recovery/ku-zamo-contrastive-analysis.v1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/opi-009.preference-frame.v1.json",
     "../proposals/language/HNK_KUVAN_PROMOTION_RECORD_V1.json",
     "../proposals/language/HNK_VALA_PROMOTION_RECORD_V1.json",
-    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
     "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
   ]
 }
