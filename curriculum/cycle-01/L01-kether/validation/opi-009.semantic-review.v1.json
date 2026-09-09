@@ -1,0 +1,21 @@
+{
+  "review_id":"SWHNK-L01-OPI-009-PREFERENCE-GATE-REVIEW-V1",
+  "slot_id":"L01-OPI-009",
+  "status":"HOLD_GATE_PREFERENCE_AND_WATCH_SINGING",
+  "english_prompt":"Do you like to sing?",
+  "hnk":"EN VAME VAMAZAMU KE",
+  "structural_encoding":{"state":"PASS","glyph_ids":["G02","G12","G31","G01","G11","G02","G31","G01","G11","G01","G32","G01","G11","G05","G23","G02"],"unresolved_transliteration_units":[]},
+  "semantic_components":[
+    {"form":"VAME","id":"LEX-025","authority":"GATE","meaning":{"pt":"gostar / like em leitura literal","en":"literal like"},"state":"RECOVERED_GATE"},
+    {"form":"VAMAZAMU","id":"LEX-008","authority":"WATCH","meaning":{"pt":"canto / expressão harmônica","en":"singing / harmonic expression"},"state":"RECOVERED_WATCH"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"question operator"}
+  ],
+  "semantic_assessment":{"preference_core":"AVAILABLE_BUT_GATED","singing_core":"AVAILABLE_BUT_WATCH","candidate_reading":"you + like + singing + question","functional_match":"STRONG_IF_VAME_GATE_BEHAVIOR_ACCEPTED","exact_historical_sentence_recovered":false},
+  "answer_strategy":{"positive":null,"negative":null,"state":"UNRESOLVED","reason":"No governed yes/no response pair is yet closed for this card."},
+  "checks":{"structural_gids":"PASS","preference_semantics":"HOLD_GATE","singing_semantics":"HOLD_WATCH","SPO_frame":"INFERRED","yes_no_answer_strategy":"HOLD","human_GATE_review":"PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"Question intent is compositionally plausible, but a GATE predicate cannot be treated as normal validated course grammar without explicit review, VAMAZAMU remains WATCH, and yes/no answers are unresolved."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_conditions":["Resolve VAME's GATE behavior for preference use.","Review VAMAZAMU WATCH status for course validation.","Define beginner yes/no answer strategy without silently inventing polarity forms.","Approve or revise the S-P-O preference frame."],
+  "next_gate":"SWHNK-L01-OPI-007-RESIDENCE-SEMANTIC-REVIEW-V1"
+}
