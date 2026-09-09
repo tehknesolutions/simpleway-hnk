@@ -1,0 +1,45 @@
+{
+  "gate_id":"SWHNK-L01-CONTENT-QUESTION-DISAMBIGUATION-V1",
+  "status":"AUTHORING_REQUIRED_NO_RECOVERED_WH_CANON",
+  "archaeology_result": {
+    "file_library":"NO_EXPLICIT_WH_DEFINITIONS",
+    "personal_context":"NO_PRIOR_EXPLICIT_KU_SARI_LO_DA_DEFINITION_FOUND",
+    "github_current":"NO_EXPLICIT_WH_DEFINITIONS",
+    "github_history":"UNKNOWN_GLOSSES_WERE_ALREADY_NULL_AT_MASTER_LEXICON_INTRODUCTION",
+    "old_2025_course_file":"REFERENCED_IN_PRIOR_CONVERSATION_BUT_NOT_RECOVERABLE_IN_CURRENT_FILE_LIBRARY_OR_CONNECTED_GITHUB"
+  },
+  "recovered_inferences": {
+    "KE":{"role":"interrogative operator","confidence":"INFERRED_STRONG","canonical":false},
+    "KU":{"role":"content variable / content-question component","confidence":"INFERRED_CONSERVATIVE","specific_wh":null,"canonical":false},
+    "VAN":{"role":"location/place formative","confidence":"INFERRED_STRONG_MORPHOLOGICAL","productive_rule":false,"canonical":false}
+  },
+  "critical_collision": {
+    "form":"EN VALI KU KE",
+    "current_binding":"L01-OPI-005 Where do you work?",
+    "forbidden_second_binding":"L01-OPI-006 What do you do at work/school?",
+    "reason":"Until locative and activity/content questions are differentiated, identical beginner forms for these two intents would create ungoverned semantic ambiguity."
+  },
+  "current_opi_effect": {
+    "L01-OPI-004":"AUTHORED_CANDIDATE_HOLD_WH_SEMANTICS",
+    "L01-OPI-005":"AUTHORED_CANDIDATE_HOLD_WH_SEMANTICS",
+    "L01-OPI-006":"MISSING_DESIGN_GATE",
+    "L01-OPI-008":"AUTHORED_TEST_CANDIDATE_HOLD_WATCH_AND_WH",
+    "validated_from_this_group":0
+  },
+  "design_direction": {
+    "strategy":"COMPOSITIONAL_WH_SPECIALIZATION",
+    "principle":"Prefer an explicitly authored semantic specialization of recovered/inferred material over assigning an unrecovered exact gloss to KU.",
+    "first_candidate":"KUVAN",
+    "intended_role":"LOCATIVE_CONTENT_VARIABLE / WHERE-like operator",
+    "derivation":"KU (content variable hypothesis) + VAN (location/place formative hypothesis)",
+    "historical_claim":false,
+    "requires_compounding_authoring_rule":true
+  },
+  "progress_effect": {
+    "authored_slots":5,
+    "validated_slots":0,
+    "frozen_slots":0,
+    "note":"The gate improves linguistic design certainty but does not promote a pedagogical slot."
+  },
+  "next_gate":"SWHNK-HNK-KUVAN-AUTHORING-PROPOSAL-V1"
+}
