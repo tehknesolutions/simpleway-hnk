@@ -1,0 +1,83 @@
+{
+  "grammar_id": "HNK-GRAMMAR-CANDIDATE-V1",
+  "status": "CANDIDATE_NOT_CANON",
+  "basis": [
+    "HNK_GRAMMAR_FOUNDATION_V1.md",
+    "HNK_RECOVERED_TOKEN_PROMOTION_V1.json",
+    "HNK_MORPHOLOGY_HYPOTHESES_V1.md",
+    "HNK_PHONOTACTIC_PROFILE_V1.md"
+  ],
+  "evidence_led_rules": {
+    "language_use_clause_order": {
+      "value": "SUBJECT_PREDICATE_OBJECT_COMPATIBLE",
+      "scope": "language-use micro-domain only",
+      "confidence": "INFERRED",
+      "examples": ["AN ZAMI ZAMO", "EN ZAMI HENUVOKODAN KE", "AN ZAMI HENUVOKODAN"],
+      "universal_basic_order_claim": false
+    },
+    "question_operator": {
+      "candidate_form": "KE",
+      "candidate_position": "CLAUSE_FINAL",
+      "confidence": "INFERRED",
+      "canonical": false,
+      "evidence_questions": ["PHR-001", "PHR-003"],
+      "distribution_support": ["PHR-004", "PHR-005", "PHR-006"],
+      "negative_distribution": ["PHR-002", "PHR-007"]
+    },
+    "first_person": {
+      "candidate_form": "AN",
+      "scope": "FIRST_PERSON_OR_FIRST_PERSON_SUBJECT",
+      "confidence": "INFERRED",
+      "canonical": false
+    },
+    "second_person": {
+      "candidate_form": "EN",
+      "scope": "SECOND_PERSON_REFERENT",
+      "subject_vs_possessive_analysis": "UNRESOLVED",
+      "confidence": "INFERRED",
+      "canonical": false
+    },
+    "speak_predicate": {
+      "candidate_form": "ZAMI",
+      "scope": "SPEAK_OR_LANGUAGE_USE",
+      "confidence": "INFERRED",
+      "canonical": false
+    },
+    "location_formative": {
+      "candidate_segment": "VAN",
+      "scope": "PLACE_OR_LOCATION_FORMATION",
+      "confidence": "INFERRED_STRONG",
+      "productive_rule": false,
+      "canonical": false
+    },
+    "action_final_i": {
+      "candidate_segment": "I",
+      "scope": "ACTION_OR_VERBAL_CORRELATION",
+      "confidence": "INFERRED_STRONG",
+      "productive_rule": false,
+      "canonical": false
+    }
+  },
+  "still_undecided": {
+    "universal_clause_order": null,
+    "copula": null,
+    "negation": null,
+    "possession": null,
+    "where_interrogative": null,
+    "who_interrogative": null,
+    "what_interrogative": null,
+    "age_construction": null,
+    "comitative": null,
+    "tense": null,
+    "aspect": null,
+    "number": null,
+    "generic_do_strategy": null
+  },
+  "lesson1_impact": {
+    "recovered_or_inferred_reusable_forms": ["AN", "EN", "ZAMI", "KE", "VALI"],
+    "held_forms": ["VAME"],
+    "high_value_recovery_targets": ["VANI", "KALA", "YA", "ES", "KU", "SARI", "LO", "DA", "ZAMO"],
+    "new_semantic_authoring_still_required_or_unresolved": ["AGE", "LIVE_RESIDE", "COMITATIVE_WITH", "WHO_PERSON_INTERROGATIVE", "GENERIC_DO_ACTION", "WEEKEND"]
+  },
+  "next_gate": "SWHNK-L01-GRAMMAR-DESIGN-PASS-V1"
+}
