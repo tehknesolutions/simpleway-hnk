@@ -1,0 +1,22 @@
+{
+  "lesson_id": "HNK-L02",
+  "version": "0.0.1",
+  "status": "DRAFT-SCAFFOLD",
+  "title": "HENUVOKODAN · Lesson 2",
+  "subtitle": "Arquitetura reservada; conteúdo ainda não congelado",
+  "source_canon": "UNDEFINED — must be approved before content production",
+  "student_cards": [],
+  "teacher_drills": [],
+  "watch_lexemes": [],
+  "rules": {
+    "content_policy": "Do not invent Lesson 2 semantic canon inside the platform engine.",
+    "transliteration": "Mandatory for Esperanto, Hebrew and Greek when content is later added.",
+    "publication_gate": "A non-empty Lesson 2 requires an approved source canon and versioned content freeze."
+  },
+  "publication_contract": {
+    "expected_student_cards": 0,
+    "expected_teacher_drills": 0,
+    "requires_transliteration": true,
+    "frozen_english_prompts": []
+  }
+}
