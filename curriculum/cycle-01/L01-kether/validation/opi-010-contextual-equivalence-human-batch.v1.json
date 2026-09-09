@@ -1,0 +1,37 @@
+{
+  "batch_id":"SWHNK-L01-OPI-010-CONTEXTUAL-EQUIVALENCE-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["L01-OPI-010"],
+  "english_prompt":"What do you do on weekends?",
+  "current_hnk":{"context":"VAMUSARO","question":"EN KU VALA KE"},
+  "evidence":{
+    "VAMUSARO":{"id":"LEX-005","authority":"FROZEN","meaning":"rest / leisure period","weekend_gloss":false},
+    "VALA":{"id":"AUTH-002","authority":"CANDIDATE","historical_recovery_claim":false},
+    "question_frame":{"form":"EN KU VALA KE","validated_precedent":"L01-OPI-006","scope_of_precedent":"activity content question with explicit discourse/card context"}
+  },
+  "decision_requested":{
+    "id":"DEC-L01-OPI010-CTX-001",
+    "statement":"Accept, for L01 OPI 10 course validation only, VAMUSARO (rest/leisure period) as an intentionally broader and visibly labeled discourse context for the frozen English weekend prompt, while retaining semantic_fidelity=APPROXIMATE_CONTEXTUAL_EQUIVALENT and making no claim that VAMUSARO means weekend.",
+    "if_approved":{
+      "OPI010_validation":"VALIDATED_FOR_L01_V1_1_COURSE_USE_AS_APPROXIMATE_CONTEXTUAL_EQUIVALENT",
+      "VAMUSARO_authority":"FROZEN_UNCHANGED",
+      "VAMUSARO_meaning":"rest / leisure period UNCHANGED",
+      "weekend_lexeme_created":false,
+      "historical_recovery_claim":false,
+      "VALA_authority":"CANDIDATE_UNCHANGED",
+      "EN_KU_VALA_KE_global_scope_expanded":false
+    }
+  },
+  "explicit_non_effects":[
+    "Does not redefine VAMUSARO as weekend.",
+    "Does not claim exact semantic equivalence.",
+    "Does not create a new weekend lexeme.",
+    "Does not promote VALA from CANDIDATE.",
+    "Does not expand EN KU VALA KE beyond separately approved course scopes.",
+    "Does not freeze OPI 10."
+  ],
+  "projected_effect_if_approved":{"L01_OPI_authored_or_better":10,"L01_OPI_validated_before":4,"L01_OPI_validated_after":5,"L01_OPI_validated_percent_after":50.0,"Cycle1_OPI_validated_after":5,"Cycle1_OPI_validated_percent_after":7.1429,"global_validated_slots_after":5,"global_validated_percent_after":0.4960,"language_authority_changes":0},
+  "application_rule":"Do not transition OPI 10 to VALIDATED until explicit human approval is recorded for this exact broader-context equivalence decision.",
+  "next_gate_if_approved":"SWHNK-L01-OPI-010-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"SWHNK-HNK-WEEKEND-TEMPORAL-SYSTEM-AUTHORING-V1"
+}
