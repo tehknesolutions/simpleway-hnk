@@ -1,0 +1,69 @@
+{
+  "snapshot_id": "SWHNK-C1-PROGRESS-SNAPSHOT-V2",
+  "as_of": "2026-09-09",
+  "status": "FIRST_AUTHORED_SLOT",
+  "target_slots": 1008,
+  "implementation": {
+    "MISSING": 1007,
+    "AUTHORED": 1,
+    "VALIDATED": 0,
+    "FROZEN": 0,
+    "percent": {
+      "MISSING": 99.9008,
+      "AUTHORED": 0.0992,
+      "VALIDATED": 0.0,
+      "FROZEN": 0.0
+    }
+  },
+  "first_authored_slot": {
+    "slot_id":"L01-OPI-001",
+    "course_prompt_id":"L01-OPI-01",
+    "english":"What's your name?",
+    "hnk":"KALA YA EN ES KU KE",
+    "phrase_id":"PHR-001",
+    "source":"RECOVERED",
+    "certainty":"APPROXIMATE",
+    "implementation_state":"AUTHORED",
+    "validation_state":"PENDING",
+    "why_not_validated":[
+      "Recovered phrase meaning is approximate rather than exact token-aligned.",
+      "G01-G40 sequence is not yet attached to the course binding.",
+      "Answer pattern is not yet governed.",
+      "Human linguistic review remains required."
+    ]
+  },
+  "historical_evidence": {
+    "SOURCE_CONFIRMED_FROZEN":82,
+    "percent":8.1349,
+    "breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},
+    "note":"Historical frozen evidence remains independent of current implementation state."
+  },
+  "scaffold": {"slots":82,"percent":8.1349},
+  "lexical_proxy": {
+    "unique_forms_linked_to_cycle1":31,
+    "target":144,
+    "percent":21.5278,
+    "recovered_phrases":7,
+    "warning":"Proxy only; not curriculum vocabulary-slot completion."
+  },
+  "L01": {
+    "target":155,
+    "MISSING":154,
+    "AUTHORED":1,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":0.6452,
+    "historical_frozen_evidence":82,
+    "scaffolded":82
+  },
+  "opi": {
+    "cycle_target":70,
+    "MISSING":69,
+    "AUTHORED":1,
+    "VALIDATED":0,
+    "FROZEN":0,
+    "authored_percent":1.4286,
+    "historical_frozen_evidence":10
+  },
+  "next_gate":"SWHNK-L01-OPI-001-VALIDATION-V1"
+}
