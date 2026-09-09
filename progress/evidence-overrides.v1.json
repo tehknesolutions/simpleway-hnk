@@ -13,21 +13,42 @@
       "implementation_state":"MISSING",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards. The new v1.1 authoring queue contains the 10 frozen English prompts, but most HNK question/answer bindings remain null and the raw v1.0 payload is not recovered."
+      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 10 OPI cards. The v1.1 lane preserves all 10 prompts, while current HNK implementation is tracked separately."
     },
     {
       "selector": {"lesson":"L01","category":"activation","range":[1,72]},
       "implementation_state":"MISSING",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 72 teacher drills. The v1.1 lane contains 72 slot IDs, but HNK drill payload is not recovered/authored."
+      "reason":"Recovered v1.0 loader/source proves a PUBLICATION-FROZEN Lesson 1 with exactly 72 teacher drills. The v1.1 lane contains 72 slot IDs, but current HNK drill payload is not recovered/authored."
     },
     {
       "selector": {"lesson":"L01","category":"opi","range":[1,1]},
       "implementation_state":"AUTHORED",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"L01-OPI-001 is now explicitly bound in authoring/opi-bindings.v1.json to recovered PHR-001 `KALA YA EN ES KU KE` with APPROXIMATE recovered meaning 'What is your name?'. It remains AUTHORED, not VALIDATED, until glyph sequence, answer pattern and human linguistic review are complete."
+      "reason":"L01-OPI-001 binds recovered PHR-001 `KALA YA EN ES KU KE`; HNK40 sequence technically passes but whole-slot semantic promotion remains HOLD."
+    },
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[2,2]},
+      "implementation_state":"AUTHORED",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"L01-OPI-002 now has governed v1.1 candidate `EN VAMAKALA KE` using FROZEN VAMAKALA plus explicitly non-canonical grammar hypotheses."
+    },
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[4,4]},
+      "implementation_state":"AUTHORED",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"L01-OPI-004 now has governed v1.1 candidate `EN SARADAYA KU KE` using FROZEN SARADAYA; KU remains an unresolved content-question component."
+    },
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[8,8]},
+      "implementation_state":"AUTHORED",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"L01-OPI-008 now has governed test-only candidate `EN VAMAVALA KU KE`; VAMAVALA remains WATCH and is not promoted by this binding."
     }
   ],
   "lexical_evidence": {
@@ -46,6 +67,7 @@
     "../curriculum/cycle-01/L01-kether/manifest.json",
     "../curriculum/cycle-01/L01-kether/authoring/lesson.authoring.v1.1.json",
     "../curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/question-frame-candidates.v1.json",
     "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
   ]
 }
