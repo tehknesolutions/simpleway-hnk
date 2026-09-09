@@ -1,0 +1,85 @@
+{
+  "analysis_id": "SWHNK-L01-WH-SYSTEM-RECOVERY-V1",
+  "status": "RECOVERY_HYPOTHESIS_NOT_CANON",
+  "scope": "L01 interrogative system",
+  "archaeology": {
+    "file_library_search": "NO_EXPLICIT_TOKEN_GLOSSES_RECOVERED",
+    "master_lexicon_git_history": "SINGLE_INTRODUCTION_COMMIT_WITH_UNKNOWN_GLOSSES_ALREADY_NULL",
+    "conclusion": "No stronger historical source currently licenses exact meanings for KU, SARI, LO or DA."
+  },
+  "evidence": [
+    {"phrase":"PHR-001","form":"KALA YA EN ES KU KE","gloss":"What is your name?","gloss_certainty":"APPROXIMATE"},
+    {"phrase":"PHR-003","form":"EN ZAMI HENUVOKODAN KE","gloss":"Do you speak HENUVOKODAN?","gloss_certainty":"APPROXIMATE"},
+    {"phrase":"PHR-004","form":"EN SARI LO KU KE","gloss":null,"gloss_certainty":"UNRECOVERED"},
+    {"phrase":"PHR-005","form":"EN DA KU KE","gloss":null,"gloss_certainty":"UNRECOVERED"},
+    {"phrase":"PHR-006","form":"EN ZAMI KU ZAMO KE","gloss":null,"gloss_certainty":"UNRECOVERED"},
+    {"phrase":"PHR-002","form":"AN ZAMI ZAMO","gloss":"I speak / use language.","gloss_certainty":"APPROXIMATE"},
+    {"phrase":"PHR-007","form":"AN ZAMI HENUVOKODAN","gloss":null,"gloss_certainty":"UNRECOVERED"}
+  ],
+  "hypotheses": [
+    {
+      "form":"KE",
+      "role":"CLAUSE_FINAL_INTERROGATIVE_OPERATOR",
+      "confidence":"INFERRED_STRONG",
+      "reason":"All recovered question-like forms end in KE, while the recovered declarative pair does not.",
+      "exact_scope":"UNRESOLVED",
+      "canonical":false
+    },
+    {
+      "form":"KU",
+      "role":"CONTENT_QUESTION_COMPONENT_OR_INTERROGATIVE_VARIABLE",
+      "confidence":"INFERRED_CONSERVATIVE",
+      "reason":"KU occurs in PHR-001 and in three additional KE-final question-like forms, but token-level alignment is not recovered.",
+      "not_authorized_as":["WHAT","WHERE","WHO","HOW"],
+      "canonical":false
+    },
+    {
+      "form":"EN",
+      "role":"SECOND_PERSON_REFERENT",
+      "confidence":"INFERRED",
+      "reason":"EN recurs in the recovered second-person question and in all three unknown KE-final frames.",
+      "subject_vs_possessive":"UNRESOLVED",
+      "canonical":false
+    },
+    {
+      "form":"SARI",
+      "role":"UNKNOWN_CONTENT_COMPONENT",
+      "confidence":"UNKNOWN",
+      "canonical":false
+    },
+    {
+      "form":"LO",
+      "role":"UNKNOWN_CONTENT_COMPONENT",
+      "confidence":"UNKNOWN",
+      "canonical":false
+    },
+    {
+      "form":"DA",
+      "role":"UNKNOWN_CONTENT_COMPONENT",
+      "confidence":"UNKNOWN",
+      "canonical":false
+    }
+  ],
+  "phrase_mapping_policy": {
+    "PHR-004_to_OPI": null,
+    "PHR-005_to_OPI": null,
+    "PHR-006_to_OPI": null,
+    "reason": "Do not assign unknown recovered phrases to WHERE/AGE/ACTIVITY prompts by shape or curriculum order alone."
+  },
+  "authoring_policy": {
+    "KE_may_be_used_in_test_candidates": true,
+    "KU_may_be_used_only_as_UNRESOLVED_CONTENT_INTERROGATIVE_COMPONENT": true,
+    "KU_must_not_be_glossed_as_specific_wh_word": true,
+    "SARI_LO_DA_must_remain_unassigned": true,
+    "publishable_construction_requires_human_or_source_promotion": true
+  },
+  "impact": {
+    "wh_system_recovery_progress":"PARTIAL",
+    "where_form_recovered":false,
+    "what_form_recovered":false,
+    "who_form_recovered":false,
+    "generic_interrogative_operator_candidate":true,
+    "content_interrogative_component_candidate":true
+  },
+  "next_gate":"SWHNK-L01-QUESTION-FRAME-CANDIDATES-V1"
+}
