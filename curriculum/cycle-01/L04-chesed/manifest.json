@@ -1,0 +1,24 @@
+{
+  "lesson_id": "HNK-L04",
+  "sphere": "Chesed",
+  "status": "EVIDENCE_GATE",
+  "language_bindings": 9,
+  "recovered_phrases": 0,
+  "authority_distribution": {
+    "WATCH": 1,
+    "GATE": 8
+  },
+  "evidence_gate": {
+    "automated_decision": "HOLD_INSUFFICIENT_EVIDENCE",
+    "human_evidence_claimed": false,
+    "runtime_promotion_allowed": false
+  },
+  "curriculum_target_note": "Cycle contract adds the English structure target 'Does he/she...?'; this does not authorize an HNK translation by inference.",
+  "rules": {
+    "non_invention": true,
+    "gate_is_not_frozen": true,
+    "human_review_required": true
+  },
+  "language_authority": "@hnk/linguas",
+  "glyph_authority": "@hnk/glyphs"
+}
