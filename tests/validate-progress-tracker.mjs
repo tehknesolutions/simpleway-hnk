@@ -13,6 +13,10 @@ const opiBindings = await json('curriculum/cycle-01/L01-kether/authoring/opi-bin
 
 assert.equal(contract.target_total, 1008);
 assert.equal(allocation.cycle_totals.total, 1008);
+assert.equal(allocation.status, 'SOURCE_CONSTRAINED_DERIVED_ALLOCATION');
+assert.equal(allocation.derivation.source_confirmed_per_lesson.teacher_notes, 3);
+assert.equal(allocation.derivation.source_confirmed_per_lesson.structure_headers, 2);
+assert.equal(allocation.derivation.vocabulary_distribution_state, 'DERIVED_FROM_SOURCE_CONSTRAINTS');
 assert.equal(Object.keys(allocation.lessons).length, 7);
 assert.deepEqual(
   Object.entries(allocation.lessons).map(([id, x]) => [id, x.sphere]),
@@ -54,15 +58,35 @@ const authoredSlots = [...simulated.values()].filter(x => x.implementation_state
 const scaffoldedSlots = [...simulated.values()].filter(x => x.scaffolded).length;
 
 assert.equal(frozenEvidenceSlots, 82);
-assert.equal(authoredSlots, 1);
+assert.equal(authoredSlots, 4);
 assert.equal(scaffoldedSlots, 82);
-assert.equal(opiBindings.bindings.length, 1);
-assert.equal(opiBindings.bindings[0].slot_id, 'L01-OPI-001');
-assert.equal(opiBindings.bindings[0].phrase_id, 'PHR-001');
-assert.equal(opiBindings.bindings[0].implementation_state, 'AUTHORED');
-assert.equal(opiBindings.bindings[0].validation_state, 'PENDING');
-assert.equal(opiBindings.bindings[0].phrase_certainty, 'APPROXIMATE');
-assert.equal(opiBindings.bindings[0].glyph_ids, null);
+assert.equal(opiBindings.bindings.length, 4);
+assert.deepEqual(opiBindings.bindings.map(x => x.slot_id), ['L01-OPI-001','L01-OPI-002','L01-OPI-004','L01-OPI-008']);
+assert.ok(opiBindings.bindings.every(x => x.implementation_state === 'AUTHORED'));
+
+const opi1 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-001');
+assert.equal(opi1.phrase_id, 'PHR-001');
+assert.equal(opi1.phrase_certainty, 'APPROXIMATE');
+assert.equal(opi1.validation_state, 'TECHNICAL_PASS_SEMANTIC_HOLD');
+assert.equal(opi1.glyph_ids.length, 14);
+
+const opi2 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-002');
+assert.equal(opi2.binding_origin, 'V1_1_AUTHORING_CANDIDATE');
+assert.deepEqual(opi2.lexeme_authority, ['FROZEN']);
+assert.equal(opi2.hnk_question, 'EN VAMAKALA KE');
+
+const opi4 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-004');
+assert.equal(opi4.hnk_question, 'EN SARADAYA KU KE');
+assert.deepEqual(opi4.lexeme_authority, ['FROZEN']);
+
+const opi8 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-008');
+assert.equal(opi8.hnk_question, 'EN VAMAVALA KU KE');
+assert.deepEqual(opi8.lexeme_authority, ['WATCH']);
+assert.equal(opi8.usage_scope, 'TEST_ONLY_WATCH_VISIBLE');
+
+assert.equal(opiBindings.metrics.authored, 4);
+assert.equal(opiBindings.metrics.validated, 0);
+assert.equal(opiBindings.metrics.frozen, 0);
 
 assert.equal(evidence.lexical_evidence.unique_forms_linked_to_cycle1, 31);
 assert.equal(evidence.lexical_evidence.curriculum_vocabulary_target, 144);
@@ -71,4 +95,4 @@ assert.equal(evidence.lexical_evidence.lesson_bindings.L06, 0);
 assert.equal(evidence.lexical_evidence.lesson_bindings.L07, 0);
 
 console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V1');
-console.log('1008 slots locked; 1 AUTHORED; 82 historical frozen-evidence slots; boundaries preserved.');
+console.log('1008 slots locked; 4 AUTHORED; 82 historical frozen-evidence slots; boundaries preserved.');
