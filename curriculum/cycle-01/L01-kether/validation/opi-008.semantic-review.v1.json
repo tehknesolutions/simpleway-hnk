@@ -1,0 +1,21 @@
+{
+  "review_id":"SWHNK-L01-OPI-008-WATCH-CONTENT-QUESTION-REVIEW-V1",
+  "slot_id":"L01-OPI-008",
+  "status":"HOLD_WATCH_LEXEME_AND_INFERRED_CONTENT_SELECTOR",
+  "english_prompt":"What are your hobbies?",
+  "hnk":"EN KU VAMAVALA KE",
+  "structural_encoding":{"state":"PASS","glyph_ids":["G02","G12","G23","G05","G31","G01","G11","G01","G31","G01","G14","G01","G23","G02"],"unresolved_transliteration_units":[]},
+  "semantic_components":[
+    {"form":"VAMAVALA","id":"LEX-007","authority":"WATCH","meaning":{"pt":"hobby / atividade de prazer","en":"hobby / pleasure activity"},"state":"RECOVERED_WATCH"},
+    {"form":"KU","authority":"INFERRED_NOT_CANONICAL","semantic_role":"pre-nominal interrogative content selector"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","semantic_role":"second-person referent / relation unresolved"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","semantic_role":"question operator"}
+  ],
+  "semantic_assessment":{"hobby_core_match":"STRONG","candidate_reading":"you + which/what + hobby + question","possessive_relation_explicitly_recovered":false,"functional_match":"STRONG_BUT_GRAMMAR_INFERRED","exact_historical_sentence_recovered":false},
+  "answer_strategy":{"pattern":"[HOBBY_OR_PLEASURE_ACTIVITY]","state":"SUFFICIENT_AUTHORING_CANDIDATE_FOR_AFFIRMATIVE_CONTENT","hnk_function_words_added":false,"inventory_closed":false},
+  "checks":{"structural_gids":"PASS","hobby_core_recovered":"PASS_WATCH","content_selector_position":"INFERRED","possession_relation":"HOLD","answer_pattern":"PARTIAL","VAMAVALA_authority":"WATCH","human_WATCH_and_grammar_review":"PENDING"},
+  "decision":{"implementation_state_before":"AUTHORED","implementation_state_after":"AUTHORED","whole_slot_validated":false,"frozen":false,"reason":"The recovered hobby semantics are strong, but VAMAVALA remains WATCH and the KU/EN relation that yields What are your hobbies? is still inferred rather than governed for validated course use."},
+  "progress_effect":{"L01_OPI_AUTHORED":10,"L01_OPI_VALIDATED":0,"GLOBAL_VALIDATED":0},
+  "promotion_conditions":["Explicitly approve VAMAVALA for validated L01 course use while retaining or changing WATCH through a separate language-authority decision.","Approve the EN KU X KE content-question interpretation for this card.","Define acceptable hobby-answer vocabulary/phrases for the card."],
+  "next_gate":"SWHNK-L01-OPI-003-AGE-NUMBER-REVIEW-V1"
+}
