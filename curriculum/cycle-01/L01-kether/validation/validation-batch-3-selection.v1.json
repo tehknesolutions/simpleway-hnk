@@ -1,0 +1,45 @@
+{
+  "selection_id":"SWHNK-L01-VALIDATION-BATCH-3-SELECTION-V1",
+  "status":"SELECTION_COMPLETE_HUMAN_APPROVAL_NOT_YET_APPLIED",
+  "as_of":"2026-09-09",
+  "current_state":{"L01_OPI_authored_or_better":10,"L01_OPI_validated":4,"L01_OPI_validated_percent":40.0,"L01_OPI_frozen":0},
+  "evaluated_candidates":[
+    {
+      "slot_id":"L01-OPI-010",
+      "english":"What do you do on weekends?",
+      "hnk_context":"VAMUSARO",
+      "hnk_question":"EN KU VALA KE",
+      "readiness":"READY_FOR_SCOPED_HUMAN_EQUIVALENCE_DECISION",
+      "why_now":[
+        "EN KU VALA KE has already passed scoped validation in OPI 6.",
+        "VALA remains CANDIDATE but is already approved for scoped L01 activity-question use in OPI 6.",
+        "VAMUSARO is FROZEN with the broader meaning rest/leisure period.",
+        "The only material unresolved issue is semantic fidelity: rest/leisure period is broader than exact weekend."
+      ],
+      "decision_needed":"Whether the course may intentionally use VAMUSARO as a visibly labeled broader leisure-period context for the beginner weekend prompt, preserving APPROXIMATE_CONTEXTUAL_EQUIVALENT and never relabeling VAMUSARO as weekend.",
+      "projected_if_approved":{"L01_OPI_validated":5,"L01_OPI_validated_percent":50.0,"global_validated_slots":5,"global_validated_percent":0.4960,"language_authority_changes":0},
+      "recommended_next_gate":"SWHNK-L01-OPI-010-CONTEXTUAL-EQUIVALENCE-HUMAN-BATCH-V1"
+    },
+    {
+      "slot_id":"L01-OPI-002",
+      "english":"Do you have a nickname?",
+      "hnk_question":"EN VAMAKALA KE",
+      "readiness":"DESIGN_REQUIRED_BEFORE_VALIDATION_BATCH",
+      "strength":"VAMAKALA is FROZEN and directly covers nickname/familiar-name semantics.",
+      "unresolved":[
+        "Current HNK sentence does not contain a recovered possession/existential relation equivalent to have.",
+        "Negative no-nickname response path is unresolved.",
+        "Approving only affirmative [NICKNAME] answers would under-cover the frozen English card."
+      ],
+      "recommended_design_gate":"SWHNK-L01-POSSESSION-EXISTENTIAL-NEGATIVE-DESIGN-V1",
+      "do_not_do":"Do not invent an English-calque HAVE verb merely to validate the card."
+    }
+  ],
+  "high_risk_holds":[
+    {"slot_id":"L01-OPI-003","reason":"SARASALA WATCH + contextual age semantics + HNK number system open"},
+    {"slot_id":"L01-OPI-007","reason":"VANI meaning null + KUON CANDIDATE with ON=GATE + authored co-resident valency"},
+    {"slot_id":"L01-OPI-009","reason":"VAME GATE + VAMAZAMU WATCH + yes/no response strategy open"}
+  ],
+  "decision":"Prepare OPI 10 as the next human validation batch. Keep OPI 2 in language-design work until possession/existential/negative behavior is governed.",
+  "next_gate":"SWHNK-L01-OPI-010-CONTEXTUAL-EQUIVALENCE-HUMAN-BATCH-V1"
+}
