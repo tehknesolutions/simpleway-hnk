@@ -34,21 +34,28 @@
       "implementation_state":"AUTHORED",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"L01-OPI-002 now has governed v1.1 candidate `EN VAMAKALA KE` using FROZEN VAMAKALA plus explicitly non-canonical grammar hypotheses."
+      "reason":"L01-OPI-002 has governed v1.1 candidate `EN VAMAKALA KE` using FROZEN VAMAKALA plus explicitly non-canonical grammar hypotheses."
     },
     {
       "selector": {"lesson":"L01","category":"opi","range":[4,4]},
       "implementation_state":"AUTHORED",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"L01-OPI-004 now has governed v1.1 candidate `EN SARADAYA KU KE` using FROZEN SARADAYA; KU remains an unresolved content-question component."
+      "reason":"L01-OPI-004 has governed v1.1 candidate `EN SARADAYA KU KE` using FROZEN SARADAYA; KU remains an unresolved content-question component."
+    },
+    {
+      "selector": {"lesson":"L01","category":"opi","range":[5,5]},
+      "implementation_state":"AUTHORED",
+      "evidence_state":"SOURCE_CONFIRMED_FROZEN",
+      "scaffolded":true,
+      "reason":"L01-OPI-005 has governed v1.1 candidate `EN VALI KU KE`. VALI is FROZEN and is available in L01 through the explicit Cycle 1 curriculum-rebind overlay, without rewriting recovered provenance."
     },
     {
       "selector": {"lesson":"L01","category":"opi","range":[8,8]},
       "implementation_state":"AUTHORED",
       "evidence_state":"SOURCE_CONFIRMED_FROZEN",
       "scaffolded":true,
-      "reason":"L01-OPI-008 now has governed test-only candidate `EN VAMAVALA KU KE`; VAMAVALA remains WATCH and is not promoted by this binding."
+      "reason":"L01-OPI-008 has governed test-only candidate `EN VAMAVALA KU KE`; VAMAVALA remains WATCH and is not promoted by this binding."
     }
   ],
   "lexical_evidence": {
@@ -57,17 +64,20 @@
     "unbound_forms":2,
     "recovered_phrases":7,
     "curriculum_vocabulary_target":144,
-    "lesson_bindings":{"L01":9,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
+    "lesson_bindings":{"L01":10,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
+    "lesson_recovered_bindings":{"L01":9,"L02":11,"L03":8,"L04":9,"L05":0,"L06":0,"L07":0},
+    "lesson_governed_rebinds":{"L01":1,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "lesson_recovered_phrases":{"L01":7,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
     "gate":"HOLD_INCOMPLETE_BINDING",
-    "warning":"31/144 is a lexical coverage proxy only. It is not 31 completed curriculum vocabulary slots."
+    "warning":"31/144 is a lexical coverage proxy only. Curriculum rebinds may increase lesson-level binding counts without increasing the number of unique recovered forms."
   },
   "source_references": [
     "../docs/SIMPLEWAY_HNK_INVENTORY_V1.md",
+    "../curriculum/cycle-01/cycle.manifest.json",
     "../curriculum/cycle-01/L01-kether/manifest.json",
     "../curriculum/cycle-01/L01-kether/authoring/lesson.authoring.v1.1.json",
     "../curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json",
-    "../curriculum/cycle-01/L01-kether/authoring/question-frame-candidates.v1.json",
+    "../curriculum/cycle-01/L01-kether/authoring/curriculum-rebinds.v1.json",
     "../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json"
   ]
 }
