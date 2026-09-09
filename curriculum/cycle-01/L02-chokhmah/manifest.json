@@ -1,0 +1,22 @@
+{
+  "lesson_id": "HNK-L02",
+  "sphere": "Chokhmah",
+  "version": "0.0.1",
+  "status": "LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD",
+  "source_scaffold": "recovered/lesson.scaffold.v0.0.1.json",
+  "language_bindings": 11,
+  "recovered_phrases": 0,
+  "pedagogy": {
+    "student_cards": 0,
+    "teacher_drills": 0,
+    "content_frozen": false
+  },
+  "rules": {
+    "non_invention": true,
+    "approved_source_required_for_non_empty_content": true,
+    "versioned_content_freeze_required_for_publication": true,
+    "bridge_transliteration_required": ["Esperanto", "Hebrew", "Greek"]
+  },
+  "language_authority": "@hnk/linguas",
+  "glyph_authority": "@hnk/glyphs"
+}
