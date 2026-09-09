@@ -1,0 +1,63 @@
+{
+  "analysis_id":"SWHNK-L01-REMAINING-OPI-GAPS-V1",
+  "status":"ONE_CONTEXTUAL_ROUTE_ONE_HARD_LANGUAGE_GAP",
+  "as_of":"2026-09-09",
+  "current_authored_opi":8,
+  "remaining":[
+    {
+      "slot":"L01-OPI-007",
+      "english":"Where do you live and who do you live with?",
+      "state":"HARD_LANGUAGE_GAP",
+      "available_support":[
+        {"form":"KUVAN","id":"AUTH-001","role":"locative interrogative specialization","authority":"CANDIDATE"},
+        {"form":"VANI","id":"LEX-031","role":null,"authority":"WATCH","note":"Recovered form, exact gloss unrecovered; must NOT be assigned live/reside by morphology alone."},
+        {"form":"ON","id":"LEX-026","role":"pronoun/referent under test","authority":"GATE","note":"Cannot be converted into WHO or combined with KU by current governed rule."}
+      ],
+      "missing_semantics":["LIVE_RESIDE_OR_EQUIVALENT","WHO_PERSON_INTERROGATIVE","COMITATIVE_WITH"],
+      "forbidden_shortcuts":[
+        "VANI = live/reside by morphology alone",
+        "KU ON = WHO; KU+ON is explicitly outside the approved compositional rule",
+        "ON = person/who from GATE evidence",
+        "inventing a WITH particle merely to close the OPI count"
+      ],
+      "decision":"KEEP_MISSING_UNTIL_RECOVERY_OR_EXPLICIT_MULTI_PART_AUTHORING",
+      "next_recovery_priority":"VANI historical gloss/source"
+    },
+    {
+      "slot":"L01-OPI-010",
+      "english":"What do you do on weekends?",
+      "state":"CONTEXTUAL_AUTHORING_ROUTE_AVAILABLE",
+      "available_support":[
+        {"form":"VAMUSARO","id":"LEX-005","meaning":"rest / leisure period","authority":"FROZEN"},
+        {"form":"SARASALA","id":"LEX-006","meaning":"time / duration","authority":"WATCH"},
+        {"form":"VALA","id":"AUTH-002","meaning":"generic activity nominal head","authority":"CANDIDATE"},
+        {"form":"KU","role":"inferred pre-nominal interrogative content selector","authority":"RECOVERED_FORM_INFERRED_ROLE"}
+      ],
+      "source_boundary":"No recovered source equates VAMUSARO with weekend, and no governed temporal preposition/relation currently encodes ON/DURING weekends.",
+      "safe_design":"Use VAMUSARO as an explicit discourse/UI context label, not as the lexical translation of weekend and not as a syntactic argument inside the HNK question. Within that context, ask EN KU VALA KE.",
+      "candidate_payload":{
+        "hnk_context":"VAMUSARO",
+        "context_gloss":"rest / leisure period",
+        "hnk_question":"EN KU VALA KE",
+        "semantic_reframe":"In your rest/leisure period: what is your activity?",
+        "exact_weekend_translation_claim":false
+      },
+      "decision":"AUTHOR_TEST_ONLY_CONTEXTUAL_CARD",
+      "validation_requirements":[
+        "Keep VAMUSARO meaning exactly rest/leisure period, not weekend.",
+        "Keep VALA CANDIDATE visible.",
+        "Treat context label separately from sentence grammar.",
+        "Require human pedagogical review for semantic fidelity to the frozen English weekend prompt."
+      ]
+    }
+  ],
+  "projected_if_OPI10_authored":{
+    "L01_OPI_AUTHORED":9,
+    "L01_OPI_PERCENT":90.0,
+    "CYCLE1_OPI_AUTHORED":9,
+    "CYCLE1_OPI_PERCENT":12.8571,
+    "GLOBAL_AUTHORED_SLOTS":9,
+    "GLOBAL_AUTHORED_PERCENT":0.8929
+  },
+  "rule":"Do not force OPI 7 to reach 10/10. A clean 9/10 with one explicit hard gap is preferable to false linguistic completion."
+}
