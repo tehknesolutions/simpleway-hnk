@@ -1,0 +1,97 @@
+{
+  "candidate_set_id": "SWHNK-L01-QUESTION-FRAME-CANDIDATES-V1",
+  "status": "AUTHORING_CANDIDATES_NOT_CANON",
+  "basis": [
+    "../recovery/wh-system-recovery.v1.json",
+    "../recovery/token-hypotheses.v1.json",
+    "grammar-design-pass.v1.json",
+    "lexicon.bindings.snapshot.json"
+  ],
+  "global_rules": {
+    "historical_claim": false,
+    "candidate_not_validated": true,
+    "candidate_not_frozen": true,
+    "KE_role": "INFERRED_STRONG_INTERROGATIVE_OPERATOR",
+    "KU_role": "UNRESOLVED_CONTENT_QUESTION_COMPONENT",
+    "KU_specific_wh_gloss": null,
+    "zero_copula_or_topic_comment": "AUTHORING_HYPOTHESIS_ONLY",
+    "human_review_required": true
+  },
+  "abstract_frames": [
+    {
+      "id":"QF-YN-NOMINAL-V1",
+      "shape":"EN + NOMINAL_DOMAIN + KE",
+      "intended_function":"second-person yes/no nominal-domain question",
+      "status":"AUTHORING_HYPOTHESIS",
+      "evidence_anchor":"EN ... KE question distribution; no recovered nominal yes/no example",
+      "risk":"MEDIUM"
+    },
+    {
+      "id":"QF-CONTENT-NOMINAL-V1",
+      "shape":"EN + NOMINAL_DOMAIN + KU + KE",
+      "intended_function":"second-person content question over a nominal semantic domain",
+      "status":"AUTHORING_HYPOTHESIS",
+      "evidence_anchor":"KU recurs inside several recovered KE-final question-like frames, but its exact WH semantics are unresolved",
+      "risk":"MEDIUM_HIGH"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id":"CAND-L01-OPI-02-Q1",
+      "opi":"L01-OPI-02",
+      "english_intent":"Do you have a nickname?",
+      "hnk":"EN VAMAKALA KE",
+      "frame":"QF-YN-NOMINAL-V1",
+      "segments":["EN","VAMAKALA","KE"],
+      "glyph_ids":["G02","G12","G31","G01","G11","G01","G23","G01","G14","G01","G23","G02"],
+      "lexical_support":[{"id":"LEX-001","form":"VAMAKALA","authority":"FROZEN"}],
+      "grammar_support":["EN inferred second-person referent","KE inferred final interrogative operator"],
+      "new_lexemes_created":0,
+      "semantic_design":"Analytic beginner question treats nickname as a nominal domain rather than importing an unrecovered equivalent of English 'have'.",
+      "implementation_state_if_bound":"AUTHORED",
+      "validation":"HOLD",
+      "risk":"MEDIUM"
+    },
+    {
+      "candidate_id":"CAND-L01-OPI-04-Q1",
+      "opi":"L01-OPI-04",
+      "english_intent":"Where were you born?",
+      "hnk":"EN SARADAYA KU KE",
+      "frame":"QF-CONTENT-NOMINAL-V1",
+      "segments":["EN","SARADAYA","KU","KE"],
+      "glyph_ids":["G02","G12","G26","G01","G15","G01","G19","G01","G40","G01","G23","G05","G23","G02"],
+      "lexical_support":[{"id":"LEX-002","form":"SARADAYA","authority":"FROZEN","meaning":"origin / birthplace"}],
+      "grammar_support":["EN inferred second-person referent","KU unresolved content-question component","KE inferred final interrogative operator"],
+      "new_lexemes_created":0,
+      "semantic_design":"Asks for the learner's birthplace/origin domain rather than calquing English past passive morphology.",
+      "implementation_state_if_bound":"AUTHORED",
+      "validation":"HOLD",
+      "risk":"MEDIUM_HIGH"
+    },
+    {
+      "candidate_id":"CAND-L01-OPI-08-Q1",
+      "opi":"L01-OPI-08",
+      "english_intent":"What are your hobbies?",
+      "hnk":"EN VAMAVALA KU KE",
+      "frame":"QF-CONTENT-NOMINAL-V1",
+      "segments":["EN","VAMAVALA","KU","KE"],
+      "glyph_ids":["G02","G12","G31","G01","G11","G01","G31","G01","G14","G01","G23","G05","G23","G02"],
+      "lexical_support":[{"id":"LEX-007","form":"VAMAVALA","authority":"WATCH","meaning":"hobby / pleasure activity"}],
+      "grammar_support":["EN inferred second-person referent","KU unresolved content-question component","KE inferred final interrogative operator"],
+      "new_lexemes_created":0,
+      "semantic_design":"Content question over hobby domain; WATCH authority remains visible and prevents publication promotion.",
+      "implementation_state_if_bound":"AUTHORED_TEST_ONLY",
+      "validation":"HOLD_WATCH",
+      "risk":"HIGH"
+    }
+  ],
+  "not_instantiated": [
+    {"opi":"L01-OPI-03","reason":"AGE requires a quantity/state construction first."},
+    {"opi":"L01-OPI-05","reason":"VALI L01 rebinding and exact content-question function should be governed first."},
+    {"opi":"L01-OPI-06","reason":"Activity-question frame not yet designed."},
+    {"opi":"L01-OPI-07","reason":"VANI/live-reside recovery plus WHO/comitative required."},
+    {"opi":"L01-OPI-09","reason":"Preference strategy unresolved; VAME remains GATE."},
+    {"opi":"L01-OPI-10","reason":"Weekend semantic solution not yet governed."}
+  ],
+  "next_gate":"SWHNK-L01-QUESTION-CANDIDATE-BINDING-PASS-V1"
+}
