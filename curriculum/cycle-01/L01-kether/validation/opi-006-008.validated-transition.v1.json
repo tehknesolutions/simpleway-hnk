@@ -1,0 +1,57 @@
+{
+  "transition_id":"SWHNK-L01-OPI-006-008-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "applied_on":"2026-09-09",
+  "source_batch":"content-question-human-promotion-batch.v1.json",
+  "scope":["L01-OPI-006","L01-OPI-008"],
+  "transitions":[
+    {
+      "slot_id":"L01-OPI-006",
+      "english":"What do you do at work/school?",
+      "hnk":"EN KU VALA KE",
+      "before":"AUTHORED",
+      "after":"VALIDATED",
+      "validation_scope":"L01_COURSE_USE_ONLY",
+      "conditions_preserved":[
+        "AUTH-002 VALA remains CANDIDATE.",
+        "KU exact historical gloss remains null.",
+        "EN KU X KE is approved only for scoped L01 course use.",
+        "Work/school domain is supplied by explicit card/discourse context.",
+        "[ACTIVITY_DESCRIPTION] is the beginner answer pattern without unrecovered function words."
+      ]
+    },
+    {
+      "slot_id":"L01-OPI-008",
+      "english":"What are your hobbies?",
+      "hnk":"EN KU VAMAVALA KE",
+      "before":"AUTHORED",
+      "after":"VALIDATED",
+      "validation_scope":"L01_COURSE_USE_ONLY",
+      "conditions_preserved":[
+        "LEX-007 VAMAVALA remains WATCH.",
+        "KU exact historical gloss remains null.",
+        "EN KU X KE is approved only for scoped L01 course use.",
+        "[HOBBY_OR_PLEASURE_ACTIVITY] is the beginner answer pattern without unrecovered function words."
+      ]
+    }
+  ],
+  "aggregate_effect":{
+    "L01_OPI_authored_or_better":10,
+    "L01_OPI_validated":4,
+    "L01_OPI_validated_percent":40.0,
+    "Cycle1_OPI_validated":4,
+    "Cycle1_OPI_validated_percent":5.7143,
+    "global_validated_slots":4,
+    "global_validated_percent":0.3968,
+    "global_frozen_slots":0
+  },
+  "language_authority_effect":{
+    "KUVAN":"CANDIDATE_UNCHANGED",
+    "VALA":"CANDIDATE_UNCHANGED",
+    "VAMAVALA":"WATCH_UNCHANGED",
+    "KU":"INFERRED_NOT_CANONICAL",
+    "EN_KE":"SCOPED_COURSE_GRAMMAR_ONLY",
+    "historical_registry_rewritten":false
+  },
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-3-SELECTION-V1"
+}
