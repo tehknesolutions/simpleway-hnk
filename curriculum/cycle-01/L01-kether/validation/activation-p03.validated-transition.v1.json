@@ -1,0 +1,15 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P03-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":"L01 Activation slots 025-036",
+  "source_pack":"../authoring/activation-pack-p03.v1.json",
+  "approval_batch":"activation-p03-human-batch.v1.json",
+  "before":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":12,"FROZEN":0},
+  "lesson_activation_after":{"target":72,"AUTHORED":0,"VALIDATED":36,"AUTHORED_OR_BETTER":36,"VALIDATED_percent":50.0,"remaining_unimplemented":36},
+  "global_after":{"AUTHORED":0,"VALIDATED":46,"AUTHORED_OR_BETTER":46,"FROZEN":0},
+  "authority_effect":{"VALI":"FROZEN_UNCHANGED_WITH_EXPLICIT_L01_REBIND","KUVAN":"CANDIDATE_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","language_authority_promotions":0,"new_lexical_forms":0,"generic_DO_verb_created":false},
+  "historical_boundary":{"historical_drill_payload_recovered":false,"reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"},
+  "visual_boundary":{"GID_training":"STRUCTURAL_ONLY","Candidate_D":"PREPRODUCTION_NOT_OFFICIAL_UNCHANGED"},
+  "next_gate":"SWHNK-L01-ACTIVATION-P04-AUTHORING-V1"
+}
