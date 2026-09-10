@@ -1,0 +1,12 @@
+{
+  "proposal_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-AUTHORING-PLAN-V1",
+  "status":"PREPARED_NOT_APPROVED",
+  "problem":{"L01_vocabulary_target":32,"currently_fillable_with_distinct_governed_assets":24,"remaining_gap":8},
+  "principle":"SEMANTICS_BEFORE_FORM",
+  "constraints":["Do not choose forms by numerology, glyph shape, ordinal or target count.","Do not assign recovered historical meanings to phrase-only tokens whose exact standalone gloss is unrecovered.","Do not treat YA, ES, KU, EN, KE, KALA, AN, ZAMI, ZAMO, SARI, LO or DA as standalone canonical lexemes merely because they occur in recovered phrases.","Any new lexical asset must enter canonical governance at CANDIDATE first unless separately justified by recovered evidence.","Any reuse of an observed phrase token as a newly governed standalone candidate must explicitly state that its standalone semantics are authored/inferred, not historically recovered."],
+  "recommended_workflow":["Identify eight high-value beginner semantic functions/concepts needed by L01 after reviewing OPI, Q&A, Stories and Review requirements.","Check whether any already-observed HNK form can be cautiously reused without false historical claim.","Where reuse is unsafe, generate a new form under the HNK lexeme authoring contract with collision checks and HNK40 G-ID-first encoding.","Present each semantic-form mapping for explicit human promotion to the canonical authored registry.","Only after canonical registration bind the resulting assets to VOC-025..032."],
+  "current_decision":"NO_FORMS_SELECTED",
+  "new_HNK_lexical_forms_created":0,
+  "canonical_registry_entries_created":0,
+  "next_gate":"SELECT_EIGHT_L01_SEMANTIC_TARGETS_BEFORE_FORM_GENERATION"
+}
