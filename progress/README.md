@@ -1,31 +1,33 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V21`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V22`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.24.0`
+**Current package:** `simpleway-hnk@0.25.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
 - `MISSING`: **998/1,008 = 99.0079%**
-- `AUTHORED`: **1/1,008 = 0.0992%**
-- `VALIDATED`: **9/1,008 = 0.8929%**
+- `AUTHORED`: **0/1,008 = 0%**
+- `VALIDATED`: **10/1,008 = 0.9921%**
 - reproducible `FROZEN`: **0/1,008**
 - `AUTHORED_OR_BETTER`: **10/1,008 = 0.9921%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
-## L01 OPI
+## L01 OPI — validation complete
 
 - authored-or-better: **10/10 = 100%**
 - reviewed: **10/10 = 100%**
-- validated: **9/10 = 90%**
+- validated: **10/10 = 100%**
 - frozen: **0/10**
 
-Validated: **1, 2, 3, 4, 5, 6, 8, 9, 10**.  
-HOLD: **7 only**.
+Validated: **1, 2, 3, 4, 5, 6, 7, 8, 9, 10**.  
+HOLD: **none**.
 
-Across the 70 OPI in Cycle 1, **9/70 = 12.8571%** are VALIDATED.
+Across the 70 OPI in Cycle 1, **10/70 = 14.2857%** are VALIDATED.
+
+Within the full L01 target of 155 slots, the ten validated OPI represent **10/155 = 6.4516%** of the lesson. **145 L01 slots remain outside VALIDATED.**
 
 ## Language assets
 
@@ -33,37 +35,53 @@ Across the 70 OPI in Cycle 1, **9/70 = 12.8571%** are VALIDATED.
 - canonical authored candidates: **14**
 - governed unique language assets: **45/144 = 31.25% proxy**
 
-No language-authority promotion occurred in the OPI 1 validation.
+No language-authority promotion occurred in the final OPI validation.
 
-## OPI 1 — validated as recovered whole utterance
+## OPI 7 — validated with source boundaries preserved
 
-`KALA YA EN ES KU KE` is now VALIDATED for L01 v1.1 course use as the recovered phrase `PHR-001` taken as one governed formula.
+The final card remains a two-microquestion design:
 
-Boundaries remain explicit: `PHR-001` certainty stays APPROXIMATE; `YA` and `ES` remain semantically unresolved; `KALA`, `EN`, `KU` and `KE` token-level roles remain inferential; bare `[PERSONAL_NAME]` is the accepted beginner answer pattern.
+1. `EN VANI KUVAN KE` — location.
+2. `EN VANI KUON KE` — co-resident/person.
 
-## OPI 7 — final batch prepared
+It is now VALIDATED for scoped L01 v1.1 course use, while preserving all risk labels:
 
-Current HNK design:
+- `VANI` remains recovered `WATCH` with Master Lexicon meaning **null**;
+- `VANI ≈ live/reside` is only the approved L01 OPI 7 course interpretation, not a recovered historical gloss;
+- `KUVAN` remains `AUTH-001 CANDIDATE`;
+- `KUON` remains `AUTH-003 CANDIDATE`;
+- `ON` remains `LEX-026 GATE`;
+- no lexical equivalent of English `WITH` was created;
+- co-resident valency is scoped to OPI 7 only;
+- no global residence/comitative/person-interrogative grammar was granted.
 
-1. `EN VANI KUVAN KE` — location microquestion.
-2. `EN VANI KUON KE` — co-resident/person microquestion.
+## What 10/10 VALIDATED means
 
-Final batch: `SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1`.
+The OPI lane is complete for **scoped SimpleWay HNK L01 v1.1 course use**.
 
-Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
+It does **not** mean:
 
-The batch is intentionally strict. If approved, it validates these interpretations only for L01 OPI 7 while preserving:
+- all historical v1.0 HNK payloads were recovered;
+- WATCH/CANDIDATE/GATE items became historical canon;
+- Candidate D glyph drawings became official visual canon;
+- the ten cards are publication `FROZEN`;
+- Lesson 1 as a whole is complete.
 
-- `VANI` = recovered `WATCH`, Master Lexicon meaning still `null`;
-- `VANI ≈ live/reside` = scoped course semantic interpretation, not historical gloss recovery;
-- `KUVAN` = `CANDIDATE`;
-- `KUON` = `CANDIDATE`;
-- `ON` = `GATE`;
-- no lexical equivalent of English `WITH`;
-- no global residence/comitative/person-interrogative grammar;
-- no language-authority promotion.
+## L01 next phase — Activation 72
 
-If all five decisions are approved, L01 reaches **10/10 VALIDATED = 100%** without adding a lexical form or changing the recovered Master Lexicon.
+The historical release proves that L01 had **72 teacher drills**, but the raw v1.0 drill payload remains missing.
+
+Therefore the next pipeline is:
+
+`SWHNK-L01-ACTIVATION-72-PIPELINE-V1`
+
+Rules for this phase:
+
+- preserve all 72 historical slots as `SOURCE_CONFIRMED_FROZEN` evidence;
+- do not reconstruct invented drills and label them as recovered;
+- author a new v1.1 Activation set from the now-validated 10 OPI, governed language assets and explicit grammar scopes;
+- keep historical evidence and new implementation as separate axes;
+- target exactly **72 reproducible Activation slots** before validation/freeze work begins.
 
 ## CI boundary
 
