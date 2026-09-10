@@ -1,0 +1,18 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V22",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_VALIDATION_COMPLETE_10_OF_10_NEXT_PHASE_ACTIVATION_72",
+  "package_target":"simpleway-hnk@0.25.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":0,"VALIDATED":10,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.0079,"AUTHORED":0.0,"VALIDATED":0.9921,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":10,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"validated_slots":10,"validated_percent_of_lesson_total":6.4516,"remaining_nonvalidated_slots":145,"OPI":{"target":10,"reviewed":10,"VALIDATED":10,"validated_percent":100.0,"AUTHORED_HOLD":0,"FROZEN":0}},
+  "cycle1_OPI":{"target":70,"VALIDATED":10,"validated_percent":14.2857},
+  "final_OPI_transition":{"slot":"L01-OPI-007","english":"Where do you live and who do you live with?","hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],"state":"VALIDATED_FOR_SCOPED_L01_V1_1_COURSE_USE","VANI":{"id":"LEX-031","authority":"WATCH","master_lexicon_meaning":null,"course_semantic_interpretation":"live/reside","historical_gloss_recovered":false},"KUVAN":{"id":"AUTH-001","authority":"CANDIDATE"},"KUON":{"id":"AUTH-003","authority":"CANDIDATE","dependency":"LEX-026 ON remains GATE"},"new_WITH_lexeme":false,"language_authority_promotions":0,"master_lexicon_meaning_changes":0},
+  "OPI_phase":{"authoring_complete":true,"review_complete":true,"validation_complete":true,"publication_freeze_complete":false,"rule":"10/10 VALIDATED means the OPI lane is approved for scoped L01 v1.1 course use; it does not make candidate/watch/gate language historical canon or publication-FROZEN."},
+  "next_phase":{"id":"SWHNK-L01-ACTIVATION-72-V1_1-PIPELINE","category":"activation","target_slots":72,"historical_source_evidence_slots":72,"current_reproducible_payload_slots":0,"strategy":"AUTHOR_NEW_V1_1_FROM_VALIDATED_OPI_AND_GOVERNED_LANGUAGE_ASSETS_DO_NOT_RECONSTRUCT_AS_HISTORICAL","reason":"Historical v1.0 proves 72 drills existed, but the raw drill payload is still missing."},
+  "next_gate":"SWHNK-L01-ACTIVATION-72-PIPELINE-V1"
+}
