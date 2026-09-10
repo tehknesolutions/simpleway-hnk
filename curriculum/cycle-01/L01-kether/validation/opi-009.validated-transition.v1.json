@@ -1,0 +1,27 @@
+{
+  "transition_id":"SWHNK-L01-OPI-009-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-009",
+  "before":"AUTHORED",
+  "after":"VALIDATED",
+  "question":"EN VAME VAMAZAMU KE",
+  "answers":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU"},
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_009_ONLY",
+  "course_function":"functional equivalent of Do you like to sing? for the governed L01 v1.1 interview card",
+  "language_authority_effect":{
+    "VAME":"GATE_UNCHANGED",
+    "VAMAZAMU":"WATCH_UNCHANGED",
+    "NE":"CANDIDATE_UNCHANGED"
+  },
+  "grammar_effect":{
+    "EN_KE_question_frame":"SCOPED_USE_ONLY",
+    "NE_predicate_negation":"SCOPED_TO_L01_OPI_009_ONLY",
+    "global_yes_no_grammar":"NOT_GRANTED",
+    "global_predicate_negation_productivity":"NOT_GRANTED"
+  },
+  "historical_recovery_claim":false,
+  "freeze_state":"NOT_FROZEN",
+  "provenance":["opi-009.semantic-review.v1.json","opi-009-preference-negation-human-batch.v1.json","../../../../proposals/language/HNK_NE_PREDICATE_NEGATION_SCOPED_EXTENSION_V1.json","../../../../proposals/language/HNK_NE_PROMOTION_RECORD_V1.json"],
+  "progress_effect":{"L01_OPI_validated_before":6,"L01_OPI_validated_after":7,"L01_OPI_validated_percent_after":70.0,"Cycle1_OPI_validated_after":7,"Cycle1_OPI_validated_percent_after":10.0,"global_validated_slots_after":7,"global_validated_percent_after":0.6944,"frozen_after":0},
+  "next_gate":"SWHNK-L01-REMAINING-HOLD-TRIAGE-V1"
+}
