@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V12`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V13`  
 **Date:** 2026-09-09  
-**Package:** `simpleway-hnk@0.14.0`
+**Package:** `simpleway-hnk@0.15.0`
 
 ## Progress model
 
@@ -17,14 +17,14 @@ Cycle 1 target: **1,008 pedagogical slots**.
 Exclusive current states:
 
 - `MISSING`: **998 / 1,008 = 99.0079%**
-- `AUTHORED`: **5 / 1,008 = 0.4960%**
-- `VALIDATED`: **5 / 1,008 = 0.4960%**
+- `AUTHORED`: **4 / 1,008 = 0.3968%**
+- `VALIDATED`: **6 / 1,008 = 0.5952%**
 - reproducible `FROZEN`: **0 / 1,008**
 
 Cumulative maturity:
 
 - `AUTHORED_OR_BETTER`: **10 / 1,008 = 0.9921%**
-- `VALIDATED_OR_BETTER`: **5 / 1,008 = 0.4960%**
+- `VALIDATED_OR_BETTER`: **6 / 1,008 = 0.5952%**
 - `FROZEN`: **0 / 1,008**
 
 Historical evidence remains separate:
@@ -38,13 +38,13 @@ Historical evidence remains separate:
 All 10 cards are authored and individually reviewed.
 
 - `AUTHORED_OR_BETTER`: **10/10 = 100%**
-- `VALIDATED_OR_BETTER`: **5/10 = 50%**
+- `VALIDATED_OR_BETTER`: **6/10 = 60%**
 - `FROZEN`: **0/10**
 
 | OPI | HNK v1.1 | Current state |
 |---:|---|---|
 | 01 | `KALA YA EN ES KU KE` | AUTHORED · reviewed HOLD |
-| 02 | `EN VAMAKALA KE` | AUTHORED · reviewed HOLD |
+| 02 | `EN VAMAKALA KE` | **VALIDATED** — nominal interview; `[NICKNAME]` / `NE VAMAKALA` |
 | 03 | `EN KU SARASALA KE` | AUTHORED · reviewed HOLD |
 | 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** — scoped L01 v1.1 use |
 | 05 | `EN VALI KUVAN KE` | **VALIDATED** — scoped L01 v1.1 use |
@@ -66,28 +66,33 @@ Validated OPI 6 and 8. `VALA` remains `CANDIDATE`, `VAMAVALA` remains `WATCH`, a
 
 ### Batch 3 — contextual weekend equivalence
 
-Validated OPI 10 only for the scoped L01 v1.1 pedagogical use:
+Validated OPI 10 while preserving `VAMUSARO = rest / leisure period`, not `weekend`. Semantic fidelity remains `APPROXIMATE_CONTEXTUAL_EQUIVALENT` and `VALA` remains `CANDIDATE`.
 
-- `VAMUSARO` remains FROZEN with the unchanged meaning **rest / leisure period**;
-- `VAMUSARO` is **not** translated or redefined as `weekend`;
-- `EN KU VALA KE` reuses the already validated activity-question precedent from OPI 6;
-- semantic fidelity remains explicitly `APPROXIMATE_CONTEXTUAL_EQUIVALENT`;
-- `VALA` remains `CANDIDATE`;
-- no weekend lexeme was created.
+### Batch 3B — nickname / absence microgrammar
+
+Validated OPI 2 without creating an English-calque HAVE verb:
+
+- `EN VAMAKALA KE` is accepted only as a scoped nominal/interview function equivalent to `Do you have a nickname?`;
+- affirmative answer: `[NICKNAME]`;
+- negative answer: `NE VAMAKALA`;
+- `VAMAKALA` remains recovered `FROZEN`;
+- new `AUTH-004 NE` enters `@hnk/linguas/authored` only as `CANDIDATE`;
+- `NE` is authored, not recovered, and has no globally productive negation rule;
+- historical possession and `EN` subject-vs-possessive analysis remain unresolved.
 
 ## Cycle 1 OPI progress
 
 Across the 70 OPI target:
 
 - `AUTHORED_OR_BETTER`: **10/70 = 14.2857%**
-- `VALIDATED_OR_BETTER`: **5/70 = 7.1429%**
+- `VALIDATED_OR_BETTER`: **6/70 = 8.5714%**
 - `FROZEN`: **0/70**
 
 ## Language assets
 
 - recovered Cycle 1 forms: **31/144 = 21.5278% proxy**
-- authored candidates: **3** — `KUVAN`, `VALA`, `KUON`
-- governed unique language assets: **34/144 = 23.6111% proxy**
+- authored candidates: **4** — `KUVAN`, `VALA`, `KUON`, `NE`
+- governed unique language assets: **35/144 = 24.3056% proxy**
 - recovered phrases: **7**
 
 These are language-asset coverage proxies, not completed vocabulary-slot percentages.
@@ -95,18 +100,15 @@ These are language-asset coverage proxies, not completed vocabulary-slot percent
 ## Remaining HOLD cards
 
 - OPI 1: approximate historical gloss; `YA` and `ES` unresolved.
-- OPI 2: possession/HAVE relation and negative no-nickname response unresolved.
 - OPI 3: `SARASALA` WATCH plus number/age system open.
 - OPI 7: `VANI` meaning null, `KUON` CANDIDATE, `ON=GATE`, experimental co-resident valency.
-- OPI 9: `VAME` GATE, `VAMAZAMU` WATCH, yes/no answer strategy open.
+- OPI 9: `VAME` GATE and `VAMAZAMU` WATCH. The negative-response tool `NE` now exists, so this card becomes the best next design candidate, but a scoped preference/yes-no policy is still required.
 
 ## Next gate
 
-`SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1`
+`SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1`
 
-The next objective is to solve OPI 2 without inventing an English-calque HAVE verb. Preferred route: determine whether the beginner card can use a nominal/existential strategy plus an explicit governed no-nickname response. Only after that should OPI 2 enter another human validation batch.
-
-High-risk cards after OPI 2 remain OPI 3, 7 and 9.
+Recommended priority: OPI 9, because AUTH-004 `NE` removes one former blocker. The next design must decide whether `VAME` can be accepted for scoped L01 preference use while remaining `GATE`, whether `VAMAZAMU` can remain visible as `WATCH`, and how positive/negative preference answers work. OPI 1, 3 and 7 remain higher-risk recovery/system problems.
 
 ## Commands
 
@@ -122,7 +124,7 @@ npm test
 
 ## CI boundary
 
-Versioned tests are synchronized to the V12 state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
+Versioned tests are synchronized to the V13 state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
 
 ## Rule
 
