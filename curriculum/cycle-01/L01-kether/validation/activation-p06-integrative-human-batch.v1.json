@@ -1,0 +1,20 @@
+{
+  "batch_id":"SWHNK-L01-ACTIVATION-P06-INTEGRATIVE-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"L01 Activation slots 061-072 only",
+  "source_pack":"../authoring/activation-pack-p06-integrative.v1.json",
+  "source_opi":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
+  "current_state":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-ACT-P06-001","statement":"Approve slots 061-065 as paired/multipart interview integration of already validated OPI, while keeping each HNK question separate and introducing no conjunction or new sentence grammar.","if_approved":{"paired_integrative_drills_validated":5,"new_HNK_grammar_rules":0}},
+    {"id":"DEC-ACT-P06-002","statement":"Approve slots 066-067 as ordered half-interviews and slots 071-072 as adaptive/full interviews, requiring exact reuse of validated OPI payloads and required contexts.","if_approved":{"interview_flow_drills_validated":4,"payload_rewrite_allowed":false,"context_preservation_required":true}},
+    {"id":"DEC-ACT-P06-003","statement":"Approve slots 068-070 as intent discrimination, response routing and G-ID relay using only existing validation labels, response schemas and structural G-IDs.","if_approved":{"metalinguistic_integrative_drills_validated":3,"token_level_historical_gloss_claim":false,"visual_canon_claim":false}},
+    {"id":"DEC-ACT-P06-004","statement":"Confirm all authority boundaries from the ten source OPI remain unchanged throughout P06: WATCH/GATE/CANDIDATE states are visible and course validation does not promote language authority.","if_approved":{"language_authority_promotions":0,"new_lexical_forms":0}},
+    {"id":"DEC-ACT-P06-005","statement":"Confirm P06 is new SimpleWay HNK v1.1 integrative authorship and not reconstruction of the missing historical Activation payload.","if_approved":{"historical_reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not create conjunctions, copulas, prepositions, polarity particles or global grammar.","Does not promote any WATCH, GATE or CANDIDATE language asset.","Does not change VANI recovered meaning null.","Does not relabel VAMUSARO as weekend.","Does not make Candidate D drawings official visual canon.","Does not promote Activation slots to FROZEN."],
+  "projected_effect_if_all_approved":{"L01_Activation_VALIDATED_before":60,"L01_Activation_VALIDATED_after":72,"L01_Activation_validated_percent_after":100.0,"global_VALIDATED_slots_after":82,"global_AUTHORED_OR_BETTER_after":82,"L01_OPI_PLUS_Activation_VALIDATED_after":82,"new_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition P06 integrative slots 061-072 to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-ACTIVATION-72-OF-72-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_ACTIVATION_P06_AUTHORED_AND_REVISE"
+}
