@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V21",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_9_OF_10_VALIDATED_OPI7_FINAL_BATCH_PREPARED",
+  "package":"simpleway-hnk@0.24.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":1,"VALIDATED":9,"FROZEN":0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":9,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25,"recovered_proxy_percent":21.5278},
+  "L01_OPI":{"target":10,"reviewed":10,"AUTHORED_HOLD":1,"VALIDATED":9,"validated_percent":90.0,"hold_slots":["L01-OPI-007"],"validated_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-009","L01-OPI-010"]},
+  "cycle1_OPI":{"target":70,"VALIDATED":9,"validated_percent":12.8571},
+  "OPI001":{"state":"VALIDATED","strategy":"RECOVERED_WHOLE_UTTERANCE_FORMULA","phrase":"KALA YA EN ES KU KE","phrase_certainty":"APPROXIMATE_UNCHANGED","YA_meaning":null,"ES_meaning":null,"token_gloss_promotions":0},
+  "OPI007_final_batch":{"batch":"opi-007-final-human-batch.v1.json","status":"AWAITING_EXPLICIT_HUMAN_APPROVAL","risk":"VERY_HIGH","questions":["EN VANI KUVAN KE","EN VANI KUON KE"],"VANI":{"authority":"WATCH","master_lexicon_meaning":null,"live_reside":"HYPOTHESIS_ONLY"},"KUVAN":"CANDIDATE","KUON":"CANDIDATE","ON":"GATE","co_resident_valency":"AUTHORED_TEST_ONLY","projected_if_approved":{"L01_OPI_VALIDATED":10,"validated_percent":100.0,"language_authority_promotions":0,"new_lexical_forms":0,"master_lexicon_meaning_changes":0,"new_WITH_lexeme":false}},
+  "next_gate":"SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1"
+}
