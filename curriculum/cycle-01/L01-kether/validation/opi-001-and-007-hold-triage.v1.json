@@ -1,0 +1,34 @@
+{
+  "triage_id":"SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1",
+  "status":"COMPLETE_OPI001_SELECTED_NEXT",
+  "current_state":{"L01_OPI_reviewed":10,"L01_OPI_validated":8,"L01_OPI_hold":2,"hold_slots":["L01-OPI-001","L01-OPI-007"]},
+  "candidates":[
+    {
+      "slot_id":"L01-OPI-001",
+      "english":"What's your name?",
+      "hnk":"KALA YA EN ES KU KE",
+      "evidence_strength":"HIGH_AT_WHOLE_UTTERANCE_LEVEL",
+      "source_phrase":{"id":"PHR-001","status":"RECOVERED","certainty":"APPROXIMATE","whole_sentence_gloss":"What is your name?"},
+      "structural_state":"PASS",
+      "answer_strategy":"[PERSONAL_NAME]",
+      "unresolved":{"token_alignment":["YA","ES"],"inferred_not_canonical_tokens":["KALA","EN","KU","KE"]},
+      "safe_validation_route":"WHOLE_UTTERANCE_FORMULA_WITHOUT_TOKEN_GLOSS_PROMOTION",
+      "risk":"MEDIUM",
+      "selected_next":true
+    },
+    {
+      "slot_id":"L01-OPI-007",
+      "english":"Where do you live and who do you live with?",
+      "hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],
+      "evidence_strength":"LOWER_SEMANTICALLY",
+      "structural_state":"PASS",
+      "unresolved":{"VANI_master_lexicon_meaning":null,"VANI_live_reside":"HYPOTHESIS_ONLY","KUON":"CANDIDATE","ON":"GATE","co_resident_valency":"AUTHORED_TEST_ONLY"},
+      "risk":"VERY_HIGH",
+      "selected_next":false,
+      "reason":"Requires explicit semantic approval of a meaning-null recovered form plus authored person-interrogative and valency behavior."
+    }
+  ],
+  "decision":{"selected_next":"L01-OPI-001","reason":"Whole-utterance validation can preserve the recovered phrase exactly while leaving unresolved token meanings unresolved. It requires less semantic invention than OPI 7."},
+  "non_effects":["Does not validate OPI 1 by itself.","Does not assign meanings to YA or ES.","Does not promote KALA, EN, KU or KE to recovered lexical canon.","Does not change OPI 7.","Does not change any language authority."],
+  "next_gate":"SWHNK-L01-OPI-001-WHOLE-UTTERANCE-HUMAN-BATCH-V1"
+}
