@@ -1,0 +1,50 @@
+{
+  "lane_id":"SWHNK-L01-QA-AUTHORING-V1",
+  "status":"AUTHORED_4_OF_4_VALIDATION_PENDING",
+  "lesson_id":"L01",
+  "source_contract":{"qa":4,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1.md","payload_historical_recovery_claim":false},
+  "historical_boundary":"The canonical source confirms exactly four Q&A slots for L01, but no historical Q&A payload was recovered. The four current items are new governed SimpleWay HNK v1.1 pedagogical authorship using only already validated L01 questions and response schemas.",
+  "selection_rule":"Use four high-value interview exchanges that sample already validated L01 behavior. This lane is not claimed to exhaust all five structure frames or all ten OPI.",
+  "items":[
+    {
+      "slot_id":"L01-QA-001",
+      "topic":"PERSONAL_NAME",
+      "question_hnk":"KALA YA EN ES KU KE",
+      "question_intent_pt":"Qual é o seu nome?",
+      "answer_schema":"[PERSONAL_NAME]",
+      "example_answer_kind":"FREE_PERSONAL_NAME",
+      "authority_boundary":"The HNK question is validated as a recovered whole utterance; YA and ES remain without assigned token-level historical meanings.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-QA-002",
+      "topic":"AGE",
+      "question_hnk":"EN KU SARASALA KE",
+      "question_intent_pt":"Qual é a sua idade?",
+      "answer_schema":"[CARDINAL_0_99]",
+      "example_answers":["TOMI","DUVE TOMI","LUSO HOYU"],
+      "authority_boundary":"SARASALA remains WATCH; spoken numeral primitives remain CANDIDATE; the 10-99 composition remains scoped course use and no year lexeme is created.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-QA-003",
+      "topic":"BIRTHPLACE",
+      "question_hnk":"EN SARADAYA KUVAN KE",
+      "question_intent_pt":"Onde você nasceu?",
+      "answer_schema":"[PLACE]",
+      "authority_boundary":"SARADAYA remains FROZEN recovered lexeme; KUVAN remains CANDIDATE; validation does not universalize a locative grammar.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-QA-004",
+      "topic":"HOBBIES",
+      "question_hnk":"EN KU VAMAVALA KE",
+      "question_intent_pt":"Quais são seus hobbies/atividades de prazer?",
+      "answer_schema":"[HOBBY_OR_PLEASURE_ACTIVITY]",
+      "authority_boundary":"VAMAVALA remains WATCH; KU exact historical WH gloss remains unrecovered; response vocabulary is bounded to governed course inventory.",
+      "implementation_state":"AUTHORED"
+    }
+  ],
+  "metrics":{"qa_target":4,"AUTHORED":4,"VALIDATED":0,"FROZEN":0,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0},
+  "next_gate":"SWHNK-L01-QA-VALIDATION-V1"
+}
