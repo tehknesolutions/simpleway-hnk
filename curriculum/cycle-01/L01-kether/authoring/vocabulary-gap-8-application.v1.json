@@ -1,0 +1,19 @@
+{
+  "application_id":"SWHNK-L01-VOCABULARY-GAP-8-APPLICATION-V1",
+  "status":"APPLIED_TO_AUTHORING_NOT_VALIDATION",
+  "date":"2026-09-10",
+  "approval_source":"../validation/vocabulary-gap-8-form-mapping-human-batch.v1.json",
+  "language_authority_source":{"repository":"tehknesolutions/codex-hnk","package":"@hnk/linguas/authored","registry_version":"1.5.0-candidate"},
+  "entries":[
+    {"slot_id":"L01-VOC-025","form":"KALA","semantic_key":"PERSONAL_NAME_DOMAIN","authority":"CANDIDATE","canonical_ref":"AUTH-015","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-026","form":"AN","semantic_key":"FIRST_PERSON_REFERENT","authority":"CANDIDATE","canonical_ref":"AUTH-016","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-027","form":"EN","semantic_key":"SECOND_PERSON_REFERENT","authority":"CANDIDATE","canonical_ref":"AUTH-017","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-028","form":"KU","semantic_key":"CONTENT_SELECTOR","authority":"CANDIDATE","canonical_ref":"AUTH-018","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-029","form":"KE","semantic_key":"QUESTION_OPERATOR","authority":"CANDIDATE","canonical_ref":"AUTH-019","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-030","form":"VANI","semantic_key":"RESIDENCE_LIVE","authority":"WATCH","canonical_ref":"LEX-031","origin":"SCOPED_L01_BINDING_ON_RECOVERED_WATCH","implementation_state":"AUTHORED","boundary":"Master Lexicon meaning remains null; residence is a scoped L01 semantic binding only."},
+    {"slot_id":"L01-VOC-031","form":"VAME","semantic_key":"PREFERENCE_LIKE","authority":"GATE","canonical_ref":"LEX-025","origin":"SCOPED_L01_REBIND_ON_RECOVERED_GATE","implementation_state":"AUTHORED","boundary":"Master authority remains GATE; no global preference grammar is created."},
+    {"slot_id":"L01-VOC-032","form":"ZAMI","semantic_key":"SPEAK_LANGUAGE_USE","authority":"CANDIDATE","canonical_ref":"AUTH-020","origin":"GOVERNED_EVIDENCE_MAPPING","implementation_state":"AUTHORED"}
+  ],
+  "effects":{"vocabulary_authored_before":24,"vocabulary_authored_after":32,"vocabulary_validated_unchanged":24,"vocabulary_missing_after":0,"new_authored_candidate_registry_entries":6,"new_surface_forms_created":0,"scoped_recovered_bindings":2,"language_authority_promotions":0,"historical_standalone_gloss_claims":0},
+  "next_gate":"SWHNK-L01-VOCABULARY-025-032-VALIDATION-V1"
+}
