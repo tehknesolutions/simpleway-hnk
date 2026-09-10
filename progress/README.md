@@ -1,58 +1,60 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V32`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V33`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.35.0`
+**Current package:** `simpleway-hnk@0.36.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
-- `MISSING`: **916/1,008 = 90.8730%**
-- `AUTHORED`: **3/1,008 = 0.2976%**
-- `VALIDATED`: **89/1,008 = 8.8294%**
+- `MISSING`: **912/1,008 = 90.4762%**
+- `AUTHORED`: **4/1,008 = 0.3968%**
+- `VALIDATED`: **92/1,008 = 9.1270%**
 - reproducible `FROZEN`: **0/1,008**
-- `AUTHORED_OR_BETTER`: **92/1,008 = 9.1270%**
+- `AUTHORED_OR_BETTER`: **96/1,008 = 9.5238%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
 ## L01 validated core
 
 The following L01 lanes are fully validated for scoped SimpleWay HNK v1.1 course use:
 
+- Teacher Notes: **3/3 VALIDATED = 100%**;
 - OPI: **10/10 VALIDATED = 100%**;
 - Activation: **72/72 VALIDATED = 100%**;
 - Structure headers: **2/2 VALIDATED = 100%**;
 - Structures: **5/5 VALIDATED = 100%**.
 
-The structure lane validation does not universalize the five frames as historical HNK grammar. `YA/ES` remain without recovered token glosses; `KUVAN` remains CANDIDATE; `VAME` remains GATE; `VAMAZAMU` remains WATCH; `NE` remains CANDIDATE; `VANI` remains WATCH with recovered meaning null.
+Teacher Notes remain new governed v1.1 pedagogical authorship, not recovered historical text. Their validation does not create HNK lexicon or grammar and does not promote language authority.
 
-## L01 Teacher Notes — 3/3 AUTHORED
+## L01 Q&A — 4/4 AUTHORED
 
-The canonical allocation confirms exactly **3 teacher-note slots** for L01, but no historical note text was recovered. The current notes are new governed v1.1 pedagogical authorship.
+The canonical allocation confirms exactly **4 Q&A slots** for L01, but no historical Q&A payload was recovered. Current v1.1 items reuse only validated L01 questions and response schemas:
 
-- `L01-NOTE-001` — Proveniência e autoridade linguística;
-- `L01-NOTE-002` — Sequência pedagógica recomendada;
-- `L01-NOTE-003` — Correção, resposta e limites de expansão.
+- `L01-QA-001` — `KALA YA EN ES KU KE` → `[PERSONAL_NAME]`;
+- `L01-QA-002` — `EN KU SARASALA KE` → `[CARDINAL_0_99]`;
+- `L01-QA-003` — `EN SARADAYA KUVAN KE` → `[PLACE]`;
+- `L01-QA-004` — `EN KU VAMAVALA KE` → `[HOBBY_OR_PLEASURE_ACTIVITY]`.
 
-The notes create **zero new HNK lexical forms** and **zero new HNK grammar rules**. They instruct the teacher to reuse validated payloads, preserve required contexts, keep WATCH/GATE/CANDIDATE boundaries visible, and avoid invented copulas, prepositions, WITH markers, generic DO, or global yes/no/negation grammar.
+Authority boundaries remain unchanged: `YA/ES` have no assigned recovered token glosses; `SARASALA` and `VAMAVALA` remain WATCH; numeral primitives and `KUVAN` remain CANDIDATE. Q&A creates **zero new HNK lexical forms** and **zero new HNK grammar rules**.
 
 Prepared gate:
 
-`SWHNK-L01-TEACHER-NOTES-VALIDATION-V1`
+`SWHNK-L01-QA-VALIDATION-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-If approved, L01 reaches **92 VALIDATED slots**, with zero language-authority promotions.
+If approved, L01 reaches **96 VALIDATED slots** with zero language-authority promotions.
 
 ## L01 total
 
 L01 target: **155 slots**.
 
-- authored-or-better: **92/155 = 59.3548%**
-- validated: **89/155 = 57.4194%**
-- remaining missing/unimplemented: **63**
+- authored-or-better: **96/155 = 61.9355%**
+- validated: **92/155 = 59.3548%**
+- remaining missing/unimplemented: **59**
 
-Remaining L01 categories after Teacher Notes: 5 stories, 4 Q&A, 32 vocabulary slots and 22 review slots.
+Remaining L01 categories after Q&A authorship: **5 stories, 32 vocabulary slots and 22 review slots**.
 
 ## Language assets
 
