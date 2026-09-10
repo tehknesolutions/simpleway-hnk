@@ -20,5 +20,56 @@ jobs:
         with:
           node-version: 22
 
-      - name: Validate Cycle 1 baseline
-        run: npm test
+      - name: Validate Cycle 1 contract
+        run: npm run validate:cycle1
+
+      - name: Validate L01 authoring
+        run: npm run validate:l01-authoring
+
+      - name: Validate language proposals
+        run: npm run validate:language-proposals
+
+      - name: Validate progress tracker
+        run: npm run validate:progress
+
+      - name: Validate L01 OPI 001
+        run: npm run validate:l01-opi001
+
+      - name: Validate interrogatives
+        run: npm run validate:interrogatives
+
+      - name: Validate OPI matrix
+        run: npm run validate:opi-matrix
+
+      - name: Validate number system
+        run: npm run validate:numbers
+
+      - name: Validate numeral candidates
+        run: npm run validate:numeral-candidates
+
+      - name: Validate cardinals
+        run: npm run validate:cardinals
+
+      - name: Validate activation
+        run: npm run validate:activation
+
+      - name: Validate structures
+        run: npm run validate:structures
+
+      - name: Validate teacher notes
+        run: npm run validate:teacher-notes
+
+      - name: Validate QA lane
+        run: npm run validate:qa
+
+      - name: Validate stories
+        run: npm run validate:stories
+
+      - name: Validate vocabulary lane
+        run: npm run validate:vocabulary
+
+      - name: Validate vocabulary gap semantics
+        run: npm run validate:vocabulary-gap-semantics
+
+      - name: Validate vocabulary gap mapping
+        run: npm run validate:vocabulary-gap-mapping
