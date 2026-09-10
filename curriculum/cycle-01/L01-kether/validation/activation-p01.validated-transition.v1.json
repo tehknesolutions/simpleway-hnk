@@ -1,0 +1,19 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P01-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":{"lesson":"L01","category":"activation","slots":[1,12]},
+  "source_pack":"../authoring/activation-pack-p01.v1.json",
+  "source_batch":"activation-p01-human-batch.v1.json",
+  "before":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":12,"FROZEN":0},
+  "validated_slots":["L01-ACT-001","L01-ACT-002","L01-ACT-003","L01-ACT-004","L01-ACT-005","L01-ACT-006","L01-ACT-007","L01-ACT-008","L01-ACT-009","L01-ACT-010","L01-ACT-011","L01-ACT-012"],
+  "validation_model":"SCOPED_DRILL_VALIDATION_DERIVED_FROM_VALIDATED_OPI",
+  "pedagogical_modes":["RECOGNIZE_INTENT","REPEAT_FORM","PRODUCE_QUESTION","TRACE_GIDS","PRODUCE_RESPONSE","MICRO_DIALOGUE"],
+  "source_opi":["L01-OPI-001","L01-OPI-002"],
+  "language_authority_effect":"NONE",
+  "historical_boundary":{"historical_72_slot_count_confirmed":true,"historical_raw_drill_payload_recovered":false,"these_12_are_historical_reconstructions":false},
+  "visual_boundary":{"GID_training_validated":true,"candidate_D_visual_canon_claim":false},
+  "lexical_boundary":{"new_HNK_lexical_forms":0,"token_gloss_promotions":0,"NE_authority":"CANDIDATE_UNCHANGED","global_negation_productivity":false},
+  "progress_effect":{"L01_Activation_VALIDATED":12,"L01_Activation_validated_percent":16.6667,"L01_OPI_VALIDATED":10,"L01_total_VALIDATED":22,"global_VALIDATED":22,"global_AUTHORED_OR_BETTER":22},
+  "next_gate":"SWHNK-L01-ACTIVATION-P02-AUTHORING-V1"
+}
