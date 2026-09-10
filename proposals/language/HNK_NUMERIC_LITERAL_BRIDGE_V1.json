@@ -1,0 +1,57 @@
+{
+  "proposal_id":"HNK-NUMERIC-LITERAL-BRIDGE-V1",
+  "status":"AUTHORING_ARCHITECTURE_PROPOSAL_NOT_CANON",
+  "purpose":"Provide a safe numeric-value representation layer for course/runtime data without fabricating spoken HNK numeral lexemes.",
+  "scope":["L01-OPI-003","future numeric-value fields"],
+  "layers":{
+    "numeric_value":{"type":"NONNEGATIVE_INTEGER","semantic_role":"abstract mathematical value","language_specific":false},
+    "display_bridge":{"notation":"ASCII_ARABIC_DIGITS_0_9","examples":["8","21","42"],"status":"EXTERNAL_NOTATION_BRIDGE","hnk_glyph_claim":false,"spoken_hnk_claim":false},
+    "spoken_hnk":{"status":"UNAUTHORED","required_for_full_oral_language_validation":true,"numeral_lexemes":"SEPARATE_GATE"}
+  },
+  "digit_concepts":[
+    {"concept_id":"NUM-0","value":0,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-1","value":1,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-2","value":2,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-3","value":3,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-4","value":4,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-5","value":5,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-6","value":6,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-7","value":7,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-8","value":8,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"},
+    {"concept_id":"NUM-9","value":9,"hnk_form":null,"glyph_ids":null,"transliteration":null,"authority":"MISSING_AUTHORING_REQUIRED"}
+  ],
+  "composition":{
+    "internal_HNK_base":null,
+    "spoken_cardinal_rule":null,
+    "tens_rule":null,
+    "hundreds_rule":null,
+    "zero_behavior":null,
+    "reason":"No historical system was recovered and no authored numeral morphology has yet passed governance."
+  },
+  "age_use":{
+    "question":"EN KU SARASALA KE",
+    "display_answer_pattern":"[NUMERIC_LITERAL]",
+    "example_display_values":["8","18","42"],
+    "year_unit":null,
+    "spoken_answer_pattern":null,
+    "current_effect":"Allows typed/display age values in tools and tests but is insufficient by itself to validate an oral HNK OPI card."
+  },
+  "governance":{
+    "authoring_contract":"schemas/hnk-lexeme-authoring-contract.v1.json",
+    "semantics_before_form":true,
+    "numerology_may_select_forms":false,
+    "visual_glyph_shape_may_select_meanings":false,
+    "new_spoken_forms_start_at":"CANDIDATE",
+    "collision_check_required":true,
+    "HNK40_safe_roundtrip_required_when_transliterated":true,
+    "human_promotion_required":true
+  },
+  "explicit_non_effects":[
+    "Does not define 0-9 as HNK words.",
+    "Does not declare Arabic digits to be members of HNK40.",
+    "Does not decide whether native HNK numeral morphology is base-10, base-12 or another base.",
+    "Does not validate L01 OPI 3.",
+    "Does not promote SARASALA from WATCH."
+  ],
+  "next_gate":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-AUTHORING-DECISION-V1"
+}
