@@ -1,0 +1,87 @@
+{
+  "lane_id":"SWHNK-L01-STRUCTURE-LANE-AUTHORING-V1",
+  "status":"AUTHORED_7_OF_7_VALIDATION_PENDING",
+  "lesson_id":"L01",
+  "source_contract":{"structure_headers":2,"structures":5,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1.md","payload_historical_recovery_claim":false},
+  "historical_boundary":"The canonical source confirms only the counts 2 headers + 5 structures for L01. Titles, explanations and v1.1 structure payloads below are new governed course authorship derived from already validated OPI/Activation behavior.",
+  "headers":[
+    {
+      "slot_id":"L01-HDR-001",
+      "title_pt":"Fórmulas de entrevista e perguntas nominais",
+      "scope":"L01_STRUCTURES_001_002",
+      "implementation_state":"AUTHORED",
+      "hnk_sentence":null,
+      "historical_title_claim":false
+    },
+    {
+      "slot_id":"L01-HDR-002",
+      "title_pt":"Perguntas produtivas escopadas: conteúdo, localização e preferência",
+      "scope":"L01_STRUCTURES_003_005",
+      "implementation_state":"AUTHORED",
+      "hnk_sentence":null,
+      "historical_title_claim":false
+    }
+  ],
+  "structures":[
+    {
+      "slot_id":"L01-STR-001",
+      "name":"WHOLE_UTTERANCE_INTERVIEW_FORMULA",
+      "frame":"KALA YA EN ES KU KE",
+      "function_pt":"Perguntar o nome usando a fórmula histórica recuperada como unidade inteira.",
+      "examples":["KALA YA EN ES KU KE"],
+      "response_schema":"[PERSONAL_NAME]",
+      "authority_boundary":"Validated whole utterance only; YA/ES remain without assigned recovered token meanings and no token-by-token canonization is implied.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STR-002",
+      "name":"NOMINAL_INTERVIEW_QUESTION",
+      "frame":"EN + DOMAIN + KE",
+      "function_pt":"Pergunta nominal simples de entrevista para um domínio já governado no card.",
+      "validated_examples":[{"hnk":"EN VAMAKALA KE","intent":"NICKNAME"}],
+      "response_schema":"[DOMAIN_VALUE] or governed negative response when defined",
+      "authority_boundary":"Scoped L01 course structure; does not establish EN or KE as universal historical HNK grammar and does not create a HAVE verb.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STR-003",
+      "name":"CONTENT_INTERVIEW_QUESTION",
+      "frame":"EN + KU + DOMAIN + KE",
+      "function_pt":"Pergunta de conteúdo para domínios já validados no curso.",
+      "validated_examples":[
+        {"hnk":"EN KU SARASALA KE","intent":"AGE_CONTEXTUAL"},
+        {"hnk":"EN KU VALA KE","intent":"ACTIVITY_CONTEXTUAL"},
+        {"hnk":"EN KU VAMAVALA KE","intent":"HOBBIES"}
+      ],
+      "context_rule":"Required discourse context must remain visible where the source OPI depends on it, including WORK_OR_SCHOOL and VAMUSARO lanes.",
+      "authority_boundary":"KU exact historical WH gloss remains unrecovered; this is a validated course-level frame only.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STR-004",
+      "name":"LOCATIVE_INTERVIEW_QUESTION",
+      "frame":"EN + DOMAIN + KUVAN + KE",
+      "function_pt":"Pergunta locativa para um domínio lexical já governado.",
+      "validated_examples":[
+        {"hnk":"EN SARADAYA KUVAN KE","intent":"BIRTHPLACE"},
+        {"hnk":"EN VALI KUVAN KE","intent":"WORK_LOCATION"},
+        {"hnk":"EN VANI KUVAN KE","intent":"RESIDENCE_LOCATION","warning":"VANI remains WATCH with recovered meaning null; residence is scoped course interpretation."}
+      ],
+      "response_schema":"[PLACE]",
+      "authority_boundary":"KUVAN remains CANDIDATE; VANI boundary remains visible; no universal locative grammar claim.",
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STR-005",
+      "name":"PREFERENCE_INTERVIEW_QUESTION",
+      "frame":"EN + VAME + CONTENT + KE",
+      "function_pt":"Pergunta de preferência no lane validado de canto/expressão harmônica.",
+      "validated_examples":[{"hnk":"EN VAME VAMAZAMU KE","intent":"SINGING_PREFERENCE"}],
+      "validated_response_examples":{"positive":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU"},
+      "authority_boundary":"VAME remains GATE, VAMAZAMU remains WATCH, NE remains CANDIDATE; preference and predicate-negation behavior are scoped to validated course use, not universalized.",
+      "implementation_state":"AUTHORED"
+    }
+  ],
+  "metrics":{"structure_headers_target":2,"structure_headers_AUTHORED":2,"structures_target":5,"structures_AUTHORED":5,"total_target":7,"total_AUTHORED":7,"VALIDATED":0,"FROZEN":0,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules_beyond_validated_course_frames":0},
+  "next_gate":"SWHNK-L01-STRUCTURE-LANE-VALIDATION-V1"
+}
