@@ -1,66 +1,70 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V33`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V34`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.36.0`
+**Current package:** `simpleway-hnk@0.37.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
-- `MISSING`: **912/1,008 = 90.4762%**
-- `AUTHORED`: **4/1,008 = 0.3968%**
-- `VALIDATED`: **92/1,008 = 9.1270%**
+- `MISSING`: **907/1,008 = 89.9802%**
+- `AUTHORED`: **5/1,008 = 0.4960%**
+- `VALIDATED`: **96/1,008 = 9.5238%**
 - reproducible `FROZEN`: **0/1,008**
-- `AUTHORED_OR_BETTER`: **96/1,008 = 9.5238%**
+- `AUTHORED_OR_BETTER`: **101/1,008 = 10.0198%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
 ## L01 validated core
 
-The following L01 lanes are fully validated for scoped SimpleWay HNK v1.1 course use:
+Fully validated lanes:
 
-- Teacher Notes: **3/3 VALIDATED = 100%**;
-- OPI: **10/10 VALIDATED = 100%**;
-- Activation: **72/72 VALIDATED = 100%**;
-- Structure headers: **2/2 VALIDATED = 100%**;
-- Structures: **5/5 VALIDATED = 100%**.
+- Teacher Notes: **3/3**;
+- OPI: **10/10**;
+- Q&A: **4/4**;
+- Structure Headers: **2/2**;
+- Structures: **5/5**;
+- Activation: **72/72**.
 
-Teacher Notes remain new governed v1.1 pedagogical authorship, not recovered historical text. Their validation does not create HNK lexicon or grammar and does not promote language authority.
+Q&A validation preserves all language-authority boundaries. `YA/ES` remain without token-level historical glosses; `SARASALA` and `VAMAVALA` remain WATCH; numeral primitives and `KUVAN` remain CANDIDATE. The Q&A payload remains governed v1.1 authorship, not recovered historical content.
 
-## L01 Q&A — 4/4 AUTHORED
+## L01 Stories — 5/5 AUTHORED
 
-The canonical allocation confirms exactly **4 Q&A slots** for L01, but no historical Q&A payload was recovered. Current v1.1 items reuse only validated L01 questions and response schemas:
+The source confirms exactly five Story slots for L01, but no historical story payload was recovered. The current scenes are new SimpleWay HNK v1.1 pedagogical authorship and use only already validated HNK question/response payloads.
 
-- `L01-QA-001` — `KALA YA EN ES KU KE` → `[PERSONAL_NAME]`;
-- `L01-QA-002` — `EN KU SARASALA KE` → `[CARDINAL_0_99]`;
-- `L01-QA-003` — `EN SARADAYA KUVAN KE` → `[PLACE]`;
-- `L01-QA-004` — `EN KU VAMAVALA KE` → `[HOBBY_OR_PLEASURE_ACTIVITY]`.
+- `L01-STORY-001` — nome e apelido;
+- `L01-STORY-002` — idade e origem;
+- `L01-STORY-003` — trabalho/escola, lugar e atividade;
+- `L01-STORY-004` — residência, co-residente e hobbies;
+- `L01-STORY-005` — preferência por canto e contexto de descanso/lazer.
 
-Authority boundaries remain unchanged: `YA/ES` have no assigned recovered token glosses; `SARASALA` and `VAMAVALA` remain WATCH; numeral primitives and `KUVAN` remain CANDIDATE. Q&A creates **zero new HNK lexical forms** and **zero new HNK grammar rules**.
+Narrative framing is Portuguese pedagogy, not HNK grammar. The stories create **zero new HNK lexical forms** and **zero new HNK grammar rules**. They preserve `WORK_OR_SCHOOL`, `VAMUSARO`, the two-microquestion OPI 7 design, and all WATCH/GATE/CANDIDATE boundaries.
 
 Prepared gate:
 
-`SWHNK-L01-QA-VALIDATION-V1`
+`SWHNK-L01-STORY-VALIDATION-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-If approved, L01 reaches **96 VALIDATED slots** with zero language-authority promotions.
+If approved, all five Story slots become VALIDATED and global/L01 validated slots rise from **96 → 101** with zero language-authority promotions.
 
 ## L01 total
 
 L01 target: **155 slots**.
 
-- authored-or-better: **96/155 = 61.9355%**
-- validated: **92/155 = 59.3548%**
-- remaining missing/unimplemented: **59**
+- authored-or-better: **101/155 = 65.1613%**
+- validated: **96/155 = 61.9355%**
+- remaining missing/unimplemented: **54**
 
-Remaining L01 categories after Q&A authorship: **5 stories, 32 vocabulary slots and 22 review slots**.
+After Story authorship, the only unimplemented L01 categories are **32 vocabulary slots + 22 review slots**.
 
 ## Language assets
 
 - recovered Cycle 1 forms: **31/144 = 21.5278% proxy**
 - canonical authored candidates: **14**
 - governed unique language assets: **45/144 = 31.25% proxy**
+
+Vocabulary slot completion remains distinct from these language-asset proxies.
 
 ## Historical/source boundary
 
