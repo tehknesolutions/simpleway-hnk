@@ -1,6 +1,6 @@
 {
   "matrix_id":"SWHNK-L01-OPI-VALIDATION-MATRIX-V1",
-  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_7_OF_10_VALIDATED_OPI3_BATCH_PREPARED",
+  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_8_OF_10_VALIDATED",
   "lesson_id":"L01",
   "progress_model":"MISSING -> AUTHORED -> VALIDATED -> FROZEN",
   "whole_slot_validation_requirements":[
@@ -17,7 +17,7 @@
   "cards":[
     {"slot_id":"L01-OPI-001","english":"What's your name?","hnk":["KALA YA EN ES KU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-001.semantic-review.v1.json","blockers":["Approximate gloss; YA/ES unresolved; inferred token roles not promoted."]},
     {"slot_id":"L01-OPI-002","english":"Do you have a nickname?","hnk":["EN VAMAKALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WITH_AUTHORED_NEGATION","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-002.validated-transition.v1.json","answer_strategy":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA"},"boundaries":["NE remains AUTH-004 CANDIDATE.","No HAVE verb or historical possession grammar is claimed."]},
-    {"slot_id":"L01-OPI-003","english":"How old are you?","hnk":["EN KU SARASALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD_BATCH_PREPARED","review_record":"opi-003.semantic-review.v1.json","prepared_human_batch":"opi-003-age-cardinal-human-batch.v1.json","number_assets":{"0":"BIZO","1":"DUVE","2":"HOYU","3":"KETI","4":"LUSO","5":"MUPI","6":"NURA","7":"PEVU","8":"TOMI","9":"ZOKA"},"cardinal_10_99_proposal":"../../../../proposals/language/HNK_CARDINAL_10_99_POSITIONAL_COMPOSITION_V1.json","proposed_answer_examples":{"8":"TOMI","18":"DUVE TOMI","42":"LUSO HOYU"},"blockers":["Explicit human approval of scoped 10-99 positional rule, contextual age reading and bare-cardinal answer is still pending.","SARASALA remains WATCH and must remain visible."]},
+    {"slot_id":"L01-OPI-003","english":"How old are you?","hnk":["EN KU SARASALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WITH_WATCH_VISIBLE_AND_SCOPED_CARDINALS","review_state":"REVIEWED_VALIDATED","review_record":"opi-003.semantic-review.v1.json","validation_transition":"opi-003.validated-transition.v1.json","applied_human_batch":"opi-003-age-cardinal-human-batch.v1.json","number_assets":{"0":"BIZO","1":"DUVE","2":"HOYU","3":"KETI","4":"LUSO","5":"MUPI","6":"NURA","7":"PEVU","8":"TOMI","9":"ZOKA"},"cardinal_10_99_rule":"../../../../proposals/language/HNK_CARDINAL_10_99_POSITIONAL_COMPOSITION_V1.json","answer_strategy":{"schema":"[CARDINAL_0_99]","examples":{"8":"TOMI","18":"DUVE TOMI","42":"LUSO HOYU"},"year_unit":null},"boundaries":["SARASALA remains WATCH.","Numerals remain CANDIDATE.","10-99 positional composition is scoped to numeric/cardinal context for OPI 3.","No historical number-system or age-construction claim."]},
     {"slot_id":"L01-OPI-004","english":"Where were you born?","hnk":["EN SARADAYA KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-004-005.validated-transition.v1.json"},
     {"slot_id":"L01-OPI-005","english":"Where do you work?","hnk":["EN VALI KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-004-005.validated-transition.v1.json"},
     {"slot_id":"L01-OPI-006","english":"What do you do at work/school?","hnk":["EN KU VALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WITH_CONTEXT","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-006-008.validated-transition.v1.json"},
@@ -27,10 +27,9 @@
     {"slot_id":"L01-OPI-010","english":"What do you do on weekends?","hnk":["EN KU VALA KE"],"hnk_context":"VAMUSARO","validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_AS_APPROXIMATE_CONTEXTUAL_EQUIVALENT","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-010.validated-transition.v1.json","semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT","boundary":"VAMUSARO remains rest/leisure period, not weekend"}
   ],
   "reviewed_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
-  "validated_slots":["L01-OPI-002","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
-  "reviewed_hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007"],
-  "applied_human_batches":["locative-question-human-promotion-batch.v1.json","content-question-human-promotion-batch.v1.json","opi-010-contextual-equivalence-human-batch.v1.json","opi-002-negation-candidate-human-batch.v1.json","opi-009-preference-negation-human-batch.v1.json"],
-  "prepared_human_batch":"opi-003-age-cardinal-human-batch.v1.json",
-  "summary":{"target":10,"authored_or_better":10,"authored_current_state":3,"structural_static_pass":10,"reviewed":10,"validated":7,"validated_percent":70.0,"frozen":0,"remaining_hold":["L01-OPI-001","L01-OPI-003","L01-OPI-007"],"next_ready_human_candidate":"L01-OPI-003","projected_validated_if_next_batch_approved":8,"projected_validated_percent":80.0},
-  "next_gate":"SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1"
+  "validated_slots":["L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
+  "reviewed_hold_slots":["L01-OPI-001","L01-OPI-007"],
+  "applied_human_batches":["locative-question-human-promotion-batch.v1.json","content-question-human-promotion-batch.v1.json","opi-010-contextual-equivalence-human-batch.v1.json","opi-002-negation-candidate-human-batch.v1.json","opi-009-preference-negation-human-batch.v1.json","opi-003-age-cardinal-human-batch.v1.json"],
+  "summary":{"target":10,"authored_or_better":10,"authored_current_state":2,"structural_static_pass":10,"reviewed":10,"validated":8,"validated_percent":80.0,"frozen":0,"remaining_hold":["L01-OPI-001","L01-OPI-007"],"next_system_heavy_triage":["L01-OPI-001","L01-OPI-007"]},
+  "next_gate":"SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1"
 }
