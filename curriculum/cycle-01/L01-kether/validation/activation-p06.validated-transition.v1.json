@@ -1,0 +1,14 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P06-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":"L01 Activation slots 061-072",
+  "source_batch":"activation-p06-integrative-human-batch.v1.json",
+  "source_pack":"../authoring/activation-pack-p06-integrative.v1.json",
+  "before":{"AUTHORED":12,"VALIDATED":60,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":72,"FROZEN":0},
+  "lesson_activation_after":{"target":72,"AUTHORED":0,"VALIDATED":72,"VALIDATED_percent":100.0,"FROZEN":0},
+  "global_after":{"AUTHORED":0,"VALIDATED":82,"FROZEN":0,"AUTHORED_OR_BETTER":82},
+  "authority_effect":{"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0,"WATCH_GATE_CANDIDATE_boundaries":"UNCHANGED","VANI_meaning":"NULL_UNCHANGED","VAMUSARO_weekend_gloss_claim":false,"visual_canon_claim":false},
+  "historical_effect":{"historical_reconstruction_claim":false,"historical_SOURCE_CONFIRMED_FROZEN_count":82,"raw_historical_activation_payload_recovered":false},
+  "next_gate":"SWHNK-L01-POST-ACTIVATION-CATEGORY-SELECTION-V1"
+}
