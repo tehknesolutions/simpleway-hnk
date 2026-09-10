@@ -2,8 +2,8 @@
 
 **Data:** 2026-09-10  
 **Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + NUMERIC INFRASTRUCTURE  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V20`  
-**Pacote atual:** `simpleway-hnk@0.23.0`
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V21`  
+**Pacote atual:** `simpleway-hnk@0.24.0`
 
 ## Ciclo 1
 
@@ -25,7 +25,7 @@ Todos os 10 OPI v1.1 estão autorados e revisados. **9/10 estão VALIDATED = 90%
 | 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** |
 | 05 | `EN VALI KUVAN KE` | **VALIDATED** |
 | 06 | `EN KU VALA KE` | **VALIDATED** |
-| 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · **FINAL HOLD** |
+| 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · **FINAL HOLD / BATCH PREPARED** |
 | 08 | `EN KU VAMAVALA KE` | **VALIDATED** |
 | 09 | `EN VAME VAMAZAMU KE` | **VALIDATED** |
 | 10 | `VAMUSARO` context + `EN KU VALA KE` | **VALIDATED** |
@@ -42,62 +42,40 @@ Registry autorado governado `@hnk/linguas/authored`: **14 CANDIDATE forms** — 
 
 Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**.
 
-## OPI 1 — validação por fórmula inteira
+## OPI 1 — validado sem glossário inventado
 
-`KALA YA EN ES KU KE` é uma frase HNK realmente recuperada (`PHR-001`) com glosa aproximada da frase inteira: `What is your name?`.
-
-A arqueologia não recuperou alinhamento token-a-token. Por isso a validação foi deliberadamente feita na unidade da **frase inteira**, não dos tokens individuais.
-
-Fronteiras preservadas:
-
-- `YA` continua sem significado recuperado;
-- `ES` continua sem significado recuperado;
-- `KALA`, `EN`, `KU` e `KE` mantêm apenas análises inferenciais;
-- `PHR-001` continua com certeza `APPROXIMATE`;
-- nenhuma autoridade lexical foi promovida;
-- nenhum lexema novo foi criado;
-- a resposta aceita é o valor nu `[PERSONAL_NAME]`.
-
-Os registros antigos de technical/semantic HOLD permanecem como evidência histórica do estado anterior. A aprovação humana posterior é registrada separadamente no batch e na transição.
+`KALA YA EN ES KU KE` foi validado como fórmula recuperada inteira (`PHR-001`) para uso escopado no OPI 1. `PHR-001` continua `APPROXIMATE`; `YA` e `ES` permanecem semanticamente não resolvidos; os papéis de `KALA`, `EN`, `KU` e `KE` continuam inferenciais. A resposta validada é `[PERSONAL_NAME]`.
 
 ## Sistema numérico 0–99
 
-Os numerais 0–9 são autoria nova governada e continuam `CANDIDATE`:
+Os numerais 0–9 continuam autoria nova `CANDIDATE`: 0 `BIZO`, 1 `DUVE`, 2 `HOYU`, 3 `KETI`, 4 `LUSO`, 5 `MUPI`, 6 `NURA`, 7 `PEVU`, 8 `TOMI`, 9 `ZOKA`.
 
-0 `BIZO`, 1 `DUVE`, 2 `HOYU`, 3 `KETI`, 4 `LUSO`, 5 `MUPI`, 6 `NURA`, 7 `PEVU`, 8 `TOMI`, 9 `ZOKA`.
+A regra `DIGIT_TENS DIGIT_UNITS` está aprovada somente no contexto cardinal do OPI 3 e não cria 100+, ordinais, frações, aritmética ou palavra para ano/anos.
 
-A regra v1.1 de 10–99 está aprovada somente no contexto numérico/cardinal do OPI 3:
-
-`DIGIT_TENS DIGIT_UNITS` → `10 × value(first) + value(second)`.
-
-Exemplos: 10 `DUVE BIZO`, 18 `DUVE TOMI`, 42 `LUSO HOYU`, 99 `ZOKA ZOKA`.
-
-Ela não define 100+, ordinais, frações, aritmética ou palavra para dez, e não é apresentada como gramática histórica recuperada.
-
-## OPI 7 — único HOLD restante
+## OPI 7 — último gate
 
 Pergunta congelada: `Where do you live and who do you live with?`
 
 Design atual:
 
-1. `EN VANI KUVAN KE` — teste para `Where do you live?`
-2. `EN VANI KUON KE` — teste para `Who do you live with?`
+1. `EN VANI KUVAN KE`
+2. `EN VANI KUON KE`
 
-Esse é o último e mais arriscado gate da L01 porque:
+O batch `SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1` está **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-- `VANI` é recuperado, mas seu significado no Master Lexicon continua `null`;
-- a leitura `VANI ≈ live/reside` é uma hipótese semântica autoral, não recuperação;
-- `KUVAN` continua `AUTH-001 CANDIDATE`;
-- `KUON` continua `AUTH-003 CANDIDATE`;
-- `KUON` depende de `LEX-026 ON`, que continua `GATE`;
-- a valência de co-residente é autoria experimental;
-- nenhuma partícula equivalente a inglês `WITH` foi inventada.
+Ele pode levar a L01 a **10/10 VALIDATED = 100%**, mas somente se forem aprovadas cinco decisões escopadas, preservando simultaneamente:
 
-O próximo gate deve, portanto, ser mais rigoroso do que os anteriores: qualquer validação do OPI 7 precisa aprovar explicitamente essas hipóteses **somente para uso escopado no card**, mantendo `VANI.meaning=null`, `ON=GATE`, `KUVAN/KUON=CANDIDATE` e nenhum claim de gramática histórica.
+- `VANI` como `WATCH` com Master Lexicon meaning `null`;
+- `VANI ≈ live/reside` apenas como interpretação de curso, não recuperação histórica;
+- `KUVAN` e `KUON` como `CANDIDATE`;
+- `ON` como `GATE`;
+- valência de co-residente apenas no OPI 7;
+- nenhum lexema equivalente a `WITH`;
+- zero promoção de autoridade e zero mutação do Master Lexicon.
 
 ## Próximo gate
 
-`SWHNK-L01-OPI-007-FINAL-HOLD-REVIEW-V1`
+`SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1`
 
 ## Fronteiras
 
