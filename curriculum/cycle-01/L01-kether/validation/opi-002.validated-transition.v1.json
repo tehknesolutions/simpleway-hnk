@@ -1,0 +1,42 @@
+{
+  "transition_id":"SWHNK-L01-OPI-002-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-002",
+  "before":"AUTHORED",
+  "after":"VALIDATED",
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_002_ONLY",
+  "question":"EN VAMAKALA KE",
+  "answers":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA"},
+  "semantic_model":"NOMINAL_OR_EXISTENTIAL_INTERVIEW_FRAME_NO_HAVE_CALQUE",
+  "language_dependencies":[
+    {"form":"VAMAKALA","id":"LEX-001","authority":"FROZEN","effect":"UNCHANGED"},
+    {"form":"NE","id":"AUTH-004","authority":"CANDIDATE","effect":"NEW_AUTHORED_CANDIDATE_FIRST_SCOPED_USE"},
+    {"form":"EN","authority":"INFERRED_NOT_CANONICAL","effect":"SCOPED_FRAME_ONLY"},
+    {"form":"KE","authority":"INFERRED_NOT_CANONICAL","effect":"SCOPED_FRAME_ONLY"}
+  ],
+  "language_authority_effect":{
+    "VAMAKALA":"FROZEN_UNCHANGED",
+    "NE":"CANDIDATE_UNCHANGED_AFTER_ENTRY",
+    "EN":"INFERRED_NOT_CANONICAL",
+    "KE":"INFERRED_NOT_CANONICAL",
+    "historical_registry_rewritten":false,
+    "HAVE_verb_created":false,
+    "global_negation_rule_granted":false
+  },
+  "historical_claims":{"exact_v1_0_HNK_sentence_recovered":false,"historical_possession_construction_recovered":false,"historical_negation_NE_recovered":false},
+  "remaining_freeze_blockers":[
+    "NE remains CANDIDATE and its broader grammar is not yet governed.",
+    "EN ... KE use here is scoped course grammar, not universal HNK grammar.",
+    "Publication freeze is a separate later gate."
+  ],
+  "provenance":[
+    "opi-002.semantic-review.v1.json",
+    "opi-002-negation-candidate-human-batch.v1.json",
+    "../../../../proposals/language/HNK_NE_NEGATION_ABSENCE_PROPOSAL_V1.json",
+    "../../../../proposals/language/HNK_NEGATION_EXISTENCE_MICROGRAMMAR_V1.json",
+    "../../../../proposals/language/HNK_NE_PROMOTION_RECORD_V1.json",
+    "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs#AUTH-004"
+  ],
+  "progress_effect":{"L01_OPI_validated_before":5,"L01_OPI_validated_after":6,"L01_OPI_validated_percent_after":60.0,"Cycle1_OPI_validated_after":6,"global_validated_slots_after":6},
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1"
+}
