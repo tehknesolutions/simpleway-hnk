@@ -5,6 +5,7 @@ async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,
 
 const notes=await json('curriculum/cycle-01/L01-kether/authoring/teacher-notes.v1.json');
 const batch=await json('curriculum/cycle-01/L01-kether/validation/teacher-notes-human-batch.v1.json');
+const transition=await json('curriculum/cycle-01/L01-kether/validation/teacher-notes.validated-transition.v1.json');
 const evidence=await json('progress/evidence-overrides.v1.json');
 
 assert.equal(notes.lane_id,'SWHNK-L01-TEACHER-NOTES-AUTHORING-V1');
@@ -29,20 +30,24 @@ assert.ok(n3.guidance_pt.some(x=>x.includes('WITH')));
 assert.ok(n3.guidance_pt.some(x=>x.includes('NE VAME VAMAZAMU')));
 assert.ok(n3.guidance_pt.some(x=>x.includes('weekend')));
 
-assert.equal(batch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(batch.decisions_requested.length,4);
-assert.equal(batch.projected_effect_if_all_approved.teacher_notes_VALIDATED,3);
-assert.equal(batch.projected_effect_if_all_approved.global_VALIDATED_after,92);
-assert.equal(batch.projected_effect_if_all_approved.new_HNK_lexical_forms,0);
-assert.equal(batch.projected_effect_if_all_approved.new_HNK_grammar_rules,0);
-assert.equal(batch.projected_effect_if_all_approved.language_authority_promotions,0);
+assert.equal(batch.status,'APPROVED_AND_APPLIED_SCOPED_PEDAGOGICAL_VALIDATION');
+assert.ok(batch.decisions.every(x=>x.decision==='APPROVED_SCOPED'));
+assert.equal(batch.applied_effect.teacher_notes_VALIDATED,3);
+assert.equal(batch.applied_effect.global_VALIDATED_after,92);
+assert.equal(batch.applied_effect.new_HNK_lexical_forms,0);
+assert.equal(batch.applied_effect.new_HNK_grammar_rules,0);
+assert.equal(batch.applied_effect.language_authority_promotions,0);
+assert.equal(transition.status,'APPLIED');
+assert.equal(transition.after.VALIDATED,3);
+assert.equal(transition.global_after.VALIDATED,92);
+assert.equal(transition.authority_effect.historical_note_payload_claim,false);
 
 const v=evidence.validation_evidence;
 assert.equal(v.L01_Teacher_notes_target,3);
-assert.equal(v.L01_Teacher_notes_authored,3);
-assert.equal(v.L01_Teacher_notes_validated,0);
+assert.equal(v.L01_Teacher_notes_authored,0);
+assert.equal(v.L01_Teacher_notes_validated,3);
 assert.equal(v.L01_Teacher_notes_authored_or_better,3);
-assert.equal(v.prepared_teacher_notes_batch,'../curriculum/cycle-01/L01-kether/validation/teacher-notes-human-batch.v1.json');
+assert.equal(v.prepared_teacher_notes_batch,null);
 
-console.log('PASS SWHNK-L01-TEACHER-NOTES-V1');
-console.log('3/3 teacher notes AUTHORED; validation pending; pedagogical guidance only, no new HNK lexicon or grammar.');
+console.log('PASS SWHNK-L01-TEACHER-NOTES-V2');
+console.log('3/3 teacher notes VALIDATED for scoped pedagogical use; source authorship record preserved; no new HNK lexicon, grammar or authority promotion.');
