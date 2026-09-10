@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P05-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":"L01 Activation slots 049-060",
+  "source_pack":"../authoring/activation-pack-p05.v1.json",
+  "approval_batch":"activation-p05-human-batch.v1.json",
+  "before":{"L01_Activation":{"AUTHORED":12,"VALIDATED":48,"FROZEN":0},"global":{"AUTHORED":12,"VALIDATED":58,"FROZEN":0,"AUTHORED_OR_BETTER":70}},
+  "after":{"L01_Activation":{"AUTHORED":0,"VALIDATED":60,"FROZEN":0,"VALIDATED_percent":83.3333,"foundation_VALIDATED":60,"foundation_VALIDATED_percent":100.0},"global":{"AUTHORED":0,"VALIDATED":70,"FROZEN":0,"AUTHORED_OR_BETTER":70}},
+  "validated_slots":[49,50,51,52,53,54,55,56,57,58,59,60],
+  "authority_effect":{"VAME":"GATE_UNCHANGED","VAMAZAMU":"WATCH_UNCHANGED","NE":"CANDIDATE_UNCHANGED","VAMUSARO":"FROZEN_MEANING_REST_LEISURE_PERIOD_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","weekend_gloss_claim":false,"global_preference_grammar":false,"global_negation_grammar":false,"language_authority_promotions":0,"new_lexical_forms":0},
+  "historical_boundary":{"these_are_recovered_v1_drills":false,"historical_slot_count_evidence":72,"raw_historical_payload_recovered":false},
+  "next_gate":"SWHNK-L01-ACTIVATION-INTEGRATIVE-P06-AUTHORING-V1"
+}
