@@ -1,30 +1,34 @@
 {
   "batch_id":"SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
   "scope":"L01 OPI 3 only plus beginner cardinal 10-99 numeric-context rule",
-  "question":{"english":"How old are you?","hnk":"EN KU SARASALA KE","current_state":"AUTHORED_HOLD","SARASALA_authority":"WATCH"},
-  "decisions_requested":[
+  "question":{"english":"How old are you?","hnk":"EN KU SARASALA KE","state_after":"VALIDATED","SARASALA_authority":"WATCH_UNCHANGED"},
+  "decisions":[
     {
       "id":"DEC-AGE-001",
       "statement":"Approve the 0-9 spoken forms BIZO, DUVE, HOYU, KETI, LUSO, MUPI, NURA, PEVU, TOMI, ZOKA for governed beginner numeric use while retaining CANDIDATE authority.",
-      "if_approved":{"authority_promotions":0,"historical_recovery_claim":false}
+      "decision":"APPROVED_SCOPED",
+      "effect":{"authority_promotions":0,"historical_recovery_claim":false}
     },
     {
       "id":"DEC-AGE-002",
       "statement":"Approve DIGIT_TENS DIGIT_UNITS as the v1.1 positional decimal composition for spoken cardinals 10-99 in numeric/cardinal context only.",
+      "decision":"APPROVED_SCOPED",
       "examples":{"10":"DUVE BIZO","18":"DUVE TOMI","42":"LUSO HOYU","99":"ZOKA ZOKA"},
-      "if_approved":{"new_lexemes":0,"rule_scope":"CARDINAL_10_99_NUMERIC_CONTEXT_ONLY","100_plus":false,"ordinals":false}
+      "effect":{"new_lexemes":0,"rule_scope":"CARDINAL_10_99_NUMERIC_CONTEXT_ONLY","100_plus":false,"ordinals":false}
     },
     {
       "id":"DEC-AGE-003",
       "statement":"Accept EN KU SARASALA KE as the governed L01 v1.1 contextual age question, with SARASALA retaining WATCH authority and no claim that this was the recovered historical sentence analysis.",
-      "if_approved":{"SARASALA_authority":"WATCH_UNCHANGED","historical_age_construction_claim":false,"course_use":"APPROVED_L01_OPI003_ONLY"}
+      "decision":"APPROVED_SCOPED",
+      "effect":{"SARASALA_authority":"WATCH_UNCHANGED","historical_age_construction_claim":false,"course_use":"APPROVED_L01_OPI003_ONLY"}
     },
     {
       "id":"DEC-AGE-004",
       "statement":"Accept a bare spoken cardinal 0-99 as a sufficient age answer in this OPI context, without creating an unrecovered HNK word for year/years.",
+      "decision":"APPROVED_SCOPED",
       "examples":{"8":"TOMI","18":"DUVE TOMI","42":"LUSO HOYU"},
-      "if_approved":{"year_unit":null,"answer_schema":"[CARDINAL_0_99]","new_lexemes":0}
+      "effect":{"year_unit":null,"answer_schema":"[CARDINAL_0_99]","new_lexemes":0}
     }
   ],
   "evidence_and_design_sources":[
@@ -40,8 +44,7 @@
     "Does not define 100+, ordinals, fractions or arithmetic language.",
     "Does not affect OPI 1 or OPI 7."
   ],
-  "projected_effect_if_all_approved":{"L01_OPI_validated_before":7,"L01_OPI_validated_after":8,"L01_OPI_validated_percent_after":80.0,"cycle1_OPI_validated_after":8,"global_VALIDATED_slots_after":8,"language_authority_promotions":0,"new_lexical_forms":0,"governed_unique_language_assets":45},
-  "application_rule":"Do not transition L01-OPI-003 to VALIDATED until all four scoped decisions are explicitly approved.",
-  "next_gate_if_approved":"SWHNK-L01-OPI-003-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_OPI003_AUTHORED_HOLD_AND_REVISE_AGE_NUMBER_DESIGN"
+  "applied_effect":{"L01_OPI_validated_before":7,"L01_OPI_validated_after":8,"L01_OPI_validated_percent_after":80.0,"cycle1_OPI_validated_after":8,"global_VALIDATED_slots_after":8,"language_authority_promotions":0,"new_lexical_forms":0,"governed_unique_language_assets":45},
+  "approval_basis":"User explicitly instructed to proceed with the prepared next gate after the batch and its projected effects were presented.",
+  "next_gate":"SWHNK-L01-OPI-003-VALIDATED-TRANSITION-V1"
 }
