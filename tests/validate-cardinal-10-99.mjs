@@ -6,13 +6,14 @@ const proposal = JSON.parse(await readFile(new URL('../proposals/language/HNK_CA
 const digits = {BIZO:0,DUVE:1,HOYU:2,KETI:3,LUSO:4,MUPI:5,NURA:6,PEVU:7,TOMI:8,ZOKA:9};
 function decodeTwoTokenCardinal(hnk) {
   const parts = hnk.split(/\s+/).filter(Boolean);
-  assert.equal(parts.length, 2, '10-99 proposal requires exactly two numeral tokens');
+  assert.equal(parts.length, 2, '10-99 scoped rule requires exactly two numeral tokens');
   assert.ok(parts[0] in digits && parts[1] in digits, 'unknown numeral token');
   assert.notEqual(digits[parts[0]], 0, 'leading zero is outside 10-99 range');
   return digits[parts[0]] * 10 + digits[parts[1]];
 }
 
-assert.equal(proposal.status, 'AUTHORING_RULE_PROPOSAL_NOT_CANON');
+assert.equal(proposal.status, 'APPROVED_FOR_SCOPED_L01_OPI003_NUMERIC_CONTEXT_NOT_GLOBAL_CANON');
+assert.equal(proposal.approved_course_scope, 'SIMPLEWAY_HNK_L01_OPI_003_ONLY');
 assert.equal(proposal.rule.schema, 'DIGIT_TENS DIGIT_UNITS');
 assert.equal(proposal.rule.semantic_interpretation, '10 × value(first) + value(second)');
 assert.equal(proposal.rule.domain_requirement, 'NUMERIC_CARDINAL_CONTEXT');
@@ -28,15 +29,20 @@ assert.equal(decodeTwoTokenCardinal('DUVE TOMI'), 18);
 assert.equal(decodeTwoTokenCardinal('LUSO HOYU'), 42);
 assert.equal(decodeTwoTokenCardinal('ZOKA ZOKA'), 99);
 
-assert.equal(proposal.age_application_proposal.year_unit, null);
-assert.equal(proposal.age_application_proposal.SARASALA_authority, 'WATCH_UNCHANGED');
-assert.equal(proposal.age_application_proposal.OPI3_validation_implied, false);
+assert.equal(proposal.age_application.year_unit, null);
+assert.equal(proposal.age_application.SARASALA_authority, 'WATCH_UNCHANGED');
+assert.equal(proposal.age_application.OPI3_validation, 'APPLIED');
+assert.equal(proposal.age_application.answer_schema, '[CARDINAL_0_99]');
 assert.equal(proposal.boundaries.numeral_primitives_remain_CANDIDATE, true);
 assert.equal(proposal.boundaries.recovered_lexicon_changed, false);
 assert.equal(proposal.boundaries.base12_claim, false);
 assert.equal(proposal.boundaries['100_plus_rule_created'], false);
-assert.equal(proposal.projected_effect_if_approved_rule_only.L01_OPI_validated, 7);
-assert.equal(proposal.projected_effect_if_rule_and_age_application_approved.L01_OPI_validated_after, 8);
+assert.equal(proposal.boundaries.ordinal_rule_created, false);
+assert.equal(proposal.boundaries.global_productivity_granted, false);
+assert.equal(proposal.current_effect.new_lexical_forms, 0);
+assert.equal(proposal.current_effect.governed_unique_language_assets, 45);
+assert.equal(proposal.current_effect.L01_OPI_validated, 8);
+assert.equal(proposal.current_effect.language_authority_promotions, 0);
 
-console.log('PASS SWHNK-HNK-CARDINAL-10-99-V1');
-console.log('10-99 positional proposal is deterministic and creates no new lexemes; OPI3 remains HOLD until explicit human approval of the age application.');
+console.log('PASS SWHNK-HNK-CARDINAL-10-99-V2');
+console.log('10-99 positional rule is approved only for L01 OPI3 numeric/cardinal use; it creates no lexemes, grants no 100+/ordinal/global grammar, and supports the validated bare-cardinal age answer.');
