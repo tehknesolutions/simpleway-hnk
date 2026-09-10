@@ -1,42 +1,47 @@
 {
   "batch_id":"SWHNK-L01-OPI-002-NEGATION-CANDIDATE-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
   "scope":["L01-OPI-002"],
   "english_prompt":"Do you have a nickname?",
   "current_question":"EN VAMAKALA KE",
-  "proposed_answers":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA"},
-  "decisions_requested":[
+  "approved_answers":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA"},
+  "decisions":[
     {
       "id":"DEC-L01-OPI002-001",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept EN VAMAKALA KE as a governed L01 v1.1 nominal/interview question functionally equivalent to Do you have a nickname?, without claiming a recovered HAVE/possession construction.",
-      "if_approved":{"historical_possession_claim":false,"grammar_scope":"L01-OPI-002_ONLY","EN_subject_vs_possessive_historical_analysis":"UNRESOLVED"}
+      "applied":{"historical_possession_claim":false,"grammar_scope":"L01-OPI-002_ONLY","EN_subject_vs_possessive_historical_analysis":"UNRESOLVED"}
     },
     {
       "id":"DEC-L01-OPI002-002",
+      "decision":"APPROVED_SCOPED",
       "statement":"Approve new authored form NE as the v1.1 negation/absence primitive, entering @hnk/linguas/authored at CANDIDATE authority only.",
-      "if_approved":{"form":"NE","authority":"CANDIDATE","historical_recovery_claim":false,"glyph_ids":["G12","G02"],"global_productivity":"NOT_GRANTED"}
+      "applied":{"form":"NE","canonical_id":"AUTH-004","authority":"CANDIDATE","historical_recovery_claim":false,"glyph_ids":["G12","G02"],"global_productivity":"NOT_GRANTED"}
     },
     {
       "id":"DEC-L01-OPI002-003",
+      "decision":"APPROVED_SCOPED",
       "statement":"Accept [NICKNAME] as the affirmative answer and NE VAMAKALA as the negative/no-nickname response for this card.",
-      "if_approved":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA","HAVE_verb_created":false}
+      "applied":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA","HAVE_verb_created":false}
     }
   ],
   "evidence":{
     "VAMAKALA":{"id":"LEX-001","authority":"FROZEN","meaning":"nickname / familiar name"},
-    "question_frame":"EN ... KE already has scoped precedent in validated L01 cards, but no possession meaning is retroactively assigned here.",
+    "question_frame":"EN ... KE has scoped precedent in validated L01 cards; this approval does not assign historical possession semantics.",
     "negation_proposal":"../../../../proposals/language/HNK_NE_NEGATION_ABSENCE_PROPOSAL_V1.json",
-    "microgrammar":"../../../../proposals/language/HNK_NEGATION_EXISTENCE_MICROGRAMMAR_V1.json"
+    "microgrammar":"../../../../proposals/language/HNK_NEGATION_EXISTENCE_MICROGRAMMAR_V1.json",
+    "promotion_record":"../../../../proposals/language/HNK_NE_PROMOTION_RECORD_V1.json"
   },
   "explicit_non_effects":[
     "Does not create or recover a HAVE verb.",
     "Does not assign YA or ES to possession.",
     "Does not claim EN is historically a possessive marker.",
     "Does not mark NE as recovered historical HNK.",
-    "Does not promote NE above CANDIDATE on first entry.",
+    "Does not promote NE above CANDIDATE.",
+    "Does not grant NE global productivity.",
     "Does not freeze OPI 2."
   ],
-  "projected_effect_if_all_decisions_approved":{
+  "applied_effect":{
     "L01_OPI_authored_or_better":10,
     "L01_OPI_validated_before":5,
     "L01_OPI_validated_after":6,
@@ -47,9 +52,9 @@
     "global_validated_percent_after":0.5952,
     "authored_language_candidates_before":3,
     "authored_language_candidates_after":4,
-    "governed_unique_language_assets_after":35
+    "governed_unique_language_assets_after":35,
+    "language_authority_changes_beyond_new_candidate":0
   },
-  "application_rule":"Do not register NE canonically or transition OPI 2 to VALIDATED unless explicit human approval is recorded for this exact batch or equivalent scoped decisions.",
-  "next_gate_if_approved":"SWHNK-HNK-NE-CANDIDATE-PROMOTION-AND-OPI002-VALIDATION-V1",
-  "next_gate_if_not_approved":"KEEP_OPI_002_AUTHORED_HOLD"
+  "approval_boundary":"Scoped course approval authorizes this OPI 2 microgrammar and AUTH-004 first use only; it is not historical recovery or universal HNK grammar.",
+  "next_gate":"SWHNK-L01-OPI-002-VALIDATED-TRANSITION-V1"
 }
