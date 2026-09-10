@@ -1,16 +1,16 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V17`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V18`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.20.0`
+**Current package:** `simpleway-hnk@0.21.0`
 
 ## Progress
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 - `MISSING`: **998/1,008 = 99.0079%**
-- `AUTHORED`: **3/1,008 = 0.2976%**
-- `VALIDATED`: **7/1,008 = 0.6944%**
+- `AUTHORED`: **2/1,008 = 0.1984%**
+- `VALIDATED`: **8/1,008 = 0.7937%**
 - reproducible `FROZEN`: **0/1,008**
 - `AUTHORED_OR_BETTER`: **10/1,008 = 0.9921%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
@@ -19,44 +19,37 @@ Cycle 1 target: **1,008 pedagogical slots**.
 
 - authored-or-better: **10/10 = 100%**
 - reviewed: **10/10 = 100%**
-- validated: **7/10 = 70%**
+- validated: **8/10 = 80%**
 - frozen: **0/10**
 
-Validated: **2, 4, 5, 6, 8, 9, 10**.  
-HOLD: **1, 3, 7**.
+Validated: **2, 3, 4, 5, 6, 8, 9, 10**.  
+HOLD: **1, 7**.
 
 ## Language assets
 
 Recovered Cycle 1 forms remain **31/144 = 21.5278% proxy**.
 
-Canonical authored candidates are now **14**:
-
-`KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
+Canonical authored candidates: **14** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
 
 Governed unique language assets: **45/144 = 31.25% proxy**.
 
 The ten numerals are newly authored `CANDIDATE` primitives; none is historical recovery or FROZEN.
 
-## Spoken HNK numerals 0–9
+## OPI 3 — validated age/cardinal lane
 
-| Value | HNK | Registry |
-|---:|---|---|
-| 0 | `BIZO` | AUTH-005 |
-| 1 | `DUVE` | AUTH-006 |
-| 2 | `HOYU` | AUTH-007 |
-| 3 | `KETI` | AUTH-008 |
-| 4 | `LUSO` | AUTH-009 |
-| 5 | `MUPI` | AUTH-010 |
-| 6 | `NURA` | AUTH-011 |
-| 7 | `PEVU` | AUTH-012 |
-| 8 | `TOMI` | AUTH-013 |
-| 9 | `ZOKA` | AUTH-014 |
+Question:
 
-All remain `CANDIDATE`. Registration did not validate OPI 3.
+`EN KU SARASALA KE`
 
-## Cardinal 10–99 proposal
+`SARASALA` remains `WATCH = time/duration`.
 
-Prepared rule, **not yet canonically approved**:
+Approved scoped answer design:
+
+- 8 → `TOMI`
+- 18 → `DUVE TOMI`
+- 42 → `LUSO HOYU`
+
+For 10–99, the scoped v1.1 rule is:
 
 `DIGIT_TENS DIGIT_UNITS`
 
@@ -64,41 +57,25 @@ Interpretation in numeric/cardinal context:
 
 `10 × value(first) + value(second)`
 
-Examples:
+Examples: `DUVE BIZO` = 10, `DUVE TOMI` = 18, `LUSO HOYU` = 42, `ZOKA ZOKA` = 99.
 
-- 10 → `DUVE BIZO`
-- 18 → `DUVE TOMI`
-- 42 → `LUSO HOYU`
-- 99 → `ZOKA ZOKA`
+This rule is approved **only for the L01 OPI 3 numeric/cardinal context**. It does not create a TEN morpheme, year/years lexeme, 100+ grammar, ordinals or historical-number-system claim. Numeral primitives remain `CANDIDATE`; `SARASALA` remains `WATCH`.
 
-This creates no new lexical forms, no TEN morpheme, no 100+ rule and no claim of historical number grammar.
+## Remaining HOLD triage
 
-## OPI 3 — next gate
+### OPI 1
 
-Current question:
+`KALA YA EN ES KU KE` is an actually recovered phrase with approximate whole-sentence gloss `What is your name?`. `YA` and `ES` still have no recovered token-level meanings. The promising next route is **whole-utterance validation**: approve the recovered phrase as an indivisible beginner formula without assigning invented meanings to its unresolved tokens.
 
-`EN KU SARASALA KE`
+### OPI 7
 
-`SARASALA` remains `WATCH` with recovered meaning time/duration.
+`EN VANI KUVAN KE` + `EN VANI KUON KE` remains the highest-risk card. `VANI` is recovered but its meaning is still `null`; `live/reside` is only a semantic hypothesis. `KUON` remains CANDIDATE and depends on `ON=GATE`; co-resident valency is authored/test-only.
 
-Prepared answer design:
+## Next gate
 
-- 8 → `TOMI`
-- 18 → `DUVE TOMI`
-- 42 → `LUSO HOYU`
+`SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1`
 
-No word for year/years is introduced; the proposal uses a bare cardinal because the OPI context already supplies the age domain.
-
-Prepared human gate:
-
-`SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1`
-
-If all scoped decisions are approved, OPI 3 can move to `VALIDATED`, taking L01 to **8/10 = 80%** without any language-authority promotion.
-
-## Remaining HOLD after that projected transition
-
-- OPI 1 — historical `YA/ES` token alignment unresolved.
-- OPI 7 — `VANI` meaning null + `KUON/ON=GATE` + co-resident valency.
+Recommended first target: OPI 1 whole-utterance validation, because it preserves the historical recovered phrase exactly and can avoid inventing token meanings.
 
 ## CI boundary
 
