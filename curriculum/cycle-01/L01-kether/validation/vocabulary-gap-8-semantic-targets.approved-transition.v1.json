@@ -1,0 +1,11 @@
+{
+  "transition_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-APPROVED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-10",
+  "source_batch":"./vocabulary-gap-8-semantic-targets-human-batch.v1.json",
+  "before":{"semantic_targets_proposed":8,"semantic_targets_approved":0,"forms_selected":0,"vocabulary_missing":8},
+  "after":{"semantic_targets_proposed":8,"semantic_targets_approved":8,"forms_selected":0,"vocabulary_missing":8},
+  "approved_targets":["PERSONAL_NAME_DOMAIN","FIRST_PERSON_REFERENT","SECOND_PERSON_REFERENT","CONTENT_SELECTOR","QUESTION_OPERATOR","RESIDENCE_LIVE","PREFERENCE_LIKE","SPEAK_LANGUAGE_USE"],
+  "explicit_non_effects":{"vocabulary_slot_state_changes":0,"new_HNK_lexical_forms":0,"canonical_registry_entries":0,"language_authority_promotions":0,"historical_token_glosses_created":0},
+  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-REVIEW-V1"
+}
