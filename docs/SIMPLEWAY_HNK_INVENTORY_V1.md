@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION COMPLETE + STRUCTURE LANE AUTHORED  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V31`  
-**Pacote atual:** `simpleway-hnk@0.34.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + OPI/ACTIVATION/STRUCTURES COMPLETE + TEACHER NOTES AUTHORED  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V32`  
+**Pacote atual:** `simpleway-hnk@0.35.0`
 
 ## Ciclo 1
 
@@ -11,52 +11,49 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-## L01 — OPI e Activation completos em validação
+## L01 — núcleo validado
 
 - OPI: **10/10 VALIDATED = 100%**;
-- Activation foundation: **60/60 VALIDATED = 100%**;
-- Activation integrative: **12/12 VALIDATED = 100%**;
-- Activation total: **72/72 VALIDATED = 100%**.
+- Activation: **72/72 VALIDATED = 100%**;
+- Structure headers: **2/2 VALIDATED = 100%**;
+- Structures: **5/5 VALIDATED = 100%**.
 
-P01–P06 são autoria governada v1.1 derivada dos OPI validados. A release histórica comprova 72 slots de drills, mas o payload bruto histórico continua não recuperado.
+A validação estrutural continua escopada à L01 v1.1. Os cinco frames não são declarados gramática histórica universal. `YA/ES` seguem sem glosa token-a-token; `KUVAN` permanece CANDIDATE; `VAME` GATE; `VAMAZAMU` WATCH; `NE` CANDIDATE; `VANI` WATCH com meaning histórico `null`.
 
-## L01 Structure lane — 7/7 AUTHORED
+## L01 Teacher Notes — 3/3 AUTHORED
 
-A fonte canônica confirma a quantidade de **2 headers + 5 structures**, não seus payloads históricos. Os sete itens atuais são autoria v1.1 nova:
+Não foi recuperado texto histórico para as três orientações docentes. A fonte confirma apenas a quantidade de 3 slots por lição. Os textos atuais são autoria pedagógica governada v1.1:
 
-- `L01-HDR-001` — Fórmulas de entrevista e perguntas nominais;
-- `L01-HDR-002` — Perguntas produtivas escopadas: conteúdo, localização e preferência;
-- `L01-STR-001` — `KALA YA EN ES KU KE` como fórmula inteira;
-- `L01-STR-002` — `EN + DOMAIN + KE`;
-- `L01-STR-003` — `EN + KU + DOMAIN + KE`;
-- `L01-STR-004` — `EN + DOMAIN + KUVAN + KE`;
-- `L01-STR-005` — `EN + VAME + CONTENT + KE`.
+- `L01-NOTE-001` — **Proveniência e autoridade linguística**: separa material recuperado, autoria governada e validação pedagógica;
+- `L01-NOTE-002` — **Sequência pedagógica recomendada**: OPI intent → foundation Activation → scoped structure frame → integrative Activation;
+- `L01-NOTE-003` — **Correção, resposta e limites de expansão**: corrige pelo payload/schema validado e proíbe completar frases com léxico ou gramática não governados.
 
-Fronteiras preservadas: nenhuma gramática universal histórica é reivindicada; `YA/ES` permanecem sem glosa token-a-token; `KUVAN` permanece CANDIDATE; `VAME` GATE; `VAMAZAMU` WATCH; `NE` CANDIDATE; `VANI` WATCH com meaning histórico `null`.
+Essas notas criam **zero novas formas HNK** e **zero novas regras gramaticais**.
 
-Gate preparado: `SWHNK-L01-STRUCTURE-LANE-VALIDATION-V1`.
+Gate preparado: `SWHNK-L01-TEACHER-NOTES-VALIDATION-V1`.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
+- Teacher Notes AUTHORED: **3**;
 - OPI VALIDATED: **10**;
+- Structure Headers VALIDATED: **2**;
+- Structures VALIDATED: **5**;
 - Activation VALIDATED: **72**;
-- Structure headers AUTHORED: **2**;
-- Structures AUTHORED: **5**;
-- total authored-or-better: **89/155 = 57.4194%**;
-- total VALIDATED: **82/155 = 52.9032%**;
-- remaining missing/unimplemented: **66**.
+- total authored-or-better: **92/155 = 59.3548%**;
+- total VALIDATED: **89/155 = 57.4194%**;
+- remaining missing/unimplemented: **63**.
 
-Categorias restantes após a lane estrutural: 3 teacher notes, 5 stories, 4 Q&A, 32 vocabulary e 22 review.
+Categorias restantes após Teacher Notes: **5 stories, 4 Q&A, 32 vocabulary e 22 review**.
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**919 MISSING + 7 AUTHORED + 82 VALIDATED + 0 FROZEN = 1.008**.
+**916 MISSING + 3 AUTHORED + 89 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **89/1.008 = 8.8294%**.
+Cumulativo authored-or-better: **92/1.008 = 9.1270%**.
 
 Historical evidence: **82/1.008 = 8.1349%**, em eixo separado da implementação atual.
 
