@@ -1,0 +1,33 @@
+{
+  "transition_id":"SWHNK-L01-OPI-003-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-003",
+  "before":"AUTHORED",
+  "after":"VALIDATED",
+  "question":{"english":"How old are you?","hnk":"EN KU SARASALA KE"},
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_003_ONLY",
+  "answer_schema":"[CARDINAL_0_99]",
+  "examples":{"8":"TOMI","18":"DUVE TOMI","42":"LUSO HOYU"},
+  "language_authority_effect":{
+    "SARASALA":"WATCH_UNCHANGED",
+    "BIZO":"CANDIDATE_UNCHANGED","DUVE":"CANDIDATE_UNCHANGED","HOYU":"CANDIDATE_UNCHANGED","KETI":"CANDIDATE_UNCHANGED","LUSO":"CANDIDATE_UNCHANGED","MUPI":"CANDIDATE_UNCHANGED","NURA":"CANDIDATE_UNCHANGED","PEVU":"CANDIDATE_UNCHANGED","TOMI":"CANDIDATE_UNCHANGED","ZOKA":"CANDIDATE_UNCHANGED"
+  },
+  "grammar_effect":{
+    "cardinal_10_99":"APPROVED_FOR_NUMERIC_CONTEXT_ONLY",
+    "schema":"DIGIT_TENS DIGIT_UNITS",
+    "year_unit":null,
+    "100_plus":"NOT_GRANTED",
+    "ordinals":"NOT_GRANTED",
+    "historical_number_system_claim":false,
+    "historical_age_construction_claim":false
+  },
+  "freeze_blockers":[
+    "SARASALA remains WATCH.",
+    "Numeral primitives remain authored CANDIDATE forms.",
+    "The 10-99 rule is scoped course grammar, not recovered historical grammar.",
+    "No year/years lexeme exists; bare-cardinal answer depends on OPI context.",
+    "Publication freeze remains a separate gate."
+  ],
+  "progress":{"L01_OPI_validated":8,"L01_OPI_validated_percent":80.0,"cycle1_OPI_validated":8,"global_VALIDATED_slots":8},
+  "provenance":["opi-003-age-cardinal-human-batch.v1.json","opi-003.semantic-review.v1.json","../../../../proposals/language/HNK_CARDINAL_10_99_POSITIONAL_COMPOSITION_V1.json","../../../../proposals/language/HNK_SPOKEN_NUMERAL_0_9_PROMOTION_RECORD_V1.json"]
+}
