@@ -1,0 +1,15 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P04-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":"L01 Activation slots 037-048 only",
+  "source_pack":"../authoring/activation-pack-p04.v1.json",
+  "source_batch":"activation-p04-human-batch.v1.json",
+  "before":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":12,"FROZEN":0},
+  "lesson_activation_after":{"target":72,"AUTHORED":0,"VALIDATED":48,"AUTHORED_OR_BETTER":48,"FROZEN":0,"remaining_unimplemented":24},
+  "global_after":{"target":1008,"AUTHORED":0,"VALIDATED":58,"FROZEN":0,"AUTHORED_OR_BETTER":58},
+  "authority_effect":{"VANI":"WATCH_UNCHANGED_MEANING_NULL","KUVAN":"CANDIDATE_UNCHANGED","KUON":"CANDIDATE_UNCHANGED","ON":"GATE_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","language_authority_promotions":0,"new_HNK_lexical_forms":0,"WITH_lexeme_created":false},
+  "historical_boundary":{"reconstructed_historical_drills":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"},
+  "visual_boundary":{"GIDs_structural_authority":true,"candidate_D_visual_canon":false},
+  "next_gate":"SWHNK-L01-ACTIVATION-P05-AUTHORING-V1"
+}
