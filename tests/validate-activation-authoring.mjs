@@ -8,19 +8,18 @@ const p01 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack
 const p02 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p02.v1.json');
 const p03 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p03.v1.json');
 const p04 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p04.v1.json');
-const p04Batch = await json('curriculum/cycle-01/L01-kether/validation/activation-p04-human-batch.v1.json');
-const p04Transition = await json('curriculum/cycle-01/L01-kether/validation/activation-p04.validated-transition.v1.json');
 const p05 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p05.v1.json');
 const p05Batch = await json('curriculum/cycle-01/L01-kether/validation/activation-p05-human-batch.v1.json');
+const p05Transition = await json('curriculum/cycle-01/L01-kether/validation/activation-p05.validated-transition.v1.json');
+const p06 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p06-integrative.v1.json');
+const p06Batch = await json('curriculum/cycle-01/L01-kether/validation/activation-p06-integrative-human-batch.v1.json');
 const evidence = await json('progress/evidence-overrides.v1.json');
-const bindings = await json('curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json');
 
-assert.equal(pipeline.target, 72);
-assert.equal(pipeline.historical_evidence.historical_drill_count, 72);
-assert.equal(pipeline.historical_evidence.raw_drill_payload_recovered, false);
-assert.equal(pipeline.historical_evidence.content_reconstruction_claim, false);
-assert.equal(pipeline.allocation.foundation.slots, 60);
-assert.equal(pipeline.allocation.integrative.slots, 12);
+assert.equal(pipeline.target,72);
+assert.equal(pipeline.historical_evidence.historical_drill_count,72);
+assert.equal(pipeline.historical_evidence.raw_drill_payload_recovered,false);
+assert.equal(pipeline.allocation.foundation.slots,60);
+assert.equal(pipeline.allocation.integrative.slots,12);
 
 for (const [pack,start,end] of [[p01,1,12],[p02,13,24],[p03,25,36],[p04,37,48],[p05,49,60]]) {
   assert.deepEqual(pack.slots,[start,end]);
@@ -29,55 +28,54 @@ for (const [pack,start,end] of [[p01,1,12],[p02,13,24],[p03,25,36],[p04,37,48],[
   assert.equal(pack.historical_claim.these_are_recovered_v1_drills,false);
 }
 
-assert.equal(p04Batch.status,'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
-assert.ok(p04Batch.decisions.every(x => x.decision === 'APPROVED_SCOPED'));
-assert.equal(p04Transition.status,'APPLIED');
-assert.equal(p04Transition.lesson_activation_after.VALIDATED,48);
-assert.equal(p04Transition.authority_effect.VANI,'WATCH_UNCHANGED_MEANING_NULL');
-assert.equal(p04Transition.authority_effect.KUVAN,'CANDIDATE_UNCHANGED');
-assert.equal(p04Transition.authority_effect.KUON,'CANDIDATE_UNCHANGED');
-assert.equal(p04Transition.authority_effect.ON,'GATE_UNCHANGED');
-assert.equal(p04Transition.authority_effect.VAMAVALA,'WATCH_UNCHANGED');
-assert.equal(p04Transition.authority_effect.WITH_lexeme_created,false);
-assert.equal(p04Transition.authority_effect.language_authority_promotions,0);
+assert.equal(p05Batch.status,'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
+assert.ok(p05Batch.decisions.every(x=>x.decision==='APPROVED_SCOPED'));
+assert.equal(p05Transition.status,'APPLIED');
+assert.equal(p05Transition.after.L01_Activation.VALIDATED,60);
+assert.equal(p05Transition.after.L01_Activation.foundation_VALIDATED,60);
+assert.equal(p05Transition.after.L01_Activation.foundation_VALIDATED_percent,100);
+assert.equal(p05Transition.authority_effect.VAME,'GATE_UNCHANGED');
+assert.equal(p05Transition.authority_effect.VAMAZAMU,'WATCH_UNCHANGED');
+assert.equal(p05Transition.authority_effect.NE,'CANDIDATE_UNCHANGED');
+assert.equal(p05Transition.authority_effect.weekend_gloss_claim,false);
+assert.equal(p05Transition.authority_effect.language_authority_promotions,0);
 
-assert.equal(p05.pack_id,'SWHNK-L01-ACTIVATION-P05-049-060-AUTHORING-V1');
-assert.equal(p05.status,'AUTHORED_12_OF_12_VALIDATION_PENDING');
-assert.deepEqual(p05.source_opi,['L01-OPI-009','L01-OPI-010']);
-assert.deepEqual(p05.drills.map(x => x.id),Array.from({length:12},(_,i)=>`L01-ACT-${String(i+49).padStart(3,'0')}`));
-assert.equal(p05.foundation_completion_after_authoring.foundation_authored_or_better,60);
-assert.equal(p05.foundation_completion_after_authoring.percent,100);
+assert.equal(p06.pack_id,'SWHNK-L01-ACTIVATION-P06-061-072-INTEGRATIVE-AUTHORING-V1');
+assert.equal(p06.status,'AUTHORED_12_OF_12_VALIDATION_PENDING');
+assert.deepEqual(p06.slots,[61,72]);
+assert.equal(p06.pack_type,'INTEGRATIVE');
+assert.equal(p06.drills.length,12);
+assert.deepEqual(p06.drills.map(x=>x.id),Array.from({length:12},(_,i)=>`L01-ACT-${String(i+61).padStart(3,'0')}`));
+assert.equal(p06.metrics.new_HNK_lexical_forms,0);
+assert.equal(p06.metrics.new_HNK_grammar_rules,0);
+assert.equal(p06.metrics.source_OPI_count,10);
+assert.equal(p06.activation_completion_after_authoring.activation_authored_or_better,72);
+assert.equal(p06.activation_completion_after_authoring.percent,100);
+assert.ok(p06.drills.every(x=>x.new_HNK_grammar===false || x.id==='L01-ACT-069'));
+assert.equal(p06.drills.find(x=>x.id==='L01-ACT-072').mode,'FULL_L01_INTERVIEW_CAPSTONE');
+assert.ok(p06.drills.find(x=>x.id==='L01-ACT-072').constraints.some(x=>x.includes('Create no new HNK conjunction')));
 
-const opi9 = bindings.bindings.find(x => x.slot_id === 'L01-OPI-009');
-const opi10 = bindings.bindings.find(x => x.slot_id === 'L01-OPI-010');
-assert.equal(opi9.implementation_state,'VALIDATED');
-assert.equal(opi10.implementation_state,'VALIDATED');
-const d9=p05.drills.filter(x=>x.source_opi==='L01-OPI-009');
-const d10=p05.drills.filter(x=>x.source_opi==='L01-OPI-010');
-assert.equal(d9.length,6); assert.equal(d10.length,6);
-assert.ok(d9.every(x=>x.hnk==='EN VAME VAMAZAMU KE'));
-assert.equal(p05.drills.find(x=>x.id==='L01-ACT-053').expected.positive,'VAME VAMAZAMU');
-assert.equal(p05.drills.find(x=>x.id==='L01-ACT-053').expected.negative,'NE VAME VAMAZAMU');
-assert.ok(d10.every(x=>x.hnk==='EN KU VALA KE'));
-assert.ok(d10.every(x=>x.hnk_context==='VAMUSARO'));
-assert.equal(p05.drills.find(x=>x.id==='L01-ACT-059').response_schema,'[ACTIVITY_DESCRIPTION]');
-
-assert.equal(p05Batch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(p05Batch.decisions_requested.length,5);
-assert.equal(p05Batch.projected_effect_if_all_approved.L01_Activation_VALIDATED_after,60);
-assert.equal(p05Batch.projected_effect_if_all_approved.foundation_VALIDATED_after,60);
-assert.equal(p05Batch.projected_effect_if_all_approved.new_lexical_forms,0);
-assert.equal(p05Batch.projected_effect_if_all_approved.language_authority_promotions,0);
+assert.equal(p06Batch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(p06Batch.decisions_requested.length,5);
+assert.equal(p06Batch.projected_effect_if_all_approved.L01_Activation_VALIDATED_after,72);
+assert.equal(p06Batch.projected_effect_if_all_approved.new_lexical_forms,0);
+assert.equal(p06Batch.projected_effect_if_all_approved.new_HNK_grammar_rules,0);
+assert.equal(p06Batch.projected_effect_if_all_approved.language_authority_promotions,0);
 
 const v=evidence.validation_evidence;
+assert.equal(v.L01_Activation_target,72);
 assert.equal(v.L01_Activation_authored,12);
-assert.equal(v.L01_Activation_validated,48);
-assert.equal(v.L01_Activation_authored_or_better,60);
-assert.equal(v.L01_Activation_remaining_unimplemented,12);
-assert.equal(v.L01_Activation_foundation_authored_or_better,60);
+assert.equal(v.L01_Activation_validated,60);
+assert.equal(v.L01_Activation_authored_or_better,72);
+assert.equal(v.L01_Activation_remaining_unimplemented,0);
+assert.equal(v.L01_Activation_foundation_validated,60);
 assert.equal(v.L01_Activation_foundation_percent,100);
-assert.deepEqual(v.L01_Activation_authored_slots,Array.from({length:12},(_,i)=>i+49));
-assert.deepEqual(v.L01_Activation_validated_slots,Array.from({length:48},(_,i)=>i+1));
+assert.equal(v.L01_Activation_integrative_target,12);
+assert.equal(v.L01_Activation_integrative_authored,12);
+assert.equal(v.L01_Activation_integrative_validated,0);
+assert.deepEqual(v.L01_Activation_authored_slots,Array.from({length:12},(_,i)=>i+61));
+assert.deepEqual(v.L01_Activation_validated_slots,Array.from({length:60},(_,i)=>i+1));
+assert.equal(v.prepared_activation_batch,'../curriculum/cycle-01/L01-kether/validation/activation-p06-integrative-human-batch.v1.json');
 
-console.log('PASS SWHNK-L01-ACTIVATION-PIPELINE-V5');
-console.log('P01-P04 VALIDATED 48/72; P05 AUTHORED 12/12; foundation 60/60 authored-or-better; 60/72 Activation mature; no historical reconstruction or authority inflation.');
+console.log('PASS SWHNK-L01-ACTIVATION-PIPELINE-V6');
+console.log('P01-P05 VALIDATED 60/72; P06 integrative AUTHORED 12/12; Activation 72/72 authored-or-better; foundation 60/60 validated; no historical reconstruction or authority inflation.');
