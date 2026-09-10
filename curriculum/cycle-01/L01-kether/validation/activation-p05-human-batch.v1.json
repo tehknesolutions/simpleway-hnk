@@ -1,20 +1,19 @@
 {
   "batch_id":"SWHNK-L01-ACTIVATION-P05-VALIDATION-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
   "scope":"L01 Activation slots 049-060 only",
   "source_pack":"../authoring/activation-pack-p05.v1.json",
   "source_opi":["L01-OPI-009","L01-OPI-010"],
-  "current_state":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
-  "decisions_requested":[
-    {"id":"DEC-ACT-P05-001","statement":"Approve the established six-mode Activation cycle for OPI 9 and 10 in slots 049-060 without declaring the pedagogical pattern universal HNK grammar.","if_approved":{"pedagogical_pattern":"APPROVED_P05_ONLY","global_activation_template_claim":false}},
-    {"id":"DEC-ACT-P05-002","statement":"Approve slots 049-054 as drills of EN VAME VAMAZAMU KE with validated positive/negative response patterns, preserving VAME=GATE, VAMAZAMU=WATCH and NE=CANDIDATE.","if_approved":{"OPI9_drills_validated":6,"VAME_authority":"GATE_UNCHANGED","VAMAZAMU_authority":"WATCH_UNCHANGED","NE_authority":"CANDIDATE_UNCHANGED","global_preference_grammar":false,"global_negation_grammar":false}},
-    {"id":"DEC-ACT-P05-003","statement":"Approve slots 055-060 as drills of context VAMUSARO plus EN KU VALA KE, preserving VAMUSARO as rest/leisure period, not weekend, and VALA=CANDIDATE.","if_approved":{"OPI10_drills_validated":6,"VAMUSARO_meaning":"REST_LEISURE_PERIOD_UNCHANGED","weekend_gloss_claim":false,"VALA_authority":"CANDIDATE_UNCHANGED","context_must_remain_visible":true}},
-    {"id":"DEC-ACT-P05-004","statement":"Approve TRACE_GIDS as structural G-ID training only, with Candidate D drawings remaining PREPRODUCTION_NOT_OFFICIAL.","if_approved":{"GID_training":"APPROVED_P05_ONLY","visual_canon_claim":false}},
-    {"id":"DEC-ACT-P05-005","statement":"Confirm P05 is new SimpleWay HNK v1.1 authorship derived from validated OPI and is not reconstruction of the missing historical Activation payload.","if_approved":{"historical_reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"}}
+  "approval_source":"Explicit user approval via SIGA on 2026-09-10 after the batch and projected effects were presented.",
+  "before":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "decisions":[
+    {"id":"DEC-ACT-P05-001","decision":"APPROVED_SCOPED","effect":{"pedagogical_pattern":"APPROVED_P05_ONLY","global_activation_template_claim":false}},
+    {"id":"DEC-ACT-P05-002","decision":"APPROVED_SCOPED","effect":{"OPI9_drills_validated":6,"VAME_authority":"GATE_UNCHANGED","VAMAZAMU_authority":"WATCH_UNCHANGED","NE_authority":"CANDIDATE_UNCHANGED","global_preference_grammar":false,"global_negation_grammar":false}},
+    {"id":"DEC-ACT-P05-003","decision":"APPROVED_SCOPED","effect":{"OPI10_drills_validated":6,"VAMUSARO_meaning":"REST_LEISURE_PERIOD_UNCHANGED","weekend_gloss_claim":false,"VALA_authority":"CANDIDATE_UNCHANGED","context_must_remain_visible":true}},
+    {"id":"DEC-ACT-P05-004","decision":"APPROVED_SCOPED","effect":{"GID_training":"APPROVED_P05_ONLY","visual_canon_claim":false}},
+    {"id":"DEC-ACT-P05-005","decision":"APPROVED_SCOPED","effect":{"historical_reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"}}
   ],
   "explicit_non_effects":["Does not create new HNK lexical forms.","Does not promote VAME, VAMAZAMU, NE, VAMUSARO or VALA.","Does not create global preference or negation grammar.","Does not relabel VAMUSARO as weekend.","Does not universalize EN KU X KE.","Does not make Candidate D drawings official visual canon.","Does not validate slots outside 049-060.","Does not promote any Activation slot to FROZEN."],
-  "projected_effect_if_all_approved":{"L01_Activation_VALIDATED_before":48,"L01_Activation_VALIDATED_after":60,"L01_Activation_validated_percent_after":83.3333,"foundation_VALIDATED_after":60,"foundation_validated_percent_after":100.0,"global_VALIDATED_slots_after":70,"global_AUTHORED_OR_BETTER_after":70,"new_lexical_forms":0,"language_authority_promotions":0},
-  "application_rule":"Do not transition Activation P05 to VALIDATED until all five scoped decisions are explicitly approved.",
-  "next_gate_if_approved":"SWHNK-L01-ACTIVATION-P05-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_ACTIVATION_P05_AUTHORED_AND_REVISE"
+  "applied_effect":{"L01_Activation_VALIDATED_before":48,"L01_Activation_VALIDATED_after":60,"L01_Activation_validated_percent_after":83.3333,"foundation_VALIDATED_after":60,"foundation_validated_percent_after":100.0,"global_VALIDATED_slots_after":70,"global_AUTHORED_OR_BETTER_after":70,"new_lexical_forms":0,"language_authority_promotions":0},
+  "next_gate":"SWHNK-L01-ACTIVATION-INTEGRATIVE-P06-AUTHORING-V1"
 }
