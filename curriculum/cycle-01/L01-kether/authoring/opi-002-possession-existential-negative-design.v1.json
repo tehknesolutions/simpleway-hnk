@@ -1,23 +1,31 @@
 {
   "design_id":"SWHNK-L01-POSSESSION-EXISTENTIAL-NEGATIVE-DESIGN-V1",
-  "status":"DESIGN_REQUIRED_NO_VALIDATION_TRANSITION",
+  "status":"DESIGN_COMPLETE_HUMAN_DECISION_READY_NO_VALIDATION_TRANSITION",
   "scope":["L01-OPI-002"],
   "english_prompt":"Do you have a nickname?",
   "current_hnk":"EN VAMAKALA KE",
   "source_backed_core":{"form":"VAMAKALA","id":"LEX-001","authority":"FROZEN","meaning":"nickname / familiar name"},
-  "problem_statement":"The current HNK frame strongly evokes the nickname domain but does not contain a recovered possession/existential relation equivalent to English HAVE, and the negative no-nickname response path is not governed.",
+  "problem_statement":"The English HAVE wording is not copied lexically. The v1.1 solution uses a nominal/interview question plus a dedicated absence response candidate.",
   "design_principles":[
-    "Do not create an English-calque HAVE verb by default.",
-    "Prefer an analytic possession/existence strategy if it can be governed from recovered grammar or a minimal authored rule.",
-    "A beginner yes/no card must support both an affirmative nickname answer and a no-nickname answer before whole-slot validation.",
-    "Do not infer the roles of YA/ES from PHR-001 solely to close this card.",
-    "Do not promote WATCH/GATE material silently."
+    "Do not create an English-calque HAVE verb.",
+    "Preserve VAMAKALA as the FROZEN nickname core.",
+    "Treat EN VAMAKALA KE as a scoped nominal/existential interview prompt rather than claiming recovered possession grammar.",
+    "Support both affirmative and negative learner responses before whole-slot validation.",
+    "Keep new negation authorship separate from historical recovery."
   ],
-  "candidate_routes":[
-    {"route":"SEMANTIC_REFRAME","description":"Treat EN VAMAKALA KE as a course-level Your nickname? / nickname? interview question and define explicit positive and null/negative answer behavior.","risk":"May underrepresent the original HAVE semantics unless the pedagogical equivalence is explicitly approved.","state":"REVIEW_REQUIRED"},
-    {"route":"POSSESSION_OR_EXISTENCE_RULE","description":"Recover or author a minimal possession/existence construction that can express having/no nickname without an English-specific auxiliary.","risk":"Requires new grammar governance and negative polarity design.","state":"DESIGN_REQUIRED"}
+  "selected_route":{
+    "route":"NOMINAL_INTERVIEW_PLUS_ABSENCE_OPERATOR",
+    "question":{"form":"EN VAMAKALA KE","course_reading":"your nickname? / do you have a nickname?","historical_HAVE_claim":false},
+    "affirmative_answer":{"form":"[NICKNAME]","state":"AVAILABLE_NON_INVENTIVE"},
+    "negative_answer":{"form":"NE VAMAKALA","state":"AUTHORING_PROPOSAL","dependency":"HNK_NE_NEGATION_ABSENCE_PROPOSAL_V1.json"}
+  },
+  "rejected_or_held_routes":[
+    {"route":"CREATE_HAVE_VERB","decision":"REJECT","reason":"English-specific lexical calque is unnecessary."},
+    {"route":"ASSIGN_YA_OR_ES_TO_POSSESSION","decision":"HOLD","reason":"Historical token roles remain unrecovered."},
+    {"route":"VALIDATE_WITH_AFFIRMATIVE_ONLY","decision":"REJECT","reason":"Would under-cover the frozen yes/no pedagogical goal."}
   ],
-  "answer_requirements":{"affirmative":{"minimum":"[NICKNAME]","status":"AVAILABLE"},"negative":{"minimum":null,"status":"MISSING_GOVERNED_FORM_OR_STRATEGY"}},
+  "answer_requirements":{"affirmative":{"minimum":"[NICKNAME]","status":"READY"},"negative":{"minimum":"NE VAMAKALA","status":"READY_IF_NE_APPROVED_AS_AUTHORED_CANDIDATE"}},
+  "language_proposal_sources":["../../../../proposals/language/HNK_NE_NEGATION_ABSENCE_PROPOSAL_V1.json","../../../../proposals/language/HNK_NEGATION_EXISTENCE_MICROGRAMMAR_V1.json"],
   "validation_effect":{"current":"AUTHORED_HOLD","after_this_design_file":"AUTHORED_HOLD","validated":false},
-  "next_gate":"SWHNK-L01-NEGATION-EXISTENCE-MICROGRAMMAR-V1"
+  "next_gate":"SWHNK-L01-OPI-002-NEGATION-CANDIDATE-HUMAN-BATCH-V1"
 }
