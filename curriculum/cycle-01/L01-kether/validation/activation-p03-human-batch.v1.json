@@ -1,0 +1,20 @@
+{
+  "batch_id":"SWHNK-L01-ACTIVATION-P03-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"L01 Activation slots 025-036 only",
+  "source_pack":"../authoring/activation-pack-p03.v1.json",
+  "source_opi":["L01-OPI-005","L01-OPI-006"],
+  "current_state":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-ACT-P03-001","statement":"Approve the six-mode drill cycle for OPI 5 and 6 in slots 025-036, reusing the established Activation pattern without declaring it universal grammar.","if_approved":{"pedagogical_pattern":"APPROVED_P03_ONLY","global_activation_template_claim":false}},
+    {"id":"DEC-ACT-P03-002","statement":"Approve slots 025-030 as drills of EN VALI KUVAN KE with bare [PLACE] response, preserving VALI historical provenance and KUVAN=CANDIDATE.","if_approved":{"OPI5_drills_validated":6,"KUVAN_authority":"CANDIDATE_UNCHANGED","VALI_rebind":"EXPLICIT_UNCHANGED","new_location_grammar":false}},
+    {"id":"DEC-ACT-P03-003","statement":"Approve slots 031-036 as drills of EN KU VALA KE in explicit work/school context, preserving VALA=CANDIDATE and avoiding a generic HNK DO verb.","if_approved":{"OPI6_drills_validated":6,"VALA_authority":"CANDIDATE_UNCHANGED","global_DO_verb_created":false,"context_requirement":"WORK_OR_SCHOOL_VISIBLE"}},
+    {"id":"DEC-ACT-P03-004","statement":"Approve TRACE_GIDS for these drills as structural G-ID training only, with Candidate D visuals remaining PREPRODUCTION_NOT_OFFICIAL.","if_approved":{"GID_training":"APPROVED_P03_ONLY","visual_canon_claim":false}},
+    {"id":"DEC-ACT-P03-005","statement":"Confirm P03 is new SimpleWay HNK v1.1 authorship derived from validated OPI and not reconstruction of the missing historical Activation payload.","if_approved":{"historical_reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not promote KUVAN or VALA.","Does not alter VALI recovered provenance.","Does not create a generic DO verb.","Does not make Candidate D drawings official visual canon.","Does not validate slots outside 025-036.","Does not promote any Activation slot to FROZEN."],
+  "projected_effect_if_all_approved":{"L01_Activation_VALIDATED_before":24,"L01_Activation_VALIDATED_after":36,"L01_Activation_validated_percent_after":50.0,"global_VALIDATED_slots_after":46,"global_AUTHORED_OR_BETTER_after":46,"new_lexical_forms":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition Activation P03 to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-ACTIVATION-P03-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_ACTIVATION_P03_AUTHORED_AND_REVISE"
+}
