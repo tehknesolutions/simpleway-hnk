@@ -1,0 +1,58 @@
+{
+  "batch_id":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-PROMOTION-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"Promote the generated spoken numeral forms 0-9 into @hnk/linguas/authored as CANDIDATE entries only.",
+  "candidate_source":"../../../../proposals/language/HNK_SPOKEN_NUMERAL_0_9_CANDIDATES_V1.json",
+  "candidates":[
+    {"value":0,"form":"BIZO","proposed_registry_id":"AUTH-005","glyph_ids":["G18","G03","G32","G04"],"authority_after":"CANDIDATE"},
+    {"value":1,"form":"DUVE","proposed_registry_id":"AUTH-006","glyph_ids":["G19","G05","G31","G02"],"authority_after":"CANDIDATE"},
+    {"value":2,"form":"HOYU","proposed_registry_id":"AUTH-007","glyph_ids":["G07","G04","G40","G05"],"authority_after":"CANDIDATE"},
+    {"value":3,"form":"KETI","proposed_registry_id":"AUTH-008","glyph_ids":["G23","G02","G22","G03"],"authority_after":"CANDIDATE"},
+    {"value":4,"form":"LUSO","proposed_registry_id":"AUTH-009","glyph_ids":["G14","G05","G26","G04"],"authority_after":"CANDIDATE"},
+    {"value":5,"form":"MUPI","proposed_registry_id":"AUTH-010","glyph_ids":["G11","G05","G21","G03"],"authority_after":"CANDIDATE"},
+    {"value":6,"form":"NURA","proposed_registry_id":"AUTH-011","glyph_ids":["G12","G05","G15","G01"],"authority_after":"CANDIDATE"},
+    {"value":7,"form":"PEVU","proposed_registry_id":"AUTH-012","glyph_ids":["G21","G02","G31","G05"],"authority_after":"CANDIDATE"},
+    {"value":8,"form":"TOMI","proposed_registry_id":"AUTH-013","glyph_ids":["G22","G04","G11","G03"],"authority_after":"CANDIDATE"},
+    {"value":9,"form":"ZOKA","proposed_registry_id":"AUTH-014","glyph_ids":["G32","G04","G23","G01"],"authority_after":"CANDIDATE"}
+  ],
+  "decisions_requested":[
+    {
+      "id":"DEC-NUM-001",
+      "statement":"Approve the exact 0-9 mapping BIZO, DUVE, HOYU, KETI, LUSO, MUPI, NURA, PEVU, TOMI, ZOKA as newly authored spoken numeral CANDIDATE forms.",
+      "if_approved":{"canonical_registry":"@hnk/linguas/authored","candidate_count":10,"historical_recovery_claim":false,"authority":"CANDIDATE"}
+    },
+    {
+      "id":"DEC-NUM-002",
+      "statement":"Approve the phonological selection criteria used for this first numeral set: CVCV, safe HNK40 transliteration, distinct initials, minimum edit distance 3 from current language assets and minimum pairwise distance 3.",
+      "if_approved":{"selection_rule_scope":"NUMERAL_0_9_V1_ONLY","future_lexeme_generation_rule":false}
+    },
+    {
+      "id":"DEC-NUM-003",
+      "statement":"Keep cardinal composition for 10+ unresolved; promoting 0-9 must not silently choose base, tens morphology, year unit or multi-digit syntax.",
+      "if_approved":{"base":null,"multi_digit_rule":null,"year_unit":null,"OPI3_validation_change":0}
+    }
+  ],
+  "explicit_non_effects":[
+    "Does not claim any numeral is historical HNK.",
+    "Does not promote any numeral to FROZEN.",
+    "Does not make the phonological selection method a general word-generation algorithm.",
+    "Does not use numerology to assign value to form.",
+    "Does not define 10-99 composition.",
+    "Does not validate L01 OPI 3 by itself."
+  ],
+  "projected_effect_if_approved":{
+    "recovered_cycle1_forms_before":31,
+    "recovered_cycle1_forms_after":31,
+    "authored_cycle1_candidates_before":4,
+    "authored_cycle1_candidates_after":14,
+    "governed_unique_language_assets_before":35,
+    "governed_unique_language_assets_after":45,
+    "governed_asset_proxy_percent_after":31.25,
+    "L01_OPI_validated_before":7,
+    "L01_OPI_validated_after":7,
+    "new_FROZEN_forms":0
+  },
+  "application_rule":"Do not create AUTH-005 through AUTH-014 until explicit human approval is recorded for this exact candidate mapping or a revised mapping.",
+  "next_gate_if_approved":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANONICAL-CANDIDATE-REGISTRATION-V1",
+  "next_gate_if_not_approved":"REVISE_NUMERAL_CANDIDATE_SET"
+}
