@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L01-STRUCTURE-LANE-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "source_batch":"structure-lane-human-batch.v1.json",
+  "scope":["L01-HDR-001","L01-HDR-002","L01-STR-001","L01-STR-002","L01-STR-003","L01-STR-004","L01-STR-005"],
+  "before":{"AUTHORED":7,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":7,"FROZEN":0},
+  "lesson_after":{"L01_VALIDATED":89,"L01_AUTHORED":0},
+  "global_after":{"VALIDATED":89,"AUTHORED":0,"AUTHORED_OR_BETTER":89},
+  "authority_effect":{"KUVAN":"CANDIDATE_UNCHANGED","VANI":"WATCH_UNCHANGED_MEANING_NULL","VAME":"GATE_UNCHANGED","VAMAZAMU":"WATCH_UNCHANGED","NE":"CANDIDATE_UNCHANGED","YA_ES_token_glosses_created":false,"language_authority_promotions":0,"new_HNK_lexical_forms":0,"new_universal_HNK_grammar_rules":0},
+  "historical_effect":{"historical_payload_claim":false,"historical_structure_titles_claim":false},
+  "next_recommended_lane":"L01_TEACHER_NOTES"
+}
