@@ -1,0 +1,20 @@
+{
+  "batch_id":"SWHNK-L01-ACTIVATION-P04-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"L01 Activation slots 037-048 only",
+  "source_pack":"../authoring/activation-pack-p04.v1.json",
+  "source_opi":["L01-OPI-007","L01-OPI-008"],
+  "current_state":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-ACT-P04-001","statement":"Approve the established six-mode Activation cycle for OPI 7 and 8 in slots 037-048, without declaring the pedagogical template universal HNK grammar.","if_approved":{"pedagogical_pattern":"APPROVED_P04_ONLY","global_activation_template_claim":false}},
+    {"id":"DEC-ACT-P04-002","statement":"Approve slots 037-042 as drills of the validated two-part residence card, preserving VANI=WATCH with Master Lexicon meaning null, KUVAN/KUON=CANDIDATE, ON=GATE and no WITH lexeme.","if_approved":{"OPI7_drills_validated":6,"VANI_authority":"WATCH_UNCHANGED_MEANING_NULL","KUVAN_authority":"CANDIDATE_UNCHANGED","KUON_authority":"CANDIDATE_UNCHANGED","ON_authority":"GATE_UNCHANGED","WITH_lexeme_created":false,"global_comitative_grammar":false}},
+    {"id":"DEC-ACT-P04-003","statement":"Approve slots 043-048 as drills of EN KU VAMAVALA KE, preserving VAMAVALA=WATCH and the scoped EN KU X KE course interpretation.","if_approved":{"OPI8_drills_validated":6,"VAMAVALA_authority":"WATCH_UNCHANGED","global_content_question_grammar":false}},
+    {"id":"DEC-ACT-P04-004","statement":"Approve TRACE_GIDS as structural G-ID training only, with Candidate D drawings remaining PREPRODUCTION_NOT_OFFICIAL.","if_approved":{"GID_training":"APPROVED_P04_ONLY","visual_canon_claim":false}},
+    {"id":"DEC-ACT-P04-005","statement":"Confirm P04 is new SimpleWay HNK v1.1 authorship derived from validated OPI and is not reconstruction of the missing historical Activation payload.","if_approved":{"historical_reconstruction_claim":false,"historical_evidence_state":"SOURCE_CONFIRMED_FROZEN_UNCHANGED"}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not assign a recovered gloss to VANI.","Does not promote VANI, VAMAVALA, KUVAN, KUON or ON.","Does not create a WITH lexeme or global comitative grammar.","Does not universalize EN KU X KE.","Does not make Candidate D drawings official visual canon.","Does not validate slots outside 037-048.","Does not promote any Activation slot to FROZEN."],
+  "projected_effect_if_all_approved":{"L01_Activation_VALIDATED_before":36,"L01_Activation_VALIDATED_after":48,"L01_Activation_validated_percent_after":66.6667,"global_VALIDATED_slots_after":58,"global_AUTHORED_OR_BETTER_after":58,"new_lexical_forms":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition Activation P04 to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-ACTIVATION-P04-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_ACTIVATION_P04_AUTHORED_AND_REVISE"
+}
