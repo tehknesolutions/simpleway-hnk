@@ -1,0 +1,32 @@
+{
+  "promotion_id":"HNK-SPOKEN-NUMERAL-0-9-PROMOTION-RECORD-V1",
+  "status":"PROMOTED_TO_CANONICAL_AUTHORED_REGISTRY_AS_CANDIDATES",
+  "date":"2026-09-10",
+  "canonical_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "registry_version":"1.4.0-candidate",
+  "entries":[
+    {"value":0,"id":"AUTH-005","form":"BIZO","authority":"CANDIDATE"},
+    {"value":1,"id":"AUTH-006","form":"DUVE","authority":"CANDIDATE"},
+    {"value":2,"id":"AUTH-007","form":"HOYU","authority":"CANDIDATE"},
+    {"value":3,"id":"AUTH-008","form":"KETI","authority":"CANDIDATE"},
+    {"value":4,"id":"AUTH-009","form":"LUSO","authority":"CANDIDATE"},
+    {"value":5,"id":"AUTH-010","form":"MUPI","authority":"CANDIDATE"},
+    {"value":6,"id":"AUTH-011","form":"NURA","authority":"CANDIDATE"},
+    {"value":7,"id":"AUTH-012","form":"PEVU","authority":"CANDIDATE"},
+    {"value":8,"id":"AUTH-013","form":"TOMI","authority":"CANDIDATE"},
+    {"value":9,"id":"AUTH-014","form":"ZOKA","authority":"CANDIDATE"}
+  ],
+  "boundaries":{
+    "historical_recovery_claim":false,
+    "frozen_entries_created":0,
+    "recovered_cycle1_forms_before":31,
+    "recovered_cycle1_forms_after":31,
+    "authored_candidates_before":4,
+    "authored_candidates_after":14,
+    "governed_unique_language_assets_after":45,
+    "cardinal_10_plus_rule_created":false,
+    "year_unit_created":false,
+    "OPI3_validated":false
+  },
+  "next_gate":"SWHNK-HNK-CARDINAL-10-99-COMPOSITION-DESIGN-V1"
+}
