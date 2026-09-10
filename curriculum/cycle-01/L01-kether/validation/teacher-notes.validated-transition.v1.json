@@ -1,0 +1,14 @@
+{
+  "transition_id":"SWHNK-L01-TEACHER-NOTES-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "source_batch":"./teacher-notes-human-batch.v1.json",
+  "scope":["L01-NOTE-001","L01-NOTE-002","L01-NOTE-003"],
+  "before":{"AUTHORED":3,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":3,"FROZEN":0},
+  "global_before":{"MISSING":916,"AUTHORED":3,"VALIDATED":89,"FROZEN":0},
+  "global_after":{"MISSING":916,"AUTHORED":0,"VALIDATED":92,"FROZEN":0},
+  "L01_before":{"authored_or_better":92,"validated":89},
+  "L01_after":{"authored_or_better":92,"validated":92},
+  "authority_effect":{"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0,"historical_note_payload_claim":false},
+  "note":"Pedagogical validation only; recovered/authored/validated language authority boundaries remain unchanged."
+}
