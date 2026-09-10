@@ -1,30 +1,16 @@
 {
   "batch_id":"SWHNK-L01-OPI-001-WHOLE-UTTERANCE-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
   "scope":"L01 OPI 1 only",
-  "question":{"english":"What's your name?","hnk":"KALA YA EN ES KU KE","current_state":"AUTHORED_HOLD"},
-  "source_basis":{"phrase_id":"PHR-001","status":"RECOVERED","certainty":"APPROXIMATE","whole_sentence_meaning":{"pt":"Qual é o seu nome?","en":"What is your name?"},"structural_g_id_encoding":"PASS"},
-  "decisions_requested":[
-    {
-      "id":"DEC-NAME-001",
-      "statement":"Accept the recovered phrase KALA YA EN ES KU KE as an indivisible governed beginner formula for the L01 OPI 1 function What's your name?, relying on whole-utterance evidence rather than invented token-by-token glosses.",
-      "if_approved":{"course_use":"APPROVED_L01_OPI001_ONLY","phrase_certainty":"APPROXIMATE_UNCHANGED","historical_phrase_status":"RECOVERED_UNCHANGED","token_gloss_promotions":0}
-    },
-    {
-      "id":"DEC-NAME-002",
-      "statement":"Keep YA and ES semantically unresolved and keep KALA, EN, KU and KE token roles inferential rather than treating this course validation as recovered lexical canon.",
-      "if_approved":{"YA_meaning":null,"ES_meaning":null,"token_level_canon_changes":0}
-    },
-    {
-      "id":"DEC-NAME-003",
-      "statement":"Accept bare [PERSONAL_NAME] as a sufficient beginner answer pattern for this OPI without adding unrecovered copular, possessive or self-identification grammar.",
-      "if_approved":{"answer_schema":"[PERSONAL_NAME]","new_lexemes":0,"new_grammar_tokens":0}
-    }
+  "approval_basis":"Explicit user approval to continue the prepared OPI 1 gate on 2026-09-10.",
+  "question":{"english":"What's your name?","hnk":"KALA YA EN ES KU KE","before":"AUTHORED_HOLD","after":"VALIDATED"},
+  "source_basis":{"phrase_id":"PHR-001","status":"RECOVERED","certainty":"APPROXIMATE_UNCHANGED","whole_sentence_meaning":{"pt":"Qual é o seu nome?","en":"What is your name?"},"structural_g_id_encoding":"PASS"},
+  "decisions":[
+    {"id":"DEC-NAME-001","decision":"APPROVED_SCOPED","statement":"Accept the recovered phrase KALA YA EN ES KU KE as an indivisible governed beginner formula for the L01 OPI 1 function What's your name?, relying on whole-utterance evidence rather than invented token-by-token glosses.","effect":{"course_use":"APPROVED_L01_OPI001_ONLY","phrase_certainty":"APPROXIMATE_UNCHANGED","historical_phrase_status":"RECOVERED_UNCHANGED","token_gloss_promotions":0}},
+    {"id":"DEC-NAME-002","decision":"APPROVED_SCOPED","statement":"Keep YA and ES semantically unresolved and keep KALA, EN, KU and KE token roles inferential rather than treating this course validation as recovered lexical canon.","effect":{"YA_meaning":null,"ES_meaning":null,"token_level_canon_changes":0}},
+    {"id":"DEC-NAME-003","decision":"APPROVED_SCOPED","statement":"Accept bare [PERSONAL_NAME] as a sufficient beginner answer pattern for this OPI without adding unrecovered copular, possessive or self-identification grammar.","effect":{"answer_schema":"[PERSONAL_NAME]","new_lexemes":0,"new_grammar_tokens":0}}
   ],
-  "evidence_and_review_sources":["opi-001.validation.v1.json","opi-001.semantic-review.v1.json","opi-001-and-007-hold-triage.v1.json","../../../../../../codex-hnk/packages/hnk-linguas/src/index.mjs#PHR-001"],
   "explicit_non_effects":["Does not assign a historical meaning to YA or ES.","Does not promote inferred KALA/EN/KU/KE token roles into recovered canon.","Does not change PHR-001 certainty from APPROXIMATE.","Does not reconstruct the missing historical v1.0 raw payload.","Does not promote the card to FROZEN.","Does not affect OPI 7."],
-  "projected_effect_if_all_approved":{"L01_OPI_validated_before":8,"L01_OPI_validated_after":9,"L01_OPI_validated_percent_after":90.0,"cycle1_OPI_validated_after":9,"global_VALIDATED_slots_after":9,"language_authority_promotions":0,"new_lexical_forms":0,"token_gloss_promotions":0},
-  "application_rule":"Do not transition L01-OPI-001 to VALIDATED until all three scoped decisions are explicitly approved.",
-  "next_gate_if_approved":"SWHNK-L01-OPI-001-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_OPI001_AUTHORED_HOLD"
+  "applied_effect":{"L01_OPI_validated_before":8,"L01_OPI_validated_after":9,"L01_OPI_validated_percent_after":90.0,"cycle1_OPI_validated_after":9,"global_VALIDATED_slots_after":9,"language_authority_promotions":0,"new_lexical_forms":0,"token_gloss_promotions":0},
+  "next_gate":"SWHNK-L01-OPI-001-VALIDATED-TRANSITION-V1"
 }
