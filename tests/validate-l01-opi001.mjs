@@ -13,7 +13,6 @@ const bindings = await json('curriculum/cycle-01/L01-kether/authoring/opi-bindin
 
 const expectedGlyphIds = ['G23','G01','G14','G01','G40','G01','G02','G12','G02','G26','G23','G05','G23','G02'];
 
-// Preserve the earlier technical/recovery evidence exactly as evidence, not as the current slot state.
 assert.equal(technical.validation_id, 'SWHNK-L01-OPI-001-VALIDATION-V1');
 assert.equal(technical.status, 'TECHNICAL_PASS_SEMANTIC_HOLD');
 assert.equal(technical.source_phrase.phrase_id, 'PHR-001');
@@ -30,7 +29,6 @@ assert.deepEqual(semanticReview.evidence_balance.unresolved_tokens, ['YA','ES'])
 assert.deepEqual(semanticReview.evidence_balance.inferred_not_canonical_tokens, ['KALA','EN','KU','KE']);
 assert.equal(semanticReview.decision.whole_slot_validated, false);
 
-// The later scoped human gate validates the whole utterance without rewriting the historical evidence above.
 assert.equal(humanBatch.status, 'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
 assert.equal(humanBatch.source_basis.phrase_id, 'PHR-001');
 assert.equal(humanBatch.source_basis.certainty, 'APPROXIMATE_UNCHANGED');
@@ -60,11 +58,11 @@ assert.equal(binding.answer_pattern.pattern, '[PERSONAL_NAME]');
 assert.equal(binding.answer_pattern.status, 'VALIDATED_FOR_L01_V1_1_COURSE_USE');
 
 assert.equal(bindings.metrics.authored_or_better, 10);
-assert.equal(bindings.metrics.authored_current_state, 1);
-assert.equal(bindings.metrics.validated, 9);
+assert.equal(bindings.metrics.authored_current_state, 0);
+assert.equal(bindings.metrics.validated, 10);
 assert.equal(bindings.metrics.frozen, 0);
 assert.ok(bindings.metrics.validated_opi.includes('L01-OPI-001'));
-assert.deepEqual(bindings.metrics.reviewed_hold_opi, ['L01-OPI-007']);
+assert.deepEqual(bindings.metrics.reviewed_hold_opi, []);
 
-console.log('PASS SWHNK-L01-OPI-001-WHOLE-UTTERANCE-VALIDATED-V1');
-console.log('OPI001 is VALIDATED for scoped course use as recovered whole utterance; YA/ES remain unresolved; token roles and PHR-001 certainty are unchanged.');
+console.log('PASS SWHNK-L01-OPI-001-WHOLE-UTTERANCE-VALIDATED-V2');
+console.log('OPI001 stays validated as a recovered whole-utterance formula while YA/ES remain unresolved; L01 OPI overall is now 10/10 VALIDATED.');
