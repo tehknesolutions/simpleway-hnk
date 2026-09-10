@@ -16,7 +16,7 @@
   ],
   "cards":[
     {"slot_id":"L01-OPI-001","english":"What's your name?","hnk":["KALA YA EN ES KU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-001.semantic-review.v1.json","blockers":["Approximate gloss; YA/ES unresolved; inferred token roles not promoted."]},
-    {"slot_id":"L01-OPI-002","english":"Do you have a nickname?","hnk":["EN VAMAKALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-002.semantic-review.v1.json","design_gate":"../authoring/opi-002-possession-existential-negative-design.v1.json","blockers":["Possession/HAVE relation and negative response path unresolved."]},
+    {"slot_id":"L01-OPI-002","english":"Do you have a nickname?","hnk":["EN VAMAKALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-002.semantic-review.v1.json","design_gate":"../authoring/opi-002-possession-existential-negative-design.v1.json","prepared_human_batch":"opi-002-negation-candidate-human-batch.v1.json","blockers":["Nominal interview strategy is designed, but NE negation/absence candidate and scoped semantics require explicit human approval before validation."]},
     {"slot_id":"L01-OPI-003","english":"How old are you?","hnk":["EN KU SARASALA KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-003.semantic-review.v1.json","blockers":["SARASALA WATCH; contextual age reading; number system open."]},
     {"slot_id":"L01-OPI-004","english":"Where were you born?","hnk":["EN SARADAYA KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-004-005.validated-transition.v1.json"},
     {"slot_id":"L01-OPI-005","english":"Where do you work?","hnk":["EN VALI KUVAN KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-004-005.validated-transition.v1.json"},
@@ -31,6 +31,7 @@
   "reviewed_hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-007","L01-OPI-009"],
   "applied_human_batches":["locative-question-human-promotion-batch.v1.json","content-question-human-promotion-batch.v1.json","opi-010-contextual-equivalence-human-batch.v1.json"],
   "parallel_design_gate":"../authoring/opi-002-possession-existential-negative-design.v1.json",
-  "summary":{"target":10,"authored_or_better":10,"authored_current_state":5,"structural_static_pass":10,"reviewed":10,"validated":5,"validated_percent":50.0,"frozen":0,"next_design_candidate":"L01-OPI-002","high_risk_hold":["L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
-  "next_gate":"SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1"
+  "prepared_next_human_batch":"opi-002-negation-candidate-human-batch.v1.json",
+  "summary":{"target":10,"authored_or_better":10,"authored_current_state":5,"structural_static_pass":10,"reviewed":10,"validated":5,"validated_percent":50.0,"frozen":0,"next_ready_human_candidate":"L01-OPI-002","high_risk_hold":["L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
+  "next_gate":"SWHNK-L01-OPI-002-NEGATION-CANDIDATE-HUMAN-BATCH-V1"
 }
