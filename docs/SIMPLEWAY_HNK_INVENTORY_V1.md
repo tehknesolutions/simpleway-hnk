@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION PIPELINE  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V28`  
-**Pacote atual:** `simpleway-hnk@0.31.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION COMPLETE IN AUTHORSHIP  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V29`  
+**Pacote atual:** `simpleway-hnk@0.32.0`
 
 ## Ciclo 1
 
@@ -15,66 +15,64 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 
 Todos os dez OPI v1.1 possuem payload HNK reproduzível, foram revisados e estão validados para uso escopado no curso. A validação do curso não altera por si só autoridade lexical histórica.
 
-## L01 Activation — foundation completa em autoria
+## L01 Activation — 72/72 implementados
 
 A release histórica comprova **72 teacher-drill slots**, mas o conteúdo bruto desses 72 drills não foi recuperado. O pipeline v1.1 cria drills novos derivados dos OPI validados e mantém essa proveniência explícita.
 
-Estrutura:
+Estrutura e estado:
 
-- 001–060: 6 foundation drills para cada um dos 10 OPI;
-- 061–072: 12 integrative drills.
-
-Estado atual:
-
-- P01–P04, slots 001–048: **VALIDATED**;
-- P05, slots 049–060: **AUTHORED / validation pending**;
-- Foundation authored-or-better: **60/60 = 100%**;
-- Activation VALIDATED: **48/72 = 66.6667%**;
+- P01–P05, slots 001–060: **VALIDATED**;
+- P06 integrative, slots 061–072: **AUTHORED / validation pending**;
+- foundation VALIDATED: **60/60 = 100%**;
+- integrative AUTHORED: **12/12 = 100%**;
+- Activation VALIDATED: **60/72 = 83.3333%**;
 - Activation AUTHORED: **12/72 = 16.6667%**;
-- Activation authored-or-better: **60/72 = 83.3333%**;
-- Integrative ainda não implementado: **12 slots (061–072)**.
+- Activation authored-or-better: **72/72 = 100%**;
+- remaining unimplemented in Activation: **0**.
 
-### P04 — VALIDATED
+### P05 — VALIDATED
 
-Fonte: OPI 7–8. A validação mantém `VANI=WATCH` com meaning `null`, `KUVAN/KUON=CANDIDATE`, `ON=GATE`, `VAMAVALA=WATCH`, sem lexema `WITH`, sem gramática comitativa global e sem reconstrução histórica.
+Fonte: OPI 9–10. Preserva `VAME=GATE`, `VAMAZAMU=WATCH`, `NE/VALA=CANDIDATE`, `VAMUSARO=rest/leisure period` e não `weekend`, sem promover autoridade ou reconstruir o payload histórico.
 
-### P05 — AUTHORED
+### P06 — integrative AUTHORED
 
-Fonte: OPI 9–10.
+Slots 061–072 integram todos os dez OPI validados por meio de:
 
-- OPI 9 pratica `EN VAME VAMAZAMU KE`;
-- respostas: `VAME VAMAZAMU` / `NE VAME VAMAZAMU`;
-- OPI 10 pratica contexto `VAMUSARO` + `EN KU VALA KE`;
-- `VAME` permanece GATE;
-- `VAMAZAMU` permanece WATCH;
-- `NE` e `VALA` permanecem CANDIDATE;
-- `VAMUSARO` continua significando `rest / leisure period`, não `weekend`;
-- zero novas formas HNK.
+- paired interviews;
+- multipart residence/hobbies interview;
+- ordered half-interviews;
+- intent discrimination;
+- response routing;
+- G-ID relay;
+- adaptive five-OPI interview;
+- full ten-OPI interview capstone.
 
-Gate preparado: `SWHNK-L01-ACTIVATION-P05-VALIDATION-V1`.
+Regra central: os integrativos apenas **sequenciam** payloads HNK e schemas de resposta já validados. Eles não fundem perguntas em novas sentenças HNK e não criam conjunções, copulas, preposições, partículas de polaridade, lexemas ou regras gramaticais novas.
 
-Se aprovado, os **60/60 foundation drills ficam VALIDATED = 100%**, e Activation sobe para **60/72 VALIDATED = 83.3333%**.
+Gate preparado: `SWHNK-L01-ACTIVATION-P06-INTEGRATIVE-VALIDATION-V1`.
+
+Se aprovado, a fase Activation chega a **72/72 VALIDATED = 100%**.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
 - OPI VALIDATED: **10**
-- Activation VALIDATED: **48**
+- Activation VALIDATED: **60**
 - Activation AUTHORED: **12**
-- authored-or-better total: **70/155 = 45.1613%**
-- validated total: **58/155 = 37.4194%**
-- remaining unimplemented: **85**
+- authored-or-better total: **82/155 = 52.9032%**
+- validated total: **70/155 = 45.1613%**
+- remaining unimplemented outside OPI/Activation: **73**
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**938 MISSING + 12 AUTHORED + 58 VALIDATED + 0 FROZEN = 1.008**.
+**926 MISSING + 12 AUTHORED + 70 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **70/1.008 = 6.9444%**.
+Cumulativo authored-or-better: **82/1.008 = 8.1349%**.
 
-Historical evidence permanece **82/1.008 = 8.1349%**, referente a 10 OPI + 72 Activation comprovados como estrutura/publicação histórica, não payload atual reproduzível.
+Historical evidence também é **82/1.008 = 8.1349%**, mas esse mesmo número é coincidência: evidência histórica e implementação atual são eixos independentes.
 
 ## Corpus linguístico governado
 
