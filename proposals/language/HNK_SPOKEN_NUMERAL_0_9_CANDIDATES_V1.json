@@ -1,0 +1,51 @@
+{
+  "proposal_id":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATES-V1",
+  "status":"CANDIDATES_GENERATED_AWAITING_INDIVIDUAL_PROMOTION",
+  "formation_type":"PRIMITIVE_AUTHORED",
+  "historical_recovery_claim":false,
+  "source_strategy":"HNK_SPOKEN_NUMERAL_0_9_AUTHORING_DECISION_V1.json",
+  "generation_method":{
+    "semantic_order":"NUM-0 through NUM-9 fixed before form assignment",
+    "phonotactic_shape":"CVCV",
+    "safe_transliteration_only":true,
+    "distinct_initial_consonants":true,
+    "same_word_vowels_must_differ":true,
+    "minimum_edit_distance_from_all_current_recovered_and_authored_forms":3,
+    "minimum_pairwise_edit_distance_between_numeral_candidates":3,
+    "assignment_method":"Candidate set ordered alphabetically by form and assigned sequentially to fixed concept queue NUM-0..NUM-9. No number symbolism used.",
+    "numerology_used":false,
+    "glyph_visual_semantics_used":false
+  },
+  "candidates":[
+    {"concept_id":"NUM-0","value":0,"meaning_pt":"zero","meaning_en":"zero","candidate_id":"NUM-CAND-000","form":"BIZO","authority":"CANDIDATE_PROPOSED","glyph_ids":["G18","G03","G32","G04"],"ipa":"/bizo/","exact_collision":false,"nearest_current_edit_distance":4},
+    {"concept_id":"NUM-1","value":1,"meaning_pt":"um","meaning_en":"one","candidate_id":"NUM-CAND-001","form":"DUVE","authority":"CANDIDATE_PROPOSED","glyph_ids":["G19","G05","G31","G02"],"ipa":"/duve/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-2","value":2,"meaning_pt":"dois","meaning_en":"two","candidate_id":"NUM-CAND-002","form":"HOYU","authority":"CANDIDATE_PROPOSED","glyph_ids":["G07","G04","G40","G05"],"ipa":"/hoju/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-3","value":3,"meaning_pt":"três","meaning_en":"three","candidate_id":"NUM-CAND-003","form":"KETI","authority":"CANDIDATE_PROPOSED","glyph_ids":["G23","G02","G22","G03"],"ipa":"/keti/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-4","value":4,"meaning_pt":"quatro","meaning_en":"four","candidate_id":"NUM-CAND-004","form":"LUSO","authority":"CANDIDATE_PROPOSED","glyph_ids":["G14","G05","G26","G04"],"ipa":"/luso/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-5","value":5,"meaning_pt":"cinco","meaning_en":"five","candidate_id":"NUM-CAND-005","form":"MUPI","authority":"CANDIDATE_PROPOSED","glyph_ids":["G11","G05","G21","G03"],"ipa":"/mupi/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-6","value":6,"meaning_pt":"seis","meaning_en":"six","candidate_id":"NUM-CAND-006","form":"NURA","authority":"CANDIDATE_PROPOSED","glyph_ids":["G12","G05","G15","G01"],"ipa":"/nura/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-7","value":7,"meaning_pt":"sete","meaning_en":"seven","candidate_id":"NUM-CAND-007","form":"PEVU","authority":"CANDIDATE_PROPOSED","glyph_ids":["G21","G02","G31","G05"],"ipa":"/pevu/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-8","value":8,"meaning_pt":"oito","meaning_en":"eight","candidate_id":"NUM-CAND-008","form":"TOMI","authority":"CANDIDATE_PROPOSED","glyph_ids":["G22","G04","G11","G03"],"ipa":"/tomi/","exact_collision":false,"nearest_current_edit_distance":3},
+    {"concept_id":"NUM-9","value":9,"meaning_pt":"nove","meaning_en":"nine","candidate_id":"NUM-CAND-009","form":"ZOKA","authority":"CANDIDATE_PROPOSED","glyph_ids":["G32","G04","G23","G01"],"ipa":"/zoka/","exact_collision":false,"nearest_current_edit_distance":3}
+  ],
+  "set_audit":{
+    "count":10,
+    "all_safe_transliteration":true,
+    "all_CVCV":true,
+    "all_unique":true,
+    "all_exact_collision_free":true,
+    "minimum_distance_to_current_language_assets":3,
+    "minimum_pairwise_distance":3,
+    "canonical_registry_entries_created":0
+  },
+  "boundaries":[
+    "These forms are newly authored proposals, never historical recovery.",
+    "No candidate is registered in @hnk/linguas/authored by this generation step.",
+    "No candidate is FROZEN.",
+    "The mapping 0-9 is not based on numerology or glyph symbolism.",
+    "No rule for 10, 11, tens or larger cardinals is implied.",
+    "OPI 3 remains HOLD until candidates are approved and an age-answer composition strategy is governed."
+  ],
+  "progress_effect":{"L01_OPI_validated":7,"change":0,"governed_language_assets_change":0},
+  "next_gate":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-PROMOTION-BATCH-V1"
+}
