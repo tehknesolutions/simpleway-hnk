@@ -1,0 +1,17 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V37",
+  "as_of":"2026-09-10",
+  "status":"L01_125_VALIDATED_VOCABULARY_GAP_8_SEMANTICS_APPROVED_EXACT_FORM_MAPPING_PROPOSED_NOT_APPLIED",
+  "package":"simpleway-hnk@0.40.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":883,"AUTHORED":0,"VALIDATED":125,"FROZEN":0},
+  "implementation_percent":{"MISSING":87.5992,"AUTHORED":0.0,"VALIDATED":12.4008,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":125,"AUTHORED_OR_BETTER_percent":12.4008,"VALIDATED_OR_BETTER":125,"VALIDATED_OR_BETTER_percent":12.4008,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"authored_or_better":125,"authored_or_better_percent":80.6452,"validated":125,"validated_percent":80.6452,"remaining_missing_or_unimplemented":30,"TeacherNotes":{"target":3,"VALIDATED":3},"OPI":{"target":10,"VALIDATED":10},"Story":{"target":5,"VALIDATED":5},"QA":{"target":4,"VALIDATED":4},"StructureHeaders":{"target":2,"VALIDATED":2},"Structures":{"target":5,"VALIDATED":5},"Vocabulary":{"target":32,"VALIDATED":24,"MISSING":8},"Activation":{"target":72,"VALIDATED":72},"Review":{"target":22,"MISSING":22}},
+  "vocabulary_gap_governance":{"semantic_targets":8,"semantic_targets_status":"APPROVED","forms_selected_canonically":0,"mapping_review_status":"PROPOSED_AWAITING_EXPLICIT_HUMAN_APPROVAL","exact_mapping":["KALA","AN","EN","KU","KE","VANI","VAME","ZAMI"],"new_authored_candidates_if_mapping_approved":["KALA","AN","EN","KU","KE","ZAMI"],"recovered_assets_for_scoped_binding_if_mapping_approved":["VANI","VAME"],"projected_canonical_authored_candidates_after":20,"projected_governed_unique_language_assets_after":51,"vocabulary_slots_changed_by_semantic_approval":0},
+  "boundaries":{"VANI_master_meaning":null,"VANI_authority":"WATCH","VAME_authority":"GATE","historical_standalone_token_glosses_created":0,"language_authority_promotions":0,"numerology_selects_forms":false},
+  "remaining_L01":{"vocabulary_gap":8,"review":22,"total":30},
+  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1"
+}
