@@ -1,0 +1,20 @@
+{
+  "transition_id":"SWHNK-L01-OPI-001-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-001",
+  "before":"AUTHORED",
+  "after":"VALIDATED",
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_001_ONLY",
+  "question":{"english":"What's your name?","hnk":"KALA YA EN ES KU KE","phrase_id":"PHR-001","phrase_certainty":"APPROXIMATE_UNCHANGED"},
+  "validation_model":"WHOLE_UTTERANCE_FORMULA_WITHOUT_TOKEN_GLOSS_PROMOTION",
+  "answer_schema":"[PERSONAL_NAME]",
+  "token_boundary":{"YA_meaning":null,"ES_meaning":null,"KALA_role":"INFERRED_NOT_PROMOTED","EN_role":"INFERRED_NOT_PROMOTED","KU_role":"INFERRED_NOT_PROMOTED","KE_role":"INFERRED_NOT_PROMOTED","token_gloss_promotions":0},
+  "language_authority_effect":"NONE",
+  "historical_recovery_effect":"NONE",
+  "new_lexical_forms":0,
+  "freeze_effect":"NONE",
+  "remaining_freeze_blockers":["PHR-001 certainty remains APPROXIMATE.","YA and ES remain semantically unresolved at token level.","Token-level roles are not promoted into recovered canon.","Historical raw v1.0 payload remains unrecovered.","Publication freeze remains a later gate."],
+  "provenance":["opi-001.validation.v1.json","opi-001.semantic-review.v1.json","opi-001-whole-utterance-human-batch.v1.json"],
+  "progress_effect":{"L01_OPI_validated_before":8,"L01_OPI_validated_after":9,"L01_OPI_validated_percent_after":90.0,"global_VALIDATED_slots_after":9},
+  "next_gate":"SWHNK-L01-OPI-007-FINAL-HOLD-REVIEW-V1"
+}
