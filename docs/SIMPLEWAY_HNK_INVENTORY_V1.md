@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + NUMERAL CANDIDATE DESIGN  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V15`  
-**Pacote atual:** `simpleway-hnk@0.18.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + NUMERIC INFRASTRUCTURE  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V17`  
+**Pacote atual:** `simpleway-hnk@0.20.0`
 
 ## Ciclo 1
 
@@ -21,7 +21,7 @@ Todos os 10 OPI v1.1 estão autorados e revisados. **7/10 estão VALIDATED = 70%
 |---:|---|---|
 | 01 | `KALA YA EN ES KU KE` | AUTHORED · HOLD |
 | 02 | `EN VAMAKALA KE` | **VALIDATED** |
-| 03 | `EN KU SARASALA KE` | AUTHORED · HOLD |
+| 03 | `EN KU SARASALA KE` | AUTHORED · HOLD · age/cardinal batch prepared |
 | 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** |
 | 05 | `EN VALI KUVAN KE` | **VALIDATED** |
 | 06 | `EN KU VALA KE` | **VALIDATED** |
@@ -34,97 +34,113 @@ Estados exclusivos no Ciclo 1: **998 MISSING + 3 AUTHORED + 7 VALIDATED + 0 FROZ
 
 Maturidade: **10/1.008 authored-or-better = 0.9921%**; **7/1.008 validated = 0.6944%**. Nos 70 OPI do Ciclo 1, **7/70 = 10%** estão validados.
 
-## Corpus linguístico canônico/governado
+## Corpus linguístico governado
 
 Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`) e 7 frases recuperadas.
 
-Registry autorado governado atual:
+Registry autorado governado `@hnk/linguas/authored` agora contém **14 CANDIDATE forms**:
 
-1. `AUTH-001 KUVAN` — CANDIDATE;
-2. `AUTH-002 VALA` — CANDIDATE;
-3. `AUTH-003 KUON` — CANDIDATE, dependente de `ON=GATE`;
-4. `AUTH-004 NE` — CANDIDATE, negação/ausência de autoria nova.
+1. `AUTH-001 KUVAN`
+2. `AUTH-002 VALA`
+3. `AUTH-003 KUON`
+4. `AUTH-004 NE`
+5. `AUTH-005 BIZO` = 0
+6. `AUTH-006 DUVE` = 1
+7. `AUTH-007 HOYU` = 2
+8. `AUTH-008 KETI` = 3
+9. `AUTH-009 LUSO` = 4
+10. `AUTH-010 MUPI` = 5
+11. `AUTH-011 NURA` = 6
+12. `AUTH-012 PEVU` = 7
+13. `AUTH-013 TOMI` = 8
+14. `AUTH-014 ZOKA` = 9
 
-Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados canônicos: **35/144 = 24.3056%**.
+Os dez numerais são `PRIMITIVE_AUTHORED`, `historicalRecoveryClaim=false` e continuam `CANDIDATE`. Nenhum foi promovido a FROZEN.
 
-Os numerais gerados nesta fase continuam **proposal-only** e portanto não aumentam esse 35.
+Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**.
 
-## OPI 3 — sistema numérico
+## Sistema numérico 0–9
 
-`EN KU SARASALA KE` continua HOLD. `SARASALA` permanece WATCH e a construção de idade ainda depende da infraestrutura numérica.
+A recuperação em GitHub, File Library e Google Drive não encontrou um sistema numeral HNK histórico. A estratégia de dez primitivas foi aprovada e o conjunto auditado foi registrado:
 
-A recuperação em GitHub, File Library e Google Drive não encontrou um sistema numeral HNK histórico. O projeto agora separa:
+| Valor | HNK | G-IDs |
+|---:|---|---|
+| 0 | `BIZO` | `G18·G03·G32·G04` |
+| 1 | `DUVE` | `G19·G05·G31·G02` |
+| 2 | `HOYU` | `G07·G04·G40·G05` |
+| 3 | `KETI` | `G23·G02·G22·G03` |
+| 4 | `LUSO` | `G14·G05·G26·G04` |
+| 5 | `MUPI` | `G11·G05·G21·G03` |
+| 6 | `NURA` | `G12·G05·G15·G01` |
+| 7 | `PEVU` | `G21·G02·G31·G05` |
+| 8 | `TOMI` | `G22·G04·G11·G03` |
+| 9 | `ZOKA` | `G32·G04·G23·G01` |
 
-- valor matemático;
-- dígitos ASCII como ponte externa para UI/dados;
-- numerais falados HNK.
+A auditoria de geração preserva distância de edição mínima 3 em relação às formas existentes e também entre os próprios numerais. A escolha não usou numerologia nem aparência dos glifos para atribuir significado.
 
-A estratégia `TEN_PRIMITIVE_DIGIT_NUMERALS` foi explicitamente aprovada para **geração de candidatos**, sem autorizar ainda sua entrada no registry canônico.
+## Proposta 10–99
 
-## Candidatos falados 0–9 gerados
+Foi criada a proposta `HNK-CARDINAL-10-99-POSITIONAL-COMPOSITION-V1`, ainda **não canônica**.
 
-Primeiro conjunto auditado:
+Regra proposta em contexto cardinal numérico:
 
-| Valor | Forma candidata | G-IDs | IPA |
-|---:|---|---|---|
-| 0 | `BIZO` | `G18·G03·G32·G04` | `/bizo/` |
-| 1 | `DUVE` | `G19·G05·G31·G02` | `/duve/` |
-| 2 | `HOYU` | `G07·G04·G40·G05` | `/hoju/` |
-| 3 | `KETI` | `G23·G02·G22·G03` | `/keti/` |
-| 4 | `LUSO` | `G14·G05·G26·G04` | `/luso/` |
-| 5 | `MUPI` | `G11·G05·G21·G03` | `/mupi/` |
-| 6 | `NURA` | `G12·G05·G15·G01` | `/nura/` |
-| 7 | `PEVU` | `G21·G02·G31·G05` | `/pevu/` |
-| 8 | `TOMI` | `G22·G04·G11·G03` | `/tomi/` |
-| 9 | `ZOKA` | `G32·G04·G23·G01` | `/zoka/` |
+`DIGIT_TENS DIGIT_UNITS`
 
-Status de todas: **`CANDIDATE_PROPOSED`**, ainda fora de `@hnk/linguas/authored`.
+Interpretação:
 
-### Auditoria do conjunto
+`10 × value(first) + value(second)`
 
-- 10 formas CVCV;
-- apenas unidades de transliteração HNK40 seguras;
-- 10 consoantes iniciais distintas;
-- distância mínima de edição **3** contra todas as formas recuperadas e autoradas atuais;
-- distância mínima de edição **3** entre os próprios numerais;
-- nenhuma colisão exata;
-- nenhuma forma escolhida por numerologia;
-- nenhuma semântica derivada da aparência dos glifos;
-- atribuição 0→9 feita sobre fila semântica previamente fixa e conjunto fonológico ordenado, sem simbolismo numérico.
+Exemplos:
 
-## Gate de promoção dos numerais
+- 10 = `DUVE BIZO`
+- 11 = `DUVE DUVE`
+- 18 = `DUVE TOMI`
+- 20 = `HOYU BIZO`
+- 42 = `LUSO HOYU`
+- 70 = `PEVU BIZO`
+- 99 = `ZOKA ZOKA`
 
-Preparado:
+Essa regra não cria palavra para dez, não define 100+, ordinais, frações ou aritmética e não é apresentada como gramática histórica recuperada.
 
-`SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-PROMOTION-BATCH-V1`
+## OPI 3 — batch preparado
 
-Se o conjunto concreto for aprovado, a proposta é registrar:
+Pergunta atual:
 
-- `AUTH-005 BIZO` = 0
-- `AUTH-006 DUVE` = 1
-- `AUTH-007 HOYU` = 2
-- `AUTH-008 KETI` = 3
-- `AUTH-009 LUSO` = 4
-- `AUTH-010 MUPI` = 5
-- `AUTH-011 NURA` = 6
-- `AUTH-012 PEVU` = 7
-- `AUTH-013 TOMI` = 8
-- `AUTH-014 ZOKA` = 9
+`EN KU SARASALA KE`
 
-Todos entrariam somente como **CANDIDATE** e `historicalRecoveryClaim=false`.
+`SARASALA` permanece `WATCH = tempo/duração`.
 
-Efeito projetado: formas recuperadas continuam **31**; candidatos autorados canônicos passam **4 → 14**; ativos governados passam **35 → 45 = 31.25% da referência 144**.
+Batch preparado:
 
-A promoção dos dígitos falados, sozinha, ainda não valida OPI 3. Continuam separados os gates de composição 10+, resposta de idade e eventual unidade de ano.
+`SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1`
 
-## Três HOLD restantes
+Ele pede aprovação escopada para:
 
-1. **OPI 3 — prioridade 1:** promoção dos numerais + construção de idade.
-2. **OPI 1 — prioridade 2:** `YA/ES` ainda sem alinhamento histórico recuperado.
-3. **OPI 7 — prioridade 3:** `VANI` meaning-null + `KUON/ON=GATE` + valência de co-residente.
+- usar os numerais 0–9 já registrados no contexto iniciante;
+- aceitar a composição decimal posicional 10–99;
+- aceitar `EN KU SARASALA KE` como construção contextual de idade apenas no OPI 3;
+- aceitar cardinal nu como resposta de idade, sem inventar palavra HNK para ano/anos.
+
+Exemplos de resposta se aprovado:
+
+- 8 → `TOMI`
+- 18 → `DUVE TOMI`
+- 42 → `LUSO HOYU`
+
+Se aprovado, OPI 3 poderá subir de AUTHORED-HOLD para VALIDATED, levando a L01 a **8/10 = 80% dos OPI validados**, sem promoção de autoridade linguística e sem novo lexema.
+
+## Dois HOLD estruturalmente mais difíceis depois do OPI 3
+
+### OPI 1
+
+`KALA YA EN ES KU KE` é uma frase histórica com glosa aproximada. `YA` e `ES` continuam sem alinhamento histórico recuperado.
+
+### OPI 7
+
+`VANI` permanece WATCH com significado recuperado `null`; `KUON` permanece CANDIDATE dependente de `ON=GATE`; a valência de co-residente é autoria experimental.
 
 ## Fronteiras
 
-`hnk-english-app` permanece referência metodológica e arquitetural, não owner de conteúdo HNK. `@hnk/linguas` é owner linguístico; `@hnk/glyphs` é owner estrutural G01–G40. Candidate D visual continua `PREPRODUCTION_NOT_OFFICIAL`.
+`hnk-english-app` permanece referência metodológica/arquitetural e não recebe corpus HNK. `@hnk/linguas` é owner linguístico; `@hnk/glyphs` é owner estrutural G01–G40. Candidate D visual continua `PREPRODUCTION_NOT_OFFICIAL`.
 
 CI remoto continua não comprovado até existir execução real de runner.
