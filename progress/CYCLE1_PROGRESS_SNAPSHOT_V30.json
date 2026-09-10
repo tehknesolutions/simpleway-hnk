@@ -1,0 +1,15 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V30",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_10_OF_10_AND_ACTIVATION_72_OF_72_VALIDATED",
+  "package":"simpleway-hnk@0.33.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":926,"AUTHORED":0,"VALIDATED":82,"FROZEN":0},
+  "implementation_percent":{"MISSING":91.8651,"AUTHORED":0.0,"VALIDATED":8.1349,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":82,"AUTHORED_OR_BETTER_percent":8.1349,"VALIDATED_OR_BETTER":82,"VALIDATED_OR_BETTER_percent":8.1349,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false,"warning":"Historical evidence and current validated implementation both count 82, but they are independent axes."},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"authored_or_better":82,"authored_or_better_percent":52.9032,"validated":82,"validated_percent":52.9032,"remaining_missing_or_unimplemented":73,"OPI":{"target":10,"VALIDATED":10,"percent":100.0},"Activation":{"target":72,"VALIDATED":72,"percent":100.0,"foundation":{"target":60,"VALIDATED":60,"percent":100.0},"integrative":{"target":12,"VALIDATED":12,"percent":100.0}}},
+  "next_recommended_lane":{"categories":["structure_headers","structures"],"target_slots":7,"reason":"The 2 headers and 5 structures can be authored directly from already validated L01 course frames and will support later Q&A, stories and review without requiring the full 32-slot vocabulary lane first."},
+  "next_gate":"SWHNK-L01-STRUCTURE-LANE-AUTHORING-V1"
+}
