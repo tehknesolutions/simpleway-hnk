@@ -1,0 +1,18 @@
+{
+  "batch_id":"SWHNK-L01-TEACHER-NOTES-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["L01-NOTE-001","L01-NOTE-002","L01-NOTE-003"],
+  "source":"../authoring/teacher-notes.v1.json",
+  "current_state":{"AUTHORED":3,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-NOTE-001","statement":"Approve NOTE-001 as the L01 teacher provenance/authority guide, preserving the distinction between recovered material, governed authorship and scoped course validation.","if_approved":{"notes_validated":1,"token_gloss_invention":false,"language_authority_promotions":0}},
+    {"id":"DEC-NOTE-002","statement":"Approve NOTE-002 as the L01 teaching sequence guide: OPI intent → foundation Activation → scoped structure frame → integrative Activation, with required contexts preserved.","if_approved":{"notes_validated":1,"new_HNK_grammar_rules":0,"context_preservation_required":true}},
+    {"id":"DEC-NOTE-003","statement":"Approve NOTE-003 as the L01 correction guide, requiring validated response schemas and forbidding invented copulas, prepositions, WITH markers, generic DO, or global yes/no and negation grammar.","if_approved":{"notes_validated":1,"new_HNK_lexical_forms":0,"unvalidated_sentence_completion":false}},
+    {"id":"DEC-NOTE-004","statement":"Confirm the three current note texts are new SimpleWay HNK v1.1 pedagogical authorship and are not claimed as recovered historical teacher-note payload.","if_approved":{"historical_note_payload_claim":false}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not create new HNK grammar rules.","Does not promote WATCH, GATE or CANDIDATE assets.","Does not assign meanings to YA or ES.","Does not relabel VAMUSARO as weekend.","Does not change VANI recovered meaning null.","Does not promote teacher-note slots to FROZEN."],
+  "projected_effect_if_all_approved":{"teacher_notes_VALIDATED":3,"L01_VALIDATED_before":89,"L01_VALIDATED_after":92,"global_VALIDATED_before":89,"global_VALIDATED_after":92,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition the three teacher-note slots to VALIDATED until all four scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-TEACHER-NOTES-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_L01_TEACHER_NOTES_AUTHORED_AND_REVISE"
+}
