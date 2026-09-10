@@ -2,8 +2,8 @@
 
 **Data de consolidação:** 2026-09-09  
 **Estado:** RECOVERY + GOVERNED COURSE AUTHORING + SCOPED VALIDATION  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V12`  
-**Pacote:** `simpleway-hnk@0.14.0`
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V13`  
+**Pacote:** `simpleway-hnk@0.15.0`
 
 ## 1. Ciclo 1 — contrato estrutural
 
@@ -32,7 +32,7 @@ Todos os 10 OPI têm payload HNK reproduzível e todos os 10 foram individualmen
 | OPI | HNK v1.1 | Estado atual |
 |---:|---|---|
 | 01 | `KALA YA EN ES KU KE` | AUTHORED · REVIEWED HOLD |
-| 02 | `EN VAMAKALA KE` | AUTHORED · REVIEWED HOLD |
+| 02 | `EN VAMAKALA KE` | **VALIDATED**; `[NICKNAME]` / `NE VAMAKALA` |
 | 03 | `EN KU SARASALA KE` | AUTHORED · REVIEWED HOLD |
 | 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** para uso escopado L01 v1.1 |
 | 05 | `EN VALI KUVAN KE` | **VALIDATED** para uso escopado L01 v1.1 |
@@ -50,27 +50,27 @@ OPI 7 continua sendo um único card pedagógico com duas microperguntas HNK.
 Estados exclusivos no Ciclo 1:
 
 - `MISSING`: **998/1.008**;
-- `AUTHORED`: **5/1.008 = 0.4960%**;
-- `VALIDATED`: **5/1.008 = 0.4960%**;
+- `AUTHORED`: **4/1.008 = 0.3968%**;
+- `VALIDATED`: **6/1.008 = 0.5952%**;
 - `FROZEN`: **0/1.008**.
 
 Maturidade acumulada:
 
 - `AUTHORED_OR_BETTER`: **10/1.008 = 0.9921%**;
-- `VALIDATED_OR_BETTER`: **5/1.008 = 0.4960%**;
+- `VALIDATED_OR_BETTER`: **6/1.008 = 0.5952%**;
 - histórico `SOURCE_CONFIRMED_FROZEN`: **82/1.008 = 8.1349%**.
 
 Na L01 OPI:
 
 - revisados: **10/10 = 100%**;
 - `AUTHORED_OR_BETTER`: **10/10 = 100%**;
-- `VALIDATED_OR_BETTER`: **5/10 = 50%**;
+- `VALIDATED_OR_BETTER`: **6/10 = 60%**;
 - `FROZEN`: **0/10**.
 
 No Ciclo 1 OPI:
 
 - `AUTHORED_OR_BETTER`: **10/70 = 14.2857%**;
-- `VALIDATED_OR_BETTER`: **5/70 = 7.1429%**.
+- `VALIDATED_OR_BETTER`: **6/70 = 8.5714%**.
 
 ## 4. Batches de validação aplicados
 
@@ -80,27 +80,32 @@ Foram aprovados `KUVAN`, `EN ... KE` e `[PLACE]` apenas para o escopo desses car
 
 ### Batch 2 — OPI 6 e 8
 
-Foram aprovados `EN KU X KE` para esses dois cards, `VALA` para OPI 6 mantendo `CANDIDATE`, `VAMAVALA` para OPI 8 mantendo `WATCH`, além dos padrões de resposta e contexto necessários. Nenhuma autoridade linguística mudou.
+Foram aprovados `EN KU X KE` para esses dois cards, `VALA` para OPI 6 mantendo `CANDIDATE`, `VAMAVALA` para OPI 8 mantendo `WATCH`, além dos padrões de resposta e contexto necessários. Nenhuma autoridade linguística foi silenciosamente elevada.
 
 ### Batch 3 — OPI 10
 
-Foi aprovado somente para o escopo do OPI 10:
+Foi aprovado como equivalente contextual aproximado. `VAMUSARO` permanece `FROZEN = descanso / período de lazer`, nunca `weekend`; `VALA` permanece `CANDIDATE`.
 
-- `VAMUSARO` permanece `FROZEN` com significado **descanso / período de lazer**;
-- não há glosa `weekend` para `VAMUSARO`;
-- `EN KU VALA KE` reutiliza o precedente validado do OPI 6 sem ampliar automaticamente seu escopo global;
-- `VALA` permanece `CANDIDATE`;
-- a fidelidade fica explicitamente `APPROXIMATE_CONTEXTUAL_EQUIVALENT`;
-- nenhuma palavra nova para “weekend” foi criada;
-- o card não foi promovido a `FROZEN`.
+### Batch 3B — OPI 2
+
+Foi aprovado sem criar um verbo equivalente a `HAVE`:
+
+- pergunta: `EN VAMAKALA KE` como frame nominal/de entrevista escopado;
+- resposta afirmativa: `[NICKNAME]`;
+- resposta negativa: `NE VAMAKALA`;
+- `VAMAKALA` permanece `FROZEN`;
+- `AUTH-004 NE` foi criado como **novo `CANDIDATE` autorado**, não como recuperação histórica;
+- G-IDs de `NE`: `G12 · G02`;
+- `NE` não recebe produtividade global neste checkpoint;
+- a análise histórica de posse/HAVE continua não recuperada;
+- `EN` continua com subject-vs-possessive histórico não resolvido.
 
 ## 5. OPI que permanecem HOLD
 
 - OPI 1: frase histórica aproximada; `YA/ES` continuam sem alinhamento recuperado.
-- OPI 2: `VAMAKALA` é FROZEN, mas posse/existência e resposta negativa ainda precisam de design governado.
 - OPI 3: `SARASALA` continua WATCH; construção de idade e sistema numérico permanecem abertos.
 - OPI 7: `VANI` permanece WATCH com meaning `null`; `KUON` é CANDIDATE dependente de `ON=GATE`; valência de co-residente é experimental.
-- OPI 9: `VAME` permanece GATE, `VAMAZAMU` WATCH, e a estratégia yes/no segue aberta.
+- OPI 9: `VAME` permanece GATE e `VAMAZAMU` WATCH. Com `NE` disponível, a resposta negativa deixa de ser um bloqueio estrutural absoluto, mas o uso de preferência ainda exige um novo gate escopado.
 
 ## 6. Corpus linguístico
 
@@ -116,12 +121,13 @@ Registry de autoria governada `@hnk/linguas/authored`:
 
 1. `AUTH-001 KUVAN` — `CANDIDATE`;
 2. `AUTH-002 VALA` — `CANDIDATE`;
-3. `AUTH-003 KUON` — `CANDIDATE`, dependente de `ON=GATE`.
+3. `AUTH-003 KUON` — `CANDIDATE`, dependente de `ON=GATE`;
+4. `AUTH-004 NE` — `CANDIDATE`, operador de negação/ausência de autoria nova, primeiro uso no OPI 2.
 
 Cobertura-proxy:
 
 - recuperada: **31/144 = 21.5278%**;
-- ativos governados: **34/144 = 23.6111%**.
+- ativos governados: **35/144 = 24.3056%**.
 
 Esses percentuais são proxies de ativos linguísticos, não conclusão dos 144 slots de vocabulário.
 
@@ -129,7 +135,7 @@ Esses percentuais são proxies de ativos linguísticos, não conclusão dos 144 
 
 | Lesson | Lexemas recuperados/rebindados | Candidatos autorados | Frases recuperadas |
 |---|---:|---:|---:|
-| L01 | 10 = 9 recuperados + 1 rebind `VALI` | 3 | 7 |
+| L01 | 10 = 9 recuperados + 1 rebind `VALI` | 4 | 7 |
 | L02 | 11 | 0 | 0 |
 | L03 | 8 | 0 | 0 |
 | L04 | 9 | 0 | 0 |
@@ -147,8 +153,8 @@ Esses percentuais são proxies de ativos linguísticos, não conclusão dos 144 
 
 ## 10. Gate corrente
 
-`SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1`
+`SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1`
 
-OPI 2 é o próximo trabalho de engenharia linguística. A rota preferida é evitar um calque de `HAVE` e investigar uma estratégia nominal/existencial para `EN VAMAKALA KE`, juntamente com um caminho explícito para “não tenho apelido”. Só depois disso o card deve entrar em novo batch humano de validação.
+Dos quatro HOLD restantes, **OPI 9** é agora o melhor próximo candidato porque `AUTH-004 NE` oferece uma peça reutilizável para a resposta negativa. Ainda precisamos governar explicitamente o uso de `VAME` (`GATE`) como preferência no curso, manter `VAMAZAMU` (`WATCH`) visível e definir a resposta positiva/negativa sem universalizar a nova negação.
 
-OPI 3, 7 e 9 permanecem como os casos de maior risco linguístico.
+OPI 1 continua bloqueado por `YA/ES`; OPI 3 depende do sistema numérico/idade; OPI 7 continua sendo o caso de maior risco semântico por `VANI meaning=null` + `KUON/ON=GATE`.
