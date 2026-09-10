@@ -1,0 +1,31 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V37",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-10",
+  "overrides":[
+    {"selector":{"lesson":"L01","category":"vocabulary","range":[25,32]},"implementation_state":"AUTHORED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"VOC-025..032 authored after explicit approval of the V37 evidence-first mapping. Six forms are governed @hnk/linguas CANDIDATE entries; VANI and VAME remain recovered WATCH/GATE assets with scoped L01 bindings. No validation or language-authority promotion is implied."}
+  ],
+  "lexical_evidence_updates":{
+    "authored_candidate_forms_linked_to_cycle1":20,
+    "authored_candidate_forms":["KUVAN","VALA","KUON","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA","KALA","AN","EN","KU","KE","ZAMI"],
+    "governed_unique_language_assets":51,
+    "governed_asset_proxy_percent":35.4167,
+    "lesson_authored_candidates":{"L01":20,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
+    "gate":"L01_VOCABULARY_AUTHORED_COMPLETE_VALIDATION_PENDING",
+    "warning":"31/144 remains the recovered-form proxy; 51/144 is the governed-language-asset proxy. L01 has 32/32 authored Vocabulary slots, of which 24 are validated and 8 await validation."
+  },
+  "validation_evidence_updates":{
+    "L01_Vocabulary_target":32,
+    "L01_Vocabulary_authored":8,
+    "L01_Vocabulary_validated":24,
+    "L01_Vocabulary_missing":0,
+    "L01_Vocabulary_authored_or_better":32,
+    "L01_Vocabulary_filled_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
+    "L01_Vocabulary_authored_slots":[25,26,27,28,29,30,31,32],
+    "L01_Vocabulary_validated_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+    "L01_Vocabulary_missing_slots":[],
+    "prepared_vocabulary_batch":"../curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json",
+    "vocabulary_mapping_approval":"../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-form-mapping-human-batch.v1.json",
+    "vocabulary_mapping_application":"../curriculum/cycle-01/L01-kether/authoring/vocabulary-gap-8-application.v1.json"
+  }
+}
