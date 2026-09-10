@@ -2,7 +2,7 @@
   "batch_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1",
   "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
   "scope":["SEM-025","SEM-026","SEM-027","SEM-028","SEM-029","SEM-030","SEM-031","SEM-032"],
-  "source":"../../../proposals/language/HNK_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS_V1.json",
+  "source":"../../../../proposals/language/HNK_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS_V1.json",
   "current_state":{"semantic_targets_proposed":8,"forms_selected":0,"canonical_registry_entries_created":0,"vocabulary_slots_still_missing":8},
   "decisions_requested":[
     {"id":"DEC-SEM-001","statement":"Approve PERSONAL_NAME_DOMAIN and FIRST_PERSON_REFERENT as high-value L01 semantic targets, without yet assigning KALA or AN as canonical standalone forms.","if_approved":{"semantic_targets_approved":2,"forms_selected":0}},
