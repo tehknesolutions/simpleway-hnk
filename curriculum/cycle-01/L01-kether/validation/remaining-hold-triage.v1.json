@@ -1,0 +1,48 @@
+{
+  "triage_id":"SWHNK-L01-REMAINING-HOLD-TRIAGE-V1",
+  "status":"TRIAGE_COMPLETE_NEXT_TECHNICAL_GATE_SELECTED",
+  "as_of":"2026-09-09",
+  "current":{"reviewed":10,"validated":7,"hold":3,"frozen":0},
+  "holds":[
+    {
+      "slot":"L01-OPI-003",
+      "english":"How old are you?",
+      "hnk":"EN KU SARASALA KE",
+      "blockers":["SARASALA remains WATCH.","Age reading is contextual rather than recovered exact grammar.","HNK beginner number/age-value system is open."],
+      "source_recovery_value":"HIGH",
+      "governed_authoring_feasibility":"HIGH",
+      "risk":"MEDIUM_HIGH",
+      "priority":1,
+      "reason":"The question frame already exists. The largest missing subsystem is explicit and reusable: numbers/age values. Solving it benefits the wider language beyond this card without requiring reinterpretation of meaning-null historical tokens.",
+      "next_gate":"SWHNK-HNK-NUMBER-SYSTEM-RECOVERY-AND-DESIGN-V1"
+    },
+    {
+      "slot":"L01-OPI-001",
+      "english":"What's your name?",
+      "hnk":"KALA YA EN ES KU KE",
+      "blockers":["Recovered whole-sentence gloss is approximate.","YA and ES remain semantically unresolved.","KALA/EN/KU/KE roles remain inferred rather than token-aligned recovered canon."],
+      "source_recovery_value":"VERY_HIGH",
+      "governed_authoring_feasibility":"MEDIUM",
+      "risk":"HIGH",
+      "priority":2,
+      "reason":"The sentence is historically recovered, so replacing or redefining unknown tokens without stronger evidence would destroy archaeological value. Prefer source recovery or explicit v1.1 interpretation approval later.",
+      "next_gate":"SWHNK-L01-OPI-001-TOKEN-ALIGNMENT-OR-V1_1-INTERPRETATION-V1"
+    },
+    {
+      "slot":"L01-OPI-007",
+      "english":"Where do you live and who do you live with?",
+      "hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],
+      "blockers":["VANI is recovered WATCH with meaning null.","VANI=live/reside is only a semantic hypothesis.","KUON is CANDIDATE built from ON=GATE.","Co-resident valency is authored/test-only."],
+      "source_recovery_value":"VERY_HIGH",
+      "governed_authoring_feasibility":"MEDIUM_LOW",
+      "risk":"VERY_HIGH",
+      "priority":3,
+      "reason":"This card stacks a meaning-null historical form, a gated referent component and new valency. It should be last unless stronger source evidence appears.",
+      "next_gate":"SWHNK-L01-OPI-007-SEMANTIC-PROMOTION-OR-RECOVERY-V1"
+    }
+  ],
+  "selected_next":"L01-OPI-003",
+  "selected_next_gate":"SWHNK-HNK-NUMBER-SYSTEM-RECOVERY-AND-DESIGN-V1",
+  "policy":"Do not validate remaining cards merely to reach 100%. Each unresolved historical or authored dependency must stay visible until source recovery or explicit governed approval.",
+  "projected_if_OPI003_eventually_validated":{"L01_OPI_validated":8,"L01_OPI_validated_percent":80.0,"Cycle1_OPI_validated":8,"Cycle1_OPI_validated_percent":11.4286,"global_validated_slots":8,"global_validated_percent":0.7937}
+}
