@@ -1,16 +1,19 @@
 {
   "proposal_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-AUTHORING-PLAN-V1",
-  "status":"SEMANTIC_TARGET_SET_PROPOSED_AWAITING_APPROVAL",
+  "status":"SEMANTIC_TARGETS_APPROVED_FORM_MAPPING_PROPOSED",
   "problem":{"L01_vocabulary_target":32,"validated_with_distinct_governed_assets":24,"remaining_gap":8},
   "principle":"SEMANTICS_BEFORE_FORM",
-  "constraints":["Do not choose forms by numerology, glyph shape, ordinal or target count.","Do not assign recovered historical meanings to phrase-only tokens whose exact standalone gloss is unrecovered.","Do not treat YA, ES, KU, EN, KE, KALA, AN, ZAMI, ZAMO, SARI, LO or DA as standalone canonical lexemes merely because they occur in recovered phrases.","Any new lexical asset must enter canonical governance at CANDIDATE first unless separately justified by recovered evidence.","Any reuse of an observed phrase token as a newly governed standalone candidate must explicitly state that its standalone semantics are authored/inferred, not historically recovered."],
-  "completed_steps":["Identified that 24 of 32 L01 Vocabulary slots can use distinct already governed L01 assets.","Validated VOC-001..024 as scoped curriculum selections with no language-authority promotion.","Proposed eight semantic targets before form selection."],
+  "constraints":["Do not choose forms by numerology, glyph shape, ordinal or target count.","Do not assign recovered historical meanings to phrase-only tokens whose exact standalone gloss is unrecovered.","Any new lexical asset must enter canonical governance at CANDIDATE first unless separately justified by recovered evidence.","Any reuse of an observed phrase token as a newly governed standalone candidate must explicitly state that its standalone semantics are authored/inferred, not historically recovered.","Do not duplicate recovered Master Lexicon forms inside @hnk/linguas/authored."],
+  "completed_steps":["Identified that 24 of 32 L01 Vocabulary slots can use distinct already governed L01 assets.","Validated VOC-001..024 as scoped curriculum selections with no language-authority promotion.","Proposed eight semantic targets before form selection.","Received explicit human approval of all eight semantic targets only.","Completed evidence-first form mapping review without applying canonical registry changes."],
   "semantic_target_proposal":"./HNK_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS_V1.json",
   "semantic_target_gate":"../../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-semantic-targets-human-batch.v1.json",
-  "recommended_workflow":["Approve or revise the eight semantic targets.","For each approved target, inspect observed/recovered-form evidence without treating inference as historical gloss.","Prefer a cautious governed reuse when evidence and pedagogy justify it; otherwise generate a new form under the HNK lexeme authoring contract with collision checks and HNK40 G-ID-first encoding.","Present every semantic-form mapping for explicit human canonical-governance approval.","Only after canonical governance bind resulting assets to VOC-025..032."],
-  "current_decision":"EIGHT_SEMANTIC_TARGETS_PROPOSED_NO_FORMS_SELECTED",
+  "form_mapping_review":"./HNK_L01_VOCABULARY_GAP_8_FORM_MAPPING_REVIEW_V1.json",
+  "form_mapping_gate":"../../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-form-mapping-human-batch.v1.json",
+  "mapping_architecture":{"new_authored_candidates_proposed":["KALA","AN","EN","KU","KE","ZAMI"],"recovered_assets_for_scoped_binding":["VANI","VAME"],"canonical_registry_entries_created":0,"vocabulary_slots_filled_by_mapping_review":0},
+  "recommended_workflow":["Approve or revise the exact eight semantic-form mappings.","If approved, register KALA/AN/EN/KU/KE/ZAMI as AUTH-015..020 CANDIDATE entries in @hnk/linguas/authored with historicalRecoveryClaim=false.","Record a scoped L01 residence semantic binding for recovered VANI while keeping Master Lexicon meaning null and WATCH authority.","Record an L01 curriculum rebind for recovered VAME while keeping GATE authority and recovered provenance.","Bind the eight governed assets to VOC-025..032 as AUTHORED, then validate them in a separate curriculum gate."],
+  "current_decision":"EIGHT_SEMANTIC_TARGETS_APPROVED_EXACT_FORM_MAPPING_PROPOSED_NOT_APPLIED",
   "new_HNK_lexical_forms_created":0,
   "canonical_registry_entries_created":0,
   "vocabulary_slots_filled_by_this_plan":0,
-  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1"
+  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1"
 }
