@@ -1,0 +1,31 @@
+{
+  "rule_id":"HNK-NE-PREDICATE-NEGATION-SCOPED-EXTENSION-V1",
+  "status":"AUTHORING_RULE_PROPOSAL_NOT_CANON",
+  "scope":["L01-OPI-009"],
+  "base_asset":{"id":"AUTH-004","form":"NE","authority":"CANDIDATE","current_governed_function":"negation / absence operator with first approved use NE VAMAKALA","historical_recovery_claim":false},
+  "proposed_extension":{
+    "schema":"NE + PREDICATE_PHRASE",
+    "first_frame":"NE VAME VAMAZAMU",
+    "intended_function":"negative preference fragment: not like singing / does not like singing in the OPI dialogue context",
+    "subject_omission":"DIALOGUE_FRAGMENT_CONTEXT",
+    "global_productivity":false,
+    "historical_grammar_claim":false
+  },
+  "positive_echo_frame":{"form":"VAME VAMAZAMU","intended_function":"affirmative preference fragment: like singing","new_function_words":false},
+  "dependencies":[
+    {"form":"VAME","id":"LEX-025","authority":"GATE","meaning":"literal like","effect":"UNCHANGED"},
+    {"form":"VAMAZAMU","id":"LEX-008","authority":"WATCH","meaning":"singing / harmonic expression","effect":"UNCHANGED"},
+    {"form":"NE","id":"AUTH-004","authority":"CANDIDATE","effect":"SCOPED_EXTENSION_ONLY"}
+  ],
+  "boundaries":{
+    "does_not_promote_VAME":true,
+    "does_not_promote_VAMAZAMU":true,
+    "does_not_promote_NE":true,
+    "does_not_define_global_predicate_negation":true,
+    "does_not_require_AN_first_person":true,
+    "does_not_claim_historical_yes_no_particles":true,
+    "does_not_create_new_lexeme":true
+  },
+  "validation_projection_if_approved":{"question":"EN VAME VAMAZAMU KE","affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU","whole_slot":"READY_FOR_SCOPED_VALIDATION"},
+  "next_gate":"SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1"
+}
