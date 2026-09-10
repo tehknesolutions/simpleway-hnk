@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L01-STORY-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["L01-STORY-001","L01-STORY-002","L01-STORY-003","L01-STORY-004","L01-STORY-005"],
+  "source":"../authoring/story-lane.v1.json",
+  "current_state":{"AUTHORED":5,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-STORY-001","statement":"Approve Stories 001-002 as narrative framing around the validated name/nickname and age/birthplace exchanges, without assigning YA/ES token glosses or changing SARASALA/numeral/KUVAN authority.","if_approved":{"stories_validated":2,"YA_ES_token_glosses_created":false,"SARASALA_authority":"WATCH_UNCHANGED","numeral_authority":"CANDIDATE_UNCHANGED","KUVAN_authority":"CANDIDATE_UNCHANGED"}},
+    {"id":"DEC-STORY-002","statement":"Approve Story 003 as a work/school scene preserving WORK_OR_SCHOOL context, the explicit VALI L01 rebind, KUVAN/VALA=CANDIDATE and no generic HNK DO verb.","if_approved":{"stories_validated":1,"generic_DO_created":false,"KUVAN_authority":"CANDIDATE_UNCHANGED","VALA_authority":"CANDIDATE_UNCHANGED"}},
+    {"id":"DEC-STORY-003","statement":"Approve Story 004 as residence/co-resident/hobbies narrative while retaining two separate residence microquestions and preserving VANI=WATCH meaning null, KUVAN/KUON=CANDIDATE, ON=GATE, VAMAVALA=WATCH, and no WITH lexeme.","if_approved":{"stories_validated":1,"VANI_meaning":"NULL_UNCHANGED","WITH_lexeme_created":false,"global_comitative_grammar":false}},
+    {"id":"DEC-STORY-004","statement":"Approve Story 005 as preference/leisure narrative using only the validated OPI 9-10 payloads, preserving VAME=GATE, VAMAZAMU=WATCH, NE/VALA=CANDIDATE and VAMUSARO=rest/leisure period rather than weekend.","if_approved":{"stories_validated":1,"weekend_gloss_claim":false,"global_preference_or_negation_grammar":false}},
+    {"id":"DEC-STORY-005","statement":"Confirm all five current stories are new SimpleWay HNK v1.1 pedagogical authorship; Portuguese narrative framing is not HNK grammar and no historical story payload is claimed.","if_approved":{"historical_story_payload_claim":false,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not create new HNK grammar rules.","Does not promote WATCH, GATE or CANDIDATE assets.","Does not turn Portuguese narrative framing into HNK grammar.","Does not promote Story slots to FROZEN."],
+  "projected_effect_if_all_approved":{"story_VALIDATED":5,"L01_VALIDATED_before":96,"L01_VALIDATED_after":101,"global_VALIDATED_before":96,"global_VALIDATED_after":101,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition the five Story slots to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-STORY-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_L01_STORIES_AUTHORED_AND_REVISE"
+}
