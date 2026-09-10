@@ -1,0 +1,14 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V15",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_7_OF_10_VALIDATED_NUMERAL_CANDIDATES_GENERATED_NOT_PROMOTED",
+  "package":"simpleway-hnk@0.18.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":3,"VALIDATED":7,"FROZEN":0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":7,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":4,"canonical_governed_unique_assets":35,"canonical_governed_proxy_percent":24.3056,"proposal_only_numeral_candidates":10,"proposal_only_forms":["BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA"],"proposal_only_forms_count_as_governed_assets":false},
+  "L01_OPI":{"target":10,"reviewed":10,"VALIDATED":7,"validated_percent":70.0,"hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007"]},
+  "number_system":{"historical_numeral_system_recovered":false,"strategy":"TEN_PRIMITIVE_DIGIT_NUMERALS","strategy_approved":true,"candidate_generation_complete":true,"candidate_set_audit":{"shape":"CVCV","safe_HNK40_only":true,"minimum_distance_from_current_assets":3,"minimum_pairwise_distance":3,"numerology_used":false,"glyph_visual_semantics_used":false},"canonical_registration_complete":false,"spoken_0_9_ready_for_teaching":false,"multi_digit_rule":null,"year_unit":null,"OPI3_validation_change":0},
+  "next_gate":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-PROMOTION-BATCH-V1"
+}
