@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + COMMUNICATIVE CORE COMPLETE + VOCABULARY 24/32 VALIDATED + GAP-8 SEMANTIC TARGETS PROPOSED  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V36`  
-**Pacote atual:** `simpleway-hnk@0.39.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + COMMUNICATIVE CORE COMPLETE + VOCABULARY 24/32 VALIDATED + GAP-8 SEMANTICS APPROVED + FORM MAPPING PROPOSED  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V37`  
+**Pacote atual:** `simpleway-hnk@0.40.0`
 
 ## Ciclo 1
 
@@ -26,33 +26,30 @@ As validações permanecem escopadas ao curso v1.1 e não promovem automaticamen
 
 ## L01 Vocabulary — 24/32 VALIDATED
 
-A distribuição de **32 slots** é curricular; não foi recuperada uma tabela histórica enumerando esses 32 payloads.
+`VOC-001..024` estão VALIDATED. `VOC-025..032` permanecem `MISSING_GOVERNED_ASSET`.
 
-Estado atual:
+Os oito alvos semânticos faltantes foram agora **aprovados** sob a regra `SEMANTICS_BEFORE_FORM`: PERSONAL_NAME_DOMAIN, FIRST_PERSON_REFERENT, SECOND_PERSON_REFERENT, CONTENT_SELECTOR, QUESTION_OPERATOR, RESIDENCE_LIVE, PREFERENCE_LIKE e SPEAK_LANGUAGE_USE.
 
-- `VOC-001..010`: 10 ativos recuperados/reference/rebind ligados à L01 — VALIDATED;
-- `VOC-011..014`: `KUVAN`, `VALA`, `KUON`, `NE` — VALIDATED como slots curriculares, ativos continuam `CANDIDATE`;
-- `VOC-015..024`: `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA` — VALIDATED como slots curriculares, numerais continuam `CANDIDATE`;
-- `VOC-025..032`: **MISSING_GOVERNED_ASSET**.
+A aprovação semântica não selecionou formas nem alterou os oito slots.
 
-A validação de Vocabulary criou **zero novas formas HNK**, não promoveu WATCH/GATE/CANDIDATE/REFERENCE e não transformou tokens de frases recuperadas em entradas históricas independentes.
+## Gap 8 — revisão evidence-first de formas
 
-## Gap 8 — semantic-first
+O mapping review propõe, mas ainda não aplica:
 
-Antes de selecionar formas para os oito slots faltantes, foi proposta a seguinte fila semântica:
+- `KALA` → PERSONAL_NAME_DOMAIN → novo `AUTH-015 CANDIDATE`;
+- `AN` → FIRST_PERSON_REFERENT → novo `AUTH-016 CANDIDATE`;
+- `EN` → SECOND_PERSON_REFERENT → novo `AUTH-017 CANDIDATE`;
+- `KU` → CONTENT_SELECTOR → novo `AUTH-018 CANDIDATE`;
+- `KE` → QUESTION_OPERATOR → novo `AUTH-019 CANDIDATE`;
+- `VANI` → RESIDENCE_LIVE → binding semântico escopado sobre `LEX-031`, mantendo `WATCH` e `meaning=null` no Master Lexicon;
+- `VAME` → PREFERENCE_LIKE → rebind curricular L01 sobre `LEX-025`, mantendo `GATE`;
+- `ZAMI` → SPEAK_LANGUAGE_USE → novo `AUTH-020 CANDIDATE`.
 
-- `SEM-025` — PERSONAL_NAME_DOMAIN;
-- `SEM-026` — FIRST_PERSON_REFERENT;
-- `SEM-027` — SECOND_PERSON_REFERENT;
-- `SEM-028` — CONTENT_SELECTOR;
-- `SEM-029` — QUESTION_OPERATOR;
-- `SEM-030` — RESIDENCE_LIVE;
-- `SEM-031` — PREFERENCE_LIKE;
-- `SEM-032` — SPEAK_LANGUAGE_USE.
+A evidência vem das frases recuperadas, dos OPI já validados e das entradas recuperadas existentes. Para `KALA/AN/EN/KU/KE/ZAMI`, a semântica standalone proposta continua sendo **autoria/inferência governada**, não recuperação histórica. `VANI` e `VAME` não serão duplicados no authored registry.
 
-Ainda existem **0 formas selecionadas** e **0 entradas canônicas novas** para esse gap. `KALA`, `AN`, `EN`, `KU`, `KE`, `VANI`, `VAME` e `ZAMI` são apenas formas observadas a investigar no próximo estágio, sem glosa histórica standalone atribuída por essa proposta.
+Gate preparado: `SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1`.
 
-Gate preparado: `SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1`.
+Se aprovado e aplicado posteriormente, o registry autorado projetado sobe de **14 → 20 CANDIDATEs** e o inventário de ativos governados distintos de **45 → 51**. Essa projeção não é o estado canônico atual.
 
 ## Progresso L01
 
@@ -77,6 +74,8 @@ Cumulativo authored-or-better: **125/1.008 = 12.4008%**.
 Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
 
 ## Corpus linguístico governado
+
+Estado canônico atual, antes do mapping gap-8:
 
 Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`) e 7 frases recuperadas.
 
