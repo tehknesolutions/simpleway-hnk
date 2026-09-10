@@ -14,6 +14,9 @@ const p01 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack
 const p01Transition = await json('curriculum/cycle-01/L01-kether/validation/activation-p01.validated-transition.v1.json');
 const p02 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p02.v1.json');
 const p02Batch = await json('curriculum/cycle-01/L01-kether/validation/activation-p02-human-batch.v1.json');
+const p02Transition = await json('curriculum/cycle-01/L01-kether/validation/activation-p02.validated-transition.v1.json');
+const p03 = await json('curriculum/cycle-01/L01-kether/authoring/activation-pack-p03.v1.json');
+const p03Batch = await json('curriculum/cycle-01/L01-kether/validation/activation-p03-human-batch.v1.json');
 const numeralBatch = await json('curriculum/cycle-01/L01-kether/validation/spoken-numeral-0-9-candidate-promotion-batch.v1.json');
 const vAni = await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 const kuon = await json('proposals/language/HNK_KUON_PROMOTION_RECORD_V1.json');
@@ -29,8 +32,8 @@ for (const override of evidence.overrides) {
 const values = [...simulated.values()];
 assert.equal(values.filter(x => x.evidence_state === 'SOURCE_CONFIRMED_FROZEN').length, 82);
 assert.equal(values.filter(x => x.implementation_state === 'AUTHORED').length, 12);
-assert.equal(values.filter(x => x.implementation_state === 'VALIDATED').length, 22);
-assert.equal(values.filter(x => ['AUTHORED','VALIDATED','FROZEN'].includes(x.implementation_state)).length, 34);
+assert.equal(values.filter(x => x.implementation_state === 'VALIDATED').length, 34);
+assert.equal(values.filter(x => ['AUTHORED','VALIDATED','FROZEN'].includes(x.implementation_state)).length, 46);
 assert.equal(values.filter(x => x.implementation_state === 'FROZEN').length, 0);
 assert.equal(values.filter(x => x.scaffolded).length, 82);
 
@@ -43,24 +46,27 @@ assert.equal(activationPipeline.target, 72);
 assert.equal(activationPipeline.historical_evidence.raw_drill_payload_recovered, false);
 assert.equal(activationPipeline.allocation.foundation.slots, 60);
 assert.equal(activationPipeline.allocation.integrative.slots, 12);
-assert.equal(p01.status, 'AUTHORED_12_OF_12_VALIDATION_PENDING');
-assert.equal(p01.drills.length, 12);
 assert.equal(p01Transition.status, 'APPLIED');
 assert.equal(p01Transition.after.VALIDATED, 12);
-assert.equal(p02.status, 'AUTHORED_12_OF_12_VALIDATION_PENDING');
-assert.equal(p02.drills.length, 12);
-assert.deepEqual(p02.slots, [13,24]);
-assert.equal(p02Batch.status, 'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(p02Batch.projected_effect_if_all_approved.L01_Activation_VALIDATED_after, 24);
+assert.equal(p02Batch.status, 'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
+assert.equal(p02Transition.status, 'APPLIED');
+assert.equal(p02Transition.lesson_activation_after.VALIDATED, 24);
+assert.equal(p02Transition.authority_effect.language_authority_promotions, 0);
+assert.equal(p03.status, 'AUTHORED_12_OF_12_VALIDATION_PENDING');
+assert.equal(p03.drills.length, 12);
+assert.deepEqual(p03.slots, [25,36]);
+assert.equal(p03Batch.status, 'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(p03Batch.projected_effect_if_all_approved.L01_Activation_VALIDATED_after, 36);
 
 assert.equal(evidence.validation_evidence.L01_Activation_target, 72);
 assert.equal(evidence.validation_evidence.L01_Activation_authored, 12);
-assert.equal(evidence.validation_evidence.L01_Activation_validated, 12);
+assert.equal(evidence.validation_evidence.L01_Activation_validated, 24);
 assert.equal(evidence.validation_evidence.L01_Activation_frozen, 0);
-assert.equal(evidence.validation_evidence.L01_Activation_authored_or_better, 24);
-assert.equal(evidence.validation_evidence.L01_Activation_remaining_unimplemented, 48);
-assert.deepEqual(evidence.validation_evidence.L01_Activation_authored_slots, [13,14,15,16,17,18,19,20,21,22,23,24]);
-assert.deepEqual(evidence.validation_evidence.L01_Activation_validated_slots, [1,2,3,4,5,6,7,8,9,10,11,12]);
+assert.equal(evidence.validation_evidence.L01_Activation_authored_or_better, 36);
+assert.equal(evidence.validation_evidence.L01_Activation_remaining_unimplemented, 36);
+assert.deepEqual(evidence.validation_evidence.L01_Activation_authored_slots, [25,26,27,28,29,30,31,32,33,34,35,36]);
+assert.deepEqual(evidence.validation_evidence.L01_Activation_validated_slots, Array.from({length:24}, (_,i) => i+1));
+assert.equal(evidence.validation_evidence.prepared_activation_batch, '../curriculum/cycle-01/L01-kether/validation/activation-p03-human-batch.v1.json');
 
 assert.equal(numeralBatch.status, 'APPROVED_AND_APPLIED_CANDIDATE_REGISTRATION');
 assert.equal(numeralBatch.applied_effect.recovered_cycle1_forms, 31);
@@ -71,5 +77,5 @@ assert.equal(vAni.target_form.current_authority, 'WATCH');
 assert.equal(kuon.authority, 'CANDIDATE');
 assert.equal(kuon.dependency.authority, 'GATE');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V13');
-console.log('Cycle 1: 12 AUTHORED + 22 VALIDATED = 34 authored-or-better slots; L01 OPI 10/10 VALIDATED; Activation P01 12 VALIDATED + P02 12 AUTHORED; historical evidence remains 82.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V14');
+console.log('Cycle 1: 12 AUTHORED + 34 VALIDATED = 46 authored-or-better slots; L01 OPI 10/10 VALIDATED; Activation P01-P02 24 VALIDATED + P03 12 AUTHORED; historical evidence remains 82.');
