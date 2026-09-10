@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION COMPLETE IN AUTHORSHIP  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V29`  
-**Pacote atual:** `simpleway-hnk@0.32.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION COMPLETE + STRUCTURE LANE AUTHORED  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V31`  
+**Pacote atual:** `simpleway-hnk@0.34.0`
 
 ## Ciclo 1
 
@@ -11,68 +11,54 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-## L01 OPI — 10/10 VALIDATED
+## L01 — OPI e Activation completos em validação
 
-Todos os dez OPI v1.1 possuem payload HNK reproduzível, foram revisados e estão validados para uso escopado no curso. A validação do curso não altera por si só autoridade lexical histórica.
+- OPI: **10/10 VALIDATED = 100%**;
+- Activation foundation: **60/60 VALIDATED = 100%**;
+- Activation integrative: **12/12 VALIDATED = 100%**;
+- Activation total: **72/72 VALIDATED = 100%**.
 
-## L01 Activation — 72/72 implementados
+P01–P06 são autoria governada v1.1 derivada dos OPI validados. A release histórica comprova 72 slots de drills, mas o payload bruto histórico continua não recuperado.
 
-A release histórica comprova **72 teacher-drill slots**, mas o conteúdo bruto desses 72 drills não foi recuperado. O pipeline v1.1 cria drills novos derivados dos OPI validados e mantém essa proveniência explícita.
+## L01 Structure lane — 7/7 AUTHORED
 
-Estrutura e estado:
+A fonte canônica confirma a quantidade de **2 headers + 5 structures**, não seus payloads históricos. Os sete itens atuais são autoria v1.1 nova:
 
-- P01–P05, slots 001–060: **VALIDATED**;
-- P06 integrative, slots 061–072: **AUTHORED / validation pending**;
-- foundation VALIDATED: **60/60 = 100%**;
-- integrative AUTHORED: **12/12 = 100%**;
-- Activation VALIDATED: **60/72 = 83.3333%**;
-- Activation AUTHORED: **12/72 = 16.6667%**;
-- Activation authored-or-better: **72/72 = 100%**;
-- remaining unimplemented in Activation: **0**.
+- `L01-HDR-001` — Fórmulas de entrevista e perguntas nominais;
+- `L01-HDR-002` — Perguntas produtivas escopadas: conteúdo, localização e preferência;
+- `L01-STR-001` — `KALA YA EN ES KU KE` como fórmula inteira;
+- `L01-STR-002` — `EN + DOMAIN + KE`;
+- `L01-STR-003` — `EN + KU + DOMAIN + KE`;
+- `L01-STR-004` — `EN + DOMAIN + KUVAN + KE`;
+- `L01-STR-005` — `EN + VAME + CONTENT + KE`.
 
-### P05 — VALIDATED
+Fronteiras preservadas: nenhuma gramática universal histórica é reivindicada; `YA/ES` permanecem sem glosa token-a-token; `KUVAN` permanece CANDIDATE; `VAME` GATE; `VAMAZAMU` WATCH; `NE` CANDIDATE; `VANI` WATCH com meaning histórico `null`.
 
-Fonte: OPI 9–10. Preserva `VAME=GATE`, `VAMAZAMU=WATCH`, `NE/VALA=CANDIDATE`, `VAMUSARO=rest/leisure period` e não `weekend`, sem promover autoridade ou reconstruir o payload histórico.
-
-### P06 — integrative AUTHORED
-
-Slots 061–072 integram todos os dez OPI validados por meio de:
-
-- paired interviews;
-- multipart residence/hobbies interview;
-- ordered half-interviews;
-- intent discrimination;
-- response routing;
-- G-ID relay;
-- adaptive five-OPI interview;
-- full ten-OPI interview capstone.
-
-Regra central: os integrativos apenas **sequenciam** payloads HNK e schemas de resposta já validados. Eles não fundem perguntas em novas sentenças HNK e não criam conjunções, copulas, preposições, partículas de polaridade, lexemas ou regras gramaticais novas.
-
-Gate preparado: `SWHNK-L01-ACTIVATION-P06-INTEGRATIVE-VALIDATION-V1`.
-
-Se aprovado, a fase Activation chega a **72/72 VALIDATED = 100%**.
+Gate preparado: `SWHNK-L01-STRUCTURE-LANE-VALIDATION-V1`.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
-- OPI VALIDATED: **10**
-- Activation VALIDATED: **60**
-- Activation AUTHORED: **12**
-- authored-or-better total: **82/155 = 52.9032%**
-- validated total: **70/155 = 45.1613%**
-- remaining unimplemented outside OPI/Activation: **73**
+- OPI VALIDATED: **10**;
+- Activation VALIDATED: **72**;
+- Structure headers AUTHORED: **2**;
+- Structures AUTHORED: **5**;
+- total authored-or-better: **89/155 = 57.4194%**;
+- total VALIDATED: **82/155 = 52.9032%**;
+- remaining missing/unimplemented: **66**.
+
+Categorias restantes após a lane estrutural: 3 teacher notes, 5 stories, 4 Q&A, 32 vocabulary e 22 review.
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**926 MISSING + 12 AUTHORED + 70 VALIDATED + 0 FROZEN = 1.008**.
+**919 MISSING + 7 AUTHORED + 82 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **82/1.008 = 8.1349%**.
+Cumulativo authored-or-better: **89/1.008 = 8.8294%**.
 
-Historical evidence também é **82/1.008 = 8.1349%**, mas esse mesmo número é coincidência: evidência histórica e implementação atual são eixos independentes.
+Historical evidence: **82/1.008 = 8.1349%**, em eixo separado da implementação atual.
 
 ## Corpus linguístico governado
 
