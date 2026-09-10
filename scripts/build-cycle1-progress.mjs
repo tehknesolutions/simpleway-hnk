@@ -8,7 +8,14 @@ async function readJson(path) {
 }
 
 const allocation = await readJson('progress/cycle1-allocation.v1.json');
-const evidence = await readJson('progress/evidence-overrides.v1.json');
+const evidenceBase = await readJson('progress/evidence-overrides.v1.json');
+const evidenceSupplement = await readJson('progress/evidence-overrides.v37.json');
+const evidence = {
+  ...evidenceBase,
+  overrides: [...evidenceBase.overrides, ...(evidenceSupplement.overrides ?? [])],
+  lexical_evidence: {...evidenceBase.lexical_evidence, ...(evidenceSupplement.lexical_evidence_updates ?? {})},
+  validation_evidence: {...evidenceBase.validation_evidence, ...(evidenceSupplement.validation_evidence_updates ?? {})},
+};
 const model = await readJson('progress/progress-model.v1.json');
 
 const categoryOrder = [
@@ -127,7 +134,8 @@ const summary = {
   generated_from: [
     'progress/cycle1-allocation.v1.json',
     'progress/progress-model.v1.json',
-    'progress/evidence-overrides.v1.json'
+    'progress/evidence-overrides.v1.json',
+    'progress/evidence-overrides.v37.json'
   ],
   target_slots: slots.length,
   implementation,
