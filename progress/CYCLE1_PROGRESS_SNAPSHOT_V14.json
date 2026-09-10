@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V14",
+  "as_of":"2026-09-09",
+  "status":"L01_OPI_10_OF_10_REVIEWED_7_OF_10_VALIDATED",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":3,"VALIDATED":7,"FROZEN":0},
+  "implementation_percent":{"MISSING":99.0079,"AUTHORED":0.2976,"VALIDATED":0.6944,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_percent":0.9921,"VALIDATED_OR_BETTER":7,"VALIDATED_OR_BETTER_percent":0.6944,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_asset_proxies":{"recovered":{"forms":31,"target":144,"percent":21.5278},"governed":{"recovered_forms":31,"authored_candidates":4,"unique_assets":35,"target":144,"percent":24.3056},"authored_candidates":["KUVAN","VALA","KUON","NE"]},
+  "L01":{"target":155,"AUTHORED_current_state":3,"VALIDATED":7,"FROZEN":0,"authored_or_better":10,"opi":{"target":10,"reviewed":10,"AUTHORED_current_state":3,"VALIDATED":7,"validated_percent":70.0,"validated_slots":["L01-OPI-002","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-009","L01-OPI-010"],"hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007"]}},
+  "cycle1_opi":{"target":70,"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_percent":14.2857,"VALIDATED":7,"VALIDATED_percent":10.0},
+  "batch4":{"slot":"L01-OPI-009","status":"APPLIED","question":"EN VAME VAMAZAMU KE","affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU","authority_boundaries":{"VAME":"GATE_UNCHANGED","VAMAZAMU":"WATCH_UNCHANGED","NE":"CANDIDATE_UNCHANGED"},"new_lexical_forms":0},
+  "remaining_holds":{"L01-OPI-001":"historical token alignment YA/ES unresolved","L01-OPI-003":"age construction + HNK number system open","L01-OPI-007":"VANI recovered meaning null + KUON/ON gate + co-resident valency"},
+  "next_gate":"SWHNK-L01-REMAINING-HOLD-TRIAGE-V1"
+}
