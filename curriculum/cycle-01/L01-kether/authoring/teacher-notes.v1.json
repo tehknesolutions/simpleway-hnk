@@ -1,0 +1,50 @@
+{
+  "lane_id":"SWHNK-L01-TEACHER-NOTES-AUTHORING-V1",
+  "status":"AUTHORED_3_OF_3_VALIDATION_PENDING",
+  "lesson_id":"L01",
+  "source_contract":{"teacher_notes":3,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1.md","payload_historical_recovery_claim":false},
+  "historical_boundary":"The canonical source confirms exactly three teacher-note slots for L01, but no historical note text was recovered. The notes below are new governed SimpleWay HNK v1.1 pedagogical authorship based only on already validated L01 course behavior and explicit authority boundaries.",
+  "notes":[
+    {
+      "slot_id":"L01-NOTE-001",
+      "title_pt":"Proveniência e autoridade linguística",
+      "purpose":"Orientar o professor a distinguir material recuperado, autoria governada e validação pedagógica durante a Lesson 1.",
+      "guidance_pt":[
+        "Ensine os payloads exatamente como aparecem nos cards validados; não apresente inferências como tradução histórica palavra por palavra.",
+        "Trate KALA YA EN ES KU KE como fórmula inteira recuperada para o OPI de nome; YA e ES continuam sem glosa histórica atribuída.",
+        "Mantenha WATCH, GATE e CANDIDATE visíveis nas notas do professor quando o item depender dessas autoridades.",
+        "Validação de curso autoriza uso pedagógico escopado; não promove automaticamente um item ao cânone linguístico histórico."
+      ],
+      "authority_guards":["No token-level gloss invention.","No WATCH/GATE/CANDIDATE promotion.","No historical payload reconstruction claim."],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-NOTE-002",
+      "title_pt":"Sequência pedagógica recomendada",
+      "purpose":"Organizar a aula do reconhecimento para a produção sem exigir gramática ainda não governada.",
+      "guidance_pt":[
+        "Comece pelo OPI e pela intenção comunicativa; depois use os drills Activation correspondentes para reconhecimento, repetição, produção, G-IDs, resposta e microdiálogo.",
+        "Use os cinco frames estruturais apenas como atalhos pedagógicos da L01, sempre dentro dos domínios e contextos já validados.",
+        "Preserve WORK_OR_SCHOOL quando EN KU VALA KE estiver no lane de atividade profissional/escolar e preserve VAMUSARO quando o mesmo frame estiver no lane de descanso/lazer.",
+        "No OPI 7, mantenha residência e co-residente em duas microperguntas; não una as frases com conjunção HNK não governada."
+      ],
+      "recommended_flow":["OPI_INTENT","FOUNDATION_ACTIVATION","SCOPED_STRUCTURE_FRAME","INTEGRATIVE_ACTIVATION"],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-NOTE-003",
+      "title_pt":"Correção, resposta e limites de expansão",
+      "purpose":"Definir como corrigir respostas sem introduzir léxico, partículas ou equivalências não validadas.",
+      "guidance_pt":[
+        "Aceite somente schemas de resposta já governados para cada card, incluindo respostas nuas como [PLACE], [PERSONAL_NAME] e [CARDINAL_0_99] quando previstas.",
+        "Não acrescente cópula, preposição, partícula de sim/não, marcador de WITH ou verbo genérico equivalente a DO para tornar a frase mais parecida com português ou inglês.",
+        "No OPI 9, use apenas VAME VAMAZAMU ou NE VAME VAMAZAMU como par de resposta validado; NE continua CANDIDATE e a negação não é globalizada.",
+        "No OPI 10, não traduza VAMUSARO literalmente como weekend; ele permanece rest/leisure period e funciona como contexto aproximado do card."
+      ],
+      "correction_rule":"Correct against the validated course payload and response schema, not against an invented fuller HNK sentence.",
+      "implementation_state":"AUTHORED"
+    }
+  ],
+  "metrics":{"teacher_notes_target":3,"AUTHORED":3,"VALIDATED":0,"FROZEN":0,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0},
+  "next_gate":"SWHNK-L01-TEACHER-NOTES-VALIDATION-V1"
+}
