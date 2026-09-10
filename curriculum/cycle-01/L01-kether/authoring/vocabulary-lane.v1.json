@@ -1,6 +1,6 @@
 {
   "lane_id":"SWHNK-L01-VOCABULARY-AUTHORING-V1",
-  "status":"AUTHORED_24_OF_32_GOVERNED_ASSET_GAP_8",
+  "status":"AUTHORED_32_OF_32_VALIDATED_24_PENDING_VALIDATION_8",
   "lesson_id":"L01",
   "source_contract":{"vocabulary":32,"allocation_source":"progress/cycle1-allocation.v1.json","historical_payload_recovery_claim":false},
   "selection_policy":{"rule":"A filled Vocabulary slot must point to one independently governed language asset with a course-usable meaning or governed function. Recovered phrase tokens without standalone lexical governance are not promoted into Vocabulary merely to fill the numerical target.","one_distinct_asset_per_filled_slot":true,"phrase_only_unresolved_tokens_eligible":false,"numerology_selects_forms":false},
@@ -29,20 +29,20 @@
     {"slot_id":"L01-VOC-021","form":"NURA","meaning_pt":"seis; numeral cardinal falado 6","authority":"CANDIDATE","origin":"GOVERNED_AUTHORING_NUMERAL","implementation_state":"AUTHORED"},
     {"slot_id":"L01-VOC-022","form":"PEVU","meaning_pt":"sete; numeral cardinal falado 7","authority":"CANDIDATE","origin":"GOVERNED_AUTHORING_NUMERAL","implementation_state":"AUTHORED"},
     {"slot_id":"L01-VOC-023","form":"TOMI","meaning_pt":"oito; numeral cardinal falado 8","authority":"CANDIDATE","origin":"GOVERNED_AUTHORING_NUMERAL","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-VOC-024","form":"ZOKA","meaning_pt":"nove; numeral cardinal falado 9","authority":"CANDIDATE","origin":"GOVERNED_AUTHORING_NUMERAL","implementation_state":"AUTHORED"}
+    {"slot_id":"L01-VOC-024","form":"ZOKA","meaning_pt":"nove; numeral cardinal falado 9","authority":"CANDIDATE","origin":"GOVERNED_AUTHORING_NUMERAL","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-VOC-025","form":"KALA","meaning_pt":"domínio de nome pessoal; componente lexical de nome em uso iniciante escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-015","implementation_state":"AUTHORED","boundary":"No historical standalone gloss claim; no productive KALA morphology implied."},
+    {"slot_id":"L01-VOC-026","form":"AN","meaning_pt":"referente de primeira pessoa / eu em uso iniciante escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-016","implementation_state":"AUTHORED","boundary":"No global person paradigm implied."},
+    {"slot_id":"L01-VOC-027","form":"EN","meaning_pt":"referente de segunda pessoa / você em uso iniciante escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-017","implementation_state":"AUTHORED","boundary":"Subject versus possessive behavior remains unresolved outside scoped L01 constructions."},
+    {"slot_id":"L01-VOC-028","form":"KU","meaning_pt":"seletor interrogativo de conteúdo em uso escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-018","implementation_state":"AUTHORED","boundary":"Do not gloss globally as one fixed WH word."},
+    {"slot_id":"L01-VOC-029","form":"KE","meaning_pt":"operador / marcador de pergunta em uso escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-019","implementation_state":"AUTHORED","boundary":"Clause-final L01 use does not establish universal HNK interrogative grammar."},
+    {"slot_id":"L01-VOC-030","form":"VANI","meaning_pt":"morar / residir / viver em um lugar — binding pedagógico escopado","authority":"WATCH","origin":"SCOPED_L01_BINDING_ON_RECOVERED_WATCH","canonical_ref":"LEX-031","implementation_state":"AUTHORED","boundary":"Master Lexicon meaning remains null; residence interpretation is scoped to L01."},
+    {"slot_id":"L01-VOC-031","form":"VAME","meaning_pt":"gostar / preferência em uso iniciante escopado","authority":"GATE","origin":"SCOPED_L01_REBIND_ON_RECOVERED_GATE","canonical_ref":"LEX-025","implementation_state":"AUTHORED","boundary":"VAME remains GATE; no global preference grammar is implied."},
+    {"slot_id":"L01-VOC-032","form":"ZAMI","meaning_pt":"falar / usar linguagem em contexto comunicativo escopado","authority":"CANDIDATE","origin":"GOVERNED_EVIDENCE_MAPPING","canonical_ref":"AUTH-020","implementation_state":"AUTHORED","boundary":"No historical standalone gloss claim."}
   ],
-  "unfilled_slots":[
-    {"slot_id":"L01-VOC-025","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-026","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-027","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-028","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-029","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-030","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-031","state":"MISSING_GOVERNED_ASSET"},
-    {"slot_id":"L01-VOC-032","state":"MISSING_GOVERNED_ASSET"}
-  ],
-  "explicit_exclusions":["YA","ES","KALA","EN","KU","KE","AN","ZAMI","ZAMO","SARI","LO","DA"],
-  "exclusion_reason":"These forms occur inside recovered phrases or analyses but do not currently have sufficient standalone governed lexical entries with independent course-ready meanings to be promoted into L01 Vocabulary merely to satisfy the slot count.",
-  "metrics":{"target":32,"AUTHORED":24,"VALIDATED":0,"FROZEN":0,"MISSING_GOVERNED_ASSET":8,"distinct_governed_assets_used":24,"new_HNK_lexical_forms_created":0,"language_authority_promotions":0},
-  "next_gate":"SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1"
+  "unfilled_slots":[],
+  "explicit_exclusions":["YA","ES","ZAMO","SARI","LO","DA"],
+  "exclusion_reason":"These remaining forms occur inside recovered phrases or analyses but still lack sufficient standalone governed lexical entries with independent course-ready meanings. They remain outside Vocabulary despite full 32-slot completion.",
+  "metrics":{"target":32,"AUTHORED":32,"VALIDATED":24,"FROZEN":0,"MISSING_GOVERNED_ASSET":0,"distinct_governed_assets_used":32,"new_surface_forms_created":0,"new_authored_candidate_registry_entries":6,"scoped_recovered_bindings_added":2,"language_authority_promotions":0},
+  "application_record":"./vocabulary-gap-8-application.v1.json",
+  "next_gate":"SWHNK-L01-VOCABULARY-025-032-VALIDATION-V1"
 }
