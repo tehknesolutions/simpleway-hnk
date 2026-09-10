@@ -1,0 +1,37 @@
+{
+  "batch_id":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"HNK v1.1 spoken cardinal infrastructure for 0-9",
+  "decision_requested":{
+    "statement":"Approve TEN_PRIMITIVE_DIGIT_NUMERALS as the authoring strategy for spoken HNK values 0 through 9, with each future form entering as a new CANDIDATE primitive and no historical-recovery claim.",
+    "if_approved":{
+      "generate_candidate_forms":true,
+      "candidate_count":10,
+      "formation_type":"PRIMITIVE_AUTHORED",
+      "initial_authority":"CANDIDATE",
+      "historical_recovery_claim":false,
+      "numerology_selects_forms":false,
+      "glyph_visuals_select_meanings":false,
+      "internal_base_decided":false,
+      "multi_digit_rule_decided":false
+    }
+  },
+  "source_boundary":{
+    "historical_number_system_recovered":false,
+    "recovery_record":"../recovery/number-system-recovery.v1.json",
+    "strategy_record":"../../../../proposals/language/HNK_SPOKEN_NUMERAL_0_9_AUTHORING_DECISION_V1.json",
+    "numeric_literal_bridge":"../../../../proposals/language/HNK_NUMERIC_LITERAL_BRIDGE_V1.json"
+  },
+  "generation_constraints":[
+    "Meaning 0-9 is fixed before form selection.",
+    "Use safe HNK40 transliteration units only unless a separately governed G-ID mapping is used.",
+    "Prefer short pronounceable forms but reject exact and near-confusion collisions.",
+    "Do not select forms by numerology, glyph appearance or assumed mystical correspondence.",
+    "Do not make numeral candidates FROZEN on first entry.",
+    "Do not decide 10-99 composition as a side effect of generating 0-9."
+  ],
+  "current_forms":[null,null,null,null,null,null,null,null,null,null],
+  "progress_effect_if_approved_strategy_only":{"L01_OPI_validated":7,"change":0,"reason":"Strategy approval permits candidate generation; OPI 3 remains HOLD until a sufficient spoken age answer system exists."},
+  "next_gate_if_approved":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-GENERATION-V1",
+  "next_gate_if_not_approved":"REVISE_NUMBER_SYSTEM_STRATEGY"
+}
