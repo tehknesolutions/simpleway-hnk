@@ -1,0 +1,36 @@
+{
+  "review_id":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-REVIEW-V1",
+  "status":"PROPOSED_MAPPING_AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "principle":"EVIDENCE_FIRST_MAPPING_AFTER_APPROVED_SEMANTICS",
+  "source_semantics":"./HNK_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS_V1.json",
+  "target_count":8,
+  "mappings":[
+    {
+      "target_id":"SEM-025","slot_id":"L01-VOC-025","semantic_key":"PERSONAL_NAME_DOMAIN","proposed_form":"KALA","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-015","proposed_authority":"CANDIDATE","evidence":["PHR-001 contains KALA in the recovered whole utterance used for the name OPI.","Recovered VAMAKALA means nickname / familiar name and supplies independent family evidence for a name-domain reading."],"historical_standalone_gloss_claim":false,"confidence":"HIGH_SCOPED"
+    },
+    {
+      "target_id":"SEM-026","slot_id":"L01-VOC-026","semantic_key":"FIRST_PERSON_REFERENT","proposed_form":"AN","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-016","proposed_authority":"CANDIDATE","evidence":["PHR-002 is approximately recovered as I speak/use language and begins AN ZAMI ZAMO.","PHR-007 also begins AN in a language-use utterance, although its exact whole meaning is unrecovered."],"historical_standalone_gloss_claim":false,"confidence":"MEDIUM_HIGH_SCOPED"
+    },
+    {
+      "target_id":"SEM-027","slot_id":"L01-VOC-027","semantic_key":"SECOND_PERSON_REFERENT","proposed_form":"EN","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-017","proposed_authority":"CANDIDATE","evidence":["PHR-003 is approximately recovered as Do you speak HENUVOKODAN? and begins EN.","PHR-004, PHR-005 and PHR-006 also begin EN; validated L01 question frames repeatedly use EN in the addressee position."],"historical_standalone_gloss_claim":false,"confidence":"HIGH_SCOPED"
+    },
+    {
+      "target_id":"SEM-028","slot_id":"L01-VOC-028","semantic_key":"CONTENT_SELECTOR","proposed_form":"KU","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-018","proposed_authority":"CANDIDATE","evidence":["KU occurs inside multiple recovered question-like utterances including PHR-001, PHR-004, PHR-005 and PHR-006.","Validated L01 frames use KU as a scoped content selector, while exact historical WHAT/WHO/WHERE gloss remains unresolved."],"historical_standalone_gloss_claim":false,"confidence":"HIGH_FUNCTIONAL_SCOPED"
+    },
+    {
+      "target_id":"SEM-029","slot_id":"L01-VOC-029","semantic_key":"QUESTION_OPERATOR","proposed_form":"KE","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-019","proposed_authority":"CANDIDATE","evidence":["KE occurs clause-finally in recovered PHR-001, PHR-003, PHR-004, PHR-005 and PHR-006.","All validated L01 interrogative frames preserve clause-final KE, supporting a strong scoped question-operator analysis."],"historical_standalone_gloss_claim":false,"confidence":"HIGH_FUNCTIONAL_SCOPED"
+    },
+    {
+      "target_id":"SEM-030","slot_id":"L01-VOC-030","semantic_key":"RESIDENCE_LIVE","proposed_form":"VANI","mapping_kind":"RECOVERED_WATCH_ASSET_WITH_SCOPED_SEMANTIC_BINDING","proposed_canonical_id":null,"proposed_authority":"WATCH_UNCHANGED","evidence":["VANI is already recovered as LEX-031 with WATCH authority and meaning null.","HNK-VANI-RESIDENCE-SEMANTIC-HYPOTHESIS-V1 documents residence evidence and keeps master meaning null.","L01 OPI 7 has already validated VANI for scoped residence-course use."],"historical_standalone_gloss_claim":false,"master_lexicon_meaning_change":false,"confidence":"MEDIUM_SCOPED"
+    },
+    {
+      "target_id":"SEM-031","slot_id":"L01-VOC-031","semantic_key":"PREFERENCE_LIKE","proposed_form":"VAME","mapping_kind":"RECOVERED_GATE_ASSET_WITH_L01_CURRICULUM_REBIND","proposed_canonical_id":null,"proposed_authority":"GATE_UNCHANGED","evidence":["VAME is already recovered as LEX-025 with literal like behavior under test and GATE authority.","L01 OPI 9 has validated EN VAME VAMAZAMU KE and the response pair VAME VAMAZAMU / NE VAME VAMAZAMU for scoped course use."],"historical_standalone_gloss_claim":false,"master_lexicon_authority_change":false,"confidence":"HIGH_SCOPED"
+    },
+    {
+      "target_id":"SEM-032","slot_id":"L01-VOC-032","semantic_key":"SPEAK_LANGUAGE_USE","proposed_form":"ZAMI","mapping_kind":"OBSERVED_PHRASE_TOKEN_TO_NEW_AUTHORED_CANDIDATE","proposed_canonical_id":"AUTH-020","proposed_authority":"CANDIDATE","evidence":["PHR-002 is approximately recovered as I speak/use language and contains ZAMI.","PHR-003 is approximately recovered as Do you speak HENUVOKODAN? and contains ZAMI.","PHR-006 and PHR-007 add repeated form evidence without requiring invented exact phrase glosses."],"historical_standalone_gloss_claim":false,"confidence":"HIGH_SCOPED"
+    }
+  ],
+  "projected_architecture_if_approved":{"new_canonical_authored_candidates":6,"proposed_candidate_ids":["AUTH-015","AUTH-016","AUTH-017","AUTH-018","AUTH-019","AUTH-020"],"recovered_assets_receiving_scoped_L01_bindings":2,"new_surface_forms_in_governed_inventory":6,"governed_unique_language_assets_before":45,"governed_unique_language_assets_after":51,"L01_distinct_governed_vocabulary_assets_after":32,"vocabulary_slots_that_can_then_be_authored":[25,26,27,28,29,30,31,32]},
+  "explicit_non_effects":["No mapping is canonical until a separate human approval batch is applied.","KALA, AN, EN, KU, KE and ZAMI are not claimed as historically recovered standalone lexemes.","VANI master meaning remains null and authority remains WATCH.","VAME authority remains GATE and recovered source provenance is not rewritten.","No universal pronoun, interrogative, residence, preference or speech grammar is created.","No form is selected by numerology or glyph appearance."],
+  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1"
+}
