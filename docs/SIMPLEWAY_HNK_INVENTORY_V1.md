@@ -2,8 +2,8 @@
 
 **Data:** 2026-09-10  
 **Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION PIPELINE  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V25`  
-**Pacote atual:** `simpleway-hnk@0.28.0`
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V26`  
+**Pacote atual:** `simpleway-hnk@0.29.0`
 
 ## Ciclo 1
 
@@ -15,7 +15,7 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 
 Todos os dez OPI v1.1 possuem payload HNK reproduzível, foram revisados e estão validados para uso escopado no curso. A validação do curso não altera por si só autoridade lexical histórica.
 
-## L01 Activation — 24/72 authored-or-better
+## L01 Activation — 36/72 authored-or-better
 
 A release histórica comprova **72 teacher-drill slots**, mas o conteúdo bruto desses 72 drills não foi recuperado. O pipeline v1.1 cria drills novos derivados dos OPI validados e mantém essa proveniência explícita.
 
@@ -30,50 +30,45 @@ Foundation modes:
 
 ### P01 — slots 001–012 — VALIDATED
 
-Fonte: OPI 1–2.
+Fonte: OPI 1–2. Zero novas formas HNK; PHR-001 continua fórmula inteira e `NE` continua CANDIDATE.
 
-- 12/12 VALIDATED;
-- zero novas formas HNK;
-- `YA/ES` continuam não resolvidos em PHR-001;
-- `NE` continua CANDIDATE;
-- G-IDs são autoridade estrutural;
-- Candidate D continua `PREPRODUCTION_NOT_OFFICIAL`;
-- não há alegação de reconstrução histórica.
+### P02 — slots 013–024 — VALIDATED
 
-### P02 — slots 013–024 — AUTHORED
+Fonte: OPI 3–4. Preserva `SARASALA=WATCH`, numerais e `KUVAN=CANDIDATE`, sem palavra para ano/anos e sem reconstrução histórica.
 
-Fonte: OPI 3–4.
+### P03 — slots 025–036 — AUTHORED
 
-- 12/12 AUTHORED;
-- validação ainda não aplicada;
-- OPI 3 pratica `EN KU SARASALA KE` + `[CARDINAL_0_99]`;
-- OPI 4 pratica `EN SARADAYA KUVAN KE` + `[PLACE]`;
-- `SARASALA` continua WATCH;
-- numerais 0–9 e `KUVAN` continuam CANDIDATE;
+Fonte: OPI 5–6.
+
+- OPI 5 pratica `EN VALI KUVAN KE` + `[PLACE]`;
+- OPI 6 pratica `EN KU VALA KE` + `[ACTIVITY_DESCRIPTION]` em contexto explícito trabalho/escola;
+- `VALI` mantém proveniência recuperada L02/L03 e rebind curricular explícito para L01;
+- `KUVAN` e `VALA` permanecem CANDIDATE;
+- nenhum verbo HNK genérico equivalente a `DO` foi criado;
 - zero novas formas HNK.
 
-Gate preparado: `SWHNK-L01-ACTIVATION-P02-VALIDATION-V1`.
+Gate preparado: `SWHNK-L01-ACTIVATION-P03-VALIDATION-V1`.
 
-Se aprovado, P02 sobe para VALIDATED e a fase Activation atinge **24/72 = 33.3333% VALIDATED**.
+Se aprovado, Activation sobe para **36/72 VALIDATED = 50%**.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
 - OPI VALIDATED: **10**
-- Activation VALIDATED: **12**
+- Activation VALIDATED: **24**
 - Activation AUTHORED: **12**
-- authored-or-better total: **34/155 = 21.9355%**
-- validated total: **22/155 = 14.1935%**
-- remaining unimplemented: **121**
+- authored-or-better total: **46/155 = 29.6774%**
+- validated total: **34/155 = 21.9355%**
+- remaining unimplemented: **109**
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**974 MISSING + 12 AUTHORED + 22 VALIDATED + 0 FROZEN = 1.008**.
+**962 MISSING + 12 AUTHORED + 34 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **34/1.008 = 3.3730%**.
+Cumulativo authored-or-better: **46/1.008 = 4.5635%**.
 
 Historical evidence permanece **82/1.008 = 8.1349%**, referente a 10 OPI + 72 Activation comprovados como estrutura/publicação histórica, não payload atual reproduzível.
 
