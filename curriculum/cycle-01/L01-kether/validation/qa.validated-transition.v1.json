@@ -1,0 +1,12 @@
+{
+  "transition_id":"SWHNK-L01-QA-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "source_batch":"./qa-human-batch.v1.json",
+  "scope":["L01-QA-001","L01-QA-002","L01-QA-003","L01-QA-004"],
+  "before":{"AUTHORED":4,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":4,"FROZEN":0},
+  "global_before":{"AUTHORED":4,"VALIDATED":92,"FROZEN":0,"MISSING":912},
+  "global_after":{"AUTHORED":0,"VALIDATED":96,"FROZEN":0,"MISSING":912},
+  "authority_effect":{"YA_ES_token_glosses_created":false,"SARASALA":"WATCH_UNCHANGED","KUVAN":"CANDIDATE_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","numerals":"CANDIDATE_UNCHANGED","new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0},
+  "historical_boundary":"The four Q&A items remain new governed SimpleWay HNK v1.1 authorship; no recovered historical Q&A payload is claimed."
+}
