@@ -1,0 +1,18 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V12",
+  "as_of":"2026-09-09",
+  "package":"simpleway-hnk@0.14.0",
+  "status":"L01_OPI_10_OF_10_REVIEWED_5_OF_10_VALIDATED",
+  "target_slots":1008,
+  "implementation_exclusive":{"MISSING":998,"AUTHORED":5,"VALIDATED":5,"FROZEN":0},
+  "implementation_percent_exclusive":{"MISSING":99.0079,"AUTHORED":0.4960,"VALIDATED":0.4960,"FROZEN":0.0},
+  "maturity_cumulative":{"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":0.9921,"VALIDATED_OR_BETTER":5,"VALIDATED_OR_BETTER_PERCENT":0.4960,"FROZEN":0,"FROZEN_PERCENT":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies":{"recovered":{"forms":31,"target":144,"percent":21.5278},"governed":{"recovered_forms":31,"authored_candidates":3,"unique_assets":34,"target":144,"percent":23.6111},"authored_candidates":[{"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-003","form":"KUON","authority":"CANDIDATE","historical_recovery_claim":false,"dependency":"LEX-026 ON remains GATE"}]},
+  "L01":{"target":155,"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":5,"FROZEN":0,"authored_or_better_percent":6.4516,"validated_or_better_percent":3.2258,"opi":{"target":10,"AUTHORED_OR_BETTER":10,"AUTHORED_CURRENT_STATE":5,"VALIDATED":5,"VALIDATED_PERCENT":50.0,"FROZEN":0,"validated_slots":["L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-010"],"hold_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-007","L01-OPI-009"]},"historical_frozen_evidence":82},
+  "cycle1_opi":{"target":70,"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":14.2857,"VALIDATED_OR_BETTER":5,"VALIDATED_OR_BETTER_PERCENT":7.1429},
+  "applied_validation_batches":[{"id":"SWHNK-L01-LOCATIVE-QUESTION-HUMAN-PROMOTION-BATCH-V1","slots":["L01-OPI-004","L01-OPI-005"],"authority_changes":0},{"id":"SWHNK-L01-VALIDATION-BATCH-2-V1","slots":["L01-OPI-006","L01-OPI-008"],"authority_changes":0},{"id":"SWHNK-L01-OPI-010-CONTEXTUAL-EQUIVALENCE-HUMAN-BATCH-V1","slots":["L01-OPI-010"],"authority_changes":0,"semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT"}],
+  "validation_boundaries":{"KUVAN":"CANDIDATE_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","VAMUSARO":{"authority":"FROZEN","meaning":"rest / leisure period","weekend_gloss":false},"KU_exact_historical_gloss":null,"VANI":{"authority":"WATCH","master_lexicon_meaning":null},"KUON":"CANDIDATE_WITH_ON_GATE_DEPENDENCY","historical_v1_payload_recovered":false},
+  "next_work":{"primary":"L01-OPI-002 possession/existential + negative-response design","high_risk_after":["L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
+  "next_gate":"SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1"
+}
