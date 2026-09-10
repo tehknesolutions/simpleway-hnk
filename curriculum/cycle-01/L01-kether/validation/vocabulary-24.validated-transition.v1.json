@@ -1,0 +1,14 @@
+{
+  "transition_id":"SWHNK-L01-VOCABULARY-24-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "source_batch":"./vocabulary-24-human-batch.v1.json",
+  "scope":{"validated_slots":[1,24],"remaining_missing_slots":[25,32]},
+  "lesson_before":{"AUTHORED":24,"VALIDATED":101,"MISSING":30,"FROZEN":0},
+  "lesson_after":{"AUTHORED":0,"VALIDATED":125,"MISSING":30,"FROZEN":0},
+  "vocabulary_before":{"AUTHORED":24,"VALIDATED":0,"MISSING":8,"FROZEN":0},
+  "vocabulary_after":{"AUTHORED":0,"VALIDATED":24,"MISSING":8,"FROZEN":0},
+  "global_before":{"AUTHORED":24,"VALIDATED":101,"MISSING":883,"FROZEN":0},
+  "global_after":{"AUTHORED":0,"VALIDATED":125,"MISSING":883,"FROZEN":0},
+  "authority_effect":{"new_HNK_lexical_forms_created":0,"language_authority_promotions":0,"historical_payload_claim":false},
+  "boundary":"This transition validates curriculum slot selections only. Underlying recovered, WATCH, GATE, REFERENCE and CANDIDATE authorities remain unchanged; VOC-025..032 remain MISSING."
+}
