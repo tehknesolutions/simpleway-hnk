@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_APPROVAL_ONLY",
+  "date":"2026-09-10",
+  "source_batch":"./vocabulary-gap-8-form-mapping-human-batch.v1.json",
+  "before":{"semantic_targets_approved":8,"forms_mapped_proposed":8,"forms_mapping_approved":0,"canonical_candidates_registered":14,"vocabulary_25_32":"MISSING"},
+  "after":{"semantic_targets_approved":8,"forms_mapped_proposed":8,"forms_mapping_approved":8,"canonical_candidates_registered":14,"vocabulary_25_32":"MISSING"},
+  "approved_forms":["KALA","AN","EN","KU","KE","VANI","VAME","ZAMI"],
+  "new_candidate_ids_authorized":["AUTH-015","AUTH-016","AUTH-017","AUTH-018","AUTH-019","AUTH-020"],
+  "scoped_recovered_bindings_authorized":["VANI","VAME"],
+  "explicit_non_effects":{"candidate_registry_written":false,"vocabulary_slot_state_changes":0,"vocabulary_validations":0,"language_authority_promotions":0,"historical_standalone_glosses_created":0},
+  "next_gate":"APPLY_L01_VOCABULARY_GAP_8_EXACT_MAPPING"
+}
