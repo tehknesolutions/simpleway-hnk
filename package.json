@@ -1,6 +1,6 @@
 {
   "name": "simpleway-hnk",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,9 +12,10 @@
     "validate:interrogatives": "node tests/validate-interrogative-authoring.mjs",
     "validate:opi-matrix": "node tests/validate-opi-validation-matrix.mjs",
     "validate:numbers": "node tests/validate-number-system.mjs",
+    "validate:numeral-candidates": "node tests/validate-spoken-numeral-candidates.mjs",
     "progress": "node scripts/build-cycle1-progress.mjs",
     "progress:write": "node scripts/build-cycle1-progress.mjs --write",
-    "test": "npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers"
+    "test": "npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers && npm run validate:numeral-candidates"
   },
   "engines": {"node": ">=20"}
 }
