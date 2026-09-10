@@ -1,0 +1,17 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V38",
+  "as_of":"2026-09-10",
+  "status":"L01_VOCABULARY_32_OF_32_AUTHORED_24_VALIDATED_FINAL_8_AWAITING_HUMAN_VALIDATION",
+  "package":"simpleway-hnk@0.41.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":875,"AUTHORED":8,"VALIDATED":125,"FROZEN":0},
+  "implementation_percent":{"MISSING":86.8056,"AUTHORED":0.7937,"VALIDATED":12.4008,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":133,"AUTHORED_OR_BETTER_percent":13.1944,"VALIDATED_OR_BETTER":125,"VALIDATED_OR_BETTER_percent":12.4008,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":20,"canonical_governed_unique_assets":51,"canonical_governed_proxy_percent":35.4167},
+  "L01":{"target":155,"authored_or_better":133,"authored_or_better_percent":85.8065,"validated":125,"validated_percent":80.6452,"remaining_unimplemented":22,"pending_validation":8,"TeacherNotes":{"target":3,"VALIDATED":3},"OPI":{"target":10,"VALIDATED":10},"Story":{"target":5,"VALIDATED":5},"QA":{"target":4,"VALIDATED":4},"StructureHeaders":{"target":2,"VALIDATED":2},"Structures":{"target":5,"VALIDATED":5},"Vocabulary":{"target":32,"AUTHORED":8,"VALIDATED":24,"MISSING":0,"authored_or_better":32},"Activation":{"target":72,"VALIDATED":72},"Review":{"target":22,"MISSING":22}},
+  "vocabulary_gap_governance":{"semantic_targets":8,"semantic_targets_status":"APPROVED","exact_mapping_status":"APPROVED_AND_APPLIED_TO_AUTHORING","new_authored_candidates_registered":["AUTH-015","AUTH-016","AUTH-017","AUTH-018","AUTH-019","AUTH-020"],"scoped_recovered_bindings":["VANI","VAME"],"vocabulary_slots_025_032":"AUTHORED_PENDING_VALIDATION","prepared_validation_batch":"SWHNK-L01-VOCABULARY-025-032-HUMAN-BATCH-V1","new_surface_forms_created":0,"language_authority_promotions":0,"historical_standalone_gloss_claims":0},
+  "boundaries":{"VANI_master_meaning":null,"VANI_authority":"WATCH","VAME_authority":"GATE","KU_single_WH_gloss":false,"universal_grammar_created":false,"numerology_selects_forms":false},
+  "remaining_L01":{"review":22,"vocabulary_pending_validation":8,"missing_unimplemented":22},
+  "next_gate":"SWHNK-L01-VOCABULARY-025-032-HUMAN-BATCH-V1"
+}
