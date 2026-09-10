@@ -40,7 +40,7 @@ Todos os 10 OPI têm payload HNK reproduzível e todos os 10 foram individualmen
 | 07A | `EN VANI KUVAN KE` | AUTHORED · REVIEWED HOLD |
 | 07B | `EN VANI KUON KE` | AUTHORED · REVIEWED HOLD |
 | 08 | `EN KU VAMAVALA KE` | **VALIDATED** para uso escopado; WATCH permanece visível |
-| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · REVIEWED HOLD |
+| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · REVIEWED HOLD · Batch 4 preparado |
 | 10 | contexto `VAMUSARO` + `EN KU VALA KE` | **VALIDATED** como equivalente contextual aproximado |
 
 OPI 7 continua sendo um único card pedagógico com duas microperguntas HNK.
@@ -72,40 +72,35 @@ No Ciclo 1 OPI:
 - `AUTHORED_OR_BETTER`: **10/70 = 14.2857%**;
 - `VALIDATED_OR_BETTER`: **6/70 = 8.5714%**.
 
-## 4. Batches de validação aplicados
+## 4. Batches aplicados
 
 ### Batch 1 — OPI 4 e 5
-
-Foram aprovados `KUVAN`, `EN ... KE` e `[PLACE]` apenas para o escopo desses cards. `KUVAN` permanece `CANDIDATE` e não foi reclassificado como forma histórica.
+`KUVAN`, `EN ... KE` e `[PLACE]` foram aceitos apenas nos escopos aprovados. `KUVAN` permanece `CANDIDATE`.
 
 ### Batch 2 — OPI 6 e 8
-
-Foram aprovados `EN KU X KE` para esses dois cards, `VALA` para OPI 6 mantendo `CANDIDATE`, `VAMAVALA` para OPI 8 mantendo `WATCH`, além dos padrões de resposta e contexto necessários. Nenhuma autoridade linguística foi silenciosamente elevada.
+`EN KU X KE` foi aceito escopadamente; `VALA` permanece `CANDIDATE` e `VAMAVALA` permanece `WATCH`.
 
 ### Batch 3 — OPI 10
-
-Foi aprovado como equivalente contextual aproximado. `VAMUSARO` permanece `FROZEN = descanso / período de lazer`, nunca `weekend`; `VALA` permanece `CANDIDATE`.
+Validado como equivalente contextual aproximado. `VAMUSARO` permanece `FROZEN = descanso / período de lazer`, nunca `weekend`.
 
 ### Batch 3B — OPI 2
+Validado sem verbo `HAVE`:
 
-Foi aprovado sem criar um verbo equivalente a `HAVE`:
-
-- pergunta: `EN VAMAKALA KE` como frame nominal/de entrevista escopado;
-- resposta afirmativa: `[NICKNAME]`;
-- resposta negativa: `NE VAMAKALA`;
+- pergunta: `EN VAMAKALA KE`;
+- afirmativa: `[NICKNAME]`;
+- negativa: `NE VAMAKALA`;
 - `VAMAKALA` permanece `FROZEN`;
-- `AUTH-004 NE` foi criado como **novo `CANDIDATE` autorado**, não como recuperação histórica;
+- `AUTH-004 NE` é autoria nova `CANDIDATE`, não recuperação;
 - G-IDs de `NE`: `G12 · G02`;
-- `NE` não recebe produtividade global neste checkpoint;
-- a análise histórica de posse/HAVE continua não recuperada;
-- `EN` continua com subject-vs-possessive histórico não resolvido.
+- sem produtividade global de negação;
+- posse histórica e função subject-vs-possessive de `EN` continuam não recuperadas.
 
 ## 5. OPI que permanecem HOLD
 
 - OPI 1: frase histórica aproximada; `YA/ES` continuam sem alinhamento recuperado.
 - OPI 3: `SARASALA` continua WATCH; construção de idade e sistema numérico permanecem abertos.
 - OPI 7: `VANI` permanece WATCH com meaning `null`; `KUON` é CANDIDATE dependente de `ON=GATE`; valência de co-residente é experimental.
-- OPI 9: `VAME` permanece GATE e `VAMAZAMU` WATCH. Com `NE` disponível, a resposta negativa deixa de ser um bloqueio estrutural absoluto, mas o uso de preferência ainda exige um novo gate escopado.
+- OPI 9: `VAME` permanece GATE e `VAMAZAMU` WATCH; o Batch 4 está preparado para decidir seu uso sem alterar essas autoridades.
 
 ## 6. Corpus linguístico
 
@@ -122,7 +117,7 @@ Registry de autoria governada `@hnk/linguas/authored`:
 1. `AUTH-001 KUVAN` — `CANDIDATE`;
 2. `AUTH-002 VALA` — `CANDIDATE`;
 3. `AUTH-003 KUON` — `CANDIDATE`, dependente de `ON=GATE`;
-4. `AUTH-004 NE` — `CANDIDATE`, operador de negação/ausência de autoria nova, primeiro uso no OPI 2.
+4. `AUTH-004 NE` — `CANDIDATE`, operador de negação/ausência de autoria nova.
 
 Cobertura-proxy:
 
@@ -145,16 +140,34 @@ Esses percentuais são proxies de ativos linguísticos, não conclusão dos 144 
 
 ## 8. HNK40 e fronteira visual
 
-`@hnk/glyphs` continua sendo o owner estrutural de G01–G40, IPA e safe transliteration/runtime. Candidate D permanece `PREPRODUCTION_NOT_OFFICIAL`; G-IDs são autoridade estrutural, não os desenhos atuais como cânone visual final.
+`@hnk/glyphs` continua owner estrutural de G01–G40, IPA e safe transliteration/runtime. Candidate D permanece `PREPRODUCTION_NOT_OFFICIAL`; G-IDs são autoridade estrutural, não os desenhos atuais como cânone visual final.
 
 ## 9. SimpleWay English boundary
 
 `hnk-english-app` permanece referência autorizada para metodologia, arquitetura, Student/Teacher flow, UX/UI, drills, vocabulário e progressão. Conteúdo HNK não deve ser adicionado ao repo de inglês.
 
-## 10. Gate corrente
+## 10. Batch 4 preparado
 
-`SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1`
+Seleção: **OPI 9 — `Do you like to sing?`**.
 
-Dos quatro HOLD restantes, **OPI 9** é agora o melhor próximo candidato porque `AUTH-004 NE` oferece uma peça reutilizável para a resposta negativa. Ainda precisamos governar explicitamente o uso de `VAME` (`GATE`) como preferência no curso, manter `VAMAZAMU` (`WATCH`) visível e definir a resposta positiva/negativa sem universalizar a nova negação.
+Pergunta atual:
 
-OPI 1 continua bloqueado por `YA/ES`; OPI 3 depende do sistema numérico/idade; OPI 7 continua sendo o caso de maior risco semântico por `VANI meaning=null` + `KUON/ON=GATE`.
+`EN VAME VAMAZAMU KE`
+
+Respostas propostas:
+
+- positiva: `VAME VAMAZAMU`;
+- negativa: `NE VAME VAMAZAMU`.
+
+A proposta não cria novos lexemas. Ela pede apenas aprovação escopada para:
+
+- usar `VAME` nesse card mantendo `GATE`;
+- usar `VAMAZAMU` mantendo `WATCH`;
+- estender `AUTH-004 NE` à negação de uma frase de predicado somente nesse card, mantendo `CANDIDATE` e sem produtividade global;
+- aceitar respostas-fragmento no contexto do diálogo, sem inventar partícula histórica de yes/no e sem exigir `AN`.
+
+Se aprovado futuramente, o progresso projetado é **7/10 OPI VALIDATED = 70%**. Nenhuma autoridade linguística precisa mudar.
+
+Gate corrente:
+
+`SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1`
