@@ -1,0 +1,18 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V13",
+  "as_of":"2026-09-09",
+  "package":"simpleway-hnk@0.15.0",
+  "status":"L01_OPI_10_OF_10_REVIEWED_6_OF_10_VALIDATED",
+  "target_slots":1008,
+  "implementation_exclusive":{"MISSING":998,"AUTHORED":4,"VALIDATED":6,"FROZEN":0},
+  "implementation_percent_exclusive":{"MISSING":99.0079,"AUTHORED":0.3968,"VALIDATED":0.5952,"FROZEN":0.0},
+  "maturity_cumulative":{"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":0.9921,"VALIDATED_OR_BETTER":6,"VALIDATED_OR_BETTER_PERCENT":0.5952,"FROZEN":0,"FROZEN_PERCENT":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72}},
+  "language_asset_proxies":{"recovered":{"forms":31,"target":144,"percent":21.5278},"governed":{"recovered_forms":31,"authored_candidates":4,"unique_assets":35,"target":144,"percent":24.3056},"authored_candidates":[{"id":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-002","form":"VALA","authority":"CANDIDATE","historical_recovery_claim":false},{"id":"AUTH-003","form":"KUON","authority":"CANDIDATE","historical_recovery_claim":false,"dependency":"LEX-026 ON remains GATE"},{"id":"AUTH-004","form":"NE","authority":"CANDIDATE","historical_recovery_claim":false,"first_scope":"L01-OPI-002 negative/absence response","global_productivity":false}]},
+  "L01":{"target":155,"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":6,"FROZEN":0,"authored_or_better_percent":6.4516,"validated_or_better_percent":3.8710,"opi":{"target":10,"AUTHORED_OR_BETTER":10,"AUTHORED_CURRENT_STATE":4,"VALIDATED":6,"VALIDATED_PERCENT":60.0,"FROZEN":0,"validated_slots":["L01-OPI-002","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-010"],"hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"]},"historical_frozen_evidence":82},
+  "cycle1_opi":{"target":70,"AUTHORED_OR_BETTER":10,"AUTHORED_OR_BETTER_PERCENT":14.2857,"VALIDATED_OR_BETTER":6,"VALIDATED_OR_BETTER_PERCENT":8.5714},
+  "new_validation":{"slot":"L01-OPI-002","question":"EN VAMAKALA KE","answers":{"affirmative":"[NICKNAME]","negative":"NE VAMAKALA"},"semantic_model":"NOMINAL_OR_EXISTENTIAL_INTERVIEW_FRAME_NO_HAVE_CALQUE","new_language_asset":{"id":"AUTH-004","form":"NE","authority":"CANDIDATE"}},
+  "validation_boundaries":{"NE":"CANDIDATE_NOT_RECOVERED_NO_GLOBAL_PRODUCTIVITY","VAMAKALA":"FROZEN_UNCHANGED","historical_HAVE_or_possession_claim":false,"KUVAN":"CANDIDATE_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","VAMUSARO":{"authority":"FROZEN","meaning":"rest / leisure period","weekend_gloss":false},"VANI":{"authority":"WATCH","master_lexicon_meaning":null},"KUON":"CANDIDATE_WITH_ON_GATE_DEPENDENCY","historical_v1_payload_recovered":false},
+  "next_work":{"primary":"Select Batch 4 among OPI 9, 1, 3 and 7; OPI 9 gains readiness because AUTH-004 NE can provide a scoped negative answer.","remaining_holds":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
+  "next_gate":"SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1"
+}
