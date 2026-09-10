@@ -1,0 +1,27 @@
+{
+  "transition_id":"SWHNK-L01-OPI-010-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-010",
+  "before":"AUTHORED_HOLD",
+  "after":"VALIDATED",
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_010_ONLY",
+  "semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT",
+  "approved_components":{
+    "context":{"form":"VAMUSARO","id":"LEX-005","authority":"FROZEN","meaning":"rest / leisure period","weekend_gloss":false},
+    "question":{"form":"EN KU VALA KE","validated_precedent":"L01-OPI-006","scope_expansion":false},
+    "activity_head":{"form":"VALA","id":"AUTH-002","authority":"CANDIDATE_UNCHANGED","historical_recovery_claim":false},
+    "answer_pattern":{"pattern":"[ACTIVITY_DESCRIPTION]","status":"VALIDATED_FOR_L01_V1_1_COURSE_USE"}
+  },
+  "course_contract":{
+    "frozen_english_prompt":"What do you do on weekends?",
+    "hnk_context_label":"VAMUSARO",
+    "hnk_question":"EN KU VALA KE",
+    "must_display_approximation":true,
+    "must_not_translate_VAMUSARO_as_weekend":true
+  },
+  "language_authority_effect":{"VAMUSARO":"FROZEN_UNCHANGED","VALA":"CANDIDATE_UNCHANGED","KU":"INFERRED_NOT_CANONICAL","historical_registry_rewritten":false},
+  "freeze_blockers":["Approximate contextual equivalence must remain visible.","VALA remains CANDIDATE.","No exact HNK weekend/temporal construction is yet governed.","Publication freeze remains a later gate."],
+  "progress":{"L01_OPI_validated_before":4,"L01_OPI_validated_after":5,"L01_OPI_validated_percent_after":50.0,"global_validated_after":5,"global_validated_percent_after":0.4960},
+  "source_batch":"opi-010-contextual-equivalence-human-batch.v1.json",
+  "next_gate":"SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1"
+}
