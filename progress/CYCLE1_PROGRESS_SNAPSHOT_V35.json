@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V35",
+  "as_of":"2026-09-10",
+  "status":"L01_CORE_AND_STORIES_FULLY_VALIDATED_VOCABULARY_24_OF_32_AUTHORED_GAP_8",
+  "package":"simpleway-hnk@0.38.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":883,"AUTHORED":24,"VALIDATED":101,"FROZEN":0},
+  "implementation_percent":{"MISSING":87.5992,"AUTHORED":2.3810,"VALIDATED":10.0198,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":125,"AUTHORED_OR_BETTER_percent":12.4008,"VALIDATED_OR_BETTER":101,"VALIDATED_OR_BETTER_percent":10.0198,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"authored_or_better":125,"authored_or_better_percent":80.6452,"validated":101,"validated_percent":65.1613,"remaining_missing_or_unimplemented":30,"TeacherNotes":{"target":3,"VALIDATED":3,"percent":100.0},"OPI":{"target":10,"VALIDATED":10,"percent":100.0},"Story":{"target":5,"VALIDATED":5,"percent":100.0},"QA":{"target":4,"VALIDATED":4,"percent":100.0},"StructureHeaders":{"target":2,"VALIDATED":2,"percent":100.0},"Structures":{"target":5,"VALIDATED":5,"percent":100.0},"Vocabulary":{"target":32,"AUTHORED":24,"VALIDATED":0,"MISSING":8,"authored_or_better_percent":75.0},"Activation":{"target":72,"VALIDATED":72,"percent":100.0}},
+  "vocabulary_lane":{"filled_governed_assets":24,"unfilled_slots":8,"historical_32_slot_payload_claim":false,"new_HNK_lexical_forms_created":0,"language_authority_promotions":0,"prepared_validation_batch":"SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1","gap_plan":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-AUTHORING-PLAN-V1"},
+  "remaining_L01":{"vocabulary_gap":8,"review":22,"total":30},
+  "next_gate":"SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1"
+}
