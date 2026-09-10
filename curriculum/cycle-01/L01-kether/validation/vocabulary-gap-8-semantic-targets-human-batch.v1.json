@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["SEM-025","SEM-026","SEM-027","SEM-028","SEM-029","SEM-030","SEM-031","SEM-032"],
+  "source":"../../../proposals/language/HNK_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS_V1.json",
+  "current_state":{"semantic_targets_proposed":8,"forms_selected":0,"canonical_registry_entries_created":0,"vocabulary_slots_still_missing":8},
+  "decisions_requested":[
+    {"id":"DEC-SEM-001","statement":"Approve PERSONAL_NAME_DOMAIN and FIRST_PERSON_REFERENT as high-value L01 semantic targets, without yet assigning KALA or AN as canonical standalone forms.","if_approved":{"semantic_targets_approved":2,"forms_selected":0}},
+    {"id":"DEC-SEM-002","statement":"Approve SECOND_PERSON_REFERENT, CONTENT_SELECTOR and QUESTION_OPERATOR as governed semantic/function targets for L01 pedagogy, while preserving that EN/KU/KE token-level historical meanings remain unrecovered.","if_approved":{"semantic_targets_approved":3,"historical_token_glosses_created":0,"forms_selected":0}},
+    {"id":"DEC-SEM-003","statement":"Approve RESIDENCE_LIVE and PREFERENCE_LIKE as semantic targets needed by OPI 7 and OPI 9, preserving VANI recovered meaning null and VAME current GATE authority until a later mapping gate.","if_approved":{"semantic_targets_approved":2,"VANI_meaning":"NULL_UNCHANGED","VAME_authority":"GATE_UNCHANGED","forms_selected":0}},
+    {"id":"DEC-SEM-004","statement":"Approve SPEAK_LANGUAGE_USE as the eighth semantic target based on L01 communicative needs and recovered phrase contexts, without assigning ZAMI a standalone historical gloss.","if_approved":{"semantic_targets_approved":1,"ZAMI_historical_standalone_gloss_created":false,"forms_selected":0}},
+    {"id":"DEC-SEM-005","statement":"Confirm this gate approves semantics only. Observed forms KALA, AN, EN, KU, KE, VANI, VAME and ZAMI are merely investigation candidates until a separate form-mapping and canonical-governance decision.","if_approved":{"forms_selected":0,"canonical_registry_entries_created":0,"new_HNK_lexical_forms_created":0}}
+  ],
+  "explicit_non_effects":["Does not fill VOC-025..032.","Does not create or promote any HNK form.","Does not convert inferred phrase-token roles into historical recovery claims.","Does not change VANI meaning null or VAME GATE.","Does not globalize KU/KE/EN behavior as universal grammar."],
+  "projected_effect_if_all_approved":{"semantic_targets_approved":8,"vocabulary_VALIDATED":24,"vocabulary_MISSING":8,"forms_selected":0,"new_HNK_lexical_forms_created":0,"language_authority_promotions":0},
+  "application_rule":"After approval, perform a separate evidence-first mapping review for each semantic target. Prefer cautious reuse of observed forms only when governance can state authored/inferred semantics explicitly; otherwise generate a new CANDIDATE under the lexeme authoring contract.",
+  "next_gate_if_approved":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-REVIEW-V1",
+  "next_gate_if_not_approved":"REVISE_L01_VOCABULARY_GAP_8_SEMANTIC_TARGETS"
+}
