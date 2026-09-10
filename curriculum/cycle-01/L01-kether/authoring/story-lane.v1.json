@@ -1,0 +1,73 @@
+{
+  "lane_id":"SWHNK-L01-STORY-AUTHORING-V1",
+  "status":"AUTHORED_5_OF_5_VALIDATION_PENDING",
+  "lesson_id":"L01",
+  "source_contract":{"story":5,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1.md","payload_historical_recovery_claim":false},
+  "historical_boundary":"The canonical source confirms exactly five story slots for L01, but no historical story payload was recovered. The five current scenes are new governed SimpleWay HNK v1.1 pedagogical authorship and use HNK dialogue only from already validated L01 payloads.",
+  "composition_rule":"Narrative framing may be in Portuguese, but every HNK utterance must be an exact validated OPI/Q&A payload or a previously validated response form/schema. Stories must not fuse questions, invent connectors, or create lexical material.",
+  "stories":[
+    {
+      "slot_id":"L01-STORY-001",
+      "title_pt":"Primeiro encontro: nome e apelido",
+      "focus":["L01-OPI-001","L01-OPI-002"],
+      "narrative_pt":"Duas pessoas se apresentam. O professor conduz primeiro a fórmula de nome e depois a pergunta de apelido, mantendo cada troca separada.",
+      "dialogue":[
+        {"speaker":"A","hnk":"KALA YA EN ES KU KE","response_schema":"[PERSONAL_NAME]"},
+        {"speaker":"A","hnk":"EN VAMAKALA KE","response_one_of":["[NICKNAME]","NE VAMAKALA"]}
+      ],
+      "authority_notes":["KALA YA EN ES KU KE remains validated as a whole utterance; YA/ES receive no token-level historical gloss.","NE remains CANDIDATE."],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STORY-002",
+      "title_pt":"Quem sou: idade e origem",
+      "focus":["L01-OPI-003","L01-OPI-004"],
+      "narrative_pt":"A entrevista continua com idade e local de nascimento. A resposta de idade usa o cardinal escopado e a origem usa uma resposta de lugar.",
+      "dialogue":[
+        {"speaker":"A","hnk":"EN KU SARASALA KE","response_schema":"[CARDINAL_0_99]","example_responses":["TOMI","DUVE TOMI","LUSO HOYU"]},
+        {"speaker":"A","hnk":"EN SARADAYA KUVAN KE","response_schema":"[PLACE]"}
+      ],
+      "authority_notes":["SARASALA remains WATCH.","Numeral primitives and KUVAN remain CANDIDATE.","No year lexeme is introduced."],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STORY-003",
+      "title_pt":"Trabalho ou estudo: lugar e atividade",
+      "focus":["L01-OPI-005","L01-OPI-006"],
+      "narrative_pt":"A conversa muda para trabalho ou escola. Primeiro se pergunta o local; depois, com WORK_OR_SCHOOL visível, a atividade.",
+      "dialogue":[
+        {"speaker":"A","hnk":"EN VALI KUVAN KE","response_schema":"[PLACE]"},
+        {"speaker":"A","context":"WORK_OR_SCHOOL","hnk":"EN KU VALA KE","response_schema":"[ACTIVITY_DESCRIPTION]"}
+      ],
+      "authority_notes":["VALI keeps its explicit L01 governed rebind.","KUVAN and VALA remain CANDIDATE.","No generic HNK DO verb is created."],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STORY-004",
+      "title_pt":"Casa e interesses: residência, companhia e hobbies",
+      "focus":["L01-OPI-007","L01-OPI-008"],
+      "narrative_pt":"A entrevista aborda onde a pessoa vive, com quem vive e seus hobbies. O card de residência continua dividido em duas microperguntas.",
+      "dialogue":[
+        {"speaker":"A","hnk":"EN VANI KUVAN KE","response_schema":"[PLACE]"},
+        {"speaker":"A","hnk":"EN VANI KUON KE","response_schema":"[PERSON_OR_PEOPLE]"},
+        {"speaker":"A","hnk":"EN KU VAMAVALA KE","response_schema":"[HOBBY_OR_PLEASURE_ACTIVITY]"}
+      ],
+      "authority_notes":["VANI remains WATCH with recovered meaning null; residence remains scoped course interpretation.","KUVAN/KUON remain CANDIDATE and ON remains GATE.","No WITH lexeme or comitative grammar is created.","VAMAVALA remains WATCH."],
+      "implementation_state":"AUTHORED"
+    },
+    {
+      "slot_id":"L01-STORY-005",
+      "title_pt":"Preferências e descanso: canto e lazer",
+      "focus":["L01-OPI-009","L01-OPI-010"],
+      "narrative_pt":"A cena final combina duas trocas independentes: preferência por cantar e atividade no período de descanso/lazer. VAMUSARO permanece um contexto explícito e não é renomeado como weekend.",
+      "dialogue":[
+        {"speaker":"A","hnk":"EN VAME VAMAZAMU KE","response_one_of":["VAME VAMAZAMU","NE VAME VAMAZAMU"]},
+        {"speaker":"A","context":"VAMUSARO","hnk":"EN KU VALA KE","response_schema":"[ACTIVITY_DESCRIPTION]"}
+      ],
+      "authority_notes":["VAME remains GATE; VAMAZAMU remains WATCH; NE and VALA remain CANDIDATE.","VAMUSARO remains rest/leisure period, not weekend.","No global preference or negation grammar is created."],
+      "implementation_state":"AUTHORED"
+    }
+  ],
+  "metrics":{"story_target":5,"AUTHORED":5,"VALIDATED":0,"FROZEN":0,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0},
+  "next_gate":"SWHNK-L01-STORY-VALIDATION-V1"
+}
