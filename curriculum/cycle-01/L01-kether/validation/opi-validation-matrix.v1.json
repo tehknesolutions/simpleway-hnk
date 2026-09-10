@@ -1,6 +1,6 @@
 {
   "matrix_id":"SWHNK-L01-OPI-VALIDATION-MATRIX-V1",
-  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_6_OF_10_VALIDATED",
+  "status":"VALIDATION_REVIEW_COMPLETE_10_OF_10_REVIEWED_6_OF_10_VALIDATED_BATCH4_PREPARED",
   "lesson_id":"L01",
   "progress_model":"MISSING -> AUTHORED -> VALIDATED -> FROZEN",
   "whole_slot_validation_requirements":[
@@ -23,13 +23,15 @@
     {"slot_id":"L01-OPI-006","english":"What do you do at work/school?","hnk":["EN KU VALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WITH_CONTEXT","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-006-008.validated-transition.v1.json"},
     {"slot_id":"L01-OPI-007","english":"Where do you live and who do you live with?","hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-007.semantic-review.v1.json","blockers":["VANI meaning null with residence hypothesis; KUON CANDIDATE depends on ON=GATE; co-resident valency authored."]},
     {"slot_id":"L01-OPI-008","english":"What are your hobbies?","hnk":["EN KU VAMAVALA KE"],"validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_WATCH_VISIBLE","review_state":"REVIEWED_VALIDATED","validation_transition":"opi-006-008.validated-transition.v1.json"},
-    {"slot_id":"L01-OPI-009","english":"Do you like to sing?","hnk":["EN VAME VAMAZAMU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-009.semantic-review.v1.json","newly_available_dependency":"AUTH-004 NE can now support a scoped negative answer if separately approved for this preference card.","blockers":["VAME GATE; VAMAZAMU WATCH; positive/negative preference answer pair not yet governed for this scope."]},
+    {"slot_id":"L01-OPI-009","english":"Do you like to sing?","hnk":["EN VAME VAMAZAMU KE"],"validation_state":"AUTHORED_HOLD","review_state":"REVIEWED_HOLD","review_record":"opi-009.semantic-review.v1.json","prepared_human_batch":"opi-009-preference-negation-human-batch.v1.json","proposed_answers":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU"},"blockers":["Batch 4 requires explicit scoped approval: VAME stays GATE, VAMAZAMU stays WATCH, and NE predicate negation stays CANDIDATE/scoped-only."]},
     {"slot_id":"L01-OPI-010","english":"What do you do on weekends?","hnk":["EN KU VALA KE"],"hnk_context":"VAMUSARO","validation_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE_AS_APPROXIMATE_CONTEXTUAL_EQUIVALENT","review_state":"REVIEWED_VALIDATED","review_record":"opi-010.semantic-review.v1.json","validation_transition":"opi-010.validated-transition.v1.json","semantic_fidelity":"APPROXIMATE_CONTEXTUAL_EQUIVALENT","boundary":"VAMUSARO remains rest/leisure period, not weekend"}
   ],
   "reviewed_slots":["L01-OPI-001","L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-007","L01-OPI-008","L01-OPI-009","L01-OPI-010"],
   "validated_slots":["L01-OPI-002","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-010"],
   "reviewed_hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"],
   "applied_human_batches":["locative-question-human-promotion-batch.v1.json","content-question-human-promotion-batch.v1.json","opi-010-contextual-equivalence-human-batch.v1.json","opi-002-negation-candidate-human-batch.v1.json"],
-  "summary":{"target":10,"authored_or_better":10,"authored_current_state":4,"structural_static_pass":10,"reviewed":10,"validated":6,"validated_percent":60.0,"frozen":0,"next_selection":"SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1","remaining_hold":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"],"likely_next_design_candidate":"L01-OPI-009"},
-  "next_gate":"SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1"
+  "batch4_selection":"validation-batch-4-selection.v1.json",
+  "prepared_next_human_batch":"opi-009-preference-negation-human-batch.v1.json",
+  "summary":{"target":10,"authored_or_better":10,"authored_current_state":4,"structural_static_pass":10,"reviewed":10,"validated":6,"validated_percent":60.0,"frozen":0,"next_ready_human_candidate":"L01-OPI-009","remaining_hold":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"],"system_heavy_after_batch4":["L01-OPI-001","L01-OPI-003","L01-OPI-007"]},
+  "next_gate":"SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1"
 }
