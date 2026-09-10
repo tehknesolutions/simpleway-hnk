@@ -1,0 +1,20 @@
+{
+  "proposal_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-V1",
+  "status":"PROPOSED_AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "source_plan":"./HNK_L01_VOCABULARY_GAP_8_SEMANTIC_AUTHORING_PLAN_V1.json",
+  "principle":"SEMANTICS_BEFORE_FORM",
+  "target_count":8,
+  "targets":[
+    {"target_id":"SEM-025","slot_id":"L01-VOC-025","semantic_key":"PERSONAL_NAME_DOMAIN","meaning_pt":"nome pessoal / domínio de nome","pedagogical_need":"Permite ensinar explicitamente o domínio central do OPI 1 sem depender de glosa inventada token-a-token.","form_selected":null,"observed_form_to_investigate":"KALA","historical_form_meaning_claim":false},
+    {"target_id":"SEM-026","slot_id":"L01-VOC-026","semantic_key":"FIRST_PERSON_REFERENT","meaning_pt":"referente de primeira pessoa / eu","pedagogical_need":"Permite respostas e microdiálogos futuros com autorreferência sem depender apenas de respostas nuas.","form_selected":null,"observed_form_to_investigate":"AN","historical_form_meaning_claim":false},
+    {"target_id":"SEM-027","slot_id":"L01-VOC-027","semantic_key":"SECOND_PERSON_REFERENT","meaning_pt":"referente de segunda pessoa / você","pedagogical_need":"Torna explícita uma função central recorrente nas perguntas da L01, mantendo separada a inferência da recuperação histórica.","form_selected":null,"observed_form_to_investigate":"EN","historical_form_meaning_claim":false},
+    {"target_id":"SEM-028","slot_id":"L01-VOC-028","semantic_key":"CONTENT_SELECTOR","meaning_pt":"seletor interrogativo de conteúdo / qual-o-quê em uso escopado","pedagogical_need":"Suporta os frames já validados EN + KU + DOMAIN + KE sem forçar uma glosa histórica exata de WH.","form_selected":null,"observed_form_to_investigate":"KU","historical_form_meaning_claim":false},
+    {"target_id":"SEM-029","slot_id":"L01-VOC-029","semantic_key":"QUESTION_OPERATOR","meaning_pt":"operador/marcador de pergunta em uso escopado","pedagogical_need":"Suporta pedagogicamente o padrão clause-final observado sem declarar gramática histórica universal.","form_selected":null,"observed_form_to_investigate":"KE","historical_form_meaning_claim":false},
+    {"target_id":"SEM-030","slot_id":"L01-VOC-030","semantic_key":"RESIDENCE_LIVE","meaning_pt":"residir / morar em contexto de residência","pedagogical_need":"Resolve explicitamente a função semântica ainda hipotética usada no OPI 7, sem reescrever o significado recuperado de VANI.","form_selected":null,"observed_form_to_investigate":"VANI","historical_form_meaning_claim":false},
+    {"target_id":"SEM-031","slot_id":"L01-VOC-031","semantic_key":"PREFERENCE_LIKE","meaning_pt":"gostar / preferência em uso iniciante escopado","pedagogical_need":"Alinha o Vocabulary ao OPI 9 já validado e permite distinguir uso pedagógico de autoridade lexical histórica.","form_selected":null,"observed_form_to_investigate":"VAME","historical_form_meaning_claim":false},
+    {"target_id":"SEM-032","slot_id":"L01-VOC-032","semantic_key":"SPEAK_LANGUAGE_USE","meaning_pt":"falar / usar linguagem em contexto comunicativo","pedagogical_need":"Aproveita o corpus de frases recuperadas da L01 para ampliar a utilidade comunicativa sem atribuir automaticamente significado histórico a ZAMI.","form_selected":null,"observed_form_to_investigate":"ZAMI","historical_form_meaning_claim":false}
+  ],
+  "selection_rationale":"The target set prioritizes semantic functions already central to validated L01 interactions or directly evidenced in recovered L01 phrase contexts. It does not select lexical forms and does not move phrase tokens into the canonical lexicon.",
+  "explicit_non_effects":["No HNK form is selected by this proposal.","No recovered phrase token receives a standalone historical gloss.","No WATCH, GATE, CANDIDATE or inferred token is promoted.","No universal HNK grammar rule is created.","No numerology, glyph appearance or slot number selects semantics or forms."],
+  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1"
+}
