@@ -1,0 +1,14 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V17",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_7_OF_10_VALIDATED_NUMERAL_0_9_REGISTERED_CARDINAL_10_99_BATCH_PREPARED",
+  "package":"simpleway-hnk@0.20.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":3,"VALIDATED":7,"FROZEN":0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":7,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25,"authored_candidates":["KUVAN","VALA","KUON","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA"]},
+  "L01_OPI":{"target":10,"reviewed":10,"VALIDATED":7,"validated_percent":70.0,"hold_slots":["L01-OPI-001","L01-OPI-003","L01-OPI-007"]},
+  "number_system":{"historical_system_recovered":false,"spoken_0_9":{"registered_as_CANDIDATE":true,"count":10,"registry_ids":["AUTH-005","AUTH-006","AUTH-007","AUTH-008","AUTH-009","AUTH-010","AUTH-011","AUTH-012","AUTH-013","AUTH-014"]},"cardinal_10_99":{"proposal":"HNK-CARDINAL-10-99-POSITIONAL-COMPOSITION-V1","status":"AUTHORING_RULE_PROPOSAL_NOT_CANON","schema":"DIGIT_TENS DIGIT_UNITS","examples":{"10":"DUVE BIZO","18":"DUVE TOMI","42":"LUSO HOYU","99":"ZOKA ZOKA"},"new_lexemes":0,"human_approval_pending":true},"age_application":{"question":"EN KU SARASALA KE","answer_schema_if_approved":"[CARDINAL_0_99]","year_unit":null,"SARASALA_authority":"WATCH_UNCHANGED","OPI3_current_state":"AUTHORED_HOLD","projected_if_batch_approved":"VALIDATED"}},
+  "next_gate":"SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1"
+}
