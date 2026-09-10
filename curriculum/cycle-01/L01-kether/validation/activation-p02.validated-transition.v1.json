@@ -1,0 +1,15 @@
+{
+  "transition_id":"SWHNK-L01-ACTIVATION-P02-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":"L01 Activation slots 013-024",
+  "source_pack":"../authoring/activation-pack-p02.v1.json",
+  "source_batch":"activation-p02-human-batch.v1.json",
+  "before":{"AUTHORED":12,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":12,"FROZEN":0},
+  "lesson_activation_after":{"target":72,"VALIDATED":24,"AUTHORED":0,"AUTHORED_OR_BETTER":24,"remaining_unimplemented":48},
+  "global_after":{"VALIDATED":34,"AUTHORED":0,"AUTHORED_OR_BETTER":34,"FROZEN":0},
+  "authority_effect":{"SARASALA":"WATCH_UNCHANGED","KUVAN":"CANDIDATE_UNCHANGED","numeral_primitives":"CANDIDATE_UNCHANGED","language_authority_promotions":0},
+  "historical_effect":{"historical_drill_payload_recovered":false,"reconstruction_claim":false,"SOURCE_CONFIRMED_FROZEN_slots":82},
+  "visual_effect":{"Candidate_D_visual_canon":"PREPRODUCTION_NOT_OFFICIAL_UNCHANGED"},
+  "next_gate":"SWHNK-L01-ACTIVATION-P03-AUTHORING-V1"
+}
