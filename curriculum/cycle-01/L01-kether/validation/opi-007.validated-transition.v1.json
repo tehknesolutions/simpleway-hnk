@@ -1,0 +1,37 @@
+{
+  "transition_id":"SWHNK-L01-OPI-007-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "slot_id":"L01-OPI-007",
+  "before":"AUTHORED_HOLD",
+  "after":"VALIDATED",
+  "validation_scope":"SIMPLEWAY_HNK_L01_OPI_007_ONLY",
+  "question_sequence":["EN VANI KUVAN KE","EN VANI KUON KE"],
+  "design":"TWO_MICROQUESTIONS_ONE_OPI_CARD",
+  "answer_patterns":["[PLACE]","[PERSON_OR_PEOPLE]"],
+  "language_authority_effect":{
+    "VANI":"WATCH_UNCHANGED_MEANING_NULL",
+    "KUVAN":"AUTH-001_CANDIDATE_UNCHANGED",
+    "KUON":"AUTH-003_CANDIDATE_UNCHANGED",
+    "ON":"LEX-026_GATE_UNCHANGED"
+  },
+  "semantic_effect":{
+    "VANI_live_reside":"APPROVED_FOR_L01_OPI007_COURSE_INTERPRETATION_ONLY",
+    "historical_VANI_gloss_recovered":false,
+    "master_lexicon_meaning_changed":false,
+    "co_resident_valency":"APPROVED_FOR_L01_OPI007_ONLY",
+    "global_comitative_grammar":false,
+    "new_WITH_lexeme":false
+  },
+  "historical_recovery_claim":false,
+  "freeze_effect":"NONE",
+  "remaining_freeze_blockers":[
+    "VANI remains WATCH with recovered meaning null.",
+    "KUVAN and KUON remain CANDIDATE.",
+    "ON remains GATE.",
+    "Residence co-resident valency is scoped course grammar, not recovered historical grammar.",
+    "Publication freeze is a later gate."
+  ],
+  "progress_effect":{"L01_OPI_VALIDATED_before":9,"L01_OPI_VALIDATED_after":10,"L01_OPI_VALIDATED_percent_after":100.0,"GLOBAL_VALIDATED_after":10},
+  "provenance":["opi-007-final-human-batch.v1.json","opi-007.semantic-review.v1.json","../authoring/opi-007.residence-frame.v1.json","../../../../proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json","../../../../proposals/language/HNK_KUON_PROMOTION_RECORD_V1.json","../../../../proposals/language/HNK_RESIDENCE_VALENCY_RULE_V1.json"],
+  "next_gate":"SWHNK-L01-OPI-VALIDATION-COMPLETE-10-OF-10-V1"
+}
