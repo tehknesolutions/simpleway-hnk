@@ -1,10 +1,11 @@
 {
   "proposal_id":"SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-V1",
-  "status":"APPROVED_SEMANTICS_FORM_MAPPING_PENDING",
+  "status":"APPROVED_SEMANTICS_MAPPING_APPLIED_VALIDATION_PENDING",
   "source_plan":"./HNK_L01_VOCABULARY_GAP_8_SEMANTIC_AUTHORING_PLAN_V1.json",
   "principle":"SEMANTICS_BEFORE_FORM",
   "target_count":8,
-  "approval":{"date":"2026-09-10","batch":"../../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-semantic-targets-human-batch.v1.json","semantic_targets_approved":8,"forms_selected":0},
+  "approval":{"date":"2026-09-10","batch":"../../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-semantic-targets-human-batch.v1.json","semantic_targets_approved":8,"forms_selected_by_semantic_gate":0},
+  "mapping_application":{"date":"2026-09-10","mapping_gate":"../../curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-form-mapping-human-batch.v1.json","application":"../../curriculum/cycle-01/L01-kether/authoring/vocabulary-gap-8-application.v1.json","mapped_forms":["KALA","AN","EN","KU","KE","VANI","VAME","ZAMI"],"new_authored_candidates":6,"scoped_recovered_bindings":2,"vocabulary_slots_authored":8,"vocabulary_slots_validated":0},
   "targets":[
     {"target_id":"SEM-025","slot_id":"L01-VOC-025","semantic_key":"PERSONAL_NAME_DOMAIN","meaning_pt":"nome pessoal / domínio de nome","pedagogical_need":"Permite ensinar explicitamente o domínio central do OPI 1 sem depender de glosa inventada token-a-token.","form_selected":null,"observed_form_to_investigate":"KALA","historical_form_meaning_claim":false},
     {"target_id":"SEM-026","slot_id":"L01-VOC-026","semantic_key":"FIRST_PERSON_REFERENT","meaning_pt":"referente de primeira pessoa / eu","pedagogical_need":"Permite respostas e microdiálogos futuros com autorreferência sem depender apenas de respostas nuas.","form_selected":null,"observed_form_to_investigate":"AN","historical_form_meaning_claim":false},
@@ -15,7 +16,7 @@
     {"target_id":"SEM-031","slot_id":"L01-VOC-031","semantic_key":"PREFERENCE_LIKE","meaning_pt":"gostar / preferência em uso iniciante escopado","pedagogical_need":"Alinha o Vocabulary ao OPI 9 já validado e permite distinguir uso pedagógico de autoridade lexical histórica.","form_selected":null,"observed_form_to_investigate":"VAME","historical_form_meaning_claim":false},
     {"target_id":"SEM-032","slot_id":"L01-VOC-032","semantic_key":"SPEAK_LANGUAGE_USE","meaning_pt":"falar / usar linguagem em contexto comunicativo","pedagogical_need":"Aproveita o corpus de frases recuperadas da L01 para ampliar a utilidade comunicativa sem atribuir automaticamente significado histórico a ZAMI.","form_selected":null,"observed_form_to_investigate":"ZAMI","historical_form_meaning_claim":false}
   ],
-  "selection_rationale":"The eight semantic targets are explicitly approved. Approval does not select or promote lexical forms. Form mapping remains a separate evidence-first gate.",
-  "explicit_non_effects":["No HNK form is selected by semantic approval.","No recovered phrase token receives a standalone historical gloss.","No WATCH, GATE, CANDIDATE or inferred token is promoted.","No universal HNK grammar rule is created.","No numerology, glyph appearance or slot number selects semantics or forms."],
-  "next_gate":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-REVIEW-V1"
+  "selection_rationale":"The eight semantic targets were approved before form selection. Their later mapping and authoring are separately governed and do not retroactively turn semantic-target evidence into historical token glosses.",
+  "explicit_non_effects":["The semantic gate itself selected no HNK form.","No recovered phrase token receives a standalone historical gloss.","No WATCH, GATE or CANDIDATE authority is promoted.","No universal HNK grammar rule is created.","No numerology, glyph appearance or slot number selected semantics or forms."],
+  "next_gate":"SWHNK-L01-VOCABULARY-025-032-HUMAN-BATCH-V1"
 }
