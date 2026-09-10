@@ -1,0 +1,30 @@
+{
+  "batch_id":"SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "source":"../../../../proposals/language/HNK_L01_VOCABULARY_GAP_8_FORM_MAPPING_REVIEW_V1.json",
+  "scope":["SEM-025","SEM-026","SEM-027","SEM-028","SEM-029","SEM-030","SEM-031","SEM-032"],
+  "current_state":{"semantic_targets_approved":8,"forms_mapped_proposed":8,"canonical_registry_entries_created":0,"vocabulary_slots_25_32":"MISSING"},
+  "decisions_requested":[
+    {"id":"DEC-MAP-001","statement":"Approve KALA -> PERSONAL_NAME_DOMAIN and AN -> FIRST_PERSON_REFERENT as new governed standalone CANDIDATE mappings derived from observed phrase evidence, without historical standalone-gloss claims.","if_approved":{"new_candidate_mappings":2,"proposed_ids":["AUTH-015","AUTH-016"]}},
+    {"id":"DEC-MAP-002","statement":"Approve EN -> SECOND_PERSON_REFERENT, KU -> CONTENT_SELECTOR and KE -> QUESTION_OPERATOR as new governed standalone CANDIDATE functional mappings for scoped L01 use, without declaring universal historical pronoun/interrogative grammar.","if_approved":{"new_candidate_mappings":3,"proposed_ids":["AUTH-017","AUTH-018","AUTH-019"]}},
+    {"id":"DEC-MAP-003","statement":"Approve ZAMI -> SPEAK_LANGUAGE_USE as a new governed standalone CANDIDATE mapping from repeated recovered phrase evidence, without claiming a historically recovered standalone lexical gloss.","if_approved":{"new_candidate_mappings":1,"proposed_ids":["AUTH-020"]}},
+    {"id":"DEC-MAP-004","statement":"Approve VANI -> RESIDENCE_LIVE only as a scoped L01 semantic binding on recovered LEX-031, keeping master meaning null and WATCH authority unchanged.","if_approved":{"new_candidate_registry_entry":false,"VANI_master_meaning":"NULL_UNCHANGED","VANI_authority":"WATCH_UNCHANGED","scoped_binding":true}},
+    {"id":"DEC-MAP-005","statement":"Approve VAME -> PREFERENCE_LIKE as an L01 curriculum rebind of recovered LEX-025, preserving GATE authority, existing recovered provenance and no global preference grammar.","if_approved":{"new_candidate_registry_entry":false,"VAME_authority":"GATE_UNCHANGED","scoped_rebind":true}},
+    {"id":"DEC-MAP-006","statement":"Confirm all six proposed new authored entries must enter @hnk/linguas/authored as CANDIDATE with historicalRecoveryClaim=false, and VANI/VAME must not be duplicated there because they already exist in the recovered Master Lexicon.","if_approved":{"canonical_candidates_to_register":6,"recovered_duplicates_created":0}},
+    {"id":"DEC-MAP-007","statement":"Confirm approval of this exact mapping would authorize a subsequent application step that registers AUTH-015..020, records VANI/VAME scoped bindings and authors VOC-025..032; it does not validate those eight Vocabulary slots automatically.","if_approved":{"vocabulary_slots_to_author_next":8,"vocabulary_slots_validated_by_this_gate":0}}
+  ],
+  "exact_mapping":[
+    {"slot":"L01-VOC-025","form":"KALA","target":"PERSONAL_NAME_DOMAIN","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-015"},
+    {"slot":"L01-VOC-026","form":"AN","target":"FIRST_PERSON_REFERENT","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-016"},
+    {"slot":"L01-VOC-027","form":"EN","target":"SECOND_PERSON_REFERENT","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-017"},
+    {"slot":"L01-VOC-028","form":"KU","target":"CONTENT_SELECTOR","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-018"},
+    {"slot":"L01-VOC-029","form":"KE","target":"QUESTION_OPERATOR","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-019"},
+    {"slot":"L01-VOC-030","form":"VANI","target":"RESIDENCE_LIVE","action":"SCOPED_SEMANTIC_BINDING_ON_RECOVERED_WATCH","proposed_id":null},
+    {"slot":"L01-VOC-031","form":"VAME","target":"PREFERENCE_LIKE","action":"L01_CURRICULUM_REBIND_ON_RECOVERED_GATE","proposed_id":null},
+    {"slot":"L01-VOC-032","form":"ZAMI","target":"SPEAK_LANGUAGE_USE","action":"NEW_AUTHORED_CANDIDATE","proposed_id":"AUTH-020"}
+  ],
+  "projected_effect_if_all_approved":{"new_canonical_authored_candidates":6,"canonical_authored_candidates_before":14,"canonical_authored_candidates_after":20,"governed_unique_language_assets_before":45,"governed_unique_language_assets_after":51,"scoped_recovered_bindings_added":2,"vocabulary_slots_authored_by_followup_application":8,"vocabulary_slots_validated_by_this_gate":0,"language_authority_promotions":0,"historical_standalone_gloss_claims":0},
+  "application_rule":"Do not edit @hnk/linguas/authored, bind VANI/VAME to the final Vocabulary slots, or change VOC-025..032 from MISSING until all seven mapping decisions are explicitly approved.",
+  "next_gate_if_approved":"APPLY_L01_VOCABULARY_GAP_8_EXACT_MAPPING",
+  "next_gate_if_not_approved":"REVISE_L01_VOCABULARY_GAP_8_FORM_MAPPING"
+}
