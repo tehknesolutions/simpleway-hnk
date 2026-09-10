@@ -1,0 +1,40 @@
+{
+  "batch_id":"SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":"L01 OPI 7 only",
+  "risk":"VERY_HIGH",
+  "question":{"english":"Where do you live and who do you live with?","hnk":["EN VANI KUVAN KE","EN VANI KUON KE"],"current_state":"AUTHORED_HOLD","design":"TWO_MICROQUESTIONS_ONE_OPI_CARD"},
+  "decisions_requested":[
+    {
+      "id":"DEC-RES-001",
+      "statement":"Approve VANI ≈ live/reside as a scoped semantic interpretation for L01 OPI 7 course use only, while keeping recovered LEX-031 authority WATCH and Master Lexicon meaning null.",
+      "if_approved":{"course_semantic_use":"APPROVED_L01_OPI007_ONLY","VANI_authority":"WATCH_UNCHANGED","VANI_master_lexicon_meaning":null,"historical_gloss_recovered":false,"lexicon_mutation":false}
+    },
+    {
+      "id":"DEC-RES-002",
+      "statement":"Approve EN VANI KUVAN KE as the L01 OPI 7 location microquestion for Where do you live?, reusing AUTH-001 KUVAN only in its already governed locative course role.",
+      "if_approved":{"KUVAN_authority":"CANDIDATE_UNCHANGED","course_use":"APPROVED_L01_OPI007_LOCATION","historical_sentence_claim":false}
+    },
+    {
+      "id":"DEC-RES-003",
+      "statement":"Approve AUTH-003 KUON as a scoped person-interrogative variable for the L01 OPI 7 co-resident microquestion, while keeping KUON CANDIDATE and its dependency LEX-026 ON at GATE.",
+      "if_approved":{"KUON_authority":"CANDIDATE_UNCHANGED","ON_authority":"GATE_UNCHANGED","course_use":"APPROVED_L01_OPI007_PERSON_INTERROGATIVE","historical_KUON_claim":false,"historical_ON_person_gloss_claim":false}
+    },
+    {
+      "id":"DEC-RES-004",
+      "statement":"Approve EN VANI KUON KE as the scoped co-resident microquestion for Who do you live with? using an authored residence co-resident valency, without creating an HNK equivalent of English WITH.",
+      "if_approved":{"co_resident_valency":"APPROVED_L01_OPI007_ONLY","overt_comitative_particle":null,"new_WITH_lexeme":false,"historical_valency_claim":false,"global_comitative_grammar":false}
+    },
+    {
+      "id":"DEC-RES-005",
+      "statement":"Keep the two-microquestion design and accept bare [PLACE] and [PERSON_OR_PEOPLE] as sufficient beginner answer patterns without adding unrecovered copular, case or comitative grammar.",
+      "if_approved":{"design":"TWO_MICROQUESTIONS_ONE_OPI_CARD","location_answer":"[PLACE]","coresident_answer":"[PERSON_OR_PEOPLE]","new_grammar_tokens":0,"new_lexemes":0}
+    }
+  ],
+  "evidence_and_review_sources":["opi-007.semantic-review.v1.json","../authoring/opi-007.residence-frame.v1.json","../../../../proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json","../../../../proposals/language/HNK_KUON_PROMOTION_RECORD_V1.json","../../../../proposals/language/HNK_RESIDENCE_VALENCY_RULE_V1.json","../../../../proposals/language/HNK_KUVAN_PROMOTION_RECORD_V1.json"],
+  "explicit_non_effects":["Does not set LEX-031 VANI meaning in the recovered Master Lexicon.","Does not promote VANI from WATCH.","Does not promote KUVAN or KUON from CANDIDATE.","Does not promote ON from GATE.","Does not claim KUON or the residence valency were historically recovered.","Does not create a WITH/comitative lexeme.","Does not grant global person-interrogative, residence-valency or comitative grammar.","Does not promote any L01 OPI to FROZEN."],
+  "projected_effect_if_all_approved":{"L01_OPI_validated_before":9,"L01_OPI_validated_after":10,"L01_OPI_validated_percent_after":100.0,"cycle1_OPI_validated_after":10,"cycle1_OPI_validated_percent_after":14.2857,"global_VALIDATED_slots_after":10,"language_authority_promotions":0,"new_lexical_forms":0,"master_lexicon_meaning_changes":0,"new_WITH_lexeme":false},
+  "application_rule":"Do not transition L01-OPI-007 to VALIDATED until all five scoped decisions are explicitly approved. Course validation, if granted, must preserve VANI meaning=null in recovered canon and all WATCH/CANDIDATE/GATE authorities.",
+  "next_gate_if_approved":"SWHNK-L01-OPI-007-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_OPI007_AUTHORED_HOLD_AND_REVISE_RESIDENCE_SYSTEM"
+}
