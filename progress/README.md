@@ -44,41 +44,37 @@ All 10 cards are authored and individually reviewed.
 | OPI | HNK v1.1 | Current state |
 |---:|---|---|
 | 01 | `KALA YA EN ES KU KE` | AUTHORED · reviewed HOLD |
-| 02 | `EN VAMAKALA KE` | **VALIDATED** — nominal interview; `[NICKNAME]` / `NE VAMAKALA` |
+| 02 | `EN VAMAKALA KE` | **VALIDATED** — `[NICKNAME]` / `NE VAMAKALA` |
 | 03 | `EN KU SARASALA KE` | AUTHORED · reviewed HOLD |
 | 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** — scoped L01 v1.1 use |
 | 05 | `EN VALI KUVAN KE` | **VALIDATED** — scoped L01 v1.1 use |
 | 06 | `EN KU VALA KE` | **VALIDATED** — scoped content frame with work/school context |
 | 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · reviewed HOLD |
 | 08 | `EN KU VAMAVALA KE` | **VALIDATED** — scoped content frame; WATCH remains visible |
-| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · reviewed HOLD |
+| 09 | `EN VAME VAMAZAMU KE` | AUTHORED · reviewed HOLD; Batch 4 prepared |
 | 10 | context `VAMUSARO` + `EN KU VALA KE` | **VALIDATED** — approximate contextual equivalent |
 
 ## Applied validation batches
 
-### Batch 1 — locative questions
+- Batch 1: OPI 4 + 5 — locative questions.
+- Batch 2: OPI 6 + 8 — content questions.
+- Batch 3: OPI 10 — contextual leisure/weekend equivalence.
+- Batch 3B: OPI 2 — nickname nominal interview + scoped authored negation/absence.
 
-Validated OPI 4 and 5. `KUVAN` remains `CANDIDATE`; no historical-recovery or FROZEN claim was created.
+None of these course validations rewrites recovered history or automatically promotes language authority.
 
-### Batch 2 — content questions
+## OPI 2 / AUTH-004 NE
 
-Validated OPI 6 and 8. `VALA` remains `CANDIDATE`, `VAMAVALA` remains `WATCH`, and `KU` retains no exact recovered WH gloss.
+OPI 2 was validated without creating an English-calque HAVE verb:
 
-### Batch 3 — contextual weekend equivalence
-
-Validated OPI 10 while preserving `VAMUSARO = rest / leisure period`, not `weekend`. Semantic fidelity remains `APPROXIMATE_CONTEXTUAL_EQUIVALENT` and `VALA` remains `CANDIDATE`.
-
-### Batch 3B — nickname / absence microgrammar
-
-Validated OPI 2 without creating an English-calque HAVE verb:
-
-- `EN VAMAKALA KE` is accepted only as a scoped nominal/interview function equivalent to `Do you have a nickname?`;
-- affirmative answer: `[NICKNAME]`;
-- negative answer: `NE VAMAKALA`;
+- question: `EN VAMAKALA KE`;
+- affirmative: `[NICKNAME]`;
+- negative: `NE VAMAKALA`;
 - `VAMAKALA` remains recovered `FROZEN`;
-- new `AUTH-004 NE` enters `@hnk/linguas/authored` only as `CANDIDATE`;
-- `NE` is authored, not recovered, and has no globally productive negation rule;
-- historical possession and `EN` subject-vs-possessive analysis remain unresolved.
+- `NE` is `AUTH-004`, authored `CANDIDATE`, G-IDs `G12 · G02`;
+- `NE` is not claimed as recovered historical HNK;
+- global negation productivity is not granted;
+- historical possession and EN subject-vs-possessive analysis remain unresolved.
 
 ## Cycle 1 OPI progress
 
@@ -102,13 +98,28 @@ These are language-asset coverage proxies, not completed vocabulary-slot percent
 - OPI 1: approximate historical gloss; `YA` and `ES` unresolved.
 - OPI 3: `SARASALA` WATCH plus number/age system open.
 - OPI 7: `VANI` meaning null, `KUON` CANDIDATE, `ON=GATE`, experimental co-resident valency.
-- OPI 9: `VAME` GATE and `VAMAZAMU` WATCH. The negative-response tool `NE` now exists, so this card becomes the best next design candidate, but a scoped preference/yes-no policy is still required.
+- OPI 9: `VAME` GATE and `VAMAZAMU` WATCH.
 
-## Next gate
+## Batch 4 — prepared, not applied
 
-`SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1`
+Selected next card: **L01-OPI-009**.
 
-Recommended priority: OPI 9, because AUTH-004 `NE` removes one former blocker. The next design must decide whether `VAME` can be accepted for scoped L01 preference use while remaining `GATE`, whether `VAMAZAMU` can remain visible as `WATCH`, and how positive/negative preference answers work. OPI 1, 3 and 7 remain higher-risk recovery/system problems.
+Question:
+
+`EN VAME VAMAZAMU KE`
+
+Proposed dialogue-fragment responses:
+
+- affirmative: `VAME VAMAZAMU`;
+- negative: `NE VAME VAMAZAMU`.
+
+The prepared human batch requires four scoped decisions: allow `VAME` in this card while retaining `GATE`; allow `VAMAZAMU` while retaining `WATCH`; extend `NE` to predicate-phrase negation only in this card while retaining `CANDIDATE`; and accept the question/echo-response system as a functional beginner preference exchange.
+
+No new lexical form is required. No authority promotion is projected. If later approved, OPI validation would move **6/10 -> 7/10 = 70%**. Until then, current progress remains 60%.
+
+Current gate:
+
+`SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1`
 
 ## Commands
 
@@ -124,7 +135,7 @@ npm test
 
 ## CI boundary
 
-Versioned tests are synchronized to the V13 state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
+Versioned tests are synchronized to the V13/Batched-4-prepared state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
 
 ## Rule
 
