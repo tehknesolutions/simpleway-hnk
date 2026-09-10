@@ -1,64 +1,16 @@
 {
   "proposal_id":"HNK-CARDINAL-10-99-POSITIONAL-COMPOSITION-V1",
-  "status":"AUTHORING_RULE_PROPOSAL_NOT_CANON",
+  "status":"APPROVED_FOR_SCOPED_L01_OPI003_NUMERIC_CONTEXT_NOT_GLOBAL_CANON",
   "scope":"Spoken HNK v1.1 beginner cardinals 10 through 99",
+  "approved_course_scope":"SIMPLEWAY_HNK_L01_OPI_003_ONLY",
   "primitives":{"0":"BIZO","1":"DUVE","2":"HOYU","3":"KETI","4":"LUSO","5":"MUPI","6":"NURA","7":"PEVU","8":"TOMI","9":"ZOKA"},
-  "rule":{
-    "schema":"DIGIT_TENS DIGIT_UNITS",
-    "semantic_interpretation":"10 × value(first) + value(second)",
-    "domain_requirement":"NUMERIC_CARDINAL_CONTEXT",
-    "first_digit_allowed":[1,2,3,4,5,6,7,8,9],
-    "second_digit_allowed":[0,1,2,3,4,5,6,7,8,9],
-    "range":[10,99],
-    "separator":"SPACE",
-    "new_lexeme_required":false,
-    "ten_morpheme_required":false,
-    "base":"DECIMAL_POSITIONAL_FOR_THIS_RULE",
-    "historical_grammar_claim":false,
-    "global_HNK_number_grammar_claim":false
-  },
-  "examples":[
-    {"value":10,"hnk":"DUVE BIZO","analysis":"1×10 + 0"},
-    {"value":11,"hnk":"DUVE DUVE","analysis":"1×10 + 1"},
-    {"value":18,"hnk":"DUVE TOMI","analysis":"1×10 + 8"},
-    {"value":20,"hnk":"HOYU BIZO","analysis":"2×10 + 0"},
-    {"value":42,"hnk":"LUSO HOYU","analysis":"4×10 + 2"},
-    {"value":70,"hnk":"PEVU BIZO","analysis":"7×10 + 0"},
-    {"value":99,"hnk":"ZOKA ZOKA","analysis":"9×10 + 9"}
-  ],
-  "design_rationale":[
-    "Uses only already registered 0-9 CANDIDATE primitives and therefore creates no additional lexical form.",
-    "Preserves a transparent one-to-one relationship with external decimal numeric literals used by the UI/data bridge.",
-    "Avoids inventing an unrecovered TEN morpheme or tens suffix solely to imitate English or another language.",
-    "Keeps 100+ composition outside scope so this beginner rule can be validated independently.",
-    "For age answers in Lesson 1, a two-digit value can be spoken without requiring a separate year unit if the age-question context is explicitly accepted."
-  ],
-  "age_application_proposal":{
-    "question":"EN KU SARASALA KE",
-    "question_state":"AUTHORED_HOLD",
-    "answer_schema":"[CARDINAL_0_99]",
-    "examples":[{"display":"8","spoken":"TOMI"},{"display":"18","spoken":"DUVE TOMI"},{"display":"42","spoken":"LUSO HOYU"}],
-    "year_unit":null,
-    "bare_cardinal_answer_reason":"The OPI question supplies the age/time-duration domain; adding an unrecovered year word is not required for the minimal beginner response design.",
-    "SARASALA_authority":"WATCH_UNCHANGED",
-    "OPI3_validation_implied":false
-  },
-  "boundaries":{
-    "numeral_primitives_remain_CANDIDATE":true,
-    "recovered_lexicon_changed":false,
-    "numerology_used":false,
-    "base12_claim":false,
-    "100_plus_rule_created":false,
-    "ordinal_rule_created":false,
-    "arithmetic_expression_grammar_created":false
-  },
-  "promotion_gate":[
-    "Approve decimal positional interpretation for two-token cardinal sequences only in numeric/cardinal context.",
-    "Approve bare cardinal answers for L01 age responses or define a year unit separately.",
-    "Approve/reject the contextual age reading of SARASALA without silently promoting WATCH authority.",
-    "Keep 100+, ordinals and arithmetic outside this gate."
-  ],
-  "projected_effect_if_approved_rule_only":{"new_lexical_forms":0,"governed_unique_language_assets":45,"L01_OPI_validated":7,"change":0},
-  "projected_effect_if_rule_and_age_application_approved":{"L01_OPI_validated_before":7,"L01_OPI_validated_after":8,"L01_OPI_validated_percent_after":80.0,"language_authority_promotions":0},
-  "next_gate":"SWHNK-L01-OPI-003-AGE-CARDINAL-HUMAN-BATCH-V1"
+  "rule":{"schema":"DIGIT_TENS DIGIT_UNITS","semantic_interpretation":"10 × value(first) + value(second)","domain_requirement":"NUMERIC_CARDINAL_CONTEXT","first_digit_allowed":[1,2,3,4,5,6,7,8,9],"second_digit_allowed":[0,1,2,3,4,5,6,7,8,9],"range":[10,99],"separator":"SPACE","new_lexeme_required":false,"ten_morpheme_required":false,"base":"DECIMAL_POSITIONAL_FOR_THIS_RULE","historical_grammar_claim":false,"global_HNK_number_grammar_claim":false},
+  "examples":[{"value":10,"hnk":"DUVE BIZO","analysis":"1×10 + 0"},{"value":11,"hnk":"DUVE DUVE","analysis":"1×10 + 1"},{"value":18,"hnk":"DUVE TOMI","analysis":"1×10 + 8"},{"value":20,"hnk":"HOYU BIZO","analysis":"2×10 + 0"},{"value":42,"hnk":"LUSO HOYU","analysis":"4×10 + 2"},{"value":70,"hnk":"PEVU BIZO","analysis":"7×10 + 0"},{"value":99,"hnk":"ZOKA ZOKA","analysis":"9×10 + 9"}],
+  "design_rationale":["Uses only already registered 0-9 CANDIDATE primitives and therefore creates no additional lexical form.","Preserves a transparent one-to-one relationship with external decimal numeric literals used by the UI/data bridge.","Avoids inventing an unrecovered TEN morpheme or tens suffix solely to imitate English or another language.","Keeps 100+ composition outside scope so this beginner rule can be validated independently.","For age answers in Lesson 1, a two-digit value can be spoken without requiring a separate year unit because the age-question context is explicitly approved."],
+  "age_application":{"question":"EN KU SARASALA KE","question_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","answer_schema":"[CARDINAL_0_99]","examples":[{"display":"8","spoken":"TOMI"},{"display":"18","spoken":"DUVE TOMI"},{"display":"42","spoken":"LUSO HOYU"}],"year_unit":null,"bare_cardinal_answer_reason":"The OPI question supplies the age/time-duration domain; an unrecovered year word is intentionally not added in this scoped beginner response design.","SARASALA_authority":"WATCH_UNCHANGED","OPI3_validation":"APPLIED"},
+  "boundaries":{"numeral_primitives_remain_CANDIDATE":true,"recovered_lexicon_changed":false,"numerology_used":false,"base12_claim":false,"100_plus_rule_created":false,"ordinal_rule_created":false,"arithmetic_expression_grammar_created":false,"global_productivity_granted":false},
+  "approval_record":"../curriculum/cycle-01/L01-kether/validation/opi-003-age-cardinal-human-batch.v1.json",
+  "validation_transition":"../curriculum/cycle-01/L01-kether/validation/opi-003.validated-transition.v1.json",
+  "current_effect":{"new_lexical_forms":0,"governed_unique_language_assets":45,"L01_OPI_validated":8,"language_authority_promotions":0},
+  "next_gate":"SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1"
 }
