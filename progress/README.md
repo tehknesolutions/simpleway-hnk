@@ -1,12 +1,12 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V18`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V19`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.21.0`
-
-## Progress
+**Current package:** `simpleway-hnk@0.22.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
+
+Current exclusive implementation states:
 
 - `MISSING`: **998/1,008 = 99.0079%**
 - `AUTHORED`: **2/1,008 = 0.1984%**
@@ -27,65 +27,42 @@ HOLD: **1, 7**.
 
 ## Language assets
 
-Recovered Cycle 1 forms remain **31/144 = 21.5278% proxy**.
+- recovered Cycle 1 forms: **31/144 = 21.5278% proxy**
+- canonical authored candidates: **14**
+- governed unique language assets: **45/144 = 31.25% proxy**
 
-Canonical authored candidates: **14** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
+Authored candidates: `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
 
-Governed unique language assets: **45/144 = 31.25% proxy**.
+The numeral primitives remain `CANDIDATE`; none is historical recovery or FROZEN.
 
-The ten numerals are newly authored `CANDIDATE` primitives; none is historical recovery or FROZEN.
+## OPI 3 — validated
 
-## OPI 3 — validated age/cardinal lane
+Question: `EN KU SARASALA KE`.
 
-Question:
+`SARASALA` remains `WATCH`. Bare `[CARDINAL_0_99]` answers are approved for this card, e.g. `TOMI` = 8, `DUVE TOMI` = 18, `LUSO HOYU` = 42.
 
-`EN KU SARASALA KE`
+The 10–99 rule `DIGIT_TENS DIGIT_UNITS` is approved only in the L01 OPI 3 numeric/cardinal context. It grants no global HNK number grammar, 100+, ordinals or year/years lexeme.
 
-`SARASALA` remains `WATCH = time/duration`.
+## OPI 1 — next gate prepared
 
-Approved scoped answer design:
+Historical phrase: `KALA YA EN ES KU KE`.
 
-- 8 → `TOMI`
-- 18 → `DUVE TOMI`
-- 42 → `LUSO HOYU`
+Source: recovered `PHR-001`, approximate whole-sentence meaning `What is your name?`.
 
-For 10–99, the scoped v1.1 rule is:
+The safe validation strategy is **whole-utterance formula validation**: accept the recovered phrase as an indivisible beginner formula without assigning invented meanings to `YA`, `ES`, `KALA`, `EN`, `KU` or `KE`.
 
-`DIGIT_TENS DIGIT_UNITS`
+`YA` and `ES` remain unresolved. Bare `[PERSONAL_NAME]` is the proposed answer pattern.
 
-Interpretation in numeric/cardinal context:
+Prepared batch:
 
-`10 × value(first) + value(second)`
+`SWHNK-L01-OPI-001-WHOLE-UTTERANCE-HUMAN-BATCH-V1`
 
-Examples: `DUVE BIZO` = 10, `DUVE TOMI` = 18, `LUSO HOYU` = 42, `ZOKA ZOKA` = 99.
+It is **not applied yet**. If approved, L01 moves from **8/10 → 9/10 VALIDATED = 90%**, with zero new lexical forms and zero token-gloss promotions.
 
-This rule is approved **only for the L01 OPI 3 numeric/cardinal context**. It does not create a TEN morpheme, year/years lexeme, 100+ grammar, ordinals or historical-number-system claim. Numeral primitives remain `CANDIDATE`; `SARASALA` remains `WATCH`.
+## OPI 7
 
-## Remaining HOLD triage
-
-### OPI 1
-
-`KALA YA EN ES KU KE` is an actually recovered phrase with approximate whole-sentence gloss `What is your name?`. `YA` and `ES` still have no recovered token-level meanings. The promising next route is **whole-utterance validation**: approve the recovered phrase as an indivisible beginner formula without assigning invented meanings to its unresolved tokens.
-
-### OPI 7
-
-`EN VANI KUVAN KE` + `EN VANI KUON KE` remains the highest-risk card. `VANI` is recovered but its meaning is still `null`; `live/reside` is only a semantic hypothesis. `KUON` remains CANDIDATE and depends on `ON=GATE`; co-resident valency is authored/test-only.
-
-## Next gate
-
-`SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1`
-
-Recommended first target: OPI 1 whole-utterance validation, because it preserves the historical recovered phrase exactly and can avoid inventing token meanings.
+Remains the final highest-risk HOLD: `VANI` is recovered but meaning `null`; `live/reside` is hypothesis-only; `KUON` remains CANDIDATE dependent on `ON=GATE`; co-resident valency is authored/test-only.
 
 ## CI boundary
 
-Run locally/CI with:
-
-```bash
-npm test
-npm run validate:numbers
-npm run validate:numeral-candidates
-npm run validate:cardinals
-```
-
-Remote CI must not be described as green without an observed successful GitHub Actions runner.
+Run locally/CI with `npm test`. Remote CI must not be described as green without an observed successful GitHub Actions runner.
