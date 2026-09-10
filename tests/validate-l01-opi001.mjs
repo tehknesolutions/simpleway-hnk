@@ -45,12 +45,13 @@ assert.deepEqual(binding.glyph_ids, expectedGlyphIds);
 assert.equal(binding.validation_state, 'TECHNICAL_PASS_SEMANTIC_HOLD');
 assert.equal(binding.answer_pattern.pattern, '[PERSONAL_NAME]');
 
-// OPI 1 remains HOLD while seven other cards are validated.
+// OPI 1 remains HOLD while eight other cards are validated.
 assert.equal(bindings.metrics.authored_or_better, 10);
-assert.equal(bindings.metrics.authored_current_state, 3);
-assert.equal(bindings.metrics.validated, 7);
+assert.equal(bindings.metrics.authored_current_state, 2);
+assert.equal(bindings.metrics.validated, 8);
 assert.equal(bindings.metrics.frozen, 0);
 assert.ok(!bindings.metrics.validated_opi.includes('L01-OPI-001'));
+assert.ok(bindings.metrics.reviewed_hold_opi.includes('L01-OPI-001'));
 
-console.log('PASS SWHNK-L01-OPI-001-TECHNICAL-AND-SEMANTIC-REVIEW-V5');
-console.log('OPI001 remains AUTHORED-HOLD with YA/ES unresolved; global L01 state is 10 authored-or-better / 7 validated / 0 frozen.');
+console.log('PASS SWHNK-L01-OPI-001-TECHNICAL-AND-SEMANTIC-REVIEW-V6');
+console.log('OPI001 remains AUTHORED-HOLD with YA/ES unresolved; global L01 state is 10 authored-or-better / 8 validated / 0 frozen.');
