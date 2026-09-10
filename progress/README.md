@@ -1,21 +1,21 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V35`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V36`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.38.0`
+**Current package:** `simpleway-hnk@0.39.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
 - `MISSING`: **883/1,008 = 87.5992%**
-- `AUTHORED`: **24/1,008 = 2.3810%**
-- `VALIDATED`: **101/1,008 = 10.0198%**
+- `AUTHORED`: **0/1,008 = 0%**
+- `VALIDATED`: **125/1,008 = 12.4008%**
 - reproducible `FROZEN`: **0/1,008**
 - `AUTHORED_OR_BETTER`: **125/1,008 = 12.4008%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
-## L01 validated communicative core
+## L01 validated core
 
 Fully validated lanes:
 
@@ -25,39 +25,42 @@ Fully validated lanes:
 - Q&A: **4/4**;
 - Structure Headers: **2/2**;
 - Structures: **5/5**;
-- Activation: **72/72**.
+- Activation: **72/72**;
+- Vocabulary currently filled: **24/24 VALIDATED**.
 
-Story validation remains scoped to SimpleWay HNK v1.1. Narrative framing is pedagogical Portuguese, not HNK grammar, and all WATCH/GATE/CANDIDATE boundaries remain unchanged.
+All validations remain scoped to SimpleWay HNK v1.1 and do not promote language authority automatically.
 
-## L01 Vocabulary — 24/32 AUTHORED
+## L01 Vocabulary — 24/32 VALIDATED, gap 8
 
-The L01 allocation contains **32 Vocabulary slots**, but no historical table enumerating their payload has been recovered. The current v1.1 pass applies a one-distinct-governed-asset-per-filled-slot policy.
+`VOC-001..024` are now **VALIDATED** curriculum selections over 24 distinct already governed assets. `VOC-025..032` remain **MISSING_GOVERNED_ASSET**.
 
-Current state:
+The 24 validated slots comprise 10 recovered/reference/rebind assets plus 14 canonical authored candidates. The validation created **zero new HNK lexical forms**, promoted **zero language authorities**, and did not convert unresolved phrase tokens into historical lexical entries.
 
-- `VOC-001..024`: **AUTHORED** from 24 distinct already governed L01 assets;
-- `VOC-025..032`: **MISSING_GOVERNED_ASSET**;
-- new HNK lexical forms created by this pass: **0**;
-- language-authority promotions: **0**.
+The eight missing slots are governed by a semantic-first pipeline. Proposed semantic targets, still awaiting explicit approval and with **no forms selected**, are:
 
-The 24 filled slots comprise 10 recovered/reference/rebind assets plus 14 canonical authored candidates. Phrase-only unresolved tokens such as `YA`, `ES`, `KU`, `EN`, `KE`, `KALA`, `AN`, `ZAMI`, `ZAMO`, `SARI`, `LO` and `DA` are not promoted to standalone Vocabulary simply to satisfy the target count.
+1. `PERSONAL_NAME_DOMAIN`
+2. `FIRST_PERSON_REFERENT`
+3. `SECOND_PERSON_REFERENT`
+4. `CONTENT_SELECTOR`
+5. `QUESTION_OPERATOR`
+6. `RESIDENCE_LIVE`
+7. `PREFERENCE_LIKE`
+8. `SPEAK_LANGUAGE_USE`
 
-Prepared validation gate:
+Observed forms `KALA`, `AN`, `EN`, `KU`, `KE`, `VANI`, `VAME` and `ZAMI` are only investigation candidates at this stage. No standalone historical gloss is assigned to them by the semantic-target proposal.
 
-`SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1`
+Prepared gate:
 
-If approved, `VOC-001..024` become VALIDATED while `VOC-025..032` remain MISSING. A separate semantic-first plan governs the eight missing assets:
+`SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1`
 
-`SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-AUTHORING-PLAN-V1`
-
-No forms have been selected for that gap.
+If approved, only the **eight meanings/functions** are approved. `VOC-025..032` stay MISSING until a separate form-mapping and canonical-governance gate.
 
 ## L01 total
 
 L01 target: **155 slots**.
 
 - authored-or-better: **125/155 = 80.6452%**
-- validated: **101/155 = 65.1613%**
+- validated: **125/155 = 80.6452%**
 - remaining missing/unimplemented: **30**
 
 Remaining L01 work: **8 Vocabulary gaps + 22 Review slots**.
