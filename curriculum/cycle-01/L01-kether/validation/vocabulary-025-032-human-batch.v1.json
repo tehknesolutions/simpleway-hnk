@@ -1,0 +1,26 @@
+{
+  "batch_id":"SWHNK-L01-VOCABULARY-025-032-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_VALIDATION",
+  "date_prepared":"2026-09-10",
+  "scope":["L01-VOC-025","L01-VOC-026","L01-VOC-027","L01-VOC-028","L01-VOC-029","L01-VOC-030","L01-VOC-031","L01-VOC-032"],
+  "sources":["../authoring/vocabulary-lane.v1.json","../authoring/vocabulary-gap-8-application.v1.json","./vocabulary-gap-8-form-mapping-human-batch.v1.json"],
+  "items":[
+    {"slot":"L01-VOC-025","form":"KALA","meaning_pt":"domínio de nome pessoal; componente lexical de nome em uso iniciante escopado","authority":"CANDIDATE","canonical_ref":"AUTH-015","checks":{"governed_asset":"PASS","historical_claim":false,"scope_boundary":"PASS"}},
+    {"slot":"L01-VOC-026","form":"AN","meaning_pt":"referente de primeira pessoa / eu em uso iniciante escopado","authority":"CANDIDATE","canonical_ref":"AUTH-016","checks":{"governed_asset":"PASS","historical_claim":false,"scope_boundary":"PASS"}},
+    {"slot":"L01-VOC-027","form":"EN","meaning_pt":"referente de segunda pessoa / você em uso iniciante escopado","authority":"CANDIDATE","canonical_ref":"AUTH-017","checks":{"governed_asset":"PASS","historical_claim":false,"scope_boundary":"PASS"}},
+    {"slot":"L01-VOC-028","form":"KU","meaning_pt":"seletor interrogativo de conteúdo em uso escopado","authority":"CANDIDATE","canonical_ref":"AUTH-018","checks":{"governed_asset":"PASS","single_WH_gloss_prohibited":true,"scope_boundary":"PASS"}},
+    {"slot":"L01-VOC-029","form":"KE","meaning_pt":"operador / marcador de pergunta em uso escopado","authority":"CANDIDATE","canonical_ref":"AUTH-019","checks":{"governed_asset":"PASS","universal_grammar_claim":false,"scope_boundary":"PASS"}},
+    {"slot":"L01-VOC-030","form":"VANI","meaning_pt":"morar / residir / viver em um lugar — binding pedagógico escopado","authority":"WATCH","canonical_ref":"LEX-031","checks":{"governed_asset":"PASS","master_meaning_remains_null":true,"master_authority_unchanged":true}},
+    {"slot":"L01-VOC-031","form":"VAME","meaning_pt":"gostar / preferência em uso iniciante escopado","authority":"GATE","canonical_ref":"LEX-025","checks":{"governed_asset":"PASS","master_authority_unchanged":true,"global_preference_grammar":false}},
+    {"slot":"L01-VOC-032","form":"ZAMI","meaning_pt":"falar / usar linguagem em contexto comunicativo escopado","authority":"CANDIDATE","canonical_ref":"AUTH-020","checks":{"governed_asset":"PASS","historical_claim":false,"scope_boundary":"PASS"}}
+  ],
+  "decisions_requested":[
+    {"id":"DEC-VOC-025-032-001","statement":"Validate KALA, AN, EN, KU, KE and ZAMI as scoped L01 Vocabulary course assets while keeping all six at CANDIDATE language authority.","if_approved":{"validated_slots":6,"language_authority_promotions":0}},
+    {"id":"DEC-VOC-025-032-002","statement":"Validate VANI for scoped L01 residence pedagogy while keeping LEX-031 meaning null and WATCH authority unchanged.","if_approved":{"validated_slots":1,"master_lexicon_mutation":false}},
+    {"id":"DEC-VOC-025-032-003","statement":"Validate VAME for scoped L01 preference pedagogy while preserving LEX-025 GATE authority and recovered provenance.","if_approved":{"validated_slots":1,"language_authority_promotions":0}},
+    {"id":"DEC-VOC-025-032-004","statement":"Confirm this is course validation only: it does not create historical standalone gloss claims, universal grammar, visual canon promotion or higher language authority.","if_approved":{"historical_claims_created":0,"universal_grammar_rules_created":0,"visual_promotions":0,"language_authority_promotions":0}}
+  ],
+  "projected_effect_if_all_approved":{"L01_Vocabulary_VALIDATED_before":24,"L01_Vocabulary_VALIDATED_after":32,"L01_Vocabulary_AUTHORED_pending_after":0,"L01_Vocabulary_MISSING_after":0,"global_VALIDATED_before":125,"global_VALIDATED_after":133,"L01_authored_or_better":133,"language_authority_promotions":0},
+  "next_gate_if_approved":"APPLY_L01_VOCABULARY_025_032_VALIDATION",
+  "next_gate_if_not_approved":"REVISE_L01_VOCABULARY_025_032"
+}
