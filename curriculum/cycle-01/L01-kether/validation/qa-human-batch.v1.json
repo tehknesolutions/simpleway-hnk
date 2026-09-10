@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L01-QA-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["L01-QA-001","L01-QA-002","L01-QA-003","L01-QA-004"],
+  "source":"../authoring/qa-lane.v1.json",
+  "current_state":{"AUTHORED":4,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-QA-001","statement":"Approve QA-001 as a name exchange using KALA YA EN ES KU KE as a validated whole utterance, without assigning token-level meanings to YA or ES.","if_approved":{"qa_validated":1,"YA_ES_token_glosses_created":false}},
+    {"id":"DEC-QA-002","statement":"Approve QA-002 as an age exchange using EN KU SARASALA KE plus CARDINAL_0_99 responses, preserving SARASALA=WATCH, numeral primitives=CANDIDATE and the scoped 10-99 course composition.","if_approved":{"qa_validated":1,"SARASALA_authority":"WATCH_UNCHANGED","numeral_authority":"CANDIDATE_UNCHANGED","year_lexeme_created":false}},
+    {"id":"DEC-QA-003","statement":"Approve QA-003 as a birthplace exchange using EN SARADAYA KUVAN KE plus a bare PLACE response, preserving KUVAN=CANDIDATE and no universal locative grammar claim.","if_approved":{"qa_validated":1,"KUVAN_authority":"CANDIDATE_UNCHANGED","global_locative_grammar":false}},
+    {"id":"DEC-QA-004","statement":"Approve QA-004 as a hobbies exchange using EN KU VAMAVALA KE plus a governed hobby/activity response, preserving VAMAVALA=WATCH and KU's unrecovered exact historical WH gloss.","if_approved":{"qa_validated":1,"VAMAVALA_authority":"WATCH_UNCHANGED","KU_exact_historical_WH_gloss_assigned":false}},
+    {"id":"DEC-QA-005","statement":"Confirm all four current Q&A items are new SimpleWay HNK v1.1 pedagogical authorship and not recovered historical Q&A payload.","if_approved":{"historical_QA_payload_claim":false,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not create new HNK grammar rules.","Does not promote WATCH, GATE or CANDIDATE assets.","Does not assign meanings to YA or ES.","Does not promote Q&A slots to FROZEN."],
+  "projected_effect_if_all_approved":{"qa_VALIDATED":4,"L01_VALIDATED_before":92,"L01_VALIDATED_after":96,"global_VALIDATED_before":92,"global_VALIDATED_after":96,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition the four Q&A slots to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-QA-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_L01_QA_AUTHORED_AND_REVISE"
+}
