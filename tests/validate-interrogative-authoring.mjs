@@ -9,7 +9,9 @@ const wh = await json('curriculum/cycle-01/L01-kether/recovery/wh-system-recover
 const contrast = await json('curriculum/cycle-01/L01-kether/recovery/ku-zamo-contrastive-analysis.v1.json');
 const activityV1 = await json('curriculum/cycle-01/L01-kether/authoring/opi-006.activity-frame.v1.json');
 const activityV2 = await json('curriculum/cycle-01/L01-kether/authoring/opi-006.activity-frame.v2.json');
-const opi7 = await json('curriculum/cycle-01/L01-kether/authoring/opi-007.residence-frame.v1.json');
+const opi7Authoring = await json('curriculum/cycle-01/L01-kether/authoring/opi-007.residence-frame.v1.json');
+const opi7Batch = await json('curriculum/cycle-01/L01-kether/validation/opi-007-final-human-batch.v1.json');
+const opi7Transition = await json('curriculum/cycle-01/L01-kether/validation/opi-007.validated-transition.v1.json');
 const kuvanPromotion = await json('proposals/language/HNK_KUVAN_PROMOTION_RECORD_V1.json');
 const valaPromotion = await json('proposals/language/HNK_VALA_PROMOTION_RECORD_V1.json');
 const kuonPromotion = await json('proposals/language/HNK_KUON_PROMOTION_RECORD_V1.json');
@@ -45,7 +47,6 @@ assert.equal(kuonPromotion.dependency.form, 'ON');
 assert.equal(kuonPromotion.dependency.authority, 'GATE');
 assert.equal(kuonPromotion.dependency.promotion_effect_on_dependency, 'NONE');
 
-// Preserve historical uncertainty around VANI even while using it in a test frame.
 assert.equal(vAni.status, 'WATCH_SEMANTIC_HYPOTHESIS_NOT_LEXICON_PROMOTION');
 assert.equal(vAni.target_form.form, 'VANI');
 assert.equal(vAni.target_form.current_authority, 'WATCH');
@@ -54,25 +55,37 @@ assert.equal(vAni.boundaries.modify_master_lexicon_meaning, false);
 assert.equal(vAni.boundaries.promote_authority, false);
 assert.equal(vAni.boundaries.curriculum_rebind_created, false);
 
-// Preserve the historical OPI6 V1 failure and its governed V2 resolution.
 assert.equal(activityV1.implementation_state, 'MISSING');
 assert.equal(activityV1.new_lexeme_required, false);
 assert.equal(activityV2.implementation_state, 'AUTHORED');
 assert.equal(activityV2.hnk_question, 'EN KU VALA KE');
 assert.equal(activityV2.validation_state, 'HOLD_AUTHORED_CANDIDATE_AND_INFERRED_GRAMMAR');
 
-// OPI7 is authored as two explicit microquestions; no English WITH particle is calqued.
-assert.equal(opi7.implementation_state, 'AUTHORED');
-assert.equal(opi7.design.strategy, 'TWO_MICROQUESTIONS_ONE_OPI_CARD');
-assert.deepEqual(opi7.questions.map(x => x.hnk), ['EN VANI KUVAN KE','EN VANI KUON KE']);
-assert.equal(opi7.comitative_design.overt_with_particle_added, false);
-assert.equal(opi7.recovered_form_dependency.master_lexicon_meaning, null);
-assert.equal(opi7.recovered_form_dependency.authority, 'WATCH');
-assert.equal(opi7.progress_effect.AUTHORED_slots_after, 10);
-assert.equal(opi7.progress_effect.VALIDATED_slots_after, 0);
+// Preserve the original authoring evidence as historical design state.
+assert.equal(opi7Authoring.implementation_state, 'AUTHORED');
+assert.equal(opi7Authoring.design.strategy, 'TWO_MICROQUESTIONS_ONE_OPI_CARD');
+assert.deepEqual(opi7Authoring.questions.map(x => x.hnk), ['EN VANI KUVAN KE','EN VANI KUON KE']);
+assert.equal(opi7Authoring.comitative_design.overt_with_particle_added, false);
+assert.equal(opi7Authoring.recovered_form_dependency.master_lexicon_meaning, null);
+assert.equal(opi7Authoring.recovered_form_dependency.authority, 'WATCH');
 assert.equal(valency.semantic_safety.does_not_create_WITH_lexeme, true);
 assert.equal(valency.semantic_safety.does_not_change_LEX_031_meaning, true);
 assert.equal(valency.semantic_safety.does_not_claim_historical_valency, true);
+
+// The later course-validation batch may approve use, but must not rewrite the evidence above.
+assert.equal(opi7Batch.status, 'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
+assert.equal(opi7Batch.decisions.length, 5);
+assert.ok(opi7Batch.decisions.every(x => x.decision === 'APPROVED_SCOPED'));
+assert.equal(opi7Batch.applied_effect.language_authority_promotions, 0);
+assert.equal(opi7Batch.applied_effect.master_lexicon_meaning_changes, 0);
+assert.equal(opi7Batch.applied_effect.new_WITH_lexeme, false);
+assert.equal(opi7Transition.after, 'VALIDATED');
+assert.equal(opi7Transition.language_authority_effect.VANI, 'WATCH_UNCHANGED_MEANING_NULL');
+assert.equal(opi7Transition.language_authority_effect.KUVAN, 'AUTH-001_CANDIDATE_UNCHANGED');
+assert.equal(opi7Transition.language_authority_effect.KUON, 'AUTH-003_CANDIDATE_UNCHANGED');
+assert.equal(opi7Transition.language_authority_effect.ON, 'LEX-026_GATE_UNCHANGED');
+assert.equal(opi7Transition.semantic_effect.historical_VANI_gloss_recovered, false);
+assert.equal(opi7Transition.semantic_effect.new_WITH_lexeme, false);
 
 const opi4 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-004');
 const opi5 = opiBindings.bindings.find(x => x.slot_id === 'L01-OPI-005');
@@ -85,11 +98,17 @@ assert.equal(opi5.hnk_question, 'EN VALI KUVAN KE');
 assert.deepEqual(opi5.authored_candidate_ids, ['AUTH-001']);
 assert.equal(opi6.hnk_question, 'EN KU VALA KE');
 assert.deepEqual(opi6.authored_candidate_ids, ['AUTH-002']);
+assert.equal(bound7.implementation_state, 'VALIDATED');
 assert.deepEqual(bound7.hnk_question_sequence, ['EN VANI KUVAN KE','EN VANI KUON KE']);
 assert.deepEqual(bound7.authored_candidate_ids, ['AUTH-001','AUTH-003']);
 assert.deepEqual(bound7.experimental_recovered_form_meaning, [null]);
+assert.equal(bound7.semantic_hypothesis.historical_gloss_recovered, false);
 assert.equal(bound7.comitative_strategy.overt_with_particle_added, false);
+assert.equal(bound7.comitative_strategy.global_comitative_grammar, false);
 assert.equal(opi8.hnk_question, 'EN KU VAMAVALA KE');
 
-console.log('PASS SWHNK-INTERROGATIVE-AUTHORING-V3');
-console.log('KU remains historically unglossed by exact WH type; KUVAN/VALA/KUON remain authored CANDIDATE assets; VANI stays WATCH meaning=null; L01 OPI authorship is 10/10 with validation still pending.');
+assert.equal(opiBindings.metrics.validated, 10);
+assert.equal(opiBindings.metrics.authored_current_state, 0);
+
+console.log('PASS SWHNK-INTERROGATIVE-AUTHORING-V4');
+console.log('L01 OPI is 10/10 VALIDATED for scoped course use while KU remains historically unglossed, VANI remains WATCH meaning=null, KUVAN/KUON remain CANDIDATE, ON remains GATE and no WITH lexeme exists.');
