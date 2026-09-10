@@ -1,0 +1,15 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V23",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_VALIDATED_10_OF_10_ACTIVATION_P01_AUTHORED_12_OF_72",
+  "package_target":"simpleway-hnk@0.26.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":986,"AUTHORED":12,"VALIDATED":10,"FROZEN":0},
+  "implementation_percent":{"MISSING":97.8175,"AUTHORED":1.1905,"VALIDATED":0.9921,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":22,"AUTHORED_OR_BETTER_percent":2.1825,"VALIDATED_OR_BETTER":10,"VALIDATED_OR_BETTER_percent":0.9921,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"authored_or_better":22,"authored_or_better_percent":14.1935,"validated":10,"validated_percent":6.4516,"remaining_missing_or_unimplemented":133,"OPI":{"target":10,"VALIDATED":10,"validated_percent":100.0,"FROZEN":0},"Activation":{"target":72,"AUTHORED":12,"AUTHORED_percent":16.6667,"VALIDATED":0,"FROZEN":0,"authored_slots":[1,2,3,4,5,6,7,8,9,10,11,12],"remaining_unimplemented":60}},
+  "activation_P01":{"pack":"SWHNK-L01-ACTIVATION-P01-001-012-AUTHORING-V1","source_opi":["L01-OPI-001","L01-OPI-002"],"drill_modes":["RECOGNIZE_INTENT","REPEAT_FORM","PRODUCE_QUESTION","TRACE_GIDS","PRODUCE_RESPONSE","MICRO_DIALOGUE"],"new_HNK_lexical_forms":0,"historical_reconstruction_claim":false,"state":"AUTHORED_VALIDATION_PENDING"},
+  "next_gate":"SWHNK-L01-ACTIVATION-P01-VALIDATION-V1"
+}
