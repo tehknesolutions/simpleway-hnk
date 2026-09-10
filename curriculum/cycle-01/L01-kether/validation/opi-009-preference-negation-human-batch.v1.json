@@ -1,31 +1,16 @@
 {
   "batch_id":"SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION",
   "scope":["L01-OPI-009"],
   "english_prompt":"Do you like to sing?",
   "question":"EN VAME VAMAZAMU KE",
-  "proposed_answers":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU"},
-  "decisions_requested":[
-    {
-      "id":"DEC-L01-OPI009-001",
-      "statement":"Accept LEX-025 VAME for scoped L01 OPI 9 preference use while retaining authority GATE and making no broader language promotion.",
-      "if_approved":{"VAME_authority":"GATE_UNCHANGED","course_scope":"L01-OPI-009_ONLY","historical_behavior_claim":"LIMITED_TO_RECOVERED_LITERAL_LIKE_MEANING"}
-    },
-    {
-      "id":"DEC-L01-OPI009-002",
-      "statement":"Accept LEX-008 VAMAZAMU for scoped L01 OPI 9 singing-domain use while retaining authority WATCH.",
-      "if_approved":{"VAMAZAMU_authority":"WATCH_UNCHANGED","course_scope":"L01-OPI-009_ONLY"}
-    },
-    {
-      "id":"DEC-L01-OPI009-003",
-      "statement":"Accept the dialogue-fragment answer pair VAME VAMAZAMU / NE VAME VAMAZAMU for this card, extending AUTH-004 NE to predicate-phrase negation only in this scope.",
-      "if_approved":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU","NE_authority":"CANDIDATE_UNCHANGED","global_predicate_negation_productivity":false,"AN_first_person_required":false}
-    },
-    {
-      "id":"DEC-L01-OPI009-004",
-      "statement":"Accept EN ... KE plus the VAME VAMAZAMU predicate phrase as a scoped functional equivalent of the frozen preference question without claiming the exact historical v1.0 sentence was recovered.",
-      "if_approved":{"validation_scope":"L01-OPI-009_ONLY","historical_sentence_recovery_claim":false,"universal_SPO_or_yes_no_grammar_claim":false}
-    }
+  "answers":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU"},
+  "approval_basis":"User explicitly approved the prepared next gate by replying siga after the Batch 4 proposal was presented as the next action.",
+  "decisions":[
+    {"id":"DEC-L01-OPI009-001","decision":"APPROVED_SCOPED","effect":{"VAME_authority":"GATE_UNCHANGED","course_scope":"L01-OPI-009_ONLY","historical_behavior_claim":"LIMITED_TO_RECOVERED_LITERAL_LIKE_MEANING"}},
+    {"id":"DEC-L01-OPI009-002","decision":"APPROVED_SCOPED","effect":{"VAMAZAMU_authority":"WATCH_UNCHANGED","course_scope":"L01-OPI-009_ONLY"}},
+    {"id":"DEC-L01-OPI009-003","decision":"APPROVED_SCOPED","effect":{"affirmative":"VAME VAMAZAMU","negative":"NE VAME VAMAZAMU","NE_authority":"CANDIDATE_UNCHANGED","predicate_negation_scope":"L01-OPI-009_ONLY","global_predicate_negation_productivity":false,"AN_first_person_required":false}},
+    {"id":"DEC-L01-OPI009-004","decision":"APPROVED_SCOPED","effect":{"validation_scope":"L01-OPI-009_ONLY","historical_sentence_recovery_claim":false,"universal_SPO_or_yes_no_grammar_claim":false}}
   ],
   "evidence":{
     "VAME":{"id":"LEX-025","authority":"GATE","meaning":"literal like"},
@@ -35,16 +20,15 @@
     "review":"opi-009.semantic-review.v1.json"
   },
   "explicit_non_effects":[
-    "Does not promote VAME out of GATE.",
-    "Does not promote VAMAZAMU out of WATCH.",
-    "Does not promote NE out of CANDIDATE.",
-    "Does not grant NE global predicate-negation productivity.",
-    "Does not define historical yes/no particles.",
-    "Does not require or promote AN as first-person grammar.",
-    "Does not freeze OPI 9."
+    "VAME remains GATE.",
+    "VAMAZAMU remains WATCH.",
+    "NE remains CANDIDATE.",
+    "NE does not receive global predicate-negation productivity.",
+    "No historical yes/no particle is defined.",
+    "AN is not required or promoted as first-person grammar.",
+    "The exact historical v1.0 OPI 9 sentence is not claimed as recovered.",
+    "OPI 9 is not FROZEN."
   ],
-  "projected_effect_if_all_decisions_approved":{"L01_OPI_authored_or_better":10,"L01_OPI_validated_before":6,"L01_OPI_validated_after":7,"L01_OPI_validated_percent_after":70.0,"Cycle1_OPI_validated_after":7,"Cycle1_OPI_validated_percent_after":10.0,"global_validated_slots_after":7,"global_validated_percent_after":0.6944,"new_lexical_forms":0,"language_authority_promotions":0},
-  "application_rule":"Do not transition OPI 9 to VALIDATED until explicit human approval is recorded for this exact batch or equivalent scoped decisions.",
-  "next_gate_if_approved":"SWHNK-L01-OPI-009-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_OPI_009_AUTHORED_HOLD"
+  "applied_effect":{"L01_OPI_authored_or_better":10,"L01_OPI_validated_before":6,"L01_OPI_validated_after":7,"L01_OPI_validated_percent_after":70.0,"Cycle1_OPI_validated_after":7,"Cycle1_OPI_validated_percent_after":10.0,"global_validated_slots_after":7,"global_validated_percent_after":0.6944,"new_lexical_forms":0,"language_authority_promotions":0},
+  "next_gate":"SWHNK-L01-OPI-009-VALIDATED-TRANSITION-V1"
 }
