@@ -1,0 +1,25 @@
+{
+  "recovery_id":"SWHNK-HNK-NUMBER-SYSTEM-RECOVERY-V1",
+  "status":"NO_HISTORICAL_NUMERAL_LEXICON_RECOVERED",
+  "as_of":"2026-09-09",
+  "trigger":"L01-OPI-003 How old are you? requires an age-value answer strategy.",
+  "sources_checked":{
+    "github":{"repos":["tehknesolutions/codex-hnk","tehknesolutions/simpleway-hnk"],"queries":["HNK number numeral age numbers numerais números idade"],"historical_numeral_system_found":false},
+    "file_library":{"queries":["HNK number system numerals age numbers idade numerais","HENUVOKODAN um dois três numerais palavras números","HNK one two three numerals words","HNK zero one two three four five six seven eight nine"],"historical_numeral_system_found":false,"relevant_nonlexical_source":"HNK_CYCLE_1_NUMEROLOGICAL_CANON_V1 / CONTRACT_V1","note":"The numerical canon governs editorial quantities and explicitly states that numerical values must not deform semantic/grammatical correctness; it does not define HNK spoken numerals."},
+    "google_drive":{"query":"HNK numerais números number system idade age","historical_numeral_system_found":false}
+  },
+  "confirmed_absences":[
+    "No recovered HNK lexical forms for 0-9 were found.",
+    "No recovered HNK cardinal-number composition rule was found.",
+    "No recovered HNK year/age unit was found.",
+    "No recovered historical answer form for L01 OPI 3 was found."
+  ],
+  "non_conclusions":[
+    "The HNK language is not declared decimal internally merely because the course uses decimal quantities.",
+    "Numerological values 3, 7, 10, 12, 40, 72, 144 and 1008 do not assign phonological or lexical numeral forms.",
+    "Arabic digits are not declared HNK glyphs.",
+    "The absence of a recovered source does not prove no historical number system ever existed."
+  ],
+  "decision":"Proceed with explicit v1.1 authored number-system architecture while preserving spoken numeral forms as null until governed authoring.",
+  "next_gate":"SWHNK-HNK-NUMERIC-LITERAL-BRIDGE-V1"
+}
