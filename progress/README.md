@@ -1,71 +1,73 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V25`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V26`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.28.0`
+**Current package:** `simpleway-hnk@0.29.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
-- `MISSING`: **974/1,008 = 96.6270%**
+- `MISSING`: **962/1,008 = 95.4365%**
 - `AUTHORED`: **12/1,008 = 1.1905%**
-- `VALIDATED`: **22/1,008 = 2.1825%**
+- `VALIDATED`: **34/1,008 = 3.3730%**
 - reproducible `FROZEN`: **0/1,008**
-- `AUTHORED_OR_BETTER`: **34/1,008 = 3.3730%**
+- `AUTHORED_OR_BETTER`: **46/1,008 = 4.5635%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
 ## L01 OPI — complete
 
-All **10/10 OPI are VALIDATED = 100%** for scoped SimpleWay HNK L01 v1.1 course use. Course validation did not silently promote WATCH/CANDIDATE/GATE assets into recovered canon.
+All **10/10 OPI are VALIDATED = 100%** for scoped SimpleWay HNK L01 v1.1 course use.
 
-## L01 Activation — P01 validated, P02 authored
+## L01 Activation — P01/P02 validated, P03 authored
 
-Historical evidence proves **72 teacher-drill slots**, but the original raw drill payload remains unrecovered. Current v1.1 drills are therefore new governed authorship, never reconstruction claims.
+Historical evidence proves **72 teacher-drill slots**, but the original raw drill payload remains unrecovered. Current v1.1 drills are new governed authorship, not historical reconstruction.
 
 Activation state:
 
 - target: **72**
-- `VALIDATED`: **12/72 = 16.6667%** — slots 001–012 (P01)
-- `AUTHORED`: **12/72 = 16.6667%** — slots 013–024 (P02)
-- `AUTHORED_OR_BETTER`: **24/72 = 33.3333%**
+- `VALIDATED`: **24/72 = 33.3333%** — slots 001–024 (P01–P02)
+- `AUTHORED`: **12/72 = 16.6667%** — slots 025–036 (P03)
+- `AUTHORED_OR_BETTER`: **36/72 = 50%**
 - `FROZEN`: **0/72**
-- remaining unimplemented: **48**
+- remaining unimplemented: **36**
 
-### P01 — VALIDATED
-
-Slots **001–012**, sourced from validated OPI 1–2.
-
-Six drill modes per OPI:
+Foundation modes remain:
 
 `RECOGNIZE_INTENT → REPEAT_FORM → PRODUCE_QUESTION → TRACE_GIDS → PRODUCE_RESPONSE → MICRO_DIALOGUE`
 
-Validation preserves PHR-001 as whole utterance, `YA/ES` unresolved, `NE=CANDIDATE`, G-IDs as structural authority and Candidate D visuals as non-canon.
+### P01 — VALIDATED
 
-### P02 — AUTHORED / validation pending
+Slots 001–012, sourced from OPI 1–2.
 
-Slots **013–024**, sourced from validated OPI 3–4:
+### P02 — VALIDATED
 
-- OPI 3: `EN KU SARASALA KE` with `[CARDINAL_0_99]` response;
-- OPI 4: `EN SARADAYA KUVAN KE` with `[PLACE]` response.
+Slots 013–024, sourced from OPI 3–4. Validation preserves `SARASALA=WATCH`, numeral primitives=`CANDIDATE`, `KUVAN=CANDIDATE`, no year lexeme and no historical reconstruction claim.
 
-P02 creates **zero new HNK lexical forms**. `SARASALA` remains WATCH; numeral primitives and `KUVAN` remain CANDIDATE.
+### P03 — AUTHORED / validation pending
+
+Slots 025–036, sourced from validated OPI 5–6:
+
+- OPI 5: `EN VALI KUVAN KE` + `[PLACE]`;
+- OPI 6: `EN KU VALA KE` + `[ACTIVITY_DESCRIPTION]` in explicit work/school context.
+
+P03 creates **zero new HNK lexical forms**. `VALI` keeps its recovered L02/L03 provenance with explicit L01 curriculum rebind; `KUVAN` and `VALA` remain CANDIDATE; no generic HNK `DO` verb is introduced.
 
 Prepared gate:
 
-`SWHNK-L01-ACTIVATION-P02-VALIDATION-V1`
+`SWHNK-L01-ACTIVATION-P03-VALIDATION-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-If approved, Activation reaches **24/72 VALIDATED = 33.3333%**, while global validated slots rise from **22 → 34** with zero language-authority promotions.
+If approved, Activation reaches **36/72 VALIDATED = 50%**, while global validated slots rise from **34 → 46** with zero language-authority promotions.
 
 ## L01 total
 
 L01 target: **155 slots**.
 
-- authored-or-better: **34/155 = 21.9355%**
-- validated: **22/155 = 14.1935%**
-- remaining unimplemented: **121**
+- authored-or-better: **46/155 = 29.6774%**
+- validated: **34/155 = 21.9355%**
+- remaining unimplemented: **109**
 
 ## Language assets
 
@@ -75,7 +77,7 @@ L01 target: **155 slots**.
 
 ## Historical/source boundary
 
-The 82 historical frozen-evidence slots remain 10 L01 OPI + 72 L01 Activation. P01/P02 content is new v1.1 authorship unless the missing original payload is actually recovered later.
+The 82 historical frozen-evidence slots remain 10 L01 OPI + 72 L01 Activation. P01–P03 content is new v1.1 authorship unless the missing original payload is actually recovered later.
 
 ## CI boundary
 
