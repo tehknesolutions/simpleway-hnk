@@ -1,0 +1,41 @@
+{
+  "promotion_id":"HNK-NE-PROMOTION-RECORD-V1",
+  "status":"PROMOTED_TO_CANONICAL_AUTHORED_REGISTRY_AS_CANDIDATE",
+  "canonical_registry":"@hnk/linguas/authored",
+  "canonical_id":"AUTH-004",
+  "form":"NE",
+  "authority":"CANDIDATE",
+  "certainty":"AUTHORED_PRIMITIVE",
+  "historical_recovery_claim":false,
+  "glyph_ids":["G12","G02"],
+  "meaning":{"pt":"operador de negação / ausência em uso iniciante governado","en":"negation / absence operator for governed beginner use"},
+  "canonical_commits":{
+    "authored_registry":"93e4978b9875b88865f8fc25619bd00518d30e81",
+    "authored_types":"85e348d198c51a1ae2e7cfb30a02190a01ba8491",
+    "authored_tests":"205370c5324dd4911c278f542275830b50d86ed6",
+    "cycle1_coverage":"f7dae453e14572b1e709162886bc14b3ca005cbd",
+    "cycle1_tests":"4933995fc42df907cb26aef0798951450ab88899"
+  },
+  "promotion_effect":{
+    "recovered_cycle1_forms_before":31,
+    "recovered_cycle1_forms_after":31,
+    "authored_cycle1_candidates_before":3,
+    "authored_cycle1_candidates_after":4,
+    "governed_unique_language_assets_before":34,
+    "governed_unique_language_assets_after":35,
+    "governed_asset_proxy_percent_after":24.3056
+  },
+  "approved_first_scope":{
+    "lesson":"L01",
+    "opi":"L01-OPI-002",
+    "usage":"NE VAMAKALA",
+    "function":"negative / no-nickname response"
+  },
+  "boundaries":[
+    "NE is authored, not recovered.",
+    "NE starts and remains CANDIDATE at this checkpoint.",
+    "NE does not establish historical HNK negation.",
+    "No HAVE verb is created or inferred.",
+    "Broader negative constructions require separate governance; global productivity is not granted."
+  ]
+}
