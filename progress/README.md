@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V20`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V21`  
 **Date:** 2026-09-10  
-**Current package:** `simpleway-hnk@0.23.0`
+**Current package:** `simpleway-hnk@0.24.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -25,7 +25,7 @@ Current exclusive implementation states:
 Validated: **1, 2, 3, 4, 5, 6, 8, 9, 10**.  
 HOLD: **7 only**.
 
-Across the 70 OPI in Cycle 1, **9/70 = 12.8571%** are currently VALIDATED.
+Across the 70 OPI in Cycle 1, **9/70 = 12.8571%** are VALIDATED.
 
 ## Language assets
 
@@ -33,58 +33,38 @@ Across the 70 OPI in Cycle 1, **9/70 = 12.8571%** are currently VALIDATED.
 - canonical authored candidates: **14**
 - governed unique language assets: **45/144 = 31.25% proxy**
 
-Authored candidates remain: `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
+No language-authority promotion occurred in the OPI 1 validation.
 
-No language-authority promotion occurred when OPI 1 was validated.
+## OPI 1 — validated as recovered whole utterance
 
-## OPI 1 — validated as whole utterance
+`KALA YA EN ES KU KE` is now VALIDATED for L01 v1.1 course use as the recovered phrase `PHR-001` taken as one governed formula.
 
-Historical phrase:
+Boundaries remain explicit: `PHR-001` certainty stays APPROXIMATE; `YA` and `ES` remain semantically unresolved; `KALA`, `EN`, `KU` and `KE` token-level roles remain inferential; bare `[PERSONAL_NAME]` is the accepted beginner answer pattern.
 
-`KALA YA EN ES KU KE`
+## OPI 7 — final batch prepared
 
-Recovered source: `PHR-001`, certainty **APPROXIMATE**.
+Current HNK design:
 
-The card is now `VALIDATED` for **L01 v1.1 course use as an indivisible recovered whole-utterance formula**.
+1. `EN VANI KUVAN KE` — location microquestion.
+2. `EN VANI KUON KE` — co-resident/person microquestion.
 
-This validation intentionally does **not** assign token-by-token meanings:
+Final batch: `SWHNK-L01-OPI-007-FINAL-HUMAN-BATCH-V1`.
 
-- `YA` remains semantically unresolved;
-- `ES` remains semantically unresolved;
-- `KALA`, `EN`, `KU` and `KE` retain only inferential analyses;
-- `PHR-001` certainty remains APPROXIMATE;
-- no recovered lexical canon was changed.
+Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-Answer pattern: `[PERSONAL_NAME]`.
+The batch is intentionally strict. If approved, it validates these interpretations only for L01 OPI 7 while preserving:
 
-The earlier technical/semantic review records remain historically intact as evidence of the pre-approval HOLD. The later human batch and transition record the scoped course decision rather than rewriting those records.
+- `VANI` = recovered `WATCH`, Master Lexicon meaning still `null`;
+- `VANI ≈ live/reside` = scoped course semantic interpretation, not historical gloss recovery;
+- `KUVAN` = `CANDIDATE`;
+- `KUON` = `CANDIDATE`;
+- `ON` = `GATE`;
+- no lexical equivalent of English `WITH`;
+- no global residence/comitative/person-interrogative grammar;
+- no language-authority promotion.
 
-## OPI 3 — validated
-
-Question: `EN KU SARASALA KE`.
-
-`SARASALA` remains `WATCH`. Bare `[CARDINAL_0_99]` answers are approved for this card, e.g. `TOMI` = 8, `DUVE TOMI` = 18, `LUSO HOYU` = 42.
-
-The 10–99 rule `DIGIT_TENS DIGIT_UNITS` is approved only in the L01 OPI 3 numeric/cardinal context. It grants no global HNK number grammar, 100+, ordinals or year/years lexeme.
-
-## OPI 7 — final HOLD
-
-`EN VANI KUVAN KE`  
-`EN VANI KUON KE`
-
-This is the only remaining L01 OPI HOLD and remains the highest-risk card because:
-
-- `VANI` is a genuinely recovered form but its Master Lexicon meaning is still `null`;
-- `VANI ≈ live/reside` is an authored semantic hypothesis only;
-- `KUVAN` remains `AUTH-001 CANDIDATE`;
-- `KUON` remains `AUTH-003 CANDIDATE` and depends on `ON=GATE`;
-- co-resident valency is authored/test-only;
-- no HNK equivalent of English `WITH` was invented.
-
-The next task is to prepare an explicit final human gate that can approve these relationships **for OPI 7 course use only** while preserving all of those authority/provenance boundaries.
+If all five decisions are approved, L01 reaches **10/10 VALIDATED = 100%** without adding a lexical form or changing the recovered Master Lexicon.
 
 ## CI boundary
 
-Run locally/CI with `npm test`.
-
-Remote CI must not be described as green without an observed successful GitHub Actions runner.
+Run locally/CI with `npm test`. Remote CI must not be described as green without an observed successful GitHub Actions runner.
