@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + OPI/ACTIVATION/STRUCTURES/TEACHER NOTES COMPLETE + Q&A AUTHORED  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V33`  
-**Pacote atual:** `simpleway-hnk@0.36.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + CORE COMMUNICATIVE LANES COMPLETE + STORIES AUTHORED  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V34`  
+**Pacote atual:** `simpleway-hnk@0.37.0`
 
 ## Ciclo 1
 
@@ -11,54 +11,51 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-## L01 — núcleo validado
+## L01 — lanes totalmente validados
 
-- Teacher Notes: **3/3 VALIDATED = 100%**;
-- OPI: **10/10 VALIDATED = 100%**;
-- Activation: **72/72 VALIDATED = 100%**;
-- Structure Headers: **2/2 VALIDATED = 100%**;
-- Structures: **5/5 VALIDATED = 100%**.
+- Teacher Notes: **3/3 VALIDATED**;
+- OPI: **10/10 VALIDATED**;
+- Q&A: **4/4 VALIDATED**;
+- Structure Headers: **2/2 VALIDATED**;
+- Structures: **5/5 VALIDATED**;
+- Activation: **72/72 VALIDATED**.
 
-Teacher Notes permanecem autoria pedagógica governada v1.1, não texto histórico recuperado. Sua validação não cria léxico, gramática ou promoção de autoridade.
+A validação continua escopada ao curso v1.1 e não promove automaticamente autoridade linguística histórica.
 
-## L01 Q&A — 4/4 AUTHORED
+## L01 Stories — 5/5 AUTHORED
 
-Não foi recuperado payload histórico para os quatro Q&A. A fonte confirma apenas a quantidade de quatro slots. Os itens atuais reutilizam perguntas e schemas de resposta já validados:
+Não foi recuperado payload histórico das cinco Stories; a fonte confirma apenas a quantidade. As cenas atuais são autoria pedagógica governada v1.1 e reutilizam somente payloads HNK já validados:
 
-- `L01-QA-001`: `KALA YA EN ES KU KE` → `[PERSONAL_NAME]`;
-- `L01-QA-002`: `EN KU SARASALA KE` → `[CARDINAL_0_99]`;
-- `L01-QA-003`: `EN SARADAYA KUVAN KE` → `[PLACE]`;
-- `L01-QA-004`: `EN KU VAMAVALA KE` → `[HOBBY_OR_PLEASURE_ACTIVITY]`.
+- Story 001 — nome + apelido;
+- Story 002 — idade + local de nascimento;
+- Story 003 — trabalho/escola, local + atividade;
+- Story 004 — residência/co-residente + hobbies;
+- Story 005 — preferência por canto + contexto `VAMUSARO` de descanso/lazer.
 
-Fronteiras preservadas: `YA/ES` continuam sem glosa histórica token-a-token; `SARASALA` e `VAMAVALA` continuam WATCH; numerais e `KUVAN` continuam CANDIDATE. Zero novas formas HNK e zero regras gramaticais novas.
+Fronteiras preservadas: `YA/ES` sem glosa histórica token-a-token; `SARASALA`, `VAMAVALA`, `VAMAZAMU` e `VANI` permanecem WATCH; `VAME` e `ON` permanecem GATE; `KUVAN`, `KUON`, `VALA`, `NE` e numerais permanecem CANDIDATE. Não existe criação de `WITH`, `DO`, conjunções, cópulas ou gramática global nova.
 
-Gate preparado: `SWHNK-L01-QA-VALIDATION-V1`.
+Gate preparado: `SWHNK-L01-STORY-VALIDATION-V1`.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
-- Teacher Notes VALIDATED: **3**;
-- OPI VALIDATED: **10**;
-- Q&A AUTHORED: **4**;
-- Structure Headers VALIDATED: **2**;
-- Structures VALIDATED: **5**;
-- Activation VALIDATED: **72**;
-- total authored-or-better: **96/155 = 61.9355%**;
-- total VALIDATED: **92/155 = 59.3548%**;
-- remaining missing/unimplemented: **59**.
+- total authored-or-better: **101/155 = 65.1613%**;
+- total VALIDATED: **96/155 = 61.9355%**;
+- Stories AUTHORED: **5/5**;
+- remaining missing/unimplemented: **54**.
 
-Categorias restantes após Q&A: **5 stories, 32 vocabulary e 22 review**.
+Após as Stories, restam apenas **32 Vocabulary + 22 Review**.
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**912 MISSING + 4 AUTHORED + 92 VALIDATED + 0 FROZEN = 1.008**.
+**907 MISSING + 5 AUTHORED + 96 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **96/1.008 = 9.5238%**.
+Cumulativo authored-or-better: **101/1.008 = 10.0198%**.
 
-Historical evidence: **82/1.008 = 8.1349%**, em eixo separado da implementação atual.
+Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
 
 ## Corpus linguístico governado
 
@@ -66,7 +63,7 @@ Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 n�
 
 Registry autorado `@hnk/linguas/authored`: **14 CANDIDATE forms** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
 
-Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**.
+Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**. Esses proxies não equivalem aos 144 slots curriculares de Vocabulary.
 
 ## Fronteiras
 
