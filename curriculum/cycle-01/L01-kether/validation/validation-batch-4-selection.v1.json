@@ -1,0 +1,37 @@
+{
+  "selection_id":"SWHNK-L01-VALIDATION-BATCH-4-SELECTION-V1",
+  "status":"SELECTION_COMPLETE_HUMAN_APPROVAL_NOT_YET_APPLIED",
+  "current_state":{"L01_OPI_reviewed":10,"L01_OPI_validated":6,"remaining_hold":["L01-OPI-001","L01-OPI-003","L01-OPI-007","L01-OPI-009"]},
+  "evaluated_candidates":[
+    {
+      "slot_id":"L01-OPI-009",
+      "english":"Do you like to sing?",
+      "hnk":"EN VAME VAMAZAMU KE",
+      "readiness":"READY_FOR_SCOPED_PREFERENCE_AND_NEGATION_DECISION",
+      "advantages":["Question structural G-ID encoding already passes.","VAME has a recovered literal-like meaning, although authority remains GATE.","VAMAZAMU has recovered singing semantics, although authority remains WATCH.","AUTH-004 NE now provides a governed authored negation/absence primitive that can be evaluated for one scoped predicate-negation extension.","No new lexical form is needed."],
+      "remaining_decisions":["Approve VAME for OPI 9 course use while retaining GATE.","Approve VAMAZAMU for OPI 9 course use while retaining WATCH.","Approve fragment answer pair VAME VAMAZAMU / NE VAME VAMAZAMU.","Approve NE + predicate phrase only for this scope; do not grant global negation productivity."],
+      "selected":true
+    },
+    {
+      "slot_id":"L01-OPI-001",
+      "readiness":"RECOVERY_OR_EXPLICIT_GRAMMAR_PROMOTION_REQUIRED",
+      "blockers":["YA and ES remain unrecovered.","Whole phrase gloss remains approximate and token alignment incomplete."],
+      "selected":false
+    },
+    {
+      "slot_id":"L01-OPI-003",
+      "readiness":"SYSTEM_DESIGN_REQUIRED",
+      "blockers":["SARASALA remains WATCH.","Age construction is contextual.","Number/age-value system remains open."],
+      "selected":false
+    },
+    {
+      "slot_id":"L01-OPI-007",
+      "readiness":"HIGH_RISK_SEMANTIC_PROMOTION_REQUIRED",
+      "blockers":["VANI recovered meaning remains null.","KUON depends on ON=GATE.","Co-resident valency is authored/test-only."],
+      "selected":false
+    }
+  ],
+  "selected_slot":"L01-OPI-009",
+  "projected_effect_if_future_batch_approved":{"L01_OPI_validated_before":6,"L01_OPI_validated_after":7,"L01_OPI_validated_percent_after":70.0,"language_authority_promotions":0,"new_lexical_forms":0},
+  "next_gate":"SWHNK-L01-OPI-009-PREFERENCE-NEGATION-HUMAN-BATCH-V1"
+}
