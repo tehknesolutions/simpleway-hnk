@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + COMMUNICATIVE CORE COMPLETE + VOCABULARY 24/32 AUTHORED  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V35`  
-**Pacote atual:** `simpleway-hnk@0.38.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + COMMUNICATIVE CORE COMPLETE + VOCABULARY 24/32 VALIDATED + GAP-8 SEMANTIC TARGETS PROPOSED  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V36`  
+**Pacote atual:** `simpleway-hnk@0.39.0`
 
 ## Ciclo 1
 
@@ -11,7 +11,7 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-## L01 — núcleo comunicativo totalmente validado
+## L01 — núcleo validado
 
 - Teacher Notes: **3/3 VALIDATED**;
 - OPI: **10/10 VALIDATED**;
@@ -19,38 +19,48 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 - Q&A: **4/4 VALIDATED**;
 - Structure Headers: **2/2 VALIDATED**;
 - Structures: **5/5 VALIDATED**;
-- Activation: **72/72 VALIDATED**.
+- Activation: **72/72 VALIDATED**;
+- Vocabulary atualmente preenchido: **24/24 VALIDATED**.
 
 As validações permanecem escopadas ao curso v1.1 e não promovem automaticamente autoridade linguística histórica.
 
-## L01 Vocabulary — 24/32 AUTHORED
+## L01 Vocabulary — 24/32 VALIDATED
 
-A distribuição de **32 slots** da L01 é derivada do contrato numérico do Ciclo 1; não foi recuperada uma tabela histórica enumerando esses 32 payloads.
+A distribuição de **32 slots** é curricular; não foi recuperada uma tabela histórica enumerando esses 32 payloads.
 
-A primeira passagem usa somente ativos linguísticos já governados e um ativo distinto por slot:
+Estado atual:
 
-- `VOC-001..010`: 10 ativos recuperados/reference/rebind ligados à L01;
-- `VOC-011..014`: `KUVAN`, `VALA`, `KUON`, `NE` — todos `CANDIDATE`;
-- `VOC-015..024`: `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA` — numerais `CANDIDATE`;
+- `VOC-001..010`: 10 ativos recuperados/reference/rebind ligados à L01 — VALIDATED;
+- `VOC-011..014`: `KUVAN`, `VALA`, `KUON`, `NE` — VALIDATED como slots curriculares, ativos continuam `CANDIDATE`;
+- `VOC-015..024`: `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA` — VALIDATED como slots curriculares, numerais continuam `CANDIDATE`;
 - `VOC-025..032`: **MISSING_GOVERNED_ASSET**.
 
-Entre os dez primeiros estão `VAMAKALA`, `SARADAYA`, `VALIVAN`, `PARAZAMO`, `VAMUSARO`, `SARASALA`, `VAMAVALA`, `VAMAZAMU`, `HENUVOKODAN` e o rebind governado de `VALI` para L01.
+A validação de Vocabulary criou **zero novas formas HNK**, não promoveu WATCH/GATE/CANDIDATE/REFERENCE e não transformou tokens de frases recuperadas em entradas históricas independentes.
 
-Fronteiras preservadas: `SARASALA`, `VAMAVALA` e `VAMAZAMU` permanecem WATCH; `HENUVOKODAN` permanece REFERENCE; `VALI` mantém sua proveniência recuperada L02/L03 apesar do rebind curricular; todos os 14 itens autorados continuam CANDIDATE.
+## Gap 8 — semantic-first
 
-Tokens observados apenas em frases e sem entrada lexical independente suficientemente governada — incluindo `YA`, `ES`, `KU`, `EN`, `KE`, `KALA`, `AN`, `ZAMI`, `ZAMO`, `SARI`, `LO` e `DA` — não foram usados para completar artificialmente os 32 slots.
+Antes de selecionar formas para os oito slots faltantes, foi proposta a seguinte fila semântica:
 
-Gate preparado: `SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1`.
+- `SEM-025` — PERSONAL_NAME_DOMAIN;
+- `SEM-026` — FIRST_PERSON_REFERENT;
+- `SEM-027` — SECOND_PERSON_REFERENT;
+- `SEM-028` — CONTENT_SELECTOR;
+- `SEM-029` — QUESTION_OPERATOR;
+- `SEM-030` — RESIDENCE_LIVE;
+- `SEM-031` — PREFERENCE_LIKE;
+- `SEM-032` — SPEAK_LANGUAGE_USE.
 
-Plano separado para os oito gaps: `SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-AUTHORING-PLAN-V1`. Nenhuma forma foi escolhida nesse plano.
+Ainda existem **0 formas selecionadas** e **0 entradas canônicas novas** para esse gap. `KALA`, `AN`, `EN`, `KU`, `KE`, `VANI`, `VAME` e `ZAMI` são apenas formas observadas a investigar no próximo estágio, sem glosa histórica standalone atribuída por essa proposta.
+
+Gate preparado: `SWHNK-L01-VOCABULARY-GAP-8-SEMANTIC-TARGETS-HUMAN-BATCH-V1`.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
 - total authored-or-better: **125/155 = 80.6452%**;
-- total VALIDATED: **101/155 = 65.1613%**;
-- Vocabulary AUTHORED: **24/32**;
+- total VALIDATED: **125/155 = 80.6452%**;
+- Vocabulary VALIDATED: **24/32**;
 - Vocabulary MISSING: **8/32**;
 - remaining missing/unimplemented total: **30**.
 
@@ -60,7 +70,7 @@ Restam **8 Vocabulary + 22 Review**.
 
 Estados exclusivos:
 
-**883 MISSING + 24 AUTHORED + 101 VALIDATED + 0 FROZEN = 1.008**.
+**883 MISSING + 0 AUTHORED + 125 VALIDATED + 0 FROZEN = 1.008**.
 
 Cumulativo authored-or-better: **125/1.008 = 12.4008%**.
 
