@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V11`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V12`  
 **Date:** 2026-09-09  
-**Package:** `simpleway-hnk@0.13.0`
+**Package:** `simpleway-hnk@0.14.0`
 
 ## Progress model
 
@@ -17,14 +17,14 @@ Cycle 1 target: **1,008 pedagogical slots**.
 Exclusive current states:
 
 - `MISSING`: **998 / 1,008 = 99.0079%**
-- `AUTHORED`: **6 / 1,008 = 0.5952%**
-- `VALIDATED`: **4 / 1,008 = 0.3968%**
+- `AUTHORED`: **5 / 1,008 = 0.4960%**
+- `VALIDATED`: **5 / 1,008 = 0.4960%**
 - reproducible `FROZEN`: **0 / 1,008**
 
 Cumulative maturity:
 
 - `AUTHORED_OR_BETTER`: **10 / 1,008 = 0.9921%**
-- `VALIDATED_OR_BETTER`: **4 / 1,008 = 0.3968%**
+- `VALIDATED_OR_BETTER`: **5 / 1,008 = 0.4960%**
 - `FROZEN`: **0 / 1,008**
 
 Historical evidence remains separate:
@@ -38,7 +38,7 @@ Historical evidence remains separate:
 All 10 cards are authored and individually reviewed.
 
 - `AUTHORED_OR_BETTER`: **10/10 = 100%**
-- `VALIDATED_OR_BETTER`: **4/10 = 40%**
+- `VALIDATED_OR_BETTER`: **5/10 = 50%**
 - `FROZEN`: **0/10**
 
 | OPI | HNK v1.1 | Current state |
@@ -52,38 +52,35 @@ All 10 cards are authored and individually reviewed.
 | 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | AUTHORED · reviewed HOLD |
 | 08 | `EN KU VAMAVALA KE` | **VALIDATED** — scoped content frame; WATCH remains visible |
 | 09 | `EN VAME VAMAZAMU KE` | AUTHORED · reviewed HOLD |
-| 10 | context `VAMUSARO` + `EN KU VALA KE` | AUTHORED · reviewed HOLD |
+| 10 | context `VAMUSARO` + `EN KU VALA KE` | **VALIDATED** — approximate contextual equivalent |
 
 ## Applied validation batches
 
 ### Batch 1 — locative questions
 
-Validated OPI 4 and 5 by approving only for those course slots:
-
-- `KUVAN` as the locative interrogative variable;
-- `EN ... KE` as the beginner second-person interrogative frame;
-- `[PLACE]` as the minimal answer pattern.
-
-`KUVAN` remains `CANDIDATE`; no historical-recovery or FROZEN claim was created.
+Validated OPI 4 and 5. `KUVAN` remains `CANDIDATE`; no historical-recovery or FROZEN claim was created.
 
 ### Batch 2 — content questions
 
-Validated OPI 6 and 8 by approving only for those course slots:
+Validated OPI 6 and 8. `VALA` remains `CANDIDATE`, `VAMAVALA` remains `WATCH`, and `KU` retains no exact recovered WH gloss.
 
-- `EN KU X KE` as a scoped v1.1 content-question frame;
-- `VALA` as the OPI 6 activity head while remaining `CANDIDATE`;
-- `VAMAVALA` for OPI 8 course use while remaining `WATCH`;
-- explicit card context to supply the work/school domain in OPI 6;
-- bare `[ACTIVITY_DESCRIPTION]` and `[HOBBY_OR_PLEASURE_ACTIVITY]` response slots without invented function words.
+### Batch 3 — contextual weekend equivalence
 
-This does **not** define historical `KU = WHAT/WHICH`, does not universalize the frame, and changes no language authority.
+Validated OPI 10 only for the scoped L01 v1.1 pedagogical use:
+
+- `VAMUSARO` remains FROZEN with the unchanged meaning **rest / leisure period**;
+- `VAMUSARO` is **not** translated or redefined as `weekend`;
+- `EN KU VALA KE` reuses the already validated activity-question precedent from OPI 6;
+- semantic fidelity remains explicitly `APPROXIMATE_CONTEXTUAL_EQUIVALENT`;
+- `VALA` remains `CANDIDATE`;
+- no weekend lexeme was created.
 
 ## Cycle 1 OPI progress
 
 Across the 70 OPI target:
 
 - `AUTHORED_OR_BETTER`: **10/70 = 14.2857%**
-- `VALIDATED_OR_BETTER`: **4/70 = 5.7143%**
+- `VALIDATED_OR_BETTER`: **5/70 = 7.1429%**
 - `FROZEN`: **0/70**
 
 ## Language assets
@@ -102,16 +99,14 @@ These are language-asset coverage proxies, not completed vocabulary-slot percent
 - OPI 3: `SARASALA` WATCH plus number/age system open.
 - OPI 7: `VANI` meaning null, `KUON` CANDIDATE, `ON=GATE`, experimental co-resident valency.
 - OPI 9: `VAME` GATE, `VAMAZAMU` WATCH, yes/no answer strategy open.
-- OPI 10: the question frame is now stronger because `EN KU VALA KE` passed OPI 6 validation, but `VAMUSARO = rest/leisure period` is still broader than exact `weekend`.
 
-## Next validation selection
+## Next gate
 
-Recommended next candidates:
+`SWHNK-L01-OPI-002-POSSESSION-NEGATION-DESIGN-V1`
 
-1. **OPI 10** — now structurally inherits a validated content-question frame; the remaining decision is chiefly whether the broader `VAMUSARO` leisure-period context is acceptable as a clearly labeled contextual equivalent of “weekends”, or whether an exact weekend system must be authored first.
-2. **OPI 2** — strong FROZEN nickname core, but it needs a governed possession/existential interpretation and a negative-answer policy.
+The next objective is to solve OPI 2 without inventing an English-calque HAVE verb. Preferred route: determine whether the beginner card can use a nominal/existential strategy plus an explicit governed no-nickname response. Only after that should OPI 2 enter another human validation batch.
 
-High-risk cards remain OPI 3, 7 and 9.
+High-risk cards after OPI 2 remain OPI 3, 7 and 9.
 
 ## Commands
 
@@ -127,7 +122,7 @@ npm test
 
 ## CI boundary
 
-Versioned tests have been synchronized to the V11 state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
+Versioned tests are synchronized to the V12 state, but remote CI must not be called green until an actual GitHub Actions runner executes successfully.
 
 ## Rule
 
