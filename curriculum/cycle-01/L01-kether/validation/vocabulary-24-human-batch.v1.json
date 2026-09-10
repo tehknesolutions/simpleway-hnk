@@ -1,20 +1,19 @@
 {
   "batch_id":"SWHNK-L01-VOCABULARY-24-OF-32-VALIDATION-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION",
   "scope":{"filled_slots":[1,24],"unfilled_slots":[25,32]},
   "source":"../authoring/vocabulary-lane.v1.json",
-  "current_state":{"AUTHORED":24,"VALIDATED":0,"MISSING":8,"FROZEN":0},
-  "decisions_requested":[
-    {"id":"DEC-VOC-001","statement":"Approve VOC-001..010 as L01 curriculum Vocabulary selections from recovered/reference assets plus the explicit VALI L01 rebind, without changing their underlying language authorities or historical provenance.","if_approved":{"vocabulary_validated":10,"language_authority_promotions":0,"VALI_source_lessons_rewritten":false}},
-    {"id":"DEC-VOC-002","statement":"Approve VOC-011..014 as curriculum selections of the four governed authored candidates KUVAN, VALA, KUON and NE, preserving all four at CANDIDATE and preserving ON=GATE dependency for KUON.","if_approved":{"vocabulary_validated":4,"candidate_promotions":0}},
-    {"id":"DEC-VOC-003","statement":"Approve VOC-015..024 as the ten governed spoken numeral candidates 0-9 for L01 vocabulary practice, preserving their CANDIDATE authority and without extending cardinal composition beyond separately governed course contexts.","if_approved":{"vocabulary_validated":10,"numeral_authority":"CANDIDATE_UNCHANGED","global_number_grammar_created":false}},
-    {"id":"DEC-VOC-004","statement":"Approve the one-distinct-governed-asset-per-filled-slot policy for this L01 Vocabulary pass and confirm unresolved recovered phrase tokens are not promoted to standalone vocabulary merely to satisfy the count of 32.","if_approved":{"phrase_token_promotion":false,"fabricated_glosses":0}},
-    {"id":"DEC-VOC-005","statement":"Confirm VOC-025..032 remain MISSING until eight additional independently governed L01-appropriate language assets are approved; do not auto-generate them from numerology, glyph appearance, or recovered phrase-token guesses.","if_approved":{"unfilled_slots_remaining":8,"new_HNK_lexical_forms_created":0}},
-    {"id":"DEC-VOC-006","statement":"Confirm the 24 current slot selections are new SimpleWay HNK v1.1 curriculum authorship, while their underlying language assets retain their own recovered/authored provenance.","if_approved":{"historical_32_slot_payload_claim":false,"language_authority_promotions":0}}
+  "prior_state":{"AUTHORED":24,"VALIDATED":0,"MISSING":8,"FROZEN":0},
+  "decisions":[
+    {"id":"DEC-VOC-001","decision":"APPROVED_SCOPED","effect":{"vocabulary_validated":10,"language_authority_promotions":0,"VALI_source_lessons_rewritten":false}},
+    {"id":"DEC-VOC-002","decision":"APPROVED_SCOPED","effect":{"vocabulary_validated":4,"candidate_promotions":0}},
+    {"id":"DEC-VOC-003","decision":"APPROVED_SCOPED","effect":{"vocabulary_validated":10,"numeral_authority":"CANDIDATE_UNCHANGED","global_number_grammar_created":false}},
+    {"id":"DEC-VOC-004","decision":"APPROVED_SCOPED","effect":{"one_distinct_governed_asset_per_filled_slot":true,"phrase_token_promotion":false,"fabricated_glosses":0}},
+    {"id":"DEC-VOC-005","decision":"APPROVED_SCOPED","effect":{"unfilled_slots_remaining":8,"new_HNK_lexical_forms_created":0}},
+    {"id":"DEC-VOC-006","decision":"APPROVED_SCOPED","effect":{"historical_32_slot_payload_claim":false,"language_authority_promotions":0}}
   ],
-  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not promote WATCH, GATE, CANDIDATE or REFERENCE assets.","Does not assign standalone meanings to YA, ES, KALA, EN, KU, KE, AN, ZAMI, ZAMO, SARI, LO or DA.","Does not claim the derived 32-slot L01 allocation was historically enumerated.","Does not promote Vocabulary slots to FROZEN."],
-  "projected_effect_if_all_approved":{"vocabulary_VALIDATED":24,"vocabulary_MISSING":8,"L01_VALIDATED_before":101,"L01_VALIDATED_after":125,"global_VALIDATED_before":101,"global_VALIDATED_after":125,"new_HNK_lexical_forms_created":0,"language_authority_promotions":0},
-  "application_rule":"Do not transition VOC-001..024 to VALIDATED until all six scoped decisions are explicitly approved. VOC-025..032 remain MISSING regardless of this batch.",
-  "next_gate_if_approved":"SWHNK-L01-VOCABULARY-24-VALIDATED-TRANSITION-V1",
-  "next_gate_if_not_approved":"KEEP_L01_VOCABULARY_24_AUTHORED_AND_REVISE"
+  "applied_state":{"AUTHORED":0,"VALIDATED":24,"MISSING":8,"FROZEN":0},
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not promote WATCH, GATE, CANDIDATE or REFERENCE assets.","Does not assign standalone meanings to YA, ES, KALA, EN, KU, KE, AN, ZAMI, ZAMO, SARI, LO or DA.","Does not claim the derived 32-slot L01 allocation was historically enumerated.","Does not promote Vocabulary slots to FROZEN.","VOC-025..032 remain MISSING."],
+  "applied_effect":{"vocabulary_VALIDATED":24,"vocabulary_MISSING":8,"L01_VALIDATED_before":101,"L01_VALIDATED_after":125,"global_VALIDATED_before":101,"global_VALIDATED_after":125,"new_HNK_lexical_forms_created":0,"language_authority_promotions":0},
+  "next_gate":"SELECT_EIGHT_L01_SEMANTIC_TARGETS_BEFORE_FORM_GENERATION_OR_REBIND"
 }
