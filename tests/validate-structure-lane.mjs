@@ -5,6 +5,7 @@ async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,
 
 const lane=await json('curriculum/cycle-01/L01-kether/authoring/structure-lane.v1.json');
 const batch=await json('curriculum/cycle-01/L01-kether/validation/structure-lane-human-batch.v1.json');
+const transition=await json('curriculum/cycle-01/L01-kether/validation/structure-lane.validated-transition.v1.json');
 const evidence=await json('progress/evidence-overrides.v1.json');
 const bindings=await json('curriculum/cycle-01/L01-kether/authoring/opi-bindings.v1.json');
 
@@ -34,23 +35,29 @@ assert.equal(names['L01-STR-005'].frame,'EN + VAME + CONTENT + KE');
 assert.match(names['L01-STR-005'].authority_boundary,/VAME remains GATE/);
 
 assert.equal(bindings.metrics.validated,10);
-assert.equal(batch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(batch.decisions_requested.length,5);
-assert.equal(batch.projected_effect_if_all_approved.structure_headers_VALIDATED,2);
-assert.equal(batch.projected_effect_if_all_approved.structures_VALIDATED,5);
-assert.equal(batch.projected_effect_if_all_approved.global_VALIDATED_after,89);
-assert.equal(batch.projected_effect_if_all_approved.new_HNK_lexical_forms,0);
-assert.equal(batch.projected_effect_if_all_approved.language_authority_promotions,0);
+assert.equal(batch.status,'APPROVED_AND_APPLIED_SCOPED_COURSE_VALIDATION');
+assert.ok(batch.decisions.every(x=>x.decision==='APPROVED_SCOPED'));
+assert.equal(batch.applied_effect.structure_headers_VALIDATED,2);
+assert.equal(batch.applied_effect.structures_VALIDATED,5);
+assert.equal(batch.applied_effect.global_VALIDATED_after,89);
+assert.equal(batch.applied_effect.new_HNK_lexical_forms,0);
+assert.equal(batch.applied_effect.language_authority_promotions,0);
+assert.equal(transition.status,'APPLIED');
+assert.equal(transition.after.VALIDATED,7);
+assert.equal(transition.global_after.VALIDATED,89);
+assert.equal(transition.authority_effect.language_authority_promotions,0);
+assert.equal(transition.authority_effect.new_HNK_lexical_forms,0);
 
 const v=evidence.validation_evidence;
 assert.equal(v.L01_Structure_headers_target,2);
-assert.equal(v.L01_Structure_headers_authored,2);
-assert.equal(v.L01_Structure_headers_validated,0);
+assert.equal(v.L01_Structure_headers_authored,0);
+assert.equal(v.L01_Structure_headers_validated,2);
 assert.equal(v.L01_Structures_target,5);
-assert.equal(v.L01_Structures_authored,5);
-assert.equal(v.L01_Structures_validated,0);
+assert.equal(v.L01_Structures_authored,0);
+assert.equal(v.L01_Structures_validated,5);
 assert.equal(v.L01_Structure_lane_authored_or_better,7);
-assert.equal(v.prepared_structure_batch,'../curriculum/cycle-01/L01-kether/validation/structure-lane-human-batch.v1.json');
+assert.equal(v.L01_Structure_lane_validated,7);
+assert.equal(v.prepared_structure_batch,null);
 
-console.log('PASS SWHNK-L01-STRUCTURE-LANE-V1');
-console.log('2 headers + 5 structures AUTHORED; validation pending; no new lexicon, no universal historical grammar claim, authority boundaries preserved.');
+console.log('PASS SWHNK-L01-STRUCTURE-LANE-V2');
+console.log('2 headers + 5 structures VALIDATED for scoped L01 course use; no new lexicon, no universal historical grammar claim, authority boundaries preserved.');
