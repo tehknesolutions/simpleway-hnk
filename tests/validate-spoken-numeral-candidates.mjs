@@ -23,6 +23,7 @@ function levenshtein(a, b) {
 
 const proposal = await json('proposals/language/HNK_SPOKEN_NUMERAL_0_9_CANDIDATES_V1.json');
 const strategyBatch = await json('curriculum/cycle-01/L01-kether/validation/spoken-numeral-0-9-human-batch.v1.json');
+const promotionBatch = await json('curriculum/cycle-01/L01-kether/validation/spoken-numeral-0-9-candidate-promotion-batch.v1.json');
 
 const currentLanguageForms = [
   'VAMAKALA','SARADAYA','VALIVAN','PARAZAMO','VAMUSARO','SARASALA','VAMAVALA','VAMAZAMU',
@@ -75,5 +76,16 @@ assert.equal(proposal.set_audit.canonical_registry_entries_created, 0);
 assert.equal(proposal.progress_effect.L01_OPI_validated, 7);
 assert.equal(proposal.progress_effect.change, 0);
 
-console.log('PASS SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATES-V1');
-console.log('BIZO DUVE HOYU KETI LUSO MUPI NURA PEVU TOMI ZOKA remain proposal-only; distance >=3; no canonical registration or OPI3 validation implied.');
+assert.equal(promotionBatch.status, 'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(promotionBatch.candidates.length, 10);
+assert.deepEqual(promotionBatch.candidates.map(x => x.form), ['BIZO','DUVE','HOYU','KETI','LUSO','MUPI','NURA','PEVU','TOMI','ZOKA']);
+assert.deepEqual(promotionBatch.candidates.map(x => x.proposed_registry_id), ['AUTH-005','AUTH-006','AUTH-007','AUTH-008','AUTH-009','AUTH-010','AUTH-011','AUTH-012','AUTH-013','AUTH-014']);
+assert.equal(promotionBatch.projected_effect_if_approved.recovered_cycle1_forms_after, 31);
+assert.equal(promotionBatch.projected_effect_if_approved.authored_cycle1_candidates_after, 14);
+assert.equal(promotionBatch.projected_effect_if_approved.governed_unique_language_assets_after, 45);
+assert.equal(promotionBatch.projected_effect_if_approved.governed_asset_proxy_percent_after, 31.25);
+assert.equal(promotionBatch.projected_effect_if_approved.L01_OPI_validated_after, 7);
+assert.equal(promotionBatch.projected_effect_if_approved.new_FROZEN_forms, 0);
+
+console.log('PASS SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATES-V2');
+console.log('Ten collision-safe numeral forms generated; promotion batch remains awaiting explicit approval; canonical assets stay 35 and OPI3 stays HOLD.');
