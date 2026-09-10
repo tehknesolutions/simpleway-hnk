@@ -3,7 +3,7 @@
 **Data:** 2026-09-09  
 **Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION  
 **Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V14`  
-**Pacote:** `simpleway-hnk@0.16.0`
+**Pacote atual:** `simpleway-hnk@0.17.0`
 
 ## Ciclo 1
 
@@ -48,7 +48,7 @@ Fronteiras preservadas:
 - `LEX-008 VAMAZAMU` continua **WATCH**;
 - `AUTH-004 NE` continua **CANDIDATE**;
 - a negação de predicado com `NE` vale apenas no escopo aprovado do OPI 9;
-- não foi criada regra universal yes/no ou de negação;
+- não existe regra universal yes/no ou de negação decorrente dessa validação;
 - nenhuma forma nova foi criada pelo Batch 4;
 - OPI 9 não foi promovido a FROZEN.
 
@@ -69,7 +69,15 @@ Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **35/144 = 
 
 ### OPI 3 — prioridade 1
 
-`EN KU SARASALA KE` — precisa de construção de idade e sistema numérico HNK. `SARASALA` continua WATCH. Varreduras atuais em GitHub, File Library e Google Drive não recuperaram um sistema numeral histórico.
+`EN KU SARASALA KE` — precisa de construção de idade e sistema numérico HNK. `SARASALA` continua WATCH.
+
+A varredura de recuperação em GitHub, File Library e Google Drive não encontrou um sistema numeral HNK histórico. O arquivo `number-system-recovery.v1.json` registra explicitamente esse limite.
+
+Foi criada a arquitetura `HNK_NUMERIC_LITERAL_BRIDGE_V1`: valores ASCII como `8`, `18` e `42` podem ser usados como notação externa em UI/dados, sem serem chamados de glifos ou palavras HNK.
+
+Os numerais falados 0–9 permanecem **todos com forma `null`**.
+
+A estratégia recomendada para fala é `TEN_PRIMITIVE_DIGIT_NUMERALS`: dez primitivas de autoria nova, uma para cada valor 0–9, entrando inicialmente como `CANDIDATE`. A estratégia ainda não autoriza geração de formas.
 
 ### OPI 1 — prioridade 2
 
@@ -79,18 +87,20 @@ Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **35/144 = 
 
 `VANI` permanece WATCH com significado recuperado `null`; `KUON` permanece CANDIDATE dependente de `ON=GATE`; a valência de co-residente é autoria experimental. É o card de maior risco semântico da L01.
 
-## Próximo gate
+## Gate corrente
 
-`SWHNK-HNK-NUMBER-SYSTEM-RECOVERY-AND-DESIGN-V1`
+`SWHNK-HNK-SPOKEN-NUMERAL-0-9-HUMAN-BATCH-V1`
 
-A próxima etapa deve separar:
+Esse batch aguarda aprovação específica para **gerar** dez candidatos falados 0–9. Se aprovado:
 
-1. notação/valor numérico para dados e UI;
-2. numerais falados HNK;
-3. construção de idade;
-4. unidade de idade/ano, caso seja linguisticamente necessária.
-
-Nenhuma forma numeral deve ser inventada ou atribuída ao HNK histórico sem uma proposta autoral explícita.
+- cada forma será `PRIMITIVE_AUTHORED`;
+- autoridade inicial obrigatória `CANDIDATE`;
+- sem alegação de recuperação histórica;
+- apenas unidades de transliteração HNK40 seguras ou G-IDs explicitamente governados;
+- collision/confusion review obrigatório;
+- numerologia e aparência visual não poderão escolher as formas;
+- base interna e regra para 10–99 continuarão abertas em gate posterior;
+- o OPI 3 continuará HOLD até existir uma resposta falada de idade suficiente.
 
 ## Fronteiras
 
