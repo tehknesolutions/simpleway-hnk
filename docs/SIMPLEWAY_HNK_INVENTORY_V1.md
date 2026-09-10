@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + COMMUNICATIVE CORE COMPLETE + VOCABULARY 24/32 VALIDATED + GAP-8 SEMANTICS APPROVED + FORM MAPPING PROPOSED  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V37`  
-**Pacote atual:** `simpleway-hnk@0.40.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + L01 VOCABULARY 32/32 AUTHORED-OR-BETTER + FINAL 8 PENDING VALIDATION  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V38`  
+**Pacote atual:** `simpleway-hnk@0.41.0`
 
 ## Ciclo 1
 
@@ -20,71 +20,60 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 - Structure Headers: **2/2 VALIDATED**;
 - Structures: **5/5 VALIDATED**;
 - Activation: **72/72 VALIDATED**;
-- Vocabulary atualmente preenchido: **24/24 VALIDATED**.
+- Vocabulary: **24/32 VALIDATED + 8/32 AUTHORED**.
 
 As validações permanecem escopadas ao curso v1.1 e não promovem automaticamente autoridade linguística histórica.
 
-## L01 Vocabulary — 24/32 VALIDATED
+## L01 Vocabulary — 32/32 implementados
 
-`VOC-001..024` estão VALIDATED. `VOC-025..032` permanecem `MISSING_GOVERNED_ASSET`.
+Os oito gaps de Vocabulary passaram pelo fluxo `SEMANTICS_BEFORE_FORM` e pela revisão evidence-first. O mapeamento foi aprovado e aplicado à autoria:
 
-Os oito alvos semânticos faltantes foram agora **aprovados** sob a regra `SEMANTICS_BEFORE_FORM`: PERSONAL_NAME_DOMAIN, FIRST_PERSON_REFERENT, SECOND_PERSON_REFERENT, CONTENT_SELECTOR, QUESTION_OPERATOR, RESIDENCE_LIVE, PREFERENCE_LIKE e SPEAK_LANGUAGE_USE.
+- `VOC-025`: `KALA` → PERSONAL_NAME_DOMAIN → `AUTH-015 CANDIDATE`;
+- `VOC-026`: `AN` → FIRST_PERSON_REFERENT → `AUTH-016 CANDIDATE`;
+- `VOC-027`: `EN` → SECOND_PERSON_REFERENT → `AUTH-017 CANDIDATE`;
+- `VOC-028`: `KU` → CONTENT_SELECTOR → `AUTH-018 CANDIDATE`;
+- `VOC-029`: `KE` → QUESTION_OPERATOR → `AUTH-019 CANDIDATE`;
+- `VOC-030`: `VANI` → RESIDENCE_LIVE → binding L01 sobre `LEX-031`, mantendo `WATCH` e `meaning=null` no Master Lexicon;
+- `VOC-031`: `VAME` → PREFERENCE_LIKE → rebind L01 sobre `LEX-025`, mantendo `GATE`;
+- `VOC-032`: `ZAMI` → SPEAK_LANGUAGE_USE → `AUTH-020 CANDIDATE`.
 
-A aprovação semântica não selecionou formas nem alterou os oito slots.
+Os seis `AUTH-015..020` são **novas entradas canônicas autoradas**, mas não novas formas de superfície: `KALA/AN/EN/KU/KE/ZAMI` já eram observados em material recuperado. A semântica standalone continua sendo autoria/inferência governada, não recuperação histórica. `VANI` e `VAME` permanecem no Master Lexicon recuperado e não foram duplicados.
 
-## Gap 8 — revisão evidence-first de formas
+Fronteiras preservadas: `VANI=WATCH` com significado master `null`; `VAME=GATE`; `KU` não recebe uma tradução WH universal; `KE` não estabelece sintaxe interrogativa universal; `AN/EN` não criam paradigma pronominal global; nenhuma autoridade linguística foi promovida.
 
-O mapping review propõe, mas ainda não aplica:
-
-- `KALA` → PERSONAL_NAME_DOMAIN → novo `AUTH-015 CANDIDATE`;
-- `AN` → FIRST_PERSON_REFERENT → novo `AUTH-016 CANDIDATE`;
-- `EN` → SECOND_PERSON_REFERENT → novo `AUTH-017 CANDIDATE`;
-- `KU` → CONTENT_SELECTOR → novo `AUTH-018 CANDIDATE`;
-- `KE` → QUESTION_OPERATOR → novo `AUTH-019 CANDIDATE`;
-- `VANI` → RESIDENCE_LIVE → binding semântico escopado sobre `LEX-031`, mantendo `WATCH` e `meaning=null` no Master Lexicon;
-- `VAME` → PREFERENCE_LIKE → rebind curricular L01 sobre `LEX-025`, mantendo `GATE`;
-- `ZAMI` → SPEAK_LANGUAGE_USE → novo `AUTH-020 CANDIDATE`.
-
-A evidência vem das frases recuperadas, dos OPI já validados e das entradas recuperadas existentes. Para `KALA/AN/EN/KU/KE/ZAMI`, a semântica standalone proposta continua sendo **autoria/inferência governada**, não recuperação histórica. `VANI` e `VAME` não serão duplicados no authored registry.
-
-Gate preparado: `SWHNK-L01-VOCABULARY-GAP-8-FORM-MAPPING-HUMAN-BATCH-V1`.
-
-Se aprovado e aplicado posteriormente, o registry autorado projetado sobe de **14 → 20 CANDIDATEs** e o inventário de ativos governados distintos de **45 → 51**. Essa projeção não é o estado canônico atual.
+Gate final preparado: `SWHNK-L01-VOCABULARY-025-032-HUMAN-BATCH-V1`, status **AWAITING_EXPLICIT_HUMAN_VALIDATION**.
 
 ## Progresso L01
 
 L01 target: **155 slots**.
 
-- total authored-or-better: **125/155 = 80.6452%**;
+- total authored-or-better: **133/155 = 85.8065%**;
 - total VALIDATED: **125/155 = 80.6452%**;
-- Vocabulary VALIDATED: **24/32**;
-- Vocabulary MISSING: **8/32**;
-- remaining missing/unimplemented total: **30**.
-
-Restam **8 Vocabulary + 22 Review**.
+- Vocabulary authored-or-better: **32/32 = 100%**;
+- Vocabulary VALIDATED: **24/32 = 75%**;
+- slots realmente não implementados: **22**, todos em Review;
+- slots implementados aguardando validação: **8**, todos em Vocabulary.
 
 ## Progresso Ciclo 1
 
 Estados exclusivos:
 
-**883 MISSING + 0 AUTHORED + 125 VALIDATED + 0 FROZEN = 1.008**.
+**875 MISSING + 8 AUTHORED + 125 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better: **125/1.008 = 12.4008%**.
+Cumulativo authored-or-better: **133/1.008 = 13.1944%**.
 
 Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
 
 ## Corpus linguístico governado
 
-Estado canônico atual, antes do mapping gap-8:
-
 Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`) e 7 frases recuperadas.
 
-Registry autorado `@hnk/linguas/authored`: **14 CANDIDATE forms** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
+Registry autorado `@hnk/linguas/authored`: **20 CANDIDATE forms**. Os seis novos registros são `KALA`, `AN`, `EN`, `KU`, `KE` e `ZAMI` (`AUTH-015..020`).
 
-Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
+Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **51/144 = 35.4167%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
 
-## Fronteiras
+## Fronteiras e CI
 
 `hnk-english-app` permanece referência metodológica/arquitetural, não owner do corpus HNK. `@hnk/linguas` é owner linguístico; `@hnk/glyphs` é owner estrutural G01–G40. Candidate D visual continua `PREPRODUCTION_NOT_OFFICIAL`.
 
-CI remoto continua não comprovado até existir execução real de runner.
+O workflow remoto está configurado, mas os runs recentes falharam antes de expor qualquer step (`steps=[]`), inclusive após rerun controlado. Portanto o CI não está verde e também não há evidência de que `npm test` tenha sido efetivamente executado pelo runner nesses runs.
