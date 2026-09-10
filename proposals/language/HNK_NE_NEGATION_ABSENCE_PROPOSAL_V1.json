@@ -1,0 +1,48 @@
+{
+  "proposal_id":"HNK-NE-NEGATION-ABSENCE-PROPOSAL-V1",
+  "status":"AUTHORING_PROPOSAL_NOT_CANON",
+  "semantic_spec":{
+    "primary_function":"NEGATION_OR_ABSENCE_OPERATOR",
+    "L01_first_use":"mark absence of a nickname in OPI 2",
+    "not_a_HAVE_verb":true,
+    "scope":"minimal beginner polarity/existence response"
+  },
+  "candidate":{
+    "form":"NE",
+    "proposed_authority":"CANDIDATE",
+    "certainty":"AUTHORED_PRIMITIVE",
+    "historical_recovery_claim":false,
+    "formation_type":"PRIMITIVE_AUTHORED",
+    "glyph_ids":["G12","G02"],
+    "safe_units":["N","E"],
+    "ipa":"/ne/",
+    "phonotactic_shape":"CV",
+    "safe_transliteration_complete":true,
+    "master_lexicon_exact_collision":false
+  },
+  "form_selection_rationale":[
+    "Meaning was specified before form selection.",
+    "A short CV operator is appropriate for a high-frequency grammatical particle and fits the dominant HNK phonotactic profile.",
+    "N and E are both governed safe transliteration units in HNK40.",
+    "No exact NE form was found in the current recovered/authored registry search.",
+    "The form is new authorship; no claim is made that historical HNK used NE for negation."
+  ],
+  "proposed_usage":[
+    {"frame":"NE VAMAKALA","intended_reading":"no nickname / nickname absent","scope":"L01-OPI-002 response candidate"},
+    {"frame":"NE","intended_reading":"no / negative response","scope":"future test only; not automatically licensed by this proposal"}
+  ],
+  "boundaries":{
+    "does_not_define_HNK_historical_negation":true,
+    "does_not_promote_any_recovered_form":true,
+    "does_not_create_possession_HAVe_verb":true,
+    "global_productivity":false,
+    "first_entry_if_approved":"CANDIDATE_ONLY"
+  },
+  "promotion_gate":[
+    "Human approval of NE as the v1.1 authored negation/absence primitive.",
+    "Canonical collision and HNK40 round-trip check in @hnk/linguas.",
+    "Register as authored CANDIDATE, never as recovered/FROZEN on first entry.",
+    "Approve each course usage separately until broader grammar is governed."
+  ],
+  "next_gate":"SWHNK-L01-NEGATION-EXISTENCE-MICROGRAMMAR-V1"
+}
