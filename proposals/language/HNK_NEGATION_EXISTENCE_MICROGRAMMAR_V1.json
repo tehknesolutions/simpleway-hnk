@@ -1,0 +1,48 @@
+{
+  "grammar_id":"SWHNK-L01-NEGATION-EXISTENCE-MICROGRAMMAR-V1",
+  "status":"AUTHORING_PROPOSAL_NOT_CANON",
+  "scope":["L01-OPI-002"],
+  "principle":"Solve the beginner interview function without creating an English-calque HAVE verb.",
+  "question_strategy":{
+    "form":"EN VAMAKALA KE",
+    "course_function":"nickname? / your nickname?",
+    "semantic_relation":"NOMINAL_OR_EXISTENTIAL_INTERVIEW_FRAME",
+    "historical_possession_claim":false,
+    "HAVE_lexeme_required":false,
+    "dependencies":["EN second-person referent hypothesis","VAMAKALA FROZEN nickname core","KE interrogative operator hypothesis"]
+  },
+  "answer_strategy":{
+    "affirmative":{
+      "form":"[NICKNAME]",
+      "example_shape":"BARE_NICKNAME",
+      "hnk_function_words_added":false
+    },
+    "negative":{
+      "form":"NE VAMAKALA",
+      "intended_function":"no nickname / nickname absent",
+      "dependencies":["NE authored negation/absence proposal","VAMAKALA FROZEN"],
+      "historical_claim":false
+    }
+  },
+  "semantic_model":{
+    "possession_is_not_lexicalized_as_HAVE":true,
+    "question_is_interpreted_as_nominal_interview_prompt":true,
+    "negative_response_uses_absence_operator":true,
+    "exact_english_word_for_word_equivalence_required":false,
+    "pedagogical_goal_preserved":"learner can state a nickname or state that no nickname exists"
+  },
+  "boundaries":{
+    "EN_subject_vs_possessive_historical_analysis_remains_unresolved":true,
+    "NE_is_not_yet_canonical":true,
+    "VAMAKALA_authority":"FROZEN_UNCHANGED",
+    "no_HAVe_verb_created":true,
+    "no_recovered_historical_negative_claim":true
+  },
+  "validation_projection_if_approved":{
+    "question_function":"SUFFICIENT_FOR_SCOPED_L01_OPI002",
+    "affirmative_answer":"SUFFICIENT",
+    "negative_answer":"SUFFICIENT_IF_NE_PROMOTED_TO_AUTHORED_CANDIDATE",
+    "whole_slot":"READY_FOR_HUMAN_VALIDATION_BATCH"
+  },
+  "next_gate":"SWHNK-L01-OPI-002-NEGATION-CANDIDATE-HUMAN-BATCH-V1"
+}
