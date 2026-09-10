@@ -1,0 +1,62 @@
+{
+  "decision_id":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-AUTHORING-DECISION-V1",
+  "status":"STRATEGY_RECOMMENDED_FOR_HUMAN_APPROVAL_FORMS_NOT_GENERATED",
+  "problem":"L01 OPI 3 requires spoken age values, but no historical HNK numeral lexicon or cardinal composition rule was recovered.",
+  "recommended_strategy":{
+    "id":"TEN_PRIMITIVE_DIGIT_NUMERALS",
+    "description":"Author one independent spoken CANDIDATE primitive for each cardinal value 0 through 9, then govern multi-digit/cardinal composition in a later gate.",
+    "why":[
+      "0-9 are semantically atomic beginner concepts and high-frequency language infrastructure.",
+      "Independent primitives avoid pretending that an unrecovered HNK base/morphology already exists.",
+      "A later composition gate can decide 10, 11, tens and larger values after the primitive inventory is stable.",
+      "This keeps age teaching possible without making the numerological architecture dictate lexical form."
+    ]
+  },
+  "alternatives_not_selected": [
+    {"strategy":"ARABIC_DIGITS_AS_COMPLETE_HNK_NUMERALS","reason":"Safe for display bridge only; insufficient for spoken language."},
+    {"strategy":"DERIVE_NUMERALS_FROM_GLYPH_ORDINALS_G01_G10","reason":"Would infer semantics from structural glyph identity without source evidence."},
+    {"strategy":"BASE_12_NATIVE_MORPHOLOGY","reason":"12 is symbolically important in HNK architecture but no recovered linguistic evidence licenses base-12 numeral grammar."},
+    {"strategy":"NUMEROLOGY_SELECTED_FORMS","reason":"Explicitly prohibited by the lexeme-authoring contract."}
+  ],
+  "concept_queue":[
+    {"concept_id":"NUM-0","meaning_pt":"zero","meaning_en":"zero","candidate_form":null},
+    {"concept_id":"NUM-1","meaning_pt":"um","meaning_en":"one","candidate_form":null},
+    {"concept_id":"NUM-2","meaning_pt":"dois","meaning_en":"two","candidate_form":null},
+    {"concept_id":"NUM-3","meaning_pt":"três","meaning_en":"three","candidate_form":null},
+    {"concept_id":"NUM-4","meaning_pt":"quatro","meaning_en":"four","candidate_form":null},
+    {"concept_id":"NUM-5","meaning_pt":"cinco","meaning_en":"five","candidate_form":null},
+    {"concept_id":"NUM-6","meaning_pt":"seis","meaning_en":"six","candidate_form":null},
+    {"concept_id":"NUM-7","meaning_pt":"sete","meaning_en":"seven","candidate_form":null},
+    {"concept_id":"NUM-8","meaning_pt":"oito","meaning_en":"eight","candidate_form":null},
+    {"concept_id":"NUM-9","meaning_pt":"nove","meaning_en":"nine","candidate_form":null}
+  ],
+  "candidate_generation_constraints":{
+    "formation_type":"PRIMITIVE_AUTHORED",
+    "initial_authority":"CANDIDATE",
+    "historical_recovery_claim":false,
+    "preferred_shape":"short pronounceable CV/CVCV candidates, subject to collision/confusion review",
+    "safe_transliteration_only":true,
+    "allowed_safe_units":["A","E","I","O","U","H","M","N","L","R","B","D","P","T","K","S","TS","V","Z","Y"],
+    "exact_collision_check":"REQUIRED",
+    "near_form_confusion_check":"REQUIRED",
+    "existing_HNK_lexeme_semantics_must_not_be_overwritten":true,
+    "numerology_must_not_choose_form":true,
+    "visual_shape_must_not_choose_meaning":true
+  },
+  "later_gates":[
+    "Generate and audit 10 candidate forms only after this strategy is explicitly approved.",
+    "Approve/reject each candidate as CANDIDATE; no direct FROZEN entry.",
+    "Define cardinal composition for 10-99 separately.",
+    "Decide whether an explicit year/age unit is necessary or whether context licenses a bare cardinal response.",
+    "Return to L01 OPI 3 whole-slot validation only after a sufficient spoken age answer exists."
+  ],
+  "projected_progress_effect":{
+    "current_L01_OPI_validated":7,
+    "immediate_validation_change":0,
+    "potential_after_future_number_and_age_gates":8,
+    "potential_L01_OPI_validated_percent":80.0
+  },
+  "application_rule":"Do not generate, register or teach numeral forms from this decision record until explicit human approval of the TEN_PRIMITIVE_DIGIT_NUMERALS strategy.",
+  "next_gate_if_approved":"SWHNK-HNK-SPOKEN-NUMERAL-0-9-CANDIDATE-GENERATION-V1",
+  "next_gate_if_not_approved":"REVISE_NUMBER_SYSTEM_STRATEGY"
+}
