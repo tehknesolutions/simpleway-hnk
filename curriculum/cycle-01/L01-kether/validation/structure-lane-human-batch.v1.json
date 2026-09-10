@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L01-STRUCTURE-LANE-VALIDATION-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "scope":["L01-HDR-001","L01-HDR-002","L01-STR-001","L01-STR-002","L01-STR-003","L01-STR-004","L01-STR-005"],
+  "source":"../authoring/structure-lane.v1.json",
+  "current_state":{"AUTHORED":7,"VALIDATED":0,"FROZEN":0},
+  "decisions_requested":[
+    {"id":"DEC-STR-001","statement":"Approve the two v1.1 pedagogical structure headers as authored course organization, without claiming their titles were historically recovered.","if_approved":{"headers_validated":2,"historical_title_claim":false}},
+    {"id":"DEC-STR-002","statement":"Approve the recovered whole-utterance name formula and nominal interview frame as L01 course structures only.","if_approved":{"structures_validated":2,"YA_ES_token_glosses_created":false,"HAVE_verb_created":false}},
+    {"id":"DEC-STR-003","statement":"Approve EN + KU + DOMAIN + KE as the scoped L01 content-question structure only for already validated domains/contexts.","if_approved":{"structures_validated":1,"KU_exact_historical_WH_gloss_assigned":false,"global_content_question_grammar":false}},
+    {"id":"DEC-STR-004","statement":"Approve EN + DOMAIN + KUVAN + KE as the scoped L01 locative structure and preserve KUVAN=CANDIDATE plus the VANI semantic boundary.","if_approved":{"structures_validated":1,"KUVAN_authority":"CANDIDATE_UNCHANGED","VANI_meaning":"NULL_UNCHANGED","global_locative_grammar":false}},
+    {"id":"DEC-STR-005","statement":"Approve EN + VAME + CONTENT + KE as the scoped L01 preference structure with its validated response pair, preserving VAME=GATE, VAMAZAMU=WATCH and NE=CANDIDATE.","if_approved":{"structures_validated":1,"VAME_authority":"GATE_UNCHANGED","VAMAZAMU_authority":"WATCH_UNCHANGED","NE_authority":"CANDIDATE_UNCHANGED","global_preference_or_negation_grammar":false}}
+  ],
+  "explicit_non_effects":["Does not create new HNK lexical forms.","Does not promote WATCH, GATE or CANDIDATE language assets.","Does not assign token meanings to YA or ES.","Does not make the five structures universal historical HNK grammar.","Does not relabel VAMUSARO as weekend.","Does not change VANI recovered meaning null.","Does not promote any structure slot to FROZEN."],
+  "projected_effect_if_all_approved":{"structure_headers_VALIDATED":2,"structures_VALIDATED":5,"L01_VALIDATED_before":82,"L01_VALIDATED_after":89,"global_VALIDATED_before":82,"global_VALIDATED_after":89,"new_HNK_lexical_forms":0,"language_authority_promotions":0},
+  "application_rule":"Do not transition the seven structure-lane slots to VALIDATED until all five scoped decisions are explicitly approved.",
+  "next_gate_if_approved":"SWHNK-L01-STRUCTURE-LANE-VALIDATED-TRANSITION-V1",
+  "next_gate_if_not_approved":"KEEP_L01_STRUCTURE_LANE_AUTHORED_AND_REVISE"
+}
