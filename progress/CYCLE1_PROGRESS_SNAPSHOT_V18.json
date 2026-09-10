@@ -1,0 +1,17 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V18",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_8_OF_10_VALIDATED_AGE_CARDINAL_BATCH_APPLIED",
+  "package_target":"simpleway-hnk@0.21.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":998,"AUTHORED":2,"VALIDATED":8,"FROZEN":0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":10,"VALIDATED_OR_BETTER":8,"FROZEN":0},
+  "implementation_percent":{"AUTHORED_CURRENT":0.1984,"VALIDATED":0.7937,"AUTHORED_OR_BETTER":0.9921,"FROZEN":0.0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25,"authored_candidates":["KUVAN","VALA","KUON","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA"]},
+  "L01_OPI":{"target":10,"reviewed":10,"AUTHORED_HOLD":2,"VALIDATED":8,"validated_percent":80.0,"hold_slots":["L01-OPI-001","L01-OPI-007"],"validated_slots":["L01-OPI-002","L01-OPI-003","L01-OPI-004","L01-OPI-005","L01-OPI-006","L01-OPI-008","L01-OPI-009","L01-OPI-010"]},
+  "cycle1_opi":{"target":70,"VALIDATED":8,"validated_percent":11.4286,"AUTHORED_OR_BETTER":10,"authored_or_better_percent":14.2857},
+  "age_system":{"question":"EN KU SARASALA KE","question_state":"VALIDATED_FOR_L01_V1_1_COURSE_USE","SARASALA_authority":"WATCH_UNCHANGED","spoken_0_9":{"registered":true,"authority":"CANDIDATE","forms":{"0":"BIZO","1":"DUVE","2":"HOYU","3":"KETI","4":"LUSO","5":"MUPI","6":"NURA","7":"PEVU","8":"TOMI","9":"ZOKA"}},"cardinal_10_99":{"status":"APPROVED_FOR_SCOPED_L01_OPI003_NUMERIC_CONTEXT_NOT_GLOBAL_CANON","schema":"DIGIT_TENS DIGIT_UNITS","examples":{"10":"DUVE BIZO","18":"DUVE TOMI","42":"LUSO HOYU","99":"ZOKA ZOKA"}},"answer_schema":"[CARDINAL_0_99]","year_unit":null,"historical_number_system_claim":false,"historical_age_construction_claim":false,"language_authority_promotions":0,"new_lexical_forms":0},
+  "remaining_hold_triage":{"L01-OPI-001":"Recovered whole phrase exists with approximate gloss; YA/ES token alignment unresolved.","L01-OPI-007":"VANI meaning null; residence semantic hypothesis + KUON/ON gate + authored co-resident valency."},
+  "next_gate":"SWHNK-L01-OPI-001-AND-007-HOLD-TRIAGE-V1"
+}
