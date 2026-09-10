@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V34",
+  "as_of":"2026-09-10",
+  "status":"L01_OPI_ACTIVATION_STRUCTURE_TEACHER_NOTES_QA_FULLY_VALIDATED_STORIES_AUTHORED_5_OF_5",
+  "package":"simpleway-hnk@0.37.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":907,"AUTHORED":5,"VALIDATED":96,"FROZEN":0},
+  "implementation_percent":{"MISSING":89.9802,"AUTHORED":0.4960,"VALIDATED":9.5238,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":101,"AUTHORED_OR_BETTER_percent":10.0198,"VALIDATED_OR_BETTER":96,"VALIDATED_OR_BETTER_percent":9.5238,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_ACTIVATION":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":14,"canonical_governed_unique_assets":45,"canonical_governed_proxy_percent":31.25},
+  "L01":{"target":155,"authored_or_better":101,"authored_or_better_percent":65.1613,"validated":96,"validated_percent":61.9355,"remaining_missing_or_unimplemented":54,"TeacherNotes":{"target":3,"VALIDATED":3,"percent":100.0},"OPI":{"target":10,"VALIDATED":10,"percent":100.0},"Story":{"target":5,"AUTHORED":5,"VALIDATED":0},"QA":{"target":4,"VALIDATED":4,"percent":100.0},"StructureHeaders":{"target":2,"VALIDATED":2,"percent":100.0},"Structures":{"target":5,"VALIDATED":5,"percent":100.0},"Activation":{"target":72,"VALIDATED":72,"percent":100.0}},
+  "story_lane":{"payload_origin":"NEW_GOVERNED_V1_1_NARRATIVE_AUTHORSHIP_AROUND_VALIDATED_HNK_PAYLOADS","historical_payload_claim":false,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"prepared_validation_batch":"SWHNK-L01-STORY-VALIDATION-V1"},
+  "remaining_L01":{"vocabulary":32,"review":22,"total":54},
+  "next_gate":"SWHNK-L01-STORY-VALIDATION-V1"
+}
