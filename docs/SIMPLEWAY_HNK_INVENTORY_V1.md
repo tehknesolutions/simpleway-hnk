@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-10  
-**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION AUTHORING  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V23`  
-**Pacote atual:** `simpleway-hnk@0.26.0`
+**Estado:** RECOVERY + GOVERNED AUTHORING + SCOPED VALIDATION + ACTIVATION PIPELINE  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V25`  
+**Pacote atual:** `simpleway-hnk@0.28.0`
 
 ## Ciclo 1
 
@@ -13,79 +13,75 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 
 ## L01 OPI — 10/10 VALIDATED
 
-Todos os dez OPI v1.1 possuem payload HNK reproduzível, foram revisados e estão validados para uso escopado no curso.
+Todos os dez OPI v1.1 possuem payload HNK reproduzível, foram revisados e estão validados para uso escopado no curso. A validação do curso não altera por si só autoridade lexical histórica.
 
-| OPI | HNK v1.1 | Estado |
-|---:|---|---|
-| 01 | `KALA YA EN ES KU KE` | **VALIDATED** · whole-utterance formula |
-| 02 | `EN VAMAKALA KE` | **VALIDATED** |
-| 03 | `EN KU SARASALA KE` | **VALIDATED** · cardinal 0–99 scoped |
-| 04 | `EN SARADAYA KUVAN KE` | **VALIDATED** |
-| 05 | `EN VALI KUVAN KE` | **VALIDATED** |
-| 06 | `EN KU VALA KE` | **VALIDATED** |
-| 07 | `EN VANI KUVAN KE` + `EN VANI KUON KE` | **VALIDATED** · scoped residence semantics |
-| 08 | `EN KU VAMAVALA KE` | **VALIDATED** |
-| 09 | `EN VAME VAMAZAMU KE` | **VALIDATED** |
-| 10 | `VAMUSARO` context + `EN KU VALA KE` | **VALIDATED** |
+## L01 Activation — 24/72 authored-or-better
 
-OPI 7 validation did not mutate the recovered lexicon: `VANI` remains `WATCH` with meaning `null`; `KUVAN`/`KUON` remain `CANDIDATE`; `ON` remains `GATE`; no `WITH` lexeme was created.
+A release histórica comprova **72 teacher-drill slots**, mas o conteúdo bruto desses 72 drills não foi recuperado. O pipeline v1.1 cria drills novos derivados dos OPI validados e mantém essa proveniência explícita.
 
-## L01 Activation — P01 AUTHORED
+Estrutura da fase:
 
-Historical v1.0 evidence proves that L01 contained **72 teacher drills**, but the raw historical drill payload remains unrecovered.
-
-A v1.1 pipeline was created with exactly 72 slots:
-
-- slots 001–060: six foundation modes for each of the 10 validated OPI;
-- slots 061–072: 12 integrative drills.
+- 001–060: 6 foundation drills para cada um dos 10 OPI;
+- 061–072: 12 integrative drills.
 
 Foundation modes:
 
 `RECOGNIZE_INTENT`, `REPEAT_FORM`, `PRODUCE_QUESTION`, `TRACE_GIDS`, `PRODUCE_RESPONSE`, `MICRO_DIALOGUE`.
 
-Pack P01 implements slots **001–012**, sourced only from validated OPI 1–2.
+### P01 — slots 001–012 — VALIDATED
 
-Current state:
+Fonte: OPI 1–2.
 
-- Activation target: **72**
-- AUTHORED: **12 = 16.6667%**
-- VALIDATED: **0**
-- FROZEN: **0**
-- new HNK lexical forms introduced by P01: **0**
+- 12/12 VALIDATED;
+- zero novas formas HNK;
+- `YA/ES` continuam não resolvidos em PHR-001;
+- `NE` continua CANDIDATE;
+- G-IDs são autoridade estrutural;
+- Candidate D continua `PREPRODUCTION_NOT_OFFICIAL`;
+- não há alegação de reconstrução histórica.
 
-These 12 drills are new v1.1 authorship, not reconstructed historical v1.0 content.
+### P02 — slots 013–024 — AUTHORED
 
-Prepared validation batch:
+Fonte: OPI 3–4.
 
-`SWHNK-L01-ACTIVATION-P01-VALIDATION-V1`
+- 12/12 AUTHORED;
+- validação ainda não aplicada;
+- OPI 3 pratica `EN KU SARASALA KE` + `[CARDINAL_0_99]`;
+- OPI 4 pratica `EN SARADAYA KUVAN KE` + `[PLACE]`;
+- `SARASALA` continua WATCH;
+- numerais 0–9 e `KUVAN` continuam CANDIDATE;
+- zero novas formas HNK.
 
-It is waiting for explicit approval before any of the 12 drills move to VALIDATED.
+Gate preparado: `SWHNK-L01-ACTIVATION-P02-VALIDATION-V1`.
 
-## L01 total progress
+Se aprovado, P02 sobe para VALIDATED e a fase Activation atinge **24/72 = 33.3333% VALIDATED**.
+
+## Progresso L01
 
 L01 target: **155 slots**.
 
 - OPI VALIDATED: **10**
+- Activation VALIDATED: **12**
 - Activation AUTHORED: **12**
-- authored-or-better total: **22/155 = 14.1935%**
-- validated total: **10/155 = 6.4516%**
-- remaining unimplemented: **133**
+- authored-or-better total: **34/155 = 21.9355%**
+- validated total: **22/155 = 14.1935%**
+- remaining unimplemented: **121**
 
-## Cycle 1 progress
+## Progresso Ciclo 1
 
-Exclusive current states:
+Estados exclusivos:
 
-**986 MISSING + 12 AUTHORED + 10 VALIDATED + 0 FROZEN = 1.008**.
+**974 MISSING + 12 AUTHORED + 22 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulative authored-or-better: **22/1.008 = 2.1825%**.
+Cumulativo authored-or-better: **34/1.008 = 3.3730%**.
 
-Historical evidence remains **82/1.008 = 8.1349%**, comprising 10 OPI + 72 Activation source-confirmed frozen slots.
+Historical evidence permanece **82/1.008 = 8.1349%**, referente a 10 OPI + 72 Activation comprovados como estrutura/publicação histórica, não payload atual reproduzível.
 
 ## Corpus linguístico governado
 
 Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`) e 7 frases recuperadas.
 
-Registry autorado governado `@hnk/linguas/authored`: **14 CANDIDATE forms** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
+Registry autorado `@hnk/linguas/authored`: **14 CANDIDATE forms** — `KUVAN`, `VALA`, `KUON`, `NE`, `BIZO`, `DUVE`, `HOYU`, `KETI`, `LUSO`, `MUPI`, `NURA`, `PEVU`, `TOMI`, `ZOKA`.
 
 Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **45/144 = 31.25%**.
 
