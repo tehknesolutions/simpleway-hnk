@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L01-STORY-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "scope":["L01-STORY-001","L01-STORY-002","L01-STORY-003","L01-STORY-004","L01-STORY-005"],
+  "source_authoring":"../authoring/story-lane.v1.json",
+  "source_batch":"./story-human-batch.v1.json",
+  "before":{"AUTHORED":5,"VALIDATED":0,"FROZEN":0},
+  "after":{"AUTHORED":0,"VALIDATED":5,"FROZEN":0},
+  "global_before":{"AUTHORED":5,"VALIDATED":96,"FROZEN":0},
+  "global_after":{"AUTHORED":0,"VALIDATED":101,"FROZEN":0},
+  "authority_effect":{"new_HNK_lexical_forms":0,"new_HNK_grammar_rules":0,"language_authority_promotions":0,"VANI_meaning":"NULL_UNCHANGED","VAMUSARO_weekend_gloss_claim":false,"YA_ES_token_glosses_created":false},
+  "historical_boundary":{"recovered_historical_story_payload":false,"current_story_payload_origin":"NEW_GOVERNED_V1_1_NARRATIVE_AUTHORSHIP"}
+}
