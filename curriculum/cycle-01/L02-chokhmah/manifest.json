@@ -1,8 +1,8 @@
 {
   "lesson_id":"HNK-L02",
   "sphere":"Chokhmah",
-  "version":"0.0.4",
-  "status":"SEMANTIC_TARGETS_APPROVED_REBIND_REVIEW_PENDING_PEDAGOGY_HOLD",
+  "version":"0.0.5",
+  "status":"SEMANTIC_TARGETS_APPROVED_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD",
   "source_scaffold":"recovered/lesson.scaffold.v0.0.1.json",
   "source_lock":"source-lock/l02-source-lock-audit.v1.json",
   "semantic_targets":"source-lock/l02-semantic-curriculum-targets.v1.json",
@@ -10,13 +10,13 @@
   "semantic_targets_transition":"validation/l02-semantic-targets.approved-transition.v1.json",
   "exact_rebind_review":"source-lock/l02-exact-rebind-mapping-review.v1.json",
   "exact_rebind_gate":"validation/l02-exact-rebind-mapping-human-batch.v1.json",
-  "language_bindings":11,
-  "recovered_phrases":0,
-  "language_inventory":{"FROZEN":5,"WATCH":5,"GATE":1,"with_master_meaning":9,"without_master_meaning":2,"authored_candidates_originating_in_L02":0},
-  "semantic_gap":{"target":5,"approved":5,"forms_selected":0,"scoped_rebinds_applied":0,"mapping_candidates":["AN","EN","KUVAN","KU","KE"],"new_surface_forms_created":0,"strategy":"SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION"},
-  "pedagogy":{"student_cards":0,"teacher_drills":0,"content_frozen":false,"authoring_hold":true,"hold_reason":"EXACT_REBIND_MAPPING_REQUIRES_EXPLICIT_HUMAN_APPROVAL_BEFORE_ANY_PEDAGOGY_SOURCE_BINDING"},
-  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"versioned_content_freeze_required_for_publication":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true,"numerology_selects_forms":false,"semantic_approval_does_not_apply_form_mapping":true,"cross_lesson_reuse_requires_explicit_mapping_gate":true,"cross_lesson_reuse_does_not_promote_authority":true},
-  "language_authority":"@hnk/linguas",
+  "exact_rebind_transition":"validation/l02-exact-rebind-mapping.applied-transition.v1.json",
+  "language_bindings":{"recovered_lexemes":11,"scoped_authored_candidates":5,"governed_total":16,"recovered_phrases":0},
+  "semantic_gap":{"target":5,"approved":5,"forms_selected":5,"scoped_rebinds_applied":5,"mapped_forms":["AN","EN","KUVAN","KU","KE"],"new_surface_forms_created":0,"strategy":"SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION"},
+  "unresolved_source_forms":[{"form":"VANUVALI","authority":"GATE","meaning":null},{"form":"VANI","authority":"WATCH","meaning":null}],
+  "pedagogy":{"student_cards":0,"teacher_drills":0,"content_frozen":false,"authoring_hold":true,"hold_reason":"UNRESOLVED_VOCABULARY_POLICY_AND_PEDAGOGY_SOURCE_CONTRACT_PENDING"},
+  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"versioned_content_freeze_required_for_publication":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true,"numerology_selects_forms":false,"cross_lesson_reuse_does_not_promote_authority":true,"scope_binding_is_not_pedagogy_validation":true},
+  "language_authority":"@hnk/linguas@1.6.0-candidate",
   "glyph_authority":"@hnk/glyphs",
-  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1"
+  "next_gate":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1"
 }
