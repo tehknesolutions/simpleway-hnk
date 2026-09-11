@@ -1,0 +1,65 @@
+{
+  "contract_id":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_SENTENCE_AUTHORING_YET",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "principle":"INTENT_BEFORE_SENTENCE_PATTERN_AND_SOURCE_BEFORE_PEDAGOGY",
+  "upstream":[
+    "../validation/l02-exact-rebind-mapping.applied-transition.v1.json",
+    "../validation/l02-unresolved-vocabulary.applied-transition.v1.json"
+  ],
+  "teachable_source_set":[
+    {"ref":"LEX-009","form":"TAYOVAN","meaning_pt":"cidade","authority":"FROZEN","role":"URBAN_PLACE"},
+    {"ref":"LEX-010","form":"KALOVALA","meaning_pt":"edifício / prédio","authority":"FROZEN","role":"BUILT_PLACE"},
+    {"ref":"LEX-011","form":"PAROVAN","meaning_pt":"biblioteca","authority":"FROZEN","role":"EDUCATION_PLACE"},
+    {"ref":"LEX-012","form":"PARAZAMI","meaning_pt":"estudo / estudar","authority":"WATCH","role":"EDUCATION_ACTIVITY"},
+    {"ref":"LEX-013","form":"VALI","meaning_pt":"trabalho / trabalhar","authority":"FROZEN","role":"WORK_ACTIVITY"},
+    {"ref":"LEX-014","form":"SAROSARI","meaning_pt":"viagem / viajar","authority":"WATCH","role":"TRAVEL_ACTIVITY"},
+    {"ref":"LEX-015","form":"PARI","meaning_pt":"ver","authority":"WATCH","role":"PERCEPTION"},
+    {"ref":"LEX-020","form":"PA","meaning_pt":"ontem","authority":"WATCH","role":"PAST_TIME_REFERENCE"},
+    {"ref":"LEX-032","form":"PITSA","meaning_pt":"pizza","authority":"FROZEN","role":"CONCRETE_LOANWORD"},
+    {"ref":"LEX-003","form":"VALIVAN","meaning_pt":"escritório","authority":"FROZEN","role":"WORK_PLACE","binding":"L02_CURRICULUM_REBIND"},
+    {"ref":"LEX-004","form":"PARAZAMO","meaning_pt":"escola / domínio de estudo","authority":"FROZEN","role":"EDUCATION_PLACE","binding":"L02_CURRICULUM_REBIND"},
+    {"ref":"AUTH-016","form":"AN","meaning_scope":"first-person referent","authority":"CANDIDATE","role":"FIRST_PERSON_REFERENT"},
+    {"ref":"AUTH-017","form":"EN","meaning_scope":"second-person referent","authority":"CANDIDATE","role":"SECOND_PERSON_REFERENT"},
+    {"ref":"AUTH-001","form":"KUVAN","meaning_scope":"locative interrogative variable","authority":"CANDIDATE","role":"LOCATION_INTERROGATIVE"},
+    {"ref":"AUTH-018","form":"KU","meaning_scope":"interrogative content selector","authority":"CANDIDATE","role":"CONTENT_SELECTOR"},
+    {"ref":"AUTH-019","form":"KE","meaning_scope":"clause-final question operator in scoped use","authority":"CANDIDATE","role":"QUESTION_OPERATOR"}
+  ],
+  "excluded_source_observations":[
+    {"ref":"LEX-030","form":"VANUVALI","reason":"meaning unrecovered; source evidence only"},
+    {"ref":"LEX-031","form":"VANI","reason":"master meaning unrecovered; L01 residence reading not generalized"}
+  ],
+  "opi_intent_targets":[
+    {"id":"L02-OPI-INTENT-001","intent":"identify or discuss city/place context","primary_roles":["URBAN_PLACE","SECOND_PERSON_REFERENT"]},
+    {"id":"L02-OPI-INTENT-002","intent":"ask or state work place","primary_roles":["WORK_ACTIVITY","WORK_PLACE","LOCATION_INTERROGATIVE"]},
+    {"id":"L02-OPI-INTENT-003","intent":"ask or state study place","primary_roles":["EDUCATION_ACTIVITY","EDUCATION_PLACE","LOCATION_INTERROGATIVE"]},
+    {"id":"L02-OPI-INTENT-004","intent":"ask about study content or activity","primary_roles":["EDUCATION_ACTIVITY","CONTENT_SELECTOR"]},
+    {"id":"L02-OPI-INTENT-005","intent":"ask about work activity","primary_roles":["WORK_ACTIVITY","CONTENT_SELECTOR"]},
+    {"id":"L02-OPI-INTENT-006","intent":"discuss travel or movement experience","primary_roles":["TRAVEL_ACTIVITY","FIRST_PERSON_REFERENT","SECOND_PERSON_REFERENT"]},
+    {"id":"L02-OPI-INTENT-007","intent":"ask or state what was seen / perception context","primary_roles":["PERCEPTION","CONTENT_SELECTOR"]},
+    {"id":"L02-OPI-INTENT-008","intent":"introduce yesterday as a bounded past-time reference","primary_roles":["PAST_TIME_REFERENCE"]},
+    {"id":"L02-OPI-INTENT-009","intent":"use one concrete loanword in a controlled content-selection context","primary_roles":["CONCRETE_LOANWORD","CONTENT_SELECTOR"]},
+    {"id":"L02-OPI-INTENT-010","intent":"integrated urban-study-work interview combining previously approved roles","primary_roles":["URBAN_PLACE","WORK_PLACE","EDUCATION_PLACE","QUESTION_OPERATOR"]}
+  ],
+  "sentence_pattern_policy":{
+    "status":"NOT_AUTHORIZED_YET",
+    "rule":"Approval of communicative intents does not authorize an HNK word order, tense system, copula, preposition, agreement rule or productive interrogative grammar.",
+    "next_step":"Prepare evidence-first candidate sentence patterns for each OPI intent in a separate pattern gate, reusing only already governed forms."
+  },
+  "boundaries":[
+    "No new HNK surface form may be created by this contract.",
+    "No meaning may be assigned to VANI or VANUVALI.",
+    "AN/EN do not establish a complete person paradigm.",
+    "KU is not assigned one universal WH translation.",
+    "KUVAN does not make KU or VAN globally productive.",
+    "KE does not establish universal interrogative grammar.",
+    "PA does not establish a general tense morphology; it remains a recovered lexical past-time anchor.",
+    "WATCH and CANDIDATE authorities remain visible in pedagogy metadata.",
+    "Biblical Hebrew, Koine Greek and Esperanto remain reference/comparison layers and do not select HNK forms."
+  ],
+  "checks":{"teachable_source_assets":16,"opi_intents":10,"HNK_sentences_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"unresolved_meanings_assigned":0},
+  "decision":"READY_FOR_HUMAN_PEDAGOGY_SOURCE_REVIEW",
+  "next_gate":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1"
+}
