@@ -1,0 +1,26 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V49",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L02","category":"opi","range":[1,10]},"implementation_state":"AUTHORED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"L02 OPI-001..010 are now reproducible course-authoring payloads derived from approved evidence-ranked patterns with complete @hnk/glyphs G-ID/IPA expansion. They remain pending a separate validation gate; this does not promote language authority or universalize local syntax."}
+  ],
+  "validation_evidence_updates":{
+    "L02_OPI_target":10,
+    "L02_OPI_authored":10,
+    "L02_OPI_validated":0,
+    "L02_OPI_missing":0,
+    "L02_OPI_authored_or_better":10,
+    "L02_OPI_authored_slots":[1,2,3,4,5,6,7,8,9,10],
+    "L02_OPI_validated_slots":[],
+    "L02_OPI_missing_slots":[],
+    "L02_OPI_authoring_artifact":"../curriculum/cycle-01/L02-chokhmah/authoring/l02-opi-001-010.authored.v1.json",
+    "L02_OPI_authoring_transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-authoring.applied-transition.v1.json",
+    "L02_OPI_validation_batch":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-validation-batch.v1.json",
+    "L02_OPI_validation_status":"PENDING_EXPLICIT_HUMAN_APPROVAL",
+    "L02_authored_total":10,
+    "L02_validated_total":0,
+    "L02_missing_total":129,
+    "L02_status":"OPI_10_OF_10_AUTHORED_PENDING_VALIDATION"
+  }
+}
