@@ -22,7 +22,7 @@ const review=await json('curriculum/cycle-01/L01-kether/authoring/review-lane.v1
 const reviewBatch=await json('curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json');
 const reviewTransition=await json('curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json');
 const seal=await json('curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json');
-const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V45.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V46.json');
 const l02Manifest=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
 const l02Audit=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json');
 const l02Matrix=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-semantic-curriculum-targets.v1.json');
@@ -32,6 +32,9 @@ const l02RebindReview=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l
 const l02RebindBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-exact-rebind-mapping-human-batch.v1.json');
 const l02RebindTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-exact-rebind-mapping.applied-transition.v1.json');
 const l02UnresolvedBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-unresolved-vocabulary-human-batch.v1.json');
+const l02UnresolvedTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-unresolved-vocabulary.applied-transition.v1.json');
+const l02PedagogyContract=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-pedagogy-source-contract.v1.json');
+const l02PedagogyBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-pedagogy-source-contract-human-batch.v1.json');
 const vAni=await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 
 assert.equal(contract.target_total,1008);
@@ -51,9 +54,9 @@ assert.equal(reviewTransition.lesson_after.VALIDATED,155);
 assert.equal(seal.validated,155);
 assert.equal(seal.cycle_final_seal_boundary.cycle_final_seal_slot_consumed,false);
 
-assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V45');
-assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_EXACT_REBINDS_APPLIED_UNRESOLVED_VOCABULARY_GATE_PENDING');
-assert.equal(snapshot.package,'simpleway-hnk@0.48.0');
+assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V46');
+assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_SOURCE_TEACHABILITY_COMPLETE_PEDAGOGY_SOURCE_CONTRACT_REVIEW_PENDING');
+assert.equal(snapshot.package,'simpleway-hnk@0.49.0');
 assert.deepEqual(snapshot.implementation,{MISSING:853,AUTHORED:0,VALIDATED:155,FROZEN:0});
 assert.equal(snapshot.L01.validated,155);
 
@@ -66,56 +69,66 @@ assert.equal(l02Audit.coverage.vocabulary_target,16);
 assert.equal(l02Audit.coverage.proxy_gap,5);
 assert.deepEqual(l02Audit.lexemes.filter(x=>x.meaning_pt===null).map(x=>x.form),['VANUVALI','VANI']);
 
-assert.equal(l02Matrix.status,'SEMANTIC_TARGETS_APPROVED_FORM_MAPPING_PENDING');
 assert.equal(l02Matrix.semantic_targets.length,5);
 assert.ok(l02Matrix.semantic_targets.every(x=>x.semantic_approval==='APPROVED'));
-assert.ok(l02Matrix.semantic_targets.every(x=>x.form_selected===null));
-assert.equal(l02Matrix.mapping_summary.semantic_targets_approved,5);
 assert.equal(l02Batch.status,'APPROVED_ALL_DECISIONS_APPLIED_TO_SEMANTICS_ONLY');
 assert.equal(l02Transition.after.semantic_targets_approved,5);
-assert.equal(l02Transition.after.forms_selected,0);
-assert.equal(l02Transition.after.rebinds_applied,0);
 
-assert.equal(l02RebindReview.status,'READY_FOR_HUMAN_REBIND_REVIEW_NOT_APPLIED');
 assert.equal(l02RebindReview.proposed_rebinds.length,5);
 assert.equal(l02RebindBatch.status,'APPROVED_ALL_DECISIONS');
 assert.ok(l02RebindBatch.decisions_requested.every(x=>x.decision==='APPROVED'));
 assert.equal(l02RebindTransition.status,'APPLIED');
 assert.equal(l02RebindTransition.scope_extensions.length,5);
 assert.equal(l02RebindTransition.after.L02_authored_candidates_scoped,5);
-assert.equal(l02RebindTransition.after.L02_governed_language_assets,16);
 assert.equal(l02RebindTransition.non_effects.curriculum_slots_implemented,0);
 assert.equal(l02RebindTransition.non_effects.authority_promotions,0);
 
-assert.equal(l02Manifest.status,'SEMANTIC_TARGETS_APPROVED_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
-assert.equal(l02Manifest.semantic_gap.approved,5);
-assert.equal(l02Manifest.semantic_gap.forms_selected,5);
-assert.equal(l02Manifest.semantic_gap.scoped_rebinds_applied,5);
-assert.deepEqual(l02Manifest.semantic_gap.mapped_forms,['AN','EN','KUVAN','KU','KE']);
-assert.equal(l02Manifest.language_bindings.governed_total,16);
-assert.equal(l02Manifest.teachability.semantic_teachable_assets,14);
-assert.equal(l02Manifest.teachability.unresolved_assets,2);
-assert.equal(l02Manifest.pedagogy.authoring_hold,true);
-assert.equal(l02Manifest.next_gate,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
+assert.equal(l02UnresolvedBatch.status,'APPROVED_AND_APPLIED_TO_LANGUAGE_SCOPE');
+assert.ok(l02UnresolvedBatch.decisions_requested.every(x=>x.decision==='APPROVED'));
+assert.deepEqual(l02UnresolvedBatch.application.rebind_refs,['LEX-003','LEX-004']);
+assert.equal(l02UnresolvedBatch.application.semantic_teachable_assets_after,16);
+assert.equal(l02UnresolvedBatch.application.curriculum_slots_implemented,0);
+assert.equal(l02UnresolvedTransition.status,'APPLIED');
+assert.deepEqual(l02UnresolvedTransition.rebinds.map(x=>x.form),['VALIVAN','PARAZAMO']);
+assert.equal(l02UnresolvedTransition.after.L02_governed_source_references,18);
+assert.equal(l02UnresolvedTransition.after.L02_semantic_teachable_assets,16);
+assert.equal(l02UnresolvedTransition.after.L02_unresolved_source_observations,2);
+assert.equal(l02UnresolvedTransition.after.remaining_teachable_gap,0);
 
-assert.equal(snapshot.L02.status,'EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
-assert.equal(snapshot.L02.approved_primary_semantic_targets,5);
-assert.equal(snapshot.L02.forms_selected,5);
-assert.equal(snapshot.L02.scoped_rebinds_applied,5);
-assert.equal(snapshot.L02.governed_language_assets,16);
-assert.equal(snapshot.L02.semantic_teachable_assets,14);
-assert.equal(snapshot.L02.unresolved_assets,2);
-assert.equal(snapshot.L02.curriculum_vocabulary_authored,0);
-assert.equal(snapshot.L02.curriculum_vocabulary_validated,0);
-assert.equal(snapshot.next_gate,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
-assert.equal(snapshot.L02_unresolved_policy.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.deepEqual(snapshot.L02_unresolved_policy.recommended_rebinds,['VALIVAN','PARAZAMO']);
-assert.equal(l02UnresolvedBatch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(l02PedagogyContract.status,'READY_FOR_HUMAN_REVIEW_NO_SENTENCE_AUTHORING_YET');
+assert.equal(l02PedagogyContract.teachable_source_set.length,16);
+assert.equal(l02PedagogyContract.opi_intent_targets.length,10);
+assert.equal(l02PedagogyContract.sentence_pattern_policy.status,'NOT_AUTHORIZED_YET');
+assert.equal(l02PedagogyContract.checks.HNK_sentences_authored,0);
+assert.equal(l02PedagogyBatch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(l02PedagogyBatch.checks.curriculum_slots_implemented,0);
+
+assert.equal(l02Manifest.status,'SOURCE_TEACHABILITY_COMPLETE_PEDAGOGY_SOURCE_CONTRACT_REVIEW_PENDING');
+assert.equal(l02Manifest.language_bindings.governed_source_references,18);
+assert.equal(l02Manifest.teachability.semantic_teachable_assets,16);
+assert.equal(l02Manifest.teachability.unresolved_source_observations,2);
+assert.equal(l02Manifest.teachability.remaining_teachable_gap,0);
+assert.equal(l02Manifest.pedagogy.opi_intents_drafted,10);
+assert.equal(l02Manifest.pedagogy.opi_sentence_patterns,0);
+assert.equal(l02Manifest.pedagogy.curriculum_slots_implemented,0);
+assert.equal(l02Manifest.pedagogy.authoring_hold,true);
+assert.equal(l02Manifest.next_gate,'SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1');
+
+assert.equal(snapshot.L02.status,'SOURCE_TEACHABILITY_COMPLETE_PEDAGOGY_SOURCE_CONTRACT_REVIEW_PENDING');
+assert.equal(snapshot.L02.governed_source_references,18);
+assert.equal(snapshot.L02.semantic_teachable_assets,16);
+assert.equal(snapshot.L02.unresolved_source_observations,2);
+assert.equal(snapshot.L02.remaining_teachable_gap,0);
+assert.equal(snapshot.L02.opi_intents_drafted,10);
+assert.equal(snapshot.L02.opi_sentence_patterns,0);
+assert.equal(snapshot.L02.curriculum_slots_implemented,0);
+assert.equal(snapshot.L02_pedagogy_source.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(snapshot.next_gate,'SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V45');
-console.log('L01 Kether remains 155/155 VALIDATED; L02 exact rebinds are applied at language scope, 0 L02 curriculum slots are implemented, and the unresolved-vocabulary gate remains pending.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V46');
+console.log('L01 Kether remains 155/155 VALIDATED; L02 source teachability is complete at 16/16, pedagogy-source review is pending, and 0 L02 curriculum slots are implemented.');
