@@ -35,24 +35,20 @@ assert.equal(gid.status,'STRUCTURAL_EXPANSION_COMPLETE_NOT_CURRICULUM_AUTHORING'
 assert.equal(gid.patterns.length,10);
 assert.equal(gid.checks.patterns_expanded,10);
 assert.equal(gid.checks.unresolved_transliteration_units,0);
-assert.equal(gid.checks.curriculum_OPI_authored,0);
 assert.deepEqual(gid.patterns.find(x=>x.id==='L02-OPI-PAT-002').words.find(x=>x.form==='KUVAN').gids,['G23','G05','G31','G01','G12']);
 assert.deepEqual(gid.patterns.find(x=>x.id==='L02-OPI-PAT-009').words.find(x=>x.form==='PITSA').gids,['G21','G03','G30','G01']);
 
-assert.equal(authoringGate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(authoringGate.status,'APPROVED_ALL_DECISIONS');
 assert.equal(authoringGate.decisions_requested.length,13);
-assert.equal(authoringGate.checks.current_curriculum_OPI_AUTHORED,0);
-assert.equal(authoringGate.projected_effect_if_all_approved.curriculum_OPI_AUTHORED,10);
-assert.equal(authoringGate.projected_effect_if_all_approved.curriculum_OPI_VALIDATED,0);
+assert.ok(authoringGate.decisions_requested.every(x=>x.decision==='APPROVED'));
+assert.equal(authoringGate.approved_effect.curriculum_OPI_AUTHORED,10);
+assert.equal(authoringGate.approved_effect.curriculum_OPI_VALIDATED,0);
 
-assert.equal(manifest.status,'PATTERNS_APPROVED_GID_EXPANSION_COMPLETE_OPI_AUTHORING_GATE_PENDING');
 assert.equal(manifest.pedagogy.opi_pattern_candidates,10);
 assert.equal(manifest.pedagogy.opi_patterns_approved,10);
 assert.equal(manifest.pedagogy.opi_gid_expansions_complete,10);
-assert.equal(manifest.pedagogy.curriculum_OPI_authored,0);
-assert.equal(manifest.pedagogy.curriculum_OPI_validated,0);
-assert.equal(manifest.pedagogy.curriculum_slots_implemented,0);
-assert.equal(manifest.next_gate,'SWHNK-L02-OPI-AUTHORING-HUMAN-BATCH-V1');
+assert.equal(manifest.rules.GID_is_structural_authority,true);
+assert.equal(manifest.rules.pattern_candidate_does_not_create_universal_grammar,true);
 
-console.log('PASS SWHNK-L02-OPI-PATTERN-GID-EXPANSION-V1');
-console.log('L02 has 10 approved scoped OPI patterns and complete G-ID expansion; OPI authoring remains pending explicit human approval and 0 curriculum slots are implemented.');
+console.log('PASS SWHNK-L02-OPI-PATTERN-GID-EXPANSION-V2');
+console.log('L02 OPI pattern approval and G-ID expansion remain auditable while current curriculum state has advanced through authoring and validation.');
