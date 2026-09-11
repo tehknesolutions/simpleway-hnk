@@ -1,0 +1,14 @@
+{
+  "transition_id":"SWHNK-L02-SQS-AUTHORING-PARTIAL-TRANSITION-V1",
+  "status":"APPLIED_WITH_CANONICAL_CONTRACT_GUARD",
+  "date":"2026-09-11",
+  "source_gate":"l02-sqs-authoring-human-batch.v2.json",
+  "canonical_contract":"../../../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json",
+  "before":{"SQS_AUTHORED":0,"SQS_VALIDATED":0,"L02_implemented":10,"GLOBAL_AUTHORED":0,"GLOBAL_VALIDATED":165,"GLOBAL_MISSING":843},
+  "after":{"SQS_AUTHORED":15,"SQS_VALIDATED":0,"L02_implemented":25,"GLOBAL_AUTHORED":15,"GLOBAL_VALIDATED":165,"GLOBAL_MISSING":828},
+  "applied":{"story":5,"qa":4,"structure_headers":2,"structures":4,"total":15},
+  "held":{"slot":"L02-STR-005","required_content":"I didn't...","reason":"Canonical Cycle 1 contract requirement conflicts with previously assigned EN + SAROSARI + KE pattern; exact negative-past HNK frame is not yet governed."},
+  "displaced_pattern":{"pattern_ref":"L02-SQS-PAT-016","frame":"EN + SAROSARI + KE","status":"REMAINS_APPROVED_SCOPED_PATTERN_NOT_CONSUMING_STRUCTURE_SLOT"},
+  "non_effects":{"new_surface_forms_created":0,"authority_promotions":0,"new_universal_grammar_rules":0,"OPI006_yes_no_response_branch_unblocked":false,"VANI_resolved":false,"VANUVALI_resolved":false},
+  "next_gates":["SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1","SWHNK-L02-STR005-I-DIDNT-DESIGN-HUMAN-BATCH-V1"]
+}
