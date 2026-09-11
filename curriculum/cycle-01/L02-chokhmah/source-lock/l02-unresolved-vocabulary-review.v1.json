@@ -1,0 +1,27 @@
+{
+  "review_id":"SWHNK-L02-UNRESOLVED-VOCABULARY-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_POLICY_REVIEW_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "principle":"PRESERVE_UNRESOLVED_SOURCE_AND_REUSE_STRONGEST_EXISTING_ASSETS_BEFORE_INVENTION",
+  "current_state":{"governed_language_assets":16,"semantic_teachable_assets":14,"vocabulary_target":16,"unresolved_source_forms":["VANUVALI","VANI"],"remaining_teachable_gap":2},
+  "unresolved_source_policy":[
+    {"form":"VANUVALI","ref":"LEX-030","authority":"GATE","master_meaning":null,"policy":"PRESERVE_AS_SOURCE_EVIDENCE_NOT_TEACHABLE_VOCABULARY","reason":"Observed form exists, but exact semantic gloss was not recovered."},
+    {"form":"VANI","ref":"LEX-031","authority":"WATCH","master_meaning":null,"policy":"PRESERVE_AS_SOURCE_EVIDENCE_NOT_TEACHABLE_VOCABULARY","reason":"Observed form exists, but exact master gloss was not recovered; L01 residence reading remains scoped and is not generalized."}
+  ],
+  "candidate_replacements_considered":[
+    {"ref":"LEX-003","form":"VALIVAN","meaning_pt":"escritório","authority":"FROZEN","certainty":"RECOVERED","current_lessons":["L01","L03"],"fit":"STRONG","rationale":"Directly reinforces Chokhmah urban/work-place domain; recovered and FROZEN."},
+    {"ref":"LEX-004","form":"PARAZAMO","meaning_pt":"escola / domínio de estudo","authority":"FROZEN","certainty":"RECOVERED","current_lessons":["L01","L03"],"fit":"STRONG","rationale":"Directly reinforces Chokhmah education/place domain; recovered and FROZEN."},
+    {"ref":"LEX-018","form":"SARU","meaning_pt":"todos os dias / habitualidade","authority":"WATCH","certainty":"RECOVERED","current_lessons":["L03"],"fit":"MEDIUM","rationale":"Useful for work/study routines but introduces a frequency microgrammar not yet required for the minimal L02 source contract."},
+    {"ref":"LEX-019","form":"TA","meaning_pt":"destino / propósito","authority":"CANDIDATE","certainty":"PARTIAL","current_lessons":["L03"],"fit":"MEDIUM","rationale":"Useful for travel/purpose, but lower authority and greater grammatical ambiguity than the recommended FROZEN place nouns."}
+  ],
+  "recommended_rebinds":[
+    {"ref":"LEX-003","form":"VALIVAN","target_role":"WORK_PLACE","proposed_lessons":["L01","L02","L03"],"action":"CURRICULUM_REBIND_ONLY","authority_promotion":false,"historical_claim_change":false},
+    {"ref":"LEX-004","form":"PARAZAMO","target_role":"EDUCATION_PLACE","proposed_lessons":["L01","L02","L03"],"action":"CURRICULUM_REBIND_ONLY","authority_promotion":false,"historical_claim_change":false}
+  ],
+  "projected_teachability_if_approved":{"semantic_teachable_assets":16,"vocabulary_target":16,"remaining_teachable_gap":0,"unresolved_source_forms_preserved":2,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0},
+  "non_effects":["Does not assign meanings to VANI or VANUVALI.","Does not delete unresolved historical/source observations.","Does not create new HNK surface forms.","Does not promote WATCH, GATE or CANDIDATE authorities.","Does not author any L02 sentence, OPI, Story, Q&A, Structure, Activation or Review.","Does not treat 16 governed/teachable assets as curriculum validation by itself."],
+  "decision":"READY_FOR_HUMAN_APPROVAL",
+  "next_gate":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1"
+}
