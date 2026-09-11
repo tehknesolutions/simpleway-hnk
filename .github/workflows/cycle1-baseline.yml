@@ -88,3 +88,6 @@ jobs:
 
       - name: Validate L02 semantic targets
         run: npm run validate:l02-semantic-targets
+
+      - name: Validate L02 governed rebind source map
+        run: npm run validate:l02-rebind-source-map
