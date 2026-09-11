@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 IMPLEMENTED · 133 VALIDATED · REVIEW 22 AUTHORED PENDING VALIDATION  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V40`  
-**Pacote atual:** `simpleway-hnk@0.42.0`
+**Estado:** L01 KETHER 155/155 VALIDATED · CURRICULUM COMPLETE · L02 CHOKHMAH SOURCE LOCK NEXT  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V41`  
+**Pacote atual:** `simpleway-hnk@0.43.0`
 
 ## Ciclo 1
 
@@ -11,7 +11,15 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-## L01 Kether
+Estados exclusivos atuais do Ciclo 1:
+
+**853 MISSING + 0 AUTHORED + 155 VALIDATED + 0 FROZEN = 1.008**.
+
+Cumulativo authored-or-better e validated-or-better: **155/1.008 = 15.3770%**.
+
+Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
+
+## L01 Kether — concluída
 
 - Teacher Notes: **3/3 VALIDATED**
 - OPI: **10/10 VALIDATED**
@@ -21,60 +29,22 @@ Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 
 - Structures: **5/5 VALIDATED**
 - Vocabulary: **32/32 VALIDATED**
 - Activation: **72/72 VALIDATED**
-- Review: **22/22 AUTHORED, 0/22 VALIDATED**
+- Review: **22/22 VALIDATED**
 
-L01 está **155/155 authored-or-better = 100% implementada**. O estado atual é **133 VALIDATED + 22 AUTHORED**; o único gate restante da implementação da Lesson 1 é a validação dos 22 Review.
+Resultado: **155/155 VALIDATED = 100%**.
 
-## Vocabulary — 32/32 VALIDATED
+Não há slots `MISSING` nem `AUTHORED` pendentes em L01.
 
-O gap-8 passou por semântica antes de forma, mapping evidence-first, aplicação à autoria e validação curricular explícita.
+## Review — 22/22 VALIDATED
 
-Os oito slots finais são:
+A lane reconciliada usa apenas material já validado da L01:
 
-- `KALA` → `AUTH-015 CANDIDATE`
-- `AN` → `AUTH-016 CANDIDATE`
-- `EN` → `AUTH-017 CANDIDATE`
-- `KU` → `AUTH-018 CANDIDATE`
-- `KE` → `AUTH-019 CANDIDATE`
-- `VANI` → binding L01 sobre `LEX-031`, mantendo `WATCH` e Master Lexicon `meaning=null`
-- `VAME` → rebind L01 sobre `LEX-025`, mantendo `GATE`
-- `ZAMI` → `AUTH-020 CANDIDATE`
+- `REV-001..020`: dois Review para cada OPI 001..010 — `QUESTION_RECALL` + `RESPONSE_RECALL`;
+- `REV-021..022`: dois `INTEGRATIVE_INTERVIEW`, compostos somente de perguntas e contratos de resposta previamente validados.
 
-Os seis `AUTH-015..020` são novas entradas canônicas autoradas, mas não novas formas de superfície. A validação curricular não cria recuperação histórica standalone nem promove autoridade linguística.
+A validação dos Review não criou palavras, ativos linguísticos, gramática universal, claims históricos nem promoções de autoridade.
 
-## Review — 22/22 AUTHORED
-
-A lane reconciliada usa apenas payloads já validados da L01:
-
-- `REV-001..020`: dois Review para cada OPI validado 001..010 — `QUESTION_RECALL` + `RESPONSE_RECALL`;
-- `REV-021..022`: dois `INTEGRATIVE_INTERVIEW`, compostos somente por perguntas e contratos de resposta já validados.
-
-Foi corrigido um mismatch da primeira versão do Review: `EN ZAMI HENUVOKODAN KE` não é mais tratado como `L01-OPI-003`. O OPI 003 canônico permanece `EN KU SARASALA KE`, no contexto de idade.
-
-Fronteiras preservadas:
-
-- YA e ES permanecem semanticamente não resolvidos dentro da fórmula recuperada do OPI 001;
-- VANI permanece `WATCH`, com `meaning=null` no Master Lexicon;
-- VAME permanece `GATE`;
-- SARASALA, VAMAVALA e VAMAZAMU permanecem `WATCH`;
-- ON permanece `GATE`;
-- KUVAN, KUON, VALA, NE e AUTH-015..020 permanecem `CANDIDATE`;
-- `VAMUSARO` permanece “descanso / período de lazer”, nunca é promovido a tradução literal de “weekend”;
-- nenhum `DO`, `WITH` ou WH universal é criado.
-
-Gate preparado: `SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1` — **AWAITING_EXPLICIT_HUMAN_VALIDATION**.
-
-Se aprovado, L01 chega a **155/155 VALIDATED**.
-
-## Progresso Ciclo 1
-
-Estados exclusivos:
-
-**853 MISSING + 22 AUTHORED + 133 VALIDATED + 0 FROZEN = 1.008**.
-
-Cumulativo authored-or-better: **155/1.008 = 15.3770%**.
-
-Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
+O mismatch da primeira versão continua corrigido: `EN ZAMI HENUVOKODAN KE` não é tratado como OPI 003. O OPI 003 permanece `EN KU SARASALA KE`, no contexto de idade.
 
 ## Corpus linguístico governado
 
@@ -82,10 +52,56 @@ Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 n�
 
 Registry autorado `@hnk/linguas/authored`: **20 CANDIDATE forms**.
 
-Proxy recuperado: **31/144 = 21.5278%**. Proxy de ativos governados: **51/144 = 35.4167%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
+Ativos governados distintos: **51**. Proxy de ativos governados: **51/144 = 35.4167%**. Proxy recuperado: **31/144 = 21.5278%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
 
-## Fronteiras e CI
+Fronteiras preservadas:
 
-`hnk-english-app` permanece referência metodológica/arquitetural, não owner do corpus HNK. `@hnk/linguas` é owner linguístico; `@hnk/glyphs` é owner estrutural G01–G40. Candidate D visual continua `PREPRODUCTION_NOT_OFFICIAL`.
+- YA e ES: semântica standalone ainda não recuperada;
+- VANI: `WATCH`, Master Lexicon `meaning=null`;
+- VAME: `GATE`;
+- SARASALA, VAMAVALA, VAMAZAMU: `WATCH`;
+- ON: `GATE`;
+- KUVAN, KUON, VALA, NE e `AUTH-015..020`: `CANDIDATE`;
+- VAMUSARO: “descanso / período de lazer”, nunca tradução literal automática de “weekend”;
+- nenhum `DO`, `WITH` ou WH universal foi criado;
+- Candidate D visual permanece `PREPRODUCTION_NOT_OFFICIAL`.
 
-O CI remoto não deve ser descrito como verde sem uma execução real bem-sucedida do runner e dos validadores.
+## Kether Seal — classificação correta
+
+`SWHNK-L01-KETHER-SEAL-V1` é um **marcador operacional de conclusão curricular da Lesson 1**.
+
+Ele não é um dos três selos finais do Ciclo 1 e não consome seus slots. Permanecem reservados:
+
+- `Verbum`
+- `Logos`
+- `Dialogos`
+
+O registro separado `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` também fixa essa fronteira.
+
+## L02 Chokhmah — próxima entrada
+
+A entrada de L02 é `SOURCE_LOCK_FIRST`.
+
+Estado atual conhecido pelo manifest:
+
+- `status`: `LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD`
+- `language_bindings`: **11**
+- `recovered_phrases`: **0**
+- `student_cards`: **0**
+- `teacher_drills`: **0**
+- conteúdo pedagógico congelado: **false**
+
+Próximo gate: **`L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1`**.
+
+A regra é auditar primeiro os 11 bindings recuperados e a proveniência das fontes antes de qualquer autoria de OPI, Vocabulary, Activation ou Review para Chokhmah.
+
+## Repositórios e ownership
+
+- `tehknesolutions/simpleway-hnk`: currículo, authoring, validação e progresso;
+- `tehknesolutions/codex-hnk/packages/hnk-linguas`: owner linguístico;
+- `tehknesolutions/codex-hnk/packages/hnk-glyphs`: owner estrutural G01–G40;
+- `hnk-english-app`: referência metodológica/UX apenas.
+
+## CI
+
+O GitHub Actions remoto ainda não pode ser chamado de verde. Runs recentes têm falhado antes de expor steps normais do job; portanto não há evidência remota suficiente para dizer que `npm test` executou com sucesso ou que uma asserção específica falhou.
