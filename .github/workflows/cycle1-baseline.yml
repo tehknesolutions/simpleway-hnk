@@ -79,3 +79,6 @@ jobs:
 
       - name: Validate review lane
         run: npm run validate:reviews
+
+      - name: Validate Kether closure
+        run: npm run validate:kether-closure
