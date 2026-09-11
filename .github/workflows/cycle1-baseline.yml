@@ -115,3 +115,6 @@ jobs:
 
       - name: Validate L02 QA answer pattern gate
         run: npm run validate:l02-qa-answer-pattern
+
+      - name: Validate L02 SQS authoring gate
+        run: npm run validate:l02-sqs-authoring-gate
