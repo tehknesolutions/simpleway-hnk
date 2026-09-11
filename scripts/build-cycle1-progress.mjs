@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 
 const root = resolve(new URL('..', import.meta.url).pathname);
@@ -8,33 +8,40 @@ async function readJson(path) {
 }
 
 const allocation = await readJson('progress/cycle1-allocation.v1.json');
+const model = await readJson('progress/progress-model.v1.json');
 const evidenceBase = await readJson('progress/evidence-overrides.v1.json');
-const evidenceSupplement = await readJson('progress/evidence-overrides.v37.json');
+
+const progressFiles = await readdir(resolve(root, 'progress'));
+const supplementPaths = progressFiles
+  .filter((name) => /^evidence-overrides\.v\d+\.json$/.test(name) && name !== 'evidence-overrides.v1.json')
+  .sort((a, b) => Number(a.match(/\.v(\d+)\./)[1]) - Number(b.match(/\.v(\d+)\./)[1]))
+  .map((name) => `progress/${name}`);
+const supplements = [];
+for (const path of supplementPaths) supplements.push(await readJson(path));
+
 const evidence = {
   ...evidenceBase,
-  overrides: [...evidenceBase.overrides, ...(evidenceSupplement.overrides ?? [])],
-  lexical_evidence: {...evidenceBase.lexical_evidence, ...(evidenceSupplement.lexical_evidence_updates ?? {})},
-  validation_evidence: {...evidenceBase.validation_evidence, ...(evidenceSupplement.validation_evidence_updates ?? {})},
+  overrides: [...evidenceBase.overrides],
+  lexical_evidence: {...evidenceBase.lexical_evidence},
+  validation_evidence: {...evidenceBase.validation_evidence},
 };
-const model = await readJson('progress/progress-model.v1.json');
+for (const supplement of supplements) {
+  evidence.overrides.push(...(supplement.overrides ?? []));
+  Object.assign(evidence.lexical_evidence, supplement.lexical_evidence_updates ?? {});
+  Object.assign(evidence.validation_evidence, supplement.validation_evidence_updates ?? {});
+}
 
 const categoryOrder = [
   'teacher_notes', 'opi', 'story', 'qa', 'structure_headers',
   'structures', 'vocabulary', 'activation', 'review', 'final_seals'
 ];
-
-function pad(n, width = 3) {
-  return String(n).padStart(width, '0');
-}
-
-function slotId(lesson, category, index) {
-  const codes = {
-    teacher_notes: 'NOTE', opi: 'OPI', story: 'STORY', qa: 'QA',
-    structure_headers: 'HDR', structures: 'STR', vocabulary: 'VOC',
-    activation: 'ACT', review: 'REV', final_seals: 'SEAL'
-  };
-  return `${lesson}-${codes[category]}-${pad(index)}`;
-}
+const codes = {
+  teacher_notes: 'NOTE', opi: 'OPI', story: 'STORY', qa: 'QA',
+  structure_headers: 'HDR', structures: 'STR', vocabulary: 'VOC',
+  activation: 'ACT', review: 'REV', final_seals: 'SEAL'
+};
+const pad = (n, width = 3) => String(n).padStart(width, '0');
+const slotId = (lesson, category, index) => `${lesson}-${codes[category]}-${pad(index)}`;
 
 const slots = [];
 for (const [lesson, lessonAllocation] of Object.entries(allocation.lessons)) {
@@ -59,10 +66,8 @@ for (const [lesson, lessonAllocation] of Object.entries(allocation.lessons)) {
 for (const override of evidence.overrides) {
   const { lesson, category, range } = override.selector;
   const [start, end] = range;
-  const matched = slots.filter(s => s.lesson === lesson && s.category === category && s.index >= start && s.index <= end);
-  if (matched.length !== end - start + 1) {
-    throw new Error(`Override ${lesson}/${category}/${start}-${end} matched ${matched.length} slots.`);
-  }
+  const matched = slots.filter((s) => s.lesson === lesson && s.category === category && s.index >= start && s.index <= end);
+  if (matched.length !== end - start + 1) throw new Error(`Override ${lesson}/${category}/${start}-${end} matched ${matched.length} slots.`);
   for (const slot of matched) {
     slot.implementation_state = override.implementation_state;
     slot.evidence_state = override.evidence_state;
@@ -71,20 +76,16 @@ for (const override of evidence.overrides) {
   }
 }
 
-function countBy(items, key, allowed = null) {
-  const result = Object.fromEntries((allowed ?? []).map(x => [x, 0]));
+function countBy(items, key, allowed = []) {
+  const result = Object.fromEntries(allowed.map((x) => [x, 0]));
   for (const item of items) result[item[key]] = (result[item[key]] ?? 0) + 1;
   return result;
 }
-
-function pct(n, d) {
-  return d === 0 ? 0 : Number(((n / d) * 100).toFixed(4));
-}
-
+function pct(n, d) { return d === 0 ? 0 : Number(((n / d) * 100).toFixed(4)); }
 function maturityCounts(items) {
-  const authoredOrBetter = items.filter(s => ['AUTHORED','VALIDATED','FROZEN'].includes(s.implementation_state)).length;
-  const validatedOrBetter = items.filter(s => ['VALIDATED','FROZEN'].includes(s.implementation_state)).length;
-  const frozen = items.filter(s => s.implementation_state === 'FROZEN').length;
+  const authoredOrBetter = items.filter((s) => ['AUTHORED','VALIDATED','FROZEN'].includes(s.implementation_state)).length;
+  const validatedOrBetter = items.filter((s) => ['VALIDATED','FROZEN'].includes(s.implementation_state)).length;
+  const frozen = items.filter((s) => s.implementation_state === 'FROZEN').length;
   return {
     authored_or_better: authoredOrBetter,
     validated_or_better: validatedOrBetter,
@@ -95,54 +96,55 @@ function maturityCounts(items) {
   };
 }
 
-const implementationIds = model.implementation_states.map(s => s.id);
-const evidenceIds = model.evidence_states.map(s => s.id);
+const implementationIds = model.implementation_states.map((s) => s.id);
+const evidenceIds = model.evidence_states.map((s) => s.id);
 const implementation = countBy(slots, 'implementation_state', implementationIds);
 const evidenceCounts = countBy(slots, 'evidence_state', evidenceIds);
-const scaffolded = slots.filter(s => s.scaffolded).length;
+const scaffolded = slots.filter((s) => s.scaffolded).length;
 
 const perLesson = {};
 for (const lesson of Object.keys(allocation.lessons)) {
-  const lessonSlots = slots.filter(s => s.lesson === lesson);
+  const lessonSlots = slots.filter((s) => s.lesson === lesson);
   perLesson[lesson] = {
     sphere: allocation.lessons[lesson].sphere,
     target: lessonSlots.length,
     implementation: countBy(lessonSlots, 'implementation_state', implementationIds),
     maturity: maturityCounts(lessonSlots),
     evidence: countBy(lessonSlots, 'evidence_state', evidenceIds),
-    scaffolded: lessonSlots.filter(s => s.scaffolded).length
+    scaffolded: lessonSlots.filter((s) => s.scaffolded).length
   };
 }
 
 const perCategory = {};
 for (const category of categoryOrder) {
-  const categorySlots = slots.filter(s => s.category === category);
+  const categorySlots = slots.filter((s) => s.category === category);
   perCategory[category] = {
     target: categorySlots.length,
     implementation: countBy(categorySlots, 'implementation_state', implementationIds),
     maturity: maturityCounts(categorySlots),
     evidence: countBy(categorySlots, 'evidence_state', evidenceIds),
-    scaffolded: categorySlots.filter(s => s.scaffolded).length
+    scaffolded: categorySlots.filter((s) => s.scaffolded).length
   };
 }
 
-const frozenHistorical = evidenceCounts.SOURCE_CONFIRMED_FROZEN ?? 0;
 const lexical = evidence.lexical_evidence;
+const frozenHistorical = evidenceCounts.SOURCE_CONFIRMED_FROZEN ?? 0;
+const generatedFrom = [
+  'progress/cycle1-allocation.v1.json',
+  'progress/progress-model.v1.json',
+  'progress/evidence-overrides.v1.json',
+  ...supplementPaths
+];
 
 const summary = {
   snapshot_id: 'SWHNK-C1-PROGRESS-GENERATED-V1',
-  generated_from: [
-    'progress/cycle1-allocation.v1.json',
-    'progress/progress-model.v1.json',
-    'progress/evidence-overrides.v1.json',
-    'progress/evidence-overrides.v37.json'
-  ],
+  generated_from: generatedFrom,
   target_slots: slots.length,
   implementation,
-  implementation_percent: Object.fromEntries(Object.entries(implementation).map(([k, v]) => [k, pct(v, slots.length)])),
+  implementation_percent: Object.fromEntries(Object.entries(implementation).map(([k,v]) => [k,pct(v,slots.length)])),
   maturity: maturityCounts(slots),
   evidence: evidenceCounts,
-  evidence_percent: Object.fromEntries(Object.entries(evidenceCounts).map(([k, v]) => [k, pct(v, slots.length)])),
+  evidence_percent: Object.fromEntries(Object.entries(evidenceCounts).map(([k,v]) => [k,pct(v,slots.length)])),
   scaffolded,
   scaffolded_percent: pct(scaffolded, slots.length),
   historical_frozen_evidence_floor: frozenHistorical,
@@ -187,18 +189,15 @@ const summary = {
   }
 };
 
-if (slots.length !== allocation.cycle_totals.total) {
-  throw new Error(`Generated ${slots.length} slots; contract allocation expects ${allocation.cycle_totals.total}.`);
-}
+if (slots.length !== allocation.cycle_totals.total) throw new Error(`Generated ${slots.length} slots; contract allocation expects ${allocation.cycle_totals.total}.`);
 
-const write = process.argv.includes('--write');
-if (write) {
+if (process.argv.includes('--write')) {
   const ledgerPath = resolve(root, 'progress/generated/cycle1-slots.v1.json');
   const summaryPath = resolve(root, 'progress/generated/cycle1-progress.snapshot.v1.json');
   await mkdir(dirname(ledgerPath), { recursive: true });
-  await writeFile(ledgerPath, JSON.stringify({ ledger_id: 'SWHNK-C1-SLOT-LEDGER-V1', slots }, null, 2) + '\n');
+  await writeFile(ledgerPath, JSON.stringify({ ledger_id: 'SWHNK-C1-SLOT-LEDGER-V1', generated_from: generatedFrom, slots }, null, 2) + '\n');
   await writeFile(summaryPath, JSON.stringify(summary, null, 2) + '\n');
-  console.log(`WROTE ${slots.length} slots`);
+  console.log(`WROTE ${slots.length} slots using ${supplementPaths.length} supplement(s)`);
   console.log(summaryPath);
 } else {
   console.log(JSON.stringify(summary, null, 2));
