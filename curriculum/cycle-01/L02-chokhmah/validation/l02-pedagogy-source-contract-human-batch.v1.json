@@ -1,0 +1,20 @@
+{
+  "batch_id":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source":"../source-lock/l02-pedagogy-source-contract.v1.json",
+  "decisions_requested":[
+    {"id":"DEC-L02-PED-SRC-001","statement":"Approve the 16-item teachable source set for L02 while keeping VANUVALI and VANI excluded from teachable vocabulary until their semantics are separately governed.","if_approved":{"teachable_source_assets":16,"unresolved_excluded":2}},
+    {"id":"DEC-L02-PED-SRC-002","statement":"Approve the ten communicative OPI intent targets as the pedagogical scope for Chokhmah before any HNK sentence pattern is authored.","if_approved":{"opi_intents_approved":10,"HNK_sentences_authored":0}},
+    {"id":"DEC-L02-PED-SRC-003","statement":"Approve reuse of AN, EN, KUVAN, KU and KE only within their existing scoped CANDIDATE meanings; do not infer a complete pronoun or interrogative grammar.","if_approved":{"scope_reuse":true,"authority_promotions":0,"universal_grammar_claims":0}},
+    {"id":"DEC-L02-PED-SRC-004","statement":"Approve PA only as the recovered lexical anchor 'ontem'; do not infer a productive past tense or tense morphology from its use in L02.","if_approved":{"PA_scope":"LEXICAL_PAST_TIME_ANCHOR_ONLY","tense_grammar_created":false}},
+    {"id":"DEC-L02-PED-SRC-005","statement":"Approve PITSA as a controlled concrete loanword example without using it to generalize borrowing or food morphology.","if_approved":{"PITSA_scope":"CONTROLLED_LOANWORD_EXAMPLE","loanword_grammar_created":false}},
+    {"id":"DEC-L02-PED-SRC-006","statement":"Keep WATCH/CANDIDATE authority metadata visible in all later L02 pedagogy artifacts and do not silently promote PARAZAMI, SAROSARI, PARI, PA, AN, EN, KUVAN, KU or KE.","if_approved":{"authority_metadata_preserved":true,"authority_promotions":0}},
+    {"id":"DEC-L02-PED-SRC-007","statement":"Confirm that this gate authorizes only the next evidence-first sentence-pattern review; it does not itself implement OPI, Story, Q&A, Structures, Vocabulary cards, Activation or Review slots.","if_approved":{"curriculum_slots_implemented":0,"next_gate":"PREPARE_L02_OPI_PATTERN_REVIEW"}},
+    {"id":"DEC-L02-PED-SRC-008","statement":"Confirm that Biblical Hebrew, Koine Greek and Esperanto remain comparison/reference layers and do not select L02 forms or sentence order.","if_approved":{"reference_layers_select_forms":false,"reference_layers_select_word_order":false}}
+  ],
+  "checks":{"teachable_source_assets":16,"opi_intents":10,"HNK_sentences_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"curriculum_slots_implemented":0},
+  "projected_effect_if_all_approved":{"pedagogy_source_contract_approved":true,"opi_intents_approved":10,"sentence_patterns_approved":0,"curriculum_slots_implemented":0,"next_gate":"PREPARE_L02_OPI_PATTERN_REVIEW"},
+  "next_gate_if_approved":"PREPARE_L02_OPI_PATTERN_REVIEW",
+  "next_gate_if_not_approved":"REVISE_L02_PEDAGOGY_SOURCE_CONTRACT"
+}
