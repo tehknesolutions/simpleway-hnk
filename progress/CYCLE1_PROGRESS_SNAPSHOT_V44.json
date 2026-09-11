@@ -1,16 +1,17 @@
 {
   "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V44",
   "as_of":"2026-09-11",
-  "status":"L01_KETHER_COMPLETE_L02_FIVE_REBINDS_APPLIED_16_SOURCE_BOUND_14_TEACHABLE_2_UNRESOLVED",
+  "status":"L01_KETHER_COMPLETE_L02_SEMANTIC_TARGETS_APPROVED_EXACT_REBIND_REVIEW_PENDING",
   "package":"simpleway-hnk@0.46.0",
   "target_slots":1008,
   "implementation":{"MISSING":853,"AUTHORED":0,"VALIDATED":155,"FROZEN":0},
   "implementation_percent":{"MISSING":84.6230,"AUTHORED":0.0,"VALIDATED":15.3770,"FROZEN":0.0},
   "cumulative_maturity":{"AUTHORED_OR_BETTER":155,"AUTHORED_OR_BETTER_percent":15.3770,"VALIDATED_OR_BETTER":155,"VALIDATED_OR_BETTER_percent":15.3770,"FROZEN":0},
   "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":20,"canonical_governed_unique_assets":51,"canonical_governed_proxy_percent":35.4167},
-  "L01":{"sphere":"Kether","target":155,"validated":155,"status":"VALIDATED_COMPLETE"},
-  "L02":{"sphere":"Chokhmah","target":139,"implementation":{"MISSING":139,"AUTHORED":0,"VALIDATED":0,"FROZEN":0},"status":"SEMANTIC_TARGETS_APPROVED_REBIND_APPLIED_VOCAB_SOURCE_BOUND_PEDAGOGY_HOLD","vocabulary_target":16,"recovered_source_assets":11,"approved_primary_semantic_targets":5,"primary_scoped_rebinds_applied":5,"primary_rebind_forms":["AN","EN","KUVAN","KU","KE"],"vocabulary_source_bound":16,"vocabulary_semantically_teachable":14,"vocabulary_semantic_hold":2,"unresolved_source_forms":["VANUVALI","VANI"],"curriculum_vocabulary_authored":0,"curriculum_vocabulary_validated":0,"new_surface_forms_created":0,"authority_promotions":0,"pedagogy_authoring_hold":true},
-  "L02_pending_resolution":{"active_teaching_gap":2,"policy_proposal":"PRESERVE_UNRESOLVED_AS_SOURCE_OBSERVATION_NOT_ACTIVE_VOCABULARY","proposed_semantic_targets":["HABITUALITY_EVERY_DAY","DESTINATION_PURPOSE"],"proposed_existing_assets":["SARU","TA"],"proposal":"../curriculum/cycle-01/L02-chokhmah/source-lock/l02-unresolved-vocabulary-resolution-options.v1.json","human_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-unresolved-vocabulary-human-batch.v1.json","approved":false,"rebinds_applied":0},
-  "boundaries":{"VANUVALI_master_meaning":null,"VANI_master_meaning":null,"L01_VANI_residence_interpretation_not_generalized":true,"source_bound_is_not_validated":true,"cross_lesson_reuse_does_not_promote_authority":true,"unresolved_forms_are_not_teachable_without_semantics":true,"numerology_selects_forms":false},
-  "next_gate":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1"
+  "L01":{"sphere":"Kether","target":155,"validated":155,"status":"VALIDATED_COMPLETE","cycle_final_seal_slot_consumed":false},
+  "L02":{"sphere":"Chokhmah","target":139,"implementation":{"MISSING":139,"AUTHORED":0,"VALIDATED":0,"FROZEN":0},"status":"SEMANTIC_TARGETS_APPROVED_REBIND_REVIEW_PENDING_PEDAGOGY_HOLD","vocabulary_target":16,"recovered_source_assets":11,"recovered_phrases":0,"approved_primary_semantic_targets":5,"forms_selected":0,"scoped_rebinds_applied":0,"mapping_candidates":["AN","EN","KUVAN","KU","KE"],"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"curriculum_vocabulary_authored":0,"curriculum_vocabulary_validated":0,"student_cards":0,"teacher_drills":0,"pedagogy_authoring_hold":true},
+  "L02_mapping_review":{"review":"../curriculum/cycle-01/L02-chokhmah/source-lock/l02-exact-rebind-mapping-review.v1.json","human_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-exact-rebind-mapping-human-batch.v1.json","status":"AWAITING_EXPLICIT_HUMAN_APPROVAL","proposed_rebinds":5,"proposed_forms":["AN","EN","KUVAN","KU","KE"],"change_type":"LESSON_SCOPE_EXTENSION_ONLY","registry_changes_applied":0},
+  "boundaries":{"VANUVALI_master_meaning":null,"VANUVALI_authority":"GATE","VANI_master_meaning":null,"VANI_authority":"WATCH","L01_VANI_residence_interpretation_not_generalized":true,"semantic_approval_does_not_apply_form_mapping":true,"cross_lesson_reuse_requires_explicit_mapping_gate":true,"source_bound_is_not_validated":true,"numerology_selects_forms":false,"reference_layers_are_independent_courses":false},
+  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1",
+  "next_gate_rule":"APPROVE_EXACT_REBINDS_BEFORE_LANGUAGE_OWNER_OR_PEDAGOGY_CHANGES"
 }
