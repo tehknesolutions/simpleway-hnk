@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V47",
+  "as_of":"2026-09-11",
+  "status":"L01_KETHER_COMPLETE_L02_PEDAGOGY_SOURCE_APPROVED_OPI_PATTERN_REVIEW_PENDING",
+  "package":"simpleway-hnk@0.50.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":853,"AUTHORED":0,"VALIDATED":155,"FROZEN":0},
+  "implementation_percent":{"MISSING":84.6230,"AUTHORED":0.0,"VALIDATED":15.3770,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":155,"AUTHORED_OR_BETTER_percent":15.3770,"VALIDATED_OR_BETTER":155,"VALIDATED_OR_BETTER_percent":15.3770,"FROZEN":0},
+  "L01":{"sphere":"Kether","target":155,"validated":155,"status":"VALIDATED_COMPLETE"},
+  "L02":{"sphere":"Chokhmah","target":139,"implementation":{"MISSING":139,"AUTHORED":0,"VALIDATED":0,"FROZEN":0},"status":"PEDAGOGY_SOURCE_APPROVED_OPI_PATTERN_REVIEW_PENDING","semantic_teachable_assets":16,"unresolved_source_observations":2,"opi_intents_approved":10,"opi_pattern_candidates":10,"opi_patterns_approved":0,"curriculum_OPI_authored":0,"curriculum_OPI_validated":0,"curriculum_slots_implemented":0,"new_surface_forms_created":0,"authority_promotions":0,"pedagogy_authoring_hold":true},
+  "L02_pattern_review":{"review":"../curriculum/cycle-01/L02-chokhmah/source-lock/l02-opi-pattern-review.v1.json","human_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-pattern-review-human-batch.v1.json","status":"AWAITING_EXPLICIT_HUMAN_APPROVAL","patterns":10,"evidence_profile":{"direct_reuse_validated":1,"strong_analogies":4,"ordinary_analogies":2,"new_scoped_hypotheses":2,"composite":1},"highest_risk_pattern":"PA EN PARI KALOVALA KE","GID_expansion_status":"PENDING_PATTERN_APPROVAL"},
+  "boundaries":{"VANUVALI_master_meaning":null,"VANI_master_meaning":null,"universal_grammar_claims":0,"curriculum_OPI_authored":0,"source_bound_is_not_validated":true,"pattern_candidate_is_not_curriculum_authoring":true,"numerology_selects_forms":false,"reference_layers_are_independent_courses":false},
+  "next_gate":"SWHNK-L02-OPI-PATTERN-REVIEW-HUMAN-BATCH-V1",
+  "next_gate_rule":"APPROVE_OR_REVISE_EVIDENCE_RANKED_PATTERNS_BEFORE_GID_EXPANSION_AND_L02_OPI_AUTHORING"
+}
