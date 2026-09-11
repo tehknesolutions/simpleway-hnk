@@ -1,40 +1,43 @@
 {
-  "evidence_id": "SWHNK-C1-EVIDENCE-SUPPLEMENT-V39",
-  "status": "ACTIVE_SUPPLEMENT",
-  "source_date": "2026-09-11",
-  "overrides": [
-    {
-      "selector": {"lesson":"L01","category":"vocabulary","range":[25,32]},
-      "implementation_state": "VALIDATED",
-      "evidence_state": "STRUCTURE_RECOVERED",
-      "scaffolded": true,
-      "reason": "VOC-025..032 explicitly validated for scoped SimpleWay HNK L01 course use. AUTH-015..020 remain CANDIDATE; VANI remains WATCH with Master Lexicon meaning null; VAME remains GATE. No historical standalone gloss, universal grammar, visual-canon promotion or language-authority promotion is implied."
-    }
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V39",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L01","category":"vocabulary","range":[25,32]},"implementation_state":"VALIDATED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"VOC-025..032 explicitly validated for scoped SimpleWay HNK L01 course use. AUTH-015..020 remain CANDIDATE; VANI remains WATCH with Master Lexicon meaning null; VAME remains GATE. No historical standalone gloss, universal grammar, visual-canon promotion or language-authority promotion is implied."},
+    {"selector":{"lesson":"L01","category":"review","range":[1,22]},"implementation_state":"AUTHORED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"REV-001..022 authored as new v1.1 pedagogy using only already validated L01 OPI payloads and response contracts. Twenty slots are two-per-OPI review and two are integrative interviews. Validation remains pending; no historical Review payload is claimed."}
   ],
-  "lexical_evidence_updates": {
-    "authored_candidate_forms_linked_to_cycle1": 20,
-    "authored_candidate_forms": ["KUVAN","VALA","KUON","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA","KALA","AN","EN","KU","KE","ZAMI"],
-    "governed_unique_language_assets": 51,
-    "governed_asset_proxy_percent": 35.4167,
-    "lesson_authored_candidates": {"L01":20,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
-    "gate": "L01_VOCABULARY_32_OF_32_VALIDATED_REVIEW_LANE_NEXT",
-    "warning": "31/144 remains the recovered-form proxy; 51/144 is the governed-language-asset proxy. L01 Vocabulary is 32/32 validated for scoped course use; language authorities remain unchanged."
+  "lexical_evidence_updates":{
+    "authored_candidate_forms_linked_to_cycle1":20,
+    "authored_candidate_forms":["KUVAN","VALA","KUON","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA","KALA","AN","EN","KU","KE","ZAMI"],
+    "governed_unique_language_assets":51,
+    "governed_asset_proxy_percent":35.4167,
+    "lesson_authored_candidates":{"L01":20,"L02":0,"L03":0,"L04":0,"L05":0,"L06":0,"L07":0},
+    "gate":"L01_REVIEW_AUTHORED_22_VALIDATION_PENDING",
+    "warning":"31/144 remains the recovered-form proxy; 51/144 is the governed-language-asset proxy. L01 Vocabulary is 32/32 VALIDATED. Review 22/22 is AUTHORED and awaits explicit validation; language authorities remain unchanged."
   },
-  "validation_evidence_updates": {
-    "L01_Vocabulary_target": 32,
-    "L01_Vocabulary_authored": 0,
-    "L01_Vocabulary_validated": 32,
-    "L01_Vocabulary_missing": 0,
-    "L01_Vocabulary_authored_or_better": 32,
-    "L01_Vocabulary_filled_slots": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
-    "L01_Vocabulary_authored_slots": [],
-    "L01_Vocabulary_validated_slots": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
-    "L01_Vocabulary_missing_slots": [],
-    "prepared_vocabulary_batch": null,
-    "vocabulary_validation_batch": "../curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json",
-    "vocabulary_validation_transition": "../curriculum/cycle-01/L01-kether/validation/vocabulary-025-032.validated-transition.v1.json",
-    "vocabulary_semantic_targets_status": "APPROVED",
-    "vocabulary_form_mapping_status": "APPROVED_AND_APPLIED_TO_AUTHORING",
-    "vocabulary_final_validation_status": "APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION"
+  "validation_evidence_updates":{
+    "L01_Vocabulary_target":32,
+    "L01_Vocabulary_authored":0,
+    "L01_Vocabulary_validated":32,
+    "L01_Vocabulary_missing":0,
+    "L01_Vocabulary_authored_or_better":32,
+    "L01_Vocabulary_filled_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
+    "L01_Vocabulary_authored_slots":[],
+    "L01_Vocabulary_validated_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
+    "L01_Vocabulary_missing_slots":[],
+    "prepared_vocabulary_batch":null,
+    "vocabulary_validation_batch":"../curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json",
+    "vocabulary_validation_transition":"../curriculum/cycle-01/L01-kether/validation/vocabulary-025-032.validated-transition.v1.json",
+    "vocabulary_semantic_targets_status":"APPROVED",
+    "vocabulary_form_mapping_status":"APPROVED_AND_APPLIED_TO_AUTHORING",
+    "vocabulary_final_validation_status":"APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION",
+    "L01_Review_target":22,
+    "L01_Review_authored":22,
+    "L01_Review_validated":0,
+    "L01_Review_missing":0,
+    "L01_Review_authored_or_better":22,
+    "L01_Review_authored_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+    "L01_Review_validated_slots":[],
+    "prepared_review_batch":"../curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json"
   }
 }
