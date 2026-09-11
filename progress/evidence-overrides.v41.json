@@ -1,0 +1,38 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V41",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {
+      "selector":{"lesson":"L01","category":"review","range":[1,22]},
+      "implementation_state":"VALIDATED",
+      "evidence_state":"STRUCTURE_RECOVERED",
+      "scaffolded":true,
+      "reason":"L01 Reviews 001-022 explicitly validated as new governed v1.1 pedagogy using only already validated L01 OPI payloads and response contracts. No new HNK forms, universal grammar, historical Review payload claim, language-authority promotion or visual-canon promotion is implied."
+    }
+  ],
+  "lexical_evidence_updates":{
+    "gate":"L01_KETHER_VALIDATED_COMPLETE_155_OF_155_L02_SOURCE_LOCK_NEXT",
+    "warning":"L01 Kether is 155/155 VALIDATED for scoped course use. This is curriculum completion, not language freeze. Recovered/source, WATCH, GATE, CANDIDATE and visual-canon boundaries remain unchanged."
+  },
+  "validation_evidence_updates":{
+    "L01_Review_target":22,
+    "L01_Review_authored":0,
+    "L01_Review_validated":22,
+    "L01_Review_missing":0,
+    "L01_Review_authored_or_better":22,
+    "L01_Review_authored_slots":[],
+    "L01_Review_validated_slots":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+    "L01_Review_missing_slots":[],
+    "prepared_review_batch":null,
+    "review_validation_status":"APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION",
+    "review_validation_batch":"../curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json",
+    "review_validation_transition":"../curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json",
+    "L01_target":155,
+    "L01_validated":155,
+    "L01_authored":0,
+    "L01_missing":0,
+    "L01_completion_percent":100.0,
+    "L01_completion_status":"VALIDATED_COMPLETE"
+  }
+}
