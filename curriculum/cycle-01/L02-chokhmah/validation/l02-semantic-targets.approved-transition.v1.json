@@ -1,0 +1,20 @@
+{
+  "transition_id":"SWHNK-L02-SEMANTIC-TARGETS-APPROVED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_batch":"./l02-semantic-targets-human-batch.v1.json",
+  "before":{"semantic_targets_drafted":5,"semantic_targets_approved":0,"forms_selected":0,"rebinds_applied":0},
+  "after":{"semantic_targets_drafted":5,"semantic_targets_approved":5,"forms_selected":0,"rebinds_applied":0},
+  "approved_targets":[
+    {"target_id":"L02-SEM-012","semantic_key":"FIRST_PERSON_REFERENT"},
+    {"target_id":"L02-SEM-013","semantic_key":"SECOND_PERSON_REFERENT"},
+    {"target_id":"L02-SEM-014","semantic_key":"LOCATION_INTERROGATIVE"},
+    {"target_id":"L02-SEM-015","semantic_key":"CONTENT_SELECTOR"},
+    {"target_id":"L02-SEM-016","semantic_key":"QUESTION_OPERATOR"}
+  ],
+  "authorized_next_candidates":["AN","EN","KUVAN","KU","KE"],
+  "boundaries":{"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"VANI_master_meaning":null,"VANUVALI_master_meaning":null,"historical_five_word_claim":false,"numerology_selects_forms":false,"pedagogy_created":false},
+  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-V1"
+}
