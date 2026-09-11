@@ -1,0 +1,26 @@
+{
+  "evidence_id": "SWHNK-C1-EVIDENCE-SUPPLEMENT-V40",
+  "status": "ACTIVE_SUPPLEMENT",
+  "source_date": "2026-09-11",
+  "overrides": [
+    {
+      "selector": {"lesson":"L01","category":"review","range":[1,22]},
+      "implementation_state": "AUTHORED",
+      "evidence_state": "STRUCTURE_RECOVERED",
+      "scaffolded": true,
+      "reason": "L01 Reviews 001-022 authored as new v1.1 active-recall/SRS pedagogy using only already validated L01 vocabulary and constructions. No new HNK form, historical reconstruction claim or language-authority promotion is created."
+    }
+  ],
+  "validation_evidence_updates": {
+    "L01_Review_target": 22,
+    "L01_Review_authored": 22,
+    "L01_Review_validated": 0,
+    "L01_Review_missing": 0,
+    "L01_Review_authored_or_better": 22,
+    "L01_Review_authored_slots": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+    "L01_Review_validated_slots": [],
+    "L01_Review_missing_slots": [],
+    "review_lane": "../curriculum/cycle-01/L01-kether/authoring/review-lane.v1.json",
+    "prepared_review_batch": "../curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json"
+  }
+}
