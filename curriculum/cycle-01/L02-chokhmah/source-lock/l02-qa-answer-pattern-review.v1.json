@@ -1,0 +1,20 @@
+{
+  "review_id":"SWHNK-L02-QA-ANSWER-PATTERN-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_pattern_review":"./l02-story-qa-structure-pattern-review.v1.json",
+  "source_pattern_approval":"../validation/l02-sqs-pattern-review.approved-transition.v1.json",
+  "method_reference":"../../L01-kether/authoring/qa-lane.v1.json",
+  "principle":"REUSE_L01_ANSWER_SCHEMA_METHOD_WITHOUT_INVENTING_DECLARATIVE_HNK_SYNTAX",
+  "answer_schema_candidates":[
+    {"id":"L02-QA-ANSWER-PAT-001","slot":"L02-QA-001","question_ref":"L02-OPI-002","question_hnk":"EN VALI KUVAN KE","answer_schema":"[WORKPLACE_OR_WORK_LOCATION]","governed_example_anchors":["VALIVAN","TAYOVAN"],"risk":"LOW_MEDIUM","boundary":"Schema licenses semantic response content only; it does not authorize a new declarative HNK sentence frame."},
+    {"id":"L02-QA-ANSWER-PAT-002","slot":"L02-QA-002","question_ref":"L02-OPI-003","question_hnk":"EN PARAZAMI KUVAN KE","answer_schema":"[STUDY_LOCATION_OR_SCHOOL_DOMAIN]","governed_example_anchors":["PARAZAMO","PAROVAN"],"risk":"LOW_MEDIUM","boundary":"PARAZAMI remains WATCH; schema does not establish locative or copular grammar."},
+    {"id":"L02-QA-ANSWER-PAT-003","slot":"L02-QA-003","question_refs":["L02-OPI-004","L02-OPI-005"],"answer_schema":"[GOVERNED_STUDY_CONTENT_OR_WORK_ACTIVITY]","governed_example_anchors":[],"risk":"MEDIUM_HIGH","boundary":"Open semantic response schema is bounded to governed course inventory; absence of a fixed example does not authorize creation of a new lexeme."},
+    {"id":"L02-QA-ANSWER-PAT-004","slot":"L02-QA-004","question_refs":["L02-OPI-006","L02-OPI-007","L02-OPI-008","L02-OPI-009"],"answer_schema":"[BRANCH_SPECIFIC_CONTROLLED_RESPONSE]","branches":[{"question_refs":["L02-OPI-007","L02-OPI-009"],"schema":"[PERCEIVED_OBJECT]","governed_example_anchors":["TAYOVAN","KALOVALA","PITSA"]},{"question_ref":"L02-OPI-008","schema":"[PERCEIVED_OBJECT_WITH_LEXICAL_TIME_CONTEXT]","governed_example_anchors":["KALOVALA","PA"],"boundary":"PA remains lexical 'ontem'; no tense syntax is authorized."},{"question_ref":"L02-OPI-006","schema":null,"status":"BLOCKED_NO_GOVERNED_YES_NO_RESPONSE_SCHEMA"}],"risk":"VERY_HIGH","boundary":"Do not fabricate yes/no particles or a declarative travel answer. The OPI-006 branch remains unavailable for Q&A answer production until separately governed."}
+  ],
+  "checks":{"QA_slots":4,"answer_schemas_proposed":4,"full_HNK_declarative_answers_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"blocked_yes_no_branches":1},
+  "non_effects":["Answer-schema approval would not establish declarative word order or copular grammar.","No new HNK lexeme is created by an answer schema.","The OPI-006 yes/no response branch remains blocked.","VANI and VANUVALI remain unresolved and excluded."],
+  "next_gate":"SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1"
+}
