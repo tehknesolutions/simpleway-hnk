@@ -1,0 +1,40 @@
+{
+  "matrix_id":"SWHNK-L02-CHOKHMAH-SEMANTIC-CURRICULUM-TARGETS-V1",
+  "status":"DRAFT_SEMANTICS_ONLY_FORM_MAPPING_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "principle":"SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION",
+  "source_lock":"./l02-source-lock-audit.v1.json",
+  "curriculum_target":139,
+  "vocabulary_target":16,
+  "recovered_asset_count":11,
+  "recovered_phrase_count":0,
+  "semantic_center":{"id":"URBAN_ACTIVITY_MOVEMENT_AND_EXPERIENCE","status":"PROVISIONAL_FROM_RECOVERED_ASSETS","statement":"The recovered L02 inventory clusters around urban place, study/work activity, travel, perception, past-time reference and one food loan. Sphere symbolism does not select lexical forms."},
+  "recovered_semantic_matrix":[
+    {"slot_proxy":1,"id":"LEX-009","form":"TAYOVAN","authority":"FROZEN","semantic_domain":"URBAN_PLACE","meaning_pt":"cidade","course_role":"place anchor"},
+    {"slot_proxy":2,"id":"LEX-010","form":"KALOVALA","authority":"FROZEN","semantic_domain":"URBAN_PLACE","meaning_pt":"edifício / prédio","course_role":"built-place anchor"},
+    {"slot_proxy":3,"id":"LEX-011","form":"PAROVAN","authority":"FROZEN","semantic_domain":"EDUCATION_PLACE","meaning_pt":"biblioteca","course_role":"study-place anchor"},
+    {"slot_proxy":4,"id":"LEX-012","form":"PARAZAMI","authority":"WATCH","semantic_domain":"EDUCATION_ACTIVITY","meaning_pt":"estudo / estudar","course_role":"learning activity"},
+    {"slot_proxy":5,"id":"LEX-013","form":"VALI","authority":"FROZEN","semantic_domain":"WORK_ACTIVITY","meaning_pt":"trabalho / trabalhar","course_role":"work activity"},
+    {"slot_proxy":6,"id":"LEX-014","form":"SAROSARI","authority":"WATCH","semantic_domain":"MOBILITY_TRAVEL","meaning_pt":"viagem / viajar","course_role":"movement/experience activity"},
+    {"slot_proxy":7,"id":"LEX-015","form":"PARI","authority":"WATCH","semantic_domain":"PERCEPTION","meaning_pt":"ver","course_role":"visual perception"},
+    {"slot_proxy":8,"id":"LEX-020","form":"PA","authority":"WATCH","semantic_domain":"PAST_TIME_REFERENCE","meaning_pt":"ontem","course_role":"past-time anchor"},
+    {"slot_proxy":9,"id":"LEX-030","form":"VANUVALI","authority":"GATE","semantic_domain":"UNRESOLVED_OBSERVED_FORM","meaning_pt":null,"course_role":"source-preserved unresolved form","boundary":"No curriculum meaning is assigned until recovered or explicitly governed."},
+    {"slot_proxy":10,"id":"LEX-031","form":"VANI","authority":"WATCH","semantic_domain":"UNRESOLVED_OBSERVED_FORM","meaning_pt":null,"course_role":"source-preserved unresolved form","boundary":"The scoped L01 residence reading is not imported into L02 as recovered meaning."},
+    {"slot_proxy":11,"id":"LEX-032","form":"PITSA","authority":"FROZEN","semantic_domain":"FOOD_LOAN","meaning_pt":"pizza","course_role":"concrete food/loanword anchor"}
+  ],
+  "domain_coverage":{"URBAN_PLACE":2,"EDUCATION_PLACE":1,"EDUCATION_ACTIVITY":1,"WORK_ACTIVITY":1,"MOBILITY_TRAVEL":1,"PERCEPTION":1,"PAST_TIME_REFERENCE":1,"FOOD_LOAN":1,"UNRESOLVED_OBSERVED_FORM":2},
+  "gap_analysis":{"numerical_proxy_gap":5,"interpretation":"The 5-gap is not treated as a command to invent five thematic nouns. Recovered content is already semantically rich; the main missing layer is reusable communicative function that lets the learner combine and question the recovered content.","preferred_strategy":"GOVERNED_CROSS_LESSON_REUSE_BEFORE_NEW_FORM_AUTHORING"},
+  "semantic_targets":[
+    {"target_id":"L02-SEM-012","semantic_key":"FIRST_PERSON_REFERENT","definition_pt":"referente de primeira pessoa para autoexpressão em atividades, deslocamentos e experiências","pedagogical_need":"Allows learner-centered statements using recovered L02 activity and experience lexemes.","form_selected":null,"historical_form_meaning_claim":false,"preferred_source_strategy":"REUSE_GOVERNED_EXISTING_ASSET","available_governed_candidate":{"ref":"AUTH-016","form":"AN","authority":"CANDIDATE","current_lessons":["L01"],"mapping_status":"AVAILABLE_FOR_LATER_REBIND_REVIEW_NOT_APPLIED"}},
+    {"target_id":"L02-SEM-013","semantic_key":"SECOND_PERSON_REFERENT","definition_pt":"referente de segunda pessoa para entrevista e interação com o interlocutor","pedagogical_need":"Allows L02 interview prompts around city, study, work, travel and perception.","form_selected":null,"historical_form_meaning_claim":false,"preferred_source_strategy":"REUSE_GOVERNED_EXISTING_ASSET","available_governed_candidate":{"ref":"AUTH-017","form":"EN","authority":"CANDIDATE","current_lessons":["L01"],"mapping_status":"AVAILABLE_FOR_LATER_REBIND_REVIEW_NOT_APPLIED"}},
+    {"target_id":"L02-SEM-014","semantic_key":"LOCATION_INTERROGATIVE","definition_pt":"variável interrogativa locativa para perguntar por cidade, prédio, biblioteca ou outro lugar","pedagogical_need":"Makes the recovered place inventory communicatively usable without authoring a new locative word.","form_selected":null,"historical_form_meaning_claim":false,"preferred_source_strategy":"REUSE_GOVERNED_EXISTING_ASSET","available_governed_candidate":{"ref":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","current_lessons":["L01"],"mapping_status":"AVAILABLE_FOR_LATER_REBIND_REVIEW_NOT_APPLIED"}},
+    {"target_id":"L02-SEM-015","semantic_key":"CONTENT_SELECTOR","definition_pt":"seletor interrogativo de conteúdo para perguntar por atividade, objeto ou experiência sem fixar uma única tradução WH","pedagogical_need":"Supports questions about study, work, travel, seeing and concrete content while preserving the KU boundary.","form_selected":null,"historical_form_meaning_claim":false,"preferred_source_strategy":"REUSE_GOVERNED_EXISTING_ASSET","available_governed_candidate":{"ref":"AUTH-018","form":"KU","authority":"CANDIDATE","current_lessons":["L01"],"mapping_status":"AVAILABLE_FOR_LATER_REBIND_REVIEW_NOT_APPLIED"}},
+    {"target_id":"L02-SEM-016","semantic_key":"QUESTION_OPERATOR","definition_pt":"operador interrogativo para enquadrar perguntas iniciais de L02 sem declarar gramática interrogativa universal","pedagogical_need":"Provides a governed question frame for future scoped L02 constructions.","form_selected":null,"historical_form_meaning_claim":false,"preferred_source_strategy":"REUSE_GOVERNED_EXISTING_ASSET","available_governed_candidate":{"ref":"AUTH-019","form":"KE","authority":"CANDIDATE","current_lessons":["L01"],"mapping_status":"AVAILABLE_FOR_LATER_REBIND_REVIEW_NOT_APPLIED"}}
+  ],
+  "mapping_summary":{"semantic_targets":5,"forms_selected":0,"new_surface_forms_created":0,"new_language_assets_created":0,"candidate_rebinds_suggested":5,"suggested_forms":["AN","EN","KUVAN","KU","KE"],"authority_promotions":0},
+  "boundaries":["Semantic approval does not itself apply any form mapping.","Suggested L01 assets remain CANDIDATE and scoped; L02 reuse requires a separate explicit rebind/mapping gate.","No L02 sentence grammar, OPI, Story, QA, Structure, Activation or Review is created by this matrix.","VANI and VANUVALI remain unresolved in L02.","No new words are created merely to reach the derived 16-slot Vocabulary target.","Biblical Hebrew, Koine Greek and Esperanto remain research/reference comparison layers rather than separate course commitments.","Numerology does not select forms or meanings."],
+  "decision":"READY_FOR_HUMAN_SEMANTIC_TARGET_REVIEW",
+  "next_gate":"SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1"
+}
