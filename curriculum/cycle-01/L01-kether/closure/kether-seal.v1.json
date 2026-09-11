@@ -1,5 +1,6 @@
 {
   "seal_id":"SWHNK-L01-KETHER-SEAL-V1",
+  "seal_class":"LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER",
   "status":"SEALED_CURRICULUM_VALIDATION_COMPLETE",
   "date":"2026-09-11",
   "lesson":"L01",
@@ -9,8 +10,9 @@
   "completion_percent":100.0,
   "category_totals":{"TeacherNotes":3,"OPI":10,"Story":5,"QA":4,"StructureHeaders":2,"Structures":5,"Vocabulary":32,"Activation":72,"Review":22},
   "category_validation":{"TeacherNotes":3,"OPI":10,"Story":5,"QA":4,"StructureHeaders":2,"Structures":5,"Vocabulary":32,"Activation":72,"Review":22},
-  "evidence":["../validation/vocabulary-025-032.validated-transition.v1.json","../validation/review-22.validated-transition.v1.json","../../../../progress/CYCLE1_PROGRESS_SNAPSHOT_V40.json"],
+  "evidence":["../validation/vocabulary-025-032.validated-transition.v1.json","../validation/review-22.validated-transition.v1.json","../../../../progress/CYCLE1_PROGRESS_SNAPSHOT_V41.json","../validation/L01-kether.validated-completion.v1.json"],
   "preserved_boundaries":{"language_authority_promotions":0,"visual_canon_promotions":0,"historical_review_payload_claim":false,"YA_ES":"UNRESOLVED","VANI":{"authority":"WATCH","master_meaning":null},"VAME":"GATE","WATCH_forms":["SARASALA","VAMAVALA","VAMAZAMU"],"CANDIDATE_forms_preserved":true,"VAMUSARO_literal_weekend":false,"universal_grammar_created":false},
-  "meaning":"This seal certifies SimpleWay HNK L01 curriculum completeness and scoped validation only. It is not a promotion of HNK language authority, recovered-history certainty, glyph visual canon or universal grammar.",
+  "meaning":"This marker certifies SimpleWay HNK L01 curriculum completeness and scoped validation only. It is not a promotion of HNK language authority, recovered-history certainty, glyph visual canon or universal grammar.",
+  "cycle_final_seal_boundary":{"cycle_final_seal_slot_consumed":false,"is_cycle_final_seal":false,"reserved_cycle_final_seals":["Verbum","Logos","Dialogos"],"statement":"Kether Seal is an operational lesson-completion marker only and is not one of the three Cycle 1 final seals."},
   "next_lesson":{"lesson":"L02","sphere":"Chokhmah","entry_state":"LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD","entry_rule":"SOURCE_LOCK_FIRST","required_first_action":"AUDIT_L02_RECOVERED_LEXICON_AND_SOURCE_BINDINGS_BEFORE_PEDAGOGY_AUTHORING"}
 }
