@@ -11,11 +11,11 @@ const names=(await readdir(new URL('../progress/',import.meta.url)))
 const evidence={...base,overrides:[...base.overrides],lexical_evidence:{...base.lexical_evidence},validation_evidence:{...base.validation_evidence}};
 for(const name of names){const s=await json(`progress/${name}`);evidence.overrides.push(...(s.overrides??[]));Object.assign(evidence.lexical_evidence,s.lexical_evidence_updates??{});Object.assign(evidence.validation_evidence,s.validation_evidence_updates??{});}
 
-const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V50.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V53.json');
 const manifest=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
-const validationBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-opi-validation-batch.v1.json');
-const validationTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-opi-validation.applied-transition.v1.json');
-const validated=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-opi-001-010.validated.v1.json');
+const sqsGate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-pattern-review-human-batch.v1.json');
+const sqsTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-pattern-review.approved-transition.v1.json');
+const qaGate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-qa-answer-pattern-human-batch.v1.json');
 const vAni=await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 
 assert.equal(contract.target_total,1008);
@@ -26,42 +26,45 @@ assert.equal(values.filter(x=>x.implementation_state==='AUTHORED').length,0);
 assert.equal(values.filter(x=>x.implementation_state==='VALIDATED').length,165);
 assert.equal(values.filter(x=>x.implementation_state==='FROZEN').length,0);
 
-assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V50');
-assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_OPI_10_OF_10_VALIDATED_NEXT_GATE_NOT_OPENED');
-assert.equal(snapshot.package,'simpleway-hnk@0.53.0');
+assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V53');
+assert.equal(snapshot.package,'simpleway-hnk@0.56.0');
 assert.deepEqual(snapshot.implementation,{MISSING:843,AUTHORED:0,VALIDATED:165,FROZEN:0});
 assert.equal(snapshot.L01.validated,155);
 assert.deepEqual(snapshot.L02.implementation,{MISSING:129,AUTHORED:0,VALIDATED:10,FROZEN:0});
-assert.equal(snapshot.L02.opi_patterns_approved,10);
-assert.equal(snapshot.L02.opi_gid_expansions_complete,10);
-assert.equal(snapshot.L02.curriculum_OPI_authored,0);
-assert.equal(snapshot.L02.curriculum_OPI_validated,10);
-assert.equal(snapshot.L02.curriculum_slots_implemented,10);
-assert.equal(snapshot.next_gate_status,'NOT_OPENED');
+assert.equal(snapshot.L02.sqs_patterns_approved,16);
+assert.equal(snapshot.L02.qa_answer_schema_candidates,4);
+assert.equal(snapshot.L02.qa_answer_schemas_approved,0);
+assert.equal(snapshot.L02.story_qa_structure_slots_authored,0);
+assert.equal(snapshot.next_gate,'SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1');
 
-assert.equal(validationBatch.status,'APPROVED_ALL_DECISIONS');
-assert.equal(validationBatch.approved_effect.L02_OPI_VALIDATED,10);
-assert.equal(validationBatch.approved_effect.authority_promotions,0);
-assert.equal(validationTransition.status,'APPLIED');
-assert.equal(validationTransition.after.GLOBAL_VALIDATED,165);
-assert.equal(validated.checks.validated,10);
-assert.equal(validated.authority_boundaries.universal_grammar_claims,0);
+assert.equal(sqsGate.status,'APPROVED_ALL_DECISIONS');
+assert.equal(sqsGate.decisions_requested.length,20);
+assert.ok(sqsGate.decisions_requested.every(x=>x.decision==='APPROVED'));
+assert.equal(sqsGate.approved_effect.patterns_approved,16);
+assert.equal(sqsGate.approved_effect.curriculum_slots_AUTHORED,0);
+assert.equal(sqsTransition.status,'APPLIED');
+assert.equal(sqsTransition.after.patterns_approved,16);
+assert.equal(sqsTransition.after.SQS_AUTHORED,0);
+assert.equal(qaGate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(qaGate.decisions_requested.length,8);
+assert.equal(qaGate.projected_effect_if_all_approved.QA_answer_schemas_approved,4);
+assert.equal(qaGate.projected_effect_if_all_approved.SQS_slots_AUTHORED,0);
 
-assert.equal(manifest.status,'OPI_10_OF_10_VALIDATED_NEXT_GATE_NOT_OPENED');
-assert.equal(manifest.pedagogy.opi_patterns_approved,10);
-assert.equal(manifest.pedagogy.opi_gid_expansions_complete,10);
-assert.equal(manifest.pedagogy.curriculum_OPI_authored,0);
 assert.equal(manifest.pedagogy.curriculum_OPI_validated,10);
-assert.equal(manifest.pedagogy.curriculum_slots_implemented,10);
-assert.equal(manifest.next_gate_status,'NOT_OPENED');
-assert.equal('story_qa_structure_contract' in manifest,false);
+assert.equal(manifest.pedagogy.sqs_patterns_approved,16);
+assert.equal(manifest.pedagogy.qa_answer_schema_candidates,4);
+assert.equal(manifest.pedagogy.qa_answer_schemas_approved,0);
+assert.equal(manifest.pedagogy.story_qa_structure_slots_authored,0);
+assert.equal(manifest.next_gate,'SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
 assert.equal(evidence.validation_evidence.L02_OPI_validated,10);
+assert.equal(evidence.validation_evidence.L02_SQS_patterns_approved,16);
+assert.equal(evidence.validation_evidence.L02_QA_answer_schemas_approved,0);
 assert.equal(evidence.validation_evidence.GLOBAL_validated_total,165);
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V50');
-console.log('L01 Kether remains 155/155 VALIDATED; L02 now has 10/10 OPI VALIDATED for scoped course use, while the next Story/QA/Structure gate remains unopened.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V53');
+console.log('Kether remains 155/155 VALIDATED; Chokhmah has 10 VALIDATED OPI and 16 approved SQS patterns, with four Q&A response schemas pending and no SQS slots authored yet.');
