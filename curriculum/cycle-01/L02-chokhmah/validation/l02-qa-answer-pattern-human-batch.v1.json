@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source_review":"../source-lock/l02-qa-answer-pattern-review.v1.json",
+  "decision_scope":"APPROVE_QA_RESPONSE_SCHEMAS_WITHOUT_CREATING_DECLARATIVE_HNK_SYNTAX_OR_NEW_LEXEMES",
+  "decisions_requested":[
+    {"id":"DEC-L02-QA-ANS-001","schema_ref":"L02-QA-ANSWER-PAT-001","slot":"L02-QA-001","statement":"Approve [WORKPLACE_OR_WORK_LOCATION] as the response schema, with VALIVAN/TAYOVAN as governed example anchors only."},
+    {"id":"DEC-L02-QA-ANS-002","schema_ref":"L02-QA-ANSWER-PAT-002","slot":"L02-QA-002","statement":"Approve [STUDY_LOCATION_OR_SCHOOL_DOMAIN] as the response schema, with PARAZAMO/PAROVAN as governed example anchors only."},
+    {"id":"DEC-L02-QA-ANS-003","schema_ref":"L02-QA-ANSWER-PAT-003","slot":"L02-QA-003","statement":"Approve [GOVERNED_STUDY_CONTENT_OR_WORK_ACTIVITY] as an open semantic response schema bounded to governed inventory; do not create a lexeme merely to provide an example."},
+    {"id":"DEC-L02-QA-ANS-004","schema_ref":"L02-QA-ANSWER-PAT-004","slot":"L02-QA-004","statement":"Approve branch-specific controlled response schemas for perception/time examples while keeping the OPI-006 travel yes/no response branch BLOCKED."},
+    {"id":"DEC-L02-QA-ANS-005","statement":"Confirm answer schemas are pedagogical response contracts and do not establish full declarative HNK sentence syntax, copular grammar or word order."},
+    {"id":"DEC-L02-QA-ANS-006","statement":"Do not invent yes/no particles, travel-response syntax, new lexical forms or meanings to complete the Q&A lane."},
+    {"id":"DEC-L02-QA-ANS-007","statement":"Keep WATCH/CANDIDATE/FROZEN authority labels unchanged and keep VANI/VANUVALI unresolved and excluded."},
+    {"id":"DEC-L02-QA-ANS-008","statement":"If all answer schemas are approved, authorize preparation of one SQS authoring gate for the full 16-slot block, with OPI-006 unavailable as a Q&A answer branch until separately governed."}
+  ],
+  "checks":{"QA_slots":4,"answer_schema_candidates":4,"full_HNK_declarative_answers_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"blocked_yes_no_branches":1,"SQS_slots_AUTHORED_before_gate":0,"SQS_slots_VALIDATED_before_gate":0},
+  "projected_effect_if_all_approved":{"QA_answer_schemas_approved":4,"full_HNK_declarative_answers_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"SQS_slots_AUTHORED":0,"SQS_slots_VALIDATED":0,"next_gate":"SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V1"}
+}
