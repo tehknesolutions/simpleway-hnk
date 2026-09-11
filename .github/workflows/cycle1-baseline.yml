@@ -73,3 +73,9 @@ jobs:
 
       - name: Validate vocabulary gap mapping
         run: npm run validate:vocabulary-gap-mapping
+
+      - name: Validate vocabulary gap application
+        run: npm run validate:vocabulary-gap-application
+
+      - name: Validate review lane
+        run: npm run validate:reviews
