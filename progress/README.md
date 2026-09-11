@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V42`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V43`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.44.0`
+**Current package:** `simpleway-hnk@0.45.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -17,37 +17,13 @@ Current exclusive implementation states:
 
 ## L01 Kether — 155/155 VALIDATED
 
-L01 is **100% curriculum-validated**:
-
-- Teacher Notes: **3/3**
-- OPI: **10/10**
-- Stories: **5/5**
-- Q&A: **4/4**
-- Structure Headers: **2/2**
-- Structures: **5/5**
-- Vocabulary: **32/32**
-- Activation: **72/72**
-- Review: **22/22**
+L01 remains **100% curriculum-validated**: Teacher Notes 3/3, OPI 10/10, Stories 5/5, Q&A 4/4, Structure Headers 2/2, Structures 5/5, Vocabulary 32/32, Activation 72/72 and Review 22/22.
 
 There are **0 MISSING**, **0 AUTHORED pending validation**, and **0 current FROZEN** slots in L01.
 
-Review validation created **0 new HNK forms, 0 language assets, 0 authority promotions, 0 universal grammar rules, 0 historical Review claims and 0 visual-canon promotions**.
-
-## Kether completion marker
-
-`SWHNK-L01-KETHER-SEAL-V1` is classified as `LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER`.
-
-It does **not** consume or instantiate any of the three Cycle 1 final seals:
-
-- `Verbum`
-- `Logos`
-- `Dialogos`
-
-The separate completion record is `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1`.
+`SWHNK-L01-KETHER-SEAL-V1` is an operational lesson-completion marker only. It does not consume the Cycle 1 final seals `Verbum`, `Logos` or `Dialogos`.
 
 ## Language authority after L01
-
-The governed inventory is unchanged by Review closure:
 
 - recovered Cycle 1 forms: **31**
 - canonical authored candidates: **20**
@@ -55,38 +31,45 @@ The governed inventory is unchanged by Review closure:
 
 Boundaries remain explicit: YA/ES unresolved; VANI `WATCH` with Master `meaning=null`; VAME `GATE`; SARASALA/VAMAVALA/VAMAZAMU `WATCH`; ON `GATE`; KUVAN/KUON/VALA/NE and `AUTH-015..020` `CANDIDATE`; VAMUSARO remains rest/leisure period rather than literal weekend; no generic HNK `DO`, `WITH` or universal WH/interrogative grammar exists.
 
-## L02 Chokhmah — Source Lock AUDITED / pedagogy HOLD
+## L02 Chokhmah — semantic targets drafted / pedagogy HOLD
 
-The Source Lock audit is complete and materialized in:
-
-`curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json`
-
-Current audited state:
+The Source Lock remains authoritative. Current recovered state:
 
 - L02 target: **139 slots**
 - Vocabulary target: **16**
 - recovered lexemes: **11**
 - recovered phrases: **0**
-- authored candidates bound to L02: **0**
 - authority mix: **5 FROZEN + 5 WATCH + 1 GATE**
 - lexemes with recovered master meaning: **9**
 - meaning-unrecovered forms: **2** — `VANUVALI`, `VANI`
-- recovered-lexeme proxy: **11/16 = 68.75%**
-- proxy gap: **5**
+- numerical recovered-asset proxy gap: **5**
 - student cards: **0**
 - teacher drills: **0**
 - pedagogy authoring hold: **true**
-- source canon: **UNDEFINED — must be approved before content production**
 
-The audit explicitly forbids silently generalizing the L01 `VANI = residence` interpretation into L02. Hebrew Biblical, Koine Greek and Esperanto remain comparison/reference layers for HNK research, not separate SimpleWay course commitments.
+The semantic matrix now proposes **five communicative functions**, without applying any HNK form:
+
+1. `FIRST_PERSON_REFERENT`
+2. `SECOND_PERSON_REFERENT`
+3. `LOCATION_INTERROGATIVE`
+4. `CONTENT_SELECTOR`
+5. `QUESTION_OPERATOR`
+
+The evidence-first reuse candidates are `AN`, `EN`, `KUVAN`, `KU`, `KE`, all still `CANDIDATE`, and **none is rebound to L02 yet**.
+
+The strategy is **SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION**. The five-slot numerical proxy gap is not treated as proof that five missing historical words exist.
+
+`VANI` and `VANUVALI` remain unresolved in L02. The scoped L01 interpretation `VANI = residence` is not generalized.
+
+Hebrew Biblical, Koine Greek and Esperanto remain comparison/reference layers for HNK research, not separate SimpleWay course commitments.
 
 ## Next gate
 
-`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS`
+`SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1`
 
-Rule: **SEMANTICS_BEFORE_FORM_AND_PEDAGOGY**.
+Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-No L02 OPI, Story, Q&A, Structures, Vocabulary gap forms, Activation or Review payloads are authorized before that gate.
+Approval of this gate would approve only the five semantic functions. It would still select **0 forms**, implement **0 L02 curriculum slots**, create **0 new HNK forms**, and keep pedagogy in HOLD. The following gate would be an exact evidence-first rebind mapping review.
 
 ## Historical/source boundary
 
