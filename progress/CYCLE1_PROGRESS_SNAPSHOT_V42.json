@@ -1,0 +1,17 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V42",
+  "as_of":"2026-09-11",
+  "status":"L01_KETHER_155_OF_155_VALIDATED_L02_CHOKHMAH_SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD",
+  "package":"simpleway-hnk@0.44.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":853,"AUTHORED":0,"VALIDATED":155,"FROZEN":0},
+  "implementation_percent":{"MISSING":84.6230,"AUTHORED":0.0,"VALIDATED":15.3770,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":155,"AUTHORED_OR_BETTER_percent":15.3770,"VALIDATED_OR_BETTER":155,"VALIDATED_OR_BETTER_percent":15.3770,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_Activation":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":20,"canonical_governed_unique_assets":51,"canonical_governed_proxy_percent":35.4167},
+  "L01":{"sphere":"Kether","target":155,"validated":155,"validated_percent":100.0,"remaining_unimplemented":0,"pending_validation":0,"status":"VALIDATED_COMPLETE","completion_marker":"../curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json","cycle_final_seal_slot_consumed":false},
+  "L02":{"sphere":"Chokhmah","target":139,"implementation":{"MISSING":139,"AUTHORED":0,"VALIDATED":0,"FROZEN":0},"status":"SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD","manifest":"../curriculum/cycle-01/L02-chokhmah/manifest.json","source_lock":"../curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json","source_inventory":{"recovered_lexemes":11,"recovered_phrases":0,"authored_candidates_bound_to_L02":0,"authority_counts":{"FROZEN":5,"WATCH":5,"GATE":1,"CANDIDATE":0,"BRIDGE":0,"REFERENCE":0},"with_master_meaning":9,"without_master_meaning":2},"vocabulary_target":16,"recovered_lexeme_proxy":11,"recovered_proxy_percent":68.75,"proxy_gap":5,"student_cards":0,"teacher_drills":0,"pedagogy_authoring_hold":true,"source_canon":"UNDEFINED — must be approved before content production"},
+  "L02_boundaries":{"VANUVALI_master_meaning":null,"VANUVALI_authority":"GATE","VANI_master_meaning":null,"VANI_authority":"WATCH","L01_VANI_residence_interpretation_not_generalized":true,"WATCH_GATE_promotions":0,"new_L02_forms_created":0,"new_L02_pedagogy_created":0,"reference_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_independent_courses":false},
+  "next_gate":"DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS",
+  "next_gate_rule":"SEMANTICS_BEFORE_FORM_AND_PEDAGOGY"
+}
