@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L02-STR005-AUTHORING-APPLIED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "source_batch":"./l02-str005-authoring-human-batch.v1.json",
+  "before":{"STR005_state":"MISSING_AUTHORING_GATE_REQUIRED","STR005_AUTHORED":0,"STR005_VALIDATED":0,"L02_SQS_AUTHORED":15,"L02_SQS_VALIDATED":0,"GLOBAL_AUTHORED":15,"GLOBAL_VALIDATED":165,"GLOBAL_MISSING":828},
+  "after":{"STR005_state":"AUTHORED_NOT_VALIDATED","STR005_AUTHORED":1,"STR005_VALIDATED":0,"L02_SQS_AUTHORED":16,"L02_SQS_VALIDATED":0,"GLOBAL_AUTHORED":16,"GLOBAL_VALIDATED":165,"GLOBAL_MISSING":827},
+  "authored_payload":{"pattern_ref":"L02-STR005-PAT-B","frame":"PA + AN + NE + PREDICATE","example":"PA AN NE VALI","gloss_pt":"Ontem, eu não trabalhei.","gloss_en":"Yesterday, I didn't work."},
+  "boundaries":{"PA_lexical_yesterday_only":true,"NE_scope":"L02_STR005_ONLY","AN_scope":"L02_STR005_ONLY","generic_past_rule_created":false,"DID_auxiliary_created":false,"universal_declarative_order_created":false,"authority_promotions":0,"new_lexical_surface_forms_created":0},
+  "validation_effect":{"existing_SQS15_validated":0,"STR005_validated":0,"total_SQS_validated":0},
+  "supersedes_validation_gate":"SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1",
+  "next_gate":"SWHNK-L02-SQS-16-VALIDATION-HUMAN-BATCH-V1"
+}

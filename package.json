@@ -1,6 +1,6 @@
 {
   "name":"simpleway-hnk",
-  "version":"0.61.0",
+  "version":"0.62.0",
   "private":true,
   "type":"module",
   "scripts":{
@@ -40,9 +40,11 @@
     "validate:l02-sqs15-validation-gate":"node tests/validate-l02-sqs15-validation-gate.mjs",
     "validate:l02-str005-design":"node tests/validate-l02-str005-i-didnt-design.mjs",
     "validate:l02-str005-pattern-review":"node tests/validate-l02-str005-ne-scope-exact-pattern-review.mjs",
+    "validate:l02-str005-authoring":"node tests/validate-l02-str005-authoring.mjs",
+    "validate:l02-sqs16-validation-gate":"node tests/validate-l02-sqs16-validation-gate.mjs",
     "progress":"node scripts/build-cycle1-progress.mjs",
     "progress:write":"node scripts/build-cycle1-progress.mjs --write",
-    "test":"npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers && npm run validate:numeral-candidates && npm run validate:cardinals && npm run validate:activation && npm run validate:structures && npm run validate:teacher-notes && npm run validate:qa && npm run validate:stories && npm run validate:vocabulary && npm run validate:vocabulary-gap-semantics && npm run validate:vocabulary-gap-mapping && npm run validate:vocabulary-gap-application && npm run validate:reviews && npm run validate:kether-closure && npm run validate:l02-source-lock && npm run validate:l02-semantic-targets && npm run validate:l02-rebind-review && npm run validate:l02-unresolved-vocabulary && npm run validate:l02-pedagogy-source && npm run validate:l02-opi-patterns && npm run validate:l02-opi-authoring && npm run validate:l02-opi-validation && npm run validate:l02-sqs-contract && npm run validate:l02-sqs-pattern-review && npm run validate:l02-qa-answer-pattern && npm run validate:l02-sqs-authoring-gate && npm run validate:l02-sqs15-validation-gate && npm run validate:l02-str005-design && npm run validate:l02-str005-pattern-review"
+    "test":"npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers && npm run validate:numeral-candidates && npm run validate:cardinals && npm run validate:activation && npm run validate:structures && npm run validate:teacher-notes && npm run validate:qa && npm run validate:stories && npm run validate:vocabulary && npm run validate:vocabulary-gap-semantics && npm run validate:vocabulary-gap-mapping && npm run validate:vocabulary-gap-application && npm run validate:reviews && npm run validate:kether-closure && npm run validate:l02-source-lock && npm run validate:l02-semantic-targets && npm run validate:l02-rebind-review && npm run validate:l02-unresolved-vocabulary && npm run validate:l02-pedagogy-source && npm run validate:l02-opi-patterns && npm run validate:l02-opi-authoring && npm run validate:l02-opi-validation && npm run validate:l02-sqs-contract && npm run validate:l02-sqs-pattern-review && npm run validate:l02-qa-answer-pattern && npm run validate:l02-sqs-authoring-gate && npm run validate:l02-sqs15-validation-gate && npm run validate:l02-str005-design && npm run validate:l02-str005-pattern-review && npm run validate:l02-str005-authoring && npm run validate:l02-sqs16-validation-gate"
   },
   "engines":{"node":">=20"}
 }

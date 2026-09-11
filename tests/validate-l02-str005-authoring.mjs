@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
+const gate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-str005-authoring-human-batch.v1.json');
+const transition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-str005-authoring.applied-transition.v1.json');
+const structures=await json('curriculum/cycle-01/L02-chokhmah/authoring/structure-lane.v1.json');
+const sqs16=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-16-validation-human-batch.v1.json');
+assert.equal(gate.status,'APPROVED_ALL_DECISIONS');
+assert.equal(gate.decisions_requested.length,8);
+assert.ok(gate.decisions_requested.every(x=>x.decision==='APPROVED'));
+assert.equal(transition.status,'APPLIED');
+assert.equal(transition.after.STR005_AUTHORED,1);
+assert.equal(transition.after.STR005_VALIDATED,0);
+const s=structures.structures.find(x=>x.slot_id==='L02-STR-005');
+assert.equal(s.implementation_state,'AUTHORED');
+assert.equal(s.validation_state,'NOT_VALIDATED');
+assert.equal(s.frame,'PA + AN + NE + PREDICATE');
+assert.equal(s.controlled_examples[0].hnk,'PA AN NE VALI');
+assert.equal(sqs16.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+console.log('PASS SWHNK-L02-STR005-AUTHORING-V1');

@@ -1,0 +1,24 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V59",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L02","category":"structures","range":[5,5]},"implementation_state":"AUTHORED","evidence_state":"GOVERNED_PEDAGOGICAL_AUTHORING","scaffolded":true,"reason":"L02-STR-005 authored from explicitly approved PAT-B only: PA AN NE VALI = yesterday-anchored controlled course example. No generic past grammar, DID auxiliary, or authority promotion."}
+  ],
+  "validation_evidence_updates":{
+    "L02_STR005_authoring_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-str005-authoring-human-batch.v1.json",
+    "L02_STR005_authoring_transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-str005-authoring.applied-transition.v1.json",
+    "L02_structures_authored":5,
+    "L02_STR005_missing":0,
+    "L02_STR005_authored":1,
+    "L02_SQS_authored_total":16,
+    "L02_SQS_validated_total":0,
+    "L02_authored_total":16,
+    "L02_validated_total":10,
+    "L02_missing_total":113,
+    "GLOBAL_authored_total":16,
+    "GLOBAL_validated_total":165,
+    "GLOBAL_missing_total":827,
+    "NEXT_SQS_VALIDATION_GATE":"../curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-16-validation-human-batch.v1.json"
+  }
+}
