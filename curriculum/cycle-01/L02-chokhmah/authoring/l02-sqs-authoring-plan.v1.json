@@ -1,0 +1,18 @@
+{
+  "plan_id":"SWHNK-L02-SQS-AUTHORING-PLAN-V1",
+  "status":"READY_PLAN_NO_SLOTS_AUTHORED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_contract":"../source-lock/l02-story-qa-structure-contract.v1.json",
+  "source_pattern_review":"../source-lock/l02-story-qa-structure-pattern-review.v1.json",
+  "source_pattern_approval":"../validation/l02-sqs-pattern-review.approved-transition.v1.json",
+  "principle":"AUTHOR_REUSABLE_EVIDENCE_BACKED_SLOTS_FIRST_AND_BLOCK_QA_UNTIL_ANSWER_PATTERNS_ARE_GOVERNED",
+  "allocation":{"story":5,"qa":4,"structure_headers":2,"structures":5,"total":16},
+  "readiness":{"ready_after_explicit_authoring_gate":[{"category":"story","slots":["L02-STORY-001","L02-STORY-002","L02-STORY-003","L02-STORY-004","L02-STORY-005"],"count":5,"mode":"VALIDATED_OPI_SEQUENCE_REUSE"},{"category":"structure_header","slots":["L02-HDR-001","L02-HDR-002"],"count":2,"mode":"PEDAGOGICAL_LABEL_ONLY"},{"category":"structure","slots":["L02-STR-001","L02-STR-002","L02-STR-003","L02-STR-004","L02-STR-005"],"count":5,"mode":"SCOPED_FRAME_FROM_VALIDATED_EXAMPLES"}],"blocked_until_QA_answer_pattern_gate":["L02-QA-001","L02-QA-002","L02-QA-003","L02-QA-004"],"ready_count":12,"blocked_count":4},
+  "risk_visibility":{"VERY_HIGH":["L02-STORY-004","L02-STR-004"],"HIGH":["L02-STR-005"]},
+  "QA_policy":{"question_reuse_approved":true,"answer_patterns_approved":0,"answer_patterns_pending":4,"QA_slots_must_not_be_AUTHORED_without_answer_pattern_approval":true},
+  "checks":{"patterns_approved":16,"slots_AUTHORED":0,"slots_VALIDATED":0,"new_HNK_sentences_authored":0,"new_HNK_answers_authored":0,"authority_promotions":0},
+  "boundaries":["Story sequence reuse does not establish discourse grammar.","Structure frames remain scoped SimpleWay abstractions, not universal HNK grammar.","PA remains lexical 'ontem' only.","VANI and VANUVALI remain unresolved and excluded.","No Q&A slot may be authored until its answer pattern is explicitly governed."],
+  "next_gate":"SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1"
+}
