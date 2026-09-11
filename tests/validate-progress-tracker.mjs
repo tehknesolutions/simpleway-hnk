@@ -52,8 +52,8 @@ assert.equal(seal.validated,155);
 assert.equal(seal.cycle_final_seal_boundary.cycle_final_seal_slot_consumed,false);
 
 assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V45');
-assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
-assert.equal(snapshot.package,'simpleway-hnk@0.47.0');
+assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_EXACT_REBINDS_APPLIED_UNRESOLVED_VOCABULARY_GATE_PENDING');
+assert.equal(snapshot.package,'simpleway-hnk@0.48.0');
 assert.deepEqual(snapshot.implementation,{MISSING:853,AUTHORED:0,VALIDATED:155,FROZEN:0});
 assert.equal(snapshot.L01.validated,155);
 
@@ -108,6 +108,8 @@ assert.equal(snapshot.L02.unresolved_assets,2);
 assert.equal(snapshot.L02.curriculum_vocabulary_authored,0);
 assert.equal(snapshot.L02.curriculum_vocabulary_validated,0);
 assert.equal(snapshot.next_gate,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
+assert.equal(snapshot.L02_unresolved_policy.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.deepEqual(snapshot.L02_unresolved_policy.recommended_rebinds,['VALIVAN','PARAZAMO']);
 assert.equal(l02UnresolvedBatch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
@@ -116,4 +118,4 @@ assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
 console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V45');
-console.log('L01 Kether remains 155/155 VALIDATED; L02 exact rebinds are applied at language scope, 0 L02 curriculum slots are implemented, and pedagogy remains HOLD.');
+console.log('L01 Kether remains 155/155 VALIDATED; L02 exact rebinds are applied at language scope, 0 L02 curriculum slots are implemented, and the unresolved-vocabulary gate remains pending.');
