@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SEMANTIC TARGETS DRAFTED / PEDAGOGY HOLD  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V43`  
-**Pacote atual:** `simpleway-hnk@0.45.0`
+**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SEMANTIC TARGETS APPROVED / EXACT REBIND REVIEW PENDING  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V44`  
+**Pacote atual:** `simpleway-hnk@0.46.0`
 
 ## Ciclo 1
 
@@ -15,123 +15,79 @@ Estados exclusivos atuais:
 
 **853 MISSING + 0 AUTHORED + 155 VALIDATED + 0 FROZEN = 1.008**.
 
-Cumulativo authored-or-better e validated-or-better: **155/1.008 = 15.3770%**.
-
-Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
-
-## L01 Kether — concluída
-
-- Teacher Notes: **3/3 VALIDATED**
-- OPI: **10/10 VALIDATED**
-- Stories: **5/5 VALIDATED**
-- Q&A: **4/4 VALIDATED**
-- Structure Headers: **2/2 VALIDATED**
-- Structures: **5/5 VALIDATED**
-- Vocabulary: **32/32 VALIDATED**
-- Activation: **72/72 VALIDATED**
-- Review: **22/22 VALIDATED**
-
-Resultado: **155/155 VALIDATED = 100%**. Não há slots `MISSING` nem `AUTHORED` pendentes em L01.
-
-A lane Review reconciliada contém 20 atividades ligadas diretamente aos OPI 001–010 e 2 entrevistas integrativas, todas compostas apenas de material já validado. O antigo mismatch que ligava `EN ZAMI HENUVOKODAN KE` ao OPI 003 foi removido; OPI 003 permanece o cartão de idade `EN KU SARASALA KE`.
+L01 Kether permanece **155/155 VALIDATED = 100%**. O Kether Seal é um marcador operacional de conclusão da Lesson 1 e não consome `Verbum`, `Logos` ou `Dialogos`.
 
 ## Corpus linguístico governado
 
-Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 não vinculadas (`VAMATAYA`, `KALIFORNIA`) e 7 frases recuperadas.
+- Master Lexicon recuperado: **33 formas totais**
+- formas recuperadas ligadas ao Ciclo 1: **31**
+- registry autorado: **20 CANDIDATE forms**
+- ativos governados distintos: **51**
 
-Registry autorado `@hnk/linguas/authored`: **20 CANDIDATE forms**.
+Fronteiras permanecem: YA/ES semântica standalone não recuperada; VANI `WATCH` com `meaning=null`; VAME `GATE`; SARASALA/VAMAVALA/VAMAZAMU `WATCH`; ON `GATE`; KUVAN/KUON/VALA/NE e `AUTH-015..020` `CANDIDATE`; VAMUSARO não é literal `weekend`; Candidate D visual continua `PREPRODUCTION_NOT_OFFICIAL`.
 
-Ativos governados distintos: **51**. Proxy governado: **51/144 = 35.4167%**. Proxy recuperado: **31/144 = 21.5278%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
+## L02 Chokhmah — Source Lock
 
-Fronteiras preservadas:
+Estado recuperado:
 
-- YA e ES: semântica standalone não recuperada;
-- VANI: `WATCH`, Master Lexicon `meaning=null`;
-- VAME: `GATE`;
-- SARASALA, VAMAVALA, VAMAZAMU: `WATCH`;
-- ON: `GATE`;
-- KUVAN, KUON, VALA, NE e `AUTH-015..020`: `CANDIDATE`;
-- VAMUSARO: “descanso / período de lazer”, não tradução literal automática de “weekend”;
-- nenhum `DO`, `WITH` ou WH universal criado;
-- Candidate D visual: `PREPRODUCTION_NOT_OFFICIAL`.
-
-## Kether Seal — fronteira canônica
-
-`SWHNK-L01-KETHER-SEAL-V1` é `LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER`.
-
-Ele **não é** um dos três selos finais do Ciclo 1 e não consome seus slots. Permanecem reservados:
-
-- `Verbum`
-- `Logos`
-- `Dialogos`
-
-O registro `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` fixa a mesma fronteira.
-
-## L02 Chokhmah — Source Lock + Matriz Semântica
-
-Audit: `SWHNK-L02-CHOKHMAH-SOURCE-LOCK-AUDIT-V1`.
-
-Estado atual:
-
-- target pedagógico L02: **139**
+- target pedagógico: **139**
 - Vocabulary target: **16**
 - lexemas recuperados: **11**
 - frases recuperadas: **0**
 - autoridades: **5 FROZEN + 5 WATCH + 1 GATE**
 - com significado master recuperado: **9**
 - sem significado master: **2** — `VANUVALI`, `VANI`
-- proxy recuperado: **11/16 = 68,75%**
-- gap proxy: **5**
-- semantic targets drafted: **5**
-- semantic targets approved: **0**
-- forms selected: **0**
 - student cards: **0**
 - teacher drills: **0**
-- authoring hold: **true**
+- pedagogy authoring hold: **true**
 
 Lexemas ligados a L02:
 
 `TAYOVAN`, `KALOVALA`, `PAROVAN`, `PARAZAMI`, `VALI`, `SAROSARI`, `PARI`, `PA`, `VANUVALI`, `VANI`, `PITSA`.
 
-A análise semântica mostra que esses 11 ativos já cobrem conteúdo temático suficiente para uma Lesson coerente: lugar urbano, lugar educacional, estudo, trabalho, viagem, percepção, referência temporal passada e um empréstimo alimentar concreto. Os dois forms sem glosa continuam preservados sem invenção.
+## Cinco alvos semânticos — APPROVED
 
-O gap de cinco foi reinterpretado corretamente como **gap funcional/comunicativo**, não como ordem para criar cinco palavras novas.
+O gate `SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1` foi aprovado apenas no eixo semântico:
 
-### Cinco alvos semânticos propostos
+1. `FIRST_PERSON_REFERENT`
+2. `SECOND_PERSON_REFERENT`
+3. `LOCATION_INTERROGATIVE`
+4. `CONTENT_SELECTOR`
+5. `QUESTION_OPERATOR`
 
-1. `FIRST_PERSON_REFERENT` — autoexpressão;
-2. `SECOND_PERSON_REFERENT` — interação/entrevista;
-3. `LOCATION_INTERROGATIVE` — perguntar por cidade, edifício, biblioteca e outros lugares;
-4. `CONTENT_SELECTOR` — perguntar por atividade/conteúdo sem fixar KU como uma WH universal;
-5. `QUESTION_OPERATOR` — enquadrar perguntas de L02 sob escopo controlado.
+Efeitos aplicados:
 
-Nenhuma forma foi aplicada ainda. A estratégia formal é:
+- semantic targets approved: **5/5**
+- forms selected: **0**
+- rebinds applied: **0**
+- new surface forms: **0**
+- new language assets: **0**
+- authority promotions: **0**
+- L02 curriculum slots implemented: **0**
 
-**`SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION`**.
+A regra permanece **SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION**.
 
-Para o próximo gate, existem cinco ativos já governados da L01 que podem ser avaliados como rebinds, sem criar forms novos:
+## Exact rebind review — preparado, NÃO aplicado
 
-- `AN` (`AUTH-016`) → primeira pessoa;
-- `EN` (`AUTH-017`) → segunda pessoa;
-- `KUVAN` (`AUTH-001`) → locativo interrogativo;
-- `KU` (`AUTH-018`) → seletor de conteúdo;
-- `KE` (`AUTH-019`) → operador interrogativo.
+A revisão evidence-first consulta o owner linguístico `@hnk/linguas` e propõe somente extensão de escopo curricular:
 
-Eles permanecem `CANDIDATE`, com `lessons:[L01]`, e **nenhum rebind L02 foi aplicado ainda**. A aprovação dos alvos semânticos não equivale à aprovação do mapeamento exato das forms.
+- `AUTH-016 AN` → primeira pessoa
+- `AUTH-017 EN` → segunda pessoa
+- `AUTH-001 KUVAN` → variável locativa interrogativa
+- `AUTH-018 KU` → seletor de conteúdo
+- `AUTH-019 KE` → operador de pergunta
 
-Também continua proibido importar silenciosamente para L02 a leitura escopada `VANI = morar/residir` da L01; o Master Lexicon segue com `meaning=null`.
+No registry observado (`1.5.0-candidate`), todos continuam `CANDIDATE` e com `lessons:[L01]`. Nenhuma mudança foi aplicada ao `codex-hnk` nesta etapa.
 
-Hebraico Bíblico, Grego Koiné e Esperanto permanecem camadas de referência e comparação para a engenharia do HNK, não compromissos de cursos independentes.
+O antigo avanço concorrente que havia marcado esses rebinds como aplicados e criado um Vocabulary source map foi removido por exceder a aprovação humana disponível. Também foram removidas propostas downstream que dependiam desse avanço não autorizado.
+
+`VANI` e `VANUVALI` continuam semanticamente não resolvidos em L02. A leitura escopada `VANI = morar/residir` da L01 não é generalizada.
 
 ## Próximo gate
 
-**`SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1`**
+**`SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1`** — `AWAITING_EXPLICIT_HUMAN_APPROVAL`.
 
-O batch pede aprovação apenas dos cinco **conceitos/funções** e da estratégia `REUSE_BEFORE_INVENTION`.
-
-Se aprovado, o passo seguinte será **`PREPARE_L02_EXACT_REBIND_MAPPING_REVIEW`**, onde `AN / EN / KUVAN / KU / KE` serão avaliados formalmente um a um para reuso em L02. Somente depois poderão existir bindings curriculares ou autoria pedagógica.
-
-Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de L02 deve ser produzido antes dessa sequência de gates.
+A aprovação, se ocorrer, autorizará somente a extensão de escopo dos cinco candidatos existentes para L02. Não autorizará automaticamente OPI, Story, Q&A, Structure, Vocabulary, Activation ou Review.
 
 ## Repositórios e ownership
 
@@ -142,4 +98,4 @@ Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de 
 
 ## CI
 
-O GitHub Actions remoto ainda não pode ser chamado de verde sem uma execução real bem-sucedida do runner e dos validadores. A esteira agora inclui validadores específicos para Source Lock e Matriz Semântica da L02, mas runs anteriores têm falhado antes de expor steps normais do job; portanto uma falha de Actions, sozinha, ainda não prova regressão nos contratos do projeto.
+O GitHub Actions remoto ainda não pode ser chamado de verde sem uma execução real bem-sucedida do runner e dos validadores. O pipeline agora trava explicitamente a fronteira entre semantic approval e exact rebind approval.
