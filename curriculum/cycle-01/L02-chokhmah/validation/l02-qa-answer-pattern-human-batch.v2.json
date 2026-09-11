@@ -1,0 +1,22 @@
+{
+  "batch_id":"SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V2",
+  "supersedes":"SWHNK-L02-QA-ANSWER-PATTERN-HUMAN-BATCH-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-11",
+  "date_approved":"2026-09-11",
+  "approval_source":"Explicit user SIGA in HNK-LINGUAS after V53 identified the QA answer-pattern batch as the sole next gate.",
+  "source_review":"../source-lock/l02-qa-answer-pattern-review.v1.json",
+  "decision_scope":"APPROVE_QA_RESPONSE_SCHEMAS_WITHOUT_CREATING_DECLARATIVE_HNK_SYNTAX_OR_NEW_LEXEMES",
+  "decisions":[
+    {"id":"DEC-L02-QA-ANS-001","decision":"APPROVED","schema":"[WORKPLACE_OR_WORK_LOCATION]","anchors":["VALIVAN","TAYOVAN"]},
+    {"id":"DEC-L02-QA-ANS-002","decision":"APPROVED","schema":"[STUDY_LOCATION_OR_SCHOOL_DOMAIN]","anchors":["PARAZAMO","PAROVAN"]},
+    {"id":"DEC-L02-QA-ANS-003","decision":"APPROVED","schema":"[GOVERNED_STUDY_CONTENT_OR_WORK_ACTIVITY]","rule":"NO_LEXEME_INVENTION_FOR_EXAMPLE"},
+    {"id":"DEC-L02-QA-ANS-004","decision":"APPROVED","schema":"[BRANCH_SPECIFIC_CONTROLLED_RESPONSE]","blocked_branch":"L02-OPI-006"},
+    {"id":"DEC-L02-QA-ANS-005","decision":"APPROVED","rule":"ANSWER_SCHEMAS_ARE_NOT_DECLARATIVE_GRAMMAR"},
+    {"id":"DEC-L02-QA-ANS-006","decision":"APPROVED","rule":"NO_YES_NO_PARTICLE_OR_TRAVEL_RESPONSE_INVENTION"},
+    {"id":"DEC-L02-QA-ANS-007","decision":"APPROVED","rule":"AUTHORITIES_UNCHANGED_VANI_VANUVALI_UNRESOLVED"},
+    {"id":"DEC-L02-QA-ANS-008","decision":"APPROVED","rule":"AUTHORIZE_PREPARATION_OF_FULL_16_SLOT_SQS_AUTHORING_GATE"}
+  ],
+  "approved_effect":{"QA_answer_schemas_approved":4,"SQS_slots_AUTHORED":0,"SQS_slots_VALIDATED":0,"full_HNK_declarative_answers_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"blocked_yes_no_branches":1},
+  "next_gate":"SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2"
+}
