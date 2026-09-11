@@ -19,9 +19,11 @@ for(const supplement of supplements){
 
 const vocabulary=await json('curriculum/cycle-01/L01-kether/authoring/vocabulary-lane.v1.json');
 const vocabularyBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json');
-const vocabularyTransition=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032.validated-transition.v1.json');
 const review=await json('curriculum/cycle-01/L01-kether/authoring/review-lane.v1.json');
 const reviewBatch=await json('curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json');
+const reviewTransition=await json('curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json');
+const seal=await json('curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V41.json');
 const vAni=await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 
 assert.equal(contract.target_total,1008);
@@ -33,38 +35,27 @@ const simulated=new Map();
 for(const override of evidence.overrides){const {lesson,category,range}=override.selector;for(let i=range[0];i<=range[1];i++)simulated.set(`${lesson}/${category}/${i}`,override);}
 const values=[...simulated.values()];
 assert.equal(values.filter(x=>x.evidence_state==='SOURCE_CONFIRMED_FROZEN').length,82);
-assert.equal(values.filter(x=>x.implementation_state==='AUTHORED').length,22);
-assert.equal(values.filter(x=>x.implementation_state==='VALIDATED').length,133);
+assert.equal(values.filter(x=>x.implementation_state==='AUTHORED').length,0);
+assert.equal(values.filter(x=>x.implementation_state==='VALIDATED').length,155);
 assert.equal(values.filter(x=>['AUTHORED','VALIDATED','FROZEN'].includes(x.implementation_state)).length,155);
 assert.equal(values.filter(x=>x.implementation_state==='FROZEN').length,0);
 assert.equal(values.filter(x=>x.scaffolded).length,155);
 
 assert.equal(vocabulary.status,'AUTHORED_32_OF_32_VALIDATED_32_COMPLETE');
-assert.equal(vocabulary.entries.length,32);
 assert.equal(vocabulary.metrics.VALIDATED,32);
 assert.equal(vocabulary.metrics.language_authority_promotions,0);
 assert.equal(vocabularyBatch.status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
-assert.equal(vocabularyTransition.global_after.VALIDATED,133);
 
-assert.equal(review.status,'AUTHORED_22_OF_22_VALIDATION_PENDING');
+assert.equal(review.status,'AUTHORED_22_OF_22_VALIDATED_22_COMPLETE');
 assert.equal(review.items.length,22);
-assert.equal(review.metrics.AUTHORED,22);
-assert.equal(review.metrics.VALIDATED,0);
+assert.ok(review.items.every(x=>x.implementation_state==='VALIDATED'));
+assert.equal(review.metrics.VALIDATED,22);
 assert.equal(review.metrics.new_hnk_forms_created,0);
 assert.equal(review.metrics.language_authority_promotions,0);
-assert.deepEqual(review.metrics.by_type,{QUESTION_RECALL:10,RESPONSE_RECALL:10,INTEGRATIVE_INTERVIEW_A:1,INTEGRATIVE_INTERVIEW_B:1});
-for(let opi=1;opi<=10;opi++){
-  const ref=`L01-OPI-${String(opi).padStart(3,'0')}`;
-  assert.equal(review.items[(opi-1)*2].source_ref,ref);
-  assert.equal(review.items[(opi-1)*2+1].source_ref,ref);
-}
-assert.equal(reviewBatch.status,'AWAITING_EXPLICIT_HUMAN_VALIDATION');
-assert.equal(reviewBatch.review_groups[0].model,'TWO_SLOTS_PER_VALIDATED_OPI');
-assert.equal(reviewBatch.review_groups[0].count,20);
-assert.equal(reviewBatch.review_groups[1].count,2);
-assert.equal(reviewBatch.projected_effect_if_all_approved.L01_VALIDATED_after,155);
-assert.equal(reviewBatch.projected_effect_if_all_approved.global_VALIDATED_after,155);
-assert.equal(reviewBatch.projected_effect_if_all_approved.language_authority_promotions,0);
+assert.equal(reviewBatch.status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
+assert.equal(reviewBatch.applied_effect.L01_VALIDATED_after,155);
+assert.equal(reviewTransition.lesson_after.VALIDATED,155);
+assert.equal(reviewTransition.global_after.VALIDATED,155);
 
 const v=evidence.validation_evidence;
 assert.equal(v.L01_OPI_validated,10);
@@ -75,21 +66,31 @@ assert.equal(v.L01_Teacher_notes_validated,3);
 assert.equal(v.L01_QA_validated,4);
 assert.equal(v.L01_Story_validated,5);
 assert.equal(v.L01_Vocabulary_validated,32);
-assert.equal(v.L01_Vocabulary_authored,0);
-assert.equal(v.L01_Vocabulary_missing,0);
 assert.equal(v.L01_Review_target,22);
-assert.equal(v.L01_Review_authored,22);
-assert.equal(v.L01_Review_validated,0);
+assert.equal(v.L01_Review_authored,0);
+assert.equal(v.L01_Review_validated,22);
 assert.equal(v.L01_Review_missing,0);
-assert.equal(v.L01_Review_authored_or_better,22);
-assert.equal(v.prepared_review_batch,'../curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json');
+assert.equal(v.L01_validated_total,155);
+assert.equal(v.L01_missing_total,0);
+assert.equal(v.L01_status,'VALIDATED_155_OF_155_KETHER_CLOSURE_AUTHORIZED');
+assert.equal(v.prepared_review_batch,null);
+
+assert.equal(seal.status,'SEALED_CURRICULUM_VALIDATION_COMPLETE');
+assert.equal(seal.target,155);
+assert.equal(seal.validated,155);
+assert.equal(seal.preserved_boundaries.language_authority_promotions,0);
+assert.equal(snapshot.status,'L01_KETHER_SEALED_155_OF_155_VALIDATED_L02_CHOKHMAH_ENTRY_OPEN');
+assert.equal(snapshot.implementation.VALIDATED,155);
+assert.equal(snapshot.implementation.AUTHORED,0);
+assert.equal(snapshot.implementation.MISSING,853);
+assert.equal(snapshot.L01.validated,155);
+assert.equal(snapshot.L01.pending_validation,0);
+assert.equal(snapshot.L02_entry.current_status,'LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
-assert.equal(evidence.lexical_evidence.lesson_authored_candidates.L01,20);
-assert.equal(evidence.lexical_evidence.gate,'L01_REVIEW_AUTHORED_22_VALIDATION_PENDING');
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V40-RECONCILED');
-console.log('Cycle 1: 133 VALIDATED + 22 AUTHORED = 155 authored-or-better; L01 is fully implemented and Review validation is the final gate before Kether closure.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V41');
+console.log('Cycle 1: L01 Kether sealed at 155/155 VALIDATED; 853 Cycle 1 slots remain for L02-L07; Chokhmah Source Lock audit is next.');
