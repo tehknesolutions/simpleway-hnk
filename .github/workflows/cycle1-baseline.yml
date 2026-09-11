@@ -101,5 +101,17 @@ jobs:
       - name: Validate L02 OPI pattern review
         run: npm run validate:l02-opi-patterns
 
-      - name: Validate L02 OPI authoring
+      - name: Validate L02 OPI authoring provenance
         run: npm run validate:l02-opi-authoring
+
+      - name: Validate L02 OPI validation
+        run: npm run validate:l02-opi-validation
+
+      - name: Validate L02 SQS contract
+        run: npm run validate:l02-sqs-contract
+
+      - name: Validate L02 SQS pattern review
+        run: npm run validate:l02-sqs-pattern-review
+
+      - name: Validate L02 QA answer pattern gate
+        run: npm run validate:l02-qa-answer-pattern
