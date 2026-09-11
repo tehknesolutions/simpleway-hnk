@@ -1,0 +1,35 @@
+{
+  "batch_id":"SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source_plan":"../authoring/l02-sqs-authoring-plan.v2.json",
+  "source_patterns":"../source-lock/l02-story-qa-structure-pattern-review.v1.json",
+  "source_QA_schemas":"../source-lock/l02-qa-answer-pattern-review.v1.json",
+  "decision_scope":"AUTHOR_EXACTLY_16_SQS_SLOTS_FROM_APPROVED_PATTERNS_AND_RESPONSE_SCHEMAS_WITHOUT_LANGUAGE_AUTHORITY_PROMOTION",
+  "slot_decisions":[
+    {"id":"DEC-L02-SQS-AUTH-001","slot":"L02-STORY-001","pattern_ref":"L02-SQS-PAT-001"},
+    {"id":"DEC-L02-SQS-AUTH-002","slot":"L02-STORY-002","pattern_ref":"L02-SQS-PAT-002"},
+    {"id":"DEC-L02-SQS-AUTH-003","slot":"L02-STORY-003","pattern_ref":"L02-SQS-PAT-003"},
+    {"id":"DEC-L02-SQS-AUTH-004","slot":"L02-STORY-004","pattern_ref":"L02-SQS-PAT-004","risk":"VERY_HIGH"},
+    {"id":"DEC-L02-SQS-AUTH-005","slot":"L02-STORY-005","pattern_ref":"L02-SQS-PAT-005"},
+    {"id":"DEC-L02-SQS-AUTH-006","slot":"L02-QA-001","pattern_ref":"L02-SQS-PAT-006","answer_schema_ref":"L02-QA-ANSWER-PAT-001"},
+    {"id":"DEC-L02-SQS-AUTH-007","slot":"L02-QA-002","pattern_ref":"L02-SQS-PAT-007","answer_schema_ref":"L02-QA-ANSWER-PAT-002"},
+    {"id":"DEC-L02-SQS-AUTH-008","slot":"L02-QA-003","pattern_ref":"L02-SQS-PAT-008","answer_schema_ref":"L02-QA-ANSWER-PAT-003"},
+    {"id":"DEC-L02-SQS-AUTH-009","slot":"L02-QA-004","pattern_ref":"L02-SQS-PAT-009","answer_schema_ref":"L02-QA-ANSWER-PAT-004","risk":"VERY_HIGH","blocked_branch":"L02-OPI-006"},
+    {"id":"DEC-L02-SQS-AUTH-010","slot":"L02-HDR-001","pattern_ref":"L02-SQS-PAT-010"},
+    {"id":"DEC-L02-SQS-AUTH-011","slot":"L02-HDR-002","pattern_ref":"L02-SQS-PAT-011"},
+    {"id":"DEC-L02-SQS-AUTH-012","slot":"L02-STR-001","pattern_ref":"L02-SQS-PAT-012"},
+    {"id":"DEC-L02-SQS-AUTH-013","slot":"L02-STR-002","pattern_ref":"L02-SQS-PAT-013"},
+    {"id":"DEC-L02-SQS-AUTH-014","slot":"L02-STR-003","pattern_ref":"L02-SQS-PAT-014"},
+    {"id":"DEC-L02-SQS-AUTH-015","slot":"L02-STR-004","pattern_ref":"L02-SQS-PAT-015","risk":"VERY_HIGH"},
+    {"id":"DEC-L02-SQS-AUTH-016","slot":"L02-STR-005","pattern_ref":"L02-SQS-PAT-016","risk":"HIGH"}
+  ],
+  "governance_decisions":[
+    {"id":"DEC-L02-SQS-AUTH-017","statement":"Story slots may only reuse already validated OPI utterances in the approved order; no discourse grammar is authored."},
+    {"id":"DEC-L02-SQS-AUTH-018","statement":"Q&A slots may use validated questions plus approved response schemas; no full declarative HNK answer syntax is authored."},
+    {"id":"DEC-L02-SQS-AUTH-019","statement":"The L02-OPI-006 yes/no answer branch remains blocked; no yes/no particle or travel response syntax may be invented."},
+    {"id":"DEC-L02-SQS-AUTH-020","statement":"All WATCH/CANDIDATE/FROZEN labels remain unchanged; VANI/VANUVALI remain unresolved; PA stays lexical-only; Structure frames remain scoped course abstractions."}
+  ],
+  "checks":{"target_slots":16,"story":5,"qa":4,"structure_headers":2,"structures":5,"slots_AUTHORED_before_gate":0,"slots_VALIDATED_before_gate":0,"new_surface_forms_created":0,"authority_promotions":0,"blocked_yes_no_branches":1},
+  "projected_effect_if_all_approved":{"L02_SQS_AUTHORED":16,"L02_SQS_VALIDATED":0,"L02_curriculum_slots_implemented":26,"L02_remaining_missing":113,"GLOBAL_AUTHORED":16,"GLOBAL_VALIDATED":165,"GLOBAL_MISSING":827,"new_surface_forms_created":0,"authority_promotions":0,"next_gate":"SWHNK-L02-SQS-VALIDATION-HUMAN-BATCH-V1"}
+}
