@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V45`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V46`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.48.0`
+**Current package:** `simpleway-hnk@0.49.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -21,43 +21,41 @@ L01 remains **100% curriculum-validated**: Teacher Notes 3/3, OPI 10/10, Stories
 
 `SWHNK-L01-KETHER-SEAL-V1` remains an operational lesson-completion marker only; it does not consume the Cycle 1 final seals `Verbum`, `Logos` or `Dialogos`.
 
-## L02 Chokhmah — exact rebinds APPLIED / pedagogy HOLD
+## L02 Chokhmah — source teachability complete / pedagogy-source review pending
 
 Source Lock remains authoritative:
 
 - L02 target: **139 slots**
 - Vocabulary target: **16**
-- recovered lexemes: **11**
+- recovered source lexemes originally bound to L02: **11**
+- recovered curriculum rebinds: **2** — `VALIVAN`, `PARAZAMO`
+- scoped authored candidates: **5** — `AN`, `EN`, `KUVAN`, `KU`, `KE`
+- governed source references in L02 scope: **18**
+- semantic teachable assets: **16/16**
+- unresolved source observations preserved: **2** — `VANUVALI`, `VANI`
 - recovered phrases: **0**
-- authority mix: **5 FROZEN + 5 WATCH + 1 GATE**
-- recovered master meanings: **9**
-- unresolved master meanings: **2** — `VANUVALI`, `VANI`
 - student cards: **0**
 - teacher drills: **0**
 - L02 curriculum slots implemented: **0**
 - pedagogy authoring hold: **true**
 
-The five semantic targets were approved first. The following existing authored candidates now have a scoped L02 lesson binding in `@hnk/linguas@1.6.0-candidate`:
+The exact candidate rebind gate remains applied only as language-scope extension. `AN`, `EN`, `KUVAN`, `KU` and `KE` remain `CANDIDATE`; no universal pronoun or interrogative grammar is inferred.
 
-- `AUTH-016 AN` → `FIRST_PERSON_REFERENT`
-- `AUTH-017 EN` → `SECOND_PERSON_REFERENT`
-- `AUTH-001 KUVAN` → `LOCATION_INTERROGATIVE`
-- `AUTH-018 KU` → `CONTENT_SELECTOR`
-- `AUTH-019 KE` → `QUESTION_OPERATOR`
+The unresolved-vocabulary gate is now **APPROVED_AND_APPLIED_TO_LANGUAGE_SCOPE**. `VANUVALI` remains `GATE` with `meaning=null` and `VANI` remains `WATCH` with `meaning=null`; the scoped L01 residence interpretation of VANI is not generalized. Instead, recovered `FROZEN` assets `VALIVAN` (escritório) and `PARAZAMO` (escola / domínio de estudo) were rebound to L02. This closes the semantic-teachability gap **14/16 → 16/16** without creating any new HNK form or authority promotion.
 
-This was a **LESSON_SCOPE_EXTENSION_ONLY** operation. It created **0 new HNK surface forms**, **0 new language assets**, **0 historical recovery claims**, and **0 authority promotions**. All five remain `CANDIDATE`.
+Crucially, **source teachability is not curriculum validation**. L02 remains **139/139 MISSING** in the pedagogical slot ledger.
 
-L02 therefore has **16 governed language assets** at source/governance level: 11 recovered lexemes + 5 scoped authored candidates. Of these, **14 are currently semantically teachable**. `VANUVALI` remains `GATE` with `meaning=null`; `VANI` remains `WATCH` with `meaning=null`. The scoped L01 residence interpretation of VANI is not generalized.
+## Pedagogy Source Contract — prepared, not approved
 
-Crucially, **scope binding is not pedagogy validation**. No OPI, Story, Q&A, Structure, Vocabulary card, Activation or Review slot of L02 was implemented by this rebind.
+`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-V1` defines the 16-item teachable source set and drafts **10 communicative OPI intents**, but explicitly authorizes **0 HNK sentences** and **0 sentence patterns**. Its sentence-pattern policy remains `NOT_AUTHORIZED_YET`.
 
-## Next gate
+The next human gate is:
 
-`SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1`
+`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-The prepared recommendation preserves `VANUVALI` and `VANI` as unresolved source observations and proposes recovered `FROZEN` rebinds `VALIVAN` and `PARAZAMO` to close the **14/16 → 16/16 semantic-teachability gap**. This next gate is not approved by the rebind decision above and still implements **0 curriculum slots**.
+If approved, it authorizes only the pedagogical source set and the ten communicative intents. It still does **not** implement OPI, Story, Q&A, Structure, Vocabulary, Activation or Review slots; the next stage would be a separate evidence-first OPI sentence-pattern review.
 
 ## Historical/source boundary
 
