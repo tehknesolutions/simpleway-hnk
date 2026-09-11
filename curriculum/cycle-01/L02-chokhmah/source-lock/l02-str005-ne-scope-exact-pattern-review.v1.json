@@ -1,0 +1,25 @@
+{
+  "review_id":"SWHNK-L02-STR005-NE-SCOPE-EXACT-PATTERN-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_design_review":"./l02-str005-i-didnt-design-review.v1.json",
+  "source_design_approval":"../validation/l02-str005-i-didnt-design.approved-transition.v1.json",
+  "canonical_contract":"../../../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json",
+  "required_slot":"L02-STR-005",
+  "required_content":"I didn't...",
+  "semantic_target":"FIRST_PERSON_NEGATED_PAST_EVENT_OR_ACTIVITY",
+  "principle":"SEPARATE_NEGATION_SCOPE_FROM_TEMPORAL_CONTEXT_AND_SELECT_NO_EXACT_FORM_WITHOUT_HUMAN_APPROVAL",
+  "scope_extension_candidate":{"form":"NE","current_authority":"CANDIDATE","current_support":"scoped L01 negation/absence use","proposed_L02_scope":"SCOPED_PREDICATE_NEGATION_FOR_STR005_COURSE_USE_ONLY","status":"PROPOSED_NOT_APPLIED","non_effects":["No universal negation grammar.","No authority promotion.","No past-tense meaning is assigned to NE."]},
+  "first_person_component":{"form":"AN","current_authority":"CANDIDATE","proposed_role":"SCOPED_FIRST_PERSON_REFERENT_IN_STR005","status":"REVIEW_ONLY_NOT_APPLIED","non_effect":"No global person paradigm is created."},
+  "pattern_candidates":[
+    {"id":"L02-STR005-PAT-A","frame":"AN + NE + PREDICATE","classification":"NEGATED_FIRST_PERSON_WITHOUT_EXPLICIT_PAST_CONTEXT","status":"REVIEW_ONLY_NOT_SELECTED","canonical_fit":"INSUFFICIENT_BY_ITSELF_FOR_I_DIDNT","risk":"VERY_HIGH","boundary":"Without an independently governed past context, this frame cannot be treated as generic 'I didn't...'."},
+    {"id":"L02-STR005-PAT-B","frame":"PA + AN + NE + PREDICATE","classification":"LEXICAL_YESTERDAY_PLUS_NEGATED_FIRST_PERSON","status":"PREFERRED_CONTEXTUAL_CANDIDATE_NOT_SELECTED","canonical_fit":"CONTEXTUAL_REALIZATION_CANDIDATE_FOR_YESTERDAY_I_DIDNT","risk":"VERY_HIGH","boundary":"PA remains lexical 'ontem' only. Approval would license only a scoped course frame meaning an explicitly yesterday-anchored negative event; it would not establish PA=PAST, a DID auxiliary, or generic negative-past morphology."}
+  ],
+  "predicate_policy":{"allowed_source":"already governed L02 predicate inventory only","preferred_first_example":"VALI","alternative_existing_predicates":["PARAZAMI"],"SAROSARI_status":"NOT_PREFERRED_FOR_FIRST_STR005_EXAMPLE_DUE_EXISTING_HIGH_RISK_BARE_PREDICATE_AND_BLOCKED_YES_NO_RESPONSE_BRANCH","new_predicate_creation":false},
+  "selection_status":{"exact_pattern_selected":null,"NE_L02_scope_extension_applied":false,"STR005_approved_form":null},
+  "prohibited_shortcuts":["Do not map PA to generic PAST.","Do not create an HNK equivalent of English DID.","Do not treat PAT-A as past without temporal evidence.","Do not treat PAT-B as universal declarative order.","Do not promote AN or NE beyond CANDIDATE.","Do not author STR005 from this review alone."],
+  "checks":{"pattern_candidates":2,"exact_pattern_selected":0,"NE_scope_extension_candidates":1,"NE_scope_extension_applied":0,"new_surface_forms_created":0,"authority_promotions":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0},
+  "next_gate":"SWHNK-L02-STR005-NE-SCOPE-EXACT-PATTERN-HUMAN-BATCH-V1"
+}

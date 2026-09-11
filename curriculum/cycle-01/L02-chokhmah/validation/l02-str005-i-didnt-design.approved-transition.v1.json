@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-L02-STR005-I-DIDNT-DESIGN-APPROVED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "source_review":"../source-lock/l02-str005-i-didnt-design-review.v1.json",
+  "source_batch":"./l02-str005-i-didnt-design-human-batch.v1.json",
+  "before":{"semantic_target_approved":0,"exact_HNK_pattern_approved":0,"NE_L02_scope_extension_applied":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0},
+  "after":{"semantic_target_approved":1,"exact_HNK_pattern_approved":0,"NE_L02_scope_extension_applied":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0},
+  "semantic_target":"FIRST_PERSON_NEGATED_PAST_EVENT_OR_ACTIVITY",
+  "non_effects":{"new_surface_forms_created":0,"authority_promotions":0,"generic_past_rule_created":0,"DID_auxiliary_created":0,"declarative_word_order_approved":0},
+  "boundaries":{"AN_authority":"CANDIDATE","NE_authority":"CANDIDATE","PA_meaning":"ontem","PA_is_generic_past":false},
+  "next_gate":"SWHNK-L02-STR005-NE-SCOPE-EXACT-PATTERN-HUMAN-BATCH-V1"
+}
