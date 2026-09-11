@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V44`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V45`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.46.0`
+**Current package:** `simpleway-hnk@0.47.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -21,7 +21,7 @@ L01 remains **100% curriculum-validated**: Teacher Notes 3/3, OPI 10/10, Stories
 
 `SWHNK-L01-KETHER-SEAL-V1` remains an operational lesson-completion marker only; it does not consume the Cycle 1 final seals `Verbum`, `Logos` or `Dialogos`.
 
-## L02 Chokhmah — semantics APPROVED / exact rebind review pending
+## L02 Chokhmah — exact rebinds APPLIED / pedagogy HOLD
 
 Source Lock remains authoritative:
 
@@ -34,19 +34,10 @@ Source Lock remains authoritative:
 - unresolved master meanings: **2** — `VANUVALI`, `VANI`
 - student cards: **0**
 - teacher drills: **0**
+- L02 curriculum slots implemented: **0**
 - pedagogy authoring hold: **true**
 
-The five communicative semantic targets are now explicitly **APPROVED**:
-
-1. `FIRST_PERSON_REFERENT`
-2. `SECOND_PERSON_REFERENT`
-3. `LOCATION_INTERROGATIVE`
-4. `CONTENT_SELECTOR`
-5. `QUESTION_OPERATOR`
-
-Semantic approval changed **0 curriculum slots** and selected **0 forms**. It created **0 HNK surface forms**, **0 language assets**, and promoted **0 authorities**.
-
-The evidence-first exact rebind review proposes, but has not applied:
+The five semantic targets were approved first. The following existing authored candidates have now received a scoped L02 lesson binding in `@hnk/linguas@1.6.0-candidate`:
 
 - `AUTH-016 AN` → `FIRST_PERSON_REFERENT`
 - `AUTH-017 EN` → `SECOND_PERSON_REFERENT`
@@ -54,17 +45,19 @@ The evidence-first exact rebind review proposes, but has not applied:
 - `AUTH-018 KU` → `CONTENT_SELECTOR`
 - `AUTH-019 KE` → `QUESTION_OPERATOR`
 
-All five remain `CANDIDATE` and still have registry scope `lessons:[L01]`. The proposed action is only `LESSON_SCOPE_EXTENSION` to L02 after explicit human approval.
+This was a **LESSON_SCOPE_EXTENSION_ONLY** operation. It created **0 new HNK surface forms**, **0 new language assets**, **0 historical recovery claims**, and **0 authority promotions**. All five remain `CANDIDATE`.
 
-`VANI` remains `WATCH` with Master `meaning=null`; `VANUVALI` remains `GATE` with Master `meaning=null`. The scoped L01 residence interpretation of VANI is not generalized.
+L02 therefore has **16 governed language assets** at source/governance level: 11 recovered lexemes + 5 scoped authored candidates. Of these, **14 are currently semantically teachable**. `VANUVALI` remains `GATE` with `meaning=null`; `VANI` remains `WATCH` with `meaning=null`. The scoped L01 residence interpretation of VANI is not generalized.
+
+Crucially, **scope binding is not pedagogy validation**. No OPI, Story, Q&A, Structure, Vocabulary card, Activation or Review slot of L02 was implemented by this rebind.
 
 ## Next gate
 
-`SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1`
+`SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-If approved, the five existing candidates may receive an L02 curriculum-scope extension. Even then, no L02 OPI, Story, Q&A, Structure, Vocabulary, Activation or Review slot is automatically implemented; pedagogy remains a separate governed gate.
+That gate addresses the two-source-slot teachability gap while preserving `VANI` and `VANUVALI` unresolved. It is not approved by the rebind decision above.
 
 ## Historical/source boundary
 
