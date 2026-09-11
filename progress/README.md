@@ -1,8 +1,8 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V46`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V47`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.49.0`
+**Current package:** `simpleway-hnk@0.50.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -21,9 +21,9 @@ L01 remains **100% curriculum-validated**: Teacher Notes 3/3, OPI 10/10, Stories
 
 `SWHNK-L01-KETHER-SEAL-V1` remains an operational lesson-completion marker only; it does not consume the Cycle 1 final seals `Verbum`, `Logos` or `Dialogos`.
 
-## L02 Chokhmah — source teachability complete / pedagogy-source review pending
+## L02 Chokhmah — pedagogy source APPROVED / OPI pattern review pending
 
-Source Lock remains authoritative:
+Source/governance state:
 
 - L02 target: **139 slots**
 - Vocabulary target: **16**
@@ -34,28 +34,34 @@ Source Lock remains authoritative:
 - semantic teachable assets: **16/16**
 - unresolved source observations preserved: **2** — `VANUVALI`, `VANI`
 - recovered phrases: **0**
-- student cards: **0**
-- teacher drills: **0**
 - L02 curriculum slots implemented: **0**
 - pedagogy authoring hold: **true**
 
-The exact candidate rebind gate remains applied only as language-scope extension. `AN`, `EN`, `KUVAN`, `KU` and `KE` remain `CANDIDATE`; no universal pronoun or interrogative grammar is inferred.
+`VANUVALI` remains `GATE` with `meaning=null`; `VANI` remains `WATCH` with `meaning=null`. The scoped L01 residence interpretation of VANI is not generalized.
 
-The unresolved-vocabulary gate is now **APPROVED_AND_APPLIED_TO_LANGUAGE_SCOPE**. `VANUVALI` remains `GATE` with `meaning=null` and `VANI` remains `WATCH` with `meaning=null`; the scoped L01 residence interpretation of VANI is not generalized. Instead, recovered `FROZEN` assets `VALIVAN` (escritório) and `PARAZAMO` (escola / domínio de estudo) were rebound to L02. This closes the semantic-teachability gap **14/16 → 16/16** without creating any new HNK form or authority promotion.
+The Pedagogy Source Contract is now **APPROVED**. It authorizes exactly the 16-item teachable source set and **10 communicative OPI intents**. It still authors **0 HNK sentences**, approves **0 sentence patterns**, and implements **0 curriculum slots**.
 
-Crucially, **source teachability is not curriculum validation**. L02 remains **139/139 MISSING** in the pedagogical slot ledger.
+## OPI Pattern Review — prepared, NOT approved
 
-## Pedagogy Source Contract — prepared, not approved
+`SWHNK-L02-OPI-PATTERN-REVIEW-V1` contains **10 evidence-ranked course-pattern candidates**. The evidence profile is:
 
-`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-V1` defines the 16-item teachable source set and drafts **10 communicative OPI intents**, but explicitly authorizes **0 HNK sentences** and **0 sentence patterns**. Its sentence-pattern policy remains `NOT_AUTHORIZED_YET`.
+- direct validated reuse: **1**
+- strong analogies: **4**
+- ordinary analogies: **2**
+- new scoped hypotheses: **2**
+- composite: **1**
 
-The next human gate is:
+The highest-risk proposal is `PA EN PARI KALOVALA KE`, explicitly marked `VERY_HIGH`. `PA` remains only a recovered lexical past-time anchor; no tense system is inferred.
 
-`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1`
+No pattern is currently approved. No G-ID expansion has been performed from this gate, and no L02 OPI slot is AUTHORED or VALIDATED.
+
+## Next gate
+
+`SWHNK-L02-OPI-PATTERN-REVIEW-HUMAN-BATCH-V1`
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-If approved, it authorizes only the pedagogical source set and the ten communicative intents. It still does **not** implement OPI, Story, Q&A, Structure, Vocabulary, Activation or Review slots; the next stage would be a separate evidence-first OPI sentence-pattern review.
+Approval of that future gate would authorize only the ten scoped course-pattern candidates and the subsequent G-ID expansion step. It would still not establish universal HNK word order, tense, transitivity, interrogative or discourse grammar, and it would not by itself mark any L02 OPI slot VALIDATED.
 
 ## Historical/source boundary
 
