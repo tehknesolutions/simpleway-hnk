@@ -1,0 +1,29 @@
+{
+  "audit_id":"SWHNK-L02-CHOKHMAH-SOURCE-LOCK-AUDIT-V1",
+  "status":"AUDITED_PEDAGOGY_HOLD",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "curriculum_target":139,
+  "vocabulary_target":16,
+  "language_authority":{"repository":"tehknesolutions/codex-hnk","package":"@hnk/linguas","master_registry":"packages/hnk-linguas/src/index.mjs","cycle1_registry":"packages/hnk-linguas/src/cycle1.mjs"},
+  "source_inventory":{"recovered_lexemes":11,"recovered_phrases":0,"authored_candidates_bound_to_L02":0,"authority_counts":{"FROZEN":5,"WATCH":5,"GATE":1,"CANDIDATE":0,"BRIDGE":0,"REFERENCE":0},"with_master_meaning":9,"without_master_meaning":2},
+  "lexemes":[
+    {"id":"LEX-009","form":"TAYOVAN","meaning_pt":"cidade","authority":"FROZEN","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_MEANING"},
+    {"id":"LEX-010","form":"KALOVALA","meaning_pt":"edifício / prédio","authority":"FROZEN","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_MEANING"},
+    {"id":"LEX-011","form":"PAROVAN","meaning_pt":"biblioteca","authority":"FROZEN","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_MEANING"},
+    {"id":"LEX-012","form":"PARAZAMI","meaning_pt":"estudo / estudar","authority":"WATCH","certainty":"RECOVERED","lessons":["L02","L03"],"source_state":"RECOVERED_MEANING_WATCH"},
+    {"id":"LEX-013","form":"VALI","meaning_pt":"trabalho / trabalhar","authority":"FROZEN","certainty":"RECOVERED","lessons":["L02","L03"],"source_state":"RECOVERED_MEANING"},
+    {"id":"LEX-014","form":"SAROSARI","meaning_pt":"viagem / viajar","authority":"WATCH","certainty":"RECOVERED","lessons":["L02","L04"],"source_state":"RECOVERED_MEANING_WATCH"},
+    {"id":"LEX-015","form":"PARI","meaning_pt":"ver","authority":"WATCH","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_MEANING_WATCH"},
+    {"id":"LEX-020","form":"PA","meaning_pt":"ontem","authority":"WATCH","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_MEANING_WATCH"},
+    {"id":"LEX-030","form":"VANUVALI","meaning_pt":null,"authority":"GATE","certainty":"UNRECOVERED","lessons":["L02","L04"],"source_state":"OBSERVED_FORM_MEANING_UNRECOVERED"},
+    {"id":"LEX-031","form":"VANI","meaning_pt":null,"authority":"WATCH","certainty":"UNRECOVERED","lessons":["L02"],"source_state":"OBSERVED_FORM_MEANING_UNRECOVERED"},
+    {"id":"LEX-032","form":"PITSA","meaning_pt":"pizza","authority":"FROZEN","certainty":"RECOVERED","lessons":["L02"],"source_state":"RECOVERED_LOAN_FROZEN"}
+  ],
+  "coverage":{"vocabulary_target":16,"recovered_lexeme_proxy":11,"recovered_proxy_percent":68.75,"proxy_gap":5,"warning":"This is an asset-coverage proxy only. It does not prove that each recovered lexeme equals one L02 curriculum Vocabulary slot."},
+  "blockers":["No recovered L02 phrases are registered in @hnk/linguas.","The L02 source scaffold still has source_canon UNDEFINED.","VANUVALI has no recovered master meaning and remains GATE.","VANI has no recovered master meaning and remains WATCH; the L01 residence reading is scoped and must not be silently generalized to L02.","The derived L02 Vocabulary allocation is 16 while only 11 recovered lexemes are bound to L02; missing curriculum semantics/forms must be governed rather than fabricated.","No student cards or teacher drills are source-backed yet."],
+  "non_effects":["Does not author the five Vocabulary proxy-gap items.","Does not create L02 OPI, Story, QA, Structures, Activation or Review payloads.","Does not promote WATCH or GATE assets.","Does not import the scoped L01 VANI residence interpretation as an L02 historical gloss.","Does not claim Hebrew, Greek or Esperanto are separate SimpleWay courses; they remain reference/comparison layers for HNK research."],
+  "decision":"HOLD_PEDAGOGY_AUTHORING_PENDING_SOURCE_TARGETS",
+  "next_gate":"DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS"
+}
