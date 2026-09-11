@@ -1,64 +1,36 @@
 {
-  "lane_id": "SWHNK-L01-REVIEW-AUTHORING-V1",
-  "status": "AUTHORED_22_OF_22_VALIDATION_PENDING",
-  "lesson_id": "L01",
-  "sphere": "Kether",
-  "target": 22,
-  "source_contract": {
-    "review": 22,
-    "allocation_source": "progress/cycle1-allocation.v1.json",
-    "historical_payload_recovery_claim": false
-  },
-  "pedagogy": {
-    "model": "ACTIVE_RECALL_SPACED_REVIEW",
-    "principle": "Review already validated L01 language and course constructions without creating new HNK language assets.",
-    "sequence": ["LEXICAL_RECALL","FUNCTION_RECALL","CONSTRUCTION_REBUILD","COMMUNICATIVE_TRANSFER"],
-    "language_authority_effect": "NONE"
-  },
-  "rules": {
-    "new_hnk_forms_allowed": false,
-    "unvalidated_constructions_allowed": false,
-    "authority_promotion_allowed": false,
-    "watch_gate_candidate_labels_preserved": true,
-    "historical_reconstruction_claim": false,
-    "numerology_selects_payload": false
-  },
-  "items": [
-    {"slot_id":"L01-REV-001","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma HNK para apelido / nome familiar.","expected":"VAMAKALA","source_ref":"L01-VOC-001","authority":"FROZEN","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-002","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma HNK para origem / local de nascimento.","expected":"SARADAYA","source_ref":"L01-VOC-002","authority":"FROZEN","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-003","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma HNK para trabalho / trabalhar.","expected":"VALI","source_ref":"L01-VOC-010","authority":"FROZEN","implementation_state":"AUTHORED","boundary":"L01 use remains an explicit curriculum rebind from recovered L02/L03 provenance."},
-    {"slot_id":"L01-REV-004","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma HNK para hobby / atividade de prazer.","expected":"VAMAVALA","source_ref":"L01-VOC-007","authority":"WATCH","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-005","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma HNK para canto / expressão harmônica.","expected":"VAMAZAMU","source_ref":"L01-VOC-008","authority":"WATCH","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-006","review_type":"LEXICAL_RECALL","prompt_pt":"No escopo da L01, recupere a forma usada para morar / residir.","expected":"VANI","source_ref":"L01-VOC-030","authority":"WATCH","implementation_state":"AUTHORED","boundary":"Master Lexicon meaning remains null; residence semantics remain scoped course interpretation."},
-    {"slot_id":"L01-REV-007","review_type":"LEXICAL_RECALL","prompt_pt":"No escopo da L01, recupere a forma usada para gostar / preferência.","expected":"VAME","source_ref":"L01-VOC-031","authority":"GATE","implementation_state":"AUTHORED","boundary":"VAME remains GATE; no global preference grammar."},
-    {"slot_id":"L01-REV-008","review_type":"LEXICAL_RECALL","prompt_pt":"Recupere a forma governada para falar / usar linguagem em contexto comunicativo da L01.","expected":"ZAMI","source_ref":"L01-VOC-032","authority":"CANDIDATE","implementation_state":"AUTHORED","boundary":"No historical standalone gloss claim."},
-
-    {"slot_id":"L01-REV-009","review_type":"FUNCTION_RECALL","prompt_pt":"Qual forma governada representa o referente de primeira pessoa em uso iniciante escopado?","expected":"AN","source_ref":"L01-VOC-026","authority":"CANDIDATE","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-010","review_type":"FUNCTION_RECALL","prompt_pt":"Qual forma governada representa o referente de segunda pessoa em uso iniciante escopado?","expected":"EN","source_ref":"L01-VOC-027","authority":"CANDIDATE","implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-011","review_type":"FUNCTION_RECALL","prompt_pt":"Qual forma funciona como seletor interrogativo de conteúdo na L01?","expected":"KU","source_ref":"L01-VOC-028","authority":"CANDIDATE","implementation_state":"AUTHORED","boundary":"Do not reduce KU to one universal WH gloss."},
-    {"slot_id":"L01-REV-012","review_type":"FUNCTION_RECALL","prompt_pt":"Qual forma funciona como operador / marcador de pergunta nas construções validadas da L01?","expected":"KE","source_ref":"L01-VOC-029","authority":"CANDIDATE","implementation_state":"AUTHORED","boundary":"No universal HNK interrogative syntax claim."},
-    {"slot_id":"L01-REV-013","review_type":"FUNCTION_RECALL","prompt_pt":"Qual forma foi governada para o domínio de nome pessoal na L01?","expected":"KALA","source_ref":"L01-VOC-025","authority":"CANDIDATE","implementation_state":"AUTHORED","boundary":"No historical standalone gloss claim."},
-    {"slot_id":"L01-REV-014","review_type":"FUNCTION_RECALL","prompt_pt":"Qual é o nome de referência do idioma / sistema HNK?","expected":"HENUVOKODAN","source_ref":"L01-VOC-009","authority":"REFERENCE","implementation_state":"AUTHORED"},
-
-    {"slot_id":"L01-REV-015","review_type":"CONSTRUCTION_REBUILD","prompt_en":"Do you speak HENUVOKODAN?","expected":"EN ZAMI HENUVOKODAN KE","source_ref":"L01-OPI-003","authority_profile":["CANDIDATE","CANDIDATE","REFERENCE","CANDIDATE"],"implementation_state":"AUTHORED","boundary":"Uses only the validated scoped L01 construction."},
-    {"slot_id":"L01-REV-016","review_type":"CONSTRUCTION_REBUILD","prompt_en":"Where do you work?","expected":"EN VALI KUVAN KE","source_ref":"L01-OPI-005","authority_profile":["CANDIDATE","FROZEN","CANDIDATE","CANDIDATE"],"implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-017","review_type":"CONSTRUCTION_REBUILD","prompt_en":"What are your hobbies?","expected":"EN KU VAMAVALA KE","source_ref":"L01-OPI-008","authority_profile":["CANDIDATE","CANDIDATE","WATCH","CANDIDATE"],"implementation_state":"AUTHORED"},
-    {"slot_id":"L01-REV-018","review_type":"CONSTRUCTION_REBUILD","prompt_en":"Do you like to sing?","expected":"EN VAME VAMAZAMU KE","source_ref":"L01-OPI-009","authority_profile":["CANDIDATE","GATE","WATCH","CANDIDATE"],"implementation_state":"AUTHORED"},
-
-    {"slot_id":"L01-REV-019","review_type":"COMMUNICATIVE_TRANSFER","prompt_pt":"Responda negativamente, no padrão validado da L01, à pergunta sobre possuir apelido.","expected":"NE VAMAKALA","source_ref":"L01-OPI-002","authority_profile":["CANDIDATE","FROZEN"],"implementation_state":"AUTHORED","boundary":"NE remains scoped CANDIDATE negation; no HAVE verb is implied."},
-    {"slot_id":"L01-REV-020","review_type":"COMMUNICATIVE_TRANSFER","prompt_pt":"Produza o cardinal falado 18 no sistema numérico validado da L01.","expected":"DUVE TOMI","source_ref":"L01-OPI-003","authority_profile":["CANDIDATE","CANDIDATE"],"implementation_state":"AUTHORED","boundary":"10–99 positional composition remains scoped course grammar."},
-    {"slot_id":"L01-REV-021","review_type":"COMMUNICATIVE_TRANSFER","prompt_en":"Where do you live?","expected":"EN VANI KUVAN KE","source_ref":"L01-OPI-007","authority_profile":["CANDIDATE","WATCH","CANDIDATE","CANDIDATE"],"implementation_state":"AUTHORED","boundary":"VANI residence reading remains scoped; Master Lexicon meaning stays null."},
-    {"slot_id":"L01-REV-022","review_type":"COMMUNICATIVE_TRANSFER","prompt_en":"What's your name?","expected":"KALA YA EN ES KU KE","source_ref":"L01-OPI-001","authority_profile":["CANDIDATE","UNRESOLVED_IN_WHOLE_UTTERANCE","CANDIDATE","UNRESOLVED_IN_WHOLE_UTTERANCE","CANDIDATE","CANDIDATE"],"implementation_state":"AUTHORED","boundary":"Validated as recovered whole utterance only; YA and ES remain semantically unresolved and are not promoted by this review."}
+  "lane_id":"SWHNK-L01-REVIEW-AUTHORING-V1",
+  "status":"AUTHORED_22_OF_22_VALIDATION_PENDING",
+  "lesson_id":"L01",
+  "sphere":"Kether",
+  "target":22,
+  "source_contract":{"review":22,"allocation_source":"progress/cycle1-allocation.v1.json","historical_payload_recovery_claim":false},
+  "pedagogy":{"model":"OPI_LINKED_ACTIVE_RECALL_PLUS_INTEGRATIVE_REVIEW","principle":"Review only already validated L01 course payloads and response contracts without creating new HNK language assets.","opi_linked_slots":20,"integrative_slots":2,"language_authority_effect":"NONE"},
+  "rules":{"new_hnk_forms_allowed":false,"unvalidated_constructions_allowed":false,"authority_promotion_allowed":false,"watch_gate_candidate_labels_preserved":true,"historical_reconstruction_claim":false,"numerology_selects_payload":false,"two_slots_per_validated_opi":true},
+  "items":[
+    {"slot_id":"L01-REV-001","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-001","prompt_en":"What's your name?","expected":"KALA YA EN ES KU KE","implementation_state":"AUTHORED","boundary":"Recovered whole utterance only; YA and ES remain unresolved."},
+    {"slot_id":"L01-REV-002","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-001","hnk_prompt":"KALA YA EN ES KU KE","response_contract":"[PERSONAL_NAME]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-003","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-002","prompt_en":"Do you have a nickname?","expected":"EN VAMAKALA KE","implementation_state":"AUTHORED","boundary":"No HAVE verb or historical possession grammar claimed."},
+    {"slot_id":"L01-REV-004","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-002","hnk_prompt":"EN VAMAKALA KE","response_contract":["[NICKNAME]","NE VAMAKALA"],"implementation_state":"AUTHORED","boundary":"NE remains CANDIDATE and scoped."},
+    {"slot_id":"L01-REV-005","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-003","prompt_en":"How old are you?","expected":"EN KU SARASALA KE","implementation_state":"AUTHORED","boundary":"Age reading is contextual; SARASALA remains WATCH."},
+    {"slot_id":"L01-REV-006","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-003","hnk_prompt":"EN KU SARASALA KE","response_contract":"[CARDINAL_0_99]","validated_examples":["TOMI","DUVE TOMI","LUSO HOYU"],"implementation_state":"AUTHORED","boundary":"10-99 composition remains scoped; no year unit."},
+    {"slot_id":"L01-REV-007","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-004","prompt_en":"Where were you born?","expected":"EN SARADAYA KUVAN KE","implementation_state":"AUTHORED","boundary":"KUVAN remains CANDIDATE."},
+    {"slot_id":"L01-REV-008","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-004","hnk_prompt":"EN SARADAYA KUVAN KE","response_contract":"[PLACE]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-009","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-005","prompt_en":"Where do you work?","expected":"EN VALI KUVAN KE","implementation_state":"AUTHORED","boundary":"VALI L01 use remains governed rebind from recovered L02/L03 provenance."},
+    {"slot_id":"L01-REV-010","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-005","hnk_prompt":"EN VALI KUVAN KE","response_contract":"[PLACE]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-011","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-006","prompt_en":"What do you do at work/school?","context":"WORK_OR_SCHOOL_CARD_CONTEXT_REQUIRED","expected":"EN KU VALA KE","implementation_state":"AUTHORED","boundary":"No generic HNK DO; VALA remains CANDIDATE."},
+    {"slot_id":"L01-REV-012","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-006","context":"WORK_OR_SCHOOL_CARD_CONTEXT_REQUIRED","hnk_prompt":"EN KU VALA KE","response_contract":"[ACTIVITY_DESCRIPTION]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-013","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-007","prompt_en":"Where do you live and who do you live with?","expected_sequence":["EN VANI KUVAN KE","EN VANI KUON KE"],"implementation_state":"AUTHORED","boundary":"VANI remains WATCH with Master Lexicon meaning null; KUVAN/KUON remain CANDIDATE; ON remains GATE; no WITH lexeme or global comitative grammar."},
+    {"slot_id":"L01-REV-014","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-007","hnk_prompt_sequence":["EN VANI KUVAN KE","EN VANI KUON KE"],"response_contract":["[PLACE]","[PERSON_OR_PEOPLE]"],"implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-015","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-008","prompt_en":"What are your hobbies?","expected":"EN KU VAMAVALA KE","implementation_state":"AUTHORED","boundary":"VAMAVALA remains WATCH; KU is not globally glossed as one WH word."},
+    {"slot_id":"L01-REV-016","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-008","hnk_prompt":"EN KU VAMAVALA KE","response_contract":"[HOBBY_OR_PLEASURE_ACTIVITY]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-017","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-009","prompt_en":"Do you like to sing?","expected":"EN VAME VAMAZAMU KE","implementation_state":"AUTHORED","boundary":"VAME remains GATE; VAMAZAMU WATCH; no universal preference grammar."},
+    {"slot_id":"L01-REV-018","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-009","hnk_prompt":"EN VAME VAMAZAMU KE","response_contract":["VAME VAMAZAMU","NE VAME VAMAZAMU"],"implementation_state":"AUTHORED","boundary":"Predicate negation with NE remains scoped to OPI9 course use."},
+    {"slot_id":"L01-REV-019","review_type":"QUESTION_RECALL","source_ref":"L01-OPI-010","prompt_en":"What do you do on weekends?","context_hnk":"VAMUSARO","context_meaning":"rest / leisure period","expected":"EN KU VALA KE","implementation_state":"AUTHORED","boundary":"VAMUSARO is not relabeled weekend; equivalence remains approximate contextual."},
+    {"slot_id":"L01-REV-020","review_type":"RESPONSE_RECALL","source_ref":"L01-OPI-010","context_hnk":"VAMUSARO","hnk_prompt":"EN KU VALA KE","response_contract":"[ACTIVITY_DESCRIPTION]","implementation_state":"AUTHORED"},
+    {"slot_id":"L01-REV-021","review_type":"INTEGRATIVE_INTERVIEW_A","source_refs":["L01-OPI-001","L01-OPI-002","L01-OPI-004","L01-OPI-005","L01-OPI-008"],"validated_hnk_sequence":["KALA YA EN ES KU KE","EN VAMAKALA KE","EN SARADAYA KUVAN KE","EN VALI KUVAN KE","EN KU VAMAVALA KE"],"response_contracts":["[PERSONAL_NAME]","[NICKNAME] | NE VAMAKALA","[PLACE]","[PLACE]","[HOBBY_OR_PLEASURE_ACTIVITY]"],"implementation_state":"AUTHORED","boundary":"Exact validated payload reuse only; no new grammar."},
+    {"slot_id":"L01-REV-022","review_type":"INTEGRATIVE_INTERVIEW_B","source_refs":["L01-OPI-003","L01-OPI-006","L01-OPI-007","L01-OPI-009","L01-OPI-010"],"validated_hnk_sequence":["EN KU SARASALA KE","EN KU VALA KE","EN VANI KUVAN KE | EN VANI KUON KE","EN VAME VAMAZAMU KE","VAMUSARO :: EN KU VALA KE"],"response_contracts":["[CARDINAL_0_99]","[ACTIVITY_DESCRIPTION]","[PLACE] + [PERSON_OR_PEOPLE]","VAME VAMAZAMU | NE VAME VAMAZAMU","[ACTIVITY_DESCRIPTION]"],"implementation_state":"AUTHORED","boundary":"All OPI-specific scope restrictions remain active; VAMUSARO remains rest/leisure period, VANI meaning-null WATCH, VAME GATE and NE/VALA/KUVAN/KUON CANDIDATE."}
   ],
-  "metrics": {
-    "target": 22,
-    "AUTHORED": 22,
-    "VALIDATED": 0,
-    "MISSING": 0,
-    "new_hnk_forms_created": 0,
-    "language_authority_promotions": 0,
-    "historical_reconstruction_claims": 0,
-    "by_type": {"LEXICAL_RECALL":8,"FUNCTION_RECALL":6,"CONSTRUCTION_REBUILD":4,"COMMUNICATIVE_TRANSFER":4}
-  },
-  "next_gate": "SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1"
+  "metrics":{"target":22,"AUTHORED":22,"VALIDATED":0,"MISSING":0,"new_hnk_forms_created":0,"new_language_assets_created":0,"language_authority_promotions":0,"historical_reconstruction_claims":0,"by_type":{"QUESTION_RECALL":10,"RESPONSE_RECALL":10,"INTEGRATIVE_INTERVIEW_A":1,"INTEGRATIVE_INTERVIEW_B":1}},
+  "next_gate":"SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1"
 }
