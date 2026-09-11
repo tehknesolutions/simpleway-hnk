@@ -1,0 +1,16 @@
+{
+  "lane_id":"SWHNK-L02-QA-AUTHORING-V1",
+  "status":"AUTHORED_4_OF_4_VALIDATION_PENDING",
+  "lesson_id":"L02",
+  "sphere":"Chokhmah",
+  "source_contract":{"qa":4,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json","payload_historical_recovery_claim":false},
+  "historical_boundary":"No historical L02 Q&A payload was recovered. These four items are governed course authorship using only VALIDATED L02 questions and approved semantic response schemas; no full declarative HNK response syntax is authored.",
+  "items":[
+    {"slot_id":"L02-QA-001","topic":"WORK_LOCATION","question_ref":"L02-OPI-002","question_hnk":"EN VALI KUVAN KE","question_intent_pt":"Onde você trabalha?","answer_schema":"[WORKPLACE_OR_WORK_LOCATION]","governed_example_anchors":["VALIVAN","TAYOVAN"],"authority_boundary":"Example anchors are lexical response values only; no copular or locative declarative sentence is authorized.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-QA-002","topic":"STUDY_LOCATION","question_ref":"L02-OPI-003","question_hnk":"EN PARAZAMI KUVAN KE","question_intent_pt":"Onde você estuda?","answer_schema":"[STUDY_LOCATION_OR_SCHOOL_DOMAIN]","governed_example_anchors":["PARAZAMO","PAROVAN"],"authority_boundary":"PARAZAMI remains WATCH; response schema does not establish declarative or copular grammar.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-QA-003","topic":"STUDY_OR_WORK_CONTENT","question_options":[{"question_ref":"L02-OPI-004","hnk":"EN KU PARAZAMI KE","intent_pt":"O que você estuda?"},{"question_ref":"L02-OPI-005","hnk":"EN KU VALI KE","intent_pt":"Que trabalho/atividade de trabalho você faz?"}],"answer_schema":"[GOVERNED_STUDY_CONTENT_OR_WORK_ACTIVITY]","governed_example_anchors":[],"authority_boundary":"Open response semantics are bounded to governed course inventory; no new lexeme may be coined merely to answer the card.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-QA-004","topic":"CONTROLLED_PERCEPTION_AND_TIME_BRANCHES","question_options":[{"question_ref":"L02-OPI-007","hnk":"EN PARI KALOVALA KE","answer_schema":"[PERCEIVED_OBJECT]","governed_example_anchors":["TAYOVAN","KALOVALA","PITSA"]},{"question_ref":"L02-OPI-008","hnk":"PA EN PARI KALOVALA KE","answer_schema":"[PERCEIVED_OBJECT_WITH_LEXICAL_TIME_CONTEXT]","governed_example_anchors":["KALOVALA","PA"]},{"question_ref":"L02-OPI-009","hnk":"EN PARI PITSA KE","answer_schema":"[PERCEIVED_OBJECT]","governed_example_anchors":["PITSA"]}],"blocked_branch":{"question_ref":"L02-OPI-006","hnk":"EN SAROSARI KE","status":"BLOCKED_NO_GOVERNED_YES_NO_RESPONSE_SCHEMA"},"risk":"VERY_HIGH","authority_boundary":"PA remains lexical 'ontem'; no yes/no particle, tense grammar, or declarative travel syntax is authored.","implementation_state":"AUTHORED"}
+  ],
+  "metrics":{"qa_target":4,"AUTHORED":4,"VALIDATED":0,"FROZEN":0,"new_HNK_lexical_forms":0,"full_HNK_declarative_answers_authored":0,"blocked_yes_no_branches":1},
+  "next_gate":"SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1"
+}
