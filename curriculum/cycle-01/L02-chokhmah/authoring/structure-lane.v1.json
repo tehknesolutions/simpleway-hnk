@@ -1,0 +1,21 @@
+{
+  "lane_id":"SWHNK-L02-STRUCTURE-LANE-AUTHORING-V1",
+  "status":"AUTHORED_6_OF_7_STR005_CANONICAL_REQUIREMENT_PENDING",
+  "lesson_id":"L02",
+  "sphere":"Chokhmah",
+  "source_contract":{"structure_headers":2,"structures":5,"quantity_source":"HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json","required_addition":{"lesson":2,"category":"structures","content":"I didn't..."}},
+  "historical_boundary":"No historical L02 structure payload was recovered. The authored frames are scoped SimpleWay course abstractions from VALIDATED L02 examples. One canonical structure slot remains intentionally unauthored because the contract requires 'I didn't...' and no governed HNK negative-past declarative frame exists yet.",
+  "headers":[
+    {"slot_id":"L02-HDR-001","title_pt":"Lugar, trabalho e estudo","scope":"L02-STR-001_002","hnk_sentence":null,"implementation_state":"AUTHORED"},
+    {"slot_id":"L02-HDR-002","title_pt":"Percepção e contexto temporal","scope":"L02-STR-003_005","hnk_sentence":null,"implementation_state":"AUTHORED"}
+  ],
+  "structures":[
+    {"slot_id":"L02-STR-001","name":"LOCATIVE_PREDICATE_QUESTION","frame":"EN + PREDICATE + KUVAN + KE","function_pt":"Pergunta escopada de localização para predicados já governados na L02.","validated_examples":["EN VALI KUVAN KE","EN PARAZAMI KUVAN KE"],"authority_boundary":"KUVAN/EN/KE remain CANDIDATE scoped functions; frame is not universal HNK syntax.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-STR-002","name":"CONTENT_PREDICATE_QUESTION","frame":"EN + KU + PREDICATE + KE","function_pt":"Pergunta escopada sobre conteúdo de estudo ou atividade de trabalho.","validated_examples":["EN KU PARAZAMI KE","EN KU VALI KE"],"authority_boundary":"KU remains a scoped content selector and is not globally glossed as one WH word.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-STR-003","name":"PERCEPTION_OBJECT_QUESTION","frame":"EN + PARI + OBJECT + KE","function_pt":"Pergunta escopada de percepção sobre objeto/contexto já governado.","validated_examples":["EN PARI TAYOVAN KE","EN PARI KALOVALA KE","EN PARI PITSA KE"],"authority_boundary":"PARI remains WATCH; no universal transitivity grammar or borrowing rule is created.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-STR-004","name":"LEXICAL_YESTERDAY_PERCEPTION_QUESTION","frame":"PA + EN + PARI + OBJECT + KE","function_pt":"Pergunta escopada que reutiliza PA como âncora lexical 'ontem' no único padrão validado.","validated_examples":["PA EN PARI KALOVALA KE"],"risk":"VERY_HIGH","authority_boundary":"PA is lexical 'ontem' only; this frame does not establish past tense, temporal morphology, or a universal sentence-initial rule.","implementation_state":"AUTHORED"},
+    {"slot_id":"L02-STR-005","name":"FIRST_PERSON_NEGATIVE_PAST_I_DIDNT","required_content":"I didn't...","frame":null,"function_pt":"Estrutura canônica obrigatória de primeira pessoa negativa no passado, ainda sem forma HNK governada.","candidate_components":{"first_person":"AN","negation":"NE","time_anchor":"PA","predicate":"UNRESOLVED"},"blocking_gaps":["No governed L02 declarative word order for AN.","NE is governed only in scoped L01 negation/absence use and requires L02 extension review.","PA means lexical 'ontem' and cannot be promoted to a generic past marker.","No HNK equivalent of English auxiliary DID is authorized or required.","Exact negative-past predicate frame has not been approved."],"displaced_pattern":{"pattern_ref":"L02-SQS-PAT-016","frame":"EN + SAROSARI + KE","status":"APPROVED_SCOPED_OPI_PATTERN_NOT_CONSUMING_THIS_CANONICAL_STRUCTURE_SLOT"},"implementation_state":"MISSING_CANONICAL_DESIGN_GATE_REQUIRED"}
+  ],
+  "metrics":{"structure_headers_target":2,"structure_headers_AUTHORED":2,"structures_target":5,"structures_AUTHORED":4,"structures_MISSING":1,"total_target":7,"total_AUTHORED":6,"VALIDATED":0,"new_HNK_lexical_forms":0,"new_HNK_grammar_rules_beyond_validated_course_frames":0},
+  "next_gates":["SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1","SWHNK-L02-STR005-I-DIDNT-DESIGN-HUMAN-BATCH-V1"]
+}
