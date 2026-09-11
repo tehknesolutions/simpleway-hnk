@@ -1,0 +1,36 @@
+{
+  "review_id":"SWHNK-L02-STR005-I-DIDNT-DESIGN-REVIEW-V1",
+  "status":"SEMANTIC_REQUIREMENT_CONFIRMED_EXACT_HNK_PATTERN_NOT_SELECTED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "canonical_contract":"../../../contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json",
+  "required_slot":"L02-STR-005",
+  "required_content":"I didn't...",
+  "principle":"PRESERVE_CANONICAL_CURRICULUM_REQUIREMENT_WITHOUT_INVENTING_NEGATIVE_PAST_HNK_GRAMMAR",
+  "semantic_target":{"id":"L02-STR005-SEM-NEGATIVE-PAST-FIRST-PERSON","function":"FIRST_PERSON_NEGATED_PAST_EVENT_OR_ACTIVITY","english_prompt":"I didn't...","approved_form":null},
+  "available_governed_components":[
+    {"form":"AN","registry_id":"AUTH-016","role_candidate":"FIRST_PERSON_REFERENT","authority":"CANDIDATE","current_L02_scope":true,"boundary":"First-person role is scoped; no global person paradigm."},
+    {"form":"NE","registry_id":"AUTH-004","role_candidate":"NEGATION_ABSENCE_OPERATOR","authority":"CANDIDATE","current_L02_scope":false,"boundary":"Current approved use is scoped L01 negation/absence; L02 extension requires separate review."},
+    {"form":"PA","registry_id":"LEX-020","role_candidate":"LEXICAL_YESTERDAY_ANCHOR","authority":"WATCH","current_L02_scope":true,"boundary":"PA means lexical 'ontem' only and must not be converted into a generic past marker."}
+  ],
+  "evidence_support":[
+    {"source":"L01-STR-005 / L01 validated response behavior","supports":"NE can participate in scoped predicate-negation behavior","does_not_support":"Negative past or L02 declarative order"},
+    {"source":"L02-OPI-008","supports":"PA may appear as lexical yesterday anchor in one validated L02 question","does_not_support":"Generic past tense or declarative temporal syntax"},
+    {"source":"AUTH-016 AN","supports":"First-person referent for scoped L01/L02 use","does_not_support":"Exact declarative subject position for this new frame"}
+  ],
+  "unresolved_design_questions":[
+    "Should NE be extended to L02 for this structure?",
+    "What exact declarative ordering, if any, is permitted for AN + NEGATION + PREDICATE?",
+    "Should PA be present only in examples meaning literally 'yesterday', rather than inside the abstract I-didn't frame?",
+    "Which already governed predicate(s) may instantiate the first course example without implying a generic DID auxiliary?"
+  ],
+  "prohibited_shortcuts":[
+    "Do not equate English DID with a new HNK auxiliary.",
+    "Do not promote PA from 'ontem' to PAST.",
+    "Do not assume AN NE PREDICATE or PA AN NE PREDICATE word order without a separate pattern gate.",
+    "Do not invent a new negation or tense lexeme to fill the numerical slot."
+  ],
+  "checks":{"canonical_requirement_present":true,"approved_exact_HNK_pattern":false,"new_surface_forms_created":0,"authority_promotions":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0},
+  "next_gate":"SWHNK-L02-STR005-I-DIDNT-DESIGN-HUMAN-BATCH-V1"
+}
