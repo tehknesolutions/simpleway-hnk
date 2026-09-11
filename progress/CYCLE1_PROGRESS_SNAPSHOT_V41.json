@@ -1,0 +1,16 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V41",
+  "as_of":"2026-09-11",
+  "status":"L01_KETHER_SEALED_155_OF_155_VALIDATED_L02_CHOKHMAH_ENTRY_OPEN",
+  "package":"simpleway-hnk@0.43.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":853,"AUTHORED":0,"VALIDATED":155,"FROZEN":0},
+  "implementation_percent":{"MISSING":84.6230,"AUTHORED":0.0,"VALIDATED":15.3770,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":155,"AUTHORED_OR_BETTER_percent":15.3770,"VALIDATED_OR_BETTER":155,"VALIDATED_OR_BETTER_percent":15.3770,"FROZEN":0},
+  "historical_evidence":{"SOURCE_CONFIRMED_FROZEN":82,"percent":8.1349,"breakdown":{"L01_OPI":10,"L01_Activation":72},"raw_v1_payload_recovered":false},
+  "language_assets":{"recovered_cycle1_forms":31,"canonical_authored_candidates":20,"canonical_governed_unique_assets":51,"canonical_governed_proxy_percent":35.4167},
+  "L01":{"sphere":"Kether","target":155,"authored_or_better":155,"authored_or_better_percent":100.0,"validated":155,"validated_percent":100.0,"remaining_unimplemented":0,"pending_validation":0,"status":"SEALED_CURRICULUM_VALIDATION_COMPLETE","TeacherNotes":{"target":3,"VALIDATED":3},"OPI":{"target":10,"VALIDATED":10},"Story":{"target":5,"VALIDATED":5},"QA":{"target":4,"VALIDATED":4},"StructureHeaders":{"target":2,"VALIDATED":2},"Structures":{"target":5,"VALIDATED":5},"Vocabulary":{"target":32,"VALIDATED":32,"MISSING":0},"Activation":{"target":72,"VALIDATED":72},"Review":{"target":22,"VALIDATED":22,"MISSING":0},"seal":"../curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json"},
+  "authority_boundaries":{"language_authority_promotions":0,"visual_canon_promotions":0,"historical_review_payload_claim":false,"VANI_master_meaning":null,"VANI_authority":"WATCH","VAME_authority":"GATE","AUTH_015_020_authority":"CANDIDATE","YA_ES":"UNRESOLVED","VAMUSARO_literal_weekend":false,"universal_grammar_created":false},
+  "L02_entry":{"sphere":"Chokhmah","manifest":"../curriculum/cycle-01/L02-chokhmah/manifest.json","current_status":"LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD","language_bindings":11,"recovered_phrases":0,"student_cards":0,"teacher_drills":0,"source_lock":true,"next_gate":"AUDIT_L02_RECOVERED_LEXICON_AND_SOURCE_BINDINGS_BEFORE_PEDAGOGY_AUTHORING"},
+  "next_gate":"L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1"
+}
