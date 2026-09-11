@@ -22,7 +22,7 @@ const review=await json('curriculum/cycle-01/L01-kether/authoring/review-lane.v1
 const reviewBatch=await json('curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json');
 const reviewTransition=await json('curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json');
 const seal=await json('curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json');
-const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V44.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V45.json');
 const l02Manifest=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
 const l02Audit=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json');
 const l02Matrix=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-semantic-curriculum-targets.v1.json');
@@ -30,6 +30,8 @@ const l02Batch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-seman
 const l02Transition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-semantic-targets.approved-transition.v1.json');
 const l02RebindReview=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-exact-rebind-mapping-review.v1.json');
 const l02RebindBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-exact-rebind-mapping-human-batch.v1.json');
+const l02RebindTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-exact-rebind-mapping.applied-transition.v1.json');
+const l02UnresolvedBatch=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-unresolved-vocabulary-human-batch.v1.json');
 const vAni=await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 
 assert.equal(contract.target_total,1008);
@@ -49,9 +51,9 @@ assert.equal(reviewTransition.lesson_after.VALIDATED,155);
 assert.equal(seal.validated,155);
 assert.equal(seal.cycle_final_seal_boundary.cycle_final_seal_slot_consumed,false);
 
-assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V44');
-assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_SEMANTIC_TARGETS_APPROVED_EXACT_REBIND_REVIEW_PENDING');
-assert.equal(snapshot.package,'simpleway-hnk@0.46.0');
+assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V45');
+assert.equal(snapshot.status,'L01_KETHER_COMPLETE_L02_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
+assert.equal(snapshot.package,'simpleway-hnk@0.47.0');
 assert.deepEqual(snapshot.implementation,{MISSING:853,AUTHORED:0,VALIDATED:155,FROZEN:0});
 assert.equal(snapshot.L01.validated,155);
 
@@ -69,8 +71,6 @@ assert.equal(l02Matrix.semantic_targets.length,5);
 assert.ok(l02Matrix.semantic_targets.every(x=>x.semantic_approval==='APPROVED'));
 assert.ok(l02Matrix.semantic_targets.every(x=>x.form_selected===null));
 assert.equal(l02Matrix.mapping_summary.semantic_targets_approved,5);
-assert.equal(l02Matrix.mapping_summary.forms_selected,0);
-assert.deepEqual(l02Matrix.mapping_summary.suggested_forms,['AN','EN','KUVAN','KU','KE']);
 assert.equal(l02Batch.status,'APPROVED_ALL_DECISIONS_APPLIED_TO_SEMANTICS_ONLY');
 assert.equal(l02Transition.after.semantic_targets_approved,5);
 assert.equal(l02Transition.after.forms_selected,0);
@@ -78,29 +78,42 @@ assert.equal(l02Transition.after.rebinds_applied,0);
 
 assert.equal(l02RebindReview.status,'READY_FOR_HUMAN_REBIND_REVIEW_NOT_APPLIED');
 assert.equal(l02RebindReview.proposed_rebinds.length,5);
-assert.equal(l02RebindReview.checks.registry_changes_applied,0);
-assert.equal(l02RebindBatch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(l02RebindBatch.checks.registry_changes_applied,0);
-assert.equal(l02RebindBatch.checks.L02_curriculum_slots_implemented,0);
+assert.equal(l02RebindBatch.status,'APPROVED_ALL_DECISIONS');
+assert.ok(l02RebindBatch.decisions_requested.every(x=>x.decision==='APPROVED'));
+assert.equal(l02RebindTransition.status,'APPLIED');
+assert.equal(l02RebindTransition.scope_extensions.length,5);
+assert.equal(l02RebindTransition.after.L02_authored_candidates_scoped,5);
+assert.equal(l02RebindTransition.after.L02_governed_language_assets,16);
+assert.equal(l02RebindTransition.non_effects.curriculum_slots_implemented,0);
+assert.equal(l02RebindTransition.non_effects.authority_promotions,0);
 
-assert.equal(l02Manifest.status,'SEMANTIC_TARGETS_APPROVED_REBIND_REVIEW_PENDING_PEDAGOGY_HOLD');
+assert.equal(l02Manifest.status,'SEMANTIC_TARGETS_APPROVED_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
 assert.equal(l02Manifest.semantic_gap.approved,5);
-assert.equal(l02Manifest.semantic_gap.forms_selected,0);
-assert.equal(l02Manifest.semantic_gap.scoped_rebinds_applied,0);
+assert.equal(l02Manifest.semantic_gap.forms_selected,5);
+assert.equal(l02Manifest.semantic_gap.scoped_rebinds_applied,5);
+assert.deepEqual(l02Manifest.semantic_gap.mapped_forms,['AN','EN','KUVAN','KU','KE']);
+assert.equal(l02Manifest.language_bindings.governed_total,16);
+assert.equal(l02Manifest.teachability.semantic_teachable_assets,14);
+assert.equal(l02Manifest.teachability.unresolved_assets,2);
 assert.equal(l02Manifest.pedagogy.authoring_hold,true);
-assert.equal(l02Manifest.next_gate,'SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1');
+assert.equal(l02Manifest.next_gate,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
 
-assert.equal(snapshot.L02.status,'SEMANTIC_TARGETS_APPROVED_REBIND_REVIEW_PENDING_PEDAGOGY_HOLD');
+assert.equal(snapshot.L02.status,'EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
 assert.equal(snapshot.L02.approved_primary_semantic_targets,5);
-assert.equal(snapshot.L02.forms_selected,0);
-assert.equal(snapshot.L02.scoped_rebinds_applied,0);
-assert.equal(snapshot.L02_mapping_review.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
-assert.equal(snapshot.next_gate,'SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1');
+assert.equal(snapshot.L02.forms_selected,5);
+assert.equal(snapshot.L02.scoped_rebinds_applied,5);
+assert.equal(snapshot.L02.governed_language_assets,16);
+assert.equal(snapshot.L02.semantic_teachable_assets,14);
+assert.equal(snapshot.L02.unresolved_assets,2);
+assert.equal(snapshot.L02.curriculum_vocabulary_authored,0);
+assert.equal(snapshot.L02.curriculum_vocabulary_validated,0);
+assert.equal(snapshot.next_gate,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
+assert.equal(l02UnresolvedBatch.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V44');
-console.log('L01 Kether remains 155/155 VALIDATED; L02 semantics are approved, exact rebinds remain pending human approval and 0 L02 slots are implemented.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V45');
+console.log('L01 Kether remains 155/155 VALIDATED; L02 exact rebinds are applied at language scope, 0 L02 curriculum slots are implemented, and pedagogy remains HOLD.');
