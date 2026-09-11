@@ -1,0 +1,39 @@
+{
+  "completion_id":"SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1",
+  "status":"VALIDATED_COMPLETE",
+  "date":"2026-09-11",
+  "lesson":"L01",
+  "sphere":"Kether",
+  "target":155,
+  "validated":155,
+  "authored":0,
+  "missing":0,
+  "frozen":0,
+  "completion_percent":100.0,
+  "lane_breakdown":{
+    "teacher_notes":{"target":3,"validated":3},
+    "opi":{"target":10,"validated":10},
+    "story":{"target":5,"validated":5},
+    "qa":{"target":4,"validated":4},
+    "structure_headers":{"target":2,"validated":2},
+    "structures":{"target":5,"validated":5},
+    "vocabulary":{"target":32,"validated":32},
+    "activation":{"target":72,"validated":72},
+    "review":{"target":22,"validated":22}
+  },
+  "source_transitions":[
+    "./review-22.validated-transition.v1.json",
+    "./vocabulary-025-032.validated-transition.v1.json",
+    "./vocabulary-24.validated-transition.v1.json",
+    "./story-lane.validated-transition.v1.json",
+    "./qa.validated-transition.v1.json",
+    "./teacher-notes.validated-transition.v1.json",
+    "./structure-lane.validated-transition.v1.json",
+    "./activation-p06.validated-transition.v1.json"
+  ],
+  "historical_evidence_boundary":{"source_confirmed_frozen_slots":82,"raw_v1_payload_recovered":false,"curriculum_validation_is_not_historical_freeze":true},
+  "language_boundaries":{"VANI_master_meaning":null,"VANI_authority":"WATCH","VAME_authority":"GATE","ON_authority":"GATE","AUTH_015_020_authority":"CANDIDATE","YA_ES_semantics":"UNRESOLVED","VAMUSARO_literal_weekend":false,"generic_DO":false,"generic_WITH":false,"universal_WH_grammar":false,"language_authority_promotions":0},
+  "visual_boundary":{"candidate_D_glyph_visuals":"PREPRODUCTION_NOT_OFFICIAL","visual_canon_promotions":0},
+  "seal_boundary":"This completion record is an operational L01/Kether curriculum checkpoint. It is NOT one of the Cycle 1 final seals Verbum, Logos or Dialogos and does not consume or instantiate those seal slots.",
+  "next_phase":"L02_CHOKHMAH_SOURCE_LOCK_AND_GAP_INVENTORY"
+}
