@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SOURCE LOCK AUDITED / PEDAGOGY HOLD  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V42`  
-**Pacote atual:** `simpleway-hnk@0.44.0`
+**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SEMANTIC TARGETS DRAFTED / PEDAGOGY HOLD  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V43`  
+**Pacote atual:** `simpleway-hnk@0.45.0`
 
 ## Ciclo 1
 
@@ -67,7 +67,7 @@ Ele **não é** um dos três selos finais do Ciclo 1 e não consome seus slots. 
 
 O registro `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` fixa a mesma fronteira.
 
-## L02 Chokhmah — Source Lock auditado
+## L02 Chokhmah — Source Lock + Matriz Semântica
 
 Audit: `SWHNK-L02-CHOKHMAH-SOURCE-LOCK-AUDIT-V1`.
 
@@ -77,34 +77,61 @@ Estado atual:
 - Vocabulary target: **16**
 - lexemas recuperados: **11**
 - frases recuperadas: **0**
-- candidatos autorados ligados a L02: **0**
 - autoridades: **5 FROZEN + 5 WATCH + 1 GATE**
 - com significado master recuperado: **9**
 - sem significado master: **2** — `VANUVALI`, `VANI`
 - proxy recuperado: **11/16 = 68,75%**
 - gap proxy: **5**
+- semantic targets drafted: **5**
+- semantic targets approved: **0**
+- forms selected: **0**
 - student cards: **0**
 - teacher drills: **0**
 - authoring hold: **true**
-- source canon: **UNDEFINED — must be approved before content production**
 
 Lexemas ligados a L02:
 
 `TAYOVAN`, `KALOVALA`, `PAROVAN`, `PARAZAMI`, `VALI`, `SAROSARI`, `PARI`, `PA`, `VANUVALI`, `VANI`, `PITSA`.
 
-A pedagogia continua em **HOLD**. O gap de cinco não autoriza “inventar cinco palavras”. Antes de qualquer forma ou exercício, o curso precisa decidir semanticamente quais funções/conceitos L02 realmente requer.
+A análise semântica mostra que esses 11 ativos já cobrem conteúdo temático suficiente para uma Lesson coerente: lugar urbano, lugar educacional, estudo, trabalho, viagem, percepção, referência temporal passada e um empréstimo alimentar concreto. Os dois forms sem glosa continuam preservados sem invenção.
 
-Também fica proibido importar silenciosamente para L02 a leitura escopada `VANI = morar/residir` da L01; o Master Lexicon continua com `meaning=null`.
+O gap de cinco foi reinterpretado corretamente como **gap funcional/comunicativo**, não como ordem para criar cinco palavras novas.
+
+### Cinco alvos semânticos propostos
+
+1. `FIRST_PERSON_REFERENT` — autoexpressão;
+2. `SECOND_PERSON_REFERENT` — interação/entrevista;
+3. `LOCATION_INTERROGATIVE` — perguntar por cidade, edifício, biblioteca e outros lugares;
+4. `CONTENT_SELECTOR` — perguntar por atividade/conteúdo sem fixar KU como uma WH universal;
+5. `QUESTION_OPERATOR` — enquadrar perguntas de L02 sob escopo controlado.
+
+Nenhuma forma foi aplicada ainda. A estratégia formal é:
+
+**`SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION`**.
+
+Para o próximo gate, existem cinco ativos já governados da L01 que podem ser avaliados como rebinds, sem criar forms novos:
+
+- `AN` (`AUTH-016`) → primeira pessoa;
+- `EN` (`AUTH-017`) → segunda pessoa;
+- `KUVAN` (`AUTH-001`) → locativo interrogativo;
+- `KU` (`AUTH-018`) → seletor de conteúdo;
+- `KE` (`AUTH-019`) → operador interrogativo.
+
+Eles permanecem `CANDIDATE`, com `lessons:[L01]`, e **nenhum rebind L02 foi aplicado ainda**. A aprovação dos alvos semânticos não equivale à aprovação do mapeamento exato das forms.
+
+Também continua proibido importar silenciosamente para L02 a leitura escopada `VANI = morar/residir` da L01; o Master Lexicon segue com `meaning=null`.
 
 Hebraico Bíblico, Grego Koiné e Esperanto permanecem camadas de referência e comparação para a engenharia do HNK, não compromissos de cursos independentes.
 
 ## Próximo gate
 
-**`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS`**
+**`SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1`**
 
-Regra: `SEMANTICS_BEFORE_FORM_AND_PEDAGOGY`.
+O batch pede aprovação apenas dos cinco **conceitos/funções** e da estratégia `REUSE_BEFORE_INVENTION`.
 
-Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de L02 deve ser autorado antes desse gate.
+Se aprovado, o passo seguinte será **`PREPARE_L02_EXACT_REBIND_MAPPING_REVIEW`**, onde `AN / EN / KUVAN / KU / KE` serão avaliados formalmente um a um para reuso em L02. Somente depois poderão existir bindings curriculares ou autoria pedagógica.
+
+Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de L02 deve ser produzido antes dessa sequência de gates.
 
 ## Repositórios e ownership
 
@@ -115,4 +142,4 @@ Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de 
 
 ## CI
 
-O GitHub Actions remoto ainda não pode ser chamado de verde sem uma execução real bem-sucedida do runner e dos validadores. Runs recentes têm falhado antes de expor steps normais do job, portanto o estado remoto ainda não prova sucesso nem identifica uma asserção específica como causa.
+O GitHub Actions remoto ainda não pode ser chamado de verde sem uma execução real bem-sucedida do runner e dos validadores. A esteira agora inclui validadores específicos para Source Lock e Matriz Semântica da L02, mas runs anteriores têm falhado antes de expor steps normais do job; portanto uma falha de Actions, sozinha, ainda não prova regressão nos contratos do projeto.
