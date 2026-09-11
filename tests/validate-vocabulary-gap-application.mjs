@@ -8,7 +8,8 @@ const application=await json('curriculum/cycle-01/L01-kether/authoring/vocabular
 const mappingBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-form-mapping-human-batch.v1.json');
 const finalBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json');
 const finalTransition=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032.validated-transition.v1.json');
-const supplement=await json('progress/evidence-overrides.v37.json');
+const authoredSupplement=await json('progress/evidence-overrides.v37.json');
+const validatedSupplement=await json('progress/evidence-overrides.v39.json');
 
 assert.equal(mappingBatch.status,'APPROVED_EXACT_MAPPING_APPLICATION_AUTHORIZED');
 assert.equal(mappingBatch.authorization.register_auth_015_020,true);
@@ -54,12 +55,14 @@ assert.equal(finalTransition.preserved_boundaries.VANI.authority,'WATCH');
 assert.equal(finalTransition.preserved_boundaries.VANI.master_meaning,null);
 assert.equal(finalTransition.preserved_boundaries.VAME.authority,'GATE');
 
-assert.equal(supplement.overrides[0].implementation_state,'VALIDATED');
-assert.equal(supplement.lexical_evidence_updates.governed_unique_language_assets,51);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_authored,0);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_validated,32);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_missing,0);
-assert.equal(supplement.validation_evidence_updates.prepared_vocabulary_batch,null);
+assert.equal(authoredSupplement.overrides[0].implementation_state,'AUTHORED');
+assert.equal(validatedSupplement.overrides[0].implementation_state,'VALIDATED');
+assert.equal(validatedSupplement.lexical_evidence_updates.governed_unique_language_assets,51);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_authored,0);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_validated,32);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_missing,0);
+assert.equal(validatedSupplement.validation_evidence_updates.prepared_vocabulary_batch,null);
+assert.equal(validatedSupplement.validation_evidence_updates.vocabulary_final_validation_status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
 
 console.log('PASS SWHNK-L01-VOCABULARY-GAP-8-APPLICATION-V2');
-console.log('Gap-8 mapping remains governed authorship; VOC-025..032 are now scoped VALIDATED with zero language-authority promotions.');
+console.log('Gap-8 mapping remains governed authorship; VOC-025..032 are scoped VALIDATED with zero language-authority promotions.');
