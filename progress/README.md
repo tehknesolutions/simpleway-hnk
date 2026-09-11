@@ -2,7 +2,7 @@
 
 **Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V45`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.47.0`
+**Current package:** `simpleway-hnk@0.48.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
@@ -37,7 +37,7 @@ Source Lock remains authoritative:
 - L02 curriculum slots implemented: **0**
 - pedagogy authoring hold: **true**
 
-The five semantic targets were approved first. The following existing authored candidates have now received a scoped L02 lesson binding in `@hnk/linguas@1.6.0-candidate`:
+The five semantic targets were approved first. The following existing authored candidates now have a scoped L02 lesson binding in `@hnk/linguas@1.6.0-candidate`:
 
 - `AUTH-016 AN` → `FIRST_PERSON_REFERENT`
 - `AUTH-017 EN` → `SECOND_PERSON_REFERENT`
@@ -57,7 +57,7 @@ Crucially, **scope binding is not pedagogy validation**. No OPI, Story, Q&A, Str
 
 Status: **AWAITING_EXPLICIT_HUMAN_APPROVAL**.
 
-That gate addresses the two-source-slot teachability gap while preserving `VANI` and `VANUVALI` unresolved. It is not approved by the rebind decision above.
+The prepared recommendation preserves `VANUVALI` and `VANI` as unresolved source observations and proposes recovered `FROZEN` rebinds `VALIVAN` and `PARAZAMO` to close the **14/16 → 16/16 semantic-teachability gap**. This next gate is not approved by the rebind decision above and still implements **0 curriculum slots**.
 
 ## Historical/source boundary
 
