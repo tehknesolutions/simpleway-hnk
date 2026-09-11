@@ -9,7 +9,8 @@ const validationBatch=await json('curriculum/cycle-01/L01-kether/validation/voca
 const validationTransition=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032.validated-transition.v1.json');
 const mappingBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-form-mapping-human-batch.v1.json');
 const semanticBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-gap-8-semantic-targets-human-batch.v1.json');
-const supplement=await json('progress/evidence-overrides.v37.json');
+const authoredSupplement=await json('progress/evidence-overrides.v37.json');
+const validatedSupplement=await json('progress/evidence-overrides.v39.json');
 
 assert.equal(lane.lane_id,'SWHNK-L01-VOCABULARY-AUTHORING-V1');
 assert.equal(lane.status,'AUTHORED_32_OF_32_VALIDATED_32_COMPLETE');
@@ -55,14 +56,17 @@ assert.equal(validationTransition.preserved_boundaries.VANI.authority,'WATCH');
 assert.equal(validationTransition.preserved_boundaries.VANI.master_meaning,null);
 assert.equal(validationTransition.preserved_boundaries.VAME.authority,'GATE');
 
-assert.equal(supplement.status,'ACTIVE_SUPPLEMENT');
-assert.equal(supplement.overrides[0].implementation_state,'VALIDATED');
-assert.equal(supplement.lexical_evidence_updates.authored_candidate_forms_linked_to_cycle1,20);
-assert.equal(supplement.lexical_evidence_updates.governed_unique_language_assets,51);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_authored,0);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_validated,32);
-assert.equal(supplement.validation_evidence_updates.L01_Vocabulary_missing,0);
-assert.equal(supplement.validation_evidence_updates.prepared_vocabulary_batch,null);
+assert.equal(authoredSupplement.status,'ACTIVE_SUPPLEMENT');
+assert.equal(authoredSupplement.overrides[0].implementation_state,'AUTHORED');
+assert.equal(validatedSupplement.status,'ACTIVE_SUPPLEMENT');
+assert.equal(validatedSupplement.overrides[0].implementation_state,'VALIDATED');
+assert.equal(validatedSupplement.lexical_evidence_updates.authored_candidate_forms_linked_to_cycle1,20);
+assert.equal(validatedSupplement.lexical_evidence_updates.governed_unique_language_assets,51);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_authored,0);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_validated,32);
+assert.equal(validatedSupplement.validation_evidence_updates.L01_Vocabulary_missing,0);
+assert.equal(validatedSupplement.validation_evidence_updates.prepared_vocabulary_batch,null);
+assert.equal(validatedSupplement.validation_evidence_updates.vocabulary_final_validation_status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
 
 console.log('PASS SWHNK-L01-VOCABULARY-LANE-V39');
 console.log('L01 Vocabulary 32/32 VALIDATED; six evidence-mapped candidates remain CANDIDATE, VANI WATCH and VAME GATE unchanged.');
