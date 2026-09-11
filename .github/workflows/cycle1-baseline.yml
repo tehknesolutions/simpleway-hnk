@@ -85,3 +85,6 @@ jobs:
 
       - name: Validate L02 Chokhmah Source Lock
         run: npm run validate:l02-source-lock
+
+      - name: Validate L02 semantic targets
+        run: npm run validate:l02-semantic-targets
