@@ -1,0 +1,15 @@
+{
+  "transition_id":"SWHNK-L01-VOCABULARY-025-032-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "source_batch":"./vocabulary-025-032-human-batch.v1.json",
+  "scope":{"validated_slots":[25,32],"remaining_missing_slots":[]},
+  "lesson_before":{"AUTHORED":8,"VALIDATED":125,"MISSING":22,"FROZEN":0},
+  "lesson_after":{"AUTHORED":0,"VALIDATED":133,"MISSING":22,"FROZEN":0},
+  "vocabulary_before":{"AUTHORED":8,"VALIDATED":24,"MISSING":0,"FROZEN":0},
+  "vocabulary_after":{"AUTHORED":0,"VALIDATED":32,"MISSING":0,"FROZEN":0},
+  "global_before":{"AUTHORED":8,"VALIDATED":125,"MISSING":875,"FROZEN":0},
+  "global_after":{"AUTHORED":0,"VALIDATED":133,"MISSING":875,"FROZEN":0},
+  "authority_effect":{"new_HNK_surface_forms_created":0,"language_authority_promotions":0,"historical_standalone_gloss_claims":0,"universal_grammar_rules_created":0,"visual_canon_promotions":0},
+  "preserved_boundaries":{"AUTH_015_020":"CANDIDATE_UNCHANGED","VANI":{"canonical_ref":"LEX-031","authority":"WATCH","master_meaning":null},"VAME":{"canonical_ref":"LEX-025","authority":"GATE"},"KU_single_WH_gloss":false},
+  "boundary":"This transition validates scoped L01 curriculum Vocabulary use only. It does not alter recovered provenance or language authority, does not create historical standalone glosses, and does not establish universal HNK grammar."
+}
