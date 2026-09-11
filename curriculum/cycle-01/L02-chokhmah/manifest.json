@@ -1,8 +1,8 @@
 {
   "lesson_id":"HNK-L02",
   "sphere":"Chokhmah",
-  "version":"0.0.7",
-  "status":"SOURCE_TEACHABILITY_COMPLETE_PEDAGOGY_SOURCE_CONTRACT_REVIEW_PENDING",
+  "version":"0.0.8",
+  "status":"PEDAGOGY_SOURCE_APPROVED_OPI_PATTERN_REVIEW_PENDING",
   "source_scaffold":"recovered/lesson.scaffold.v0.0.1.json",
   "source_lock":"source-lock/l02-source-lock-audit.v1.json",
   "semantic_targets":"source-lock/l02-semantic-curriculum-targets.v1.json",
@@ -16,13 +16,14 @@
   "unresolved_vocabulary_transition":"validation/l02-unresolved-vocabulary.applied-transition.v1.json",
   "pedagogy_source_contract":"source-lock/l02-pedagogy-source-contract.v1.json",
   "pedagogy_source_gate":"validation/l02-pedagogy-source-contract-human-batch.v1.json",
+  "pedagogy_source_transition":"validation/l02-pedagogy-source-contract.approved-transition.v1.json",
+  "opi_pattern_review":"source-lock/l02-opi-pattern-review.v1.json",
+  "opi_pattern_gate":"validation/l02-opi-pattern-review-human-batch.v1.json",
   "language_bindings":{"recovered_source_lexemes":11,"recovered_curriculum_rebinds":2,"scoped_authored_candidates":5,"governed_source_references":18,"recovered_phrases":0},
-  "semantic_gap":{"target":5,"approved":5,"forms_selected":5,"scoped_rebinds_applied":5,"mapped_forms":["AN","EN","KUVAN","KU","KE"],"new_surface_forms_created":0,"strategy":"SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION"},
-  "unresolved_source_forms":[{"form":"VANUVALI","authority":"GATE","meaning":null,"teachable":false},{"form":"VANI","authority":"WATCH","meaning":null,"teachable":false}],
   "teachability":{"governed_source_references":18,"semantic_teachable_assets":16,"unresolved_source_observations":2,"vocabulary_target":16,"remaining_teachable_gap":0,"teachable_rebinds":["VALIVAN","PARAZAMO"]},
-  "pedagogy":{"student_cards":0,"teacher_drills":0,"opi_intents_drafted":10,"opi_sentence_patterns":0,"curriculum_slots_implemented":0,"content_frozen":false,"authoring_hold":true,"hold_reason":"PEDAGOGY_SOURCE_CONTRACT_REQUIRES_EXPLICIT_HUMAN_APPROVAL_BEFORE_OPI_PATTERN_AUTHORING"},
-  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"versioned_content_freeze_required_for_publication":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true,"numerology_selects_forms":false,"cross_lesson_reuse_does_not_promote_authority":true,"scope_binding_is_not_pedagogy_validation":true,"unresolved_forms_do_not_count_as_teachable_vocabulary":true,"intent_approval_does_not_create_sentence_grammar":true},
+  "pedagogy":{"source_contract_approved":true,"opi_intents_approved":10,"opi_pattern_candidates":10,"opi_patterns_approved":0,"student_cards":0,"teacher_drills":0,"curriculum_OPI_authored":0,"curriculum_OPI_validated":0,"curriculum_slots_implemented":0,"content_frozen":false,"authoring_hold":true,"hold_reason":"OPI_PATTERN_REVIEW_REQUIRES_EXPLICIT_HUMAN_APPROVAL_AND_GID_EXPANSION_BEFORE_CURRICULUM_AUTHORING"},
+  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true,"numerology_selects_forms":false,"scope_binding_is_not_pedagogy_validation":true,"unresolved_forms_do_not_count_as_teachable_vocabulary":true,"intent_approval_does_not_create_sentence_grammar":true,"pattern_candidate_does_not_create_universal_grammar":true,"GID_expansion_required_before_OPI_authoring":true},
   "language_authority":"@hnk/linguas@1.6.0-candidate + cycle1 recovered curriculum rebinds",
-  "glyph_authority":"@hnk/glyphs",
-  "next_gate":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1"
+  "glyph_authority":"@hnk/glyphs G-ID",
+  "next_gate":"SWHNK-L02-OPI-PATTERN-REVIEW-HUMAN-BATCH-V1"
 }
