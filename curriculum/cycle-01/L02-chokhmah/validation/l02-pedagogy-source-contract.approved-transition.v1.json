@@ -1,0 +1,10 @@
+{
+  "transition_id":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-APPROVED-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "source_batch":"./l02-pedagogy-source-contract-human-batch.v1.json",
+  "after":{"teachable_source_assets":16,"opi_intents_approved":10,"sentence_patterns_approved":0,"HNK_sentences_authored":0,"curriculum_slots_implemented":0},
+  "boundaries":{"VANUVALI_meaning":null,"VANI_meaning":null,"authority_promotions":0,"new_surface_forms_created":0,"universal_grammar_claims":0,"reference_layers_select_forms":false,"reference_layers_select_word_order":false},
+  "next_gate":"SWHNK-L02-OPI-PATTERN-REVIEW-HUMAN-BATCH-V1"
+}
