@@ -1,0 +1,19 @@
+{
+  "mapping_id":"SWHNK-L02-EXACT-REBIND-MAPPING-V1",
+  "status":"APPROVED_AND_APPLIED_SCOPED_CURRICULUM_REUSE",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_semantic_transition":"./l02-semantic-targets.approved-transition.v1.json",
+  "principle":"REUSE_BEFORE_INVENTION",
+  "mappings":[
+    {"target_id":"L02-SEM-012","semantic_key":"FIRST_PERSON_REFERENT","source_asset":"AUTH-016","form":"AN","source_authority":"CANDIDATE","source_origin_lessons":["L01"],"L02_use":"SCOPED_CURRICULUM_REBIND","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-013","semantic_key":"SECOND_PERSON_REFERENT","source_asset":"AUTH-017","form":"EN","source_authority":"CANDIDATE","source_origin_lessons":["L01"],"L02_use":"SCOPED_CURRICULUM_REBIND","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-014","semantic_key":"LOCATION_INTERROGATIVE","source_asset":"AUTH-001","form":"KUVAN","source_authority":"CANDIDATE","source_origin_lessons":["L01"],"L02_use":"SCOPED_CURRICULUM_REBIND","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-015","semantic_key":"CONTENT_SELECTOR","source_asset":"AUTH-018","form":"KU","source_authority":"CANDIDATE","source_origin_lessons":["L01"],"L02_use":"SCOPED_CURRICULUM_REBIND","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-016","semantic_key":"QUESTION_OPERATOR","source_asset":"AUTH-019","form":"KE","source_authority":"CANDIDATE","source_origin_lessons":["L01"],"L02_use":"SCOPED_CURRICULUM_REBIND","historical_recovery_claim":false,"authority_promotion":false}
+  ],
+  "checks":{"mapping_count":5,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"historical_recovery_claims":0,"master_registry_mutations_required":false,"authored_registry_origin_mutations_required":false},
+  "boundaries":["These mappings authorize L02 curriculum reuse only; they do not change the original authored provenance of AUTH-001/016/017/018/019.","AN and EN do not establish a complete universal person paradigm.","KUVAN remains an approximate locative interrogative candidate and does not define VAN productively.","KU remains a content selector and is not globally translated as one fixed WH word.","KE remains a scoped clause-final question marker and does not establish universal interrogative grammar.","VANI and VANUVALI are not part of this rebind mapping and remain semantically unresolved in L02."],
+  "effect":{"semantic_targets_mapped":5,"candidate_rebinds_applied":5,"new_forms_created":0,"authority_promotions":0,"next_gate":"BUILD_L02_VOCABULARY_SOURCE_MAP_WITH_UNRESOLVED_BOUNDARY"}
+}
