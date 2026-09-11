@@ -38,7 +38,9 @@ assert.ok(mappingBatch.decisions_requested.every(x=>x.decision==='APPROVED'));
 assert.equal(mappingBatch.approved_effect.registry_entries_to_change,5);
 assert.equal(mappingBatch.approved_effect.registry_change_type,'LESSON_SCOPE_EXTENSION_ONLY');
 assert.equal(mappingBatch.approved_effect.new_surface_forms_created,0);
+assert.equal(mappingBatch.approved_effect.new_language_assets_created,0);
 assert.equal(mappingBatch.approved_effect.authority_promotions,0);
+assert.equal(mappingBatch.approved_effect.L02_curriculum_slots_implemented,0);
 
 assert.equal(mappingTransition.transition_id,'SWHNK-L02-EXACT-REBIND-MAPPING-APPLIED-V1');
 assert.equal(mappingTransition.status,'APPLIED');
@@ -48,8 +50,12 @@ assert.equal(mappingTransition.after.L02_recovered_lexemes,11);
 assert.equal(mappingTransition.after.L02_authored_candidates_scoped,5);
 assert.equal(mappingTransition.after.L02_governed_language_assets,16);
 assert.equal(mappingTransition.non_effects.new_surface_forms_created,0);
+assert.equal(mappingTransition.non_effects.new_language_assets_created,0);
 assert.equal(mappingTransition.non_effects.authority_promotions,0);
 assert.equal(mappingTransition.non_effects.curriculum_slots_implemented,0);
+assert.equal(mappingTransition.non_effects.pedagogy_created,false);
+assert.equal(mappingTransition.unresolved.VANI.meaning,null);
+assert.equal(mappingTransition.unresolved.VANUVALI.meaning,null);
 
 assert.equal(manifest.status,'SEMANTIC_TARGETS_APPROVED_EXACT_REBINDS_APPLIED_PEDAGOGY_HOLD');
 assert.equal(manifest.semantic_gap.approved,5);
