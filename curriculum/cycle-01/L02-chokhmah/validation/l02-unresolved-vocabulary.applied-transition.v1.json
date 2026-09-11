@@ -1,0 +1,19 @@
+{
+  "transition_id":"SWHNK-L02-UNRESOLVED-VOCABULARY-APPLIED-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "source_batch":"./l02-unresolved-vocabulary-human-batch.v1.json",
+  "language_owner":{"repository":"tehknesolutions/codex-hnk","registry":"packages/hnk-linguas/src/cycle1.mjs","change_type":"RECOVERED_CURRICULUM_REBIND_ONLY"},
+  "rebinds":[
+    {"ref":"LEX-003","form":"VALIVAN","meaning_pt":"escritório","authority":"FROZEN","role":"WORK_PLACE"},
+    {"ref":"LEX-004","form":"PARAZAMO","meaning_pt":"escola / domínio de estudo","authority":"FROZEN","role":"EDUCATION_PLACE"}
+  ],
+  "preserved_unresolved":[
+    {"ref":"LEX-030","form":"VANUVALI","authority":"GATE","meaning":null,"teachable":false},
+    {"ref":"LEX-031","form":"VANI","authority":"WATCH","meaning":null,"teachable":false}
+  ],
+  "after":{"L02_governed_source_references":18,"L02_semantic_teachable_assets":16,"L02_unresolved_source_observations":2,"L02_vocabulary_target":16,"remaining_teachable_gap":0},
+  "non_effects":{"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"historical_claim_changes":0,"curriculum_slots_implemented":0,"pedagogy_created":false},
+  "next_gate":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1"
+}
