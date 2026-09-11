@@ -4,11 +4,13 @@ import { readFile } from 'node:fs/promises';
 async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
 
 const seal=await json('curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json');
+const completion=await json('curriculum/cycle-01/L01-kether/validation/L01-kether.validated-completion.v1.json');
 const reviewTransition=await json('curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json');
 const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V41.json');
 const l02=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
 
 assert.equal(seal.seal_id,'SWHNK-L01-KETHER-SEAL-V1');
+assert.equal(seal.seal_class,'LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER');
 assert.equal(seal.status,'SEALED_CURRICULUM_VALIDATION_COMPLETE');
 assert.equal(seal.target,155);
 assert.equal(seal.validated,155);
@@ -22,6 +24,14 @@ assert.equal(seal.preserved_boundaries.VANI.master_meaning,null);
 assert.equal(seal.preserved_boundaries.VAME,'GATE');
 assert.equal(seal.preserved_boundaries.VAMUSARO_literal_weekend,false);
 assert.equal(seal.preserved_boundaries.universal_grammar_created,false);
+assert.equal(seal.cycle_final_seal_boundary.cycle_final_seal_slot_consumed,false);
+assert.equal(seal.cycle_final_seal_boundary.is_cycle_final_seal,false);
+assert.deepEqual(seal.cycle_final_seal_boundary.reserved_cycle_final_seals,['Verbum','Logos','Dialogos']);
+
+assert.equal(completion.status,'VALIDATED_COMPLETE');
+assert.equal(completion.validated,155);
+assert.equal(completion.missing,0);
+assert.match(completion.seal_boundary,/NOT one of the Cycle 1 final seals/i);
 
 assert.equal(reviewTransition.status,'APPLIED');
 assert.equal(reviewTransition.closure.status,'VALIDATED_COMPLETE');
@@ -46,4 +56,4 @@ assert.equal(l02.pedagogy.content_frozen,false);
 assert.equal(seal.next_lesson.entry_rule,'SOURCE_LOCK_FIRST');
 
 console.log('PASS SWHNK-L01-KETHER-CLOSURE-V41');
-console.log('Kether is sealed at 155/155 scoped curriculum validation; Chokhmah opens under Source Lock with 11 recovered bindings and zero recovered phrases.');
+console.log('Kether is 155/155 VALIDATED as an operational lesson completion marker; Verbum/Logos/Dialogos remain untouched; Chokhmah opens under Source Lock.');
