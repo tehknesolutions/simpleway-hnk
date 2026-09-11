@@ -1,0 +1,21 @@
+{
+  "batch_id":"SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source":"../source-lock/l02-semantic-curriculum-targets.v1.json",
+  "scope":{"semantic_targets":["L02-SEM-012","L02-SEM-013","L02-SEM-014","L02-SEM-015","L02-SEM-016"]},
+  "decisions_requested":[
+    {"id":"DEC-L02-SEM-001","statement":"Approve FIRST_PERSON_REFERENT as a required L02 curriculum function so learners can make self-referential statements with recovered Chokhmah content.","if_approved":{"semantic_target_approved":true,"form_selected":false}},
+    {"id":"DEC-L02-SEM-002","statement":"Approve SECOND_PERSON_REFERENT as a required L02 curriculum function for interview/dialogue use.","if_approved":{"semantic_target_approved":true,"form_selected":false}},
+    {"id":"DEC-L02-SEM-003","statement":"Approve LOCATION_INTERROGATIVE as a required L02 curriculum function for TAYOVAN/KALOVALA/PAROVAN and related place contexts.","if_approved":{"semantic_target_approved":true,"form_selected":false}},
+    {"id":"DEC-L02-SEM-004","statement":"Approve CONTENT_SELECTOR as a required L02 curriculum function for asking about study, work, travel, perception and other content without defining a universal WH translation.","if_approved":{"semantic_target_approved":true,"form_selected":false}},
+    {"id":"DEC-L02-SEM-005","statement":"Approve QUESTION_OPERATOR as a required L02 curriculum function while keeping interrogative grammar scoped and non-universal.","if_approved":{"semantic_target_approved":true,"form_selected":false}},
+    {"id":"DEC-L02-SEM-006","statement":"Approve the strategy REUSE_BEFORE_INVENTION: after semantic approval, evaluate AN, EN, KUVAN, KU and KE as exact governed rebind candidates in a separate mapping gate instead of creating five new surface forms.","if_approved":{"candidate_mapping_review_authorized":true,"rebinds_applied":false,"new_forms_created":0}},
+    {"id":"DEC-L02-SEM-007","statement":"Preserve VANUVALI and VANI as unresolved L02 source forms, with VANI residence meaning remaining scoped to L01 and not promoted into L02 historical/canonical meaning.","if_approved":{"VANUVALI_meaning":null,"VANI_meaning":null,"authority_promotions":0}},
+    {"id":"DEC-L02-SEM-008","statement":"Confirm that the 16-slot Vocabulary allocation is curricular mathematics, not evidence that five historically missing HNK words must exist or be invented.","if_approved":{"historical_five_word_claim":false,"numerology_selects_forms":false}}
+  ],
+  "checks":{"recovered_assets":11,"semantic_targets":5,"forms_selected":0,"suggested_existing_candidate_forms":5,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"L02_phrases_created":0,"pedagogy_created":false},
+  "projected_effect_if_all_approved":{"semantic_targets_approved":5,"semantic_target_total":5,"forms_selected":0,"next_mapping_candidates":["AN","EN","KUVAN","KU","KE"],"new_forms_created":0,"authority_promotions":0,"next_gate":"PREPARE_L02_EXACT_REBIND_MAPPING_REVIEW"},
+  "next_gate_if_approved":"PREPARE_L02_EXACT_REBIND_MAPPING_REVIEW",
+  "next_gate_if_not_approved":"REVISE_L02_SEMANTIC_TARGETS"
+}
