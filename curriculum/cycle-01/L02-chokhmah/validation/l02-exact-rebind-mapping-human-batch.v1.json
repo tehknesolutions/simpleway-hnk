@@ -1,21 +1,21 @@
 {
   "batch_id":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_AND_APPLIED_TO_LANGUAGE_OWNER",
   "date_prepared":"2026-09-11",
+  "date_approved":"2026-09-11",
+  "approval_source":"Explicit user SIGA after review of AN / EN / KUVAN / KU / KE reuse plan in HNK-LINGUAS.",
   "source":"../source-lock/l02-exact-rebind-mapping-review.v1.json",
   "scope":{"targets":["L02-SEM-012","L02-SEM-013","L02-SEM-014","L02-SEM-015","L02-SEM-016"],"forms":["AN","EN","KUVAN","KU","KE"]},
   "decisions_requested":[
-    {"id":"DEC-L02-MAP-001","statement":"Approve AUTH-016 AN as the exact governed form for L02 FIRST_PERSON_REFERENT by extending curriculum scope from lessons [L01] to [L01,L02], with authority remaining CANDIDATE and no historical recovery claim.","if_approved":{"form_selected":"AN","registry_scope_extension":true,"authority_promotion":false}},
-    {"id":"DEC-L02-MAP-002","statement":"Approve AUTH-017 EN as the exact governed form for L02 SECOND_PERSON_REFERENT by extending curriculum scope from lessons [L01] to [L01,L02], while preserving unresolved subject/possessive behavior outside scoped constructions.","if_approved":{"form_selected":"EN","registry_scope_extension":true,"authority_promotion":false}},
-    {"id":"DEC-L02-MAP-003","statement":"Approve AUTH-001 KUVAN as the exact governed form for L02 LOCATION_INTERROGATIVE by extending curriculum scope to L02 without making KU or VAN globally productive.","if_approved":{"form_selected":"KUVAN","registry_scope_extension":true,"authority_promotion":false}},
-    {"id":"DEC-L02-MAP-004","statement":"Approve AUTH-018 KU as the exact governed form for L02 CONTENT_SELECTOR by extending curriculum scope to L02 without assigning KU one universal WH gloss.","if_approved":{"form_selected":"KU","registry_scope_extension":true,"authority_promotion":false}},
-    {"id":"DEC-L02-MAP-005","statement":"Approve AUTH-019 KE as the exact governed form for L02 QUESTION_OPERATOR by extending curriculum scope to L02 without creating universal HNK interrogative grammar.","if_approved":{"form_selected":"KE","registry_scope_extension":true,"authority_promotion":false}},
-    {"id":"DEC-L02-MAP-006","statement":"Confirm that approval changes only the lesson-scope binding of these five existing authored candidates in @hnk/linguas; it creates zero new surface forms and zero new language assets.","if_approved":{"new_surface_forms_created":0,"new_language_assets_created":0}},
-    {"id":"DEC-L02-MAP-007","statement":"Preserve VANI and VANUVALI unresolved in L02; do not use either form to satisfy any approved semantic target and do not generalize the L01 residence interpretation of VANI.","if_approved":{"VANI_meaning":null,"VANUVALI_meaning":null,"authority_promotions":0}},
-    {"id":"DEC-L02-MAP-008","statement":"Keep L02 pedagogy authoring on HOLD after mapping approval. Form selection alone does not authorize OPI, Story, Q&A, Structure, Vocabulary, Activation or Review payloads; a separate pedagogy-source gate is required.","if_approved":{"L02_curriculum_slots_implemented":0,"pedagogy_authoring_hold":true}}
+    {"id":"DEC-L02-MAP-001","decision":"APPROVED","statement":"Approve AUTH-016 AN for L02 FIRST_PERSON_REFERENT by extending curriculum scope to L02 with authority remaining CANDIDATE.","effect":{"form_selected":"AN","registry_scope_extension":true,"authority_promotion":false}},
+    {"id":"DEC-L02-MAP-002","decision":"APPROVED","statement":"Approve AUTH-017 EN for L02 SECOND_PERSON_REFERENT by extending curriculum scope to L02 while preserving scoped behavior.","effect":{"form_selected":"EN","registry_scope_extension":true,"authority_promotion":false}},
+    {"id":"DEC-L02-MAP-003","decision":"APPROVED","statement":"Approve AUTH-001 KUVAN for L02 LOCATION_INTERROGATIVE without making KU or VAN globally productive.","effect":{"form_selected":"KUVAN","registry_scope_extension":true,"authority_promotion":false}},
+    {"id":"DEC-L02-MAP-004","decision":"APPROVED","statement":"Approve AUTH-018 KU for L02 CONTENT_SELECTOR without assigning KU one universal WH gloss.","effect":{"form_selected":"KU","registry_scope_extension":true,"authority_promotion":false}},
+    {"id":"DEC-L02-MAP-005","decision":"APPROVED","statement":"Approve AUTH-019 KE for L02 QUESTION_OPERATOR without creating universal HNK interrogative grammar.","effect":{"form_selected":"KE","registry_scope_extension":true,"authority_promotion":false}},
+    {"id":"DEC-L02-MAP-006","decision":"APPROVED","statement":"Confirm scope-only changes to existing authored candidates; zero new surface forms and zero new language assets.","effect":{"new_surface_forms_created":0,"new_language_assets_created":0}},
+    {"id":"DEC-L02-MAP-007","decision":"APPROVED","statement":"Preserve VANI and VANUVALI unresolved in L02 and do not generalize the L01 residence interpretation of VANI.","effect":{"VANI_meaning":null,"VANUVALI_meaning":null,"authority_promotions":0}},
+    {"id":"DEC-L02-MAP-008","decision":"APPROVED","statement":"Keep L02 pedagogy authoring on HOLD after mapping; form selection alone does not authorize lesson payloads.","effect":{"L02_curriculum_slots_implemented":0,"pedagogy_authoring_hold":true}}
   ],
-  "checks":{"semantic_targets_approved":5,"mapping_candidates":5,"current_candidate_authority":"CANDIDATE","current_candidate_lessons":["L01"],"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"registry_changes_applied":0,"L02_curriculum_slots_implemented":0,"pedagogy_created":false},
-  "projected_effect_if_all_approved":{"forms_selected":5,"forms":["AN","EN","KUVAN","KU","KE"],"registry_entries_changed":5,"registry_change_type":"LESSON_SCOPE_EXTENSION_ONLY","new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"L02_curriculum_slots_implemented":0,"pedagogy_authoring_hold":true,"next_gate":"APPLY_L02_REBIND_TO_LANGUAGE_OWNER_AND_PREPARE_PEDAGOGY_SOURCE_CONTRACT"},
-  "next_gate_if_approved":"APPLY_L02_REBIND_TO_LANGUAGE_OWNER_AND_PREPARE_PEDAGOGY_SOURCE_CONTRACT",
-  "next_gate_if_not_approved":"REVISE_L02_EXACT_REBIND_MAPPING"
+  "application":{"language_owner_repository":"tehknesolutions/codex-hnk","registry":"packages/hnk-linguas/src/authored.mjs","registry_version_after":"1.6.0-candidate","owner_commit":"15b80308490ccc262066db9b461a580dc9da198a","cycle1_coverage_commit":"5a43d8255555122c59e042a3b70bc13ff12a49d3","tests_commit":"09897eebbf97226aa6a8df3158bf4ad366f2e66c","registry_entries_changed":5,"change_type":"LESSON_SCOPE_EXTENSION_ONLY","forms_selected":5,"authority_promotions":0,"new_surface_forms_created":0,"new_language_assets_created":0},
+  "next_gate":"RESOLVE_L02_UNRESOLVED_VOCABULARY_AND_DEFINE_PEDAGOGY_SOURCE_CONTRACT"
 }
