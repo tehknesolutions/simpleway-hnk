@@ -1,0 +1,13 @@
+{
+  "plan_id":"SWHNK-L02-SQS-AUTHORING-PLAN-V2",
+  "supersedes":"SWHNK-L02-SQS-AUTHORING-PLAN-V1",
+  "status":"ALL_16_READY_FOR_EXPLICIT_AUTHORING_GATE_NO_SLOTS_AUTHORED",
+  "date":"2026-09-11",
+  "allocation":{"story":5,"qa":4,"structure_headers":2,"structures":5,"total":16},
+  "upstream":{"OPI_validated":"../validation/l02-opi-001-010.validated.v1.json","SQS_patterns_approved":"../validation/l02-sqs-pattern-review.approved-transition.v1.json","QA_schemas_approved":"../validation/l02-qa-answer-pattern.approved-transition.v2.json"},
+  "readiness":{"ready_count":16,"blocked_count":0,"story":5,"qa":4,"structure_headers":2,"structures":5},
+  "QA_policy":{"answer_schemas_approved":4,"full_HNK_declarative_answers_authored":0,"OPI006_yes_no_response_branch_blocked":true},
+  "checks":{"slots_AUTHORED":0,"slots_VALIDATED":0,"new_HNK_sentences_authored":0,"new_surface_forms_created":0,"authority_promotions":0},
+  "boundaries":{"PA_lexical_only":true,"VANI_unresolved":true,"VANUVALI_unresolved":true,"structures_are_scoped_course_frames":true,"answer_schemas_are_not_declarative_grammar":true},
+  "next_gate":"SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2"
+}
