@@ -97,3 +97,6 @@ jobs:
 
       - name: Validate L02 pedagogy source contract
         run: npm run validate:l02-pedagogy-source
+
+      - name: Validate L02 OPI pattern review
+        run: npm run validate:l02-opi-patterns
