@@ -2,47 +2,44 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
-const plan=await json('curriculum/cycle-01/L02-chokhmah/authoring/l02-sqs-authoring-plan.v2.json');
+const contract=await json('contracts/HNK_CYCLE_1_NUMEROLOGICAL_CONTRACT_V1.json');
 const gate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-authoring-human-batch.v2.json');
-const qaApproval=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-qa-answer-pattern-human-batch.v2.json');
-const qaTransition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-qa-answer-pattern.approved-transition.v2.json');
+const transition=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-authoring.partial-transition.v1.json');
+const story=await json('curriculum/cycle-01/L02-chokhmah/authoring/story-lane.v1.json');
+const qa=await json('curriculum/cycle-01/L02-chokhmah/authoring/qa-lane.v1.json');
+const structures=await json('curriculum/cycle-01/L02-chokhmah/authoring/structure-lane.v1.json');
 const manifest=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
-const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V55.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V56.json');
 
-assert.equal(plan.plan_id,'SWHNK-L02-SQS-AUTHORING-PLAN-V2');
-assert.equal(plan.status,'ALL_16_READY_FOR_EXPLICIT_AUTHORING_GATE_NO_SLOTS_AUTHORED');
-assert.equal(plan.readiness.ready_count,16);
-assert.equal(plan.readiness.blocked_count,0);
-assert.equal(plan.QA_policy.answer_schemas_approved,4);
-assert.equal(plan.QA_policy.OPI006_yes_no_response_branch_blocked,true);
-assert.equal(plan.checks.slots_AUTHORED,0);
-assert.equal(plan.checks.slots_VALIDATED,0);
-
-assert.equal(qaApproval.status,'APPROVED_ALL_DECISIONS');
-assert.equal(qaApproval.decisions.length,8);
-assert.ok(qaApproval.decisions.every(x=>x.decision==='APPROVED'));
-assert.equal(qaApproval.approved_effect.QA_answer_schemas_approved,4);
-assert.equal(qaTransition.status,'APPLIED');
-assert.equal(qaTransition.after.QA_answer_schemas_approved,4);
-assert.equal(qaTransition.after.SQS_AUTHORED,0);
-assert.equal(qaTransition.blocked_branches[0].question_ref,'L02-OPI-006');
-
-assert.equal(gate.batch_id,'SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2');
-assert.equal(gate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+const required=contract.additions.find(x=>x.lesson===2&&x.category==='structures');
+assert.equal(required.content,"I didn't...");
+assert.equal(gate.status,'APPROVED_BY_USER_APPLICATION_PARTIAL_CANONICAL_CONTRACT_GUARD');
 assert.equal(gate.slot_decisions.length,16);
 assert.equal(gate.governance_decisions.length,4);
-assert.equal(gate.projected_effect_if_all_approved.L02_SQS_AUTHORED,16);
-assert.equal(gate.projected_effect_if_all_approved.L02_SQS_VALIDATED,0);
-assert.equal(gate.projected_effect_if_all_approved.GLOBAL_AUTHORED,16);
-assert.equal(gate.projected_effect_if_all_approved.GLOBAL_VALIDATED,165);
-assert.equal(gate.projected_effect_if_all_approved.GLOBAL_MISSING,827);
-assert.equal(gate.slot_decisions.find(x=>x.slot==='L02-QA-004').blocked_branch,'L02-OPI-006');
+assert.equal(gate.slot_decisions.filter(x=>x.decision==='APPROVED_APPLIED').length,15);
+assert.equal(gate.slot_decisions.find(x=>x.slot==='L02-STR-005').decision,'APPROVED_NOT_APPLIED_CANONICAL_CONTRACT_CONFLICT');
+assert.equal(gate.canonical_guard.protected_slot,'L02-STR-005');
+assert.equal(gate.canonical_guard.invent_negative_past_HNK_form,false);
+assert.equal(gate.actual_effect.L02_SQS_AUTHORED,15);
+assert.equal(gate.actual_effect.GLOBAL_AUTHORED,15);
+assert.equal(gate.actual_effect.GLOBAL_MISSING,828);
 
-assert.equal(manifest.pedagogy.qa_answer_schemas_approved,4);
-assert.equal(manifest.pedagogy.sqs_slots_ready_after_authoring_gate,16);
-assert.equal(manifest.pedagogy.story_qa_structure_slots_authored,0);
-assert.equal(manifest.next_gate,'SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2');
-assert.equal(snapshot.next_gate,'SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2');
+assert.equal(transition.status,'APPLIED_WITH_CANONICAL_CONTRACT_GUARD');
+assert.equal(transition.applied.total,15);
+assert.equal(transition.held.slot,'L02-STR-005');
+assert.equal(story.metrics.AUTHORED,5);
+assert.equal(qa.metrics.AUTHORED,4);
+assert.equal(structures.metrics.structure_headers_AUTHORED,2);
+assert.equal(structures.metrics.structures_AUTHORED,4);
+assert.equal(structures.metrics.structures_MISSING,1);
+assert.equal(structures.structures.find(x=>x.slot_id==='L02-STR-005').required_content,"I didn't...");
+assert.equal(structures.structures.find(x=>x.slot_id==='L02-STR-005').frame,null);
 
-console.log('PASS SWHNK-L02-SQS-AUTHORING-GATE-PENDING-V2');
-console.log('Exactly 16 SQS slots are ready for explicit authoring approval through the reconciled v2 gate; 0 slots are authored/validated and the OPI-006 yes/no response branch remains blocked.');
+assert.equal(manifest.pedagogy.story_qa_structure_slots_authored,15);
+assert.equal(manifest.pedagogy.STR005_state,'MISSING_CANONICAL_DESIGN_GATE_REQUIRED');
+assert.equal(manifest.next_gate,'SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1');
+assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V56');
+assert.deepEqual(snapshot.implementation,{MISSING:828,AUTHORED:15,VALIDATED:165,FROZEN:0});
+
+console.log('PASS SWHNK-L02-SQS-AUTHORING-CANONICAL-GUARD-V1');
+console.log("15 SQS slots are AUTHORED. L02-STR-005 remains MISSING because the canonical Cycle 1 contract requires 'I didn't...' and the negative-past HNK frame is not yet governed.");
