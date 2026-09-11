@@ -1,0 +1,17 @@
+{
+  "snapshot_id":"SWHNK-C1-PROGRESS-SNAPSHOT-V55",
+  "as_of":"2026-09-11",
+  "status":"L01_KETHER_COMPLETE_L02_OPI_VALIDATED_SQS_PATTERNS_APPROVED_QA_SCHEMAS_APPROVED_AUTHORING_GATE_V2_PENDING",
+  "package":"simpleway-hnk@0.58.0",
+  "target_slots":1008,
+  "implementation":{"MISSING":843,"AUTHORED":0,"VALIDATED":165,"FROZEN":0},
+  "implementation_percent":{"MISSING":83.6310,"AUTHORED":0.0,"VALIDATED":16.3690,"FROZEN":0.0},
+  "cumulative_maturity":{"AUTHORED_OR_BETTER":165,"AUTHORED_OR_BETTER_percent":16.3690,"VALIDATED_OR_BETTER":165,"VALIDATED_OR_BETTER_percent":16.3690,"FROZEN":0},
+  "L01":{"sphere":"Kether","target":155,"validated":155,"status":"VALIDATED_COMPLETE"},
+  "L02":{"sphere":"Chokhmah","target":139,"implementation":{"MISSING":129,"AUTHORED":0,"VALIDATED":10,"FROZEN":0},"status":"OPI_VALIDATED_SQS_AUTHORING_GATE_V2_PENDING","semantic_teachable_assets":16,"unresolved_source_observations":2,"curriculum_OPI_validated":10,"sqs_pattern_candidates":16,"sqs_patterns_approved":16,"qa_answer_schema_candidates":4,"qa_answer_schemas_approved":4,"sqs_slots_ready_after_authoring_gate":16,"story_qa_structure_slots_authored":0,"story_qa_structure_slots_validated":0,"curriculum_slots_implemented":10,"new_surface_forms_created":0,"authority_promotions":0},
+  "L02_QA_answer_approval":{"human_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-qa-answer-pattern-human-batch.v2.json","transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-qa-answer-pattern.approved-transition.v2.json","status":"APPROVED_4_OF_4_SCHEMAS_RECONCILED_V2","blocked_yes_no_branches":1},
+  "L02_SQS_authoring":{"plan":"../curriculum/cycle-01/L02-chokhmah/authoring/l02-sqs-authoring-plan.v2.json","human_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-authoring-human-batch.v2.json","status":"AWAITING_EXPLICIT_HUMAN_APPROVAL","candidate_slots":16,"authored":0,"validated":0},
+  "boundaries":{"VANUVALI_master_meaning":null,"VANI_master_meaning":null,"universal_grammar_claims":0,"GID_is_structural_authority":true,"QA_answer_schemas_are_not_declarative_grammar":true,"OPI006_yes_no_response_branch_blocked":true,"SQS_authoring_requires_explicit_human_gate":true,"numerology_selects_forms":false,"reference_layers_are_independent_courses":false},
+  "next_gate":"SWHNK-L02-SQS-AUTHORING-HUMAN-BATCH-V2",
+  "next_gate_rule":"APPROVE_OR_REVISE_THE_EXACT_16_SLOT_SQS_AUTHORING_MAPPING_BEFORE_ANY_SLOT_BECOMES_AUTHORED"
+}
