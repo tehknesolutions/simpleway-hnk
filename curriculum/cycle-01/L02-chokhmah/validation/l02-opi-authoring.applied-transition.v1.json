@@ -1,0 +1,10 @@
+{
+  "transition_id":"SWHNK-L02-OPI-AUTHORING-APPLIED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "source_gate":"l02-opi-authoring-human-batch.v1.json",
+  "before":{"L02_OPI_AUTHORED":0,"L02_OPI_VALIDATED":0,"L02_curriculum_slots_implemented":0},
+  "after":{"L02_OPI_AUTHORED":10,"L02_OPI_VALIDATED":0,"L02_curriculum_slots_implemented":10},
+  "non_effects":{"new_surface_forms_created":0,"authority_promotions":0,"universal_grammar_claims":0,"VANI_resolved":false,"VANUVALI_resolved":false},
+  "next_gate":"SWHNK-L02-OPI-VALIDATION-BATCH-V1"
+}
