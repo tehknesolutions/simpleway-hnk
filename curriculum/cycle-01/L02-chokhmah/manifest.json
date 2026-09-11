@@ -1,16 +1,19 @@
 {
   "lesson_id":"HNK-L02",
   "sphere":"Chokhmah",
-  "version":"0.0.2",
-  "status":"SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD",
+  "version":"0.0.3",
+  "status":"SEMANTIC_TARGETS_DRAFTED_PEDAGOGY_HOLD",
   "source_scaffold":"recovered/lesson.scaffold.v0.0.1.json",
   "source_lock":"source-lock/l02-source-lock-audit.v1.json",
+  "semantic_targets":"source-lock/l02-semantic-curriculum-targets.v1.json",
+  "semantic_targets_gate":"validation/l02-semantic-targets-human-batch.v1.json",
   "language_bindings":11,
   "recovered_phrases":0,
   "language_inventory":{"FROZEN":5,"WATCH":5,"GATE":1,"with_master_meaning":9,"without_master_meaning":2,"authored_candidates":0},
+  "semantic_gap":{"target":5,"approved":0,"forms_selected":0,"strategy":"SEMANTICS_BEFORE_FORM_AND_REUSE_BEFORE_INVENTION"},
   "pedagogy":{"student_cards":0,"teacher_drills":0,"content_frozen":false,"authoring_hold":true},
-  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"versioned_content_freeze_required_for_publication":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true},
+  "rules":{"non_invention":true,"approved_source_required_for_non_empty_content":true,"versioned_content_freeze_required_for_publication":true,"reference_comparison_layers":["Biblical Hebrew","Koine Greek","Esperanto"],"reference_layers_are_not_independent_course_commitments":true,"numerology_selects_forms":false},
   "language_authority":"@hnk/linguas",
   "glyph_authority":"@hnk/glyphs",
-  "next_gate":"DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS"
+  "next_gate":"SWHNK-L02-SEMANTIC-TARGETS-HUMAN-BATCH-V1"
 }
