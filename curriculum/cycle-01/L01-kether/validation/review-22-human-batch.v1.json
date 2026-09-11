@@ -1,46 +1,22 @@
 {
-  "batch_id": "SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1",
-  "status": "AWAITING_EXPLICIT_HUMAN_VALIDATION",
-  "date_prepared": "2026-09-11",
-  "source": "../authoring/review-lane.v1.json",
-  "scope": {"review_slots":[1,22]},
-  "review_groups": [
-    {"group":"LEXICAL_RECALL","slots":[1,8],"count":8,"decision_id":"DEC-REV-001"},
-    {"group":"FUNCTION_RECALL","slots":[9,14],"count":6,"decision_id":"DEC-REV-002"},
-    {"group":"CONSTRUCTION_REBUILD","slots":[15,18],"count":4,"decision_id":"DEC-REV-003"},
-    {"group":"COMMUNICATIVE_TRANSFER","slots":[19,22],"count":4,"decision_id":"DEC-REV-004"}
+  "batch_id":"SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_VALIDATION",
+  "date_prepared":"2026-09-11",
+  "source":"../authoring/review-lane.v1.json",
+  "scope":{"review_slots":[1,22]},
+  "review_groups":[
+    {"group":"OPI_LINKED_REVIEW","slots":[1,20],"count":20,"model":"TWO_SLOTS_PER_VALIDATED_OPI"},
+    {"group":"INTEGRATIVE_REVIEW","slots":[21,22],"count":2,"model":"VALIDATED_OPI_COMPOSITION_ONLY"}
   ],
-  "decisions_requested": [
-    {"id":"DEC-REV-001","statement":"Validate REV-001..008 as active lexical recall of already governed L01 assets, preserving FROZEN/WATCH/GATE/CANDIDATE/REFERENCE authorities exactly as they are.","if_approved":{"validated_slots":8,"new_hnk_forms":0,"language_authority_promotions":0}},
-    {"id":"DEC-REV-002","statement":"Validate REV-009..014 as scoped function recall. AN/EN/KU/KE/KALA remain CANDIDATE and HENUVOKODAN remains REFERENCE; no universal person or interrogative grammar is created.","if_approved":{"validated_slots":6,"language_authority_promotions":0,"universal_grammar_rules_created":0}},
-    {"id":"DEC-REV-003","statement":"Validate REV-015..018 as reconstruction of constructions already validated elsewhere in L01; review does not create new sentence grammar or retroactive historical equivalence claims.","if_approved":{"validated_slots":4,"new_constructions_created":0}},
-    {"id":"DEC-REV-004","statement":"Validate REV-019..022 as communicative transfer using only previously validated response/question patterns and scoped course rules.","if_approved":{"validated_slots":4,"new_hnk_forms":0,"language_authority_promotions":0}},
-    {"id":"DEC-REV-005","statement":"Confirm the entire 22-slot Review lane is new governed v1.1 pedagogy rather than recovered historical Review payload, and that validation closes current L01 implementation at 155/155 without promoting language or visual canon.","if_approved":{"L01_REVIEW_VALIDATED":22,"L01_VALIDATED_after":155,"L01_MISSING_after":0,"historical_review_payload_claim":false,"language_authority_promotions":0,"visual_canon_promotions":0}}
+  "decisions_requested":[
+    {"id":"DEC-REV-001","statement":"Validate REV-001..020 as two review activities for each of the ten already validated OPI, reusing only validated L01 question payloads and response contracts.","if_approved":{"validated_slots":20,"new_hnk_forms":0,"new_grammar_rules":0}},
+    {"id":"DEC-REV-002","statement":"Validate REV-021 and REV-022 as integrative interviews composed only from already validated OPI payloads, with all original context and authority boundaries preserved.","if_approved":{"validated_slots":2,"new_hnk_forms":0,"new_constructions_created":0}},
+    {"id":"DEC-REV-003","statement":"Preserve YA/ES unresolved semantics, VANI WATCH with Master meaning null, VAME GATE, SARASALA/VAMAVALA/VAMAZAMU WATCH, ON GATE and KUVAN/KUON/VALA/NE CANDIDATE without authority promotion.","if_approved":{"language_authority_promotions":0,"historical_gloss_promotions":0}},
+    {"id":"DEC-REV-004","statement":"Confirm VAMUSARO remains rest/leisure period rather than a literal weekend lexeme and OPI10 remains an approximate contextual equivalent; no generic HNK DO, WITH or universal WH grammar is created.","if_approved":{"weekend_translation_claim":false,"new_grammar_rules":0}},
+    {"id":"DEC-REV-005","statement":"Confirm the entire 22-slot Review lane is new governed v1.1 pedagogy rather than recovered historical Review payload, and that validation would close L01 at 155/155 without promoting language or visual canon.","if_approved":{"L01_REVIEW_VALIDATED":22,"L01_VALIDATED_after":155,"L01_MISSING_after":0,"historical_review_payload_claim":false,"language_authority_promotions":0,"visual_canon_promotions":0}}
   ],
-  "checks": {
-    "slot_count": "22/22",
-    "new_hnk_forms_created": 0,
-    "uses_only_governed_or_validated_l01_material": true,
-    "watch_gate_candidate_labels_preserved": true,
-    "historical_reconstruction_claims": 0,
-    "language_authority_promotions": 0
-  },
-  "projected_effect_if_all_approved": {
-    "L01_Review_AUTHORED_before": 22,
-    "L01_Review_VALIDATED_before": 0,
-    "L01_Review_VALIDATED_after": 22,
-    "L01_Review_MISSING_after": 0,
-    "L01_VALIDATED_before": 133,
-    "L01_VALIDATED_after": 155,
-    "L01_completion_percent_after": 100.0,
-    "global_AUTHORED_before": 22,
-    "global_AUTHORED_after": 0,
-    "global_VALIDATED_before": 133,
-    "global_VALIDATED_after": 155,
-    "global_MISSING_before": 853,
-    "global_MISSING_after": 853,
-    "language_authority_promotions": 0
-  },
-  "next_gate_if_approved": "SEAL_L01_KETHER_155_OF_155",
-  "next_gate_if_not_approved": "REVISE_L01_REVIEW_001_022"
+  "checks":{"slot_count":"22/22","opi_linked_distribution":"20/20","integrative_distribution":"2/2","new_hnk_forms_created":0,"uses_only_validated_l01_opi_payloads":true,"watch_gate_candidate_labels_preserved":true,"historical_reconstruction_claims":0,"language_authority_promotions":0},
+  "projected_effect_if_all_approved":{"L01_Review_AUTHORED_before":22,"L01_Review_VALIDATED_before":0,"L01_Review_VALIDATED_after":22,"L01_Review_MISSING_after":0,"L01_VALIDATED_before":133,"L01_VALIDATED_after":155,"L01_completion_percent_after":100.0,"global_AUTHORED_before":22,"global_AUTHORED_after":0,"global_VALIDATED_before":133,"global_VALIDATED_after":155,"global_MISSING_before":853,"global_MISSING_after":853,"language_authority_promotions":0},
+  "next_gate_if_approved":"APPLY_L01_REVIEW_22_VALIDATION_AND_CLOSE_L01",
+  "next_gate_if_not_approved":"REVISE_L01_REVIEW_001_022"
 }
