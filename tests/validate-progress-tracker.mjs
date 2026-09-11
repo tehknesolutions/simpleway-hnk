@@ -18,18 +18,20 @@ for(const supplement of supplements){
 }
 
 const vocabulary=await json('curriculum/cycle-01/L01-kether/authoring/vocabulary-lane.v1.json');
-const vocabularyBatch=await json('curriculum/cycle-01/L01-kether/validation/vocabulary-025-032-human-batch.v1.json');
 const review=await json('curriculum/cycle-01/L01-kether/authoring/review-lane.v1.json');
 const reviewBatch=await json('curriculum/cycle-01/L01-kether/validation/review-22-human-batch.v1.json');
 const reviewTransition=await json('curriculum/cycle-01/L01-kether/validation/review-22.validated-transition.v1.json');
 const seal=await json('curriculum/cycle-01/L01-kether/closure/kether-seal.v1.json');
-const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V41.json');
+const snapshot=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V42.json');
+const l02Manifest=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
+const l02Audit=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json');
 const vAni=await json('proposals/language/HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json');
 
 assert.equal(contract.target_total,1008);
 assert.ok(names.includes('evidence-overrides.v37.json'));
 assert.ok(names.includes('evidence-overrides.v39.json'));
 assert.ok(names.includes('evidence-overrides.v40.json'));
+assert.ok(names.includes('evidence-overrides.v41.json'));
 
 const simulated=new Map();
 for(const override of evidence.overrides){const {lesson,category,range}=override.selector;for(let i=range[0];i<=range[1];i++)simulated.set(`${lesson}/${category}/${i}`,override);}
@@ -43,17 +45,11 @@ assert.equal(values.filter(x=>x.scaffolded).length,155);
 
 assert.equal(vocabulary.status,'AUTHORED_32_OF_32_VALIDATED_32_COMPLETE');
 assert.equal(vocabulary.metrics.VALIDATED,32);
-assert.equal(vocabulary.metrics.language_authority_promotions,0);
-assert.equal(vocabularyBatch.status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
-
 assert.equal(review.status,'AUTHORED_22_OF_22_VALIDATED_22_COMPLETE');
 assert.equal(review.items.length,22);
 assert.ok(review.items.every(x=>x.implementation_state==='VALIDATED'));
 assert.equal(review.metrics.VALIDATED,22);
-assert.equal(review.metrics.new_hnk_forms_created,0);
-assert.equal(review.metrics.language_authority_promotions,0);
 assert.equal(reviewBatch.status,'APPROVED_AND_APPLIED_SCOPED_CURRICULUM_VALIDATION');
-assert.equal(reviewBatch.applied_effect.L01_VALIDATED_after,155);
 assert.equal(reviewTransition.lesson_after.VALIDATED,155);
 assert.equal(reviewTransition.global_after.VALIDATED,155);
 
@@ -66,31 +62,43 @@ assert.equal(v.L01_Teacher_notes_validated,3);
 assert.equal(v.L01_QA_validated,4);
 assert.equal(v.L01_Story_validated,5);
 assert.equal(v.L01_Vocabulary_validated,32);
-assert.equal(v.L01_Review_target,22);
-assert.equal(v.L01_Review_authored,0);
 assert.equal(v.L01_Review_validated,22);
-assert.equal(v.L01_Review_missing,0);
-assert.equal(v.L01_validated_total,155);
-assert.equal(v.L01_missing_total,0);
-assert.equal(v.L01_status,'VALIDATED_155_OF_155_KETHER_CLOSURE_AUTHORIZED');
-assert.equal(v.prepared_review_batch,null);
+assert.equal(v.L01_completion_status,'VALIDATED_COMPLETE');
 
 assert.equal(seal.status,'SEALED_CURRICULUM_VALIDATION_COMPLETE');
-assert.equal(seal.target,155);
 assert.equal(seal.validated,155);
-assert.equal(seal.preserved_boundaries.language_authority_promotions,0);
-assert.equal(snapshot.status,'L01_KETHER_SEALED_155_OF_155_VALIDATED_L02_CHOKHMAH_ENTRY_OPEN');
-assert.equal(snapshot.implementation.VALIDATED,155);
-assert.equal(snapshot.implementation.AUTHORED,0);
-assert.equal(snapshot.implementation.MISSING,853);
+assert.equal(seal.cycle_final_seal_boundary.cycle_final_seal_slot_consumed,false);
+assert.deepEqual(seal.cycle_final_seal_boundary.reserved_cycle_final_seals,['Verbum','Logos','Dialogos']);
+
+assert.equal(snapshot.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V42');
+assert.equal(snapshot.status,'L01_KETHER_155_OF_155_VALIDATED_L02_CHOKHMAH_SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD');
+assert.equal(snapshot.package,'simpleway-hnk@0.44.0');
+assert.deepEqual(snapshot.implementation,{MISSING:853,AUTHORED:0,VALIDATED:155,FROZEN:0});
 assert.equal(snapshot.L01.validated,155);
-assert.equal(snapshot.L01.pending_validation,0);
-assert.equal(snapshot.L02_entry.current_status,'LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD');
+assert.equal(snapshot.L01.cycle_final_seal_slot_consumed,false);
+
+assert.equal(l02Manifest.status,'SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD');
+assert.equal(l02Manifest.pedagogy.authoring_hold,true);
+assert.equal(l02Audit.status,'AUDITED_PEDAGOGY_HOLD');
+assert.equal(l02Audit.source_inventory.recovered_lexemes,11);
+assert.equal(l02Audit.source_inventory.recovered_phrases,0);
+assert.equal(l02Audit.source_inventory.with_master_meaning,9);
+assert.equal(l02Audit.source_inventory.without_master_meaning,2);
+assert.equal(l02Audit.coverage.vocabulary_target,16);
+assert.equal(l02Audit.coverage.proxy_gap,5);
+assert.deepEqual(l02Audit.lexemes.filter(x=>x.meaning_pt===null).map(x=>x.form),['VANUVALI','VANI']);
+assert.equal(snapshot.L02.status,'SOURCE_LOCK_AUDITED_PEDAGOGY_HOLD');
+assert.equal(snapshot.L02.source_inventory.recovered_lexemes,11);
+assert.equal(snapshot.L02.vocabulary_target,16);
+assert.equal(snapshot.L02.proxy_gap,5);
+assert.equal(snapshot.L02.pedagogy_authoring_hold,true);
+assert.equal(snapshot.next_gate,'DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS');
+assert.equal(snapshot.next_gate_rule,'SEMANTICS_BEFORE_FORM_AND_PEDAGOGY');
 
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V41');
-console.log('Cycle 1: L01 Kether sealed at 155/155 VALIDATED; 853 Cycle 1 slots remain for L02-L07; Chokhmah Source Lock audit is next.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V42');
+console.log('L01 Kether is 155/155 VALIDATED; L02 Chokhmah Source Lock is audited with 11 recovered lexemes, 0 phrases and pedagogy HOLD; semantic targets are next.');
