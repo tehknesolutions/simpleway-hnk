@@ -1,0 +1,38 @@
+{
+  "contract_id":"SWHNK-L02-STORY-QA-STRUCTURE-CONTRACT-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_NEW_HNK_PAYLOAD_YET",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "upstream":{"validated_OPI":"../validation/l02-opi-001-010.validated.v1.json","teachability_source":"./l02-pedagogy-source-contract.v1.json"},
+  "principle":"REUSE_VALIDATED_L02_OPI_FRAMES_BEFORE_ANY_NEW_SENTENCE_AUTHORING",
+  "slot_targets":{"story":5,"qa":4,"structure_headers":2,"structures":5,"total":16},
+  "story_targets":[
+    {"id":"L02-STORY-TARGET-001","domain":"CITY_AND_PLACES","allowed_anchors":["TAYOVAN","KALOVALA","PAROVAN"],"validated_OPI_refs":["L02-OPI-001","L02-OPI-007"],"intent":"Establish an urban/place scene without asserting new locative grammar."},
+    {"id":"L02-STORY-TARGET-002","domain":"WORK","allowed_anchors":["VALI","VALIVAN"],"validated_OPI_refs":["L02-OPI-002","L02-OPI-005"],"intent":"Connect work activity and workplace using only already governed meanings."},
+    {"id":"L02-STORY-TARGET-003","domain":"STUDY","allowed_anchors":["PARAZAMI","PARAZAMO"],"validated_OPI_refs":["L02-OPI-003","L02-OPI-004"],"intent":"Connect study activity and school/study-domain while PARAZAMI remains WATCH."},
+    {"id":"L02-STORY-TARGET-004","domain":"TRAVEL_PERCEPTION_TIME","allowed_anchors":["SAROSARI","PARI","PA"],"validated_OPI_refs":["L02-OPI-006","L02-OPI-008"],"intent":"Use travel, perception and lexical yesterday only within validated course boundaries; no tense grammar."},
+    {"id":"L02-STORY-TARGET-005","domain":"INTEGRATED_URBAN_INTERVIEW","allowed_anchors":["PITSA","TAYOVAN","VALI","PARAZAMI","PARI"],"validated_OPI_refs":["L02-OPI-009","L02-OPI-010"],"intent":"Close with concrete/integrated reuse; PITSA remains a controlled loanword example."}
+  ],
+  "qa_targets":[
+    {"id":"L02-QA-TARGET-001","function":"LOCATION_WORK","validated_question_ref":"L02-OPI-002","answer_semantics":"workplace / work location","new_HNK_answer_authored":false},
+    {"id":"L02-QA-TARGET-002","function":"LOCATION_STUDY","validated_question_ref":"L02-OPI-003","answer_semantics":"study location / school domain","new_HNK_answer_authored":false},
+    {"id":"L02-QA-TARGET-003","function":"CONTENT_STUDY_OR_WORK","validated_question_refs":["L02-OPI-004","L02-OPI-005"],"answer_semantics":"study content or work activity","new_HNK_answer_authored":false},
+    {"id":"L02-QA-TARGET-004","function":"CONTROLLED_PERCEPTION_TRAVEL_TIME","validated_question_refs":["L02-OPI-006","L02-OPI-007","L02-OPI-008","L02-OPI-009"],"answer_semantics":"controlled response using existing lexical meanings only","new_HNK_answer_authored":false}
+  ],
+  "structure_headers":[
+    {"id":"L02-HDR-TARGET-001","label":"PLACE_WORK_STUDY_FRAMES","scope":"course organization only"},
+    {"id":"L02-HDR-TARGET-002","label":"PERCEPTION_TRAVEL_TIME_FRAMES","scope":"course organization only"}
+  ],
+  "structure_targets":[
+    {"id":"L02-STR-TARGET-001","course_frame":"EN + PREDICATE + KUVAN + KE","validated_examples":["EN VALI KUVAN KE","EN PARAZAMI KUVAN KE"],"boundary":"Scoped locative course frame only; no universal predicate-class or locative grammar."},
+    {"id":"L02-STR-TARGET-002","course_frame":"EN + KU + PREDICATE + KE","validated_examples":["EN KU PARAZAMI KE","EN KU VALI KE"],"boundary":"KU remains scoped content selector; no universal WHAT grammar."},
+    {"id":"L02-STR-TARGET-003","course_frame":"EN + PARI + OBJECT + KE","validated_examples":["EN PARI TAYOVAN KE","EN PARI KALOVALA KE","EN PARI PITSA KE"],"boundary":"Controlled perception frame only; no universal transitivity."},
+    {"id":"L02-STR-TARGET-004","course_frame":"PA + EN + PARI + OBJECT + KE","validated_examples":["PA EN PARI KALOVALA KE"],"boundary":"PA is lexical yesterday only; no tense morphology, temporal syntax or sentence-initial grammar."},
+    {"id":"L02-STR-TARGET-005","course_frame":"EN + SAROSARI + KE","validated_examples":["EN SAROSARI KE"],"boundary":"Scoped beginner yes/no utterance only; bare-predicate productivity is not canonized."}
+  ],
+  "checks":{"story_targets":5,"qa_targets":4,"structure_headers":2,"structure_targets":5,"total_slots_targeted":16,"new_HNK_sentences_authored":0,"new_surface_forms_created":0,"authority_promotions":0},
+  "excluded_unresolved_source_forms":["VANI","VANUVALI"],
+  "non_effects":["No Story, Q&A, Header or Structure slot is AUTHORED by this contract.","No new HNK response sentence is invented.","Validated L02 OPI frames remain scoped pedagogical evidence, not universal HNK grammar.","Reference languages do not select forms or word order."],
+  "next_gate":"SWHNK-L02-STORY-QA-STRUCTURE-CONTRACT-HUMAN-BATCH-V1"
+}
