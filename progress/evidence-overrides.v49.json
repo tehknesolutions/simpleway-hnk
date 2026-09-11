@@ -1,0 +1,15 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V49",
+  "status":"HISTORICAL_TRANSITION_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L02","category":"opi","range":[1,10]},"implementation_state":"AUTHORED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"L02 OPI-001..010 authored from explicitly approved scoped patterns after complete G-ID/IPA expansion. This layer records the authoring transition before validation; it creates no language-authority promotion or universal grammar."}
+  ],
+  "validation_evidence_updates":{
+    "L02_OPI_target":10,
+    "L02_OPI_authored_at_V49":10,
+    "L02_OPI_validated_at_V49":0,
+    "L02_OPI_authoring_artifact":"../curriculum/cycle-01/L02-chokhmah/authoring/l02-opi-001-010.authored.v1.json",
+    "L02_OPI_authoring_transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-authoring.applied-transition.v1.json"
+  }
+}
