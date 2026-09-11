@@ -1,0 +1,17 @@
+{
+  "batch_id":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source":"../source-lock/l02-unresolved-vocabulary-resolution-options.v1.json",
+  "decisions_requested":[
+    {"id":"DEC-L02-UV-001","statement":"Preserve VANUVALI and VANI as source-observation forms outside active L02 teaching vocabulary until their semantics are recovered or explicitly governed.","if_approved":{"active_teaching_use":false,"meanings_assigned":false,"source_evidence_preserved":true}},
+    {"id":"DEC-L02-UV-002","statement":"Approve HABITUALITY_EVERY_DAY as an L02 semantic need and authorize SARU (LEX-018, WATCH) for later scoped L02 curriculum rebind review.","if_approved":{"semantic_target_approved":true,"candidate_form":"SARU","rebind_applied":false,"authority_promotion":false}},
+    {"id":"DEC-L02-UV-003","statement":"Approve DESTINATION_PURPOSE as an L02 semantic need and authorize TA (LEX-019, CANDIDATE) for later scoped L02 curriculum rebind review.","if_approved":{"semantic_target_approved":true,"candidate_form":"TA","rebind_applied":false,"authority_promotion":false}},
+    {"id":"DEC-L02-UV-004","statement":"Confirm that SARU/TA do not historically replace or explain VANUVALI/VANI; they are independent governed curriculum reuses selected for L02 pedagogical needs.","if_approved":{"historical_equivalence_claim":false,"new_surface_forms_created":0}},
+    {"id":"DEC-L02-UV-005","statement":"Keep all L02 sentence grammar, OPI, Story, QA, Activation and Review authoring on HOLD until this two-slot policy and a scoped microgrammar are approved.","if_approved":{"pedagogy_hold":true}}
+  ],
+  "checks":{"active_teaching_gap":2,"proposed_semantic_targets":2,"proposed_existing_assets":["SARU","TA"],"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"unresolved_meanings_invented":0},
+  "projected_effect_if_all_approved":{"semantically_teachable_vocabulary":16,"unresolved_source_observations":2,"next_mapping_candidates":["SARU","TA"],"new_forms_created":0,"authority_promotions":0,"next_gate":"PREPARE_L02_SARU_TA_SCOPED_REBIND_AND_MICROGRAMMAR"},
+  "next_gate_if_approved":"PREPARE_L02_SARU_TA_SCOPED_REBIND_AND_MICROGRAMMAR",
+  "next_gate_if_not_approved":"REVISE_L02_UNRESOLVED_VOCABULARY_POLICY"
+}
