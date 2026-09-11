@@ -1,6 +1,6 @@
 {
   "batch_id":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1",
-  "status":"APPROVED_ALL_DECISIONS",
+  "status":"APPROVED_AND_APPLIED_TO_LANGUAGE_SCOPE",
   "date_prepared":"2026-09-11",
   "date_approved":"2026-09-11",
   "approval_source":"Explicit user SIGA in HNK-LINGUAS after the VALIVAN / PARAZAMO unresolved-vocabulary policy was presented.",
@@ -14,7 +14,6 @@
     {"id":"DEC-L02-UNRES-006","decision":"APPROVED","statement":"Confirm that a 16/16 semantically teachable source set does not itself validate any L02 curriculum slot; OPI, Story, Q&A, Structures, Vocabulary cards, Activation and Review remain unimplemented until the pedagogy-source contract is separately approved.","effect":{"curriculum_slots_implemented":0,"pedagogy_authoring_hold":true}},
     {"id":"DEC-L02-UNRES-007","decision":"APPROVED","statement":"Confirm that no new HNK form, historical claim, numerological selection or authority promotion is created by this policy decision.","effect":{"new_surface_forms_created":0,"new_language_assets_created":0,"historical_claim_changes":0,"authority_promotions":0,"numerology_selects_forms":false}}
   ],
-  "checks_before_application":{"current_scoped_governed_assets":16,"current_semantic_teachable_assets":14,"current_unresolved_assets":2,"recommended_rebinds":2,"recommended_forms":["VALIVAN","PARAZAMO"],"new_surface_forms_created":0,"authority_promotions":0,"pedagogy_created":false},
-  "approved_effect":{"semantic_teachable_assets":16,"vocabulary_target":16,"remaining_teachable_gap":0,"unresolved_source_forms_preserved":2,"rebinds_to_apply":2,"rebind_refs":["LEX-003","LEX-004"],"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"curriculum_slots_implemented":0,"pedagogy_authoring_hold":true,"next_gate":"PREPARE_L02_PEDAGOGY_SOURCE_CONTRACT"},
-  "next_gate":"APPLY_L02_RECOVERED_REBINDS_AND_PREPARE_PEDAGOGY_SOURCE_CONTRACT"
+  "application":{"language_owner_repository":"tehknesolutions/codex-hnk","owner_file":"packages/hnk-linguas/src/cycle1.mjs","change_type":"RECOVERED_CURRICULUM_REBIND_ONLY","rebind_refs":["LEX-003","LEX-004"],"forms":["VALIVAN","PARAZAMO"],"L02_scoped_governed_references_after":18,"semantic_teachable_assets_after":16,"remaining_teachable_gap_after":0,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"curriculum_slots_implemented":0,"pedagogy_authoring_hold":true},
+  "next_gate":"SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1"
 }
