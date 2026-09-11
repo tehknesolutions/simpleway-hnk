@@ -1,0 +1,23 @@
+{
+  "batch_id":"SWHNK-L02-SQS-15-VALIDATION-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source_transition":"l02-sqs-authoring.partial-transition.v1.json",
+  "source_artifacts":["../authoring/story-lane.v1.json","../authoring/qa-lane.v1.json","../authoring/structure-lane.v1.json"],
+  "decision_scope":"VALIDATE_15_AUTHORED_SQS_SLOTS_FOR_SCOPED_L02_COURSE_USE_WITHOUT_LANGUAGE_AUTHORITY_PROMOTION",
+  "slot_decisions":[
+    {"id":"DEC-L02-SQS15-VAL-001","slot":"L02-STORY-001"},{"id":"DEC-L02-SQS15-VAL-002","slot":"L02-STORY-002"},{"id":"DEC-L02-SQS15-VAL-003","slot":"L02-STORY-003"},{"id":"DEC-L02-SQS15-VAL-004","slot":"L02-STORY-004","risk":"VERY_HIGH"},{"id":"DEC-L02-SQS15-VAL-005","slot":"L02-STORY-005"},
+    {"id":"DEC-L02-SQS15-VAL-006","slot":"L02-QA-001"},{"id":"DEC-L02-SQS15-VAL-007","slot":"L02-QA-002"},{"id":"DEC-L02-SQS15-VAL-008","slot":"L02-QA-003"},{"id":"DEC-L02-SQS15-VAL-009","slot":"L02-QA-004","risk":"VERY_HIGH","blocked_branch":"L02-OPI-006"},
+    {"id":"DEC-L02-SQS15-VAL-010","slot":"L02-HDR-001"},{"id":"DEC-L02-SQS15-VAL-011","slot":"L02-HDR-002"},
+    {"id":"DEC-L02-SQS15-VAL-012","slot":"L02-STR-001"},{"id":"DEC-L02-SQS15-VAL-013","slot":"L02-STR-002"},{"id":"DEC-L02-SQS15-VAL-014","slot":"L02-STR-003"},{"id":"DEC-L02-SQS15-VAL-015","slot":"L02-STR-004","risk":"VERY_HIGH"}
+  ],
+  "governance_decisions":[
+    {"id":"DEC-L02-SQS15-VAL-016","statement":"Validation remains scoped SimpleWay HNK L02 pedagogy and does not promote WATCH/CANDIDATE/FROZEN language authority."},
+    {"id":"DEC-L02-SQS15-VAL-017","statement":"Story sequencing does not establish discourse grammar; Q&A schemas do not establish declarative grammar."},
+    {"id":"DEC-L02-SQS15-VAL-018","statement":"PA remains lexical 'ontem' only; no generic past-tense morphology or syntax is validated."},
+    {"id":"DEC-L02-SQS15-VAL-019","statement":"The L02-OPI-006 yes/no response branch remains blocked."},
+    {"id":"DEC-L02-SQS15-VAL-020","statement":"L02-STR-005 remains MISSING until the canonical 'I didn't...' design gate is resolved; this validation must not consume or waive that slot."}
+  ],
+  "checks":{"authored_slots":15,"validated_before_gate":0,"story":5,"qa":4,"structure_headers":2,"structures":4,"STR005_missing":true,"new_surface_forms_created":0,"authority_promotions":0},
+  "projected_effect_if_all_approved":{"L02_SQS_AUTHORED":0,"L02_SQS_VALIDATED":15,"L02_curriculum_slots_implemented":25,"L02_remaining_missing":114,"GLOBAL_AUTHORED":0,"GLOBAL_VALIDATED":180,"GLOBAL_MISSING":828,"STR005_remains_missing":true,"next_gate":"SWHNK-L02-STR005-I-DIDNT-DESIGN-HUMAN-BATCH-V1"}
+}
