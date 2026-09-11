@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L02-STR005-I-DIDNT-DESIGN-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source_review":"../source-lock/l02-str005-i-didnt-design-review.v1.json",
+  "decision_scope":"APPROVE_SEMANTIC_AND_COMPONENT_BOUNDARIES_BEFORE_ANY_EXACT_NEGATIVE_PAST_HNK_PATTERN",
+  "decisions_requested":[
+    {"id":"DEC-L02-STR005-001","statement":"Confirm L02-STR-005 must satisfy the canonical Cycle 1 content requirement 'I didn't...' and may not be replaced by EN + SAROSARI + KE."},
+    {"id":"DEC-L02-STR005-002","statement":"Approve FIRST_PERSON_NEGATED_PAST_EVENT_OR_ACTIVITY as the semantic target while keeping approved_form null."},
+    {"id":"DEC-L02-STR005-003","statement":"Allow AN to be evaluated as the governed first-person component without promoting it beyond CANDIDATE."},
+    {"id":"DEC-L02-STR005-004","statement":"Allow NE to enter a separate L02 scope-extension review for negation; this decision does not yet apply that extension."},
+    {"id":"DEC-L02-STR005-005","statement":"Keep PA strictly lexical 'ontem'; do not map PA to generic PAST or English DID."},
+    {"id":"DEC-L02-STR005-006","statement":"Do not assume declarative order AN + NE + PREDICATE, PA + AN + NE + PREDICATE, or any alternative until a dedicated pattern review is prepared."},
+    {"id":"DEC-L02-STR005-007","statement":"Do not invent a DID auxiliary, tense morpheme, negation lexeme, or new predicate to satisfy the slot."},
+    {"id":"DEC-L02-STR005-008","statement":"If approved, prepare a joint NE-L02 scope-extension review plus exact STR005 pattern review; keep STR005 MISSING until that later pattern gate is explicitly approved."}
+  ],
+  "checks":{"semantic_target_candidates":1,"approved_form_before_gate":0,"new_surface_forms_created":0,"authority_promotions":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0},
+  "projected_effect_if_all_approved":{"semantic_target_approved":1,"exact_HNK_pattern_approved":0,"NE_L02_scope_extension_applied":0,"STR005_AUTHORED":0,"STR005_VALIDATED":0,"next_phase":"PREPARE_NE_L02_SCOPE_AND_STR005_EXACT_PATTERN_REVIEW"}
+}
