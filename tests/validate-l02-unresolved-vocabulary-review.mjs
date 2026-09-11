@@ -13,13 +13,14 @@ assert.deepEqual(review.recommended_rebinds.map(x=>x.form),['VALIVAN','PARAZAMO'
 assert.ok(review.recommended_rebinds.every(x=>x.authority_promotion===false));
 
 assert.equal(batch.batch_id,'SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1');
-assert.equal(batch.status,'APPROVED_ALL_DECISIONS');
+assert.equal(batch.status,'APPROVED_AND_APPLIED_TO_LANGUAGE_SCOPE');
 assert.equal(batch.decisions_requested.length,7);
 assert.ok(batch.decisions_requested.every(x=>x.decision==='APPROVED'));
-assert.deepEqual(batch.approved_effect.rebind_refs,['LEX-003','LEX-004']);
-assert.equal(batch.approved_effect.semantic_teachable_assets,16);
-assert.equal(batch.approved_effect.remaining_teachable_gap,0);
-assert.equal(batch.approved_effect.curriculum_slots_implemented,0);
+assert.deepEqual(batch.application.rebind_refs,['LEX-003','LEX-004']);
+assert.equal(batch.application.L02_scoped_governed_references_after,18);
+assert.equal(batch.application.semantic_teachable_assets_after,16);
+assert.equal(batch.application.remaining_teachable_gap_after,0);
+assert.equal(batch.application.curriculum_slots_implemented,0);
 
 assert.equal(transition.status,'APPLIED');
 assert.deepEqual(transition.rebinds.map(x=>x.form),['VALIVAN','PARAZAMO']);
