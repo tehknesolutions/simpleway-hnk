@@ -1,0 +1,31 @@
+{
+  "review_id":"SWHNK-L02-STORY-QA-STRUCTURE-PATTERN-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_PATTERN_REVIEW_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_contract":"./l02-story-qa-structure-contract.v1.json",
+  "source_contract_approval":"../validation/l02-story-qa-structure-contract.approved-transition.v1.json",
+  "principle":"REUSE_VALIDATED_UTTERANCES_AND_EXTRACT_SCOPED_COURSE_FRAMES_BEFORE_NEW_HNK_SENTENCE_AUTHORING",
+  "patterns":[
+    {"id":"L02-SQS-PAT-001","slot":"L02-STORY-001","category":"story","evidence_class":"VALIDATED_SEQUENCE_REUSE","validated_OPI_refs":["L02-OPI-001","L02-OPI-007"],"assembly":"Reuse the two validated utterances as a city/building micro-scene; no new HNK sentence yet.","risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-002","slot":"L02-STORY-002","category":"story","evidence_class":"VALIDATED_SEQUENCE_REUSE","validated_OPI_refs":["L02-OPI-002","L02-OPI-005"],"assembly":"Reuse work-location and work-content utterances; VALIVAN requires separate sentence-pattern approval if inserted into a new sentence.","risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-003","slot":"L02-STORY-003","category":"story","evidence_class":"VALIDATED_SEQUENCE_REUSE","validated_OPI_refs":["L02-OPI-003","L02-OPI-004"],"assembly":"Reuse study-location and study-content utterances; PARAZAMI remains WATCH.","risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-004","slot":"L02-STORY-004","category":"story","evidence_class":"VALIDATED_SEQUENCE_REUSE_WITH_INHERITED_RISK","validated_OPI_refs":["L02-OPI-006","L02-OPI-008"],"assembly":"Reuse travel and lexical-yesterday utterances without deriving new tense or bare-predicate productivity.","risk":"VERY_HIGH"},
+    {"id":"L02-SQS-PAT-005","slot":"L02-STORY-005","category":"story","evidence_class":"VALIDATED_SEQUENCE_REUSE","validated_OPI_refs":["L02-OPI-009","L02-OPI-010"],"assembly":"Reuse controlled PITSA example and integrated mini-interview; no borrowing or discourse grammar inferred.","risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-006","slot":"L02-QA-001","category":"qa","evidence_class":"VALIDATED_QUESTION_REUSE_ANSWER_PATTERN_PENDING","validated_question_ref":"L02-OPI-002","answer_semantics":"workplace / work location","answer_HNK_pattern":null,"risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-007","slot":"L02-QA-002","category":"qa","evidence_class":"VALIDATED_QUESTION_REUSE_ANSWER_PATTERN_PENDING","validated_question_ref":"L02-OPI-003","answer_semantics":"study location / school domain","answer_HNK_pattern":null,"risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-008","slot":"L02-QA-003","category":"qa","evidence_class":"VALIDATED_QUESTION_REUSE_ANSWER_PATTERN_PENDING","validated_question_refs":["L02-OPI-004","L02-OPI-005"],"answer_semantics":"study content or work activity","answer_HNK_pattern":null,"risk":"MEDIUM_HIGH"},
+    {"id":"L02-SQS-PAT-009","slot":"L02-QA-004","category":"qa","evidence_class":"VALIDATED_QUESTION_REUSE_ANSWER_PATTERN_PENDING","validated_question_refs":["L02-OPI-006","L02-OPI-007","L02-OPI-008","L02-OPI-009"],"answer_semantics":"controlled response using existing lexical meanings only","answer_HNK_pattern":null,"risk":"VERY_HIGH"},
+    {"id":"L02-SQS-PAT-010","slot":"L02-HDR-001","category":"structure_header","evidence_class":"PEDAGOGICAL_LABEL_ONLY","label":"PLACE_WORK_STUDY_FRAMES","risk":"NONE"},
+    {"id":"L02-SQS-PAT-011","slot":"L02-HDR-002","category":"structure_header","evidence_class":"PEDAGOGICAL_LABEL_ONLY","label":"PERCEPTION_TRAVEL_TIME_FRAMES","risk":"NONE"},
+    {"id":"L02-SQS-PAT-012","slot":"L02-STR-001","category":"structure","evidence_class":"SCOPED_FRAME_ABSTRACTION_FROM_VALIDATED_EXAMPLES","course_frame":"EN + PREDICATE + KUVAN + KE","validated_examples":["EN VALI KUVAN KE","EN PARAZAMI KUVAN KE"],"risk":"MEDIUM"},
+    {"id":"L02-SQS-PAT-013","slot":"L02-STR-002","category":"structure","evidence_class":"SCOPED_FRAME_ABSTRACTION_FROM_VALIDATED_EXAMPLES","course_frame":"EN + KU + PREDICATE + KE","validated_examples":["EN KU PARAZAMI KE","EN KU VALI KE"],"risk":"MEDIUM_HIGH"},
+    {"id":"L02-SQS-PAT-014","slot":"L02-STR-003","category":"structure","evidence_class":"SCOPED_FRAME_ABSTRACTION_FROM_VALIDATED_EXAMPLES","course_frame":"EN + PARI + OBJECT + KE","validated_examples":["EN PARI TAYOVAN KE","EN PARI KALOVALA KE","EN PARI PITSA KE"],"risk":"MEDIUM_HIGH"},
+    {"id":"L02-SQS-PAT-015","slot":"L02-STR-004","category":"structure","evidence_class":"SCOPED_FRAME_ABSTRACTION_FROM_SINGLE_VALIDATED_EXAMPLE","course_frame":"PA + EN + PARI + OBJECT + KE","validated_examples":["PA EN PARI KALOVALA KE"],"risk":"VERY_HIGH"},
+    {"id":"L02-SQS-PAT-016","slot":"L02-STR-005","category":"structure","evidence_class":"SCOPED_FRAME_ABSTRACTION_FROM_SINGLE_VALIDATED_EXAMPLE","course_frame":"EN + SAROSARI + KE","validated_examples":["EN SAROSARI KE"],"risk":"HIGH"}
+  ],
+  "checks":{"pattern_candidates":16,"story_candidates":5,"qa_candidates":4,"header_candidates":2,"structure_candidates":5,"new_HNK_sentences_authored":0,"new_HNK_answers_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"curriculum_slots_AUTHORED":0,"curriculum_slots_VALIDATED":0},
+  "risk_summary":{"VERY_HIGH":["L02-SQS-PAT-004","L02-SQS-PAT-009","L02-SQS-PAT-015"],"HIGH":["L02-SQS-PAT-016"]},
+  "next_gate":"SWHNK-L02-SQS-PATTERN-REVIEW-HUMAN-BATCH-V1"
+}

@@ -1,20 +1,20 @@
 {
   "batch_id":"SWHNK-L02-STORY-QA-STRUCTURE-CONTRACT-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-11",
+  "date_approved":"2026-09-11",
+  "approval_source":"Explicit user SIGA in HNK-LINGUAS after SWHNK-C1-PROGRESS-SNAPSHOT-V51 presented this contract as the sole next gate.",
   "source":"../source-lock/l02-story-qa-structure-contract.v1.json",
   "decisions_requested":[
-    {"id":"DEC-L02-SQS-001","statement":"Approve the exact target allocation of 5 Story + 4 Q&A + 2 Structure Headers + 5 Structures = 16 L02 slots."},
-    {"id":"DEC-L02-SQS-002","statement":"Approve the five Story semantic domains and their validated OPI anchors without authoring new HNK story sentences yet."},
-    {"id":"DEC-L02-SQS-003","statement":"Approve the four Q&A functions while keeping all answer payloads unauthored until a separate answer-pattern review."},
-    {"id":"DEC-L02-SQS-004","statement":"Approve the two structure headers as course-organization labels only, not HNK grammar categories."},
-    {"id":"DEC-L02-SQS-005","statement":"Approve the five scoped course frames only as abstractions over already validated L02 OPI examples; they do not establish universal HNK syntax."},
-    {"id":"DEC-L02-SQS-006","statement":"Keep every existing language-authority label and risk boundary unchanged; PA remains lexical-only, PITSA remains controlled-loanword evidence, and WATCH/CANDIDATE/FROZEN assets are not promoted."},
-    {"id":"DEC-L02-SQS-007","statement":"Keep VANI and VANUVALI excluded and meaning-null throughout Story/Q&A/Structure work until separately governed."},
-    {"id":"DEC-L02-SQS-008","statement":"Confirm approval would authorize only preparation of Story/Q&A/Structure pattern candidates; it would not mark any of the 16 slots AUTHORED or VALIDATED."}
+    {"id":"DEC-L02-SQS-001","decision":"APPROVED","statement":"Approve the exact target allocation of 5 Story + 4 Q&A + 2 Structure Headers + 5 Structures = 16 L02 slots."},
+    {"id":"DEC-L02-SQS-002","decision":"APPROVED","statement":"Approve the five Story semantic domains and their validated OPI anchors without authoring new HNK story sentences yet."},
+    {"id":"DEC-L02-SQS-003","decision":"APPROVED","statement":"Approve the four Q&A functions while keeping all answer payloads unauthored until a separate answer-pattern review."},
+    {"id":"DEC-L02-SQS-004","decision":"APPROVED","statement":"Approve the two structure headers as course-organization labels only, not HNK grammar categories."},
+    {"id":"DEC-L02-SQS-005","decision":"APPROVED","statement":"Approve the five scoped course frames only as abstractions over already validated L02 OPI examples; they do not establish universal HNK syntax."},
+    {"id":"DEC-L02-SQS-006","decision":"APPROVED","statement":"Keep every existing language-authority label and risk boundary unchanged; PA remains lexical-only, PITSA remains controlled-loanword evidence, and WATCH/CANDIDATE/FROZEN assets are not promoted."},
+    {"id":"DEC-L02-SQS-007","decision":"APPROVED","statement":"Keep VANI and VANUVALI excluded and meaning-null throughout Story/Q&A/Structure work until separately governed."},
+    {"id":"DEC-L02-SQS-008","decision":"APPROVED","statement":"Confirm approval authorizes only preparation of Story/Q&A/Structure pattern candidates; it does not mark any of the 16 slots AUTHORED or VALIDATED."}
   ],
   "checks":{"target_slots":16,"story":5,"qa":4,"structure_headers":2,"structures":5,"new_HNK_sentences_authored":0,"curriculum_slots_authored":0,"curriculum_slots_validated":0,"authority_promotions":0},
-  "projected_effect_if_all_approved":{"contract_approved":true,"curriculum_slots_authored":0,"curriculum_slots_validated":0,"next_gate":"PREPARE_L02_STORY_QA_STRUCTURE_PATTERN_REVIEW"},
-  "next_gate_if_approved":"PREPARE_L02_STORY_QA_STRUCTURE_PATTERN_REVIEW",
-  "next_gate_if_not_approved":"REVISE_L02_STORY_QA_STRUCTURE_CONTRACT"
+  "approved_effect":{"contract_approved":true,"story_targets_approved":5,"qa_targets_approved":4,"structure_headers_approved":2,"structure_targets_approved":5,"total_targets_approved":16,"curriculum_slots_authored":0,"curriculum_slots_validated":0,"new_HNK_sentences_authored":0,"authority_promotions":0,"next_gate":"SWHNK-L02-SQS-PATTERN-REVIEW-HUMAN-BATCH-V1"}
 }

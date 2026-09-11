@@ -1,0 +1,11 @@
+{
+  "transition_id":"SWHNK-L02-STORY-QA-STRUCTURE-CONTRACT-APPROVED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "source_contract":"../source-lock/l02-story-qa-structure-contract.v1.json",
+  "source_batch":"./l02-story-qa-structure-contract-human-batch.v1.json",
+  "before":{"story_targets_approved":0,"qa_targets_approved":0,"structure_headers_approved":0,"structure_targets_approved":0,"slots_AUTHORED":0,"slots_VALIDATED":0},
+  "after":{"story_targets_approved":5,"qa_targets_approved":4,"structure_headers_approved":2,"structure_targets_approved":5,"total_targets_approved":16,"slots_AUTHORED":0,"slots_VALIDATED":0},
+  "non_effects":{"new_HNK_sentences_authored":0,"new_surface_forms_created":0,"authority_promotions":0,"universal_grammar_claims":0},
+  "next_gate":"SWHNK-L02-SQS-PATTERN-REVIEW-HUMAN-BATCH-V1"
+}
