@@ -1,0 +1,22 @@
+{
+  "review_id":"SWHNK-L02-EXACT-REBIND-MAPPING-V1",
+  "status":"READY_FOR_HUMAN_REBIND_REVIEW_NOT_APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "principle":"APPROVED_SEMANTICS_PLUS_REUSE_BEFORE_INVENTION",
+  "semantic_matrix":"./l02-semantic-curriculum-targets.v1.json",
+  "semantic_approval_batch":"../validation/l02-semantic-targets-human-batch.v1.json",
+  "language_owner":{"repository":"tehknesolutions/codex-hnk","package":"@hnk/linguas","registry":"packages/hnk-linguas/src/authored.mjs","registry_version_observed":"1.5.0-candidate"},
+  "proposed_rebinds":[
+    {"target_id":"L02-SEM-012","semantic_key":"FIRST_PERSON_REFERENT","canonical_ref":"AUTH-016","form":"AN","authority":"CANDIDATE","current_lessons":["L01"],"proposed_lessons":["L01","L02"],"meaning_scope":"reuse existing authored first-person referent meaning for scoped L02 learner-centered statements","mapping_action":"EXTEND_CURRICULUM_SCOPE_ONLY","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-013","semantic_key":"SECOND_PERSON_REFERENT","canonical_ref":"AUTH-017","form":"EN","authority":"CANDIDATE","current_lessons":["L01"],"proposed_lessons":["L01","L02"],"meaning_scope":"reuse existing authored second-person referent meaning for scoped L02 interview/dialogue use","mapping_action":"EXTEND_CURRICULUM_SCOPE_ONLY","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-014","semantic_key":"LOCATION_INTERROGATIVE","canonical_ref":"AUTH-001","form":"KUVAN","authority":"CANDIDATE","current_lessons":["L01"],"proposed_lessons":["L01","L02"],"meaning_scope":"reuse existing authored locative interrogative variable for scoped L02 place questions","mapping_action":"EXTEND_CURRICULUM_SCOPE_ONLY","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-015","semantic_key":"CONTENT_SELECTOR","canonical_ref":"AUTH-018","form":"KU","authority":"CANDIDATE","current_lessons":["L01"],"proposed_lessons":["L01","L02"],"meaning_scope":"reuse existing authored content-selector function without assigning one universal WH translation","mapping_action":"EXTEND_CURRICULUM_SCOPE_ONLY","historical_recovery_claim":false,"authority_promotion":false},
+    {"target_id":"L02-SEM-016","semantic_key":"QUESTION_OPERATOR","canonical_ref":"AUTH-019","form":"KE","authority":"CANDIDATE","current_lessons":["L01"],"proposed_lessons":["L01","L02"],"meaning_scope":"reuse existing authored clause-final question operator for scoped L02 constructions only","mapping_action":"EXTEND_CURRICULUM_SCOPE_ONLY","historical_recovery_claim":false,"authority_promotion":false}
+  ],
+  "checks":{"semantic_targets_approved":5,"proposed_rebinds":5,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"historical_recovery_claims":0,"registry_changes_applied":0,"L02_curriculum_slots_implemented":0,"pedagogy_created":false},
+  "preserved_boundaries":["AN and EN remain authored CANDIDATE referent mappings; no universal person paradigm is created.","KUVAN remains a CANDIDATE locative interrogative variable; KU or VAN are not made globally productive by this rebind.","KU remains a scoped content selector and is not globally glossed as one WH word.","KE remains a scoped question operator; universal HNK interrogative grammar is not created.","VANI remains WATCH with Master Lexicon meaning null; its L01 residence reading is not generalized to L02.","VANUVALI remains GATE with Master Lexicon meaning null.","No new words are authored to satisfy the numerical Vocabulary proxy gap.","No OPI, Story, Q&A, Structure, Vocabulary, Activation or Review payload is created by this review."],
+  "projected_effect_if_approved":{"registry_entries_changed":5,"change_type":"LESSON_SCOPE_EXTENSION_ONLY","forms_selected":5,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"historical_recovery_claims":0,"L02_semantic_targets_mapped":5,"L02_curriculum_slots_implemented":0,"pedagogy_authoring_hold":true},
+  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1"
+}
