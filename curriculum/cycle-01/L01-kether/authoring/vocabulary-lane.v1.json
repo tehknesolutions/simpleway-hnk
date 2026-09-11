@@ -1,6 +1,6 @@
 {
   "lane_id":"SWHNK-L01-VOCABULARY-AUTHORING-V1",
-  "status":"AUTHORED_32_OF_32_VALIDATED_24_PENDING_VALIDATION_8",
+  "status":"AUTHORED_32_OF_32_VALIDATED_32_COMPLETE",
   "lesson_id":"L01",
   "source_contract":{"vocabulary":32,"allocation_source":"progress/cycle1-allocation.v1.json","historical_payload_recovery_claim":false},
   "selection_policy":{"rule":"A filled Vocabulary slot must point to one independently governed language asset with a course-usable meaning or governed function. Recovered phrase tokens without standalone lexical governance are not promoted into Vocabulary merely to fill the numerical target.","one_distinct_asset_per_filled_slot":true,"phrase_only_unresolved_tokens_eligible":false,"numerology_selects_forms":false},
@@ -42,7 +42,8 @@
   "unfilled_slots":[],
   "explicit_exclusions":["YA","ES","ZAMO","SARI","LO","DA"],
   "exclusion_reason":"These remaining forms occur inside recovered phrases or analyses but still lack sufficient standalone governed lexical entries with independent course-ready meanings. They remain outside Vocabulary despite full 32-slot completion.",
-  "metrics":{"target":32,"AUTHORED":32,"VALIDATED":24,"FROZEN":0,"MISSING_GOVERNED_ASSET":0,"distinct_governed_assets_used":32,"new_surface_forms_created":0,"new_authored_candidate_registry_entries":6,"scoped_recovered_bindings_added":2,"language_authority_promotions":0},
+  "metrics":{"target":32,"AUTHORED":32,"VALIDATED":32,"FROZEN":0,"MISSING_GOVERNED_ASSET":0,"distinct_governed_assets_used":32,"new_surface_forms_created":0,"new_authored_candidate_registry_entries":6,"scoped_recovered_bindings_added":2,"language_authority_promotions":0},
   "application_record":"./vocabulary-gap-8-application.v1.json",
-  "next_gate":"SWHNK-L01-VOCABULARY-025-032-VALIDATION-V1"
+  "validation_record":"../validation/vocabulary-025-032.validated-transition.v1.json",
+  "next_gate":"AUTHOR_L01_REVIEW_001_022"
 }
