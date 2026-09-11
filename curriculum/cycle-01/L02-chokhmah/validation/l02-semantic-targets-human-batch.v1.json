@@ -17,6 +17,6 @@
     {"id":"DEC-L02-SEM-008","decision":"APPROVED","statement":"Confirm that the 16-slot Vocabulary allocation is curricular mathematics, not evidence that five historically missing HNK words must exist or be invented.","effect":{"historical_five_word_claim":false,"numerology_selects_forms":false}}
   ],
   "checks":{"recovered_assets":11,"semantic_targets":5,"semantic_targets_approved":5,"forms_selected":0,"suggested_existing_candidate_forms":5,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"L02_phrases_created":0,"pedagogy_created":false},
-  "applied_effect":{"semantic_targets_approved":5,"semantic_target_total":5,"forms_selected":0,"next_mapping_candidates":["AN","EN","KUVAN","KU","KE"],"new_forms_created":0,"authority_promotions":0,"next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-V1"},
-  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-V1"
+  "applied_effect":{"semantic_targets_approved":5,"semantic_target_total":5,"forms_selected":0,"next_mapping_candidates":["AN","EN","KUVAN","KU","KE"],"new_forms_created":0,"authority_promotions":0,"next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1"},
+  "next_gate":"SWHNK-L02-EXACT-REBIND-MAPPING-HUMAN-BATCH-V1"
 }
