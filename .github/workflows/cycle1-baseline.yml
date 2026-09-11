@@ -94,3 +94,6 @@ jobs:
 
       - name: Validate L02 unresolved vocabulary policy
         run: npm run validate:l02-unresolved-vocabulary
+
+      - name: Validate L02 pedagogy source contract
+        run: npm run validate:l02-pedagogy-source
