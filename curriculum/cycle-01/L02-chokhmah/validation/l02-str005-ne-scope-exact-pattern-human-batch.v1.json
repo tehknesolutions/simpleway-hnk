@@ -1,23 +1,26 @@
 {
   "batch_id":"SWHNK-L02-STR005-NE-SCOPE-EXACT-PATTERN-HUMAN-BATCH-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-11",
+  "date_approved":"2026-09-11",
+  "approval_source":"Explicit user SIGA in HNK-LINGUAS after SWHNK-C1-PROGRESS-SNAPSHOT-V57 identified this pattern batch as the sole next gate.",
   "source_review":"../source-lock/l02-str005-ne-scope-exact-pattern-review.v1.json",
   "decision_scope":"APPROVE_SCOPED_NE_EXTENSION_AND_SELECT_EXACT_STR005_COURSE_PATTERN_WITHOUT_AUTHORING_THE_SLOT",
   "decisions_requested":[
-    {"id":"DEC-L02-STR005-PAT-001","statement":"Approve a strictly scoped L02 extension of NE for predicate negation inside the STR005 course frame only; retain NE authority as CANDIDATE and create no universal negation grammar."},
-    {"id":"DEC-L02-STR005-PAT-002","statement":"Approve AN as the scoped first-person referent component for STR005 only; retain AN authority as CANDIDATE and create no global person paradigm."},
-    {"id":"DEC-L02-STR005-PAT-003","pattern_ref":"L02-STR005-PAT-A","statement":"Confirm AN + NE + PREDICATE is not sufficient by itself to satisfy canonical 'I didn't...' because no governed past context is present."},
-    {"id":"DEC-L02-STR005-PAT-004","pattern_ref":"L02-STR005-PAT-B","risk":"VERY_HIGH","statement":"Approve PA + AN + NE + PREDICATE as the preferred exact scoped course candidate only for an explicitly yesterday-anchored realization such as 'Yesterday, I didn't [predicate]'."},
-    {"id":"DEC-L02-STR005-PAT-005","statement":"Keep PA strictly lexical 'ontem'; approval of PAT-B must not establish PA=PAST, generic tense morphology, a DID auxiliary, or universal sentence-initial temporal syntax."},
-    {"id":"DEC-L02-STR005-PAT-006","statement":"Restrict predicate instantiation to already governed L02 predicates; use VALI as the preferred first example and do not invent a new predicate to complete STR005."},
-    {"id":"DEC-L02-STR005-PAT-007","statement":"Do not use SAROSARI as the first STR005 example because its bare-predicate use remains HIGH risk and its OPI-006 yes/no response branch remains blocked."},
-    {"id":"DEC-L02-STR005-PAT-008","statement":"Confirm any selected STR005 pattern remains a scoped SimpleWay course frame and does not establish universal declarative word order or negative-past grammar."},
-    {"id":"DEC-L02-STR005-PAT-009","statement":"Keep VANI/VANUVALI unresolved and all WATCH/CANDIDATE/FROZEN authorities unchanged."},
-    {"id":"DEC-L02-STR005-PAT-010","statement":"If approved, apply the scoped NE extension and select PAT-B for STR005 design, but keep L02-STR-005 MISSING until a separate explicit STR005 authoring gate."},
-    {"id":"DEC-L02-STR005-PAT-011","statement":"Keep the prepared 15-slot SQS validation batch deferred; this pattern gate does not validate any existing authored slot."},
-    {"id":"DEC-L02-STR005-PAT-012","statement":"Create no new surface form, lexeme, authority promotion, generic past rule, or validation state from this pattern approval alone."}
+    {"id":"DEC-L02-STR005-PAT-001","decision":"APPROVED","statement":"Approve a strictly scoped L02 extension of NE for predicate negation inside the STR005 course frame only; retain NE authority as CANDIDATE and create no universal negation grammar."},
+    {"id":"DEC-L02-STR005-PAT-002","decision":"APPROVED","statement":"Approve AN as the scoped first-person referent component for STR005 only; retain AN authority as CANDIDATE and create no global person paradigm."},
+    {"id":"DEC-L02-STR005-PAT-003","decision":"APPROVED","pattern_ref":"L02-STR005-PAT-A","statement":"Confirm AN + NE + PREDICATE is not sufficient by itself to satisfy canonical 'I didn't...' because no governed past context is present."},
+    {"id":"DEC-L02-STR005-PAT-004","decision":"APPROVED","pattern_ref":"L02-STR005-PAT-B","risk":"VERY_HIGH","statement":"Approve PA + AN + NE + PREDICATE as the preferred exact scoped course candidate only for an explicitly yesterday-anchored realization such as 'Yesterday, I didn't [predicate]'."},
+    {"id":"DEC-L02-STR005-PAT-005","decision":"APPROVED","statement":"Keep PA strictly lexical 'ontem'; approval of PAT-B must not establish PA=PAST, generic tense morphology, a DID auxiliary, or universal sentence-initial temporal syntax."},
+    {"id":"DEC-L02-STR005-PAT-006","decision":"APPROVED","statement":"Restrict predicate instantiation to already governed L02 predicates; use VALI as the preferred first example and do not invent a new predicate to complete STR005."},
+    {"id":"DEC-L02-STR005-PAT-007","decision":"APPROVED","statement":"Do not use SAROSARI as the first STR005 example because its bare-predicate use remains HIGH risk and its OPI-006 yes/no response branch remains blocked."},
+    {"id":"DEC-L02-STR005-PAT-008","decision":"APPROVED","statement":"Confirm any selected STR005 pattern remains a scoped SimpleWay course frame and does not establish universal declarative word order or negative-past grammar."},
+    {"id":"DEC-L02-STR005-PAT-009","decision":"APPROVED","statement":"Keep VANI/VANUVALI unresolved and all WATCH/CANDIDATE/FROZEN authorities unchanged."},
+    {"id":"DEC-L02-STR005-PAT-010","decision":"APPROVED","statement":"Apply the scoped NE extension and select PAT-B for STR005 design, but keep L02-STR-005 MISSING until a separate explicit STR005 authoring gate."},
+    {"id":"DEC-L02-STR005-PAT-011","decision":"APPROVED","statement":"Keep the prepared 15-slot SQS validation batch deferred; this pattern gate does not validate any existing authored slot."},
+    {"id":"DEC-L02-STR005-PAT-012","decision":"APPROVED","statement":"Create no new surface form, lexeme, authority promotion, generic past rule, or validation state from this pattern approval alone."}
   ],
   "checks":{"pattern_candidates":2,"exact_pattern_selected_before_gate":0,"NE_scope_extension_applied_before_gate":0,"STR005_AUTHORED_before_gate":0,"STR005_VALIDATED_before_gate":0,"SQS15_VALIDATED_before_gate":0,"new_surface_forms_created":0,"authority_promotions":0},
-  "projected_effect_if_all_approved":{"NE_L02_scope_extension_applied":1,"selected_pattern":"L02-STR005-PAT-B","selected_frame":"PA + AN + NE + PREDICATE","selected_scope":"SCOPED_YESTERDAY_ANCHORED_STR005_COURSE_FRAME_ONLY","STR005_AUTHORED":0,"STR005_VALIDATED":0,"SQS15_VALIDATED":0,"new_surface_forms_created":0,"authority_promotions":0,"next_gate":"SWHNK-L02-STR005-AUTHORING-HUMAN-BATCH-V1"}
+  "approved_effect":{"NE_L02_scope_extension_applied":1,"selected_pattern":"L02-STR005-PAT-B","selected_frame":"PA + AN + NE + PREDICATE","selected_scope":"SCOPED_YESTERDAY_ANCHORED_STR005_COURSE_FRAME_ONLY","STR005_AUTHORED":0,"STR005_VALIDATED":0,"SQS15_VALIDATED":0,"new_surface_forms_created":0,"authority_promotions":0,"next_gate":"SWHNK-L02-STR005-AUTHORING-HUMAN-BATCH-V1"},
+  "next_gate":"SWHNK-L02-STR005-AUTHORING-HUMAN-BATCH-V1"
 }

@@ -1,0 +1,26 @@
+{
+  "batch_id":"SWHNK-L02-STR005-AUTHORING-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source_pattern_review":"../source-lock/l02-str005-ne-scope-exact-pattern-review.v1.json",
+  "source_pattern_approval":"./l02-str005-ne-scope-exact-pattern.approved-transition.v1.json",
+  "decision_scope":"AUTHOR_ONLY_L02_STR005_FROM_SELECTED_SCOPED_PATTERN_WITHOUT_VALIDATING_IT_OR_THE_EXISTING_SQS15",
+  "slot":"L02-STR-005",
+  "canonical_required_content":"I didn't...",
+  "selected_pattern_ref":"L02-STR005-PAT-B",
+  "selected_frame":"PA + AN + NE + PREDICATE",
+  "proposed_first_example":{"predicate":"VALI","hnk":"PA AN NE VALI","pt":"Ontem, eu não trabalhei.","en":"Yesterday, I didn't work.","pedagogical_label":"I didn't..."},
+  "risk":"VERY_HIGH",
+  "decisions_requested":[
+    {"id":"DEC-L02-STR005-AUTH-001","statement":"Authorize L02-STR-005 as the fifth canonical L02 structure using selected PAT-B only within the explicitly yesterday-anchored course scope."},
+    {"id":"DEC-L02-STR005-AUTH-002","statement":"Authorize PA AN NE VALI as the first controlled course example, with PA meaning lexical 'ontem', AN as scoped first-person referent, NE as scoped STR005 predicate negation, and VALI as an already governed L02 predicate."},
+    {"id":"DEC-L02-STR005-AUTH-003","statement":"Keep the pedagogical target label 'I didn't...' while documenting that the current governed HNK realization requires explicit lexical yesterday context and does not encode generic past by itself."},
+    {"id":"DEC-L02-STR005-AUTH-004","statement":"Do not promote PA, AN, NE, VALI, or PAT-B beyond their current authority/scope; do not create universal declarative word order, generic past morphology, or an HNK DID auxiliary."},
+    {"id":"DEC-L02-STR005-AUTH-005","statement":"Do not use SAROSARI in the first STR005 example; retain the OPI-006 yes/no response branch as blocked."},
+    {"id":"DEC-L02-STR005-AUTH-006","statement":"Keep VANI/VANUVALI unresolved and all WATCH/CANDIDATE/FROZEN authority labels unchanged."},
+    {"id":"DEC-L02-STR005-AUTH-007","statement":"Authoring STR005 must not validate STR005 or any of the existing 15 SQS slots."},
+    {"id":"DEC-L02-STR005-AUTH-008","statement":"If approved, supersede the deferred 15-slot validation batch with preparation of one consolidated 16-slot SQS validation gate; do not validate those slots automatically."}
+  ],
+  "checks":{"STR005_AUTHORED_before_gate":0,"STR005_VALIDATED_before_gate":0,"SQS15_VALIDATED_before_gate":0,"new_surface_forms_created":0,"authority_promotions":0,"generic_past_rules":0,"DID_auxiliaries":0},
+  "projected_effect_if_all_approved":{"STR005_AUTHORED":1,"STR005_VALIDATED":0,"L02_SQS_AUTHORED":16,"L02_SQS_VALIDATED":0,"L02_curriculum_slots_implemented":26,"L02_remaining_missing":113,"GLOBAL_MISSING":827,"GLOBAL_AUTHORED":16,"GLOBAL_VALIDATED":165,"new_surface_forms_created":0,"authority_promotions":0,"next_phase":"PREPARE_CONSOLIDATED_L02_SQS16_VALIDATION_GATE"}
+}

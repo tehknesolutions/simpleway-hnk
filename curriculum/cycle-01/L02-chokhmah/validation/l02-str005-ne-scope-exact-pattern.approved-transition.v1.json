@@ -1,0 +1,12 @@
+{
+  "transition_id":"SWHNK-L02-STR005-NE-SCOPE-EXACT-PATTERN-APPROVED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "source_review":"../source-lock/l02-str005-ne-scope-exact-pattern-review.v1.json",
+  "source_batch":"./l02-str005-ne-scope-exact-pattern-human-batch.v1.json",
+  "before":{"NE_L02_scope_extension_applied":0,"exact_pattern_selected":null,"STR005_AUTHORED":0,"STR005_VALIDATED":0,"SQS15_VALIDATED":0},
+  "after":{"NE_L02_scope_extension_applied":1,"exact_pattern_selected":"L02-STR005-PAT-B","selected_frame":"PA + AN + NE + PREDICATE","selected_scope":"SCOPED_YESTERDAY_ANCHORED_STR005_COURSE_FRAME_ONLY","STR005_AUTHORED":0,"STR005_VALIDATED":0,"SQS15_VALIDATED":0},
+  "scope_application":{"NE":{"authority":"CANDIDATE","scope":"L02_STR005_SCOPED_PREDICATE_NEGATION_ONLY","authority_promoted":false},"AN":{"authority":"CANDIDATE","scope":"L02_STR005_SCOPED_FIRST_PERSON_REFERENT_ONLY","authority_promoted":false},"PA":{"authority":"WATCH","meaning":"ontem","generic_past_marker":false}},
+  "non_effects":{"new_surface_forms_created":0,"new_lexemes_created":0,"authority_promotions":0,"generic_past_rule_created":false,"DID_auxiliary_created":false,"universal_declarative_order_created":false,"SQS15_validation_applied":false},
+  "next_gate":"SWHNK-L02-STR005-AUTHORING-HUMAN-BATCH-V1"
+}
