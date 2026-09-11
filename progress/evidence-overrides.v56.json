@@ -1,0 +1,30 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V56",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L02","category":"story","range":[1,5]},"implementation_state":"AUTHORED","evidence_state":"GOVERNED_PEDAGOGICAL_AUTHORING","scaffolded":true,"reason":"Five L02 stories authored only from already validated OPI utterances/sequences; no new HNK sentence or discourse grammar created."},
+    {"selector":{"lesson":"L02","category":"qa","range":[1,4]},"implementation_state":"AUTHORED","evidence_state":"GOVERNED_PEDAGOGICAL_AUTHORING","scaffolded":true,"reason":"Four L02 Q&A slots authored from validated questions plus approved semantic answer schemas; no full declarative HNK answers or yes/no particles created."},
+    {"selector":{"lesson":"L02","category":"structure_headers","range":[1,2]},"implementation_state":"AUTHORED","evidence_state":"GOVERNED_PEDAGOGICAL_AUTHORING","scaffolded":true,"reason":"Two L02 pedagogical structure headers authored; headers do not assert HNK grammar."},
+    {"selector":{"lesson":"L02","category":"structures","range":[1,4]},"implementation_state":"AUTHORED","evidence_state":"GOVERNED_PEDAGOGICAL_AUTHORING","scaffolded":true,"reason":"Four scoped L02 course frames authored from validated examples. STR-005 remains MISSING because the canonical contract requires 'I didn't...' and no governed negative-past HNK frame exists yet."}
+  ],
+  "validation_evidence_updates":{
+    "L02_SQS_authoring_gate":"../curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-authoring-human-batch.v2.json",
+    "L02_SQS_authoring_transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-authoring.partial-transition.v1.json",
+    "L02_story_authored":5,
+    "L02_qa_authored":4,
+    "L02_structure_headers_authored":2,
+    "L02_structures_authored":4,
+    "L02_STR005_missing":1,
+    "L02_SQS_authored_total":15,
+    "L02_SQS_validated_total":0,
+    "L02_authored_total":15,
+    "L02_validated_total":10,
+    "L02_missing_total":114,
+    "GLOBAL_authored_total":15,
+    "GLOBAL_validated_total":165,
+    "GLOBAL_missing_total":828,
+    "NEXT_SQS_VALIDATION_GATE":"../curriculum/cycle-01/L02-chokhmah/validation/l02-sqs-15-validation-human-batch.v1.json",
+    "NEXT_STR005_DESIGN_GATE":"../curriculum/cycle-01/L02-chokhmah/validation/l02-str005-i-didnt-design-human-batch.v1.json"
+  }
+}
