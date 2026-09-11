@@ -1,0 +1,19 @@
+{
+  "batch_id":"SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-11",
+  "source":"../source-lock/l02-unresolved-vocabulary-review.v1.json",
+  "decisions_requested":[
+    {"id":"DEC-L02-UNRES-001","statement":"Preserve VANUVALI (LEX-030) as GATE with master meaning null and remove it from the teachable L02 Vocabulary set until semantic evidence is recovered or separately governed.","if_approved":{"VANUVALI_master_meaning":null,"teachable":false,"authority_promotion":false}},
+    {"id":"DEC-L02-UNRES-002","statement":"Preserve VANI (LEX-031) as WATCH with master meaning null and remove it from the teachable L02 Vocabulary set; do not generalize the scoped L01 residence reading.","if_approved":{"VANI_master_meaning":null,"teachable":false,"L01_residence_reading_generalized":false,"authority_promotion":false}},
+    {"id":"DEC-L02-UNRES-003","statement":"Approve recovered FROZEN VALIVAN (LEX-003, escritório) as an L02 curriculum rebind for the WORK_PLACE role, extending curriculum use to L02 without changing its recovered meaning or authority.","if_approved":{"rebind":"LEX-003","form":"VALIVAN","role":"WORK_PLACE","authority":"FROZEN","authority_promotion":false}},
+    {"id":"DEC-L02-UNRES-004","statement":"Approve recovered FROZEN PARAZAMO (LEX-004, escola / domínio de estudo) as an L02 curriculum rebind for the EDUCATION_PLACE role, extending curriculum use to L02 without changing its recovered meaning or authority.","if_approved":{"rebind":"LEX-004","form":"PARAZAMO","role":"EDUCATION_PLACE","authority":"FROZEN","authority_promotion":false}},
+    {"id":"DEC-L02-UNRES-005","statement":"Confirm that VALIVAN/PARAZAMO are preferred over SARU/TA for this gate because they are FROZEN recovered assets that directly fit the current urban/study/work semantic center and require less new microgrammar.","if_approved":{"recommended_pair":["VALIVAN","PARAZAMO"],"SARU_TA_applied":false}},
+    {"id":"DEC-L02-UNRES-006","statement":"Confirm that a 16/16 semantically teachable source set does not itself validate any L02 curriculum slot; OPI, Story, Q&A, Structures, Vocabulary cards, Activation and Review remain unimplemented until the pedagogy-source contract is separately approved.","if_approved":{"curriculum_slots_implemented":0,"pedagogy_authoring_hold":true}},
+    {"id":"DEC-L02-UNRES-007","statement":"Confirm that no new HNK form, historical claim, numerological selection or authority promotion is created by this policy decision.","if_approved":{"new_surface_forms_created":0,"new_language_assets_created":0,"historical_claim_changes":0,"authority_promotions":0,"numerology_selects_forms":false}}
+  ],
+  "checks":{"current_governed_assets":16,"current_semantic_teachable_assets":14,"current_unresolved_assets":2,"recommended_rebinds":2,"recommended_forms":["VALIVAN","PARAZAMO"],"new_surface_forms_created":0,"authority_promotions":0,"pedagogy_created":false},
+  "projected_effect_if_all_approved":{"semantic_teachable_assets":16,"vocabulary_target":16,"remaining_teachable_gap":0,"unresolved_source_forms_preserved":2,"rebinds_applied":2,"new_surface_forms_created":0,"new_language_assets_created":0,"authority_promotions":0,"curriculum_slots_implemented":0,"pedagogy_authoring_hold":true,"next_gate":"PREPARE_L02_PEDAGOGY_SOURCE_CONTRACT"},
+  "next_gate_if_approved":"PREPARE_L02_PEDAGOGY_SOURCE_CONTRACT",
+  "next_gate_if_not_approved":"REVISE_L02_UNRESOLVED_VOCABULARY_POLICY"
+}
