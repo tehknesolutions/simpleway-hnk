@@ -1,6 +1,6 @@
 {
   "name":"simpleway-hnk",
-  "version":"0.52.0",
+  "version":"0.53.0",
   "private":true,
   "type":"module",
   "scripts":{
@@ -32,9 +32,10 @@
     "validate:l02-pedagogy-source":"node tests/validate-l02-pedagogy-source-contract.mjs",
     "validate:l02-opi-patterns":"node tests/validate-l02-opi-pattern-review.mjs",
     "validate:l02-opi-authoring":"node tests/validate-l02-opi-authoring.mjs",
+    "validate:l02-opi-validation":"node tests/validate-l02-opi-validation.mjs",
     "progress":"node scripts/build-cycle1-progress.mjs",
     "progress:write":"node scripts/build-cycle1-progress.mjs --write",
-    "test":"npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers && npm run validate:numeral-candidates && npm run validate:cardinals && npm run validate:activation && npm run validate:structures && npm run validate:teacher-notes && npm run validate:qa && npm run validate:stories && npm run validate:vocabulary && npm run validate:vocabulary-gap-semantics && npm run validate:vocabulary-gap-mapping && npm run validate:vocabulary-gap-application && npm run validate:reviews && npm run validate:kether-closure && npm run validate:l02-source-lock && npm run validate:l02-semantic-targets && npm run validate:l02-rebind-review && npm run validate:l02-unresolved-vocabulary && npm run validate:l02-pedagogy-source && npm run validate:l02-opi-patterns && npm run validate:l02-opi-authoring"
+    "test":"npm run validate:cycle1 && npm run validate:l01-authoring && npm run validate:language-proposals && npm run validate:progress && npm run validate:l01-opi001 && npm run validate:interrogatives && npm run validate:opi-matrix && npm run validate:numbers && npm run validate:numeral-candidates && npm run validate:cardinals && npm run validate:activation && npm run validate:structures && npm run validate:teacher-notes && npm run validate:qa && npm run validate:stories && npm run validate:vocabulary && npm run validate:vocabulary-gap-semantics && npm run validate:vocabulary-gap-mapping && npm run validate:vocabulary-gap-application && npm run validate:reviews && npm run validate:kether-closure && npm run validate:l02-source-lock && npm run validate:l02-semantic-targets && npm run validate:l02-rebind-review && npm run validate:l02-unresolved-vocabulary && npm run validate:l02-pedagogy-source && npm run validate:l02-opi-patterns && npm run validate:l02-opi-authoring && npm run validate:l02-opi-validation"
   },
   "engines":{"node":">=20"}
 }

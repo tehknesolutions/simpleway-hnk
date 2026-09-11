@@ -1,0 +1,22 @@
+{
+  "evidence_id":"SWHNK-C1-EVIDENCE-SUPPLEMENT-V50",
+  "status":"ACTIVE_SUPPLEMENT",
+  "source_date":"2026-09-11",
+  "overrides":[
+    {"selector":{"lesson":"L02","category":"opi","range":[1,10]},"implementation_state":"VALIDATED","evidence_state":"STRUCTURE_RECOVERED","scaffolded":true,"reason":"L02 OPI-001..010 explicitly validated for scoped Chokhmah course use. WATCH/CANDIDATE/FROZEN language-authority labels remain unchanged; PA remains lexical 'ontem' only; no universal syntax, tense, transitivity, interrogative or discourse grammar is established."}
+  ],
+  "validation_evidence_updates":{
+    "L02_OPI_target":10,
+    "L02_OPI_authored":0,
+    "L02_OPI_validated":10,
+    "L02_OPI_missing":0,
+    "L02_OPI_validated_slots":[1,2,3,4,5,6,7,8,9,10],
+    "L02_OPI_validation_artifact":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-001-010.validated.v1.json",
+    "L02_OPI_validation_batch":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-validation-batch.v1.json",
+    "L02_OPI_validation_transition":"../curriculum/cycle-01/L02-chokhmah/validation/l02-opi-validation.applied-transition.v1.json",
+    "L02_validated_total":10,
+    "L02_missing_total":129,
+    "GLOBAL_validated_total":165,
+    "NEXT_PHASE_STATUS":"NOT_OPENED"
+  }
+}

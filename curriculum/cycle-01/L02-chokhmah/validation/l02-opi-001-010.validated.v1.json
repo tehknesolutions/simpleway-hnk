@@ -1,0 +1,26 @@
+{
+  "artifact_id":"SWHNK-L02-OPI-001-010-VALIDATED-V1",
+  "status":"VALIDATED_SCOPED_COURSE_USE",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_authored_artifact":"../authoring/l02-opi-001-010.authored.v1.json",
+  "source_validation_gate":"./l02-opi-validation-batch.v1.json",
+  "scope":"SIMPLEWAY_HNK_L02_CHOKHMAH_COURSE_USE_ONLY",
+  "slots":[
+    {"slot_id":"L02-OPI-001","hnk":"EN PARI TAYOVAN KE","intended_pt":"Você vê a cidade?","implementation_state":"VALIDATED","risk":"MEDIUM"},
+    {"slot_id":"L02-OPI-002","hnk":"EN VALI KUVAN KE","intended_pt":"Onde você trabalha?","implementation_state":"VALIDATED","risk":"LOW_WITHIN_COURSE_SCOPE"},
+    {"slot_id":"L02-OPI-003","hnk":"EN PARAZAMI KUVAN KE","intended_pt":"Onde você estuda?","implementation_state":"VALIDATED","risk":"MEDIUM"},
+    {"slot_id":"L02-OPI-004","hnk":"EN KU PARAZAMI KE","intended_pt":"O que você estuda? / Qual é o conteúdo do seu estudo?","implementation_state":"VALIDATED","risk":"MEDIUM_HIGH"},
+    {"slot_id":"L02-OPI-005","hnk":"EN KU VALI KE","intended_pt":"Que trabalho/atividade de trabalho você faz?","implementation_state":"VALIDATED","risk":"MEDIUM_HIGH"},
+    {"slot_id":"L02-OPI-006","hnk":"EN SAROSARI KE","intended_pt":"Você viaja?","implementation_state":"VALIDATED","risk":"HIGH","boundary":"Scoped beginner yes/no course pattern only; bare-predicate productivity is not canonized."},
+    {"slot_id":"L02-OPI-007","hnk":"EN PARI KALOVALA KE","intended_pt":"Você vê o prédio?","implementation_state":"VALIDATED","risk":"MEDIUM"},
+    {"slot_id":"L02-OPI-008","hnk":"PA EN PARI KALOVALA KE","intended_pt":"Ontem, você viu o prédio?","implementation_state":"VALIDATED","risk":"VERY_HIGH","boundary":"PA remains lexical 'ontem' only; no past tense, temporal syntax or sentence-initial grammar is canonized."},
+    {"slot_id":"L02-OPI-009","hnk":"EN PARI PITSA KE","intended_pt":"Você vê a pizza?","implementation_state":"VALIDATED","risk":"MEDIUM","boundary":"PITSA remains a controlled loanword example; no borrowing grammar is canonized."},
+    {"slot_id":"L02-OPI-010","hnk_sequence":["EN VALI KUVAN KE","EN PARAZAMI KUVAN KE","EN PARI TAYOVAN KE"],"intended_pt":"Mini-entrevista integrada sobre trabalho, estudo e contexto urbano/perceptivo.","implementation_state":"VALIDATED","risk":"MEDIUM","boundary":"Course sequence only; no discourse grammar is canonized."}
+  ],
+  "checks":{"target":10,"validated":10,"authored_remaining":0,"new_surface_forms_created":0,"authority_promotions":0,"unresolved_source_forms_used":0,"gid_expansions_complete":10},
+  "authority_boundaries":{"WATCH_unchanged":true,"CANDIDATE_unchanged":true,"FROZEN_unchanged":true,"VANI_master_meaning":null,"VANUVALI_master_meaning":null,"universal_grammar_claims":0},
+  "next_gate":"SWHNK-L02-STORY-QA-STRUCTURE-CONTRACT-HUMAN-BATCH-V1",
+  "next_gate_status":"NOT_OPENED"
+}
