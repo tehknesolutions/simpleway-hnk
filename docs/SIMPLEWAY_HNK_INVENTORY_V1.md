@@ -1,7 +1,7 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 VALIDATED · CURRICULUM COMPLETE · L02 CHOKHMAH SOURCE LOCK NEXT  
+**Estado:** L01 KETHER 155/155 VALIDATED · SEALED · L02 CHOKHMAH SOURCE LOCK AUDITED / PEDAGOGY HOLD  
 **Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V41`  
 **Pacote atual:** `simpleway-hnk@0.43.0`
 
@@ -19,7 +19,7 @@ Cumulativo authored-or-better e validated-or-better: **155/1.008 = 15.3770%**.
 
 Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
 
-## L01 Kether — concluída
+## L01 Kether — concluída e selada
 
 - Teacher Notes: **3/3 VALIDATED**
 - OPI: **10/10 VALIDATED**
@@ -54,6 +54,8 @@ Registry autorado `@hnk/linguas/authored`: **20 CANDIDATE forms**.
 
 Ativos governados distintos: **51**. Proxy de ativos governados: **51/144 = 35.4167%**. Proxy recuperado: **31/144 = 21.5278%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
 
+O contrato `@hnk/linguas/src/cycle1.mjs` foi reconciliado para o estado V37+: 20 candidatos autorados, 51 ativos governados, gap proxy governado 93 e ratio 0.3542. O teste de cobertura também passou a fixar explicitamente o estado L02: 11 lexemas, 0 candidatos e 0 frases recuperadas.
+
 Fronteiras preservadas:
 
 - YA e ES: semântica standalone ainda não recuperada;
@@ -76,24 +78,37 @@ Ele não é um dos três selos finais do Ciclo 1 e não consome seus slots. Perm
 - `Logos`
 - `Dialogos`
 
-O registro separado `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` também fixa essa fronteira.
+O registro separado `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` fixa L01 em **155/155 VALIDATED** e preserva a mesma fronteira.
 
-## L02 Chokhmah — próxima entrada
+## L02 Chokhmah — Source Lock auditado
 
-A entrada de L02 é `SOURCE_LOCK_FIRST`.
+O gate `L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1` foi executado e materializado em `curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json`.
 
-Estado atual conhecido pelo manifest:
+Estado auditado:
 
-- `status`: `LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD`
 - `language_bindings`: **11**
 - `recovered_phrases`: **0**
+- autoridades: **5 FROZEN + 5 WATCH + 1 GATE**
+- formas com significado mestre recuperado: **9**
+- formas sem significado mestre recuperado: **2** (`VANUVALI`, `VANI`)
+- `authored_candidates` ligados a L02: **0**
+- Vocabulary derivado da L02: **16 slots**
+- proxy recuperado: **11/16 = 68,75%**
+- gap proxy: **5**
 - `student_cards`: **0**
 - `teacher_drills`: **0**
-- conteúdo pedagógico congelado: **false**
 
-Próximo gate: **`L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1`**.
+Lexemas recuperados ligados a L02:
 
-A regra é auditar primeiro os 11 bindings recuperados e a proveniência das fontes antes de qualquer autoria de OPI, Vocabulary, Activation ou Review para Chokhmah.
+`TAYOVAN`, `KALOVALA`, `PAROVAN`, `PARAZAMI`, `VALI`, `SAROSARI`, `PARI`, `PA`, `VANUVALI`, `VANI`, `PITSA`.
+
+A pedagogia permanece em **HOLD**. O gap de cinco ativos não autoriza criação automática de cinco palavras: primeiro devem ser definidos semanticamente e governados, recuperados de fontes adicionais ou satisfeitos por rebind explicitamente aprovado.
+
+Também fica proibido importar silenciosamente para L02 a leitura `VANI = morar/residir` usada de forma escopada na L01; o Master Lexicon continua com `meaning=null`.
+
+Hebraico Bíblico, Grego Koiné e Esperanto permanecem **camadas de referência e comparação para a engenharia do HNK**, não compromissos de cursos independentes da SimpleWay Academy.
+
+Próximo gate: **`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS`**.
 
 ## Repositórios e ownership
 
@@ -104,4 +119,6 @@ A regra é auditar primeiro os 11 bindings recuperados e a proveniência das fon
 
 ## CI
 
-O GitHub Actions remoto ainda não pode ser chamado de verde. Runs recentes têm falhado antes de expor steps normais do job; portanto não há evidência remota suficiente para dizer que `npm test` executou com sucesso ou que uma asserção específica falhou.
+O GitHub Actions remoto ainda não pode ser chamado de verde. Runs recentes continuam concluindo `failure` antes de expor execução normal dos steps do job; portanto o estado remoto não prova execução bem-sucedida de `npm test` nem identifica uma asserção específica como causa.
+
+O workflow já contém gates nomeados para Vocabulary, Reviews, fechamento de Kether e Source Lock de Chokhmah, de modo que assim que a infraestrutura do runner voltar a executar steps teremos diagnóstico granular imediato.
