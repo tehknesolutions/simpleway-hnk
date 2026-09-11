@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SOURCE TEACHABILITY 16/16 / PEDAGOGY SOURCE CONTRACT PENDING  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V46`  
-**Pacote atual:** `simpleway-hnk@0.49.0`
+**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH PEDAGOGY SOURCE APPROVED / OPI PATTERN REVIEW PENDING  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V47`  
+**Pacote atual:** `simpleway-hnk@0.50.0`
 
 ## Ciclo 1
 
@@ -29,76 +29,64 @@ Fronteiras permanecem: YA/ES semântica standalone não recuperada; VANI `WATCH`
 
 ## L02 Chokhmah — Source Lock + teachability completa
 
-Estado de fonte:
+Estado de fonte/governança:
 
 - target pedagógico: **139**
 - Vocabulary target: **16**
 - lexemas recuperados originalmente ligados a L02: **11**
-- frases recuperadas: **0**
-- semantic teachable assets: **16/16**
+- recovered curriculum rebinds: **2** — `VALIVAN`, `PARAZAMO`
+- scoped authored candidates: **5** — `AN`, `EN`, `KUVAN`, `KU`, `KE`
 - governed source references no escopo L02: **18**
-- unresolved source observations preservados: **2** — `VANUVALI`, `VANI`
-- student cards: **0**
-- teacher drills: **0**
+- semantic teachable assets: **16/16**
+- unresolved source observations: **2** — `VANUVALI`, `VANI`
+- frases recuperadas: **0**
 - curriculum slots implementados: **0**
 - pedagogy authoring hold: **true**
 
-Os cinco alvos semânticos e respectivos rebinds de candidatos já estão aplicados:
+`VANUVALI` permanece `GATE + meaning=null`; `VANI` permanece `WATCH + meaning=null`. A leitura escopada `VANI = morar/residir` usada em L01 não foi generalizada para L02.
 
-- `AUTH-016 AN` → primeira pessoa
-- `AUTH-017 EN` → segunda pessoa
-- `AUTH-001 KUVAN` → variável locativa interrogativa
-- `AUTH-018 KU` → seletor de conteúdo
-- `AUTH-019 KE` → operador de pergunta
+## Pedagogy Source Contract — APPROVED
 
-Todos continuam `CANDIDATE`; a operação foi apenas extensão de escopo para L02.
+O gate `SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1` aprovou:
 
-## Unresolved Vocabulary — APPROVED + APPLIED
+- o conjunto de **16 assets ensináveis**;
+- **10 intents comunicativos OPI**;
+- reutilização escopada de `AN`, `EN`, `KUVAN`, `KU` e `KE` sem expandir gramática universal;
+- `PA` apenas como âncora lexical recuperada de “ontem”;
+- `PITSA` apenas como exemplo concreto controlado;
+- preservação explícita dos metadados `WATCH` e `CANDIDATE`.
 
-O gate `SWHNK-L02-UNRESOLVED-VOCABULARY-HUMAN-BATCH-V1` foi aprovado e aplicado com duas decisões centrais:
-
-1. preservar `VANUVALI` (`GATE`, `meaning=null`) e `VANI` (`WATCH`, `meaning=null`) como evidência de fonte não ensinável;
-2. rebindar dois ativos recuperados `FROZEN` para o escopo curricular de L02:
-   - `LEX-003 VALIVAN` — **escritório** — `WORK_PLACE`
-   - `LEX-004 PARAZAMO` — **escola / domínio de estudo** — `EDUCATION_PLACE`
-
-Efeito:
-
-- governed source references no escopo L02: **18**
-- semantic teachable assets: **16/16**
-- remaining teachable gap: **0**
-- new surface forms: **0**
-- new unique language assets: **0**
-- authority promotions: **0**
-- curriculum slots implemented: **0**
-
-Os dois rebinds aumentam a cobertura no escopo da lição, mas não o total global de ativos distintos, que permanece em **51**.
-
-## Pedagogy Source Contract — preparado, NÃO aprovado
-
-`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-V1` lista exatamente os **16 ativos ensináveis** e propõe **10 intents comunicativos OPI** para Chokhmah.
-
-O contrato mantém uma trava explícita:
+Efeitos aplicados:
 
 - HNK sentences authored: **0**
 - sentence patterns approved: **0**
-- sentence pattern policy: **NOT_AUTHORIZED_YET**
 - curriculum slots implemented: **0**
+- new surface forms: **0**
+- authority promotions: **0**
 
-Ele não cria ordem de palavras, cópula, preposição, concordância, sistema de tempo nem gramática interrogativa produtiva. `PA` permanece apenas âncora lexical recuperada de passado (“ontem”), e `PITSA` permanece exemplo concreto controlado.
+Portanto, aprovação de intent **não cria gramática de sentença**.
+
+## OPI Pattern Review — preparado, NÃO aprovado
+
+`SWHNK-L02-OPI-PATTERN-REVIEW-V1` contém 10 padrões candidatos evidence-first. Eles são apenas `COURSE_PATTERN_CANDIDATE_ONLY`, não gramática histórica ou universal.
+
+Distribuição de evidência:
+
+- 1 reutilização direta de frame já VALIDATED;
+- 4 analogias fortes;
+- 2 analogias ordinárias;
+- 2 hipóteses escopadas novas;
+- 1 composição integrada.
+
+Entre os exemplos estão `EN VALI KUVAN KE` como reutilização direta e `PA EN PARI KALOVALA KE` como hipótese de risco `VERY_HIGH`. Nenhum dos 10 padrões está aprovado atualmente.
+
+A política de glifos também permanece travada: G-ID expansion só pode ocorrer **depois** da aprovação humana do pattern gate e **antes** de qualquer OPI L02 virar AUTHORED. Candidate D visual continua sem autoridade canônica.
 
 ## Próximo gate
 
-**`SWHNK-L02-PEDAGOGY-SOURCE-CONTRACT-HUMAN-BATCH-V1`** — `AWAITING_EXPLICIT_HUMAN_APPROVAL`.
+**`SWHNK-L02-OPI-PATTERN-REVIEW-HUMAN-BATCH-V1`** — `AWAITING_EXPLICIT_HUMAN_APPROVAL`.
 
-A aprovação futura autoriza apenas:
-
-- o conjunto fonte ensinável de 16 ativos;
-- os 10 intents comunicativos;
-- preservação explícita das autoridades WATCH/CANDIDATE;
-- preparação posterior de um gate separado de padrões de frase OPI.
-
-Não autoriza automaticamente OPI, Story, Q&A, Structure, Vocabulary cards, Activation ou Review.
+Esse gate futuro decidirá sobre os 10 padrões escopados. Mesmo se aprovado, ele não cria automaticamente gramática universal nem marca OPI como VALIDATED; primeiro será necessária expansão estrutural por G-IDs e um batch de authoring curricular separado.
 
 ## Repositórios e ownership
 
@@ -109,4 +97,4 @@ Não autoriza automaticamente OPI, Story, Q&A, Structure, Vocabulary cards, Acti
 
 ## CI
 
-O pipeline inclui validadores específicos para Source Lock, semantic targets, candidate rebinds, unresolved vocabulary e Pedagogy Source Contract. O estado remoto só será chamado de verde após uma execução real bem-sucedida do runner; falhas sem steps expostos continuam classificadas como problema operacional do Actions, não como prova de regressão de conteúdo.
+O pipeline inclui validadores específicos para Source Lock, semantic targets, rebinds, unresolved vocabulary, Pedagogy Source Contract e OPI Pattern Review. O remoto só será chamado de verde após execução real bem-sucedida do runner; falhas sem steps expostos continuam classificadas como problema operacional do Actions, não como prova de regressão de conteúdo.
