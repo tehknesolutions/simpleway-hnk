@@ -1,0 +1,12 @@
+{
+  "transition_id":"SWHNK-L02-OPI-PATTERN-REVIEW-APPROVED-V1",
+  "status":"APPLIED",
+  "date":"2026-09-11",
+  "lesson":"L02",
+  "sphere":"Chokhmah",
+  "source_batch":"./l02-opi-pattern-review-human-batch.v1.json",
+  "after":{"patterns_approved_for_scoped_L02_authoring":10,"GID_expansions_required":10,"GID_expansions_completed":0,"curriculum_OPI_authored":0,"curriculum_OPI_validated":0},
+  "risk_boundary":{"highest_risk_pattern":"PA EN PARI KALOVALA KE","highest_risk":"VERY_HIGH","risk_metadata_preserved":true},
+  "boundaries":{"new_surface_forms_created":0,"authority_promotions":0,"universal_word_order_claims":0,"tense_grammar_claims":0,"transitivity_grammar_claims":0,"interrogative_grammar_claims":0,"discourse_grammar_claims":0,"VANI_meaning":null,"VANUVALI_meaning":null},
+  "next_gate":"EXPAND_L02_OPI_PATTERNS_TO_GIDS_AND_PREPARE_OPI_AUTHORING_BATCH"
+}
