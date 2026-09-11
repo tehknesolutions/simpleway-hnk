@@ -1,0 +1,17 @@
+{
+  "transition_id":"SWHNK-L01-REVIEW-22-VALIDATED-TRANSITION-V1",
+  "status":"APPLIED",
+  "date_applied":"2026-09-11",
+  "source_batch":"./review-22-human-batch.v1.json",
+  "scope":{"validated_slots":[1,22],"remaining_missing_slots":[]},
+  "lesson_before":{"AUTHORED":22,"VALIDATED":133,"MISSING":0,"FROZEN":0},
+  "lesson_after":{"AUTHORED":0,"VALIDATED":155,"MISSING":0,"FROZEN":0},
+  "review_before":{"AUTHORED":22,"VALIDATED":0,"MISSING":0,"FROZEN":0},
+  "review_after":{"AUTHORED":0,"VALIDATED":22,"MISSING":0,"FROZEN":0},
+  "global_before":{"AUTHORED":22,"VALIDATED":133,"MISSING":853,"FROZEN":0},
+  "global_after":{"AUTHORED":0,"VALIDATED":155,"MISSING":853,"FROZEN":0},
+  "authority_effect":{"new_HNK_surface_forms_created":0,"language_authority_promotions":0,"historical_review_payload_claims":0,"universal_grammar_rules_created":0,"visual_canon_promotions":0},
+  "preserved_boundaries":{"YA_ES":"UNRESOLVED_UNCHANGED","VANI":{"canonical_ref":"LEX-031","authority":"WATCH","master_meaning":null},"VAME":{"canonical_ref":"LEX-025","authority":"GATE"},"SARASALA":"WATCH_UNCHANGED","VAMAVALA":"WATCH_UNCHANGED","VAMAZAMU":"WATCH_UNCHANGED","ON":"GATE_UNCHANGED","KUVAN_KUON_VALA_NE":"CANDIDATE_UNCHANGED","VAMUSARO_literal_weekend":false,"KU_single_WH_gloss":false},
+  "closure":{"lesson":"L01","sphere":"Kether","target":155,"validated":155,"completion_percent":100.0,"status":"VALIDATED_COMPLETE","seal_authorized":true},
+  "boundary":"This transition validates the 22 new v1.1 Review activities for scoped SimpleWay HNK L01 course use only. It does not alter recovered provenance, language authority, visual canon, unresolved token semantics or establish universal HNK grammar."
+}
