@@ -1,9 +1,9 @@
 # SimpleWay HNK — Inventário Verificado V1
 
 **Data:** 2026-09-11  
-**Estado:** L01 KETHER 155/155 VALIDATED · SEALED · L02 CHOKHMAH SOURCE LOCK AUDITED / PEDAGOGY HOLD  
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V41`  
-**Pacote atual:** `simpleway-hnk@0.43.0`
+**Estado:** L01 KETHER 155/155 VALIDATED · L02 CHOKHMAH SOURCE LOCK AUDITED / PEDAGOGY HOLD  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V42`  
+**Pacote atual:** `simpleway-hnk@0.44.0`
 
 ## Ciclo 1
 
@@ -11,7 +11,7 @@
 
 Contrato pedagógico: **1.008 slots** — 21 orientações docentes, 70 OPI, 35 cenas, 28 Q&A, 14 cabeçalhos estruturais, 35 estruturas, 144 vocabulários, 504 Activation, 154 revisões e 3 selos finais.
 
-Estados exclusivos atuais do Ciclo 1:
+Estados exclusivos atuais:
 
 **853 MISSING + 0 AUTHORED + 155 VALIDATED + 0 FROZEN = 1.008**.
 
@@ -19,7 +19,7 @@ Cumulativo authored-or-better e validated-or-better: **155/1.008 = 15.3770%**.
 
 Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementação atual.
 
-## L01 Kether — concluída e selada
+## L01 Kether — concluída
 
 - Teacher Notes: **3/3 VALIDATED**
 - OPI: **10/10 VALIDATED**
@@ -31,20 +31,9 @@ Historical evidence: **82/1.008 = 8.1349%**, em eixo independente da implementa�
 - Activation: **72/72 VALIDATED**
 - Review: **22/22 VALIDATED**
 
-Resultado: **155/155 VALIDATED = 100%**.
+Resultado: **155/155 VALIDATED = 100%**. Não há slots `MISSING` nem `AUTHORED` pendentes em L01.
 
-Não há slots `MISSING` nem `AUTHORED` pendentes em L01.
-
-## Review — 22/22 VALIDATED
-
-A lane reconciliada usa apenas material já validado da L01:
-
-- `REV-001..020`: dois Review para cada OPI 001..010 — `QUESTION_RECALL` + `RESPONSE_RECALL`;
-- `REV-021..022`: dois `INTEGRATIVE_INTERVIEW`, compostos somente de perguntas e contratos de resposta previamente validados.
-
-A validação dos Review não criou palavras, ativos linguísticos, gramática universal, claims históricos nem promoções de autoridade.
-
-O mismatch da primeira versão continua corrigido: `EN ZAMI HENUVOKODAN KE` não é tratado como OPI 003. O OPI 003 permanece `EN KU SARASALA KE`, no contexto de idade.
+A lane Review reconciliada contém 20 atividades ligadas diretamente aos OPI 001–010 e 2 entrevistas integrativas, todas compostas apenas de material já validado. O antigo mismatch que ligava `EN ZAMI HENUVOKODAN KE` ao OPI 003 foi removido; OPI 003 permanece o cartão de idade `EN KU SARASALA KE`.
 
 ## Corpus linguístico governado
 
@@ -52,63 +41,70 @@ Master Lexicon recuperado: **33 formas totais**, **31 ligadas ao Ciclo 1**, 2 n�
 
 Registry autorado `@hnk/linguas/authored`: **20 CANDIDATE forms**.
 
-Ativos governados distintos: **51**. Proxy de ativos governados: **51/144 = 35.4167%**. Proxy recuperado: **31/144 = 21.5278%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
-
-O contrato `@hnk/linguas/src/cycle1.mjs` foi reconciliado para o estado V37+: 20 candidatos autorados, 51 ativos governados, gap proxy governado 93 e ratio 0.3542. O teste de cobertura também passou a fixar explicitamente o estado L02: 11 lexemas, 0 candidatos e 0 frases recuperadas.
+Ativos governados distintos: **51**. Proxy governado: **51/144 = 35.4167%**. Proxy recuperado: **31/144 = 21.5278%**. Esses proxies não equivalem à conclusão dos 144 slots curriculares de Vocabulary.
 
 Fronteiras preservadas:
 
-- YA e ES: semântica standalone ainda não recuperada;
+- YA e ES: semântica standalone não recuperada;
 - VANI: `WATCH`, Master Lexicon `meaning=null`;
 - VAME: `GATE`;
 - SARASALA, VAMAVALA, VAMAZAMU: `WATCH`;
 - ON: `GATE`;
 - KUVAN, KUON, VALA, NE e `AUTH-015..020`: `CANDIDATE`;
-- VAMUSARO: “descanso / período de lazer”, nunca tradução literal automática de “weekend”;
-- nenhum `DO`, `WITH` ou WH universal foi criado;
-- Candidate D visual permanece `PREPRODUCTION_NOT_OFFICIAL`.
+- VAMUSARO: “descanso / período de lazer”, não tradução literal automática de “weekend”;
+- nenhum `DO`, `WITH` ou WH universal criado;
+- Candidate D visual: `PREPRODUCTION_NOT_OFFICIAL`.
 
-## Kether Seal — classificação correta
+## Kether Seal — fronteira canônica
 
-`SWHNK-L01-KETHER-SEAL-V1` é um **marcador operacional de conclusão curricular da Lesson 1**.
+`SWHNK-L01-KETHER-SEAL-V1` é `LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER`.
 
-Ele não é um dos três selos finais do Ciclo 1 e não consome seus slots. Permanecem reservados:
+Ele **não é** um dos três selos finais do Ciclo 1 e não consome seus slots. Permanecem reservados:
 
 - `Verbum`
 - `Logos`
 - `Dialogos`
 
-O registro separado `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` fixa L01 em **155/155 VALIDATED** e preserva a mesma fronteira.
+O registro `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1` fixa a mesma fronteira.
 
 ## L02 Chokhmah — Source Lock auditado
 
-O gate `L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1` foi executado e materializado em `curriculum/cycle-01/L02-chokhmah/source-lock/l02-source-lock-audit.v1.json`.
+Audit: `SWHNK-L02-CHOKHMAH-SOURCE-LOCK-AUDIT-V1`.
 
-Estado auditado:
+Estado atual:
 
-- `language_bindings`: **11**
-- `recovered_phrases`: **0**
+- target pedagógico L02: **139**
+- Vocabulary target: **16**
+- lexemas recuperados: **11**
+- frases recuperadas: **0**
+- candidatos autorados ligados a L02: **0**
 - autoridades: **5 FROZEN + 5 WATCH + 1 GATE**
-- formas com significado mestre recuperado: **9**
-- formas sem significado mestre recuperado: **2** (`VANUVALI`, `VANI`)
-- `authored_candidates` ligados a L02: **0**
-- Vocabulary derivado da L02: **16 slots**
+- com significado master recuperado: **9**
+- sem significado master: **2** — `VANUVALI`, `VANI`
 - proxy recuperado: **11/16 = 68,75%**
 - gap proxy: **5**
-- `student_cards`: **0**
-- `teacher_drills`: **0**
+- student cards: **0**
+- teacher drills: **0**
+- authoring hold: **true**
+- source canon: **UNDEFINED — must be approved before content production**
 
-Lexemas recuperados ligados a L02:
+Lexemas ligados a L02:
 
 `TAYOVAN`, `KALOVALA`, `PAROVAN`, `PARAZAMI`, `VALI`, `SAROSARI`, `PARI`, `PA`, `VANUVALI`, `VANI`, `PITSA`.
 
-A pedagogia permanece em **HOLD**. O gap de cinco ativos não autoriza criação automática de cinco palavras: primeiro devem ser definidos semanticamente e governados, recuperados de fontes adicionais ou satisfeitos por rebind explicitamente aprovado.
+A pedagogia continua em **HOLD**. O gap de cinco não autoriza “inventar cinco palavras”. Antes de qualquer forma ou exercício, o curso precisa decidir semanticamente quais funções/conceitos L02 realmente requer.
 
-Também fica proibido importar silenciosamente para L02 a leitura `VANI = morar/residir` usada de forma escopada na L01; o Master Lexicon continua com `meaning=null`.
+Também fica proibido importar silenciosamente para L02 a leitura escopada `VANI = morar/residir` da L01; o Master Lexicon continua com `meaning=null`.
 
-Hebraico Bíblico, Grego Koiné e Esperanto permanecem **camadas de referência e comparação para a engenharia do HNK**, não compromissos de cursos independentes da SimpleWay Academy.
+Hebraico Bíblico, Grego Koiné e Esperanto permanecem camadas de referência e comparação para a engenharia do HNK, não compromissos de cursos independentes.
 
-Próximo gate: **`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS`**.
+## Próximo gate
+
+**`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_AND_APPROVED_HNK_LANGUAGE_NEEDS`**
+
+Regra: `SEMANTICS_BEFORE_FORM_AND_PEDAGOGY`.
+
+Nenhum OPI, Story, Q&A, Structure, Vocabulary-gap form, Activation ou Review de L02 deve ser autorado antes desse gate.
 
 ## Repositórios e ownership
 
@@ -119,6 +115,4 @@ Próximo gate: **`DEFINE_L02_SEMANTIC_CURRICULUM_TARGETS_FROM_RECOVERED_ASSETS_A
 
 ## CI
 
-O GitHub Actions remoto ainda não pode ser chamado de verde. Runs recentes continuam concluindo `failure` antes de expor execução normal dos steps do job; portanto o estado remoto não prova execução bem-sucedida de `npm test` nem identifica uma asserção específica como causa.
-
-O workflow já contém gates nomeados para Vocabulary, Reviews, fechamento de Kether e Source Lock de Chokhmah, de modo que assim que a infraestrutura do runner voltar a executar steps teremos diagnóstico granular imediato.
+O GitHub Actions remoto ainda não pode ser chamado de verde sem uma execução real bem-sucedida do runner e dos validadores. Runs recentes têm falhado antes de expor steps normais do job, portanto o estado remoto ainda não prova sucesso nem identifica uma asserção específica como causa.
