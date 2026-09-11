@@ -1,91 +1,104 @@
 # SimpleWay HNK — Cycle 1 Progress
 
-**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V40`  
+**Checkpoint:** `SWHNK-C1-PROGRESS-SNAPSHOT-V41`  
 **Date:** 2026-09-11  
-**Current package:** `simpleway-hnk@0.42.0`
+**Current package:** `simpleway-hnk@0.43.0`
 
 Cycle 1 target: **1,008 pedagogical slots**.
 
 Current exclusive implementation states:
 
 - `MISSING`: **853/1,008 = 84.6230%**
-- `AUTHORED`: **22/1,008 = 2.1825%**
-- `VALIDATED`: **133/1,008 = 13.1944%**
+- `AUTHORED`: **0/1,008 = 0%**
+- `VALIDATED`: **155/1,008 = 15.3770%**
 - reproducible `FROZEN`: **0/1,008**
 - `AUTHORED_OR_BETTER`: **155/1,008 = 15.3770%**
 - historical `SOURCE_CONFIRMED_FROZEN`: **82/1,008 = 8.1349%**
 
-## L01 Kether — 155/155 implemented
+## L01 Kether — 155/155 VALIDATED
 
-L01 target: **155 slots**.
+L01 is now **100% curriculum-validated**:
 
-Fully validated lanes:
+- Teacher Notes: **3/3 VALIDATED**
+- OPI: **10/10 VALIDATED**
+- Stories: **5/5 VALIDATED**
+- Q&A: **4/4 VALIDATED**
+- Structure Headers: **2/2 VALIDATED**
+- Structures: **5/5 VALIDATED**
+- Vocabulary: **32/32 VALIDATED**
+- Activation: **72/72 VALIDATED**
+- Review: **22/22 VALIDATED**
 
-- Teacher Notes: **3/3**
-- OPI: **10/10**
-- Stories: **5/5**
-- Q&A: **4/4**
-- Structure Headers: **2/2**
-- Structures: **5/5**
-- Vocabulary: **32/32**
-- Activation: **72/72**
+There are **0 MISSING**, **0 AUTHORED pending validation**, and **0 current FROZEN** slots in L01.
 
-Review is fully authored but not yet validated:
+## Review closure
 
-- Review: **22/22 AUTHORED, 0/22 VALIDATED**
+`REV-001..020` are two review activities for each validated OPI 001..010: `QUESTION_RECALL` + `RESPONSE_RECALL`.
 
-Therefore L01 is **155/155 authored-or-better = 100% implemented**, with **133/155 VALIDATED = 85.8065%** and **22 slots awaiting the final Review validation gate**.
+`REV-021..022` are integrative interviews composed only from already validated L01 OPI payloads and response contracts.
 
-## Vocabulary — complete
+The Review validation created:
 
-`VOC-001..032` are now **VALIDATED** for scoped SimpleWay HNK L01 v1.1 course use.
+- **0 new HNK forms**
+- **0 new language assets**
+- **0 language-authority promotions**
+- **0 universal grammar rules**
+- **0 historical Review-payload claims**
+- **0 visual-canon promotions**
 
-The final eight mappings remain governed exactly as approved:
+The earlier mismatch that associated `EN ZAMI HENUVOKODAN KE` with OPI 003 remains removed. OPI 003 is the validated age card `EN KU SARASALA KE`.
 
-- `KALA` → `AUTH-015 CANDIDATE`
-- `AN` → `AUTH-016 CANDIDATE`
-- `EN` → `AUTH-017 CANDIDATE`
-- `KU` → `AUTH-018 CANDIDATE`
-- `KE` → `AUTH-019 CANDIDATE`
-- `VANI` → scoped L01 binding on recovered `LEX-031`, retaining `WATCH` and Master Lexicon `meaning=null`
-- `VAME` → scoped L01 rebind on recovered `LEX-025`, retaining `GATE`
-- `ZAMI` → `AUTH-020 CANDIDATE`
+## Vocabulary and language authority
 
-Vocabulary validation promoted **zero language authorities** and created **zero new surface forms**.
+L01 Vocabulary remains **32/32 VALIDATED**. The governed inventory is unchanged by Review validation:
 
-## Review lane — final L01 gate
-
-`REV-001..022` are authored as **new v1.1 pedagogy**, not recovered historical Review payload.
-
-The reconciled model is:
-
-- `REV-001..020`: **two Review activities for each validated OPI 001..010** — one question recall and one response recall;
-- `REV-021..022`: **two integrative interviews** composed only from already validated OPI payloads and response contracts.
-
-A source mismatch from the first draft was removed: Review no longer treats `EN ZAMI HENUVOKODAN KE` as if it were `L01-OPI-003`. OPI 003 remains the validated age card `EN KU SARASALA KE`.
-
-Boundaries remain explicit: YA/ES unresolved in the recovered whole utterance; VANI remains WATCH with Master meaning null; VAME remains GATE; SARASALA/VAMAVALA/VAMAZAMU remain WATCH; ON remains GATE; KUVAN/KUON/VALA/NE and AUTH-015..020 remain CANDIDATE. `VAMUSARO` remains rest/leisure period, not a literal weekend lexeme.
-
-Prepared gate:
-
-`SWHNK-L01-REVIEW-22-HUMAN-BATCH-V1`
-
-Status: **AWAITING_EXPLICIT_HUMAN_VALIDATION**.
-
-If approved, Review moves **22 AUTHORED → 22 VALIDATED**, L01 becomes **155/155 VALIDATED**, and global Cycle 1 becomes **155 VALIDATED + 853 MISSING**, with zero language-authority promotions.
-
-## Language assets
-
-- recovered Cycle 1 forms: **31/144 = 21.5278% proxy**
+- recovered Cycle 1 forms: **31**
 - canonical authored candidates: **20**
-- governed unique language assets: **51/144 = 35.4167% proxy**
+- governed unique language assets: **51**
 
-Vocabulary slot completion remains distinct from these language-asset proxies.
+Important boundaries remain visible:
+
+- YA and ES remain unresolved standalone semantics inside the recovered OPI-001 whole utterance;
+- VANI remains `WATCH` with Master Lexicon `meaning=null`;
+- VAME remains `GATE`;
+- SARASALA, VAMAVALA and VAMAZAMU remain `WATCH`;
+- ON remains `GATE`;
+- KUVAN, KUON, VALA, NE and `AUTH-015..020` remain `CANDIDATE`;
+- VAMUSARO remains **rest / leisure period**, not a literal `weekend` lexeme;
+- no generic HNK `DO`, `WITH`, or universal WH/interrogative grammar is created.
+
+## Kether completion marker
+
+`SWHNK-L01-KETHER-SEAL-V1` certifies **curriculum completion only**.
+
+It is explicitly classified as `LESSON_OPERATIONAL_CURRICULUM_COMPLETION_MARKER` and **does not consume or instantiate** any of the three Cycle 1 final seals:
+
+- `Verbum`
+- `Logos`
+- `Dialogos`
+
+The separate completion record is `SWHNK-L01-KETHER-VALIDATED-COMPLETION-V1`.
 
 ## Historical/source boundary
 
-Historical `SOURCE_CONFIRMED_FROZEN` evidence remains **82 slots = 10 OPI + 72 Activation**. Current validation maturity and historical evidence remain separate axes.
+Historical `SOURCE_CONFIRMED_FROZEN` evidence remains **82 slots = 10 OPI + 72 Activation**. The raw historical v1 payload is still unrecovered. Current scoped curriculum validation and historical evidence remain separate axes.
+
+## L02 Chokhmah entry
+
+L02 opens under **SOURCE_LOCK_FIRST**.
+
+Current entry state from the manifest:
+
+- sphere: `Chokhmah`
+- status: `LEXICON_RECOVERED_PEDAGOGY_SCAFFOLD`
+- recovered language bindings: **11**
+- recovered phrases: **0**
+- student cards: **0**
+- teacher drills: **0**
+- content frozen: **false**
+
+Next gate: `L02_CHOKHMAH_SOURCE_LOCK_AUDIT_V1` — audit recovered lexicon and source bindings before any pedagogy authoring.
 
 ## CI boundary
 
-The GitHub Actions workflow is configured, but recent runs have failed before exposing normal job steps. Do not describe remote CI as green until a runner completes the validation steps successfully.
+Remote GitHub Actions must not be described as green without an observed successful runner execution. Recent runs have been failing before exposing normal job steps, so this remains an operational CI issue rather than proven test-suite failure or success.
