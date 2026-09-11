@@ -52,8 +52,16 @@ assert.equal(review.metrics.AUTHORED,22);
 assert.equal(review.metrics.VALIDATED,0);
 assert.equal(review.metrics.new_hnk_forms_created,0);
 assert.equal(review.metrics.language_authority_promotions,0);
-assert.deepEqual(review.metrics.by_type,{LEXICAL_RECALL:8,FUNCTION_RECALL:6,CONSTRUCTION_REBUILD:4,COMMUNICATIVE_TRANSFER:4});
+assert.deepEqual(review.metrics.by_type,{QUESTION_RECALL:10,RESPONSE_RECALL:10,INTEGRATIVE_INTERVIEW_A:1,INTEGRATIVE_INTERVIEW_B:1});
+for(let opi=1;opi<=10;opi++){
+  const ref=`L01-OPI-${String(opi).padStart(3,'0')}`;
+  assert.equal(review.items[(opi-1)*2].source_ref,ref);
+  assert.equal(review.items[(opi-1)*2+1].source_ref,ref);
+}
 assert.equal(reviewBatch.status,'AWAITING_EXPLICIT_HUMAN_VALIDATION');
+assert.equal(reviewBatch.review_groups[0].model,'TWO_SLOTS_PER_VALIDATED_OPI');
+assert.equal(reviewBatch.review_groups[0].count,20);
+assert.equal(reviewBatch.review_groups[1].count,2);
 assert.equal(reviewBatch.projected_effect_if_all_approved.L01_VALIDATED_after,155);
 assert.equal(reviewBatch.projected_effect_if_all_approved.global_VALIDATED_after,155);
 assert.equal(reviewBatch.projected_effect_if_all_approved.language_authority_promotions,0);
@@ -79,9 +87,9 @@ assert.equal(v.prepared_review_batch,'../curriculum/cycle-01/L01-kether/validati
 assert.equal(evidence.lexical_evidence.authored_candidate_forms_linked_to_cycle1,20);
 assert.equal(evidence.lexical_evidence.governed_unique_language_assets,51);
 assert.equal(evidence.lexical_evidence.lesson_authored_candidates.L01,20);
-assert.equal(evidence.lexical_evidence.gate,'L01_VOCABULARY_32_OF_32_VALIDATED_REVIEW_LANE_NEXT');
+assert.equal(evidence.lexical_evidence.gate,'L01_REVIEW_AUTHORED_22_VALIDATION_PENDING');
 assert.equal(vAni.target_form.current_meaning,null);
 assert.equal(vAni.target_form.current_authority,'WATCH');
 
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V40');
-console.log('Cycle 1: 133 VALIDATED + 22 AUTHORED = 155 authored-or-better; L01 is fully implemented and Review validation is the final gate before Kether seal.');
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V40-RECONCILED');
+console.log('Cycle 1: 133 VALIDATED + 22 AUTHORED = 155 authored-or-better; L01 is fully implemented and Review validation is the final gate before Kether closure.');
