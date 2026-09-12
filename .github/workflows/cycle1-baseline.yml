@@ -172,3 +172,9 @@ jobs:
 
       - name: Validate L02 Chokhmah closure gate
         run: npm run validate:l02-chokhmah-closure
+
+      - name: Validate L03 Binah source lock
+        run: npm run validate:l03-binah-source-lock
+
+      - name: Validate L03 Binah evidence/rebind review gate
+        run: npm run validate:l03-binah-evidence-rebind-review
