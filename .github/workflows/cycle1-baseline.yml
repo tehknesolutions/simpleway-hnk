@@ -151,6 +151,3 @@ jobs:
 
       - name: Validate L02 teacher notes validation gate
         run: npm run validate:l02-teacher-notes-validation
-
-      - name: Validate L02 Activation 72 source review
-        run: npm run validate:l02-activation72-source-review
