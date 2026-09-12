@@ -163,3 +163,6 @@ jobs:
 
       - name: Validate L02 Review 22 source review
         run: npm run validate:l02-review22-source-review
+
+      - name: Validate L02 Review 22 authoring gate
+        run: npm run validate:l02-review22-authoring
