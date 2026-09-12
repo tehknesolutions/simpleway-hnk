@@ -20,7 +20,7 @@ assert.equal(gate.governance_decisions.filter(x=>x.decision==='APPROVED').length
 assert.equal(transition.status,'APPLIED_NO_AUTHORING');
 assert.equal(transition.after.review_architecture_approved,22);
 assert.equal(transition.after.review_AUTHORED,0);
-assert.equal(authorGate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.ok(['AWAITING_EXPLICIT_HUMAN_APPROVAL','APPROVED_ALL_DECISIONS'].includes(authorGate.status));
 assert.equal(snap.L02_review_source_review.status,'APPROVED_22_ARCHITECTURE_NO_AUTHORING');
 assert.equal(snap.next_gate,'SWHNK-L02-REVIEW-22-AUTHORING-HUMAN-BATCH-V1');
-console.log('PASS SWHNK-L02-REVIEW-22-SOURCE-REVIEW-APPROVED-V1');
+console.log('PASS SWHNK-L02-REVIEW-22-SOURCE-REVIEW-APPROVED-LIFECYCLE-STABLE-V1');
