@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
+const review=await json('curriculum/cycle-01/L02-chokhmah/source-lock/l02-review-22-source-review.v1.json');
+const gate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-review-22-source-review-human-batch.v1.json');
+const snap=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V69.json');
+assert.equal(review.status,'READY_FOR_HUMAN_REVIEW_NO_REVIEW_AUTHORING');
+assert.equal(review.target,22);
+assert.equal(review.architecture.opi_linked.slots,20);
+assert.equal(review.architecture.integrative.slots,2);
+assert.equal(review.architecture.opi_linked.pairs.length,10);
+assert.match(review.architecture.opi_linked.pairs.find(x=>x.opi==='L02-OPI-006').exception,/No learner yes\/no answer/);
+assert.equal(review.checks.review_authored,0);
+assert.equal(review.checks.review_validated,0);
+assert.equal(gate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(gate.architecture_decisions.length,6);
+assert.equal(gate.governance_decisions.length,6);
+assert.equal(gate.checks.target,22);
+assert.equal(snap.L02_review_source_review.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(snap.next_gate,'SWHNK-L02-REVIEW-22-SOURCE-REVIEW-HUMAN-BATCH-V1');
+console.log('PASS SWHNK-L02-REVIEW-22-SOURCE-REVIEW-PENDING-V1');

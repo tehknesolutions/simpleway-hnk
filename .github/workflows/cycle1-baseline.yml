@@ -160,3 +160,6 @@ jobs:
 
       - name: Validate L02 Activation 72 validation gate
         run: npm run validate:l02-activation72-validation
+
+      - name: Validate L02 Review 22 source review
+        run: npm run validate:l02-review22-source-review
