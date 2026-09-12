@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
+const gate=await json('curriculum/cycle-01/L02-chokhmah/validation/l02-activation-72-validation-human-batch.v1.json');
+const pipeline=await json('curriculum/cycle-01/L02-chokhmah/authoring/activation-72.pipeline.v1.json');
+const snap=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V68.json');
+assert.ok(['AWAITING_EXPLICIT_HUMAN_APPROVAL','APPROVED_ALL_DECISIONS'].includes(gate.status));
+assert.equal(gate.pack_decisions.length,6);
+assert.equal(gate.governance_decisions.length,6);
+assert.equal(gate.checks.authored_activation,72);
+assert.equal(gate.checks.validated_before_gate,0);
+assert.equal(gate.checks.packs,6);
+assert.equal(gate.checks.slots_per_pack,12);
+assert.equal(gate.checks.new_surface_forms,0);
+assert.equal(gate.checks.new_grammar_rules,0);
+assert.equal(gate.checks.authority_promotions,0);
+assert.equal(gate.checks.OPI006_block_preserved,true);
+assert.equal(pipeline.metrics.AUTHORED,72);
+assert.equal(pipeline.metrics.VALIDATED,0);
+assert.equal(snap.L02_activation_validation.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL');
+assert.equal(snap.next_gate,'SWHNK-L02-ACTIVATION-72-VALIDATION-HUMAN-BATCH-V1');
+console.log('PASS SWHNK-L02-ACTIVATION-72-VALIDATION-GATE-V1');
