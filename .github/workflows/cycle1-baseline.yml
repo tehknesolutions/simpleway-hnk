@@ -127,3 +127,27 @@ jobs:
 
       - name: Validate L02 STR005 NE scope and exact pattern review
         run: npm run validate:l02-str005-pattern-review
+
+      - name: Validate L02 STR005 authoring
+        run: npm run validate:l02-str005-authoring
+
+      - name: Validate L02 SQS16 validation gate
+        run: npm run validate:l02-sqs16-validation-gate
+
+      - name: Validate L02 vocabulary16 source mapping
+        run: npm run validate:l02-vocabulary16-mapping
+
+      - name: Validate L02 vocabulary16 authoring
+        run: npm run validate:l02-vocabulary16-authoring
+
+      - name: Validate L02 vocabulary16 validation
+        run: npm run validate:l02-vocabulary16-validation
+
+      - name: Validate L02 teacher notes source review
+        run: npm run validate:l02-teacher-notes-source-review
+
+      - name: Validate L02 teacher notes authoring
+        run: npm run validate:l02-teacher-notes-authoring
+
+      - name: Validate L02 teacher notes validation gate
+        run: npm run validate:l02-teacher-notes-validation
