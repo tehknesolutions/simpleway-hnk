@@ -9,7 +9,8 @@
 Audit the HNK language already present before further language authoring is allowed to depend on unreviewed assumptions. This branch is isolated because concurrent curriculum automation repeatedly advanced `main` while audit commits were being written.
 
 ## Governance
-- `@hnk/linguas` remains lexical authority.
+- `@hnk/linguas` recovered registry remains historical lexical/phrase authority.
+- `@hnk/linguas/authored` is a distinct governed candidate layer and must never be described as historical recovery.
 - `@hnk/glyphs G-ID` remains segmental glyph/IPA authority.
 - Audit findings do not promote phonemes, morphemes, lexemes, grammar or curriculum slots.
 - The V93 L03 candidate-validation gate is not approved by this sprint.
@@ -44,11 +45,31 @@ Current evidence ranking, none productive:
 
 Counterfinding: authored `VALA = atividade` back-analysis is weakened by FROZEN `KALOVALA = edifício/prédio`, which also ends in `VALA`. `VANI = morar/residir` remains a test hypothesis only because its historical gloss is unrecovered and its rationale depends on unapproved `VAN + I` morphology.
 
+### A5 — recovered phrases + grammar/pattern evidence
+Artifact: `HNK_PHRASE_GRAMMAR_EVIDENCE_AUDIT_V1.json`.
+
+Recovered phrase corpus: 7 total; 3 approximate glosses; 4 unrecovered glosses.
+
+Strongest scoped findings:
+- `AN`: first-person/referent evidence; now governed as `AUTH-016 CANDIDATE` for scoped L01/L02 use, not recovered standalone semantics.
+- `EN`: second-person/addressee evidence; now `AUTH-017 CANDIDATE`; subject versus possessive analysis remains unresolved outside approved constructions.
+- `ZAMI`: repeated language-use predicate evidence; now `AUTH-020 CANDIDATE` for scoped communicative use.
+- `KE`: strong clause-final interrogative distribution; now `AUTH-019 CANDIDATE` for scoped L01/L02 constructions, not universal question grammar.
+- `KU`: minimal-contrast support for a pre-nominal/content-selector role; now `AUTH-018 CANDIDATE`, explicitly not one fixed WH word.
+- `ZAMO`: language/language-domain hypothesis supported by PHR-002 and PHR-006, but no standalone governed lexical mapping yet.
+- `S-P-O` order: compatible with the language-use micro-domain, not established as universal HNK basic order.
+
+Critical provenance finding: the recovered phrase layer and the governed authored-candidate layer must remain distinct. A recovered token occurrence does not mean its later standalone semantic mapping was historically recovered.
+
+Current authored specializations `KUVAN`, `KUON` and `NE` are closed/scoped candidates. They do not make `VAN`, `ON`, `KU`, `KE` or negation globally productive.
+
+The V93 L03 candidate `[ACTIVITY_LEXEME] -> VALI | PARAZAMI` is structurally compatible with the audit boundaries because it explicitly creates no person, tense, aspect, modality, zero-pronoun or universal bare-predicate rule. Its claim of contextual completeness remains a separate scoped validation question; Sprint A does not validate it.
+
 ## Remaining Sprint A blocks
 - word-level phonology: syllabification, stress, hiatus/diphthong, glide formation, allophony, connected speech;
-- phrase/grammar evidence inventory;
-- curriculum-vs-language assumption audit;
-- proposal-debt review for older candidates depending on unresolved morphology;
+- curriculum-vs-language assumption audit across L01-L03;
+- proposal-debt review for older candidates depending on unresolved morphology or token semantics;
+- reconcile authored registry candidates against the audit findings;
 - consolidate all required human choices into Sprint B.
 
 ## Current main-state boundary
