@@ -1,0 +1,168 @@
+{
+  "audit_id": "SWHNK-HNK-WORD-LEVEL-PHONOLOGY-AUDIT-V1",
+  "status": "COMPLETE_INITIAL_WORD_LEVEL_PHONOLOGY_AUDIT_NO_CANON_MUTATION",
+  "date": "2026-09-13",
+  "baseline": {
+    "cycle_snapshot": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+    "segmental_authority": "@hnk/glyphs G-ID + phonemeIpa",
+    "lexical_authority": "@hnk/linguas recovered registry",
+    "branch": "audit/hnk-language-sprint-a-20260913"
+  },
+  "inventory": {
+    "phonemes_total": 40,
+    "vowels": ["/a/", "/e/", "/i/", "/o/", "/u/", "/ə/", "/y/"],
+    "glides": ["/j/", "/w/"],
+    "critical_distinction": "Safe transliteration Y is G40 /y/ (vowel), while glide /j/ is G16 and has no approved safe romanization."
+  },
+  "corpus_findings": {
+    "lexemes": 33,
+    "strict_CV_profile_matches_when_classified_by_authoritative_IPA": 26,
+    "strict_CV_profile_exceptions": 7,
+    "forms_with_adjacent_vowel_sequences": [
+      {
+        "form": "SARADAYA",
+        "authority": "FROZEN",
+        "phonemic_shape": "CVCVCVVV",
+        "adjacent_vowels": "A-Y-A",
+        "finding": "Recovered stable native evidence contains a three-vowel run when Y is correctly treated as /y/."
+      },
+      {
+        "form": "TAYOVAN",
+        "authority": "FROZEN",
+        "phonemic_shape": "CVVVCVC",
+        "adjacent_vowels": "A-Y-O",
+        "finding": "Recovered stable native evidence contains a three-vowel run when Y is correctly treated as /y/."
+      },
+      {
+        "form": "DAYI",
+        "authority": "CANDIDATE",
+        "phonemic_shape": "CVVV",
+        "adjacent_vowels": "A-Y-I",
+        "finding": "Segmental form is /d a y i/; word-level realization is unresolved."
+      },
+      {
+        "form": "VAMATAYA",
+        "authority": "CANDIDATE",
+        "phonemic_shape": "CVCVCVVV",
+        "adjacent_vowels": "A-Y-A",
+        "finding": "Candidate native form also contains a three-vowel run."
+      },
+      {
+        "form": "KALIFORNIA",
+        "authority": "BRIDGE",
+        "phonemic_shape": "CVCVCVCCVV",
+        "adjacent_vowels": "I-A",
+        "finding": "Proper-name bridge supplies additional adjacent-vowel evidence but is not a native phonotactic template."
+      }
+    ],
+    "native_FROZEN_adjacent_vowel_evidence": ["SARADAYA", "TAYOVAN"],
+    "critical_conclusion": "The previous authoring recommendation to avoid vowel hiatus cannot be interpreted as an exception-free HNK phonological law. It was based on safe-orthography token classes that treated Y as consonant-like, while authoritative G40 classifies Y as the vowel /y/."
+  },
+  "governed_word_level_rules_found": {
+    "syllabification": false,
+    "lexical_stress": false,
+    "hiatus_vs_diphthong": false,
+    "glide_formation": false,
+    "vowel_coalescence": false,
+    "allophony": false,
+    "connected_speech": false,
+    "prosodic_phrase_structure": false
+  },
+  "source_search": {
+    "repositories": ["tehknesolutions/simpleway-hnk", "tehknesolutions/codex-hnk"],
+    "searched_terms": ["stress", "syllable", "pronunciation", "acento", "pronúncia", "hiatus", "diphthong", "prosod"],
+    "explicit_governing_rule_recovered": false
+  },
+  "dayi_case": {
+    "form": "DAYI",
+    "glyph_ids": ["G19", "G01", "G40", "G03"],
+    "segmental_ipa": "/d a y i/",
+    "phonemic_shape": "CVVV",
+    "safe_statements": [
+      "D is /d/.",
+      "A is /a/.",
+      "Y is vowel /y/, not glide /j/.",
+      "I is /i/."
+    ],
+    "unresolved": [
+      "number of syllables",
+      "syllable boundaries",
+      "whether A-Y or Y-I forms a diphthong",
+      "whether all three vowels are in hiatus",
+      "lexical stress",
+      "phonetic reduction or allophony",
+      "whether any vowel becomes a glide in connected speech"
+    ],
+    "noncanonical_possible_models_for_human_evaluation_only": [
+      {
+        "label": "FULL_HIATUS_MODEL",
+        "example_analysis": "/da.y.i/",
+        "status": "ILLUSTRATIVE_ONLY_NOT_APPROVED"
+      },
+      {
+        "label": "RIGHT_DIPHTHONG_MODEL",
+        "example_analysis": "/da.yi/",
+        "status": "ILLUSTRATIVE_ONLY_NOT_APPROVED"
+      },
+      {
+        "label": "LEFT_DIPHTHONG_MODEL",
+        "example_analysis": "/day.i/",
+        "status": "ILLUSTRATIVE_ONLY_NOT_APPROVED"
+      }
+    ],
+    "forbidden_inference": "Do not realize G40 /y/ as /j/ merely to force a CV pattern unless a separately approved allophonic/glide-formation rule explicitly licenses it."
+  },
+  "phonotactic_profile_v1_assessment": {
+    "artifact": "HNK_PHONOTACTIC_PROFILE_V1.md",
+    "retain_as": "HISTORICAL_OBSERVED_AUTHORING_PRIOR_WITH_KNOWN_ORTHOGRAPHIC_BIAS",
+    "requires_v2": true,
+    "invalidated_claims": [
+      "30/33 strict CV matching when Y is treated as a consonant-like romanization token",
+      "vowel hiatus avoidance as though it were supported by all stable native evidence"
+    ],
+    "still_useful": [
+      "TS is atomic consonantal G30",
+      "bridge/loan forms should be evaluated separately",
+      "exact/near collision checks remain useful",
+      "new authoring preferences may still prefer simple shapes if explicitly labeled as design preferences rather than recovered phonological laws"
+    ]
+  },
+  "sprint_b_decisions_required": [
+    {
+      "id": "DEC-PHON-001",
+      "question": "Confirm whether G40=/y/ with safe romanization Y is intentional and should remain unchanged."
+    },
+    {
+      "id": "DEC-PHON-002",
+      "question": "Define whether HNK permits vowel hiatus as a normal native pattern and how adjacent vowels are syllabified."
+    },
+    {
+      "id": "DEC-PHON-003",
+      "question": "Decide whether HNK has governed diphthongs; if yes, specify exactly which vowel sequences and whether /y/ participates."
+    },
+    {
+      "id": "DEC-PHON-004",
+      "question": "Decide whether /i u y/ or other vowels may allophonically become glides, while preserving phonemic G16=/j/ and G17=/w/ distinctions."
+    },
+    {
+      "id": "DEC-PHON-005",
+      "question": "Define lexical stress strategy: fixed, weight-sensitive, lexical/marked, or intentionally unresolved."
+    },
+    {
+      "id": "DEC-PHON-006",
+      "question": "After the above decisions, issue HNK_PHONOTACTIC_PROFILE_V2 using authoritative phoneme classes and explicit separation between corpus facts, language rules and authoring preferences."
+    }
+  ],
+  "effects": {
+    "canonical_changes": 0,
+    "phoneme_changes": 0,
+    "stress_rules_created": 0,
+    "syllabification_rules_created": 0,
+    "allophony_rules_created": 0,
+    "romanization_changes": 0,
+    "lexeme_changes": 0,
+    "grammar_changes": 0,
+    "curriculum_slot_changes": 0,
+    "v93_gate_approved": false
+  }
+}
