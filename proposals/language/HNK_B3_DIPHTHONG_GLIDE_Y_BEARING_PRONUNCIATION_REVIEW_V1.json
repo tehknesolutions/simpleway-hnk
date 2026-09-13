@@ -1,0 +1,56 @@
+{
+  "review_id":"SWHNK-HNK-B3-DIPHTHONG-GLIDE-Y-BEARING-PRONUNCIATION-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "depends_on":["B1_APPROVED","B2_APPROVED"],
+  "scope":"Decide how affirmed vowel G40=/y/ participates in adjacent-vowel sequences and whether HNK should license automatic diphthong or glide formation in Y-bearing words. Do not decide lexical stress, G16 romanization, DAYI semantics or L03 curriculum in this gate.",
+  "evidence": [
+    "B1 affirmed G40=/y/ as a vowel distinct from G16=/j/.",
+    "B2 affirmed that adjacent vowels, including VVV sequences, are allowed in HNK lexical forms.",
+    "FROZEN SARADAYA and TAYOVAN contain A-Y-A and A-Y-O vowel runs under authoritative segment classes.",
+    "DAYI is segmentally /d a y i/ and remains without governed whole-word realization.",
+    "No recovered governing rule defines diphthongs, glide formation, vowel coalescence or allophony.",
+    "Older HOYU metadata that realized Y as /j/ is stale and cannot by itself license automatic /y/ -> /j/."
+  ],
+  "options": [
+    {
+      "id":"B3-OPTION-A",
+      "decision":"CONSERVATIVE_DISTINCT_VOWEL_NUCLEI_NO_AUTOMATIC_GLIDE",
+      "recommended":true,
+      "description":"In careful/canonical pronunciation, adjacent vowels remain phonologically distinct vowel nuclei unless a later word-specific or sequence-specific rule explicitly licenses another realization. G40 /y/ does not automatically become /j/. Do not establish a productive diphthong inventory yet.",
+      "effects":[
+        "A-Y-I in DAYI is treated as three distinct vowel nuclei for careful pronunciation planning.",
+        "A-Y-A and A-Y-O in FROZEN evidence remain legal multi-nucleus sequences.",
+        "No automatic /y/ -> /j/ rule.",
+        "No general diphthong inventory created.",
+        "Phonetic smoothing in fast speech remains future allophony work."
+      ]
+    },
+    {
+      "id":"B3-OPTION-B",
+      "decision":"DESIGN_LIMITED_DIPHTHONG_INVENTORY_NOW",
+      "recommended":false,
+      "description":"Author a limited inventory of vowel sequences that behave as diphthongs, including an explicit decision on whether /y/ participates. This would create new phonological structure not recovered from sources and would require sequence-by-sequence evidence/design justification."
+    },
+    {
+      "id":"B3-OPTION-C",
+      "decision":"KEEP_ALL_ADJACENT_VOWEL_REALIZATION_UNRESOLVED",
+      "recommended":false,
+      "description":"Keep legal vowel adjacency from B2 but defer even the careful-pronunciation nucleus policy. This maximizes preservation but blocks reliable whole-word pronunciation and delays B4 stress work."
+    }
+  ],
+  "recommended_decision":"B3-OPTION-A",
+  "recommended_rationale":"It preserves the affirmed /y/ versus /j/ distinction, fits the stable presence of VVV sequences, avoids inventing an unsupported diphthong inventory, and gives the project a conservative pronunciation baseline without claiming historical recovery.",
+  "provenance_label_if_approved":"GOVERNED_NEW_PHONOLOGICAL_DESIGN_NOT_HISTORICAL_RECOVERY",
+  "boundaries": {
+    "lexical_stress_decided":false,
+    "G16_safe_romanization_decided":false,
+    "DAYI_semantics_changed":false,
+    "HOYU_numeral_semantics_changed":false,
+    "morphology_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate_if_option_A":"B4_LEXICAL_STRESS_AND_WHOLE_WORD_PRONUNCIATION",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V99"
+}
