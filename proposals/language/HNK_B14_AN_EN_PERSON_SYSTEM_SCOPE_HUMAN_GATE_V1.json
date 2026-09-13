@@ -35,6 +35,13 @@
     "curriculum_changes":0,
     "next_phase":"PREPARE_B15_KU_KE_KUVAN_KUON_INTERROGATIVE_ARCHITECTURE_HUMAN_GATE"
   },
-  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V106",
+    "context_place_candidate_validated":true,
+    "context_place_candidate_productivity_eligible":true,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B14":false
+  },
   "approval_rule":"A future SIGA may approve only DEC-B14-001 through DEC-B14-006 if this gate remains materially unchanged. The same SIGA must not approve B15, create possessive/subject grammar, or generalize AN/EN beyond the scoped person-reference pair."
 }
