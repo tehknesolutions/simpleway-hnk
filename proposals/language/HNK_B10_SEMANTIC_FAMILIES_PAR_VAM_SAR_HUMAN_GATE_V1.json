@@ -1,0 +1,43 @@
+{
+  "gate_id":"SWHNK-HNK-B10-SEMANTIC-FAMILIES-PAR-VAM-SAR-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B10_SEMANTIC_FAMILIES_PAR_VAM_SAR_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_ANALYTICAL_STATUS_OF_PAR_VAM_VAMA_AND_SAR_SEMANTIC_FAMILIES; DO_NOT_CREATE_ROOTS_MORPHEMES_NEW_DERIVATIONS_INFER_UNRECOVERED_GLOSSES_CHANGE_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-B10-001",
+    "state":"PENDING",
+    "proposal":"RECOGNIZE_ANALYTICAL_SEMANTIC_CLUSTERS_NOT_MORPHEMES",
+    "rule":"Govern PAR-, VAM-/VAMA- and SAR- as nonproductive analytical semantic clusters only. They describe distributional families in the audited lexicon but are not standalone roots, morphemes or derivational rules.",
+    "families":{
+      "PAR-":{"status":"GOVERNED_ANALYTICAL_CLUSTER","confidence":"MODERATE","domain":"learning / knowledge / perception association"},
+      "VAM-/VAMA-":{"status":"GOVERNED_ANALYTICAL_CLUSTER","confidence":"LOW_TO_MODERATE","domain":"broad identity / preference / leisure / personal-activity association"},
+      "SAR-":{"status":"GOVERNED_ANALYTICAL_CLUSTER","confidence":"LOW_TO_MODERATE","domain":"broad spacetime / trajectory association"}
+    },
+    "provenance":"GOVERNED_DISTRIBUTIONAL_SEMANTIC_CLUSTERING_NOT_HISTORICAL_MORPHEME_RECOVERY"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B10-002","state":"PENDING","proposal":"Do not create PAR, VAM, VAMA or SAR as standalone lexical entries under B10."},
+    {"id":"DEC-B10-003","state":"PENDING","proposal":"Do not license any new PAR-, VAM-/VAMA- or SAR- derivation; productivity remains NONE."},
+    {"id":"DEC-B10-004","state":"PENDING","proposal":"Do not infer unrecovered meanings from family membership, including SAROSAL or any other glossless form."},
+    {"id":"DEC-B10-005","state":"PENDING","proposal":"Preserve B7 -VAN and B8 PARAZAMO/PARAZAMI as more specific governed analyses and B9 final-I as a distributional tendency; B10 does not widen any of them."},
+    {"id":"DEC-B10-006","state":"PENDING","proposal":"B10 changes no lexical authority, individual word semantics, grammar, productivity, or curriculum slots."}
+  ],
+  "projected_if_approved":{
+    "PAR_family":"GOVERNED_ANALYTICAL_CLUSTER_MODERATE_CONFIDENCE",
+    "VAM_VAMA_family":"GOVERNED_ANALYTICAL_CLUSTER_LOW_TO_MODERATE_CONFIDENCE",
+    "SAR_family":"GOVERNED_ANALYTICAL_CLUSTER_LOW_TO_MODERATE_CONFIDENCE",
+    "standalone_roots_created":0,
+    "morphemes_created":0,
+    "productivity":"NONE",
+    "new_derivations_allowed":false,
+    "unrecovered_glosses_inferred":0,
+    "authority_changes":0,
+    "semantic_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B11_VALA_DISPOSITION_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V103",
+  "approval_rule":"A future SIGA may approve only DEC-B10-001 through DEC-B10-006 if this gate remains materially unchanged. The same SIGA must not approve B11, create any family root/morpheme, or infer any unrecovered gloss."
+}
