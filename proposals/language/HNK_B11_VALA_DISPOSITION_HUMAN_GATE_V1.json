@@ -1,25 +1,27 @@
 {
   "gate_id":"SWHNK-HNK-B11-VALA-DISPOSITION-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B11_GATE",
   "source_review":"HNK_B11_VALA_DISPOSITION_REVIEW_V1.json",
   "decision_scope":"APPROVE_OR_REVISE_ONLY_AUTH_002_VALA_DISPOSITION_AND_RATIONALE_CLASS; DO_NOT_MUTATE_CODEX_REGISTRY_CHANGE_L01_CREATE_VALA_MORPHOLOGY_GENERAL_A_I_RULES_OR_APPROVE_B12_WITH_THIS_APPROVAL",
-  "proposed_decision":{
+  "approved_decision":{
     "id":"DEC-B11-001",
-    "state":"PENDING",
-    "proposal":"RETAIN_AS_INDEPENDENT_AUTHORED_PRIMITIVE_REPAIR_RATIONALE",
+    "state":"APPROVED",
+    "decision":"RETAIN_AS_INDEPENDENT_AUTHORED_PRIMITIVE_REPAIR_RATIONALE",
     "rule":"Retain AUTH-002 VALA as a CANDIDATE with the authored semantic intent activity / performed action, but supersede AUTHORED_BACK_ANALYSIS as its continuing rationale. Treat VALA as an independent authored primitive, historicalRecoveryClaim=false, productivity NON_PRODUCTIVE_SINGLE_CANDIDATE.",
     "rationale":"KALOVALA is a FROZEN counterexample to simple recovered VALA=activity segmentation, while authored primitive semantics do not require the form to be a recovered morpheme. This preserves the explicit authorship decision without misrepresenting the corpus.",
     "provenance":"GOVERNED_AUTHORED_PRIMITIVE_RETENTION_AFTER_RATIONALE_REPAIR_NOT_HISTORICAL_RECOVERY"
   },
   "governance_decisions":[
-    {"id":"DEC-B11-002","state":"PENDING","proposal":"Mark the old VALA activity-noun back-analysis rationale as historical prior / superseded rationale, not current morphological evidence."},
-    {"id":"DEC-B11-003","state":"PENDING","proposal":"Do not create VALA as a recovered morpheme or derive VAMAVALA/KALOVALA composition from this decision."},
-    {"id":"DEC-B11-004","state":"PENDING","proposal":"Do not create A=noun, I=verb or any general final-vowel part-of-speech morphology."},
-    {"id":"DEC-B11-005","state":"PENDING","proposal":"B11 itself does not mutate codex-hnk authored.mjs; prepare that canonical patch only after B18/B20 provenance/lifecycle governance is settled."},
-    {"id":"DEC-B11-006","state":"PENDING","proposal":"B11 changes no L01/L03 curriculum state, grammar, productivity beyond AUTH-002 remaining nonproductive, or authority level."}
+    {"id":"DEC-B11-002","state":"APPROVED","decision":"Mark the old VALA activity-noun back-analysis rationale as historical prior / superseded rationale, not current morphological evidence."},
+    {"id":"DEC-B11-003","state":"APPROVED","decision":"Do not create VALA as a recovered morpheme or derive VAMAVALA/KALOVALA composition from this decision."},
+    {"id":"DEC-B11-004","state":"APPROVED","decision":"Do not create A=noun, I=verb or any general final-vowel part-of-speech morphology."},
+    {"id":"DEC-B11-005","state":"APPROVED","decision":"B11 itself does not mutate codex-hnk authored.mjs; prepare that canonical patch only after B18/B20 provenance/lifecycle governance is settled."},
+    {"id":"DEC-B11-006","state":"APPROVED","decision":"B11 changes no L01/L03 curriculum state, grammar, productivity beyond AUTH-002 remaining nonproductive, or authority level."}
   ],
-  "projected_if_approved":{
+  "effects":{
     "AUTH_002_disposition":"RETAIN",
     "AUTH_002_authority":"CANDIDATE_UNCHANGED",
     "AUTH_002_semantics":"ACTIVITY_PERFORMED_ACTION_AUTHORED_INTENT_RETAINED",
@@ -28,9 +30,16 @@
     "AUTH_002_productivity":"NON_PRODUCTIVE_SINGLE_CANDIDATE",
     "old_back_analysis":"SUPERSEDED_RATIONALE_HISTORICAL_PRIOR",
     "canonical_registry_mutation_now":false,
-    "curriculum_changes":0,
-    "next_phase":"PREPARE_B12_VANI_SEMANTIC_STRATEGY_HUMAN_GATE"
+    "curriculum_changes":0
   },
-  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104",
-  "approval_rule":"A future SIGA may approve only DEC-B11-001 through DEC-B11-006 if this gate remains materially unchanged. The same SIGA must not approve B12 or mutate codex-hnk authored.mjs."
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104",
+    "context_place_candidate_created":true,
+    "context_place_candidate_validated":false,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B11":false
+  },
+  "next_phase":"B12_VANI_SEMANTIC_STRATEGY_HUMAN_GATE",
+  "same_approval_must_not_approve_B12_or_mutate_codex_hnk_authored_registry":true
 }
