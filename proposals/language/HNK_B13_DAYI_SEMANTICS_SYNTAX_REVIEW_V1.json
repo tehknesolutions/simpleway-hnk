@@ -1,0 +1,68 @@
+{
+  "review_id":"SWHNK-HNK-B13-DAYI-SEMANTICS-SYNTAX-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Review only DAYI lexical-semantic status and whether any DAYI-specific modal/complement syntax is justified. Do not decide AN/EN person grammar, general clause order, interrogatives, tense/future grammar, or L03 curriculum mapping.",
+  "authoritative_lexical_evidence":{
+    "source":"codex-hnk/packages/hnk-linguas/src/index.mjs",
+    "id":"LEX-016",
+    "form":"DAYI",
+    "meaning_pt":"querer / intenção",
+    "meaning_en":"want / intention",
+    "authority":"CANDIDATE",
+    "certainty":"PARTIAL",
+    "lessons":["L03"],
+    "note":"Intention/planning candidate; not silently canonized."
+  },
+  "phonology_already_governed":{
+    "glyph_ids":["G19","G01","G40","G03"],
+    "segmental_ipa":"/d a y i/",
+    "broad_unstressed_form":"/da.y.i/",
+    "G40":"/y/ VOWEL",
+    "adjacent_vowels":"A|Y|I distinct nuclei by careful-pronunciation default",
+    "lexical_stress":"UNRESOLVED"
+  },
+  "syntactic_evidence":{
+    "recovered_phrases_containing_DAYI":0,
+    "direct_attested_DAYI_clause":false,
+    "modal_auxiliary_behavior_recovered":false,
+    "complement_selection_recovered":false,
+    "subject_position_recovered":false,
+    "object_or_infinitive_marker_recovered":false,
+    "future_or_planning_grammar_recovered":false
+  },
+  "analysis":{
+    "safe_conclusion":"The registry supports retaining a PARTIAL CANDIDATE lexical semantic core around desire/want/intention. It does not support a recovered productive modal or complement construction.",
+    "risk":"Promoting DAYI directly to a productive modal would silently create argument structure, complement syntax and likely clause-order assumptions before B14-B16.",
+    "boundary":"Lexical meaning and syntactic productivity are separate governance axes. SUPPORTED != PRODUCTIVE."
+  },
+  "options":[
+    {
+      "id":"B13-OPTION-A",
+      "recommendation":"RECOMMENDED",
+      "decision":"RETAIN_SCOPED_LEXICAL_DESIRE_INTENTION_SEMANTICS_DEFER_ARGUMENT_STRUCTURE",
+      "effect":"Retain DAYI as PARTIAL CANDIDATE with lexical semantic core want/desire/intention; do not approve modal auxiliary status, complement syntax, clause frame, tense/future/planning grammar or productive sentence generation."
+    },
+    {
+      "id":"B13-OPTION-B",
+      "recommendation":"NOT_RECOMMENDED_IN_CURRENT_EVIDENCE",
+      "decision":"AUTHOR_DAYI_AS_MODAL_PREDICATE_WITH_COMPLEMENT_FRAME",
+      "effect":"Would require newly authored argument/complement structure not recovered in the corpus and would pre-empt later clause-order gates."
+    },
+    {
+      "id":"B13-OPTION-C",
+      "recommendation":"AVAILABLE_BUT_OVERLY_RESTRICTIVE",
+      "decision":"REOPEN_DAYI_SEMANTICS_AND_REMOVE_CURRENT_WANT_INTENTION_MAPPING",
+      "effect":"Would discard the existing PARTIAL candidate mapping despite no contradictory evidence requiring removal."
+    }
+  ],
+  "recommended_next_decision":"B13-OPTION-A",
+  "effects_of_review":{
+    "canonical_mutations":0,
+    "semantic_changes":0,
+    "syntax_rules_created":0,
+    "grammar_changes":0,
+    "curriculum_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105"
+}
