@@ -1,0 +1,62 @@
+{
+  "review_id":"SWHNK-HNK-B10-SEMANTIC-FAMILIES-PAR-VAM-SAR-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Evaluate only whether PAR-, VAM-/VAMA- and SAR- should be governed as nonproductive analytical semantic clusters. Do not create standalone roots, new derived words, lexical meanings, grammar, productivity or curriculum changes.",
+  "source_audit":"HNK_LEXICON_MORPHOLOGY_AUDIT_V1.json",
+  "families":[
+    {
+      "family":"PAR-",
+      "forms":["PARAZAMO","PAROVAN","PARAZAMI","PARI"],
+      "audit_strength":"MODERATE",
+      "semantic_observation":"The forms cluster around study/school, library, study/action and seeing/perception, giving a learning/knowledge/perception association stronger than the other broad families.",
+      "boundary":"Internal PAR segmentation is not historically recovered. B8 governs only the closed PARAZAMO/PARAZAMI pair; that does not make PAR- a root or productive morpheme."
+    },
+    {
+      "family":"VAM-/VAMA-",
+      "forms":["VAMAKALA","VAMUSARO","VAMAVALA","VAMAZAMU","VAMATAYA","VAME"],
+      "audit_strength":"LOW_TO_MODERATE",
+      "semantic_observation":"Several forms touch identity, preference, leisure or personal activity, but the semantic range is broad and the surface prefix is not uniform across VAMA-, VAMU- and VAME.",
+      "boundary":"Do not normalize these forms to a single VAM root and do not derive new personal-domain vocabulary from the cluster."
+    },
+    {
+      "family":"SAR-",
+      "forms":["SARADAYA","SARASALA","SAROSARI","SARU","SAROSAL"],
+      "audit_strength":"LOW_TO_MODERATE",
+      "semantic_observation":"Known meanings span origin, time/duration, travel and habituality and can be descriptively grouped as a broad spacetime/trajectory family, but the grouping is too broad to establish a semantic primitive.",
+      "boundary":"SAROSAL remains without recovered gloss. Do not infer its meaning from the family and do not derive temporal, spatial or trajectory vocabulary from SAR-."
+    }
+  ],
+  "anti_oversegmentation_evidence":{
+    "AZAM":["PARAZAMO","PARAZAMI","VAMAZAMU"],
+    "VALA":["VAMAVALA","KALOVALA"],
+    "AYA":["SARADAYA","VAMATAYA"],
+    "finding":"Recurring surface strings cross semantic families, so substring recurrence alone cannot establish a morpheme."
+  },
+  "options":[
+    {
+      "id":"B10-OPTION-A",
+      "decision":"RECOGNIZE_ANALYTICAL_SEMANTIC_CLUSTERS_NOT_MORPHEMES",
+      "recommended":true,
+      "effect":"Govern PAR-, VAM-/VAMA- and SAR- as descriptive analytical families with explicit confidence levels and zero derivational productivity."
+    },
+    {
+      "id":"B10-OPTION-B",
+      "decision":"KEEP_ALL_THREE_AS_UNGOVERNED_DESCRIPTIVE_NOTES",
+      "recommended":false,
+      "effect":"Retain the audit observations but do not give the clusters any governed analytical status."
+    }
+  ],
+  "recommended_decision":"B10-OPTION-A",
+  "boundaries":{
+    "standalone_roots_created":0,
+    "morphemes_created":0,
+    "new_lexemes_created":0,
+    "derivations_licensed":0,
+    "individual_semantics_changed":0,
+    "grammar_changes":0,
+    "curriculum_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V103",
+  "next_gate_if_approved":"B11_VALA_DISPOSITION_HUMAN_GATE"
+}
