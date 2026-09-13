@@ -1,0 +1,186 @@
+{
+  "audit_id": "SWHNK-HNK-PROPOSAL-DEBT-AUDIT-V1",
+  "status": "COMPLETE_AUTHORED_CANDIDATE_AND_PROPOSAL_DEBT_REVIEW_NO_CANON_MUTATION",
+  "date": "2026-09-13",
+  "branch": "audit/hnk-language-sprint-a-20260913",
+  "audit_branch_baseline": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+  "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V95",
+  "canonical_authored_registry": {
+    "repository": "tehknesolutions/codex-hnk",
+    "path": "packages/hnk-linguas/src/authored.mjs",
+    "version": "1.7.0-candidate",
+    "status": "GOVERNED_AUTHORING_CANDIDATES",
+    "candidate_count": 20
+  },
+  "principles": [
+    "Authored CANDIDATE is not historical recovery.",
+    "A valid curriculum use does not by itself promote language authority or productivity.",
+    "A stale rationale or stale phonological annotation does not automatically invalidate the candidate form; it creates review debt.",
+    "Dependencies on GATE/WATCH/unresolved assets must remain machine-visible.",
+    "No candidate may be promoted to broader productivity while a material upstream dependency remains unresolved.",
+    "SUPPORTED != PRODUCTIVE.",
+    "CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR."
+  ],
+  "disposition_model": {
+    "KEEP": "Candidate survives A1-A7 with no material rationale defect; remains CANDIDATE unless separately promoted.",
+    "KEEP_SCOPED": "Candidate remains useful and supported only inside its current governed scope; no global productivity.",
+    "REVIEW": "Candidate may remain registered, but at least one rationale, phonology, semantics or dependency claim requires explicit re-review.",
+    "UNRESOLVED_DEPENDENCY": "Candidate depends materially on a GATE/WATCH/unresolved asset or unapproved rule; no authority/productivity promotion before dependency resolution.",
+    "RATIONALE_WEAKENED": "The candidate can remain as authorship, but the prior corpus-facing derivation no longer carries its original evidentiary weight.",
+    "RETIREMENT_CANDIDATE": "Noncanonical proposal should be archived/superseded unless re-justified after upstream decisions."
+  },
+  "registry_candidate_review": [
+    {
+      "id": "AUTH-001",
+      "form": "KUVAN",
+      "primary_disposition": "KEEP_SCOPED",
+      "secondary_flags": ["UNRESOLVED_DEPENDENCY"],
+      "reason": "Closed-list authored locative interrogative specialization remains compatible with the strongest current -VAN place/location distributional hypothesis and scoped KU evidence.",
+      "current_scope": ["L01", "L02"],
+      "debt": "Its derivational rationale still depends on -VAN remaining inferred and nonproductive; KUVAN must not be cited as proof that VAN is globally productive.",
+      "required_before_broader_promotion": ["B7 -VAN decision", "B15 interrogative architecture decision"]
+    },
+    {
+      "id": "AUTH-002",
+      "form": "VALA",
+      "primary_disposition": "REVIEW",
+      "secondary_flags": ["RATIONALE_WEAKENED"],
+      "reason": "The candidate can survive as newly authored lexical material, but its original activity-noun back-analysis is weakened by FROZEN KALOVALA ending in the same VALA sequence with non-activity meaning.",
+      "current_scope": ["L01"],
+      "debt": "Do not continue describing recovered morphology as supporting simple VALA=activity segmentation. If retained, prefer independent authored-primitive semantics or a new evidence basis.",
+      "required_before_broader_promotion": ["B11 VALA decision"]
+    },
+    {
+      "id": "AUTH-003",
+      "form": "KUON",
+      "primary_disposition": "UNRESOLVED_DEPENDENCY",
+      "secondary_flags": ["REVIEW"],
+      "reason": "KUON remains an authored closed candidate, but it depends on ON=LEX-026 remaining GATE with unresolved generic-person behavior.",
+      "current_scope": ["L01"],
+      "debt": "The earlier HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1 explicitly listed KU+ON as not allowed in v1 while ON remained GATE; later KUON was nevertheless registered. This history needs a superseding decision.",
+      "conditional_retirement": "If ON cannot support the intended human-referent specialization under explicit governance, retire/supersede KUON rather than allowing its course use to back-define ON.",
+      "required_before_broader_promotion": ["B15 interrogative architecture decision with explicit KUON/ON dependency resolution"]
+    },
+    {
+      "id": "AUTH-004",
+      "form": "NE",
+      "primary_disposition": "KEEP_SCOPED",
+      "secondary_flags": [],
+      "reason": "NE was authored as a primitive after semantics were specified, explicitly without historical claim. Current course uses remain scoped and the registry already blocks global productivity.",
+      "current_scope": ["L01", "L02"],
+      "debt": "No material A1-A7 defect; broader negation, answer-particle or tense interaction remains unlicensed.",
+      "required_before_broader_promotion": ["Separate negation productivity gate if ever proposed"]
+    },
+    {"id":"AUTH-005","form":"BIZO","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":0},
+    {"id":"AUTH-006","form":"DUVE","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":1},
+    {
+      "id":"AUTH-007","form":"HOYU","primary_disposition":"REVIEW","secondary_flags":["RATIONALE_WEAKENED"],
+      "reason":"The semantic assignment can remain candidate, but the source generation artifact treated Y as consonantal /j/ and classified HOYU as CVCV. Under authoritative G40=/y/ vowel, that phonological metadata is stale.",
+      "value":2,
+      "debt":"Recompute phonemic shape and whole-word pronunciation only after B1-B4. Do not silently rewrite G40 to G16.",
+      "required_before_broader_promotion":["B1 Y/G40","B2 syllabification","B3 diphthong/glide policy","B4 stress"]
+    },
+    {"id":"AUTH-008","form":"KETI","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":3},
+    {"id":"AUTH-009","form":"LUSO","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":4},
+    {"id":"AUTH-010","form":"MUPI","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":5},
+    {"id":"AUTH-011","form":"NURA","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":6},
+    {"id":"AUTH-012","form":"PEVU","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":7},
+    {"id":"AUTH-013","form":"TOMI","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":8},
+    {"id":"AUTH-014","form":"ZOKA","primary_disposition":"KEEP","secondary_flags":[],"reason":"Independent authored numeral primitive; no historical or numerological claim; no material A1-A7 conflict.","value":9},
+    {
+      "id":"AUTH-015","form":"KALA","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"PHR-001 plus VAMAKALA support a name-domain component mapping, while the registry correctly avoids claiming a historically recovered standalone KALA=name gloss.",
+      "current_scope":["L01"],
+      "debt":"Do not infer productive decomposition of VAMAKALA or extend KALA outside the name domain without new evidence."
+    },
+    {
+      "id":"AUTH-016","form":"AN","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"Recovered phrase distribution strongly supports first-person/referent use. Registry provenance correctly marks the standalone mapping as authored evidence mapping.",
+      "current_scope":["L01","L02"],
+      "debt":"No full person/number paradigm and no automatic L03 inheritance.",
+      "required_before_broader_promotion":["B14 person system scope"]
+    },
+    {
+      "id":"AUTH-017","form":"EN","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"Repeated recovered addressee distribution supports second-person/referent use.",
+      "current_scope":["L01","L02"],
+      "debt":"Subject versus possessive behavior remains unresolved outside approved constructions; PHR-001 alone cannot establish possessive EN.",
+      "required_before_broader_promotion":["B14 person system scope"]
+    },
+    {
+      "id":"AUTH-018","form":"KU","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"Recovered minimal contrast supports interrogative content-selector behavior and the registry correctly refuses one fixed WH gloss.",
+      "current_scope":["L01","L02"],
+      "debt":"No unrestricted compounding or universal WH productivity. KUVAN/KUON remain separately governed closed specializations.",
+      "required_before_broader_promotion":["B15 interrogative architecture"]
+    },
+    {
+      "id":"AUTH-019","form":"KE","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"Strong distributional evidence places KE clause-final in the recovered question-like class and absent from recovered declaratives.",
+      "current_scope":["L01","L02"],
+      "debt":"Do not universalize KE to every HNK question type or derive declaratives by deleting KE.",
+      "required_before_broader_promotion":["B15 interrogative architecture"]
+    },
+    {
+      "id":"AUTH-020","form":"ZAMI","primary_disposition":"KEEP_SCOPED","secondary_flags":[],
+      "reason":"Repeated recovered language-use contexts strongly support speak/use-language predicate semantics in a micro-domain.",
+      "current_scope":["L01"],
+      "debt":"Broader verbal semantics, transitivity and general predicate grammar remain unlicensed."
+    }
+  ],
+  "registry_disposition_counts": {"KEEP":9,"KEEP_SCOPED":8,"REVIEW":2,"UNRESOLVED_DEPENDENCY":1,"total":20,"immediate_retirements":0},
+  "nonregistry_proposal_debt": [
+    {
+      "artifact":"HNK_VANI_RESIDENCE_SEMANTIC_HYPOTHESIS_V1.json","disposition":"UNRESOLVED_DEPENDENCY",
+      "reason":"Residence reading depends on unapproved -VAN locative morphology plus unapproved final-I action morphology; historical VANI gloss remains unrecovered.",
+      "action":"Keep as test hypothesis only; prefer source recovery; otherwise require explicit new semantic-authorship gate after B7/B9/B12."
+    },
+    {
+      "artifact":"HNK_RESIDENCE_VALENCY_RULE_V1.json","disposition":"RETIREMENT_CANDIDATE",
+      "reason":"Experimental rule stacks unresolved VANI semantics, KUON/ON dependency and newly asserted residence/co-resident valency.",
+      "action":"Archive/supersede after B12 and B15 rather than promote. Rebuild only if the underlying lexeme and interrogative decisions survive."
+    },
+    {
+      "artifact":"HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1.json","disposition":"REVIEW",
+      "reason":"Useful closed-list safety model, but its explicit v1 prohibition on KU+ON conflicts with later canonical authored registration of KUON.",
+      "action":"Supersede with V2 after B15; make actual allowed closed compounds and dependency states machine-readable."
+    },
+    {
+      "artifact":"HNK_GRAMMAR_CANDIDATE_V1.json","disposition":"REVIEW",
+      "reason":"Evidence-led core remains useful, but the artifact predates later authored mappings and still lists negation as null and several tokens as recovery targets that now have governed candidate mappings.",
+      "action":"Do not use as current-state authority; supersede with post-A1-A8 grammar evidence snapshot."
+    },
+    {
+      "artifact":"HNK_PHONOTACTIC_PROFILE_V1.md","disposition":"RATIONALE_WEAKENED",
+      "reason":"Orthography-sensitive Y handling inflated the old CV fit and anti-hiatus preference; A6 found no governed word-level phonology.",
+      "action":"Keep as historical authoring prior only; replace with V2 after B1-B6."
+    },
+    {
+      "artifact":"HNK_SPOKEN_NUMERAL_0_9_CANDIDATES_V1.json","disposition":"REVIEW",
+      "reason":"Set-level semantics/provenance remain valid, but all_CVCV and HOYU /hoju/ metadata are false under current G40=/y/ vowel authority.",
+      "action":"Recompute shape/IPA metadata after B1-B4; do not change numeral meanings automatically."
+    },
+    {
+      "artifact":"HNK_CARDINAL_10_99_POSITIONAL_COMPOSITION_V1.json","disposition":"KEEP_SCOPED",
+      "reason":"Explicitly course-scoped, nonhistorical and non-global. Examples using HOYU inherit AUTH-007 phonology debt but the positional numeric interpretation is not invalidated.",
+      "action":"Keep L01-only scope; re-render spoken phonology after HOYU review; no promotion to global number grammar."
+    }
+  ],
+  "cross_candidate_findings": [
+    {"id":"DEBT-001","finding":"The authored registry is generally well-governed: all 20 entries are CANDIDATE and explicitly deny historical recovery.","implication":"A8 recommends targeted repair, not registry reset."},
+    {"id":"DEBT-002","finding":"The strongest surviving evidence-mapped candidates are AN, EN, KU, KE, ZAMI and KALA, but all remain scoped.","implication":"Do not use course repetition to promote them globally."},
+    {"id":"DEBT-003","finding":"KUVAN survives better as a closed authored specialization than as proof of productive KU+VAN morphology.","implication":"Keep candidate/closed until -VAN and interrogative architecture decisions are explicit."},
+    {"id":"DEBT-004","finding":"KUON is the highest dependency-risk registered candidate because ON remains GATE and the earlier compositional rule explicitly excluded KU+ON.","implication":"No broader use or promotion until a superseding B15 decision resolves the dependency."},
+    {"id":"DEBT-005","finding":"VALA is the strongest semantic-rationale debt: the form can remain authored, but recovered morphology no longer provides a clean activity-noun derivation.","implication":"B11 must choose retain-as-primitive, revise semantics/rationale, or retire."},
+    {"id":"DEBT-006","finding":"HOYU is the strongest phonological-metadata debt in the authored registry.","implication":"Numeral semantics can remain; phonology/shape must be revalidated after Y, syllable and stress decisions."},
+    {"id":"DEBT-007","finding":"No immediate deletion is justified by A8.","implication":"Preserve history; use supersession and explicit review gates rather than destructive cleanup."}
+  ],
+  "sprint_b_adjustments": [
+    {"target":"B3","change":"Expand diphthong/glide review beyond DAYI to include HOYU and any other Y-bearing authored forms; old /j/ assumptions must not survive implicitly."},
+    {"target":"B11","change":"Make VALA disposition explicit: retain as independent authored primitive, revise with a new rationale/meaning, or retire."},
+    {"target":"B15","change":"Include KUVAN/KUON closed-compound policy, the ON=GATE dependency and the conflict between HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1 and later KUON registration."},
+    {"target":"B18","change":"Require proposal supersession metadata so stale proposal rationale cannot be mistaken for current language authority."}
+  ],
+  "effects": {"canonical_changes":0,"authored_registry_changes":0,"candidate_deletions":0,"authority_promotions":0,"new_lexemes":0,"new_grammar_rules":0,"productivity_promotions":0,"curriculum_slot_changes":0,"current_main_gate_consumed":false},
+  "next_sprint_a_block": "A9_AUTHORED_REGISTRY_RECONCILIATION_AND_SUPERSESSION_MAP"
+}
