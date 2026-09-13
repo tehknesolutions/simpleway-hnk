@@ -1,0 +1,39 @@
+{
+  "gate_id":"SWHNK-HNK-B8-PARAZAMO-PARAZAMI-LEXICAL-PAIR-MORPHOLOGY-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B8_PARAZAMO_PARAZAMI_LEXICAL_PAIR_MORPHOLOGY_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_PARAZAMO_PARAZAMI_FAMILY_SPECIFIC_INTERNAL_ANALYSIS; DO_NOT_DECIDE_GENERAL_FINAL_I_OR_FINAL_O_MORPHOLOGY_NEW_DERIVATIONS_GRAMMAR_PRODUCTIVITY_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id":"DEC-B8-001",
+    "state":"PENDING",
+    "proposal":"RECOGNIZE_CLOSED_FAMILY_SPECIFIC_FINAL_VOWEL_CONTRAST",
+    "rule":"Recognize PARAZAM- as a governed analytical stem for the PARAZAMO/PARAZAMI family and recognize final O/I as a closed contrast within this pair only. The analysis is NONPRODUCTIVE_CLOSED_PAIR and does not establish a general HNK final-vowel morphology.",
+    "rationale":"PARAZAMO and PARAZAMI share all segments except final O/I and remain in the same study/learning semantic family, making them the strongest current minimal-pair evidence for a family-specific final-vowel contrast. A single pair remains insufficient for language-wide O/I rules.",
+    "provenance":"GOVERNED_FAMILY_SPECIFIC_MORPHOLOGICAL_ANALYSIS_FROM_RECOVERED_DISTRIBUTION_NOT_HISTORICAL_DECOMPOSITION_CLAIM"
+  },
+  "governance_decisions": [
+    {"id":"DEC-B8-002","state":"PENDING","proposal":"Do not create PARAZAM as a standalone lexical entry under B8."},
+    {"id":"DEC-B8-003","state":"PENDING","proposal":"Do not define final O as a general noun/domain marker under B8."},
+    {"id":"DEC-B8-004","state":"PENDING","proposal":"Do not define final I as a general verb/action marker under B8; B9 owns that broader question."},
+    {"id":"DEC-B8-005","state":"PENDING","proposal":"Do not license new PARAZAM+Vowel forms or any productive derivation from this pair."},
+    {"id":"DEC-B8-006","state":"PENDING","proposal":"B8 changes no lexical authority, semantics, grammar, curriculum slots or L03 state; PARAZAMO remains FROZEN and PARAZAMI remains WATCH unless separately governed."}
+  ],
+  "projected_if_approved": {
+    "PARAZAM_family_analysis":"GOVERNED_CLOSED_PAIR",
+    "PARAZAM_analytical_stem":true,
+    "PARAZAM_standalone_lexeme":false,
+    "O_I_contrast_scope":"PARAZAMO_PARAZAMI_ONLY",
+    "productivity":"NONPRODUCTIVE_CLOSED_PAIR",
+    "general_final_O_rule":false,
+    "general_final_I_rule":false,
+    "new_derivations_allowed":false,
+    "authority_changes":0,
+    "semantic_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B9_FINAL_I_STATUS_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V101",
+  "approval_rule":"A future SIGA may approve only DEC-B8-001 through DEC-B8-006 if this gate remains materially unchanged. The same SIGA must not approve B9 or generalize final I/O morphology."
+}
