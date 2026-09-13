@@ -1,0 +1,36 @@
+{
+  "gate_id":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B12_VANI_SEMANTIC_STRATEGY_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_VANI_SEMANTIC_GOVERNANCE_STRATEGY; DO_NOT_ASSIGN_VANI_LIVE_RESIDE_SEMANTICS_DERIVE_VANI_FROM_VAN_PLUS_I_CHANGE_LEXICAL_AUTHORITY_GRAMMAR_OR_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-B12-001",
+    "state":"PENDING",
+    "proposal":"RECOVERY_FIRST_KEEP_GLOSSLESS_WATCH",
+    "rule":"Keep VANI as WATCH with unresolved semantics. Require targeted historical recovery/archaeology before any semantic assignment. If no historical meaning is recovered and a concrete need remains, a separate explicit semantic-authorship gate may later propose a meaning with historicalRecoveryClaim=false.",
+    "rationale":"B7 governs -VAN only as NONPRODUCTIVE_CLOSED_EVIDENCE and B9 governs final -I only as a nonmorphemic distributional tendency. Combining them does not justify VANI=live/reside as recovered semantics.",
+    "provenance":"GOVERNANCE_DECISION_TO_PRESERVE_UNRESOLVED_RECOVERED_FORM_SEMANTICS"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B12-002","state":"PENDING","proposal":"Do not assign morar/residir, live/reside, residence or habitation semantics to VANI under B12."},
+    {"id":"DEC-B12-003","state":"PENDING","proposal":"Do not recognize VAN+I as a productive or nonproductive derivational analysis of VANI from this gate."},
+    {"id":"DEC-B12-004","state":"PENDING","proposal":"Preserve VANI authority WATCH and gloss UNRECOVERED until direct recovery or a separate explicit authorship decision."},
+    {"id":"DEC-B12-005","state":"PENDING","proposal":"If future authorship is considered, it must state historicalRecoveryClaim=false and must not retroactively reinterpret B7 or B9 as productive morphology."},
+    {"id":"DEC-B12-006","state":"PENDING","proposal":"B12 changes no individual lexical semantics, morphology productivity, grammar, authority levels, or curriculum slots."}
+  ],
+  "projected_if_approved":{
+    "VANI_authority":"WATCH_UNCHANGED",
+    "VANI_semantics":"UNRESOLVED",
+    "VANI_live_reside_assigned":false,
+    "VAN_plus_I_derivation_approved":false,
+    "historicalRecoveryClaim_created":false,
+    "semantic_changes":0,
+    "authority_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B13_DAYI_SEMANTICS_AND_SYNTAX_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104",
+  "approval_rule":"A future SIGA may approve only DEC-B12-001 through DEC-B12-006 if this gate remains materially unchanged. The same SIGA must not approve B13 or assign any VANI meaning."
+}
