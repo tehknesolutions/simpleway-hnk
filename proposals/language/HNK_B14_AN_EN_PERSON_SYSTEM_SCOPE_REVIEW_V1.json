@@ -1,0 +1,67 @@
+{
+  "review_id":"SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Evaluate whether AN and EN can be governed as a narrowly scoped first-person / second-person referential pair without creating a full pronoun paradigm, subject grammar, possessive grammar, agreement or person-number morphology.",
+  "evidence":{
+    "AN":[
+      {"phrase":"AN ZAMI ZAMO","source":"PHR-002","gloss":"Eu falo / uso linguagem.","certainty":"APPROXIMATE","observation":"AN occurs in the position compatible with the speaker/self referent."},
+      {"phrase":"AN ZAMI HENUVOKODAN","source":"PHR-007","gloss":null,"certainty":"UNRECOVERED","observation":"AN repeats in a declarative language-use frame structurally parallel to PHR-002."}
+    ],
+    "EN":[
+      {"phrase":"EN ZAMI HENUVOKODAN KE","source":"PHR-003","gloss":"Você fala HENUVOKODAN?","certainty":"APPROXIMATE","observation":"EN is compatible with the addressee/second-person referent."},
+      {"phrase":"EN SARI LO KU KE","source":"PHR-004","gloss":null,"certainty":"UNRECOVERED","observation":"EN repeats in an interrogative-like addressee position."},
+      {"phrase":"EN DA KU KE","source":"PHR-005","gloss":null,"certainty":"UNRECOVERED","observation":"EN repeats in an interrogative-like addressee position."},
+      {"phrase":"EN ZAMI KU ZAMO KE","source":"PHR-006","gloss":null,"certainty":"UNRECOVERED","observation":"EN repeats before the language-use predicate in an interrogative frame."},
+      {"phrase":"KALA YA EN ES KU KE","source":"PHR-001","gloss":"Qual é o seu nome?","certainty":"APPROXIMATE","observation":"EN occurs inside a name-question frame whose translation contains second-person possession, but the exact internal syntactic contribution of EN is not independently recovered."}
+    ],
+    "existing_authored_mappings":{
+      "AN":"AUTH-016: first-person referent / I for scoped beginner use; CLOSED_LIST_ONLY",
+      "EN":"AUTH-017: second-person referent / you for scoped beginner use; CLOSED_LIST_ONLY"
+    }
+  },
+  "findings":[
+    "AN has repeated distribution compatible with a first-person speaker/self referent.",
+    "EN has repeated distribution compatible with a second-person addressee referent.",
+    "The corpus does not recover a full person/number paradigm.",
+    "The corpus does not establish subject versus object case, possessive morphology, agreement, gender, plural, politeness or clusivity.",
+    "PHR-001 does not by itself prove that EN is a possessive pronoun; translation-level possession must not be projected into HNK syntax.",
+    "Existing AUTH-016/AUTH-017 already govern narrow person-reference mappings, so B14 can clarify scope without promoting lexical authority."
+  ],
+  "options":[
+    {
+      "id":"B14-OPTION-A",
+      "label":"SCOPED_PERSON_REFERENT_PAIR_NO_PARADIGM",
+      "recommended":true,
+      "effect":"Govern AN as first-person speaker/self referent and EN as second-person addressee referent in already-scoped beginner/attested domains. Do not define them as a complete pronoun paradigm or assign subject/possessive/case behavior outside separately governed constructions."
+    },
+    {
+      "id":"B14-OPTION-B",
+      "label":"PROMOTE_TO_GENERAL_PRONOUN_PARADIGM",
+      "recommended":false,
+      "risk":"Would overgeneralize from a small phrase corpus and incorrectly infer subject/possessive/case behavior."
+    },
+    {
+      "id":"B14-OPTION-C",
+      "label":"KEEP_PERSON_REFERENCE_ENTIRELY_UNRESOLVED",
+      "recommended":false,
+      "risk":"Would discard repeated distribution plus already-governed AUTH-016/AUTH-017 mappings without new contrary evidence."
+    }
+  ],
+  "recommendation":{
+    "option":"B14-OPTION-A",
+    "provenance":"GOVERNED_SCOPED_FUNCTIONAL_MAPPING_FROM_DISTRIBUTIONAL_EVIDENCE_NOT_HISTORICAL_FULL_PRONOUN_PARADIGM_RECOVERY",
+    "boundaries":[
+      "No full pronoun paradigm.",
+      "No grammatical subject category assigned by B14.",
+      "No possessive grammar assigned to EN from PHR-001.",
+      "No object/case system.",
+      "No singular/plural morphology beyond the narrow person-reference interpretation.",
+      "No gender, politeness, clusivity, agreement or pro-drop rules.",
+      "No general clause order; B16 owns that question.",
+      "No interrogative architecture; B15 owns KU/KE/KUVAN/KUON."
+    ]
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+  "next":"PREPARE_B14_HUMAN_GATE"
+}
