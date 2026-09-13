@@ -1,0 +1,35 @@
+{
+  "gate_id":"SWHNK-HNK-B2-SYLLABLE-STRUCTURE-ADJACENT-VOWELS-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B2_SYLLABLE_STRUCTURE_ADJACENT_VOWELS_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_POLICY_FOR_ADJACENT_VOWEL_SEQUENCES_AND_INITIAL_SYLLABLE_STRUCTURE_BOUNDARY; DO_NOT_DECIDE_DIPHTHONG_INVENTORY_GLIDE_FORMATION_STRESS_ROMANIZATION_DAYI_SEMANTICS_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id":"DEC-B2-001",
+    "state":"PENDING",
+    "proposal":"ALLOW_ADJACENT_VOWEL_SEQUENCES_DEFER_EXACT_SYLLABIFICATION",
+    "rule":"HNK lexical forms may contain adjacent vowel phonemes, including VVV sequences. Exact syllable boundaries and hiatus/diphthong/glide realization remain unresolved until later gates.",
+    "rationale":"FROZEN SARADAYA and TAYOVAN contain adjacent vowel sequences under affirmed G40=/y/; therefore a blanket ban on adjacent vowels is not compatible with stable corpus evidence."
+  },
+  "governance_decisions": [
+    {"id":"DEC-B2-002","state":"PENDING","proposal":"Do not define a diphthong inventory in B2."},
+    {"id":"DEC-B2-003","state":"PENDING","proposal":"Do not define glide formation or allophonic /j/ in B2."},
+    {"id":"DEC-B2-004","state":"PENDING","proposal":"Do not assign lexical stress or canonical whole-word pronunciation in B2."},
+    {"id":"DEC-B2-005","state":"PENDING","proposal":"Treat the old blanket 'avoid hiatus' preference as historical authoring prior, not canonical phonological law."},
+    {"id":"DEC-B2-006","state":"PENDING","proposal":"B2 changes no phoneme identities, semantics, morphology, grammar, productivity or curriculum slots."}
+  ],
+  "projected_if_approved": {
+    "adjacent_vowel_sequences_allowed":true,
+    "VVV_sequences_allowed":true,
+    "exact_syllabification":"UNRESOLVED",
+    "hiatus_vs_diphthong":"UNRESOLVED",
+    "glide_formation":"UNRESOLVED",
+    "lexical_stress":"UNRESOLVED",
+    "DAYI_whole_word_pronunciation":"UNRESOLVED",
+    "canonical_phoneme_mutations":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B3_DIPHTHONG_GLIDE_FORMATION_Y_BEARING_WORDS_HUMAN_GATE"
+  },
+  "approval_rule":"A future SIGA may approve only DEC-B2-001 through DEC-B2-006 if this gate remains materially unchanged. The same SIGA must not approve B3."
+}
