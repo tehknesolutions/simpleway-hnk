@@ -1,0 +1,32 @@
+{
+  "gate_id":"SWHNK-HNK-B5-ROMANIZATION-COVERAGE-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B5_ROMANIZATION_COVERAGE_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_ROMANIZATION_COVERAGE_ARCHITECTURE; DO_NOT_ASSIGN_NEW_LATIN_UNITS_CHANGE_PHONEMES_STRESS_DAYI_SEMANTICS_MORPHOLOGY_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id":"DEC-B5-001",
+    "state":"PENDING",
+    "proposal":"DUAL_LAYER_PRESERVE_20_USE_GID_FALLBACK",
+    "rule":"Preserve the 20 existing governed safe romanizations unchanged. For the 20 currently unmapped G-IDs, use G-ID as the canonical lossless representation until a separately governed extended-romanization/orthography design assigns human-facing Latin or ASCII forms.",
+    "rationale":"The language already has complete 40/40 G-ID+IPA authority, while no recovered safe Latin convention exists for the remaining 20. Deferring new tokens avoids arbitrary orthography and protects B1-B4 phonological distinctions."
+  },
+  "governance_decisions": [
+    {"id":"DEC-B5-002","state":"PENDING","proposal":"Do not change any of the current 20 safe mappings."},
+    {"id":"DEC-B5-003","state":"PENDING","proposal":"Do not assign Y to G16 /j/; Y remains G40 /y/."},
+    {"id":"DEC-B5-004","state":"PENDING","proposal":"Do not invent new digraphs/diacritics merely to reach 40/40 Latin coverage in B5."},
+    {"id":"DEC-B5-005","state":"PENDING","proposal":"Any future extended romanization must pass collision, reversibility, keyboard/input and typography review and remain subordinate to G-ID/IPA authority."},
+    {"id":"DEC-B5-006","state":"PENDING","proposal":"B5 changes no phoneme identities, lexical stress assignments, semantics, morphology, grammar, productivity or curriculum slots."}
+  ],
+  "projected_if_approved": {
+    "safe_romanization_human_mapped":"20/40",
+    "lossless_gid_coverage":"40/40",
+    "existing_safe_mappings_changed":0,
+    "new_safe_units_created":0,
+    "G16_safe_romanization":"UNRESOLVED",
+    "G40_safe_romanization":"Y_UNCHANGED",
+    "next_phase":"PREPARE_B6_PHONOTACTIC_PROFILE_V2_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100",
+  "approval_rule":"A future SIGA may approve only DEC-B5-001 through DEC-B5-006 if this gate remains materially unchanged. The same SIGA must not approve B6 or assign any of the 20 unresolved romanization units."
+}
