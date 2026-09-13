@@ -1,25 +1,27 @@
 {
   "gate_id":"SWHNK-HNK-B13-DAYI-SEMANTICS-SYNTAX-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B13_GATE",
   "source_review":"HNK_B13_DAYI_SEMANTICS_SYNTAX_REVIEW_V1.json",
   "decision_scope":"APPROVE_OR_REVISE_ONLY_DAYI_LEXICAL_SEMANTIC_STATUS_AND_DAYI_SPECIFIC_SYNTAX_BOUNDARY; DO_NOT_DECIDE_AN_EN_PERSON_GRAMMAR_GENERAL_CLAUSE_ORDER_INTERROGATIVES_TENSE_FUTURE_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
-  "proposed_decision":{
+  "approved_decision":{
     "id":"DEC-B13-001",
-    "state":"PENDING",
-    "proposal":"RETAIN_SCOPED_LEXICAL_DESIRE_INTENTION_SEMANTICS_DEFER_ARGUMENT_STRUCTURE",
+    "state":"APPROVED",
+    "decision":"RETAIN_SCOPED_LEXICAL_DESIRE_INTENTION_SEMANTICS_DEFER_ARGUMENT_STRUCTURE",
     "rule":"Retain DAYI as a PARTIAL CANDIDATE with lexical semantic core want / desire / intention. Do not approve DAYI as a productive modal auxiliary or modal predicate with governed complement structure. DAYI argument structure and sentence-level syntax remain unresolved pending later grammar gates.",
     "rationale":"LEX-016 already carries a PARTIAL want/intention mapping, but no recovered phrase contains DAYI and no modal/complement syntax is attested. Retaining lexical semantics while deferring syntax preserves evidence without inventing grammar.",
     "provenance":"GOVERNANCE_OF_EXISTING_PARTIAL_LEXICAL_CANDIDATE_WITH_SYNTAX_DEFERRED_NOT_HISTORICAL_MODAL_RECOVERY"
   },
   "governance_decisions":[
-    {"id":"DEC-B13-002","state":"PENDING","proposal":"Keep DAYI authority CANDIDATE and certainty PARTIAL; do not promote lexical authority under B13."},
-    {"id":"DEC-B13-003","state":"PENDING","proposal":"Do not create DAYI modal-auxiliary status, bare-complement syntax, infinitival syntax or complement markers under B13."},
-    {"id":"DEC-B13-004","state":"PENDING","proposal":"Do not create tense, future, planning or intention-clause grammar from the English/Portuguese glosses."},
-    {"id":"DEC-B13-005","state":"PENDING","proposal":"Preserve B1-B4 phonology: DAYI broad form /da.y.i/ is usable for analysis, but lexical stress remains unresolved and B13 does not change pronunciation."},
-    {"id":"DEC-B13-006","state":"PENDING","proposal":"B13 changes no AN/EN person system, general clause order, interrogative grammar, productivity, lexical authority of other forms, or curriculum slots."}
+    {"id":"DEC-B13-002","state":"APPROVED","decision":"Keep DAYI authority CANDIDATE and certainty PARTIAL; do not promote lexical authority under B13."},
+    {"id":"DEC-B13-003","state":"APPROVED","decision":"Do not create DAYI modal-auxiliary status, bare-complement syntax, infinitival syntax or complement markers under B13."},
+    {"id":"DEC-B13-004","state":"APPROVED","decision":"Do not create tense, future, planning or intention-clause grammar from the English/Portuguese glosses."},
+    {"id":"DEC-B13-005","state":"APPROVED","decision":"Preserve B1-B4 phonology: DAYI broad form /da.y.i/ is usable for analysis, but lexical stress remains unresolved and B13 does not change pronunciation."},
+    {"id":"DEC-B13-006","state":"APPROVED","decision":"B13 changes no AN/EN person system, general clause order, interrogative grammar, productivity, lexical authority of other forms, or curriculum slots."}
   ],
-  "projected_if_approved":{
+  "effects":{
     "DAYI_authority":"CANDIDATE_UNCHANGED",
     "DAYI_certainty":"PARTIAL_UNCHANGED",
     "DAYI_semantic_core":"WANT_DESIRE_INTENTION_SCOPED_LEXICAL_CANDIDATE",
@@ -31,9 +33,15 @@
     "semantic_authority_promotions":0,
     "new_syntax_rules":0,
     "grammar_changes":0,
-    "curriculum_changes":0,
-    "next_phase":"PREPARE_B14_AN_EN_PERSON_SYSTEM_SCOPE_HUMAN_GATE"
+    "curriculum_changes":0
   },
-  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
-  "approval_rule":"A future SIGA may approve only DEC-B13-001 through DEC-B13-006 if this gate remains materially unchanged. The same SIGA must not approve B14, create DAYI complement syntax, or alter L03 curriculum."
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+    "context_place_candidate_validated":true,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B13":false
+  },
+  "next_phase":"B14_AN_EN_PERSON_SYSTEM_SCOPE_HUMAN_GATE",
+  "same_approval_must_not_approve_B14_create_DAYI_complement_syntax_or_alter_L03_curriculum":true
 }
