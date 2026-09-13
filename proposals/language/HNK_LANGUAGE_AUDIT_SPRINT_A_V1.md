@@ -3,7 +3,7 @@
 **Sprint ID:** `SWHNK-LANGUAGE-AUDIT-SPRINT-A-V1`  
 **State:** `ACTIVE / AUDIT_FIRST / NO_CANON_MUTATION`  
 **Audit baseline:** `SWHNK-C1-PROGRESS-SNAPSHOT-V93`  
-**Latest main observed:** `SWHNK-C1-PROGRESS-SNAPSHOT-V96`  
+**Latest main observed:** `SWHNK-C1-PROGRESS-SNAPSHOT-V97`  
 **Branch:** `audit/hnk-language-sprint-a-20260913`
 
 ## Purpose
@@ -17,6 +17,7 @@ Audit the HNK language already present before further language authoring is allo
 - `SUPPORTED != PRODUCTIVE`.
 - `CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR`.
 - A stale proposal rationale creates review/supersession debt; it does not silently mutate or delete a canonical authored candidate.
+- Proposal lifecycle and canonical language authority are separate: historical proposal files may remain preserved without continuing to function as current authority.
 
 ## Completed blocks
 
@@ -91,36 +92,61 @@ Primary dispositions:
 - immediate canonical deletions: 0.
 
 High-priority debt:
-- `VALA`: candidate may remain, but prior corpus-facing activity-noun rationale is weakened by `KALOVALA`; B11 must retain-as-primitive, revise or retire/supersede.
-- `KUON`: depends on `ON=LEX-026 GATE`, and an earlier compositional rule explicitly prohibited `KU+ON` before KUON was later registered; B15 must supersede/reconcile this history.
-- `HOYU`: old generation metadata treated `Y` as consonantal `/j/` and labeled the word `CVCV`; under G40 `/y/` vowel, phonology metadata is stale. Numeral semantics can remain pending B1-B4.
-- `KUVAN`: survives as a closed authored specialization, not as proof of productive `VAN` morphology.
-- `AN/EN/KU/KE/ZAMI/KALA/NE`: survive in current governed scopes; none becomes globally productive through course repetition.
+- `VALA`: prior corpus-facing activity-noun rationale weakened by `KALOVALA`.
+- `KUON`: dependency on `ON=LEX-026 GATE` plus historical conflict with the earlier compositional rule.
+- `HOYU`: old generation metadata treated `Y` as consonantal `/j/` and called the form `CVCV`.
+- `KUVAN`: survives as a closed authored specialization, not proof of productive `VAN` morphology.
 
-Proposal-level supersession debt includes the experimental residence-valency rule, compositional interrogative V1, old grammar candidate snapshot, phonotactic profile V1 and old numeral-generation phonology metadata.
+### A9 — authored registry reconciliation + proposal supersession map
+Artifact: `HNK_AUTHORED_REGISTRY_RECONCILIATION_SUPERSESSION_MAP_V1.json`.
 
-A8 conclusion: targeted repair and explicit supersession metadata are preferable to registry reset/deletion.
+A9 converts A1-A8 findings into a non-mutating maintenance plan.
 
-## Concurrency reconciliation — main V96
-While A8 was being finalized, `main` advanced independently from V95 to `SWHNK-C1-PROGRESS-SNAPSHOT-V96`.
+Canonical authored registry reconciliation:
+- `CURRENT` 9: BIZO, DUVE, KETI, LUSO, MUPI, NURA, PEVU, TOMI, ZOKA.
+- `CURRENT_SCOPED` 8: KUVAN, NE, KALA, AN, EN, KU, KE, ZAMI.
+- `REVIEW_REQUIRED` 2: VALA, HOYU.
+- `DEPENDENCY_BLOCKED` 1: KUON.
+- immediate deletions: 0.
+- authority promotions: 0.
 
-Observed concurrent transition:
-- `[ACTIVITY_LEXEME] -> VALI | PARAZAMI` became `SCOPED_PRODUCTIVE` only for `L03_CONTROLLED_ACTIVITY_CONTEXT_ONLY`;
-- the candidate remains non-universal;
-- no new HNK forms were created;
-- no curriculum slots were mapped;
-- implementation counts remained GLOBAL `703/0/305` and L03 `128/0/11`;
-- Sprint A neither created nor approved that productivity promotion.
+Lifecycle model prepared for future approval:
+- `CURRENT`
+- `CURRENT_SCOPED`
+- `REVIEW_REQUIRED`
+- `DEPENDENCY_BLOCKED`
+- `HISTORICAL_PRIOR`
+- `SUPERSEDED_BY`
+- `RETIRED_PROPOSAL`
+- `AUDIT_ONLY`
 
-The current `main` human gate is now `SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CURRICULUM-MAPPING-ELIGIBILITY-HUMAN-BATCH-V1`. Sprint A has not consumed it.
+High-value supersession decisions prepared:
+- `HNK_PHONOTACTIC_PROFILE_V1.md` -> `HISTORICAL_PRIOR`, future V2 only after B1-B6.
+- `HNK_GRAMMAR_CANDIDATE_V1.json` -> `HISTORICAL_PRIOR`, superseded as current evidence snapshot by A5 plus later Sprint B decisions.
+- `HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1.json` -> `REVIEW_REQUIRED_SUPERSESSION_PLANNED`, because its KU+ON prohibition conflicts with later canonical KUON registration.
+- `HNK_RESIDENCE_VALENCY_RULE_V1.json` -> `RETIRED_PROPOSAL_CANDIDATE`, because it stacks unresolved VANI, KUON/ON and valency assumptions.
+- old numeral candidate-generation artifact -> `REVIEW_REQUIRED` for Y-sensitive phonology metadata; numeral semantics remain independent.
 
-Audit policy after V96: do not auto-rollback the concurrent main transition, but do not treat it as an audit endorsement either. A9 must reconcile the already-applied scoped productivity against A1-A8 before any curriculum mapping eligibility decision is consumed.
+A9 patch planning only: no registry schema/type field has been changed. Future fields such as `sourceProvenance`, `lifecycleState`, `rationaleState`, `dependencies`, `productivityLevel` and `scope` require their owning Sprint B governance decisions first.
 
-See `HNK_LANGUAGE_AUDIT_CONCURRENCY_NOTE_V4.json`.
+## Concurrency reconciliation — main V97
+While A9 was running, `main` advanced independently to `SWHNK-C1-PROGRESS-SNAPSHOT-V97`.
 
-## Remaining Sprint A blocks
-- **A9 — authored-registry reconciliation + proposal supersession map:** define exact metadata/patch plan for A1-A8 findings, including V96, without mutating canon yet.
-- **A10 — final Sprint A consolidation:** freeze findings, dependency graph and ordered Sprint B human gates.
+Observed concurrent state:
+- `[ACTIVITY_LEXEME] -> VALI | PARAZAMI` remains `SCOPED_PRODUCTIVE` for `L03_CONTROLLED_ACTIVITY_CONTEXT_ONLY`;
+- curriculum mapping eligibility is now approved for `STRUCTURES_ONLY`;
+- exact proposed slot is `STR001`;
+- actual curriculum mapping remains false;
+- curriculum slot assignments remain 0;
+- implementation counts remain GLOBAL `703/0/305` and L03 `128/0/11`;
+- Sprint A did not create or approve the productivity or mapping-eligibility transitions.
+
+The current `main` gate is `SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-STRUCTURES-EXACT-SLOT-MAPPING-HUMAN-BATCH-V1`. Sprint A has not consumed it.
+
+See `HNK_LANGUAGE_AUDIT_CONCURRENCY_NOTE_V5.json`.
+
+## Remaining Sprint A block
+- **A10 — final Sprint A consolidation:** freeze findings, dependency graph, risk register and ordered Sprint B human-gate plan. A10 must not itself mutate canon or consume the V97 STR001 gate.
 
 ## Current boundary
-Sprint A has completed A1-A8. It has made **0 canonical mutations, 0 authority promotions, 0 candidate deletions, 0 grammar promotions and 0 curriculum slot assignments**. The next audit action is A9, not consumption of the V96 curriculum-mapping gate.
+Sprint A has completed A1-A9. It has made **0 canonical mutations, 0 authority promotions, 0 candidate deletions, 0 phonology/grammar promotions and 0 curriculum slot assignments**. The next audit action is A10 final consolidation.
