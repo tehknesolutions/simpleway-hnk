@@ -1,15 +1,17 @@
 {
   "gate_id":"SWHNK-HNK-B6-PHONOTACTIC-PROFILE-V2-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B6_GATE",
   "source_review":"HNK_B6_PHONOTACTIC_PROFILE_V2_REVIEW_V1.json",
   "source_profile":"HNK_PHONOTACTIC_PROFILE_V2_DRAFT.md",
   "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_LAYERED_PHONOTACTIC_PROFILE_V2; DO_NOT_ASSIGN_WORD_SPECIFIC_STRESS_NEW_ROMANIZATION_UNITS_MORPHOLOGY_DAYI_SEMANTICS_GRAMMAR_PRODUCTIVITY_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
-  "proposed_decision": {
+  "approved_decision": {
     "id":"DEC-B6-001",
-    "state":"PENDING",
-    "proposal":"APPROVE_LAYERED_PHONOTACTIC_PROFILE_V2",
-    "rule":"Adopt HNK_PHONOTACTIC_PROFILE_V2_DRAFT as the current governed phonotactic/authoring profile, explicitly separating corpus facts, B1-B5 governed phonological rules and optional authoring preferences.",
+    "state":"APPROVED",
+    "decision":"APPROVE_LAYERED_PHONOTACTIC_PROFILE_V2",
+    "rule":"Adopt HNK_PHONOTACTIC_PROFILE_V2 as the current governed phonotactic/authoring profile, explicitly separating corpus facts, B1-B5 governed phonological rules and optional authoring preferences.",
     "v1_effect":"HNK_PHONOTACTIC_PROFILE_V1 becomes HISTORICAL_PRIOR and remains preserved for provenance.",
     "strict_profile_audit_value":"26/33 under authoritative phoneme classes",
     "CV_status":"STATISTICAL_AUTHORING_PREFERENCE_NOT_LANGUAGE_LAW",
@@ -20,13 +22,13 @@
     "romanization_architecture":"20/40 governed human mappings + 40/40 G-ID fallback"
   },
   "governance_decisions": [
-    {"id":"DEC-B6-002","state":"PENDING","proposal":"Do not create mandatory CV alternation or ban initial vowels/internal clusters; evaluate non-CV shapes case-by-case."},
-    {"id":"DEC-B6-003","state":"PENDING","proposal":"Do not restore the old avoid-hiatus preference; adjacent vowels are legitimate under B2/B3."},
-    {"id":"DEC-B6-004","state":"PENDING","proposal":"Retain TS/G30 atomic treatment, final-consonant compatibility, bridge separation and collision checking as compatible profile principles."},
-    {"id":"DEC-B6-005","state":"PENDING","proposal":"Do not assign word-specific stress or any unresolved romanization unit in B6."},
-    {"id":"DEC-B6-006","state":"PENDING","proposal":"B6 changes no semantics, morphology, grammar, productivity or curriculum slots."}
+    {"id":"DEC-B6-002","state":"APPROVED","decision":"Do not create mandatory CV alternation or ban initial vowels/internal clusters; evaluate non-CV shapes case-by-case."},
+    {"id":"DEC-B6-003","state":"APPROVED","decision":"Do not restore the old avoid-hiatus preference; adjacent vowels are legitimate under B2/B3."},
+    {"id":"DEC-B6-004","state":"APPROVED","decision":"Retain TS/G30 atomic treatment, final-consonant compatibility, bridge separation and collision checking as compatible profile principles."},
+    {"id":"DEC-B6-005","state":"APPROVED","decision":"Do not assign word-specific stress or any unresolved romanization unit in B6."},
+    {"id":"DEC-B6-006","state":"APPROVED","decision":"B6 changes no semantics, morphology, grammar, productivity or curriculum slots."}
   ],
-  "projected_if_approved": {
+  "effects": {
     "phonotactic_profile_current":"V2",
     "phonotactic_profile_v1":"HISTORICAL_PRIOR",
     "new_phoneme_mutations":0,
@@ -34,9 +36,14 @@
     "new_romanization_units":0,
     "new_morphology_rules":0,
     "new_grammar_rules":0,
-    "curriculum_changes":0,
-    "next_phase":"PREPARE_B7_VAN_PLACE_LOCATION_MORPHOLOGY_HUMAN_GATE"
+    "curriculum_changes":0
   },
-  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100",
-  "approval_rule":"A future SIGA may approve only DEC-B6-001 through DEC-B6-006 if this gate remains materially unchanged. The same SIGA must not approve B7 or promote -VAN morphology."
+  "concurrency_observation": {
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100",
+    "STR001_authored":true,
+    "STR001_validated":false,
+    "attributed_to_B6":false
+  },
+  "next_phase":"B7_VAN_PLACE_LOCATION_MORPHOLOGY_HUMAN_GATE",
+  "same_approval_must_not_approve_B7_or_promote_VAN_morphology":true
 }
