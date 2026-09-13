@@ -1,0 +1,25 @@
+{
+  "transition_id":"SWHNK-HNK-B3-DIPHTHONG-GLIDE-Y-BEARING-PRONUNCIATION-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_B3_POLICY_ONLY_NO_STRESS_NO_SEMANTICS_NO_CURRICULUM",
+  "date":"2026-09-13",
+  "source_gate":"HNK_B3_DIPHTHONG_GLIDE_Y_BEARING_PRONUNCIATION_HUMAN_GATE_V1.json",
+  "approved_effects": {
+    "adjacent_vowels_default":"DISTINCT_VOWEL_NUCLEI_FOR_CAREFUL_PRONUNCIATION",
+    "automatic_G40_y_to_G16_j":false,
+    "productive_diphthong_inventory_created":false,
+    "DAYI_nuclei":"A|Y|I"
+  },
+  "preserved_unresolved": [
+    "lexical stress",
+    "publishable whole-word pronunciation",
+    "fast-speech allophony",
+    "G16 romanization",
+    "DAYI semantics and syntax",
+    "HOYU numeral semantics",
+    "L03 curriculum"
+  ],
+  "canonical_phoneme_mutations":0,
+  "grammar_changes":0,
+  "curriculum_changes":0,
+  "next_gate":"SWHNK-HNK-B4-LEXICAL-STRESS-WHOLE-WORD-PRONUNCIATION-HUMAN-GATE-V1"
+}
