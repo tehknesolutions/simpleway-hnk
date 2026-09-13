@@ -1,0 +1,39 @@
+{
+  "gate_id":"SWHNK-HNK-B9-FINAL-I-STATUS-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B9_FINAL_I_STATUS_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_GENERAL_ANALYTICAL_STATUS_OF_WORD_FINAL_I; DO_NOT_ASSIGN_VANI_OR_VANUVALI_SEMANTICS_CREATE_NEW_I_DERIVATIONS_DEFINE_PARTS_OF_SPEECH_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-B9-001",
+    "state":"PENDING",
+    "proposal":"RECOGNIZE_DISTRIBUTIONAL_ACTION_VERBAL_TENDENCY_NOT_MORPHEME",
+    "rule":"Record word-final -I as a governed distributional tendency associated with action/verb-like, modal or intentional readings in the audited known-meaning corpus. Do not recognize -I as a general morpheme, suffix or productive derivational rule.",
+    "evidence_forms":["VALI","PARAZAMI","PARI","DAYI","SALI","SAROSARI"],
+    "unknown_gloss_I_final_forms":["VANI","VANUVALI"],
+    "rationale":"The correlation is strong across known-meaning I-final forms, but only PARAZAMO/PARAZAMI directly isolates a final-vowel contrast within one stem family. The current corpus therefore supports a governed tendency more strongly than a language-wide morpheme.",
+    "provenance":"GOVERNED_DISTRIBUTIONAL_GENERALIZATION_NOT_HISTORICAL_MORPHEME_RECOVERY"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B9-002","state":"PENDING","proposal":"Do not license productive or nonproductive X+I derivation from B9."},
+    {"id":"DEC-B9-003","state":"PENDING","proposal":"Do not infer VANI or VANUVALI meanings from final I."},
+    {"id":"DEC-B9-004","state":"PENDING","proposal":"Preserve B8 PARAZAMO/PARAZAMI as the only currently governed family-specific O/I morphological contrast."},
+    {"id":"DEC-B9-005","state":"PENDING","proposal":"Do not create a universal noun/verb or part-of-speech morphology under B9."},
+    {"id":"DEC-B9-006","state":"PENDING","proposal":"B9 changes no lexical authority, grammar, productivity, semantics of individual forms, or curriculum slots."}
+  ],
+  "projected_if_approved":{
+    "final_I_status":"GOVERNED_DISTRIBUTIONAL_ACTION_VERBAL_TENDENCY_NOT_MORPHEME",
+    "final_I_productivity":"NONE",
+    "new_I_derivations_allowed":false,
+    "VANI_semantics":"UNRESOLVED",
+    "VANUVALI_semantics":"UNRESOLVED",
+    "part_of_speech_system_created":false,
+    "authority_changes":0,
+    "semantic_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B10_SEMANTIC_FAMILIES_PAR_VAM_SAR_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V102",
+  "approval_rule":"A future SIGA may approve only DEC-B9-001 through DEC-B9-006 if this gate remains materially unchanged. The same SIGA must not approve B10, infer VANI/VANUVALI meanings, or create any X+I derivation."
+}
