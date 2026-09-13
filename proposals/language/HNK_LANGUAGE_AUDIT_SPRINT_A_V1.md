@@ -65,12 +65,21 @@ Current authored specializations `KUVAN`, `KUON` and `NE` are closed/scoped cand
 
 The V93 L03 candidate `[ACTIVITY_LEXEME] -> VALI | PARAZAMI` is structurally compatible with the audit boundaries because it explicitly creates no person, tense, aspect, modality, zero-pronoun or universal bare-predicate rule. Its claim of contextual completeness remains a separate scoped validation question; Sprint A does not validate it.
 
+### A6 — word-level phonology
+Artifact: `HNK_WORD_LEVEL_PHONOLOGY_AUDIT_V1.json`.
+
+Key findings:
+- no governed source rule was recovered for syllabification, lexical stress, hiatus/diphthong assignment, glide formation, vowel coalescence, allophony or connected speech;
+- `SARADAYA` and `TAYOVAN` are FROZEN native forms containing three adjacent vowel phonemes once `Y` is correctly classified as G40 `/y/`;
+- `DAYI` is segmentally `/d a y i/`, but its syllable count, stress and vowel-sequence realization remain unresolved;
+- the old `HNK_PHONOTACTIC_PROFILE_V1` remains useful as an historical authoring prior, but its `30/33` CV count and default anti-hiatus recommendation have known orthographic bias and must not be treated as recovered phonological law;
+- a V2 phonotactic profile must be built only after explicit decisions on G40/Y, syllabification, diphthongs/glides and stress.
+
 ## Remaining Sprint A blocks
-- word-level phonology: syllabification, stress, hiatus/diphthong, glide formation, allophony, connected speech;
 - curriculum-vs-language assumption audit across L01-L03;
-- proposal-debt review for older candidates depending on unresolved morphology or token semantics;
-- reconcile authored registry candidates against the audit findings;
-- consolidate all required human choices into Sprint B.
+- proposal-debt review for older candidates depending on unresolved morphology, phonology or token semantics;
+- reconcile authored registry candidates against all completed audit findings;
+- consolidate all required human choices into Sprint B and order decision gates.
 
 ## Current main-state boundary
-`main` is at V93 with one newly authored L03 candidate `[ACTIVITY_LEXEME]`, realizations `VALI`/`PARAZAMI`, awaiting validation. Sprint A neither created nor validates that candidate.
+Baseline used by this audit branch is V93 with one newly authored L03 candidate `[ACTIVITY_LEXEME]`, realizations `VALI`/`PARAZAMI`, awaiting validation. Sprint A neither created nor validates that candidate. Any later `main` advance must be reconciled separately before merge or gate consumption.
