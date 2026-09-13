@@ -1,0 +1,29 @@
+{
+  "state_id":"SWHNK-HNK-LANGUAGE-DECISION-SPRINT-B-STATE-V1",
+  "date":"2026-09-13",
+  "status":"B1_APPROVED_B2_PENDING",
+  "baseline_audit":"SWHNK-HNK-LANGUAGE-AUDIT-FINAL-CONSOLIDATION-V1",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V98",
+  "completed_human_gates":[
+    {
+      "gate":"B1",
+      "gate_id":"SWHNK-HNK-B1-G40-Y-SEGMENTAL-IDENTITY-HUMAN-GATE-V1",
+      "result":"APPROVED",
+      "G40":"/y/ VOWEL AFFIRMED",
+      "G16":"/j/ DISTINCT AFFIRMED"
+    }
+  ],
+  "current_human_gate": {
+    "gate":"B2",
+    "gate_id":"SWHNK-HNK-B2-SYLLABLE-STRUCTURE-ADJACENT-VOWELS-HUMAN-GATE-V1",
+    "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL"
+  },
+  "canonical_effects_so_far": {
+    "phoneme_mutations":0,
+    "new_word_level_phonology_rules":0,
+    "new_semantic_rules":0,
+    "new_grammar_rules":0,
+    "curriculum_changes":0
+  },
+  "main_v98_gate_consumed_by_sprint_b":false
+}
