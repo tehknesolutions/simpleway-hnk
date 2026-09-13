@@ -1,0 +1,172 @@
+{
+  "audit_id": "SWHNK-HNK-CURRICULUM-LANGUAGE-ASSUMPTION-AUDIT-V1",
+  "status": "COMPLETE_L01_L03_INITIAL_AUDIT_NO_CANON_MUTATION",
+  "date": "2026-09-13",
+  "audit_branch_baseline": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+  "scope": "Compare L01 Kether, L02 Chokhmah and L03 Binah to distinguish pedagogical validation from HNK language evidence, authored candidates and productive grammar.",
+  "governance_invariant": "CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR",
+  "classification": {
+    "LANGUAGE_EVIDENCE": "Recovered lexeme/phrase or independently governed language asset.",
+    "SCOPED_COURSE_USE": "A construction or mapping may be valid for a named lesson/context without becoming universal HNK grammar.",
+    "COURSE_DRIVEN_AUTHORING": "A curriculum need may open an explicit new-authorship gate but is not evidence that the language historically had the required form or rule.",
+    "PRODUCTIVE_LANGUAGE_RULE": "A rule licenses generation beyond a closed approved set; this requires explicit language governance and must not be inferred from curriculum completeness."
+  },
+  "lesson_assessments": [
+    {
+      "lesson": "L01",
+      "sphere": "Kether",
+      "curriculum_state": "155_OF_155_VALIDATED_AND_OPERATIONALLY_SEALED",
+      "source_state": {
+        "recovered_phrases": 7,
+        "approximate_gloss_phrases": 3,
+        "unrecovered_gloss_phrases": 4,
+        "raw_v1_payload_recovered": false,
+        "historical_v1_payload_reconstruction_from_memory_forbidden": true
+      },
+      "documented_curriculum_pressure": {
+        "lexical_requirements": 8,
+        "lexical_authoring_required_at_requirement_stage": 6,
+        "grammar_requirements": 8,
+        "examples": ["AGE", "LIVE_RESIDE", "COMITATIVE_WITH", "WHO_PERSON_INTERROGATIVE", "GENERIC_DO_ACTION", "WEEKEND", "AGE_QUESTION", "WHERE_QUESTION", "WHAT_DO_QUESTION", "POSSESSIVE_HOBBY_QUESTION", "PERSONAL_ANSWER_SLOTS"]
+      },
+      "audit_interpretation": "L01 demonstrates that a curriculum can be completed through governed scoped authoring and validation even when recovered grammar is incomplete. Its seal explicitly denies universal-grammar promotion.",
+      "pressure_rating": {
+        "lexical_gap_pressure": "HIGH",
+        "grammar_gap_pressure": "VERY_HIGH",
+        "cross_lesson_reuse_pressure": "HIGH",
+        "risk_of_mistaking_course_validation_for_language_canon": "HIGH_IF_METADATA_IS_IGNORED"
+      },
+      "safe_boundary": "Treat L01 validated patterns as lesson-scoped unless the owning language registry separately promotes the relevant form/function/rule."
+    },
+    {
+      "lesson": "L02",
+      "sphere": "Chokhmah",
+      "curriculum_state": "139_OF_139_VALIDATED_SEALED_AND_CONTENT_FROZEN",
+      "source_state": {
+        "recovered_source_lexemes": 11,
+        "recovered_phrases": 0,
+        "teachable_source_assets_after_governed_reuse": 16,
+        "governed_candidate_roles_reused": ["AN", "EN", "KUVAN", "KU", "KE"]
+      },
+      "documented_curriculum_pressure": {
+        "primary_need": "Turn a semantically rich recovered lexicon into communicative interview/story/QA/structure material without recovered L02 phrase patterns.",
+        "notable_scoped_construction": "PA + AN + NE + PREDICATE for the required I didn't... content",
+        "important_boundaries": ["PA remains lexical yesterday, not generic past", "NE scope extension is scoped", "KE is not universal interrogative grammar", "QA schemas are not declarative grammar"]
+      },
+      "audit_interpretation": "L02 is the strongest example of source-governed pedagogy: it validates a complete lesson using recovered lexicon plus explicitly scoped candidate functions while repeatedly refusing to promote those uses into general language authority.",
+      "pressure_rating": {
+        "lexical_gap_pressure": "LOW_TO_MEDIUM",
+        "grammar_gap_pressure": "HIGH",
+        "cross_lesson_reuse_pressure": "HIGH",
+        "risk_of_mistaking_course_validation_for_language_canon": "HIGH_IF_SCOPED_LABELS_ARE_DROPPED"
+      },
+      "safe_boundary": "L02 validation proves teachability and scoped course behavior, not universal tense, negation, word order, interrogative or answer grammar."
+    },
+    {
+      "lesson": "L03",
+      "sphere": "Binah",
+      "curriculum_state_observed": "11_VALIDATED_OF_139_WITH_NEW_AUTHORING_ROUTE_ACTIVE",
+      "source_state": {
+        "recovered_lexical_bindings": 8,
+        "recovered_direct_L03_pattern_payloads": 0,
+        "recovery_on_same_pinned_source_exhausted": true,
+        "vocabulary_unresolved_slots": 8
+      },
+      "documented_curriculum_pressure": {
+        "selected_route": "GOVERNED_NEW_AUTHORING",
+        "interaction_targets": ["OPI_10", "QA_4", "STRUCTURES_5"],
+        "high_risk_semantic_domains": ["first-person declarative use", "intention/want", "need", "purpose", "habituality/frequency"],
+        "current_construction": "[ACTIVITY_LEXEME] with VALI or PARAZAMI in controlled L03 activity context"
+      },
+      "current_construction_assessment": {
+        "new_surface_forms": 0,
+        "validated_candidate": true,
+        "productivity_eligibility_approved_in_main": true,
+        "productive_language_status": false,
+        "curriculum_mapped": false,
+        "positive_boundary": "The candidate explicitly refuses person, tense, aspect, modality, habituality, frequency, negation, interrogation, zero-pronoun and universal bare-predicate inference.",
+        "remaining_language_question": "Whether contextual completeness for bare VALI/PARAZAMI should become a scoped productive construction is a language/construction decision, not a curriculum-count decision."
+      },
+      "pressure_rating": {
+        "lexical_gap_pressure": "HIGH",
+        "grammar_gap_pressure": "VERY_HIGH",
+        "curriculum_completion_pressure": "VERY_HIGH",
+        "productivity_promotion_pressure": "VERY_HIGH",
+        "risk_of_course_need_becoming_language_rule": "VERY_HIGH_WITHOUT_SEPARATE_LANGUAGE_GATE"
+      },
+      "safe_boundary": "Do not use 128 missing curriculum slots, OPI/QA targets or desire for lesson completion as evidence for a productive HNK construction. Any scoped productivity promotion must stand on its own explicit language-design decision."
+    }
+  ],
+  "cross_lesson_findings": [
+    {
+      "id": "CURR-LANG-001",
+      "finding": "Curriculum completeness and language completeness are independent dimensions.",
+      "evidence": "L01 and L02 are fully curriculum-validated while both preserve unresolved linguistic analyses and zero universal-grammar promotions."
+    },
+    {
+      "id": "CURR-LANG-002",
+      "finding": "Semantic teaching need is not historical language evidence.",
+      "evidence": "L01 explicitly opened authoring requirements for concepts/patterns absent from recovered sources; L03 source-gap strategy explicitly moved to governed new authorship after recovery exhaustion."
+    },
+    {
+      "id": "CURR-LANG-003",
+      "finding": "Cross-lesson reuse can be pedagogically legitimate without becoming global grammar.",
+      "evidence": "L02 reuses governed candidates from L01 under exact rebind/scoping gates while denying universal promotion."
+    },
+    {
+      "id": "CURR-LANG-004",
+      "finding": "Derived lanes amplify upstream assumptions.",
+      "evidence": "Story, Activation and Review contain many slots; if an upstream OPI/Structure rule is overgeneralized, the derived curriculum can multiply that assumption dozens of times without adding independent linguistic evidence."
+    },
+    {
+      "id": "CURR-LANG-005",
+      "finding": "Numerical allocation must never become a lexical or grammatical evidence source.",
+      "evidence": "Cycle 1 fixes 1008 curriculum slots, but L02 and L03 governance explicitly reject inventing forms merely to satisfy vocabulary or lane counts."
+    },
+    {
+      "id": "CURR-LANG-006",
+      "finding": "The label PRODUCTIVE is qualitatively different from VALIDATED_CANDIDATE.",
+      "evidence": "The current L03 activity candidate can be validated as a scoped hypothesis while still remaining nonproductive; promoting scoped productivity requires a separate decision."
+    }
+  ],
+  "recommended_governance_model": {
+    "axes": [
+      "SOURCE_PROVENANCE: RECOVERED | AUTHORED",
+      "LANGUAGE_AUTHORITY: GATE | WATCH | CANDIDATE | FROZEN/OTHER_EXISTING_AUTHORITY",
+      "CURRICULUM_STATE: MISSING | AUTHORED | VALIDATED | SEALED",
+      "PRODUCTIVITY: NONPRODUCTIVE | CLOSED_SCOPED | SCOPED_PRODUCTIVE | GENERAL_PRODUCTIVE"
+    ],
+    "rule": "No value on one axis automatically promotes any other axis.",
+    "derived_content_rule": "Story/Activation/Review validation adds pedagogical coverage, not additional independent evidence for the upstream grammar rule that generated them."
+  },
+  "sprint_b_decisions_required": [
+    {
+      "id": "DEC-CURR-001",
+      "question": "Adopt the four-axis governance model so curriculum validation, source provenance, language authority and productivity are machine-readable and independent."
+    },
+    {
+      "id": "DEC-CURR-002",
+      "question": "Define a course-driven authoring threshold: exactly when may an unmet curriculum function open new HNK language authorship rather than remain a pedagogical gap?"
+    },
+    {
+      "id": "DEC-CURR-003",
+      "question": "Require every future cross-lesson grammar reuse to declare whether it is exact scoped reuse, new scope extension or language-level productivity promotion."
+    },
+    {
+      "id": "DEC-CURR-004",
+      "question": "Require Story/Activation/Review to cite their upstream validated construction and forbid treating repetition across derived lanes as independent linguistic evidence."
+    },
+    {
+      "id": "DEC-CURR-005",
+      "question": "Defer the current L03 scoped-productivity promotion decision until Sprint B reviews the curriculum-language boundary together with the completed phonology, morphology and grammar audits."
+    }
+  ],
+  "effects": {
+    "canonical_changes": 0,
+    "curriculum_state_changes": 0,
+    "language_authority_promotions": 0,
+    "productive_rule_promotions": 0,
+    "new_surface_forms": 0,
+    "current_main_gate_consumed": false
+  }
+}
