@@ -1,0 +1,70 @@
+{
+  "review_id":"SWHNK-HNK-B9-FINAL-I-STATUS-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide whether word-final -I is a productive or nonproductive HNK morpheme, a governed distributional tendency, or neither. Do not decide VANI semantics, broader semantic families, clause grammar or L03 curriculum in this gate.",
+  "upstream_decisions":[
+    "B6: phonotactic profile V2 current",
+    "B7: final -VAN is a governed narrow locative formative with NONPRODUCTIVE_CLOSED_EVIDENCE",
+    "B8: PARAZAMO/PARAZAMI has a family-specific closed O/I contrast only"
+  ],
+  "known_meaning_I_final_evidence":[
+    {"form":"VALI","authority":"FROZEN","meaning":"work / to work","reading_class":"ACTION_OR_VERB_LIKE"},
+    {"form":"PARAZAMI","authority":"WATCH","meaning":"study / to study","reading_class":"ACTION_OR_VERB_LIKE"},
+    {"form":"PARI","authority":"WATCH","meaning":"see","reading_class":"VERB_LIKE"},
+    {"form":"DAYI","authority":"CANDIDATE","meaning":"want / intention","reading_class":"INTENTIONAL_OR_VERB_LIKE"},
+    {"form":"SALI","authority":"WATCH","meaning":"need","reading_class":"MODAL_OR_VERB_LIKE"},
+    {"form":"SAROSARI","authority":"WATCH","meaning":"travel / to travel","reading_class":"ACTION_OR_VERB_LIKE"}
+  ],
+  "I_final_unknown_gloss_evidence":[
+    {"form":"VANI","authority":"WATCH","meaning":null},
+    {"form":"VANUVALI","authority":"GATE","meaning":null}
+  ],
+  "positive_findings":[
+    "All currently known-meaning audited I-final forms have action, verb-like, modal or intentional readings.",
+    "B8 provides one controlled family where final O/I correlates with a semantic contrast: PARAZAMO/PARAZAMI.",
+    "The correlation is strong enough to retain as an explicit analytical tendency for future evidence review."
+  ],
+  "limits":[
+    "Only one minimal pair directly isolates final I against another final vowel within the same stem family.",
+    "The recovered registry does not yet define a universal part-of-speech system.",
+    "Several lexical glosses combine noun/action readings, so verbal morphology cannot be inferred from English/Portuguese translation categories alone.",
+    "Unknown-gloss VANI and VANUVALI cannot be back-defined from their final I.",
+    "A statistical correlation is not sufficient evidence for productive derivation."
+  ],
+  "options":[
+    {
+      "id":"B9-OPTION-A",
+      "decision":"RECOGNIZE_DISTRIBUTIONAL_ACTION_VERBAL_TENDENCY_NOT_MORPHEME",
+      "recommended":true,
+      "description":"Record final -I as a governed statistical lexical tendency associated with action/verb-like readings in the audited corpus, but do not recognize it as a morpheme and do not license derivation or semantic inference.",
+      "effect":"Preserves the strong corpus signal while preventing overgeneralization; B8 remains the only governed internal O/I morphological contrast."
+    },
+    {
+      "id":"B9-OPTION-B",
+      "decision":"RECOGNIZE_NARROW_NONPRODUCTIVE_ACTION_FORMATIVE",
+      "recommended":false,
+      "description":"Recognize final -I as a narrow nonproductive action/verbal formative across the known set, without open derivation.",
+      "risk":"Would promote morphology from a corpus where only one stem-controlled minimal pair exists and POS architecture is unresolved."
+    },
+    {
+      "id":"B9-OPTION-C",
+      "decision":"NO_GOVERNED_FINAL_I_GENERALIZATION",
+      "recommended":false,
+      "description":"Treat every I-final form as lexically independent and retain no general analytical tendency outside B8.",
+      "risk":"Discards a strong and consistent distributional correlation that is useful as audit evidence even if it is not morphology."
+    }
+  ],
+  "recommended_decision":"B9-OPTION-A",
+  "boundaries":{
+    "final_I_productive_morpheme":false,
+    "new_I_derivations_allowed":false,
+    "VANI_semantics_inferred":false,
+    "VANUVALI_semantics_inferred":false,
+    "PARAZAMO_PARAZAMI_B8_closed_analysis_preserved":true,
+    "part_of_speech_system_created":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate_if_approved":"B10_SEMANTIC_FAMILIES_PAR_VAM_SAR"
+}
