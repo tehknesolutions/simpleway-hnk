@@ -1,0 +1,58 @@
+{
+  "review_id":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Reconcile KU, KE, KUVAN and KUON into a scoped interrogative architecture while resolving the ON=GATE dependency conflict without inventing productive WH morphology.",
+  "evidence":{
+    "KE":{
+      "current_mapping":"scoped clause-final question operator / marker",
+      "distribution":"present in recovered question-like PHR-001/003/004/005/006 and absent from recovered declarative PHR-002/007",
+      "boundary":"exact universal scope unresolved"
+    },
+    "KU":{
+      "current_mapping":"scoped interrogative content selector; not one fixed WH word",
+      "minimal_contrast":"PHR-003 specific HENUVOKODAN object versus PHR-006 KU ZAMO content phrase",
+      "boundary":"must not be globally glossed WHAT WHICH WHO WHERE HOW"
+    },
+    "KUVAN":{
+      "registry":"AUTH-001 CANDIDATE CLOSED_LIST_ONLY",
+      "intended_role":"locative content variable / WHERE-like specialization",
+      "B7_effect":"final -VAN is now a governed narrow place/location formative with NONPRODUCTIVE_CLOSED_EVIDENCE",
+      "boundary":"B7 strengthens analysis but does not create generic KU+VAN or KU+DOMAIN productivity"
+    },
+    "KUON":{
+      "registry":"AUTH-003 CANDIDATE with gated component",
+      "dependency":"ON remains LEX-026 GATE with referent/gender/multi-referent behavior unresolved",
+      "conflict":"HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1 explicitly listed KU+ON as NOT_ALLOWED_V1 while later HNK_KUON_PERSON_INTERROGATIVE_PROPOSAL_V1 registered/proposed KUON",
+      "A9_lifecycle":"DEPENDENCY_BLOCKED"
+    }
+  },
+  "recommended_option":{
+    "id":"B15-OPTION-A",
+    "decision":"SCOPED_OPERATOR_SELECTOR_WITH_CLOSED_KUVAN_AND_DEPENDENCY_BLOCKED_KUON",
+    "architecture":{
+      "KE":"SCOPED_CLAUSE_FINAL_INTERROGATIVE_OPERATOR",
+      "KU":"SCOPED_CONTENT_SELECTOR_NOT_FIXED_WH",
+      "KUVAN":"RETAIN_CANDIDATE_CLOSED_LOCATIVE_SPECIALIZATION",
+      "KUON":"RETAIN_RECORD_BUT_DEPENDENCY_BLOCK_ACTIVE_USE_BLOCKED"
+    },
+    "generic_KU_domain_compounding_productive":false,
+    "rationale":"This preserves the strongest recovered distributional evidence, recognizes KUVAN as an already-authored closed specialization now better supported by B7, and resolves the KUON contradiction conservatively by blocking active use while ON remains GATE rather than deleting provenance or promoting an unresolved dependency."
+  },
+  "alternatives":[
+    {"id":"B15-OPTION-B","decision":"RETAIN_BOTH_KUVAN_AND_KUON_AS_ACTIVE_CLOSED_CANDIDATES","risk":"Would allow active KUON despite the unresolved ON dependency and earlier explicit prohibition."},
+    {"id":"B15-OPTION-C","decision":"RETIRE_ALL_COMPOSITIONAL_SPECIALIZATIONS_KEEP_ONLY_KU_KE","risk":"Would discard useful governed KUVAN authorship despite B7 strengthening the locative formative rationale."}
+  ],
+  "non_decisions":[
+    "Do not promote KE or KU to universal grammar.",
+    "Do not define KU as a single WH word.",
+    "Do not create productive KU+DOMAIN compounding.",
+    "Do not promote ON or assign ON=person as recovered semantics.",
+    "Do not delete KUON from canonical authored registry in B15; lifecycle patch waits for B18 governance.",
+    "Do not derive declarations by merely removing KE from question forms.",
+    "Do not change general clause order; B16 owns that question.",
+    "Do not change L03 curriculum or the parallel CONTEXT_PLACE candidate."
+  ],
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V106",
+  "next_gate":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-HUMAN-GATE-V1"
+}
