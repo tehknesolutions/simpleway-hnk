@@ -10,43 +10,43 @@ Convert Sprint A findings into explicit human decisions. Each change to phonolog
 ## Decision backlog
 
 ### B1 — Y / G40
-Decide whether `G40=/y/` with safe `Y` is intentional and should remain. Do not simultaneously decide stress or syllabification.
+Decide whether `G40=/y/` with safe `Y` is intentional and should remain. This must explicitly preserve the distinction from `G16=/j/` unless a separately governed allophonic rule says otherwise.
 
 ### B2 — syllable structure and adjacent vowels
-Govern syllable templates/preferences and treatment of vowel sequences, including Y-bearing forms.
+Govern syllable templates/preferences and treatment of vowel sequences. Stable evidence includes FROZEN `SARADAYA` and `TAYOVAN`, which contain three adjacent vowel phonemes under authoritative classification. Decide whether hiatus is normal, restricted or context-dependent; do not simply inherit the old anti-hiatus authoring preference.
 
-### B3 — lexical stress and word-level pronunciation
-Establish or explicitly leave unresolved stress, allophony and connected-speech rules.
+### B3 — diphthongs, glide formation and DAYI pronunciation
+Decide whether HNK has governed diphthongs and which sequences qualify; decide whether any vowel may become a glide allophonically. Evaluate `DAYI /d a y i/` as the primary case without silently converting G40 `/y/` into G16 `/j/`.
 
-### B4 — romanization coverage
-Decide if/when the 20 currently unmapped G-IDs receive safe Latin representations.
+### B4 — lexical stress and word-level pronunciation
+Choose a stress strategy: fixed, weight-sensitive, lexically marked, or intentionally unresolved. Only after this may a canonical whole-word pronunciation for `DAYI`, `SARADAYA`, `TAYOVAN` or `VAMATAYA` be published.
 
-### B5 — phonotactic profile V2
-After B1-B4, rebuild the profile using phonemic classes and separate corpus facts from authoring preferences and true canonical rules.
+### B5 — romanization coverage
+Decide if/when the 20 currently unmapped G-IDs receive safe Latin representations. Romanization design must not redefine existing phonemes for orthographic convenience.
 
-### B6 — `-VAN`
+### B6 — phonotactic profile V2
+Replace the current orthography-sensitive authoring profile only after B1-B5. V2 must distinguish three layers: corpus facts, canonical phonological rules and optional authoring preferences. Recompute all 33 forms using authoritative phoneme classes.
+
+### B7 — `-VAN`
 Evaluate narrowly scoped place/location morphology using `VALIVAN`, `TAYOVAN`, `PAROVAN`, counterexamples and productivity limits.
 
-### B7 — `PARAZAMO / PARAZAMI`
+### B8 — `PARAZAMO / PARAZAMI`
 Decide whether this is merely a lexical pair or evidence for `PARAZAM-` plus a governed final-vowel contrast.
 
-### B8 — final `-I`
+### B9 — final `-I`
 Decide whether final I is an action/verbal morpheme, a statistical tendency or neither. Avoid circular POS inference from bilingual glosses.
 
-### B9 — semantic families
+### B10 — semantic families
 Evaluate `PAR-`, `VAM-/VAMA-` and `SAR-` without deriving new words until segmentation and semantic function are approved.
 
-### B10 — VALA
+### B11 — VALA
 Reassess authored `VALA = atividade` because FROZEN `KALOVALA = edifício/prédio` is a direct surface counterexample to simple `VALA=activity` segmentation. Distinguish retaining VALA as an authored primitive/candidate from claiming it as recovered morphology.
 
-### B11 — VANI
+### B12 — VANI
 Prefer historical gloss recovery. If recovery fails, a new semantic interpretation `morar/residir` requires its own authorship gate; morphology alone is insufficient.
 
-### B12 — DAYI
-After pronunciation foundations, decide its semantic range and only then separately evaluate modal/complement syntax.
-
-### B13 — L03 V93 candidate route
-Review the existing `[ACTIVITY_LEXEME]` candidate (`VALI` / `PARAZAMI`) against completed audit findings before validation/productivity decisions. Sprint A finds it structurally compatible with non-invention boundaries because it excludes person, tense, aspect, modality and zero-pronoun inference, but contextual completeness remains a separate scoped validation question.
+### B13 — DAYI semantics and syntax
+After B1-B4 establish its pronunciation foundations, decide DAYI's semantic range (`querer`, `intenção`, planning) and only then separately evaluate complement/modal syntax. Phonological approval must not automatically approve semantics or grammar.
 
 ### B14 — person system scope (`AN` / `EN`)
 Decide whether `AUTH-016 AN` and `AUTH-017 EN` remain scoped referent mappings or become inputs to a broader authored pronoun/person system. Do not retroactively describe their standalone meanings as historically recovered.
@@ -63,15 +63,19 @@ Decide whether the language/language-domain hypothesis is strong enough for a se
 ### B18 — recovered-vs-authored provenance policy
 Make the distinction machine-readable and pedagogically visible: recovered surface occurrence, distributionally supported interpretation, governed authored candidate semantics, and productive grammar must never collapse into one authority label.
 
-## Recommended dependency order
-`B1 -> B2 -> B3 -> B4 -> B5 -> B6/B7/B8 -> B9/B10/B11 -> B12 -> B14/B15/B16/B17/B18 -> B13`
+### B19 — L03 V93 candidate route
+Review the existing `[ACTIVITY_LEXEME]` candidate (`VALI` / `PARAZAMI`) against completed audit findings before validation/productivity decisions. Sprint A finds it structurally compatible with non-invention boundaries because it excludes person, tense, aspect, modality and zero-pronoun inference, but contextual completeness remains a separate scoped validation question.
 
-Rationale: review phonology and morphology first; then resolve token/grammar scope; only after that revisit the V93 L03 candidate with all upstream assumptions explicit.
+## Recommended dependency order
+`B1 -> B2 -> B3 -> B4 -> B5 -> B6 -> B7/B8/B9 -> B10/B11/B12 -> B13 -> B14/B15/B16/B17/B18 -> B19`
+
+Rationale: settle the phonological interpretation of the existing corpus first; then resolve morphology; then DAYI semantics/syntax; then broader token/grammar scope; only after that revisit the L03 candidate with all upstream assumptions explicit.
 
 ## Effects
 - canonical changes: 0
 - new lexemes: 0
 - morpheme promotions: 0
+- new phonology rules: 0
 - new grammar rules: 0
 - authority promotions: 0
 - curriculum slot changes: 0
