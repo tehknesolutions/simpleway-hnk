@@ -1,0 +1,38 @@
+{
+  "gate_id":"SWHNK-HNK-B3-DIPHTHONG-GLIDE-Y-BEARING-PRONUNCIATION-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B3_DIPHTHONG_GLIDE_Y_BEARING_PRONUNCIATION_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_ADJACENT_VOWEL_NUCLEUS_POLICY_AND_AUTOMATIC_DIPHTHONG_GLIDE_BOUNDARY_FOR_Y_BEARING_WORDS; DO_NOT_DECIDE_LEXICAL_STRESS_G16_ROMANIZATION_DAYI_SEMANTICS_HOYU_SEMANTICS_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id":"DEC-B3-001",
+    "state":"PENDING",
+    "proposal":"CONSERVATIVE_DISTINCT_VOWEL_NUCLEI_NO_AUTOMATIC_GLIDE",
+    "rule":"For careful/canonical pronunciation planning, adjacent vowel phonemes remain distinct vowel nuclei unless a later explicit sequence-specific or word-specific rule licenses another realization. G40 /y/ does not automatically become G16 /j/. No productive diphthong inventory is created by B3.",
+    "DAYI_effect":"The A-Y-I sequence in DAYI is planned as three distinct vowel nuclei; lexical stress and final whole-word phonetic rendering remain for B4.",
+    "FROZEN_evidence_effect":"A-Y-A in SARADAYA and A-Y-O in TAYOVAN remain legal multi-nucleus vowel sequences.",
+    "provenance":"GOVERNED_NEW_PHONOLOGICAL_DESIGN_NOT_HISTORICAL_RECOVERY"
+  },
+  "governance_decisions": [
+    {"id":"DEC-B3-002","state":"PENDING","proposal":"Do not create automatic /y/ -> /j/ glide formation."},
+    {"id":"DEC-B3-003","state":"PENDING","proposal":"Do not create a general productive diphthong inventory in B3."},
+    {"id":"DEC-B3-004","state":"PENDING","proposal":"Fast-speech smoothing, optional coalescence and other allophony remain unresolved for future work."},
+    {"id":"DEC-B3-005","state":"PENDING","proposal":"Do not assign lexical stress in B3; B4 owns stress and publishable whole-word pronunciation."},
+    {"id":"DEC-B3-006","state":"PENDING","proposal":"Do not change G16 romanization, DAYI semantics, HOYU numeral semantics, morphology, grammar, productivity or curriculum slots."}
+  ],
+  "projected_if_approved": {
+    "careful_pronunciation_adjacent_vowels":"DISTINCT_VOWEL_NUCLEI_BY_DEFAULT",
+    "automatic_y_to_j":false,
+    "productive_diphthong_inventory_created":false,
+    "DAYI_adjacent_vowel_nuclei":"A|Y|I",
+    "DAYI_lexical_stress":"UNRESOLVED",
+    "DAYI_publishable_whole_word_pronunciation":"BLOCKED_UNTIL_B4",
+    "canonical_phoneme_mutations":0,
+    "semantic_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B4_LEXICAL_STRESS_AND_WHOLE_WORD_PRONUNCIATION_HUMAN_GATE"
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V99",
+  "approval_rule":"A future SIGA may approve only DEC-B3-001 through DEC-B3-006 if this gate remains materially unchanged. The same SIGA must not approve B4."
+}
