@@ -1,0 +1,63 @@
+{
+  "review_id":"SWHNK-HNK-B7-VAN-PLACE-LOCATION-MORPHOLOGY-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide only the morphological status of final -VAN as a place/location formative and its productivity boundary. Do not decide PARAZAMO/PARAZAMI, final -I, VANI semantics, KU/KE interrogative productivity, DAYI, grammar or curriculum in this gate.",
+  "evidence": {
+    "attested_final_VAN_forms": [
+      {"form":"VALIVAN","authority":"FROZEN","meaning":"escritório","note":"Contains independently attested FROZEN VALI followed by VAN."},
+      {"form":"TAYOVAN","authority":"FROZEN","meaning":"cidade"},
+      {"form":"PAROVAN","authority":"FROZEN","meaning":"biblioteca"}
+    ],
+    "distribution":"All three known forms ending exactly in VAN are FROZEN place/location nouns.",
+    "counterexamples_known":0,
+    "limitations":[
+      "Only VALI is independently established as a base among the three forms; TAYO and PARO are not independently governed lexemes by this evidence.",
+      "Prefix occurrences VANI, VANUVALI and VANUVALAKALU have unrecovered meanings and do not prove suffix productivity.",
+      "Three aligned FROZEN forms support segmentation and semantic association but are insufficient by themselves to justify unrestricted derivation."
+    ]
+  },
+  "authored_registry_interaction": {
+    "KUVAN":"AUTH-001 is already a CANDIDATE authored closed locative specialization KU+VAN with productivity CLOSED_LIST_ONLY.",
+    "boundary":"Recognizing a locative association for final -VAN does not automatically make KUVAN historical recovery, does not promote KU, and does not authorize arbitrary X+VAN forms."
+  },
+  "options":[
+    {
+      "id":"B7-OPTION-A",
+      "decision":"RECOGNIZE_NARROW_LOCATIVE_FORMATIVE_NONPRODUCTIVE",
+      "recommended":true,
+      "description":"Recognize final -VAN as a governed place/location formative supported by VALIVAN, TAYOVAN and PAROVAN, but keep it NONPRODUCTIVE/CLOSED_EVIDENCE: it may analyze attested forms and support already-governed KUVAN rationale, while every new X+VAN derivation requires a separate explicit authorship gate.",
+      "effect":"Promotes morphological analysis, not open word-formation productivity."
+    },
+    {
+      "id":"B7-OPTION-B",
+      "decision":"PROMOTE_NARROWLY_PRODUCTIVE_LOCATIVE_SUFFIX",
+      "recommended":false,
+      "description":"Allow new X+VAN place/location derivations under a governed productivity rule with collision and semantic constraints.",
+      "effect":"Creates productive morphology and should require stronger evidence/design testing than currently available."
+    },
+    {
+      "id":"B7-OPTION-C",
+      "decision":"KEEP_DISTRIBUTIONAL_HYPOTHESIS_ONLY",
+      "recommended":false,
+      "description":"Make no morphological promotion; retain -VAN only as a strong distributional hypothesis.",
+      "effect":"Maximum conservatism but leaves the three-way FROZEN alignment and KUVAN rationale less formally modeled."
+    }
+  ],
+  "recommended_decision":"B7-OPTION-A",
+  "recommended_productivity":"NONPRODUCTIVE_CLOSED_EVIDENCE",
+  "provenance_if_approved":"GOVERNED_MORPHOLOGICAL_ANALYSIS_FROM_RECOVERED_DISTRIBUTION_NOT_NEW_HISTORICAL_LEXEME",
+  "boundaries": {
+    "VAN_standalone_lexeme_created":false,
+    "arbitrary_X_VAN_derivation_allowed":false,
+    "KUVAN_authority_promoted":false,
+    "KU_productivity_changed":false,
+    "VANI_meaning_assigned":false,
+    "final_I_rule_created":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate_if_option_A":"B8_PARAZAMO_PARAZAMI_LEXICAL_PAIR_VS_MORPHOLOGY",
+  "next_gate_if_option_B":"PREPARE_VAN_PRODUCTIVITY_CONSTRAINTS_AND_VALIDATION_SUBGATE_BEFORE_B8",
+  "next_gate_if_option_C":"B8_PARAZAMO_PARAZAMI_LEXICAL_PAIR_VS_MORPHOLOGY"
+}
