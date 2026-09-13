@@ -1,25 +1,27 @@
 {
   "gate_id":"SWHNK-HNK-B4-LEXICAL-STRESS-WHOLE-WORD-PRONUNCIATION-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B4_GATE",
   "source_review":"HNK_B4_LEXICAL_STRESS_WHOLE_WORD_PRONUNCIATION_REVIEW_V1.json",
   "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_STRESS_ARCHITECTURE_AND_WHOLE_WORD_PRONUNCIATION_PUBLICATION_POLICY; DO_NOT_CHANGE_PHONEME_IDENTITIES_ROMANIZATION_DAYI_SEMANTICS_MORPHOLOGY_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
-  "proposed_decision": {
+  "approved_decision": {
     "id":"DEC-B4-001",
-    "state":"PENDING",
-    "proposal":"LEXICALLY_MARKED_STRESS_NO_GLOBAL_DEFAULT",
+    "state":"APPROVED",
+    "decision":"LEXICALLY_MARKED_STRESS_NO_GLOBAL_DEFAULT",
     "rule":"HNK has no approved universal default stress rule at this stage. Lexical stress is an explicit word-level property when governed. Forms without an approved stress value may be represented in broad unstressed/syllabic notation but must not be published as having a complete canonical stressed pronunciation.",
     "provenance":"GOVERNED_NEW_PROSODIC_ARCHITECTURE_NOT_HISTORICAL_RECOVERY",
     "rationale":"No historical or governed global stress rule was recovered; lexical marking avoids inventing an unsupported universal rule while providing a controlled path to future pronunciation decisions."
   },
   "governance_decisions": [
-    {"id":"DEC-B4-002","state":"PENDING","proposal":"Do not adopt fixed penultimate or fixed initial stress under this approval."},
-    {"id":"DEC-B4-003","state":"PENDING","proposal":"Permit broad unstressed/syllabic planning notation for words whose segmental nuclei are governed; for DAYI this may be recorded as /da.y.i/ without a stress mark."},
-    {"id":"DEC-B4-004","state":"PENDING","proposal":"Do not claim a complete canonical stressed pronunciation for DAYI, SARADAYA, TAYOVAN, VAMATAYA or HOYU until their lexical stress is separately governed."},
-    {"id":"DEC-B4-005","state":"PENDING","proposal":"B4 does not change G16 romanization, DAYI semantics, HOYU semantics, morphology, grammar, productivity or curriculum slots."},
-    {"id":"DEC-B4-006","state":"PENDING","proposal":"After B4, B5 may address romanization coverage; word-specific stress assignments may be prepared as separate explicit decisions without retroactively claiming historical recovery."}
+    {"id":"DEC-B4-002","state":"APPROVED","decision":"Do not adopt fixed penultimate or fixed initial stress under this approval."},
+    {"id":"DEC-B4-003","state":"APPROVED","decision":"Permit broad unstressed/syllabic planning notation for words whose segmental nuclei are governed; for DAYI this may be recorded as /da.y.i/ without a stress mark."},
+    {"id":"DEC-B4-004","state":"APPROVED","decision":"Do not claim a complete canonical stressed pronunciation for DAYI, SARADAYA, TAYOVAN, VAMATAYA or HOYU until their lexical stress is separately governed."},
+    {"id":"DEC-B4-005","state":"APPROVED","decision":"B4 does not change G16 romanization, DAYI semantics, HOYU semantics, morphology, grammar, productivity or curriculum slots."},
+    {"id":"DEC-B4-006","state":"APPROVED","decision":"After B4, B5 may address romanization coverage; word-specific stress assignments may be prepared as separate explicit decisions without retroactively claiming historical recovery."}
   ],
-  "projected_if_approved": {
+  "effects": {
     "global_default_stress":null,
     "stress_architecture":"LEXICALLY_MARKED",
     "unknown_stress_allowed":true,
@@ -29,9 +31,14 @@
     "romanization_changes":0,
     "semantic_changes":0,
     "grammar_changes":0,
-    "curriculum_changes":0,
-    "next_phase":"PREPARE_B5_ROMANIZATION_COVERAGE_HUMAN_GATE"
+    "curriculum_changes":0
   },
-  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V99",
-  "approval_rule":"A future SIGA may approve only DEC-B4-001 through DEC-B4-006 if this gate remains materially unchanged. The same SIGA must not approve B5 or assign word-specific stress values."
+  "concurrency_observation": {
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100",
+    "STR001_authored":true,
+    "STR001_validated":false,
+    "attributed_to_B4":false
+  },
+  "next_phase":"B5_ROMANIZATION_COVERAGE_HUMAN_GATE",
+  "same_approval_must_not_approve_B5_or_assign_word_specific_stress":true
 }
