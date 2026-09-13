@@ -3,6 +3,7 @@
 **Sprint ID:** `SWHNK-LANGUAGE-AUDIT-SPRINT-A-V1`  
 **State:** `ACTIVE / AUDIT_FIRST / NO_CANON_MUTATION`  
 **Reconciled baseline:** `SWHNK-C1-PROGRESS-SNAPSHOT-V93`  
+**Latest main observed:** `SWHNK-C1-PROGRESS-SNAPSHOT-V95`  
 **Branch:** `audit/hnk-language-sprint-a-20260913`
 
 ## Purpose
@@ -14,7 +15,8 @@ Audit the HNK language already present before further language authoring is allo
 - `@hnk/glyphs G-ID` remains segmental glyph/IPA authority.
 - Audit findings do not promote phonemes, morphemes, lexemes, grammar, productivity or curriculum slots.
 - `SUPPORTED != PRODUCTIVE` remains invariant.
-- New invariant from A7: `CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR`.
+- `CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR` remains invariant.
+- A stale proposal rationale creates review/supersession debt; it does not silently mutate or delete a canonical authored candidate.
 
 ## Completed blocks
 
@@ -79,15 +81,43 @@ Key findings:
 - L02 is a strong model of scoped pedagogy: recovered lexicon plus governed candidate functions can support complete curriculum without claiming universal tense, interrogative, negation or word-order grammar;
 - L03 has the highest current pressure for language creation: 8 lexical bindings, zero direct recovered L03 pattern payloads, 128 curriculum slots still missing, and a governed-new-authoring route;
 - Story/Activation/Review repetition amplifies upstream pedagogical material but does not become independent evidence for the grammar that generated it;
-- numerical allocation (including the 1008-slot contract) must not select HNK words or grammar;
+- numerical allocation must not select HNK words or grammar;
 - productivity is a separate language axis from candidate validation and curriculum validation.
 
 Recommended governance model: track independently (1) source provenance, (2) language authority, (3) curriculum state and (4) productivity. No value on one axis automatically promotes another.
 
+### A8 — proposal debt / authored-candidate review 20/20
+Artifact: `HNK_PROPOSAL_DEBT_AUDIT_V1.json`.
+
+Canonical authored registry reviewed: `@hnk/linguas/authored@1.7.0-candidate`, 20 candidates.
+
+Primary dispositions:
+- `KEEP`: 9 — BIZO, DUVE, KETI, LUSO, MUPI, NURA, PEVU, TOMI, ZOKA.
+- `KEEP_SCOPED`: 8 — KUVAN, NE, KALA, AN, EN, KU, KE, ZAMI.
+- `REVIEW`: 2 — VALA and HOYU.
+- `UNRESOLVED_DEPENDENCY`: 1 — KUON.
+- immediate deletions: 0.
+
+High-priority debt:
+- `VALA`: the form may remain authored, but its corpus-facing activity-noun back-analysis is weakened by FROZEN `KALOVALA`; B11 must decide retain-as-independent-primitive, revise, or retire.
+- `KUON`: ON remains `GATE`, and the earlier compositional-interrogative rule explicitly prohibited `KU + ON` in v1 before KUON was later registered; B15 must resolve/supersede this history before broader use.
+- `HOYU`: old numeral-generation metadata treated Y as consonantal `/j/` and called HOYU `CVCV`; under G40 `/y/` vowel this phonology metadata is stale. Meaning/value can remain candidate while B1-B4 re-evaluate pronunciation/shape.
+- `KUVAN`: survives well as a closed authored specialization, but not as proof that `VAN` is productively locative.
+- `AN/EN/KU/KE/ZAMI/KALA`: evidence-mapped candidates remain strong for their current scopes; none becomes globally productive through curriculum repetition.
+- `NE`: survives as a deliberately authored scoped primitive; no global negation grammar follows.
+
+Proposal-level supersession debt:
+- `HNK_RESIDENCE_VALENCY_RULE_V1.json` is a retirement/supersession candidate because it stacks unresolved VANI semantics, KUON/ON dependency and new valency assumptions.
+- `HNK_COMPOSITIONAL_INTERROGATIVE_RULE_V1.json` requires V2 because its KU+ON prohibition conflicts with later KUON registration.
+- `HNK_GRAMMAR_CANDIDATE_V1.json` is no longer a current-state authority because later authored mappings changed its unresolved inventory.
+- `HNK_PHONOTACTIC_PROFILE_V1.md` remains historical prior only pending B1-B6.
+- numeral candidate-generation metadata requires phonology refresh, especially HOYU.
+
+A8 conclusion: the authored registry is not fundamentally broken. The correct strategy is targeted repair + explicit supersession metadata, not reset/deletion.
+
 ## Remaining Sprint A blocks
-- A8 proposal-debt review for older candidates depending on unresolved morphology, phonology, token semantics or course-driven back-analysis;
-- reconcile the authored registry candidates against A1-A7 findings;
-- consolidate the final Sprint A report and order all Sprint B human decisions.
+- A9 — authored-registry reconciliation + proposal supersession map: define the exact noncanonical metadata/patch plan that would make A1-A8 findings machine-readable without mutating canon yet.
+- A10 — final Sprint A consolidation: freeze audit findings, dependency graph and ordered Sprint B gates.
 
 ## Current main-state boundary
-The audit branch baseline remains V93. `main` has advanced independently. The current observed L03 manifest (`0.0.23`) shows the minimal activity utterance candidate validated and productivity-eligible, while actual scoped productivity is still false and a separate scoped-productivity promotion gate is pending. Sprint A did not approve or consume that gate and recommends reviewing the curriculum-language boundary before any productivity promotion.
+The audit branch baseline remains V93. `main` has advanced independently to observed V95. The current L03 activity candidate is validated and productivity-eligible, while actual scoped productivity remains false and `SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-SCOPED-PRODUCTIVITY-PROMOTION-HUMAN-BATCH-V1` remains pending. Sprint A did not approve or consume that gate and recommends completing the language-audit decision chain before any productivity promotion.
