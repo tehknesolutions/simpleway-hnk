@@ -1,0 +1,44 @@
+{
+  "note_id":"SWHNK-HNK-LANGUAGE-AUDIT-CONCURRENCY-NOTE-V5",
+  "status":"MAIN_ADVANCED_TO_V97_MAPPING_ELIGIBILITY_APPLIED_OUTSIDE_AUDIT",
+  "date":"2026-09-13",
+  "audit_branch":"audit/hnk-language-sprint-a-20260913",
+  "previous_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V96",
+  "current_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V97",
+  "observed_change":{
+    "candidate":"SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CANDIDATE-V1",
+    "schema":"[ACTIVITY_LEXEME]",
+    "realizations":["VALI","PARAZAMI"],
+    "productive":true,
+    "productive_scope":"L03_CONTROLLED_ACTIVITY_CONTEXT_ONLY",
+    "curriculum_mapping_eligibility_before":false,
+    "curriculum_mapping_eligibility_after":true,
+    "eligible_lane":"STRUCTURES_ONLY",
+    "curriculum_mapped":false,
+    "proposed_exact_slot":"STR001",
+    "curriculum_slot_assignments":0,
+    "implementation_counts_changed":false
+  },
+  "main_v97_counts":{
+    "global":{"MISSING":703,"AUTHORED":0,"VALIDATED":305,"FROZEN":0},
+    "L03":{"MISSING":128,"AUTHORED":0,"VALIDATED":11,"FROZEN":0}
+  },
+  "audit_provenance":{
+    "sprint_a_created_mapping_eligibility":false,
+    "sprint_a_approved_mapping_eligibility":false,
+    "sprint_a_consumed_mapping_eligibility_gate":false,
+    "sprint_a_consumed_exact_STR001_mapping_gate":false,
+    "interpretation":"V97 is external/concurrent main progression relative to the isolated audit branch. A9 records it without endorsement."
+  },
+  "current_main_gate":{
+    "id":"SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-STRUCTURES-EXACT-SLOT-MAPPING-HUMAN-BATCH-V1",
+    "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+    "rule":"APPROVE_OR_REVISE_ONLY_EXACT_STR001_MAPPING; DO_NOT_AUTHOR_OR_VALIDATE_STR001 OR UNLOCK OPI_QA_WITH_THE_SAME_APPROVAL"
+  },
+  "audit_response":{
+    "auto_rollback_main":false,
+    "auto_accept_main_mapping_eligibility_as_audit_decision":false,
+    "consume_exact_slot_gate_now":false,
+    "required_before_audit_endorsement":"Complete A10, then execute ordered Sprint B decisions including B19 post-promotion review and governance decisions before any audit-supported curriculum mapping progression."
+  }
+}
