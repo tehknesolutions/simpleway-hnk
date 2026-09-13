@@ -1,0 +1,45 @@
+{
+  "gate_id":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B15_KU_KE_KUVAN_KUON_INTERROGATIVE_ARCHITECTURE_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_SCOPED_INTERROGATIVE_ARCHITECTURE_FOR_KU_KE_KUVAN_KUON; DO_NOT_DECIDE_GENERAL_CLAUSE_ORDER_PROMOTE_ON_CREATE_PRODUCTIVE_KU_DOMAIN_COMPOUNDING_DELETE_REGISTRY_ENTRIES_OR_CHANGE_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-B15-001",
+    "state":"PENDING",
+    "proposal":"SCOPED_OPERATOR_SELECTOR_WITH_CLOSED_KUVAN_AND_DEPENDENCY_BLOCKED_KUON",
+    "rule":"Govern KE as a scoped clause-final interrogative operator and KU as a scoped interrogative content selector that is not equivalent to one fixed WH word. Retain KUVAN as an authored CANDIDATE closed locative specialization. Retain KUON as a recorded authored CANDIDATE but mark it DEPENDENCY_BLOCKED_FOR_ACTIVE_USE while ON remains GATE. No productive KU+DOMAIN compounding is created.",
+    "rationale":"Recovered distribution strongly supports scoped KE/KU functions; B7 strengthens the locative -VAN analysis supporting existing KUVAN. KUON, however, depends on ON=GATE and conflicts with the earlier explicit KU+ON prohibition, so active use must remain blocked until ON is separately resolved.",
+    "provenance":"GOVERNED_SCOPED_INTERROGATIVE_ARCHITECTURE_RECONCILIATION_NOT_HISTORICAL_FULL_WH_SYSTEM_RECOVERY"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B15-002","state":"PENDING","proposal":"Keep KE scoped to attested/governed question-like constructions; do not promote it to a universal interrogative operator for all HNK clauses."},
+    {"id":"DEC-B15-003","state":"PENDING","proposal":"Keep KU as a scoped content selector; do not globally gloss KU as WHAT, WHICH, WHO, WHERE or HOW and do not make KU+DOMAIN compounding productive."},
+    {"id":"DEC-B15-004","state":"PENDING","proposal":"Retain AUTH-001 KUVAN at CANDIDATE/CLOSED_LIST_ONLY as a locative specialization; B7 strengthens the -VAN rationale but does not promote KUVAN or create arbitrary new KU+VAN/KU+DOMAIN forms."},
+    {"id":"DEC-B15-005","state":"PENDING","proposal":"Retain AUTH-003 KUON in provenance/registry state but classify it DEPENDENCY_BLOCKED_FOR_ACTIVE_USE while ON remains GATE. Do not use, promote or bind KUON until a separate ON/person-domain gate resolves the dependency; do not delete it in B15."},
+    {"id":"DEC-B15-006","state":"PENDING","proposal":"Do not derive declarations from questions by simply removing KE, do not change general clause order, do not promote ON, and do not change curriculum/runtime state under B15."}
+  ],
+  "projected_if_approved":{
+    "KE_status":"SCOPED_CLAUSE_FINAL_INTERROGATIVE_OPERATOR",
+    "KU_status":"SCOPED_CONTENT_SELECTOR_NOT_FIXED_WH",
+    "KUVAN_status":"CANDIDATE_CLOSED_LOCATIVE_SPECIALIZATION_RETAINED",
+    "KUVAN_authority_change":false,
+    "KUON_status":"DEPENDENCY_BLOCKED_FOR_ACTIVE_USE_RETAINED_FOR_PROVENANCE",
+    "KUON_registry_deletion":false,
+    "ON_authority":"GATE_UNCHANGED",
+    "generic_KU_domain_compounding_productive":false,
+    "question_to_declaration_by_KE_deletion":false,
+    "general_clause_order_changed":false,
+    "authority_promotions":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B16_BASIC_CLAUSE_ORDER_HUMAN_GATE"
+  },
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V106",
+    "context_place_candidate_productivity_eligible":true,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B15":false
+  },
+  "approval_rule":"A future SIGA may approve only DEC-B15-001 through DEC-B15-006 if this gate remains materially unchanged. The same SIGA must not approve B16, promote ON, create productive KU+DOMAIN compounding, activate KUON, or alter L03 curriculum."
+}
