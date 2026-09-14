@@ -33,10 +33,12 @@
     "next_phase": "HNK3000_SEED_ELIGIBILITY_AUDIT_V1"
   },
   "concurrency_observation": {
-    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V108",
-    "context_place_candidate_productive": true,
-    "context_place_candidate_curriculum_mapping_eligible": true,
-    "context_place_candidate_curriculum_mapped": false,
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V109",
+    "context_place_candidate_curriculum_mapped": true,
+    "context_place_mapped_slot": "STR002",
+    "STR002_authored": false,
+    "STR002_validated": false,
+    "STR002_runtime_active": false,
     "attributed_to_HNK3000": false
   },
   "approval_rule": "A future SIGA may approve only DEC-HNK3000-001 through DEC-HNK3000-006 if this gate remains materially unchanged. The same SIGA must not generate vocabulary, approve B16, assign seed-domain placements, or alter L03 curriculum/runtime."
