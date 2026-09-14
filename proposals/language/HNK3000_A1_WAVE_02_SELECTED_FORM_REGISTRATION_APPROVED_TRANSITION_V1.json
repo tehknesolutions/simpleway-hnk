@@ -1,0 +1,17 @@
+{
+  "transition_id":"SWHNK-HNK3000-A1-WAVE-02-SELECTED-FORM-REGISTRATION-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_CANONICAL_WAVE02_REGISTRATION_CANDIDATE_ONLY",
+  "date":"2026-09-14",
+  "source_gate":"SWHNK-HNK3000-A1-WAVE-02-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "canonical_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "canonical_commit":"f1400b4255a8f005ebc6e736cdded129419056f0",
+  "registry_version":"1.9.0-candidate",
+  "authored_registry_count":100,
+  "registered_range":"AUTH-061..AUTH-100",
+  "HNK3000_core_credited":119,
+  "HNK3000_remaining_to_3000":2881,
+  "A1_credited":116,
+  "A1_remaining_to_500":384,
+  "boundaries":{"authority":"CANDIDATE_ONLY","FROZEN_promotions":0,"curriculum_bindings":0,"grammar_changes":0,"hold_seeds_resolved":0,"B16_changed":false,"L03_changed_by_transition":false},
+  "next_phase":"HNK3000_A1_AUTHORING_WAVE_03_SLOT_LOCK"
+}
