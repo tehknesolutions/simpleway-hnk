@@ -1,0 +1,14 @@
+{
+  "transition_id":"SWHNK-HNK3000-A1-WAVE-01-SELECTED-FORM-REGISTRATION-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_40_GOVERNED_CANDIDATES_HNK3000_CREDITED_NO_AUTHORITY_PROMOTION",
+  "date_applied":"2026-09-14",
+  "source_gate":"SWHNK-HNK3000-A1-WAVE-01-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "canonical_target":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "canonical_commit":"7f46930d831f4836ad44e6ac11e204e4fc7e47ee",
+  "canonical_blob_sha":"02462795701e9edaa510839c9598fae8ca3866fb",
+  "registry":{"version":"1.8.0-candidate","candidate_count":60,"wave01_auth_range":"AUTH-021..AUTH-060","wave01_new_candidates":40},
+  "hnk3000":{"core_credited":79,"remaining_to_3000":2921,"A1_credited":76,"A1_remaining_to_500":424,"A2_credited":3,"B1_credited":0,"B2_credited":0},
+  "boundaries":{"wave01_authority":"CANDIDATE","historicalRecoveryClaim":false,"FROZEN_promotions":0,"productive_morphology_created":false,"curriculum_bindings":0,"runtime_changes":0,"hold_seeds_resolved":0,"B16_changed":false,"L03_changed":false},
+  "verification":{"postwrite_registry_version":"1.8.0-candidate","AUTH_021_060_present":true,"static_authored_unique_forms":60,"static_recovered_collisions_for_wave01":0,"validator_expected_total":60,"validator_expected_wave01":40,"node_ci_execution_evidence":"NOT_CAPTURED"},
+  "next_phase":"HNK3000_A1_AUTHORING_WAVE_02_SLOT_LOCK"
+}
