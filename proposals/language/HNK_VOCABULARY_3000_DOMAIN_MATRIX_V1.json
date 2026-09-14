@@ -1,0 +1,76 @@
+{
+  "matrix_id": "SWHNK-HNK-VOCABULARY-3000-DOMAIN-MATRIX-V1",
+  "status": "READY_FOR_HUMAN_REVIEW_NO_LEXEME_AUTHORING",
+  "date_prepared": "2026-09-13",
+  "target_core_lexical_units": 3000,
+  "domains": 30,
+  "units_per_domain": 100,
+  "level_targets": {
+    "A1": {"cumulative": 500, "new_at_level": 500},
+    "A2": {"cumulative": 1000, "new_at_level": 500},
+    "B1": {"cumulative": 1800, "new_at_level": 800},
+    "B2": {"cumulative": 3000, "new_at_level": 1200}
+  },
+  "counting_rule": "EACH_COUNTED_LEXICAL_UNIT_HAS_EXACTLY_ONE_PRIMARY_DOMAIN; SECONDARY_TAGS_DO_NOT_ADD_COUNT",
+  "bands": {
+    "CORE": {"domain_count": 15, "allocation_each": {"A1":20,"A2":20,"B1":25,"B2":35}},
+    "EXPANSION": {"domain_count": 9, "allocation_each": {"A1":15,"A2":15,"B1":30,"B2":40}},
+    "ADVANCED": {"domain_count": 6, "allocation_note": "D25-D29 use 11/11/26/52; D30 uses 10/10/25/55"}
+  },
+  "domain_matrix": [
+    {"id":"D01","name_pt":"Identidade e dados pessoais","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D02","name_pt":"Pessoas, família e relações","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D03","name_pt":"Corpo e saúde","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D04","name_pt":"Ações cotidianas","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D05","name_pt":"Movimento, posição e deslocamento","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D06","name_pt":"Casa, ambientes e objetos","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D07","name_pt":"Alimentação e bebidas","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D08","name_pt":"Roupas e itens pessoais","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D09","name_pt":"Tempo, calendário e frequência","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D10","name_pt":"Espaço, localização e direções","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D11","name_pt":"Cidade e serviços","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D12","name_pt":"Transporte e viagem","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D13","name_pt":"Educação e aprendizagem","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D14","name_pt":"Trabalho e profissões","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D15","name_pt":"Comunicação e linguagem","band":"CORE","A1":20,"A2":20,"B1":25,"B2":35,"total":100},
+    {"id":"D16","name_pt":"Comércio, dinheiro e economia","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D17","name_pt":"Natureza e ambiente","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D18","name_pt":"Animais, plantas e vida","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D19","name_pt":"Clima, território e geografia","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D20","name_pt":"Cores, formas e propriedades","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D21","name_pt":"Quantidade, medida e numeracia","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D22","name_pt":"Sentidos e percepção","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D23","name_pt":"Emoções e estados","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D24","name_pt":"Lazer, arte e esporte","band":"EXPANSION","A1":15,"A2":15,"B1":30,"B2":40,"total":100},
+    {"id":"D25","name_pt":"Cognição, memória e opinião","band":"ADVANCED","A1":11,"A2":11,"B1":26,"B2":52,"total":100},
+    {"id":"D26","name_pt":"Sociedade, comunidade e cultura","band":"ADVANCED","A1":11,"A2":11,"B1":26,"B2":52,"total":100},
+    {"id":"D27","name_pt":"Tecnologia e mídia","band":"ADVANCED","A1":11,"A2":11,"B1":26,"B2":52,"total":100},
+    {"id":"D28","name_pt":"Ciência, ferramentas e materiais","band":"ADVANCED","A1":11,"A2":11,"B1":26,"B2":52,"total":100},
+    {"id":"D29","name_pt":"Ética, espiritualidade e filosofia","band":"ADVANCED","A1":11,"A2":11,"B1":26,"B2":52,"total":100},
+    {"id":"D30","name_pt":"Lógica, relações abstratas e conectores","band":"ADVANCED","A1":10,"A2":10,"B1":25,"B2":55,"total":100}
+  ],
+  "validation": {
+    "A1_sum": 500,
+    "A2_sum": 500,
+    "B1_sum": 800,
+    "B2_sum": 1200,
+    "all_levels_sum": 3000,
+    "all_domain_totals_equal_100": true,
+    "primary_domain_single_count_rule": true
+  },
+  "existing_seed_inventory": {
+    "registered_forms_observed": 53,
+    "automatic_hnk3000_credit": false,
+    "next_required_step": "SEED_ELIGIBILITY_AUDIT_ASSIGN_PRIMARY_DOMAIN_LEVEL_COUNT_ELIGIBILITY_WITHOUT_SEMANTIC_MUTATION"
+  },
+  "boundaries": {
+    "new_hnk_forms_created": 0,
+    "new_semantics_assigned": 0,
+    "authority_promotions": 0,
+    "grammar_changes": 0,
+    "curriculum_slot_changes": 0,
+    "reference_languages_select_forms": false,
+    "numerology_selects_forms": false
+  },
+  "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V108"
+}
