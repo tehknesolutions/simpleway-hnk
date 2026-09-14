@@ -1,0 +1,20 @@
+{
+  "gate_id":"SWHNK-HNK3000-A1-WAVE-02-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-14",
+  "source_manifest":"HNK3000_A1_WAVE_02_SELECTED_FORM_REGISTRATION_MANIFEST_V1.json",
+  "target_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "observed_registry_sha":"02462795701e9edaa510839c9598fae8ca3866fb",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_THE_40_SELECTED_WAVE02_FORMS_AS_NEW_GOVERNED_CANDIDATES_AND_ASSIGN_THEIR_HNK3000_COUNT_CREDIT; DO_NOT_PROMOTE_TO_FROZEN_BIND_CURRICULUM_CREATE_GRAMMAR_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR AL TER_L03_WITH_THIS_APPROVAL",
+  "proposed_decision":{"id":"DEC-HNK3000-W02-REG-001","state":"PENDING","proposal":"REGISTER_AUTH_061_THROUGH_AUTH_100_AS_GOVERNED_HNK3000_A1_CANDIDATES","rule":"After refetching and verifying the canonical authored registry has not materially changed, append the 40 selected Wave 02 entries as AUTH-061 through AUTH-100 with CANDIDATE-only authority and Wave 02 provenance."},
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-W02-REG-002","state":"PENDING","proposal":"Bump registry version 1.8.0-candidate to 1.9.0-candidate only if all 40 registrations are applied atomically and validation invariants remain green."},
+    {"id":"DEC-HNK3000-W02-REG-003","state":"PENDING","proposal":"Grant exactly 40 HNK3000 core credits on successful registration: total 79->119 and A1 76->116."},
+    {"id":"DEC-HNK3000-W02-REG-004","state":"PENDING","proposal":"All 40 remain AUTHORED_PRIMITIVE CANDIDATE, historicalRecoveryClaim false, NON_PRODUCTIVE_SINGLE_CANDIDATE; no FROZEN or historical promotion."},
+    {"id":"DEC-HNK3000-W02-REG-005","state":"PENDING","proposal":"Keep lessons empty; no curriculum/runtime/OPI/QA binding under this gate."},
+    {"id":"DEC-HNK3000-W02-REG-006","state":"PENDING","proposal":"Resolve no HOLD seed and do not alter B16 or L03. Abort/reconcile if authored.mjs materially changes before write."}
+  ],
+  "projected_if_approved":{"canonical_new_candidates":40,"auth_ids":"AUTH-061..AUTH-100","registry_version":"1.9.0-candidate","authored_registry_count":100,"HNK3000_core_credited":119,"HNK3000_remaining_to_3000":2881,"A1_credited":116,"A1_remaining_to_500":384,"FROZEN_promotions":0,"curriculum_bindings":0,"hold_seeds_resolved":0,"next_phase":"HNK3000_A1_AUTHORING_WAVE_03_SLOT_LOCK"},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V114","L03_external_gate":"OPI_SOURCE_EVIDENCE_RECOVERY_STRATEGY","attributed_to_HNK3000_Wave02_registration":false},
+  "approval_rule":"A future SIGA may approve only DEC-HNK3000-W02-REG-001 through DEC-HNK3000-W02-REG-006 if this gate remains materially unchanged. Refetch authored.mjs first and abort/reconcile on drift. Same SIGA must not promote FROZEN, bind curriculum, resolve HOLD, approve B16, or alter L03."
+}
