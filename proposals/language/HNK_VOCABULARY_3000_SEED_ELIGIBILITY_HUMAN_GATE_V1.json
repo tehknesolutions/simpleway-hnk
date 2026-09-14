@@ -39,9 +39,9 @@
     "next_phase": "HNK3000_A1_SEMANTIC_SLOT_BLUEPRINT_V1"
   },
   "concurrency_observation": {
-    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V110",
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V111",
     "STR002_mapped": true,
-    "STR002_authored": false,
+    "STR002_authored": true,
     "STR002_validated": false,
     "STR002_runtime_active": false,
     "attributed_to_HNK3000_seed_audit": false
