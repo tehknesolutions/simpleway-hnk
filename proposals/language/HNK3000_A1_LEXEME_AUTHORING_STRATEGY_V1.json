@@ -1,0 +1,147 @@
+{
+  "strategy_id":"SWHNK-HNK3000-A1-LEXEME-AUTHORING-STRATEGY-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_FORM_GENERATION",
+  "date_prepared":"2026-09-14",
+  "inputs":[
+    "SWHNK-HNK3000-A1-SEMANTIC-SLOT-BLUEPRINT-V1",
+    "SWHNK-HNK-PHONOTACTIC-PROFILE-V2",
+    "SWHNK-HNK-VOCABULARY-3000-SEED-ELIGIBILITY-HUMAN-GATE-V1",
+    "SWHNK-HNK-B7-VAN-PLACE-LOCATION-MORPHOLOGY-HUMAN-GATE-V1",
+    "SWHNK-HNK-B8-PARAZAMO-PARAZAMI-LEXICAL-PAIR-MORPHOLOGY-HUMAN-GATE-V1",
+    "SWHNK-HNK-B9-FINAL-I-STATUS-HUMAN-GATE-V1",
+    "SWHNK-HNK-B10-SEMANTIC-FAMILIES-PAR-VAM-SAR-HUMAN-GATE-V1"
+  ],
+  "scope":"Define how approved A1 semantic slots may receive new governed HNK lexical forms. This strategy itself generates no forms and assigns no G-IDs.",
+  "authoring_principles":{
+    "semantic_slot_first":true,
+    "gid_first":true,
+    "ipa_from_authoritative_glyphs":true,
+    "candidate_first":true,
+    "human_gate_required_for_semantic_form_pairing":true,
+    "historical_recovery_claim_for_new_authorship":false,
+    "reference_languages_may_compare_but_not_select_forms":true,
+    "numerology_may_organize_counts_but_not_select_forms_meanings_phonology_or_syntax":true,
+    "sound_symbolism_must_not_assign_semantics":true,
+    "one_primary_domain_per_counted_unit":true
+  },
+  "default_lexeme_lane":{
+    "name":"NATIVE_PRIMITIVE_CANDIDATE",
+    "rule":"A new A1 lexical concept defaults to an independently authored primitive CANDIDATE unless an already governed morphology explicitly licenses a derivation.",
+    "morphology_claim":false,
+    "historical_recovery_claim":false
+  },
+  "special_lanes":[
+    {
+      "name":"GOVERNED_DERIVATION",
+      "rule":"Allowed only when a separately approved morphology rule explicitly licenses the exact derivational behavior. Resemblance to -VAN, final -I, PAR-, VAM-/VAMA-, SAR- or PARAZAMO/PARAZAMI does not by itself license derivation."
+    },
+    {
+      "name":"LOAN_OR_BRIDGE",
+      "rule":"International/proper forms may be proposed only with explicit loan/bridge provenance and adaptation review. A bridge is not automatically core-count eligible; a governed lexical loan may be separately evaluated."
+    },
+    {
+      "name":"GRAMMAR_SENSITIVE_FUNCTIONAL",
+      "rule":"Slots whose meaning implies syntactic productivity may receive no productive grammar from lexical authorship. If lexical semantics cannot be separated safely from grammar, the slot remains pending a grammar gate."
+    },
+    {
+      "name":"HOLD_SEED_RESERVED",
+      "rule":"Slots linked to ON, KUON, MAMA, PAPA, TA, VAME or VAMATAYA cannot receive a competing new form until the linked seed is resolved or explicitly superseded in a separate lexical-authority gate."
+    }
+  ],
+  "phonological_candidate_contract":{
+    "authority":"SWHNK-HNK-PHONOTACTIC-PROFILE-V2",
+    "all_40_gids_available":true,
+    "gid40_y_is_vowel":true,
+    "gid16_j_is_distinct_glide":true,
+    "ts_gid30_atomic":true,
+    "adjacent_vowels_allowed":true,
+    "final_consonants_allowed":true,
+    "universal_stress_default":false,
+    "stress_for_new_candidate":"UNRESOLVED_BY_DEFAULT",
+    "cv_rich_shape":"PREFERENCE_NOT_LAW",
+    "learnable_simple_sequences":"PREFERENCE_NOT_LAW",
+    "preferred_nucleus_count":"2_TO_4_WHEN_PRACTICAL_NOT_A_LANGUAGE_LAW",
+    "one_nucleus_or_five_plus":"ALLOWED_WITH_AUTHORING_RATIONALE",
+    "automatic_diphthong_or_glide_formation":false
+  },
+  "romanization_contract":{
+    "lossless_gid_coverage":"40/40",
+    "safe_human_romanization":"20/40",
+    "rule":"A candidate using any G-ID without governed human-facing romanization remains represented canonically by G-ID sequence plus IPA. Do not invent Latin letters, digraphs or diacritics merely to make the candidate displayable.",
+    "romanization_may_not_redefine_phonemes":true
+  },
+  "candidate_generation_contract":{
+    "pool_generation":"Generate structural candidate pools independently of PT/EN/reference-language word shapes, using only governed phonological constraints and availability.",
+    "semantic_pairing":"Pair a candidate to a semantic slot only after collision, morphology and confusion review; pairing creates authored provenance, not historical recovery.",
+    "automatic_selection":false,
+    "minimum_reviewed_candidate_options_per_slot":2,
+    "preferred_reviewed_candidate_options_per_slot":3,
+    "human_selected_final_candidate_required":true
+  },
+  "collision_contract":{
+    "exact_master_lexicon_collision":"REJECT",
+    "exact_authored_registry_collision":"REJECT",
+    "exact_hold_or_diagnostic_form_collision":"REJECT_UNLESS_EXPLICIT_SUPERSESSION_GATE",
+    "near_gid_or_phoneme_collision":"FLAG_FOR_REVIEW",
+    "short_form_single_edit_confusion":"STRONG_REVIEW_FLAG",
+    "existing_family_resemblance":"MORPHOLOGY_FALSE_FRIEND_FLAG",
+    "cross_domain_homonymy":"NOT_AUTOMATICALLY_ALLOWED_REQUIRES_EXPLICIT_REVIEW",
+    "duplicate_semantic_head":"REJECT_OR_MERGE_BEFORE_FORM_AUTHORING"
+  },
+  "batching_contract":{
+    "approved_open_slots":464,
+    "authoring_waves":12,
+    "wave_sizes":[40,40,40,40,40,40,40,40,40,40,40,24],
+    "reason":"Use HNK40 only as a project batching quantity. It does not select forms or meanings.",
+    "slot_order":"Follow the approved A1 semantic-slot blueprint deterministically; domain boundaries may spill across waves without semantic reassignment.",
+    "internal_review_blocks":"Up to four groups of 10 items inside a 40-item wave for readability/QA; the wave remains one explicit human authoring gate unless a risk requires splitting.",
+    "parallel_auto_promotion":false,
+    "one_human_gate_at_a_time":true
+  },
+  "per_slot_pipeline":[
+    "LOCK_SEMANTIC_SLOT",
+    "CHECK_EXISTING_SEMANTIC_DUPLICATE_AND_HOLD_RESERVATION",
+    "CLASSIFY_LEXEME_LANE",
+    "GENERATE_GID_FIRST_CANDIDATE_POOL",
+    "DERIVE_IPA_FROM_GIDS",
+    "APPLY_PHONOTACTIC_PROFILE_V2",
+    "RUN_EXACT_AND_NEAR_COLLISION_AUDIT",
+    "RUN_MORPHOLOGY_FALSE_FRIEND_AUDIT",
+    "CHECK_ROMANIZATION_COVERAGE_WITHOUT_INVENTION",
+    "SHORTLIST_2_TO_3_CANDIDATES",
+    "HUMAN_SELECT_OR_REVISE",
+    "REGISTER_AS_AUTHORED_CANDIDATE_WITH_HISTORICAL_RECOVERY_CLAIM_FALSE",
+    "ASSIGN_HNK3000_CREDIT_IF_COUNT_ELIGIBLE",
+    "DEFER_ANY_FROZEN_PROMOTION_TO_SEPARATE_GATE"
+  ],
+  "candidate_record_minimum_fields":[
+    "slot_id","primary_domain","cefr_hnk_level","concept_pt","concept_en","candidate_gid_sequence","ipa","safe_romanization_if_complete","romanization_status","lexeme_lane","morphology_rationale","collision_report","provenance","authority","historicalRecoveryClaim","count_eligibility"
+  ],
+  "credit_rule":{
+    "proposal_only_credit":0,
+    "human_approved_registered_candidate_credit":1,
+    "candidate_authority_sufficient_for_hnk3000_count_if_governed":true,
+    "frozen_promotion_required_for_count":false,
+    "counting_does_not_equal_language_promotion":true
+  },
+  "quality_gates":{
+    "semantic_coverage":true,
+    "structural_validity":true,
+    "collision_safety":true,
+    "morphology_safety":true,
+    "provenance_complete":true,
+    "gid_roundtrip":true,
+    "romanization_honesty":true,
+    "human_selection":true
+  },
+  "effects_of_strategy_preparation":{
+    "new_words":0,
+    "new_gid_sequences":0,
+    "new_meanings":0,
+    "authority_promotions":0,
+    "hnk3000_credit_change":0,
+    "grammar_changes":0,
+    "curriculum_changes":0
+  },
+  "next_if_approved":"PREPARE_HNK3000_A1_AUTHORING_WAVE_01_SLOT_LOCK_AND_CANDIDATE_GENERATION_GATE"
+}
