@@ -1,1 +1,75 @@
-{"gate_id":"SWHNK-HNK3000-A1-AUTHORING-WAVE-02-HUMAN-SELECTION-GATE-V1","status":"AWAITING_EXPLICIT_HUMAN_APPROVAL","date_prepared":"2026-09-14","source_option_sets":["HNK3000_A1_W02_D03_CANDIDATE_OPTIONS_V1.json","HNK3000_A1_W02_D04_CANDIDATE_OPTIONS_V1.json","HNK3000_A1_W02_D05_CANDIDATE_OPTIONS_V1.json"],"decision_scope":"SELECT_EXACTLY_ONE_REVIEW_OPTION_FOR_EACH_OF_40_WAVE02_SLOTS; DO_NOT_REGISTER_OR_CREDIT_SELECTED_FORMS_RESOLVE_HOLD_SEEDS_PROMOTE_AUTHORITY_APPROVE_B16_OR_ALTER_L03_WITH_THIS_APPROVAL","proposed_decision":{"id":"DEC-HNK3000-W02-SEL-001","state":"PENDING","proposal":"ACCEPT_ENGINEERING_RECOMMENDATIONS_FOR_40_WAVE02_SLOTS","rule":"Select one of the two generated review options for each locked slot. Recommended choices are based only on collision margin and conservative phonological simplicity; they do not assert semantic sound symbolism or historical recovery."},"selection_rows":[{"slot_id":"HNK3000-A1-D03-S010","concept_pt":"mão","option_A":"PYTOZY","option_B":"ZUBEDY","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S011","concept_pt":"braço","option_A":"DURYRY","option_B":"BYDATA","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S012","concept_pt":"perna","option_A":"PONENA","option_B":"PESERO","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S013","concept_pt":"pé","option_A":"ZETARY","option_B":"RONUNY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S014","concept_pt":"costas","option_A":"RYBENY","option_B":"SUBUPY","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S015","concept_pt":"estômago","option_A":"KANUZY","option_B":"PODOMY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S016","concept_pt":"saúde","option_A":"TYMOZE","option_B":"PYNEKO","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S017","concept_pt":"doença / estado de estar doente","option_A":"RUTYKY","option_B":"TUSEPE","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S018","concept_pt":"médico(a)","option_A":"BOVULE","option_B":"ZEZAPE","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S019","concept_pt":"remédio / medicamento","option_A":"MAHEDY","option_B":"HAVETO","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D03-S020","concept_pt":"hospital","option_A":"RULUME","option_B":"TYBYRE","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S001","concept_pt":"acordar","option_A":"HYKYZE","option_B":"ZUDOPY","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S002","concept_pt":"levantar-se","option_A":"BUBURE","option_B":"HOHEKO","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S003","concept_pt":"dormir","option_A":"MYKAKY","option_B":"LAHAKE","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S004","concept_pt":"comer","option_A":"SUDEZA","option_B":"LENUBY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S005","concept_pt":"beber","option_A":"NAZENA","option_B":"HYTAKU","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S006","concept_pt":"lavar","option_A":"HUTETA","option_B":"VOVEZE","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S007","concept_pt":"tomar banho","option_A":"LOMULU","option_B":"BAPYTY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S008","concept_pt":"vestir-se","option_A":"HOLOKY","option_B":"NULOBY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S009","concept_pt":"cozinhar","option_A":"KYPAHY","option_B":"SEHULY","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S010","concept_pt":"limpar","option_A":"BOTUBA","option_B":"LYBORY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S011","concept_pt":"começar","option_A":"SEDAKY","option_B":"NONUDU","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S012","concept_pt":"terminar","option_A":"NAVELU","option_B":"MUTENE","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S013","concept_pt":"fazer","option_A":"SODELE","option_B":"VEDYTE","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S014","concept_pt":"usar","option_A":"VOMUZY","option_B":"BYNUSY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S015","concept_pt":"dar","option_A":"TADUSU","option_B":"ZUZESA","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S016","concept_pt":"pegar / tomar","option_A":"VENERY","option_B":"RAHEZO","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S017","concept_pt":"colocar","option_A":"RERARE","option_B":"ZEHYNA","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S018","concept_pt":"esperar","option_A":"BATAVY","option_B":"BOZAKE","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D04-S019","concept_pt":"ajudar","option_A":"MULUNY","option_B":"NYBUPU","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S001","concept_pt":"mover-se","option_A":"BUMUDA","option_B":"VYLELY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S002","concept_pt":"ir","option_A":"ZADYRA","option_B":"TYSUZO","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S003","concept_pt":"vir","option_A":"VODOZU","option_B":"ZUKOVU","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S004","concept_pt":"caminhar","option_A":"BOZEHA","option_B":"SEDYBA","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S005","concept_pt":"correr","option_A":"SAZOZY","option_B":"TOTORU","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S006","concept_pt":"entrar","option_A":"LAZOTU","option_B":"PAZELY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S007","concept_pt":"sair","option_A":"RAMONY","option_B":"MASYKY","recommended":"A","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S008","concept_pt":"chegar","option_A":"LYDYKE","option_B":"DUHOZA","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S009","concept_pt":"partir / deixar um lugar","option_A":"MYNEPA","option_B":"TALERE","recommended":"B","state":"PENDING_HUMAN_SELECTION"},{"slot_id":"HNK3000-A1-D05-S010","concept_pt":"parar","option_A":"VUSYDU","option_B":"HYTEBO","recommended":"A","state":"PENDING_HUMAN_SELECTION"}],"projected_if_approved":{"selected_forms":40,"registered_candidates":0,"hnk3000_credit_change":0,"authority_promotions":0,"hold_seeds_resolved":0,"next_phase":"HNK3000_A1_WAVE02_SELECTED_FORM_REGISTRATION_GATE"},"concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V113","attributed_to_HNK3000_Wave02":false},"approval_rule":"A future SIGA may approve all 40 recommended selections only if this gate remains materially unchanged. The same SIGA must not register candidates, assign HNK3000 credit, promote authority, resolve HOLD seeds, approve B16, or alter L03."}
+{
+  "gate_id": "SWHNK-HNK3000-A1-AUTHORING-WAVE-02-HUMAN-SELECTION-GATE-V1",
+  "status": "APPROVED_ALL_DECISIONS",
+  "date_prepared": "2026-09-14",
+  "date_approved": "2026-09-14",
+  "approval_source": "CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_WAVE02_HUMAN_SELECTION_GATE",
+  "source_option_sets": [
+    "HNK3000_A1_W02_D03_CANDIDATE_OPTIONS_V1.json",
+    "HNK3000_A1_W02_D04_CANDIDATE_OPTIONS_V1.json",
+    "HNK3000_A1_W02_D05_CANDIDATE_OPTIONS_V1.json"
+  ],
+  "decision_scope": "SELECT_EXACTLY_ONE_REVIEW_OPTION_FOR_EACH_OF_40_WAVE02_SLOTS; DO_NOT_REGISTER_OR_CREDIT_SELECTED_FORMS_RESOLVE_HOLD_SEEDS_PROMOTE_AUTHORITY_APPROVE_B16_OR ALTER_L03_WITH_THIS_APPROVAL",
+  "approved_decision": {
+    "id": "DEC-HNK3000-W02-SEL-001",
+    "state": "APPROVED",
+    "decision": "ACCEPT_ENGINEERING_RECOMMENDATIONS_FOR_40_WAVE02_SLOTS",
+    "rule": "Select one generated review option for each locked slot based only on collision margin and conservative phonological simplicity; no semantic sound symbolism or historical recovery is asserted."
+  },
+  "selected_forms": [
+    {"slot_id":"HNK3000-A1-D03-S010","concept_pt":"mão","form":"ZUBEDY"},
+    {"slot_id":"HNK3000-A1-D03-S011","concept_pt":"braço","form":"BYDATA"},
+    {"slot_id":"HNK3000-A1-D03-S012","concept_pt":"perna","form":"PONENA"},
+    {"slot_id":"HNK3000-A1-D03-S013","concept_pt":"pé","form":"ZETARY"},
+    {"slot_id":"HNK3000-A1-D03-S014","concept_pt":"costas","form":"SUBUPY"},
+    {"slot_id":"HNK3000-A1-D03-S015","concept_pt":"estômago","form":"KANUZY"},
+    {"slot_id":"HNK3000-A1-D03-S016","concept_pt":"saúde","form":"TYMOZE"},
+    {"slot_id":"HNK3000-A1-D03-S017","concept_pt":"doença / estado de estar doente","form":"TUSEPE"},
+    {"slot_id":"HNK3000-A1-D03-S018","concept_pt":"médico(a)","form":"BOVULE"},
+    {"slot_id":"HNK3000-A1-D03-S019","concept_pt":"remédio / medicamento","form":"HAVETO"},
+    {"slot_id":"HNK3000-A1-D03-S020","concept_pt":"hospital","form":"RULUME"},
+    {"slot_id":"HNK3000-A1-D04-S001","concept_pt":"acordar","form":"ZUDOPY"},
+    {"slot_id":"HNK3000-A1-D04-S002","concept_pt":"levantar-se","form":"BUBURE"},
+    {"slot_id":"HNK3000-A1-D04-S003","concept_pt":"dormir","form":"LAHAKE"},
+    {"slot_id":"HNK3000-A1-D04-S004","concept_pt":"comer","form":"SUDEZA"},
+    {"slot_id":"HNK3000-A1-D04-S005","concept_pt":"beber","form":"NAZENA"},
+    {"slot_id":"HNK3000-A1-D04-S006","concept_pt":"lavar","form":"HUTETA"},
+    {"slot_id":"HNK3000-A1-D04-S007","concept_pt":"tomar banho","form":"LOMULU"},
+    {"slot_id":"HNK3000-A1-D04-S008","concept_pt":"vestir-se","form":"HOLOKY"},
+    {"slot_id":"HNK3000-A1-D04-S009","concept_pt":"cozinhar","form":"SEHULY"},
+    {"slot_id":"HNK3000-A1-D04-S010","concept_pt":"limpar","form":"BOTUBA"},
+    {"slot_id":"HNK3000-A1-D04-S011","concept_pt":"começar","form":"NONUDU"},
+    {"slot_id":"HNK3000-A1-D04-S012","concept_pt":"terminar","form":"NAVELU"},
+    {"slot_id":"HNK3000-A1-D04-S013","concept_pt":"fazer","form":"SODELE"},
+    {"slot_id":"HNK3000-A1-D04-S014","concept_pt":"usar","form":"VOMUZY"},
+    {"slot_id":"HNK3000-A1-D04-S015","concept_pt":"dar","form":"TADUSU"},
+    {"slot_id":"HNK3000-A1-D04-S016","concept_pt":"pegar / tomar","form":"RAHEZO"},
+    {"slot_id":"HNK3000-A1-D04-S017","concept_pt":"colocar","form":"RERARE"},
+    {"slot_id":"HNK3000-A1-D04-S018","concept_pt":"esperar","form":"BOZAKE"},
+    {"slot_id":"HNK3000-A1-D04-S019","concept_pt":"ajudar","form":"MULUNY"},
+    {"slot_id":"HNK3000-A1-D05-S001","concept_pt":"mover-se","form":"BUMUDA"},
+    {"slot_id":"HNK3000-A1-D05-S002","concept_pt":"ir","form":"ZADYRA"},
+    {"slot_id":"HNK3000-A1-D05-S003","concept_pt":"vir","form":"VODOZU"},
+    {"slot_id":"HNK3000-A1-D05-S004","concept_pt":"caminhar","form":"BOZEHA"},
+    {"slot_id":"HNK3000-A1-D05-S005","concept_pt":"correr","form":"TOTORU"},
+    {"slot_id":"HNK3000-A1-D05-S006","concept_pt":"entrar","form":"LAZOTU"},
+    {"slot_id":"HNK3000-A1-D05-S007","concept_pt":"sair","form":"RAMONY"},
+    {"slot_id":"HNK3000-A1-D05-S008","concept_pt":"chegar","form":"DUHOZA"},
+    {"slot_id":"HNK3000-A1-D05-S009","concept_pt":"partir / deixar um lugar","form":"TALERE"},
+    {"slot_id":"HNK3000-A1-D05-S010","concept_pt":"parar","form":"VUSYDU"}
+  ],
+  "effects": {
+    "selected_forms": 40,
+    "registered_candidates": 0,
+    "hnk3000_credit_change": 0,
+    "authority_promotions": 0,
+    "hold_seeds_resolved": 0
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V114",
+    "L03_OPI_readiness": "NOT_READY_FOR_AUTHORING_UNDER_CURRENT_EVIDENCE",
+    "attributed_to_HNK3000_Wave02": false
+  },
+  "next_phase": "HNK3000_A1_WAVE02_SELECTED_FORM_REGISTRATION_GATE",
+  "same_approval_must_not_register_credit_promote_resolve_HOLD_approve_B16_or_alter_L03": true
+}
