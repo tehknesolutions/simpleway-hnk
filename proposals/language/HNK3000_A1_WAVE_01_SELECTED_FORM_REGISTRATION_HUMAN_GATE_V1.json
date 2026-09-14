@@ -1,0 +1,20 @@
+{
+  "gate_id":"SWHNK-HNK3000-A1-WAVE-01-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-14",
+  "source_manifest":"HNK3000_A1_WAVE_01_SELECTED_FORM_REGISTRATION_MANIFEST_V1.json",
+  "target_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "observed_registry_sha":"d33b5ffc1bea0f42f42aa8e34b69ba503bfc93d5",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_THE_40_SELECTED_WAVE01_FORMS_AS_NEW_GOVERNED_CANDIDATES_AND_ASSIGN_THEIR_HNK3000_COUNT_CREDIT; DO_NOT_PROMOTE_TO_FROZEN_BIND_CURRICULUM_CREATE_GRAMMAR_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR_ALTER_L03_WITH_THIS_APPROVAL",
+  "proposed_decision":{"id":"DEC-HNK3000-W01-REG-001","state":"PENDING","proposal":"REGISTER_AUTH_021_THROUGH_AUTH_060_AS_GOVERNED_HNK3000_A1_CANDIDATES","rule":"After refetching and verifying the canonical authored registry has not materially changed, append the 40 selected Wave 01 entries as AUTH-021 through AUTH-060, authority CANDIDATE, certainty AUTHORED_PRIMITIVE, sourceClass AUTHORING_PROPOSAL, historicalRecoveryClaim false, lessons empty, morphology PRIMITIVE_AUTHORED_HNK3000_A1 with NON_PRODUCTIVE_SINGLE_CANDIDATE, and explicit Wave 01 provenance."},
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-W01-REG-002","state":"PENDING","proposal":"Bump HNK_AUTHORED_REGISTRY_VERSION from 1.7.0-candidate to 1.8.0-candidate only if the 40 registrations are applied atomically and validation remains green."},
+    {"id":"DEC-HNK3000-W01-REG-003","state":"PENDING","proposal":"Grant exactly one HNK3000 core credit to each successfully registered Wave 01 candidate, moving total credited core from 39 to 79 and A1 credited from 36 to 76."},
+    {"id":"DEC-HNK3000-W01-REG-004","state":"PENDING","proposal":"Registration does not promote any new item to FROZEN, VALIDATED historical recovery or productive morphology; all 40 remain authored CANDIDATE primitives pending later authority gates."},
+    {"id":"DEC-HNK3000-W01-REG-005","state":"PENDING","proposal":"Do not bind the 40 entries to SimpleWay lesson IDs, structures, runtime, OPI or QA under this gate. lessons remains empty and curriculum integration is separately governed."},
+    {"id":"DEC-HNK3000-W01-REG-006","state":"PENDING","proposal":"Do not resolve ON, KUON, MAMA, PAPA or any other HOLD seed; do not alter B16/Sprint B decisions or L03 state. Abort canonical write if registry SHA/content has materially changed and reconcile first."}
+  ],
+  "projected_if_approved":{"canonical_new_candidates":40,"auth_ids":"AUTH-021..AUTH-060","registry_version":"1.8.0-candidate","authored_registry_count":60,"HNK3000_core_credited":79,"HNK3000_remaining_to_3000":2921,"A1_credited":76,"A1_remaining_to_500":424,"FROZEN_promotions":0,"curriculum_bindings":0,"hold_seeds_resolved":0,"next_phase":"HNK3000_A1_AUTHORING_WAVE_02_SLOT_LOCK"},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V112","V113_observed":false,"attributed_to_HNK3000_Wave01_registration":false},
+  "approval_rule":"A future SIGA may approve only DEC-HNK3000-W01-REG-001 through DEC-HNK3000-W01-REG-006 if this gate remains materially unchanged. Before writing codex-hnk, refetch authored.mjs and abort/reconcile on material drift. The same SIGA must not promote FROZEN, bind curriculum, resolve HOLD seeds, approve B16, or alter L03."
+}
