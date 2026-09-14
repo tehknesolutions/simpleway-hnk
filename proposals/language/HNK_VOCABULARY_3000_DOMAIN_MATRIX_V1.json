@@ -72,5 +72,13 @@
     "reference_languages_select_forms": false,
     "numerology_selects_forms": false
   },
-  "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V108"
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V109",
+    "context_place_candidate_curriculum_mapped": true,
+    "context_place_mapped_slot": "STR002",
+    "STR002_authored": false,
+    "STR002_validated": false,
+    "STR002_runtime_active": false,
+    "attributed_to_HNK3000": false
+  }
 }
