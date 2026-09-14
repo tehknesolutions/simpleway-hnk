@@ -5,7 +5,7 @@
   "source_manifest":"HNK3000_A1_WAVE_02_SELECTED_FORM_REGISTRATION_MANIFEST_V1.json",
   "target_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
   "observed_registry_sha":"02462795701e9edaa510839c9598fae8ca3866fb",
-  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_THE_40_SELECTED_WAVE02_FORMS_AS_NEW_GOVERNED_CANDIDATES_AND_ASSIGN_THEIR_HNK3000_COUNT_CREDIT; DO_NOT_PROMOTE_TO_FROZEN_BIND_CURRICULUM_CREATE_GRAMMAR_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR AL TER_L03_WITH_THIS_APPROVAL",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_THE_40_SELECTED_WAVE02_FORMS_AS_NEW_GOVERNED_CANDIDATES_AND_ASSIGN_THEIR_HNK3000_COUNT_CREDIT; DO_NOT_PROMOTE_TO_FROZEN_BIND_CURRICULUM_CREATE_GRAMMAR_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR_ALTER_L03_WITH_THIS_APPROVAL",
   "proposed_decision":{"id":"DEC-HNK3000-W02-REG-001","state":"PENDING","proposal":"REGISTER_AUTH_061_THROUGH_AUTH_100_AS_GOVERNED_HNK3000_A1_CANDIDATES","rule":"After refetching and verifying the canonical authored registry has not materially changed, append the 40 selected Wave 02 entries as AUTH-061 through AUTH-100 with CANDIDATE-only authority and Wave 02 provenance."},
   "governance_decisions":[
     {"id":"DEC-HNK3000-W02-REG-002","state":"PENDING","proposal":"Bump registry version 1.8.0-candidate to 1.9.0-candidate only if all 40 registrations are applied atomically and validation invariants remain green."},
