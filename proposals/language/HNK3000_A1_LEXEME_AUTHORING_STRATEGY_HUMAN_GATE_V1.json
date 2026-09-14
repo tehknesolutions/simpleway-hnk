@@ -1,0 +1,43 @@
+{
+  "gate_id":"SWHNK-HNK3000-A1-LEXEME-AUTHORING-STRATEGY-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-14",
+  "source_strategy":"HNK3000_A1_LEXEME_AUTHORING_STRATEGY_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_A1_LEXEME_AUTHORING_METHOD_BATCHING_COLLISION_ROMANIZATION_AND_CREDIT_CONTRACT; DO_NOT_GENERATE_OR_SELECT_ANY_NEW_HNK_FORM_ASSIGN_ANY_NEW_GID_SEQUENCE_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR ALTER_L03_CURRICULUM_RUNTIME_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-HNK3000-A1-AUTHORING-001",
+    "state":"PENDING",
+    "proposal":"ADOPT_GID_FIRST_CANDIDATE_FIRST_12_WAVE_A1_AUTHORING_PIPELINE",
+    "rule":"Adopt the governed A1 lexeme-authoring pipeline for the 464 approved semantic slots: semantic-slot-first, G-ID-first, authoritative IPA, CANDIDATE-first, explicit provenance, collision/morphology/romanization review, human semantic-form selection, and separate later authority promotion."
+  },
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-A1-AUTHORING-002","state":"PENDING","proposal":"Adopt NATIVE_PRIMITIVE_CANDIDATE as the default lane. No resemblance to -VAN, final -I, PAR-, VAM-/VAMA-, SAR- or PARAZAMO/PARAZAMI licenses productive derivation without a separate morphology rule."},
+    {"id":"DEC-HNK3000-A1-AUTHORING-003","state":"PENDING","proposal":"Adopt the phonological authoring contract from Phonotactic Profile V2: all 40 G-IDs available; G40 /y/ remains vowel and distinct from G16 /j/; TS=G30 atomic; adjacent vowels and final consonants allowed; CV-rich/simple shapes are preferences, not laws; stress unresolved by default."},
+    {"id":"DEC-HNK3000-A1-AUTHORING-004","state":"PENDING","proposal":"Adopt romanization honesty: 40/40 G-ID representation is lossless; only governed safe romanization may be shown. Candidates using unmapped G-IDs remain G-ID+IPA rather than receiving invented Latin mappings."},
+    {"id":"DEC-HNK3000-A1-AUTHORING-005","state":"PENDING","proposal":"Adopt exact-collision rejection and near-collision/morphology-false-friend review. Each slot receives 2-3 reviewed candidate options and requires explicit human selection before registration."},
+    {"id":"DEC-HNK3000-A1-AUTHORING-006","state":"PENDING","proposal":"Adopt 12 authoring waves sized 40×11 + 24. HNK40 organizes batch quantity only and does not select forms or meanings. A human-approved registered governed CANDIDATE may receive one HNK3000 credit; FROZEN promotion remains a separate gate."
+  ],
+  "projected_if_approved":{
+    "A1_open_slots":464,
+    "authoring_waves":12,
+    "wave_sizes":[40,40,40,40,40,40,40,40,40,40,40,24],
+    "candidate_options_per_slot":"2_TO_3",
+    "default_lane":"NATIVE_PRIMITIVE_CANDIDATE",
+    "new_hnk_words":0,
+    "new_gid_sequences":0,
+    "hnk3000_credit_change":0,
+    "hold_seeds_resolved":0,
+    "authority_promotions":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "next_phase":"HNK3000_A1_AUTHORING_WAVE_01_SLOT_LOCK_AND_CANDIDATE_GENERATION_GATE"
+  },
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V112",
+    "STR002_validated":true,
+    "STR002_runtime_active":false,
+    "post_STR002_strategy_gate_pending":true,
+    "attributed_to_HNK3000_A1_authoring_strategy":false
+  },
+  "approval_rule":"A future SIGA may approve only DEC-HNK3000-A1-AUTHORING-001 through DEC-HNK3000-A1-AUTHORING-006 if this gate remains materially unchanged. The same SIGA must not generate or select any new HNK form, assign any new G-ID sequence, resolve HOLD seeds, approve B16, or alter L03 curriculum/runtime."
+}
