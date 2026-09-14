@@ -1,0 +1,21 @@
+{
+  "gate_id":"SWHNK-HNK3000-A1-AUTHORING-WAVE-02-CANDIDATE-GENERATION-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-14",
+  "source_slot_lock":"HNK3000_A1_AUTHORING_WAVE_02_SLOT_LOCK_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_GENERATION_OF_2_TO_3_REVIEWED_GID_FIRST_CANDIDATE_OPTIONS_FOR_THE_40_LOCKED_WAVE02_SEMANTIC_SLOTS; DO_NOT_SELECT_REGISTER_CREDIT_PROMOTE_BIND_CURRICULUM_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR_ALTER_L03_WITH_THIS_APPROVAL",
+  "proposed_decision":{"id":"DEC-HNK3000-W02-GEN-001","state":"PENDING","proposal":"AUTHORIZE_CANDIDATE_GENERATION_FOR_EXACT_40_LOCKED_WAVE02_SLOTS","rule":"Generate 2-3 candidate G-ID forms for each of the 40 locked Wave 02 semantic slots using the approved semantic-first, G-ID-first, Phonotactic Profile V2 and collision-review contracts. Generation produces review options only; no candidate is selected or registered by this gate."},
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-W02-GEN-002","state":"PENDING","proposal":"Use NATIVE_PRIMITIVE_CANDIDATE as default lane and do not exploit -VAN, final -I, PAR-, VAM-/VAMA-, SAR- or other observed families as productive morphology without a separate approved rule."},
+    {"id":"DEC-HNK3000-W02-GEN-003","state":"PENDING","proposal":"Each option must expose slot ID, concept reference, G-ID sequence, IPA, safe romanization only where fully governed, phonotactic notes, exact-collision result, near-collision result and morphology-false-friend result."},
+    {"id":"DEC-HNK3000-W02-GEN-004","state":"PENDING","proposal":"Reject exact collisions against recovered and all 60 authored registry entries, including Wave 01. Near collisions may remain only when explicitly flagged for human review."},
+    {"id":"DEC-HNK3000-W02-GEN-005","state":"PENDING","proposal":"Wave 02 contains no HOLD-linked slots; this gate nevertheless resolves no HOLD seed and creates no semantic authority beyond its 40 locked concept references."},
+    {"id":"DEC-HNK3000-W02-GEN-006","state":"PENDING","proposal":"After generation, prepare a separate Wave 02 human selection gate. No generated option receives registry status, HNK3000 credit, FROZEN authority, curriculum binding or runtime use before the later selection/registration flow."}
+  ],
+  "locked_slot_count":40,
+  "domain_distribution":{"D03":11,"D04":19,"D05":10},
+  "current_state":{"HNK3000_core_credited":79,"A1_credited":76,"A1_remaining_to_500":424,"authored_registry_version":"1.8.0-candidate","authored_registry_count":60},
+  "projected_if_approved":{"slots_with_generated_options":40,"candidate_options_per_slot":"2_TO_3","expected_option_count_range":"80_TO_120","registered_candidates":0,"hnk3000_credit_change":0,"authority_promotions":0,"hold_seeds_resolved":0,"curriculum_changes":0,"next_phase":"HNK3000_A1_AUTHORING_WAVE_02_HUMAN_SELECTION_GATE"},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V112","V113_observed":false,"attributed_to_HNK3000_Wave02":false},
+  "approval_rule":"A future SIGA may approve only DEC-HNK3000-W02-GEN-001 through DEC-HNK3000-W02-GEN-006 if this gate remains materially unchanged. The same SIGA must not select or register generated forms, assign HNK3000 credit, promote authority, resolve HOLD seeds, approve B16, or alter L03 curriculum/runtime."
+}
