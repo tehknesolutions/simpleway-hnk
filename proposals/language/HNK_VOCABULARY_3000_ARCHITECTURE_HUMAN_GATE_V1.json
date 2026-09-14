@@ -1,0 +1,43 @@
+{
+  "gate_id": "SWHNK-HNK-VOCABULARY-3000-ARCHITECTURE-HUMAN-GATE-V1",
+  "status": "AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared": "2026-09-13",
+  "sources": [
+    "HNK_VOCABULARY_3000_GDD_PDD_V1.md",
+    "HNK_VOCABULARY_3000_DOMAIN_MATRIX_V1.json"
+  ],
+  "decision_scope": "APPROVE_OR_REVISE_ONLY_HNK3000_TARGET_LEVEL_ALLOCATION_30X100_DOMAIN_MATRIX_AND_COUNTING_CONTRACT; DO_NOT_CREATE_ANY_NEW_HNK_WORD_ASSIGN_NEW_MEANINGS_PROMOTE_AUTHORITY_APPROVE_B16_OR_MUTATE_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id": "DEC-HNK3000-001",
+    "state": "PENDING",
+    "proposal": "ADOPT_HNK3000_B2_OPERATIONAL_LEXICAL_ARCHITECTURE",
+    "rule": "Adopt 3000 governed core lexical units as the HNK operational B2 lexical target, distributed cumulatively as A1=500, A2=1000, B1=1800, B2=3000, using 30 primary lexical domains of 100 units each. This is a product/curriculum benchmark, not a claim that CEFR officially defines B2 by 3000 words."
+  },
+  "governance_decisions": [
+    {"id":"DEC-HNK3000-002","state":"PENDING","proposal":"Adopt the exact level increments A1 +500, A2 +500, B1 +800, B2 +1200."},
+    {"id":"DEC-HNK3000-003","state":"PENDING","proposal":"Adopt the 30-domain matrix, exactly 100 counted lexical units per primary domain; secondary tags never create extra count."},
+    {"id":"DEC-HNK3000-004","state":"PENDING","proposal":"Adopt the counting contract: one governed lexical/conceptual head counts once; transparent inflection, predictable derivation, variants, phrases, bridges, reference names, glossless and dependency-blocked forms do not automatically count."},
+    {"id":"DEC-HNK3000-005","state":"PENDING","proposal":"Treat the existing 53 registered forms as seed inventory only; run a dedicated seed-eligibility audit before assigning HNK3000 progress credit."},
+    {"id":"DEC-HNK3000-006","state":"PENDING","proposal":"Use semantic-slot-first and G-ID-first authoring. Reference languages may inform comparison but never select forms; numerology may organize quantities but never select forms, meanings, phonology or syntax."}
+  ],
+  "projected_if_approved": {
+    "HNK3000_target": 3000,
+    "A1_cumulative": 500,
+    "A2_cumulative": 1000,
+    "B1_cumulative": 1800,
+    "B2_cumulative": 3000,
+    "domains": 30,
+    "units_per_domain": 100,
+    "new_lexemes_created": 0,
+    "existing_53_automatic_credit": false,
+    "next_phase": "HNK3000_SEED_ELIGIBILITY_AUDIT_V1"
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V108",
+    "context_place_candidate_productive": true,
+    "context_place_candidate_curriculum_mapping_eligible": true,
+    "context_place_candidate_curriculum_mapped": false,
+    "attributed_to_HNK3000": false
+  },
+  "approval_rule": "A future SIGA may approve only DEC-HNK3000-001 through DEC-HNK3000-006 if this gate remains materially unchanged. The same SIGA must not generate vocabulary, approve B16, assign seed-domain placements, or alter L03 curriculum/runtime."
+}
