@@ -1,19 +1,13 @@
 {
   "gate_id":"SWHNK-HNK-PARENT-LEXEME-CANONICAL-AUTHORED-MJS-INTEGRATION-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_EXECUTION_BLOCKED_BY_CONNECTOR_SHA_CONFLICT",
   "date_prepared":"2026-09-15",
-  "source_gate":"SWHNK-HNK-PARENT-LEXEME-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
-  "observed_canonical_state":{"repository":"tehknesolutions/codex-hnk","path":"packages/hnk-linguas/src/authored.mjs","version":"1.10.0-candidate","count":140,"blob_sha":"f685640728d2e5bb7960edd824ec5ccd2ebc2133","next_ids":"AUTH-141..AUTH-142","material_drift_from_parent_prewrite":false},
-  "dedicated_parent_registry":{"path":"packages/hnk-linguas/src/parent-lexemes.mjs","forms":["DARUNO","NELARA"],"status":"GOVERNED_AUTHORED_CANDIDATES_PENDING_AUTHORED_MJS_INTEGRATION"},
-  "proposed_decisions":[
-    {"id":"DEC-HNK-PARENT-CANON-001","state":"PENDING","proposal":"Integrate DARUNO and NELARA into canonical authored.mjs as AUTH-141 and AUTH-142 respectively, only if authored.mjs remains materially unchanged at execution time."},
-    {"id":"DEC-HNK-PARENT-CANON-002","state":"PENDING","proposal":"Bump authored registry version from 1.10.0-candidate to 1.11.0-candidate and expected authored candidate count from 140 to 142."},
-    {"id":"DEC-HNK-PARENT-CANON-003","state":"PENDING","proposal":"Keep DARUNO/NELARA CANDIDATE, AUTHORED_PRIMITIVE, historicalRecoveryClaim=false, lessons=[], and NON_PRODUCTIVE_SINGLE_CANDIDATE."},
-    {"id":"DEC-HNK-PARENT-CANON-004","state":"PENDING","proposal":"Add validator checks for exact G-ID sequences and parent-lexeme invariants without granting FROZEN authority, grammar, morphology productivity, theological use, or curriculum binding."},
-    {"id":"DEC-HNK-PARENT-CANON-005","state":"PENDING","proposal":"Preserve PAPA/MAMA recovered historical evidence while rejecting them as core teaching father/mother forms; keep NEKUVO unchanged as generic parent."},
-    {"id":"DEC-HNK-PARENT-CANON-006","state":"PENDING","proposal":"Do not register Wave04, alter D03/L03/B16, or use this canonical integration as approval for unrelated lexical work."}
-  ],
-  "execution_note":"Previous user SIGA approved the registration gate but did not explicitly authorize a risky whole-file canonical replacement. This dedicated gate isolates that technical canonical merge and requires a fresh explicit approval.",
-  "effects_if_approved":{"canonical_authored_count":142,"registry_version":"1.11.0-candidate","new_parent_candidates":2,"hnk3000_credit_change":0,"frozen_promotions":0,"wave04_change":0,"D03_change":0,"L03_change":0},
-  "approval_rule":"A future SIGA in this parent-lexeme thread may approve and execute only DEC-HNK-PARENT-CANON-001 through DEC-HNK-PARENT-CANON-006 after refetching authored.mjs and verifying no material drift. Stop after canonical integration and validation-state recording."
+  "date_approved":"2026-09-15",
+  "approval_source":"CURRENT_USER_SOGA_INTERPRETED_AS_SIGA_IN_CONTEXT_SCOPED_ONLY_TO_THIS_VISIBLE_GATE",
+  "approved_decisions":["DEC-HNK-PARENT-CANON-001","DEC-HNK-PARENT-CANON-002","DEC-HNK-PARENT-CANON-003","DEC-HNK-PARENT-CANON-004","DEC-HNK-PARENT-CANON-005","DEC-HNK-PARENT-CANON-006"],
+  "prewrite_verification":{"authored_mjs_version":"1.10.0-candidate","authored_mjs_count":140,"authored_mjs_blob_sha":"f685640728d2e5bb7960edd824ec5ccd2ebc2133","material_drift":false},
+  "execution_blocker":{"type":"GITHUB_CONTENTS_SHA_CONFLICT","target":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/parent-lexemes.mjs","fetch_reported_sha":"29e7d4ca1f3832c0c17b328df3423c85dc4222b0","first_update_error_reported_current_sha":"e4e48232f7c3f6804760b76e951270ddc1a90f54","retry_with_error_reported_sha":"REJECTED_AS_NOT_MATCHING_PATH","writes_to_codex_hnk_succeeded":0,"canonical_authored_mjs_modified":false},
+  "approved_target_state":{"DARUNO":"AUTH-141","NELARA":"AUTH-142","registry_version":"1.11.0-candidate","candidate_count":142,"authority":"CANDIDATE","certainty":"AUTHORED_PRIMITIVE","productivity":"NON_PRODUCTIVE_SINGLE_CANDIDATE"},
+  "governance":{"hnk3000_credit_change":0,"frozen_promotions":0,"PAPA_MAMA_historical_evidence_preserved":true,"NEKUVO_unchanged":true,"wave04_unchanged":true,"D03_unchanged":true,"L03_unchanged":true},
+  "resume_rule":"Do not repeat human approval. Resume technical execution only after refetching the codex-hnk targets and obtaining a consistent writable SHA; then integrate DARUNO/NELARA and record validation result."
 }
