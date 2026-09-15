@@ -1,12 +1,16 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 async function json(path){return JSON.parse(await readFile(new URL(`../${path}`,import.meta.url),'utf8'));}
-const snap=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V121.json');
+
+const snap=await json('progress/CYCLE1_PROGRESS_SNAPSHOT_V122.json');
 const l02=await json('curriculum/cycle-01/L02-chokhmah/manifest.json');
 const l03=await json('curriculum/cycle-01/L03-binah/manifest.json');
-const constructionGate=await json('curriculum/cycle-01/L03-binah/validation/l03-opi-foundational-interrogative-surface-candidate-construction-human-batch.v1.json');
 const exactGate=await json('curriculum/cycle-01/L03-binah/validation/l03-opi-foundational-interrogative-exact-surface-selection-human-batch.v1.json');
-assert.equal(snap.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V121');
+const strategy=await json('proposals/language/HNK_GRAMMAR_CORE_V1_STRATEGY_APPROVAL.json');
+const coreGate=await json('proposals/language/HNK_GRAMMAR_CORE_V1_HUMAN_BATCH.json');
+const workstream=await json('proposals/language/HNK_GRAMMAR_CORE_V1_ACTIVE_DECISION_V1.json');
+
+assert.equal(snap.snapshot_id,'SWHNK-C1-PROGRESS-SNAPSHOT-V122');
 assert.equal(snap.package,'simpleway-hnk@0.75.0');
 assert.deepEqual(snap.implementation,{MISSING:701,AUTHORED:0,VALIDATED:307,FROZEN:0});
 assert.deepEqual(snap.L02.implementation,{MISSING:0,AUTHORED:0,VALIDATED:139,FROZEN:0});
@@ -18,35 +22,55 @@ assert.equal(snap.L03.opi_AUTHORED,0);
 assert.equal(snap.L03.opi_VALIDATED,0);
 assert.equal(snap.L03.qa_AUTHORED,0);
 assert.equal(snap.L03.qa_VALIDATED,0);
-assert.equal(snap.L03.opi_foundational_interrogative_surface_construction_decisions_approved,6);
-assert.equal(snap.L03.opi_foundational_interrogative_surface_construction_status,'APPROVED_ALL_DECISIONS');
-assert.equal(snap.L03.opi_foundational_interrogative_exact_surface_selection_required_fields,4);
-assert.equal(snap.L03.opi_foundational_interrogative_exact_surface_selection_completed_fields,0);
-assert.equal(snap.L03_OPI_foundational_interrogative_surface_construction.status,'APPROVED_ALL_DECISIONS');
-assert.equal(snap.L03_OPI_foundational_interrogative_surface_construction.construction_protocol_approved,true);
-assert.equal(snap.L03_OPI_foundational_interrogative_surface_construction.explicit_surface_package_required,true);
-assert.equal(snap.L03_OPI_foundational_interrogative_surface_construction.candidate_created,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.status,'AWAITING_EXPLICIT_HUMAN_SURFACE_PACKAGE');
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.required_fields,4);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.completed_fields,0);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.explicit_surface_package_complete,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.HNK_forms_selected,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.surface_schema_selected,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.token_order_selected,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.marking_mechanism_selected,false);
-assert.equal(snap.L03_OPI_foundational_interrogative_exact_surface_selection.candidate_created,false);
-assert.equal(snap.boundaries.bare_siga_selects_surface_package,false);
+assert.equal(snap.L03.exact_surface_selection_status,'PAUSED_BY_HNK_GRAMMAR_CORE_V1_STRATEGIC_PIVOT');
+assert.equal(snap.L03.exact_surface_required_fields,4);
+assert.equal(snap.L03.exact_surface_completed_fields,0);
+assert.equal(snap.L03.exact_surface_package_complete,false);
+
+assert.equal(strategy.status,'APPROVED_STRATEGIC_PIVOT_ONLY');
+assert.equal(coreGate.status,'AWAITING_EXPLICIT_HUMAN_APPROVAL_OF_RECOMMENDED_PACKAGE');
+assert.equal(workstream.status,'ACTIVE_AWAITING_GRAMMAR_CORE_V1_HUMAN_DECISION');
+assert.equal(workstream.active_gate,coreGate.batch_id);
+assert.equal(workstream.paused_dependent_gate.gate_id,exactGate.batch_id);
+assert.equal(exactGate.status,'AWAITING_EXPLICIT_HUMAN_SURFACE_PACKAGE');
+assert.ok(exactGate.required_surface_package.every(x=>x.value===null));
+
+assert.equal(snap.language_architecture.strategy_status,'APPROVED_STRATEGIC_PIVOT_ONLY');
+assert.equal(snap.language_architecture.current_chat_active_gate,coreGate.batch_id);
+assert.equal(snap.language_architecture.current_chat_active_gate_status,'AWAITING_EXPLICIT_HUMAN_APPROVAL_OF_RECOMMENDED_PACKAGE');
+assert.deepEqual(snap.language_architecture.recommended_component_candidates,['KE','AN','EN','KU','KUVAN']);
+assert.equal(snap.language_architecture.recommended_predication_policy,'CONSTRUCTION_SPECIFIC');
+assert.equal(snap.language_architecture.recommended_negation_policy,'SCOPED_EXISTING_GOVERNED_USES_ONLY');
+assert.equal(snap.language_architecture.recommended_temporal_policy,'LEXICAL_SCOPED_FIRST');
+assert.equal(snap.language_architecture.new_language_authority_granted,false);
+assert.equal(snap.language_architecture.canonical_registry_changed_by_v122,false);
+assert.equal(snap.language_architecture.cycle1_binding_changes,0);
+
+assert.equal(snap.parallel_workstreams.HNK3000.automatic_grammar_binding,false);
+assert.equal(snap.parallel_workstreams.HNK3000.automatic_cycle1_binding,false);
+assert.equal(snap.parallel_workstreams.parent_lexeme_canonical_integration.consumed_by_v122,false);
+
 assert.equal(snap.boundaries.KE_generalized_to_L03,false);
 assert.equal(snap.boundaries.AN_EN_generalized_to_L03,false);
+assert.equal(snap.boundaries.KU_generalized_to_L03,false);
+assert.equal(snap.boundaries.KUVAN_generalized_to_L03,false);
+assert.equal(snap.boundaries.NE_global_negation_promoted,false);
+assert.equal(snap.boundaries.PA_generic_past_created,false);
+assert.equal(snap.boundaries.universal_copula_created,false);
+assert.equal(snap.boundaries.tense_grammar_created,false);
+assert.equal(snap.boundaries.new_surface_forms,0);
+assert.equal(snap.boundaries.new_promoted_grammar_rules,0);
 assert.equal(snap.boundaries.OPI_unlocked,false);
 assert.equal(snap.boundaries.QA_unlocked,false);
 assert.equal(snap.boundaries.STR003_STR005_unlocked,false);
+assert.equal(snap.boundaries.runtime_active,false);
+
 assert.equal(l02.pedagogy.sealed,true);
 assert.deepEqual(l03.implementation,{MISSING:126,AUTHORED:0,VALIDATED:13,FROZEN:0});
-assert.equal(l03.rules.opi_foundational_interrogative_surface_construction_approved,true);
-assert.equal(l03.rules.opi_foundational_interrogative_exact_surface_selection_opened,true);
-assert.equal(constructionGate.status,'APPROVED_ALL_DECISIONS');
-assert.equal(exactGate.status,'AWAITING_EXPLICIT_HUMAN_SURFACE_PACKAGE');
-assert.equal(snap.next_gate,'SWHNK-L03-BINAH-OPI-FOUNDATIONAL-INTERROGATIVE-EXACT-SURFACE-SELECTION-HUMAN-BATCH-V1');
-assert.equal(snap.next_gate_status,'AWAITING_EXPLICIT_HUMAN_SURFACE_PACKAGE');
-console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V121');
+assert.equal(l03.rules.foundational_interrogative_HNK_form_selected,false);
+assert.equal(l03.rules.OPI_unlocked,false);
+assert.equal(l03.rules.QA_unlocked,false);
+assert.equal(snap.next_gate,coreGate.batch_id);
+assert.equal(snap.next_gate_status,'AWAITING_EXPLICIT_HUMAN_APPROVAL_OF_RECOMMENDED_PACKAGE');
+
+console.log('PASS SWHNK-C1-PROGRESS-TRACKER-V122');
