@@ -1,18 +1,14 @@
 {
   "gate_id":"SWHNK-HNK-PARENT-LEXEME-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_WITH_CANONICAL_INTEGRATION_PENDING",
   "date_prepared":"2026-09-15",
-  "source_gate":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-HUMAN-GATE-V1",
-  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_DARUNO_AND_NELARA_AS_GOVERNED_AUTHORED_PRIMITIVE_CANDIDATES; DO_NOT_DELETE_PAPA_MAMA CREATE_PRODUCTIVE_MORPHOLOGY REGISTER_WAVE04 ALTER_D03_L03 OR PROMOTE_TO_FROZEN",
-  "proposed_decisions":[
-    {"id":"DEC-HNK-PARENT-REG-001","state":"PENDING","proposal":"Register DARUNO as CANDIDATE AUTHORED_PRIMITIVE for human father/pai with G-ID sequence G19 G01 G15 G05 G12 G04 and IPA /da.ru.no/."},
-    {"id":"DEC-HNK-PARENT-REG-002","state":"PENDING","proposal":"Register NELARA as CANDIDATE AUTHORED_PRIMITIVE for human mother/mãe with G-ID sequence G12 G02 G14 G01 G15 G01 and IPA /ne.la.ra/."},
-    {"id":"DEC-HNK-PARENT-REG-003","state":"PENDING","proposal":"Supersede PAPA/MAMA only for core teaching/reference selection while preserving their historical recovered GATE evidence; do not delete source evidence."},
-    {"id":"DEC-HNK-PARENT-REG-004","state":"PENDING","proposal":"Keep NEKUVO as the separate generic parent concept and create no productive gender/parent derivation rule."},
-    {"id":"DEC-HNK-PARENT-REG-005","state":"PENDING","proposal":"Before canonical write refetch codex-hnk authored registry, assign the next available AUTH IDs only if no material drift, and keep both forms CANDIDATE/NON_PRODUCTIVE."},
-    {"id":"DEC-HNK-PARENT-REG-006","state":"PENDING","proposal":"Do not use this registration to approve Wave04, D03, B16, L03, theological titles, or any unrelated lexical forms."}
-  ],
+  "date_approved":"2026-09-15",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_PARENT_LEXEME_REGISTRATION_GATE",
+  "approved_decisions":["DEC-HNK-PARENT-REG-001","DEC-HNK-PARENT-REG-002","DEC-HNK-PARENT-REG-003","DEC-HNK-PARENT-REG-004","DEC-HNK-PARENT-REG-005","DEC-HNK-PARENT-REG-006"],
   "selected_forms":{"father":"DARUNO","mother":"NELARA"},
-  "projected_effect":{"new_registered_candidates":2,"authority":"CANDIDATE","frozen_promotions":0,"productive_rules":0,"PAPA_MAMA_deleted":false},
-  "approval_rule":"A future SIGA in this parent-lexeme thread may approve only DEC-HNK-PARENT-REG-001 through DEC-HNK-PARENT-REG-006 if this gate remains materially unchanged. Refetch the canonical authored registry before write and reconcile on drift."
+  "canonical_prewrite_observation":{"authored_registry_version":"1.10.0-candidate","authored_registry_count":140,"authored_registry_blob_sha":"f685640728d2e5bb7960edd824ec5ccd2ebc2133","material_drift":false,"next_auth_ids_if_integrated":"AUTH-141..AUTH-142"},
+  "registration":{"dedicated_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/parent-lexemes.mjs","commit":"98d18e3a47ebcfec04ce5f80f22639020bbed671","registered_candidates":2,"authority":"CANDIDATE","certainty":"AUTHORED_PRIMITIVE","productive_morphology":false,"curriculum_binding":false},
+  "canonical_integration":{"authored_mjs_updated":false,"reason":"Connector supports whole-file replacement only; do not risk destructive rewrite of the canonical 140-entry registry. Dedicated governed registry was created atomically and authored.mjs integration remains an explicit technical merge step.","required_next_step":"MERGE_PARENT_REGISTRY_INTO_AUTHORED_MJS_AS_AUTH_141_AUTH_142_AND_UPDATE_VALIDATOR_ATOMICALLY"},
+  "governance":{"PAPA_MAMA_historical_evidence_preserved":true,"PAPA_MAMA_core_use_rejected":true,"NEKUVO_unchanged":true,"hnk3000_credit_change":0,"frozen_promotions":0,"wave04_unchanged":true,"D03_unchanged":true,"L03_unchanged":true},
+  "next_phase":"HNK_PARENT_LEXEME_CANONICAL_AUTHORED_MJS_INTEGRATION"
 }
