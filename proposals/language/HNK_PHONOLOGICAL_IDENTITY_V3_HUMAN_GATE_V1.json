@@ -1,39 +1,27 @@
 {
   "gate_id":"SWHNK-HNK-PHONOLOGICAL-IDENTITY-V3-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-14",
+  "date_approved":"2026-09-14",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK_PHONOLOGICAL_IDENTITY_V3_HUMAN_GATE",
   "source_proposal":"HNK_PHONOLOGICAL_IDENTITY_V3_PROPOSAL.md",
   "decision_scope":"APPROVE_OR_REVISE_ONLY_HNK_PHONOLOGICAL_IDENTITY_V3_AUTHORING_LAYER_EUPHONY_SCORE_AND_EXTERNAL_RESEMBLANCE_RISK_GOVERNANCE; DO_NOT_REGISTER_WAVE04_FORMS CREATE_NEW_HNK_WORDS RENAME_EXISTING_WORDS PROMOTE_AUTHORITY CREATE_GRAMMAR OR ALTER_L03_WITH_THIS_APPROVAL",
-  "proposed_decision":{"id":"DEC-HNK-PHONOV3-001","state":"PENDING","proposal":"ADOPT_UNIVERSAL_EUPHONIC_HNK_AS_THE_AUTHORING_DESIGN_THESIS","rule":"HNK should be pleasant to pronounce and hear, easy to sustain in connected speech, globally pronounceable without being lexically derivative of any one reference language."},
+  "approved_decision":{"id":"DEC-HNK-PHONOV3-001","state":"APPROVED","decision":"ADOPT_UNIVERSAL_EUPHONIC_HNK_AS_THE_AUTHORING_DESIGN_THESIS","rule":"HNK should be pleasant to pronounce and hear, easy to sustain in connected speech, globally pronounceable without being lexically derivative of any one reference language."},
   "governance_decisions":[
-    {"id":"DEC-HNK-PHONOV3-002","state":"PENDING","proposal":"Adopt LUMEN, LOGOS and RUACH as non-semantic phonological style-density registers inside one HNK language; register assignment never follows automatically from sound shape."},
-    {"id":"DEC-HNK-PHONOV3-003","state":"PENDING","proposal":"Adopt Euphony Score V1 as a 100-point human-review aid with weights: pronounceability20, connected_flow15, rhythm15, memorability10, HNK40_identity10, internal_distance10, external_distance10, register_fit10."},
-    {"id":"DEC-HNK-PHONOV3-004","state":"PENDING","proposal":"Adopt External Resemblance Risk classes GREEN/YELLOW/ORANGE/RED and require explicit review of strong accidental similarities to common external lexical forms."},
-    {"id":"DEC-HNK-PHONOV3-005","state":"PENDING","proposal":"Adopt the rule that resemblance to an external language never determines HNK meaning, etymology, borrowing status or semantic authority; intentional loans/bridges require separate explicit governance."},
-    {"id":"DEC-HNK-PHONOV3-006","state":"PENDING","proposal":"Use broad reference-language families only as phonological/structural comparison sources; no reference language selects HNK forms. Initial comparison set includes PT, EN, ES, EO, FR, IT, DE, Biblical Hebrew transliteration, Koine Greek transliteration, Arabic transliteration, Japanese romanization, Mandarin pinyin, Russian transliteration, Sanskrit or explicitly selected South Asian transliteration, and documented Tupi vocabulary where source quality is adequate."},
-    {"id":"DEC-HNK-PHONOV3-007","state":"PENDING","proposal":"Keep Phonotactic Profile V2 as the governed factual substrate; V3 is an authoring-identity layer and does not silently change G-ID/IPA, G40/G16 distinction, TS atomicity, hiatus legality, final consonant legality or unresolved stress architecture."},
-    {"id":"DEC-HNK-PHONOV3-008","state":"PENDING","proposal":"Do not invalidate existing recovered/authored/selected vocabulary. After approval, run a retrospective Euphony+ERR audit; any replacement requires a separate lexical-authority gate."},
-    {"id":"DEC-HNK-PHONOV3-009","state":"PENDING","proposal":"Pause Wave05+ HNK lexical candidate generation until the PT-EN-Esperanto 3000-slot semantic master and Euphony+ERR contracts are attached. Preserve the Wave04 selected-form registration gate unchanged and independently approvable."}
+    {"id":"DEC-HNK-PHONOV3-002","state":"APPROVED","decision":"Adopt LUMEN, LOGOS and RUACH as non-semantic phonological style-density registers inside one HNK language; register assignment never follows automatically from sound shape."},
+    {"id":"DEC-HNK-PHONOV3-003","state":"APPROVED","decision":"Adopt Euphony Score V1 as a 100-point human-review aid with weights: pronounceability20, connected_flow15, rhythm15, memorability10, HNK40_identity10, internal_distance10, external_distance10, register_fit10."},
+    {"id":"DEC-HNK-PHONOV3-004","state":"APPROVED","decision":"Adopt External Resemblance Risk classes GREEN/YELLOW/ORANGE/RED and require explicit review of strong accidental similarities to common external lexical forms."},
+    {"id":"DEC-HNK-PHONOV3-005","state":"APPROVED","decision":"Resemblance to an external language never determines HNK meaning, etymology, borrowing status or semantic authority; intentional loans/bridges require separate explicit governance."},
+    {"id":"DEC-HNK-PHONOV3-006","state":"APPROVED","decision":"Use broad reference-language families only as phonological/structural comparison sources; no reference language selects HNK forms. Initial comparison set includes PT, EN, ES, EO, FR, IT, DE, Biblical Hebrew transliteration, Koine Greek transliteration, Arabic transliteration, Japanese romanization, Mandarin pinyin, Russian transliteration, Sanskrit or explicitly selected South Asian transliteration, and documented Tupi vocabulary where source quality is adequate."},
+    {"id":"DEC-HNK-PHONOV3-007","state":"APPROVED","decision":"Keep Phonotactic Profile V2 as the governed factual substrate; V3 is an authoring-identity layer and does not silently change G-ID/IPA, G40/G16 distinction, TS atomicity, hiatus legality, final consonant legality or unresolved stress architecture."},
+    {"id":"DEC-HNK-PHONOV3-008","state":"APPROVED","decision":"Do not invalidate existing recovered/authored/selected vocabulary. Run a retrospective Euphony+ERR audit before any future replacement; replacement requires a separate lexical-authority gate."},
+    {"id":"DEC-HNK-PHONOV3-009","state":"APPROVED","decision":"Pause Wave05+ HNK lexical candidate generation until the PT-EN-Esperanto 3000-slot semantic master and Euphony+ERR contracts are attached. Preserve the Wave04 selected-form registration gate unchanged and independently approvable."}
   ],
-  "explicit_boundaries":{
-    "wave04_registration_consumed_by_this_gate":false,
-    "new_hnk_forms":0,
-    "existing_hnk_forms_renamed":0,
-    "authority_promotions":0,
-    "grammar_changes":0,
-    "morphology_productivity_changes":0,
-    "L03_changes":0,
-    "reference_languages_select_forms":false,
-    "numerology_selects_forms":false,
-    "sound_symbolism_selects_meaning":false,
-    "spiritual_experience_treated_as_empirical_linguistic_proof":false
-  },
-  "projected_if_approved":{
-    "current_authoring_identity_layer":"HNK_PHONOLOGICAL_IDENTITY_V3",
-    "phonotactic_substrate":"SWHNK-HNK-PHONOTACTIC-PROFILE-V2",
-    "next_artifact":"HNK3000_PT_EN_ESPERANTO_MASTER_SEMANTIC_LEXICON_V1",
-    "next_audit":"HNK_EXISTING_LEXICON_EUPHONY_ERR_AUDIT_V1",
-    "wave04_registration_gate_remains":"SWHNK-HNK3000-A1-WAVE-04-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1"
-  },
-  "approval_rule":"A future SIGA in this phonological-identity thread may approve only DEC-HNK-PHONOV3-001 through DEC-HNK-PHONOV3-009 if this gate remains materially unchanged. The same approval must not register Wave04, create or select new HNK forms, replace existing words, promote authority, approve B16, or alter L03."
+  "effects":{"current_authoring_identity_layer":"HNK_PHONOLOGICAL_IDENTITY_V3","phonotactic_substrate":"SWHNK-HNK-PHONOTACTIC-PROFILE-V2","new_hnk_forms":0,"existing_hnk_forms_renamed":0,"authority_promotions":0,"grammar_changes":0,"morphology_productivity_changes":0,"L03_changes":0,"wave04_registration_consumed":false,"wave05_plus_generation_paused":true},
+  "boundaries":{"reference_languages_select_forms":false,"numerology_selects_forms":false,"sound_symbolism_selects_meaning":false,"spiritual_experience_treated_as_empirical_linguistic_proof":false},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V120","L03_external_gate":"OPI_FOUNDATIONAL_INTERROGATIVE_SURFACE_CANDIDATE_CONSTRUCTION","attributed_to_HNK_phonological_identity_v3":false,"wave04_registration_gate_status":"AWAITING_EXPLICIT_HUMAN_APPROVAL"},
+  "next_artifact":"HNK3000_PT_EN_ESPERANTO_MASTER_SEMANTIC_LEXICON_V1",
+  "next_audit":"HNK_EXISTING_LEXICON_EUPHONY_ERR_AUDIT_V1",
+  "wave04_registration_gate_remains":"SWHNK-HNK3000-A1-WAVE-04-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "same_approval_must_not_register_wave04_create_new_hnk_forms_replace_existing_words_promote_authority_approve_B16_or_alter_L03":true
 }
