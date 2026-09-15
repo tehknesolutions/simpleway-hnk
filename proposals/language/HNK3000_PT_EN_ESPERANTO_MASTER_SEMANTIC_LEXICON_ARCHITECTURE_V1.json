@@ -1,7 +1,10 @@
 {
   "architecture_id":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-V1",
-  "status":"PREPARED_AWAITING_HUMAN_GATE",
+  "status":"APPROVED_ARCHITECTURE",
   "date_prepared":"2026-09-14",
+  "date_approved":"2026-09-14",
+  "approved_by_gate":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-HUMAN-GATE-V1",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_PT_EN_ESPERANTO_MASTER_ARCHITECTURE_GATE",
   "purpose":"Define a 3000-slot semantic master in Portuguese, English and Esperanto before Wave05+ HNK form generation.",
   "target_semantic_slots":3000,
   "levels":{"A1":{"cumulative":500,"increment":500},"A2":{"cumulative":1000,"increment":500},"B1":{"cumulative":1800,"increment":800},"B2":{"cumulative":3000,"increment":1200}},
@@ -23,5 +26,6 @@
   "hnk_policy":{"wave05_plus_generation":"PAUSED_UNTIL_MASTER_AND_EUPHONY_ERR_CONTRACTS_ATTACHED","wave04_selected_forms":"PRESERVED_INDEPENDENT_REGISTRATION_GATE","new_hnk_forms_in_this_architecture":0},
   "existing_state":{"HNK3000_core_credited":159,"A1_credited":156,"wave04_selected_pending_registration":40,"authored_registry_count":140},
   "recommended_build_batches":{"batch_size":100,"batch_count":30,"ordering":"DOMAIN_ORDER_THEN_LEVEL_ALLOCATION_WITH_GLOBAL_SLOT_INDEX_0001_TO_3000"},
-  "next_gate":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-HUMAN-GATE-V1"
+  "next_phase":"HNK3000_PT_EN_ESPERANTO_MASTER_BATCH_01_D01",
+  "boundaries":{"new_hnk_forms":0,"wave04_registration_change":0,"hnk3000_credit_change":0,"reference_languages_select_hnk_forms":false,"grammar_changes":0,"L03_changes":0}
 }
