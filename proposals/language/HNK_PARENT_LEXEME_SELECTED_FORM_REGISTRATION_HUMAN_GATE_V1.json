@@ -1,0 +1,18 @@
+{
+  "gate_id":"SWHNK-HNK-PARENT-LEXEME-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-15",
+  "source_gate":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-HUMAN-GATE-V1",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_DARUNO_AND_NELARA_AS_GOVERNED_AUTHORED_PRIMITIVE_CANDIDATES; DO_NOT_DELETE_PAPA_MAMA CREATE_PRODUCTIVE_MORPHOLOGY REGISTER_WAVE04 ALTER_D03_L03 OR PROMOTE_TO_FROZEN",
+  "proposed_decisions":[
+    {"id":"DEC-HNK-PARENT-REG-001","state":"PENDING","proposal":"Register DARUNO as CANDIDATE AUTHORED_PRIMITIVE for human father/pai with G-ID sequence G19 G01 G15 G05 G12 G04 and IPA /da.ru.no/."},
+    {"id":"DEC-HNK-PARENT-REG-002","state":"PENDING","proposal":"Register NELARA as CANDIDATE AUTHORED_PRIMITIVE for human mother/mãe with G-ID sequence G12 G02 G14 G01 G15 G01 and IPA /ne.la.ra/."},
+    {"id":"DEC-HNK-PARENT-REG-003","state":"PENDING","proposal":"Supersede PAPA/MAMA only for core teaching/reference selection while preserving their historical recovered GATE evidence; do not delete source evidence."},
+    {"id":"DEC-HNK-PARENT-REG-004","state":"PENDING","proposal":"Keep NEKUVO as the separate generic parent concept and create no productive gender/parent derivation rule."},
+    {"id":"DEC-HNK-PARENT-REG-005","state":"PENDING","proposal":"Before canonical write refetch codex-hnk authored registry, assign the next available AUTH IDs only if no material drift, and keep both forms CANDIDATE/NON_PRODUCTIVE."},
+    {"id":"DEC-HNK-PARENT-REG-006","state":"PENDING","proposal":"Do not use this registration to approve Wave04, D03, B16, L03, theological titles, or any unrelated lexical forms."}
+  ],
+  "selected_forms":{"father":"DARUNO","mother":"NELARA"},
+  "projected_effect":{"new_registered_candidates":2,"authority":"CANDIDATE","frozen_promotions":0,"productive_rules":0,"PAPA_MAMA_deleted":false},
+  "approval_rule":"A future SIGA in this parent-lexeme thread may approve only DEC-HNK-PARENT-REG-001 through DEC-HNK-PARENT-REG-006 if this gate remains materially unchanged. Refetch the canonical authored registry before write and reconcile on drift."
+}
