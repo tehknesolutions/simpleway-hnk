@@ -1,0 +1,63 @@
+{
+  "review_id":"SWHNK-HNK-B11-VALA-DISPOSITION-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide only the future disposition and rationale class of AUTH-002 VALA. Do not infer recovered VALA morphology, create A/I part-of-speech rules, change L01 curriculum, or mutate the canonical authored registry in this gate.",
+  "current_authored_state":{
+    "id":"AUTH-002",
+    "form":"VALA",
+    "authority":"CANDIDATE",
+    "meaning":{"pt":"atividade / ação realizada; núcleo nominal genérico de atividade","en":"activity / performed action; generic activity nominal head"},
+    "certainty":"AUTHORED_BACK_ANALYSIS",
+    "historicalRecoveryClaim":false,
+    "productivity":"NON_PRODUCTIVE_SINGLE_CANDIDATE",
+    "registry_version":"1.7.0-candidate"
+  },
+  "evidence":{
+    "supporting":[
+      "VAMAVALA is WATCH and its recovered meaning includes hobby / pleasure activity.",
+      "VALI is FROZEN and belongs to work/action domain.",
+      "B8 governs a closed PARAZAMO/PARAZAMI O/I family contrast, while B9 records final-I only as a nonmorphemic distributional tendency."
+    ],
+    "counterevidence":[
+      "KALOVALA is FROZEN with meaning edifício / prédio and contains the same final VALA surface sequence.",
+      "Therefore surface recurrence does not support VALA=activity as recovered morphology.",
+      "B10 confirms recurring substrings and semantic clusters must not be promoted to morphemes merely from distributional similarity."
+    ]
+  },
+  "audit_conclusion":"The old AUTHORED_BACK_ANALYSIS rationale is no longer acceptable as the continuing primary rationale for AUTH-002. This does not by itself require deleting the authored candidate, because AUTH-002 explicitly never claimed historical recovery and its semantics may instead be retained as deliberate primitive authorship.",
+  "options":[
+    {
+      "id":"B11-OPTION-A",
+      "decision":"RETAIN_AS_INDEPENDENT_AUTHORED_PRIMITIVE_REPAIR_RATIONALE",
+      "recommended":true,
+      "description":"Keep VALA and its current authored activity meaning as a CANDIDATE, but explicitly detach it from recovered-morphology/back-analysis claims. Future canonical patch changes certainty/rationale to authored primitive, preserves historicalRecoveryClaim=false and keeps productivity NON_PRODUCTIVE_SINGLE_CANDIDATE.",
+      "effect":"Minimal semantic/course disruption while removing unsupported morphology. No authority promotion."
+    },
+    {
+      "id":"B11-OPTION-B",
+      "decision":"REVISE_VALA_UNDER_NEW_CANDIDATE_VERSION",
+      "recommended":false,
+      "description":"Keep the surface VALA under review but reopen its authored meaning/rationale and issue a new candidate version before further use.",
+      "effect":"Current AUTH-002 semantics become pending replacement; downstream course uses require reconciliation."
+    },
+    {
+      "id":"B11-OPTION-C",
+      "decision":"RETIRE_OR_SUPERSEDE_VALA_CANDIDATE",
+      "recommended":false,
+      "description":"Retire/supersede AUTH-002 and remove VALA as an active authored candidate in a later canonical patch.",
+      "effect":"Requires explicit replacement strategy for any course dependency and must not silently delete historical proposal records."
+    }
+  ],
+  "boundaries":{
+    "VALA_recovered_morpheme":false,
+    "A_general_noun_marker":false,
+    "I_general_verb_marker":false,
+    "current_gate_mutates_codex_registry":false,
+    "current_gate_changes_L01":false,
+    "current_gate_promotes_authority":false
+  },
+  "recommended_decision":"B11-OPTION-A",
+  "canonical_patch_dependency":"Apply any authored-registry metadata/content patch only after this human decision and in coordination with B18/B20 lifecycle/provenance governance.",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104"
+}

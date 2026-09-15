@@ -1,0 +1,32 @@
+{
+  "decision_id":"SWHNK-HNK-B11-VALA-DISPOSITION-DECISION-V1",
+  "status":"APPROVED_RETAIN_AUTHORED_PRIMITIVE_RATIONALE_REPAIRED_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "source_gate":"HNK_B11_VALA_DISPOSITION_HUMAN_GATE_V1.json",
+  "subject":"AUTH-002 VALA",
+  "decision":{
+    "disposition":"RETAIN",
+    "authority":"CANDIDATE_UNCHANGED",
+    "semantic_intent":"activity / performed action",
+    "rationale_class":"AUTHORED_PRIMITIVE",
+    "historicalRecoveryClaim":false,
+    "productivity":"NON_PRODUCTIVE_SINGLE_CANDIDATE",
+    "old_back_analysis":"SUPERSEDED_RATIONALE_HISTORICAL_PRIOR"
+  },
+  "boundaries":[
+    "VALA is not a recovered morpheme.",
+    "VAMAVALA and KALOVALA are not compositionally decomposed by this decision.",
+    "No A=noun or I=verb rule is created.",
+    "codex-hnk authored.mjs is not mutated under B11; registry patch waits for B18/B20 governance.",
+    "No curriculum or grammar state changes under B11."
+  ],
+  "effects":{
+    "canonical_registry_mutations":0,
+    "authority_promotions":0,
+    "new_morphemes":0,
+    "new_grammar_rules":0,
+    "curriculum_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104",
+  "next_gate":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-HUMAN-GATE-V1"
+}

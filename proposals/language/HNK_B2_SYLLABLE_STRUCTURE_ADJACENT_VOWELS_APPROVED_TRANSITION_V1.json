@@ -1,0 +1,35 @@
+{
+  "transition_id":"SWHNK-HNK-B2-SYLLABLE-STRUCTURE-ADJACENT-VOWELS-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_B2_POLICY_ONLY_NO_B3_DECISION",
+  "date":"2026-09-13",
+  "source_gate":"HNK_B2_SYLLABLE_STRUCTURE_ADJACENT_VOWELS_HUMAN_GATE_V1.json",
+  "approved_effects": {
+    "adjacent_vowel_sequences_allowed":true,
+    "VVV_sequences_allowed":true,
+    "old_avoid_hiatus_preference":"HISTORICAL_AUTHORING_PRIOR_NOT_CANONICAL_PHONOLOGICAL_LAW",
+    "G40":"/y/ VOWEL unchanged",
+    "G16":"/j/ distinct unchanged"
+  },
+  "still_unresolved": [
+    "exact syllable boundaries",
+    "hiatus versus diphthong classification",
+    "glide formation",
+    "allophony",
+    "lexical stress",
+    "whole-word pronunciation of DAYI",
+    "whole-word pronunciation of HOYU",
+    "G16 safe romanization"
+  ],
+  "effects": {
+    "canonical_phoneme_mutations":0,
+    "new_diphthong_rules":0,
+    "new_glide_rules":0,
+    "new_stress_rules":0,
+    "new_semantic_rules":0,
+    "new_grammar_rules":0,
+    "curriculum_slot_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V99",
+  "next_human_gate":"SWHNK-HNK-B3-DIPHTHONG-GLIDE-Y-BEARING-PRONUNCIATION-HUMAN-GATE-V1",
+  "same_B2_approval_must_not_approve_B3":true
+}

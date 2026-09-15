@@ -1,0 +1,42 @@
+{
+  "gate_id":"SWHNK-HNK-B7-VAN-PLACE-LOCATION-MORPHOLOGY-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B7_GATE",
+  "source_review":"HNK_B7_VAN_PLACE_LOCATION_MORPHOLOGY_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_FINAL_VAN_PLACE_LOCATION_MORPHOLOGICAL_STATUS_AND_PRODUCTIVITY_BOUNDARY; DO_NOT_DECIDE_PARAZAMO_PARAZAMI_FINAL_I_VANI_SEMANTICS_INTERROGATIVE_ARCHITECTURE_GRAMMAR_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "approved_decision": {
+    "id":"DEC-B7-001",
+    "state":"APPROVED",
+    "decision":"RECOGNIZE_NARROW_LOCATIVE_FORMATIVE_NONPRODUCTIVE",
+    "rule":"Recognize final -VAN as a governed place/location formative supported by FROZEN VALIVAN, TAYOVAN and PAROVAN. Its productivity is NONPRODUCTIVE_CLOSED_EVIDENCE: it may analyze attested forms and support already-governed closed KUVAN rationale, but it does not license arbitrary new X+VAN derivations.",
+    "rationale":"All three known exact final-VAN forms are FROZEN place/location nouns and no final-VAN counterexample is known; however, only VALI is independently established as a base, so open derivational productivity is not justified.",
+    "provenance":"GOVERNED_MORPHOLOGICAL_ANALYSIS_FROM_RECOVERED_DISTRIBUTION_NOT_STANDALONE_HISTORICAL_LEXEME"
+  },
+  "governance_decisions": [
+    {"id":"DEC-B7-002","state":"APPROVED","decision":"Do not create VAN as a standalone lexical entry under B7."},
+    {"id":"DEC-B7-003","state":"APPROVED","decision":"Do not license arbitrary X+VAN word formation; every new derivation requires its own explicit authorship gate unless a future productivity gate changes this."},
+    {"id":"DEC-B7-004","state":"APPROVED","decision":"AUTH-001 KUVAN remains a CANDIDATE closed specialization; B7 strengthens its -VAN rationale but does not promote KUVAN, KU or interrogative productivity."},
+    {"id":"DEC-B7-005","state":"APPROVED","decision":"Do not infer VANI=morar/residir from VAN + final I; VANI semantics remain unresolved for B12."},
+    {"id":"DEC-B7-006","state":"APPROVED","decision":"B7 changes no final-I rule, PARAZAMO/PARAZAMI analysis, grammar, productivity outside -VAN analysis, or curriculum slots."}
+  ],
+  "effects": {
+    "VAN_morphological_status":"GOVERNED_NARROW_PLACE_LOCATION_FORMATIVE",
+    "VAN_productivity":"NONPRODUCTIVE_CLOSED_EVIDENCE",
+    "VAN_standalone_lexeme":false,
+    "new_X_VAN_derivations_allowed":false,
+    "KUVAN_authority_change":false,
+    "VANI_semantics":"UNRESOLVED",
+    "new_grammar_rules":0,
+    "curriculum_changes":0
+  },
+  "concurrency_observation": {
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V101",
+    "STR001_validated":true,
+    "post_STR001_strategy_gate_pending":true,
+    "attributed_to_B7":false
+  },
+  "next_phase":"B8_PARAZAMO_PARAZAMI_LEXICAL_PAIR_VS_MORPHOLOGY_HUMAN_GATE",
+  "same_approval_must_not_approve_B8_or_create_productive_X_VAN_derivation":true
+}

@@ -1,0 +1,20 @@
+{
+  "lock_id":"SWHNK-HNK3000-A1-AUTHORING-WAVE-03-SLOT-LOCK-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_FORMS_GENERATED",
+  "date_prepared":"2026-09-14",
+  "source_blueprint":"SWHNK-HNK3000-A1-SEMANTIC-SLOT-BLUEPRINT-V1",
+  "source_transition":"SWHNK-HNK3000-A1-WAVE-02-SELECTED-FORM-REGISTRATION-APPROVED-TRANSITION-V1",
+  "selection_policy":"NEXT_40_CURRENTLY_GENERATABLE_SLOT_IDS_IN_CANONICAL_BLUEPRINT_ORDER_AFTER_WAVE02",
+  "wave_size":40,
+  "locked_slot_ids":[
+    "HNK3000-A1-D05-S011","HNK3000-A1-D05-S012","HNK3000-A1-D05-S013","HNK3000-A1-D05-S014","HNK3000-A1-D05-S015","HNK3000-A1-D05-S016","HNK3000-A1-D05-S017","HNK3000-A1-D05-S018","HNK3000-A1-D05-S019","HNK3000-A1-D05-S020",
+    "HNK3000-A1-D06-S001","HNK3000-A1-D06-S002","HNK3000-A1-D06-S003","HNK3000-A1-D06-S004","HNK3000-A1-D06-S005","HNK3000-A1-D06-S006","HNK3000-A1-D06-S007","HNK3000-A1-D06-S008","HNK3000-A1-D06-S009","HNK3000-A1-D06-S010","HNK3000-A1-D06-S011","HNK3000-A1-D06-S012","HNK3000-A1-D06-S013","HNK3000-A1-D06-S014","HNK3000-A1-D06-S015","HNK3000-A1-D06-S016","HNK3000-A1-D06-S017","HNK3000-A1-D06-S018","HNK3000-A1-D06-S019","HNK3000-A1-D06-S020",
+    "HNK3000-A1-D07-S001","HNK3000-A1-D07-S002","HNK3000-A1-D07-S003","HNK3000-A1-D07-S004","HNK3000-A1-D07-S005","HNK3000-A1-D07-S006","HNK3000-A1-D07-S007","HNK3000-A1-D07-S008","HNK3000-A1-D07-S009","HNK3000-A1-D07-S010"
+  ],
+  "domain_distribution":{"D05":10,"D06":20,"D07":10},
+  "concept_resolution_rule":"Concept labels and meanings must be re-read directly from the approved semantic blueprint at candidate-generation time; this slot lock does not restate or alter semantic labels.",
+  "candidate_generation_contract":{"options_per_slot":"2_TO_3","default_lane":"NATIVE_PRIMITIVE_CANDIDATE","gid_first":true,"ipa_from_authoritative_glyphs":true,"romanization_only_if_governed":true,"exact_collision_rejection":true,"near_collision_review":true,"morphology_false_friend_review":true,"human_selection_required":true,"registration_before_selection":false,"hnk3000_credit_before_registration":false},
+  "effects_now":{"new_hnk_forms":0,"new_gid_sequences":0,"new_hnk3000_credit":0,"hold_seeds_resolved":0,"authority_promotions":0},
+  "current_hnk3000":{"core_credited":119,"A1_credited":116,"A1_remaining":384},
+  "next_gate":"SWHNK-HNK3000-A1-AUTHORING-WAVE-03-CANDIDATE-GENERATION-HUMAN-GATE-V1"
+}

@@ -1,0 +1,34 @@
+{
+  "note_id": "SWHNK-LANGUAGE-AUDIT-CONCURRENCY-NOTE-V2",
+  "status": "RECONCILED_NO_REVERT_NO_GATE_APPROVAL",
+  "date": "2026-09-13",
+  "audit_branch_baseline": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+  "current_main_observed": {
+    "snapshot": "SWHNK-C1-PROGRESS-SNAPSHOT-V94",
+    "commit": "65fa927e3a4f3340f720fb6860cd176b911aab06",
+    "effect": "The L03 minimal activity utterance candidate was validated by a concurrent main process and a productivity-eligibility human gate was opened."
+  },
+  "current_main_L03_state": {
+    "candidate": "SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CANDIDATE-V1",
+    "candidate_status": "VALIDATED_CANDIDATE_L03_ONLY_NON_PRODUCTIVE",
+    "surface_schema": "[ACTIVITY_LEXEME]",
+    "allowed_realizations": ["VALI", "PARAZAMI"],
+    "productive": false,
+    "curriculum_mapped": false,
+    "next_gate": "SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-PRODUCTIVITY-ELIGIBILITY-HUMAN-BATCH-V1"
+  },
+  "audit_policy": {
+    "sprint_A_continues": true,
+    "V94_reverted": false,
+    "V94_validation_claimed_by_audit": false,
+    "productivity_gate_approved_by_audit": false,
+    "audit_findings_must_be_reviewed_before_any_future_productivity_decision": true
+  },
+  "canonical_effects_from_audit": {
+    "new_surface_forms": 0,
+    "new_phonology_rules": 0,
+    "new_grammar_rules": 0,
+    "authority_promotions": 0,
+    "curriculum_slot_changes": 0
+  }
+}

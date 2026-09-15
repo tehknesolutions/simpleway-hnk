@@ -1,0 +1,49 @@
+{
+  "gate_id":"SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B14_GATE",
+  "source_review":"HNK_B14_AN_EN_PERSON_SYSTEM_SCOPE_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_SCOPED_PERSON_REFERENT_STATUS_OF_AN_AND_EN; DO_NOT_CREATE_FULL_PRONOUN_PARADIGM_POSSESSIVE_CASE_AGREEMENT_GENERAL_CLAUSE_ORDER_INTERROGATIVE_ARCHITECTURE_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "approved_decision":{
+    "id":"DEC-B14-001",
+    "state":"APPROVED",
+    "decision":"SCOPED_PERSON_REFERENT_PAIR_NO_PARADIGM",
+    "rule":"Govern AN as a first-person speaker/self referent and EN as a second-person addressee referent for already-scoped beginner/attested use. Preserve AUTH-016 and AUTH-017 as CANDIDATE/CLOSED_LIST_ONLY mappings. Do not promote AN/EN into a complete pronoun paradigm or assign general syntactic case/subject/possessive behavior.",
+    "rationale":"Repeated phrase distribution plus existing governed mappings supports narrow person-reference roles, but the corpus is insufficient for a full person/number, case, possessive or agreement system.",
+    "provenance":"GOVERNED_SCOPED_FUNCTIONAL_MAPPING_FROM_DISTRIBUTIONAL_EVIDENCE_NOT_HISTORICAL_FULL_PRONOUN_PARADIGM_RECOVERY"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B14-002","state":"APPROVED","decision":"Do not define AN or EN as universally obligatory grammatical subjects; subject grammar remains unresolved."},
+    {"id":"DEC-B14-003","state":"APPROVED","decision":"Do not infer EN=possessive 'your' from the approximate translation of PHR-001; possessive structure remains unresolved."},
+    {"id":"DEC-B14-004","state":"APPROVED","decision":"Do not create object case, possessive case, plural, gender, politeness, clusivity, agreement or pro-drop rules under B14."},
+    {"id":"DEC-B14-005","state":"APPROVED","decision":"Do not widen AN/EN beyond their scoped mappings or change their CANDIDATE authority/productivity status."},
+    {"id":"DEC-B14-006","state":"APPROVED","decision":"B14 changes no general clause order, interrogative architecture, tense/modal grammar, other lexical authority, productivity or curriculum slots."}
+  ],
+  "effects":{
+    "AN_status":"SCOPED_FIRST_PERSON_SPEAKER_SELF_REFERENT",
+    "EN_status":"SCOPED_SECOND_PERSON_ADDRESSEE_REFERENT",
+    "AN_authority":"CANDIDATE_UNCHANGED",
+    "EN_authority":"CANDIDATE_UNCHANGED",
+    "AN_EN_productivity":"CLOSED_LIST_ONLY_UNCHANGED",
+    "full_pronoun_paradigm_created":false,
+    "subject_grammar_created":false,
+    "possessive_grammar_created":false,
+    "case_system_created":false,
+    "agreement_system_created":false,
+    "general_clause_order_created":false,
+    "interrogative_architecture_changed":false,
+    "curriculum_changes":0
+  },
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V106",
+    "context_place_candidate_validated":true,
+    "context_place_candidate_productivity_eligible":true,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B14":false
+  },
+  "next_phase":"B15_KU_KE_KUVAN_KUON_INTERROGATIVE_ARCHITECTURE_HUMAN_GATE",
+  "same_approval_must_not_approve_B15_create_possessive_subject_grammar_or_generalize_AN_EN":true
+}

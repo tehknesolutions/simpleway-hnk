@@ -1,0 +1,43 @@
+{
+  "gate_id": "SWHNK-HNK3000-A1-SEMANTIC-SLOT-BLUEPRINT-HUMAN-GATE-V1",
+  "status": "APPROVED_ALL_DECISIONS",
+  "date_prepared": "2026-09-14",
+  "date_approved": "2026-09-14",
+  "approval_source": "CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_A1_SEMANTIC_SLOT_BLUEPRINT_GATE",
+  "source_blueprint": "HNK3000_A1_SEMANTIC_SLOT_BLUEPRINT_V1.json",
+  "decision_scope": "APPROVE_OR_REVISE_ONLY_THE_464_A1_SEMANTIC_SLOTS_DOMAIN_ALLOCATIONS_AND_HOLD_SEED_RESERVATION_POLICY; DO_NOT_GENERATE_HNK_FORMS_ASSIGN_GIDS_CHANGE_HOLD_SEEDS_APPROVE_B16_OR_ALTER_L03_CURRICULUM_RUNTIME_WITH_THIS_APPROVAL",
+  "approved_decision": {
+    "id": "DEC-HNK3000-A1-SLOTS-001",
+    "state": "APPROVED",
+    "decision": "ADOPT_EXACT_464_OPEN_A1_SEMANTIC_SLOT_BLUEPRINT",
+    "rule": "Adopt the 464 explicit A1 semantic slots as the concept inventory required to complement the 36 already credited A1 seeds and reach the 500-unit A1 target. The Portuguese and English labels define concept references only; they do not select or imply HNK forms."
+  },
+  "governance_decisions": [
+    {"id":"DEC-HNK3000-A1-SLOTS-002","state":"APPROVED","decision":"Approve the exact per-domain open-slot counts: D01=15,D02=20,D03=20,D04=19,D05=20,D06=20,D07=19,D08=20,D09=17,D10=19,D11=19,D12=19,D13=18,D14=18,D15=19,D16=15,D17=15,D18=15,D19=15,D20=15,D21=5,D22=14,D23=14,D24=13,D25=10,D26=11,D27=11,D28=11,D29=11,D30=7; total=464."},
+    {"id":"DEC-HNK3000-A1-SLOTS-003","state":"APPROVED","decision":"Approve semantic-slot-first authoring: no HNK form, G-ID sequence, phonology or morphology is assigned merely from PT/EN glosses or reference-language similarity."},
+    {"id":"DEC-HNK3000-A1-SLOTS-004","state":"APPROVED","decision":"Preserve seven existing HOLD-seed links as reservations/review warnings only: ON, KUON, MAMA, PAPA, TA, VAME and VAMATAYA. No HOLD seed is resolved, credited or assigned to a slot by this gate."},
+    {"id":"DEC-HNK3000-A1-SLOTS-005","state":"APPROVED","decision":"Before any new form is selected for a slot carrying a HOLD-seed link, resolve or explicitly supersede that seed in a separate lexical-authority gate to avoid duplicate concepts."},
+    {"id":"DEC-HNK3000-A1-SLOTS-006","state":"APPROVED","decision":"This gate creates zero new HNK words, zero new G-ID forms, zero language-authority promotions, zero grammar rules and zero curriculum/runtime changes. After approval, prepare the A1 lexeme-authoring strategy and batching contract before form generation."}
+  ],
+  "effects": {
+    "HNK3000_core_credited": 39,
+    "A1_credited_seed_units": 36,
+    "A1_semantic_slots_approved": 464,
+    "A1_total_coverage_plan": 500,
+    "new_hnk_words": 0,
+    "new_gid_sequences": 0,
+    "hold_seeds_resolved": 0,
+    "language_authority_promotions": 0,
+    "grammar_changes": 0,
+    "curriculum_changes": 0
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V112",
+    "STR002_validated": true,
+    "STR002_runtime_active": false,
+    "post_STR002_strategy_gate_pending": true,
+    "attributed_to_HNK3000_A1_blueprint": false
+  },
+  "next_phase": "HNK3000_A1_LEXEME_AUTHORING_STRATEGY_V1",
+  "same_approval_must_not_generate_forms_resolve_HOLD_approve_B16_or_alter_L03": true
+}

@@ -1,0 +1,38 @@
+{
+  "gate_id":"SWHNK-HNK3000-A1-WAVE-01-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-14",
+  "date_approved":"2026-09-14",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_WAVE01_SELECTED_FORM_REGISTRATION_GATE",
+  "source_manifest":"HNK3000_A1_WAVE_01_SELECTED_FORM_REGISTRATION_MANIFEST_V1.json",
+  "target_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+  "prewrite_registry_sha":"d33b5ffc1bea0f42f42aa8e34b69ba503bfc93d5",
+  "postwrite_registry_sha":"02462795701e9edaa510839c9598fae8ca3866fb",
+  "canonical_commit":"7f46930d831f4836ad44e6ac11e204e4fc7e47ee",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_REGISTRATION_OF_THE_40_SELECTED_WAVE01_FORMS_AS_NEW_GOVERNED_CANDIDATES_AND_ASSIGN_THEIR_HNK3000_COUNT_CREDIT; DO_NOT_PROMOTE_TO_FROZEN_BIND_CURRICULUM_CREATE_GRAMMAR_RESOLVE_HOLD_SEEDS_APPROVE_B16_OR_ALTER_L03_WITH_THIS_APPROVAL",
+  "approved_decision":{"id":"DEC-HNK3000-W01-REG-001","state":"APPROVED","decision":"REGISTER_AUTH_021_THROUGH_AUTH_060_AS_GOVERNED_HNK3000_A1_CANDIDATES","rule":"The 40 selected Wave 01 forms are registered as AUTH-021 through AUTH-060, authority CANDIDATE, certainty AUTHORED_PRIMITIVE, sourceClass AUTHORING_PROPOSAL, historicalRecoveryClaim false, lessons empty, morphology PRIMITIVE_AUTHORED_HNK3000_A1 with NON_PRODUCTIVE_SINGLE_CANDIDATE, and explicit Wave 01 provenance."},
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-W01-REG-002","state":"APPROVED","decision":"HNK_AUTHORED_REGISTRY_VERSION is 1.8.0-candidate after atomic Wave 01 registration."},
+    {"id":"DEC-HNK3000-W01-REG-003","state":"APPROVED","decision":"Grant exactly one HNK3000 core credit to each of the 40 successfully registered Wave 01 candidates: total core 39->79 and A1 36->76."},
+    {"id":"DEC-HNK3000-W01-REG-004","state":"APPROVED","decision":"No new item is promoted to FROZEN, historical recovery or productive morphology; all 40 remain authored CANDIDATE primitives."},
+    {"id":"DEC-HNK3000-W01-REG-005","state":"APPROVED","decision":"The 40 entries remain unbound to SimpleWay lesson IDs, structures, runtime, OPI and QA; lessons is empty."},
+    {"id":"DEC-HNK3000-W01-REG-006","state":"APPROVED","decision":"ON, KUON, MAMA, PAPA and all other HOLD seeds remain unresolved; B16/Sprint B and L03 state are unchanged."}
+  ],
+  "postwrite_verification":{
+    "registry_version_observed":"1.8.0-candidate",
+    "AUTH_021_through_AUTH_060_observed":true,
+    "expected_authored_cardinality_in_validator":60,
+    "wave01_expected_cardinality_in_validator":40,
+    "exact_duplicate_check_against_recovered_registry_present":true,
+    "gid_roundtrip_check_present":true,
+    "curriculum_unbound_check_present":true,
+    "productivity_boundary_check_present":true,
+    "static_unique_form_check":"PASS_60_UNIQUE_AUTHORED_FORMS",
+    "static_wave01_recovered_collision_check":"PASS_ZERO_COLLISIONS",
+    "ci_or_node_execution_evidence":"NOT_CAPTURED_IN_THIS_GATE"
+  },
+  "effects":{"canonical_new_candidates":40,"auth_ids":"AUTH-021..AUTH-060","registry_version":"1.8.0-candidate","authored_registry_count":60,"HNK3000_core_credited":79,"HNK3000_remaining_to_3000":2921,"A1_credited":76,"A1_remaining_to_500":424,"FROZEN_promotions":0,"curriculum_bindings":0,"hold_seeds_resolved":0,"grammar_changes":0},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V112","V113_observed":false,"attributed_to_HNK3000_Wave01_registration":false},
+  "next_phase":"HNK3000_A1_AUTHORING_WAVE_02_SLOT_LOCK",
+  "same_approval_must_not_promote_FROZEN_bind_curriculum_resolve_HOLD_approve_B16_or_alter_L03":true
+}

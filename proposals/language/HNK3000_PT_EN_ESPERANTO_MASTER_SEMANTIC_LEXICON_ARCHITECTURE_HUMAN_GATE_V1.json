@@ -1,0 +1,23 @@
+{
+  "gate_id":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-14",
+  "date_approved":"2026-09-14",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_PT_EN_ESPERANTO_MASTER_ARCHITECTURE_GATE",
+  "source_architecture":"HNK3000_PT_EN_ESPERANTO_MASTER_SEMANTIC_LEXICON_ARCHITECTURE_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_3000_SLOT_PT_EN_ESPERANTO_MASTER_SEMANTIC_LEXICON_ARCHITECTURE; DO_NOT_GENERATE_THE_3000_ENTRIES CREATE_NEW_HNK_FORMS REGISTER_WAVE04 PROMOTE_AUTHORITY OR ALTER_L03_WITH_THIS_APPROVAL",
+  "approved_decision":{"id":"DEC-HNK3000-PTEO-ARCH-001","state":"APPROVED","decision":"ADOPT_3000_GOVERNED_SEMANTIC_SLOTS_AS_THE_MULTILINGUAL_REFERENCE_BASE_BEFORE_WAVE05_PLUS_HNK_FORM_GENERATION"},
+  "governance_decisions":[
+    {"id":"DEC-HNK3000-PTEO-ARCH-002","state":"APPROVED","decision":"Preserve the approved 30-domain and A1/A2/B1/B2 allocation totaling exactly 3000 semantic slots."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-003","state":"APPROVED","decision":"Treat each slot as one governed concept rather than forcing one orthographic word per language; allow natural multiword equivalents and explicit unresolved mappings."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-004","state":"APPROVED","decision":"Use English as an international semantic pivot and Esperanto as a semantic/morphological reference, never as authorities that select HNK forms, meanings, etymologies or productive morphology."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-005","state":"APPROVED","decision":"For Esperanto store lemma/reference form, root or base, morphology, lexicalization type and verification status so transparent derivations and compounds are distinguished from independent roots."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-006","state":"APPROVED","decision":"Map existing HNK recovered/authored/selected forms onto semantic slots only after sense review; never force a mapping or reinterpret a HNK form from external-language resemblance."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-007","state":"APPROVED","decision":"Build the master in 30 auditable batches of 100 concepts with global indices 0001..3000; each batch requires semantic duplicate and ambiguity review before completion."},
+    {"id":"DEC-HNK3000-PTEO-ARCH-008","state":"APPROVED","decision":"Keep Wave05+ HNK form generation paused until the semantic master and Euphony+ERR contracts are attached; preserve the independent Wave04 registration gate exactly as pending."}
+  ],
+  "effects":{"master_target_slots":3000,"batch_count":30,"batch_size":100,"languages":["PT","EN","EO"],"new_hnk_forms":0,"wave04_registration_change":0,"hnk3000_credit_change":0},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V121","L03_external_state":"EXACT_SURFACE_SELECTION_PENDING","wave04_registration_gate":"SWHNK-HNK3000-A1-WAVE-04-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1","wave04_registration_status":"AWAITING_EXPLICIT_HUMAN_APPROVAL"},
+  "next_phase":"HNK3000_PT_EN_ESPERANTO_MASTER_BATCH_01_D01",
+  "same_approval_must_not_generate_batch01_create_hnk_forms_register_wave04_promote_authority_or_alter_l03":true
+}

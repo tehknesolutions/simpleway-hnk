@@ -1,0 +1,52 @@
+{
+  "review_id":"SWHNK-HNK-B6-PHONOTACTIC-PROFILE-V2-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Review only the V2 phonotactic/authoring profile assembled from approved B1-B5 decisions and Sprint A corpus audit. Do not assign word-specific stress, new romanizations, morphology, semantics, grammar, productivity or curriculum state.",
+  "source_profile":"HNK_PHONOTACTIC_PROFILE_V2_DRAFT.md",
+  "inputs": [
+    "B1 approved G40=/y/ vowel distinct from G16=/j/",
+    "B2 approved adjacent vowels including VVV",
+    "B3 approved distinct vowel nuclei by default and no automatic y->j glide",
+    "B4 approved lexically marked stress with no global default",
+    "B5 approved dual-layer romanization: 20 governed human mappings + 40/40 G-ID fallback",
+    "Sprint A A2 recomputed strict (CV)+(C)? fit as 26/33 under authoritative phoneme classes"
+  ],
+  "key_profile_changes_from_v1": [
+    "Replace orthography-sensitive 30/33 with phoneme-classified 26/33 for strict (CV)+(C)? fit.",
+    "Treat CV-rich shapes as an optional authoring preference, not a language law.",
+    "Remove blanket avoid-hiatus recommendation as a canonical/authoring default because FROZEN evidence includes VVV.",
+    "Allow adjacent vowels and preserve distinct nuclei by default.",
+    "Keep TS/G30 atomic, final consonants allowed, bridge forms separate and collision checks mandatory.",
+    "Keep initial-vowel and internal-cluster shapes case-by-case rather than categorically banned.",
+    "Separate corpus facts, governed language rules and authoring preferences into explicit layers."
+  ],
+  "options": [
+    {
+      "id":"B6-OPTION-A",
+      "decision":"APPROVE_LAYERED_PHONOTACTIC_PROFILE_V2",
+      "recommended":true,
+      "effect":"Adopt V2 as the current governed phonotactic/authoring profile; mark V1 HISTORICAL_PRIOR without deleting it. No new word-level stress, romanization, semantics, morphology, grammar or curriculum changes occur."
+    },
+    {
+      "id":"B6-OPTION-B",
+      "decision":"REVISE_V2_BEFORE_APPROVAL",
+      "recommended":false,
+      "effect":"Keep V1 only as historical prior and hold new authoring profile activation until revisions are reviewed."
+    }
+  ],
+  "boundaries": {
+    "mandatory_CV_rule_created":false,
+    "diphthong_inventory_created":false,
+    "automatic_glide_rule_created":false,
+    "global_stress_rule_created":false,
+    "new_romanization_units_created":0,
+    "morphology_promoted":false,
+    "DAYI_semantics_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "recommended_decision":"B6-OPTION-A",
+  "next_gate_if_approved":"B7_VAN_PLACE_LOCATION_MORPHOLOGY",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100"
+}

@@ -1,0 +1,22 @@
+{
+  "transition_id":"SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_SCOPED_PERSON_REFERENT_PAIR_NO_PARADIGM",
+  "date":"2026-09-13",
+  "source_gate":"SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-HUMAN-GATE-V1",
+  "applied":{
+    "AN":"SCOPED_FIRST_PERSON_SPEAKER_SELF_REFERENT",
+    "EN":"SCOPED_SECOND_PERSON_ADDRESSEE_REFERENT",
+    "authority_changes":0,
+    "productivity_changes":0,
+    "subject_grammar_created":false,
+    "possessive_grammar_created":false,
+    "case_system_created":false,
+    "agreement_system_created":false,
+    "full_pronoun_paradigm_created":false,
+    "general_clause_order_created":false,
+    "curriculum_changes":0
+  },
+  "preserved_unresolved":["subject status outside scoped evidence","possessive behavior","object case","plural","gender","politeness","clusivity","agreement","pro-drop","general clause order"],
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V106",
+  "next_gate":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-HUMAN-GATE-V1"
+}

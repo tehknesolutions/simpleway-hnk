@@ -1,0 +1,13 @@
+{
+  "transition_id":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-APPROVED-TRANSITION-V1",
+  "status":"ACTIVE",
+  "date":"2026-09-14",
+  "source_architecture":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-V1",
+  "source_gate":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-HUMAN-GATE-V1",
+  "architecture_commit":"4a37b9575e45f4ec418dd59dc4630f4e7ce25451",
+  "gate_commit":"76115b0a6cd9942d3157f4cf9dc9fd699d3aaedf",
+  "approved_contract":{"target_semantic_slots":3000,"domains":30,"batch_count":30,"batch_size":100,"languages":["PT","EN","EO"],"level_cumulative":{"A1":500,"A2":1000,"B1":1800,"B2":3000},"one_slot_one_governed_concept":true,"english_role":"INTERNATIONAL_SEMANTIC_PIVOT","esperanto_role":"SEMANTIC_AND_MORPHOLOGICAL_REFERENCE","reference_languages_select_hnk_forms":false},
+  "preserved_boundaries":{"new_hnk_forms":0,"hnk3000_credit_change":0,"wave04_registration_change":0,"wave05_plus_hnk_generation":"PAUSED","authority_promotions":0,"grammar_changes":0,"L03_changes":0},
+  "concurrency_observation":{"latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V121","wave04_registration_status":"AWAITING_EXPLICIT_HUMAN_APPROVAL"},
+  "next_gate":"SWHNK-HNK3000-PTEO-MASTER-BATCH-01-D01-BUILD-HUMAN-GATE-V1"
+}

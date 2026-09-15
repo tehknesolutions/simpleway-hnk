@@ -1,0 +1,47 @@
+{
+  "review_id":"SWHNK-HNK-B1-G40-Y-SEGMENTAL-IDENTITY-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide only whether the current segmental identity G40=/y/ remains distinct from G16=/j/. Do not decide syllabification, stress, diphthongs, allophony, romanization redesign, DAYI semantics or L03 curriculum in this gate.",
+  "current_authority": {
+    "G40":{"safe_unit":"Y","phoneme":"/y/","class":"VOWEL"},
+    "G16":{"phoneme":"/j/","class":"GLIDE_OR_CONSONANTAL_APPROXIMANT","safe_romanization":"UNRESOLVED"}
+  },
+  "evidence": [
+    "@hnk/glyphs currently assigns G40=/y/ and G16=/j/ as distinct segmental values.",
+    "FROZEN SARADAYA and TAYOVAN contain G40/Y-bearing sequences; changing G40 would reinterpret stable lexical material.",
+    "DAYI is G19 G01 G40 G03 and therefore segmentally /d a y i/ under current authority.",
+    "AUTH-007 HOYU generation metadata is stale because an older artifact treated Y as consonantal /j/; that stale artifact is evidence of metadata debt, not evidence that current G40 should silently become /j/.",
+    "No governed allophonic rule has been recovered that merges /y/ and /j/."
+  ],
+  "options": [
+    {
+      "id":"B1-OPTION-A",
+      "decision":"AFFIRM_CURRENT_SEGMENTAL_IDENTITY",
+      "description":"Keep G40=/y/ as a vowel and G16=/j/ as a distinct glide/consonantal approximant. Preserve existing glyph authority; defer all word-level realization questions to B2-B4 and romanization coverage to B5.",
+      "recommended":true,
+      "effect":"No canonical phoneme mutation; establishes B2-B5 may proceed from the existing distinction."
+    },
+    {
+      "id":"B1-OPTION-B",
+      "decision":"REOPEN_G40_SEGMENTAL_ASSIGNMENT",
+      "description":"Do not affirm G40=/y/ yet. Open a separate evidence/design proposal for possible G40 reassignment. No reassignment occurs under B1 itself.",
+      "recommended":false,
+      "effect":"Blocks B2-B6, DAYI pronunciation and HOYU repair until a new segmental proposal is reviewed."
+    }
+  ],
+  "boundaries": {
+    "G40_to_G16_merge_by_this_gate":false,
+    "syllable_rule_created":false,
+    "stress_rule_created":false,
+    "diphthong_rule_created":false,
+    "allophonic_rule_created":false,
+    "romanization_redesign_created":false,
+    "DAYI_meaning_changed":false,
+    "HOYU_numeral_meaning_changed":false,
+    "L03_curriculum_changed":false
+  },
+  "recommended_decision":"B1-OPTION-A",
+  "next_gate_if_affirmed":"B2_SYLLABLE_STRUCTURE_AND_ADJACENT_VOWELS",
+  "next_gate_if_reopened":"PREPARE_SEPARATE_G40_SEGMENTAL_REASSIGNMENT_EVIDENCE_DESIGN_GATE"
+}

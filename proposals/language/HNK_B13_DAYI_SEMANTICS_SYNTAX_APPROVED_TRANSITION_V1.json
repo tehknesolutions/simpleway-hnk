@@ -1,0 +1,28 @@
+{
+  "transition_id":"SWHNK-HNK-B13-DAYI-SEMANTICS-SYNTAX-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_LEXICAL_SEMANTICS_RETAINED_ARGUMENT_STRUCTURE_DEFERRED",
+  "date":"2026-09-13",
+  "source_gate":"HNK_B13_DAYI_SEMANTICS_SYNTAX_HUMAN_GATE_V1.json",
+  "DAYI":{
+    "authority":"CANDIDATE_UNCHANGED",
+    "certainty":"PARTIAL_UNCHANGED",
+    "semantic_core":"WANT_DESIRE_INTENTION_SCOPED_LEXICAL_CANDIDATE",
+    "broad_unstressed_form":"/da.y.i/",
+    "lexical_stress":"UNRESOLVED",
+    "modal_auxiliary":false,
+    "governed_complement_syntax":false,
+    "tense_future_planning_grammar":false
+  },
+  "boundaries":{
+    "bare_complement_syntax_created":false,
+    "infinitival_syntax_created":false,
+    "complement_marker_created":false,
+    "AN_EN_person_system_changed":false,
+    "general_clause_order_changed":false,
+    "interrogative_grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+  "next_gate":"SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-HUMAN-GATE-V1",
+  "same_approval_must_not_approve_next_gate":true
+}

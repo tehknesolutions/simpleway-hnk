@@ -1,0 +1,55 @@
+{
+  "review_id":"SWHNK-HNK-B4-LEXICAL-STRESS-WHOLE-WORD-PRONUNCIATION-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide the stress architecture and publishable whole-word pronunciation policy after B1-B3. Do not change segment identities, romanization, DAYI semantics, morphology, grammar or curriculum in this gate.",
+  "inputs": {
+    "B1":"G40=/y/ vowel affirmed; G16=/j/ remains distinct.",
+    "B2":"Adjacent vowel sequences, including VVV, are allowed.",
+    "B3":"Adjacent vowels remain distinct nuclei by default in careful pronunciation; no automatic /y/->/j/ and no productive diphthong inventory.",
+    "recovered_stress_rule":"NONE_FOUND"
+  },
+  "options": [
+    {
+      "id":"B4-OPTION-A",
+      "decision":"LEXICALLY_MARKED_STRESS_NO_GLOBAL_DEFAULT",
+      "description":"Do not invent a universal fixed stress rule. Treat lexical stress as an explicit word-level property when governed; forms lacking an approved stress value remain publishable only in broad unstressed/syllabic notation, not with a canonical stressed IPA claim.",
+      "recommended":true,
+      "rationale":"No historical or governed global stress rule was recovered. This preserves the audited corpus without forcing a new universal prosodic law and allows stress to be added deliberately per lexeme or by a later evidence-backed rule."
+    },
+    {
+      "id":"B4-OPTION-B",
+      "decision":"FIXED_PENULTIMATE_STRESS_NEW_DESIGN",
+      "description":"Adopt penultimate stress as a new HNK-wide authored rule, explicitly as design rather than historical recovery.",
+      "recommended":false,
+      "risk":"Creates a global prosodic rule without recovered support and may conflict with creator-intended pronunciations of existing forms."
+    },
+    {
+      "id":"B4-OPTION-C",
+      "decision":"FIXED_INITIAL_STRESS_NEW_DESIGN",
+      "description":"Adopt initial stress as a new HNK-wide authored rule, explicitly as design rather than historical recovery.",
+      "recommended":false,
+      "risk":"Creates a global prosodic rule without recovered support."
+    },
+    {
+      "id":"B4-OPTION-D",
+      "decision":"KEEP_STRESS_ENTIRELY_UNRESOLVED",
+      "description":"Do not define even a lexical-marking architecture yet; keep all stress unspecified.",
+      "recommended":false,
+      "risk":"Preserves uncertainty but blocks a clean path to publishable word pronunciations."
+    }
+  ],
+  "recommended_effect_if_A": {
+    "global_default_stress":null,
+    "stress_architecture":"LEXICALLY_MARKED",
+    "unknown_stress_allowed":true,
+    "DAYI_segmental_syllabic_planning":"/da.y.i/ without stress mark",
+    "DAYI_canonical_stressed_pronunciation":"UNRESOLVED_UNTIL_WORD_LEVEL_STRESS_DECISION",
+    "SARADAYA_TAYOVAN_HOYU_stressed_pronunciation":"UNRESOLVED_UNTIL_WORD_LEVEL_STRESS_DECISION",
+    "phoneme_changes":0,
+    "semantic_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0
+  },
+  "boundary":"A broad unstressed form such as /da.y.i/ records segmental nuclei and syllabic planning only; it must not be presented as a complete canonical stressed pronunciation until a stress value is separately governed."
+}

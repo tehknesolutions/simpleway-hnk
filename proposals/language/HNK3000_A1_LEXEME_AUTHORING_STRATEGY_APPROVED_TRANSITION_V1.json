@@ -1,0 +1,22 @@
+{
+  "transition_id":"SWHNK-HNK3000-A1-LEXEME-AUTHORING-STRATEGY-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_AUTHORING_METHOD_ONLY_NO_FORMS_GENERATED",
+  "date":"2026-09-14",
+  "source_gate":"SWHNK-HNK3000-A1-LEXEME-AUTHORING-STRATEGY-HUMAN-GATE-V1",
+  "effects":{
+    "A1_open_slots":464,
+    "authoring_waves":12,
+    "wave_sizes":[40,40,40,40,40,40,40,40,40,40,40,24],
+    "default_lane":"NATIVE_PRIMITIVE_CANDIDATE",
+    "candidate_options_per_slot":"2_TO_3",
+    "semantic_slot_first":true,
+    "gid_first":true,
+    "collision_review_required":true,
+    "human_selection_required":true,
+    "new_hnk_forms":0,
+    "new_gid_sequences":0,
+    "new_hnk3000_credit":0,
+    "authority_promotions":0
+  },
+  "next_phase":"HNK3000_A1_AUTHORING_WAVE_01_SLOT_LOCK_AND_CANDIDATE_GENERATION_GATE"
+}

@@ -1,0 +1,46 @@
+{
+  "review_id":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide only the semantic-governance strategy for recovered glossless WATCH form VANI. Do not assign a new meaning in this gate, do not derive VANI from VAN+I, and do not change curriculum or grammar.",
+  "current_state":{
+    "form":"VANI",
+    "authority":"WATCH",
+    "gloss":"UNRECOVERED",
+    "historical_form_recovered":true,
+    "historical_semantics_recovered":false
+  },
+  "relevant_prior_decisions":{
+    "B7":"-VAN is a governed narrow place/location formative with NONPRODUCTIVE_CLOSED_EVIDENCE status; it does not license arbitrary derivation.",
+    "B9":"word-final -I is a governed distributional action/verbal tendency, not a morpheme and with productivity NONE."
+  },
+  "critical_analysis":"Interpreting VANI as live/reside from VAN + I would stack a narrow nonproductive locative analysis with a nonmorphemic final-I tendency and then add a new residence semantic bridge. Current evidence does not justify that as historical recovery.",
+  "options":[
+    {
+      "id":"B12-OPTION-A",
+      "decision":"RECOVERY_FIRST_KEEP_GLOSSLESS_WATCH",
+      "description":"Keep VANI as WATCH with unresolved semantics. Require targeted recovery/archaeology before any semantic assignment. If no historical meaning is recovered and a real language/course need remains, open a separate explicit semantic-authorship gate later.",
+      "recommended":true,
+      "effect":"No semantic mutation; prevents VAN+I back-formation from being mistaken for recovery."
+    },
+    {
+      "id":"B12-OPTION-B",
+      "decision":"OPEN_NEW_RESIDENCE_SEMANTIC_AUTHORSHIP_PROPOSAL",
+      "description":"Do not claim recovery, but prepare a later authorship proposal for VANI with residence/live semantics. This option still does not assign that meaning under B12 itself.",
+      "recommended":false,
+      "effect":"Opens a future authored-semantics design path while preserving historicalRecoveryClaim=false."
+    }
+  ],
+  "boundaries":{
+    "VANI_live_reside_assigned_now":false,
+    "VAN_plus_I_derivation_approved":false,
+    "historical_semantics_claimed":false,
+    "lexical_authority_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "recommended_decision":"B12-OPTION-A",
+  "next_gate_if_recovery_first":"B13_DAYI_SEMANTICS_AND_SYNTAX",
+  "next_gate_if_authorship_path":"PREPARE_SEPARATE_VANI_SEMANTIC_AUTHORSHIP_DESIGN_GATE_BEFORE_ANY_ASSIGNMENT",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V104"
+}

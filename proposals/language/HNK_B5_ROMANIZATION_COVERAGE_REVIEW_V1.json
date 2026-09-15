@@ -1,0 +1,59 @@
+{
+  "review_id":"SWHNK-HNK-B5-ROMANIZATION-COVERAGE-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_ROMANIZATION_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide the coverage architecture for HNK romanization after B1-B4. Do not assign arbitrary new Latin units merely to reach 40/40, and do not change phoneme identities, stress, semantics, morphology, grammar or curriculum.",
+  "current_state": {
+    "phoneme_inventory":"40/40 G-ID + IPA",
+    "safe_romanization":"20/40",
+    "lossless_machine_reference":"40/40 through G-ID",
+    "existing_safe_units": {
+      "G01":"A","G02":"E","G03":"I","G04":"O","G05":"U","G07":"H","G11":"M","G12":"N","G14":"L","G15":"R","G18":"B","G19":"D","G21":"P","G22":"T","G23":"K","G26":"S","G30":"TS","G31":"V","G32":"Z","G40":"Y"
+    },
+    "unmapped_gids":["G06","G08","G09","G10","G13","G16","G17","G20","G24","G25","G27","G28","G29","G33","G34","G35","G36","G37","G38","G39"]
+  },
+  "evidence": [
+    "A1 established that only 20/40 G-IDs currently have governed safe romanization.",
+    "B1 affirmed G40 /y/ with safe Y and kept G16 /j/ distinct, so reusing Y for /j/ is prohibited.",
+    "No recovered source-backed safe Latin convention was found for the remaining 20 G-IDs during the audit.",
+    "G-ID plus IPA already gives a complete, lossless and non-ambiguous representation for all 40 phonemes.",
+    "Inventing digraphs now would create orthographic design debt and possible tokenization collisions without improving phonological authority."
+  ],
+  "options": [
+    {
+      "id":"B5-OPTION-A",
+      "decision":"DUAL_LAYER_PRESERVE_20_USE_GID_FALLBACK",
+      "description":"Keep the existing 20 safe romanizations unchanged. For the other 20, G-ID remains the canonical lossless fallback. New human-friendly Latin/ASCII representations may be authored later only through explicit orthography gates with collision/reversibility checks.",
+      "recommended":true,
+      "effect":"No romanization mutation now; 20/40 human safe units + 40/40 G-ID coverage; B6 may proceed using G-ID/IPA authority."
+    },
+    {
+      "id":"B5-OPTION-B",
+      "decision":"AUTHOR_20_NEW_ROMANIZATION_UNITS_NOW",
+      "description":"Design and approve Latin letters/digraphs for all 20 currently unmapped phonemes in this phase.",
+      "recommended":false,
+      "effect":"Would require a separate collision, reversibility, keyboard and typography design review; not justified by recovered evidence alone."
+    },
+    {
+      "id":"B5-OPTION-C",
+      "decision":"REPLACE_EXISTING_SAFE_ROMANIZATION_SYSTEM",
+      "description":"Redesign all 40 romanizations, including the 20 already governed.",
+      "recommended":false,
+      "effect":"High compatibility risk and outside the minimum-change audit route."
+    }
+  ],
+  "recommended_decision":"B5-OPTION-A",
+  "boundaries": {
+    "existing_20_changed":false,
+    "new_latin_units_authored":false,
+    "G16_safe_romanization_assigned":false,
+    "G40_Y_changed":false,
+    "phoneme_identity_changed":false,
+    "stress_policy_changed":false,
+    "semantics_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate_if_option_a":"B6_PHONOTACTIC_PROFILE_V2",
+  "future_optional_work":"EXTENDED_ROMANIZATION_ORTHOGRAPHY_DESIGN_AFTER_COLLISION_REVERSIBILITY_KEYBOARD_REVIEW"
+}

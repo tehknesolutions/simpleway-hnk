@@ -1,0 +1,91 @@
+{
+  "review_id":"SWHNK-HNK-B16-BASIC-CLAUSE-ORDER-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_GENERAL_WORD_ORDER_CREATED",
+  "date":"2026-09-13",
+  "scope":"Evaluate whether S-P-O-compatible recovered language-use evidence should remain local or justify broader word-order design testing.",
+  "sources":[
+    "codex-hnk/packages/hnk-linguas/src/index.mjs",
+    "curriculum/cycle-01/L01-kether/recovery/wh-system-recovery.v1.json",
+    "SWHNK-HNK-B14-AN-EN-PERSON-SYSTEM-SCOPE-HUMAN-GATE-V1",
+    "SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-HUMAN-GATE-V1"
+  ],
+  "evidence":[
+    {
+      "phrase":"PHR-002",
+      "form":"AN ZAMI ZAMO",
+      "gloss":"I speak / use language.",
+      "gloss_certainty":"APPROXIMATE",
+      "observation":"AN precedes ZAMI and ZAMO follows ZAMI. Under B14 AN is a scoped first-person referent. This is compatible with a PERSON-REFERENT -> LANGUAGE-USE-PREDICATE -> CONTENT linear frame."
+    },
+    {
+      "phrase":"PHR-007",
+      "form":"AN ZAMI HENUVOKODAN",
+      "gloss":null,
+      "gloss_certainty":"UNRECOVERED",
+      "observation":"Repeats AN -> ZAMI -> specific language-name linear order, but exact sentence meaning is unrecovered. It supports distributional repetition, not an independent semantic proof."
+    },
+    {
+      "phrase":"PHR-003",
+      "form":"EN ZAMI HENUVOKODAN KE",
+      "gloss":"Do you speak HENUVOKODAN?",
+      "gloss_certainty":"APPROXIMATE",
+      "observation":"EN precedes ZAMI, content follows ZAMI, and KE is clause-final. B14 and B15 independently govern only the scoped EN and KE roles."
+    },
+    {
+      "phrase":"PHR-006",
+      "form":"EN ZAMI KU ZAMO KE",
+      "gloss":null,
+      "gloss_certainty":"UNRECOVERED",
+      "observation":"Shares EN -> ZAMI -> content-phrase -> KE ordering but cannot be given a new exact gloss."
+    },
+    {
+      "phrase":"PHR-001",
+      "form":"KALA YA EN ES KU KE",
+      "gloss":"What is your name?",
+      "gloss_certainty":"APPROXIMATE",
+      "observation":"Has a substantially different internal sequence and blocks any claim that all recovered clauses instantiate one simple SVO template."
+    }
+  ],
+  "analysis":{
+    "strongest_supported_generalization":"A narrow language-use frame is compatible with [PERSON_REFERENT] [ZAMI] [LANGUAGE_CONTENT], with KE following the frame in governed question-like use.",
+    "not_supported":[
+      "HNK is universally SVO",
+      "AN/EN are universally obligatory subjects",
+      "all post-predicate material is a grammatical object",
+      "all predicates share ZAMI ordering",
+      "questions are declarations plus KE",
+      "PHR-001 can be forced into the same template",
+      "general constituent movement or case grammar"
+    ],
+    "authority_boundary":"Compatibility in one recovered microdomain is stronger than pure speculation but weaker than a general basic-word-order rule."
+  },
+  "options":[
+    {
+      "id":"A",
+      "recommended":true,
+      "decision":"GOVERN_SCOPED_PERSON_PREDICATE_CONTENT_ORDER_COMPATIBILITY_NO_GENERAL_BASIC_ORDER",
+      "effect":"Recognize the [PERSON_REFERENT] [ZAMI] [LANGUAGE_CONTENT] linear frame as governed and scoped to recovered/approved language-use constructions. Treat S-P-O as an analytical compatibility label only, not a universal grammar rule. Broader word-order design remains unresolved."
+    },
+    {
+      "id":"B",
+      "recommended":false,
+      "decision":"OPEN_BROADER_SVO_DESIGN_HYPOTHESIS_NOW",
+      "risk":"Would move from local evidence to cross-domain design before other predicate classes, possession, modality and clause types are governed."
+    },
+    {
+      "id":"C",
+      "recommended":false,
+      "decision":"DECLARE_UNIVERSAL_SVO",
+      "risk":"Not supported by the current corpus and contradicted by the structural diversity of the recovered phrase set."
+    }
+  ],
+  "recommended_next":"PREPARE_B16_BASIC_CLAUSE_ORDER_HUMAN_GATE",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V107",
+  "effects_of_review":{
+    "new_general_clause_order_rules":0,
+    "new_subject_grammar":0,
+    "new_object_grammar":0,
+    "new_phrase_glosses":0,
+    "curriculum_changes":0
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "gate_id": "SWHNK-HNK3000-PTEO-MASTER-BATCH-02-D02-SEMANTIC-REVIEW-HUMAN-GATE-V1",
+  "status": "APPROVED_ALL_DECISIONS",
+  "date_prepared": "2026-09-14",
+  "date_approved": "2026-09-14",
+  "approval_source": "CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_PTEO_BATCH02_D02_SEMANTIC_REVIEW_GATE",
+  "decision_scope": "APPROVE_ONLY_D02_100_SEMANTIC_CONCEPTS_AND_PT_EN_EO_REFERENCE_MAPPINGS_AT_RECORDED_CONFIDENCE; NO_NEW_HNK_FORMS_NO_WAVE04_REGISTRATION_NO_HNK3000_CREDIT_NO_AUTHORITY_PROMOTION_NO_L03_CHANGE",
+  "approved_decisions": [
+    "DEC-HNK3000-PTEO-B02-REV-001",
+    "DEC-HNK3000-PTEO-B02-REV-002",
+    "DEC-HNK3000-PTEO-B02-REV-003",
+    "DEC-HNK3000-PTEO-B02-REV-004",
+    "DEC-HNK3000-PTEO-B02-REV-005",
+    "DEC-HNK3000-PTEO-B02-REV-006"
+  ],
+  "batch_summary": {
+    "records": 100,
+    "levels": {"A1":20,"A2":20,"B1":25,"B2":35},
+    "exact_duplicates": {"PT":0,"EN":0,"EO":0},
+    "eo_confidence": {"high_confidence":75,"provisional":25},
+    "existing_hnk_mapped": 20,
+    "new_hnk_forms": 0,
+    "hnk3000_credit_change": 0
+  },
+  "governance": {
+    "provisional_eo_remains_provisional": true,
+    "existing_hnk_mappings_are_cross_references_only": true,
+    "PAPA_MAMA_hold_gate_preserved": true,
+    "wave05_plus_hnk_generation_paused": true,
+    "wave04_registration_unchanged": true,
+    "L03_unchanged": true
+  },
+  "effects": {
+    "semantic_master_approved_records": 200,
+    "D01_approved_records": 100,
+    "D02_approved_records": 100
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V121",
+    "V122_observed": false
+  },
+  "next_phase": "HNK3000_PTEO_MASTER_BATCH03_D03_BUILD_GATE"
+}

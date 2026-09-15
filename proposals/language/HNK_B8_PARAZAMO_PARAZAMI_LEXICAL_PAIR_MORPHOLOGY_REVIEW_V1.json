@@ -1,0 +1,56 @@
+{
+  "review_id":"SWHNK-HNK-B8-PARAZAMO-PARAZAMI-LEXICAL-PAIR-MORPHOLOGY-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "scope":"Decide only whether PARAZAMO/PARAZAMI remain an unanalyzed lexical pair or receive a family-specific governed PARAZAM- plus final-vowel contrast analysis. Do not decide a general final-I rule, general O/I part-of-speech morphology, new derivations, grammar or curriculum in B8.",
+  "evidence": {
+    "PARAZAMO":{"authority":"FROZEN","meaning":"escola / domínio de estudo"},
+    "PARAZAMI":{"authority":"WATCH","meaning":"estudo / estudar"},
+    "shared_surface":"PARAZAM-",
+    "contrast":"final O vs final I",
+    "semantic_relation":"same study/learning domain; domain/place-like nominal reading vs action/study reading",
+    "audit_state":"HIGH_VALUE_MINIMAL_PAIR_SINGLE_FAMILY"
+  },
+  "constraints": [
+    "One lexical pair cannot establish universal O=noun/domain or I=verb/action morphology.",
+    "B9 separately owns the question of final -I beyond this family.",
+    "PARAZAMO being FROZEN does not automatically freeze a morphological decomposition that was not historically recovered.",
+    "PARAZAMI remains WATCH; B8 analysis must not silently promote its lexical authority.",
+    "No new PARAZAM- derivatives are licensed by observing the pair."
+  ],
+  "options": [
+    {
+      "id":"B8-OPTION-A",
+      "decision":"LEXICAL_PAIR_ONLY",
+      "description":"Keep PARAZAMO and PARAZAMI as related lexical forms without a governed internal morphological analysis.",
+      "effect":"Maximum conservatism; preserves the pair as evidence for B9 but creates no family-specific morphology."
+    },
+    {
+      "id":"B8-OPTION-B",
+      "decision":"RECOGNIZE_CLOSED_FAMILY_SPECIFIC_FINAL_VOWEL_CONTRAST",
+      "description":"Recognize PARAZAM- as a governed family-specific analytical stem and O/I as a closed contrast within this pair only. Treat the analysis as nonproductive and do not generalize O or I to the rest of HNK.",
+      "effect":"Captures the unusually strong minimal-pair evidence while preserving B9 as the separate gate for any broader final-I hypothesis.",
+      "recommended":true
+    },
+    {
+      "id":"B8-OPTION-C",
+      "decision":"PROMOTE_GENERAL_O_I_MORPHOLOGY",
+      "description":"Generalize final O/I as productive nominal/domain versus verbal/action morphology.",
+      "effect":"Not recommended; current evidence is insufficient and would pre-empt B9."
+    }
+  ],
+  "recommended_decision":"B8-OPTION-B",
+  "proposed_boundary": {
+    "analysis_scope":"PARAZAMO_PARAZAMI_FAMILY_ONLY",
+    "productivity":"NONPRODUCTIVE_CLOSED_PAIR",
+    "PARAZAM_standalone_lexeme":false,
+    "general_final_O_rule":false,
+    "general_final_I_rule":false,
+    "new_derivations_allowed":false,
+    "authority_changes":0,
+    "semantic_changes":0,
+    "curriculum_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V101",
+  "next_gate_if_recommended_option_approved":"B9_FINAL_I_STATUS_HUMAN_GATE"
+}

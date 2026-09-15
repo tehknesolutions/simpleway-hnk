@@ -1,0 +1,9 @@
+{
+  "transition_id":"SWHNK-HNK3000-A1-AUTHORING-WAVE-01-CANDIDATE-GENERATION-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_GENERATION_AUTHORIZED_NO_SELECTION_NO_REGISTRATION",
+  "date":"2026-09-14",
+  "source_gate":"SWHNK-HNK3000-A1-AUTHORING-WAVE-01-CANDIDATE-GENERATION-HUMAN-GATE-V1",
+  "approved_scope":"GENERATE_2_OPTIONS_PER_EACH_OF_40_LOCKED_WAVE01_SLOTS_FOR_REVIEW_ONLY",
+  "effects":{"slots_authorized":40,"options_target":80,"selected_forms":0,"registered_candidates":0,"hnk3000_credit_change":0,"authority_promotions":0,"hold_seeds_resolved":0,"curriculum_changes":0},
+  "next_phase":"CREATE_WAVE01_CANDIDATE_OPTION_SET_THEN_PREPARE_HUMAN_SELECTION_GATE"
+}

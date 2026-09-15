@@ -1,0 +1,51 @@
+{
+  "proposal_id":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-PROPOSAL-V1",
+  "status":"PREPARED_AWAITING_HUMAN_SELECTION",
+  "date_prepared":"2026-09-14",
+  "purpose":"Replace PAPA/MAMA as core father/mother vocabulary with dignified HNK-native primitives while preserving recovered evidence and HNK V3 anti-cognate governance.",
+  "existing_state":{
+    "generic_parent":"NEKUVO",
+    "PAPA":{"authority":"GATE","core_parent_recommendation":"REJECT"},
+    "MAMA":{"authority":"GATE","core_parent_recommendation":"REJECT"}
+  },
+  "external_resemblance_review":{
+    "PATRO":{"recommendation":"REJECT_AS_FINAL_HNK","err":"RED","reason":"Exact Esperanto patro = father; would make HNK father look directly borrowed from Esperanto."},
+    "MATRA":{"recommendation":"REJECT_AS_FINAL_HNK","err":"ORANGE_RED","reason":"Strong Sanskrit-adjacent association: mātṛ = mother, while mātrā/mātra has measure/quantity senses; high cognate/false-cognate ambiguity."}
+  },
+  "recommended_pair":{
+    "father":{
+      "form":"DARUNO",
+      "meaning_pt":"pai; progenitor masculino humano em registro respeitoso/neutro",
+      "meaning_en":"father; male human parent in respectful/neutral register",
+      "gid_sequence":["G19","G01","G15","G05","G12","G04"],
+      "ipa":"/da.ru.no/",
+      "shape":"CVCVCV",
+      "authority_if_selected":"NEW_AUTHORED_PRIMITIVE_CANDIDATE",
+      "morphology":"NONE_CLAIMED",
+      "historical_recovery_claim":false,
+      "preliminary_err":"GREEN_YELLOW",
+      "notes":["No paternal morpheme is inferred from DAR-, -UNO or any substring.","Chosen for HNK euphony and lexical independence, not external etymology."]
+    },
+    "mother":{
+      "form":"NELARA",
+      "meaning_pt":"mãe; progenitora feminina humana em registro respeitoso/neutro",
+      "meaning_en":"mother; female human parent in respectful/neutral register",
+      "gid_sequence":["G12","G02","G14","G01","G15","G01"],
+      "ipa":"/ne.la.ra/",
+      "shape":"CVCVCV",
+      "authority_if_selected":"NEW_AUTHORED_PRIMITIVE_CANDIDATE",
+      "morphology":"NONE_CLAIMED",
+      "historical_recovery_claim":false,
+      "preliminary_err":"YELLOW",
+      "notes":["Rare external proper-name/brand and unrelated lexical occurrences exist; no common cross-language mother meaning was found in the preliminary scan.","No maternal morpheme is inferred from NE-, -LARA or any substring."]
+    }
+  },
+  "pair_design":{
+    "shared_goal":"HONORIFIC_EUPHONIC_UNIVERSAL_HNK",
+    "internal_confusability":"LOW_BY_DESIGN",
+    "reference_inspiration":"PATRO/MATRA cadence and dignity only; no borrowed root or meaning",
+    "divine_title_boundary":"These candidates denote human parents only. They do not automatically define a title for God the Father or any theological title."
+  },
+  "effects_now":{"new_registered_hnk_forms":0,"hnk3000_credit_change":0,"PAPA_MAMA_deleted":false,"PAPA_MAMA_promoted":false,"NEKUVO_changed":false},
+  "next_gate":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-HUMAN-GATE-V1"
+}

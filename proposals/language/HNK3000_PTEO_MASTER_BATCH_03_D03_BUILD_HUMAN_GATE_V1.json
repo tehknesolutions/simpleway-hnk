@@ -1,0 +1,59 @@
+{
+  "gate_id": "SWHNK-HNK3000-PTEO-MASTER-BATCH-03-D03-BUILD-HUMAN-GATE-V1",
+  "status": "AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared": "2026-09-14",
+  "source_architecture": "SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-V1",
+  "source_transition": "SWHNK-HNK3000-PTEO-MASTER-BATCH-02-D02-SEMANTIC-REVIEW-APPROVED-TRANSITION-V1",
+  "decision_scope": "APPROVE_OR_REVISE_ONLY_CONSTRUCTION_OF_BATCH03_D03_AS_100_PT_EN_ESPERANTO_SEMANTIC_REFERENCE_ENTRIES; DO_NOT_CREATE_NEW_HNK_FORMS REGISTER_WAVE04 ASSIGN_HNK3000_CREDIT PROMOTE_AUTHORITY CREATE_GRAMMAR OR ALTER_L03_WITH_THIS_APPROVAL",
+  "proposed_decision": {
+    "id": "DEC-HNK3000-PTEO-B03-001",
+    "state": "PENDING",
+    "proposal": "BUILD_EXACTLY_100_D03_BODY_AND_HEALTH_SEMANTIC_ENTRIES_WITH_GLOBAL_INDICES_0201_TO_0300",
+    "rule": "Construct one governed concept per record in D03, preserving the approved level allocation and producing PT, EN and Esperanto reference fields plus ambiguity and morphology metadata. This is semantic-reference authoring only."
+  },
+  "governance_decisions": [
+    {"id":"DEC-HNK3000-PTEO-B03-002","state":"PENDING","proposal":"Use D03 allocation A1=20, A2=20, B1=25, B2=35 for exactly 100 records."},
+    {"id":"DEC-HNK3000-PTEO-B03-003","state":"PENDING","proposal":"Preserve and reconcile the already established D03 A1 concepts: corpo; cabeça; rosto; olho; orelha/ouvido externo; nariz; boca; dente; pescoço; mão; braço; perna; pé; costas; estômago; saúde; doença/estado de estar doente; médico(a); remédio/medicamento; hospital. Do not duplicate or silently rename them."},
+    {"id":"DEC-HNK3000-PTEO-B03-004","state":"PENDING","proposal":"For every record provide concept_definition_pt, pt_reference, en_reference, eo_reference, part_of_speech, semantic_notes, Esperanto root/base, Esperanto morphology, lexicalization type, verification status, English ambiguity notes and cross-language one-to-one status."},
+    {"id":"DEC-HNK3000-PTEO-B03-005","state":"PENDING","proposal":"Use Esperanto as semantic/morphological reference only. Technical anatomy, clinical and health-system terminology must remain PROVISIONAL whenever lexicographic confidence is insufficient; do not normalize by guess."},
+    {"id":"DEC-HNK3000-PTEO-B03-006","state":"PENDING","proposal":"Existing HNK recovered/authored/selected forms may be referenced only after exact sense review; mappings do not alter HNK meaning, authority, registration, morphology or credit."},
+    {"id":"DEC-HNK3000-PTEO-B03-007","state":"PENDING","proposal":"Run duplicate-concept, near-synonym, anatomy-part, symptom/state, care-role, treatment, medicine, facility, polysemy and one-to-one mapping review across all 100 D03 records before presenting Batch 03 for human semantic review."},
+    {"id":"DEC-HNK3000-PTEO-B03-008","state":"PENDING","proposal":"After construction create a separate Batch 03 semantic-review human gate. Do not treat generated PT/EN/EO entries as fully approved until that later gate is explicitly accepted."}
+  ],
+  "batch_contract": {
+    "batch_number": 3,
+    "domain_id": "D03",
+    "domain_name_pt": "Corpo e saúde",
+    "global_index_range": "0201..0300",
+    "record_count": 100,
+    "level_distribution": {"A1":20,"A2":20,"B1":25,"B2":35},
+    "languages": ["PT","EN","EO"],
+    "new_hnk_forms": 0,
+    "hnk3000_credit_change": 0
+  },
+  "current_state": {
+    "semantic_master_approved_records": 200,
+    "D01_approved_records": 100,
+    "D02_approved_records": 100,
+    "HNK3000_core_credited": 159,
+    "A1_credited": 156,
+    "wave04_selected_pending_registration": 40,
+    "wave04_registration_status": "AWAITING_EXPLICIT_HUMAN_APPROVAL",
+    "wave05_plus_hnk_generation": "PAUSED"
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V121",
+    "V122_observed": false,
+    "L03_external_state": "EXACT_SURFACE_SELECTION_PENDING",
+    "attributed_to_semantic_master": false
+  },
+  "projected_if_approved": {
+    "generated_semantic_records": 100,
+    "approved_semantic_records": 0,
+    "semantic_master_generated_or_approved_total_after_build": 300,
+    "new_hnk_forms": 0,
+    "hnk3000_credit_change": 0,
+    "next_phase": "HNK3000_PTEO_MASTER_BATCH03_D03_SEMANTIC_REVIEW_HUMAN_GATE"
+  },
+  "approval_rule": "A future SIGA in this semantic-master thread may approve only DEC-HNK3000-PTEO-B03-001 through DEC-HNK3000-PTEO-B03-008 if this gate remains materially unchanged. The same approval must not approve the generated 100 records, create HNK forms, register Wave04, assign HNK3000 credit, promote authority, approve B16 or alter L03."
+}

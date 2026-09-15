@@ -1,0 +1,42 @@
+{
+  "note_id": "SWHNK-LANGUAGE-AUDIT-CONCURRENCY-NOTE-V3",
+  "status": "RECONCILED_NO_REVERT_NO_GATE_APPROVAL",
+  "date": "2026-09-13",
+  "audit_branch_baseline": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+  "current_main_observed": {
+    "snapshot": "SWHNK-C1-PROGRESS-SNAPSHOT-V95",
+    "effect": "The L03 minimal activity utterance candidate is validated and productivity-eligible; a separate scoped-productivity promotion gate is pending."
+  },
+  "current_main_L03_state": {
+    "candidate": "SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CANDIDATE-V1",
+    "surface_schema": "[ACTIVITY_LEXEME]",
+    "allowed_realizations": ["VALI", "PARAZAMI"],
+    "validated": true,
+    "productivity_eligible": true,
+    "productive": false,
+    "curriculum_mapped": false,
+    "productive_patterns_approved": 0,
+    "curriculum_slot_assignments": 0,
+    "next_gate": "SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-SCOPED-PRODUCTIVITY-PROMOTION-HUMAN-BATCH-V1"
+  },
+  "A7_reconciliation": {
+    "curriculum_language_audit_complete": true,
+    "governance_invariant": "CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR",
+    "recommendation": "Do not consume the scoped-productivity promotion gate until Sprint B explicitly reviews the curriculum-language boundary together with phonology, morphology and grammar audit findings."
+  },
+  "audit_policy": {
+    "sprint_A_continues": true,
+    "V95_reverted": false,
+    "V95_progress_claimed_by_audit": false,
+    "scoped_productivity_gate_approved_by_audit": false,
+    "canonical_main_mutation_from_audit": false
+  },
+  "canonical_effects_from_audit": {
+    "new_surface_forms": 0,
+    "new_phonology_rules": 0,
+    "new_grammar_rules": 0,
+    "productivity_promotions": 0,
+    "authority_promotions": 0,
+    "curriculum_slot_changes": 0
+  }
+}

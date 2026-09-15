@@ -1,0 +1,44 @@
+{
+  "gate_id":"SWHNK-HNK-B16-BASIC-CLAUSE-ORDER-HUMAN-GATE-V1",
+  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "date_prepared":"2026-09-13",
+  "source_review":"HNK_B16_BASIC_CLAUSE_ORDER_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_SCOPED_LINEAR_ORDER_COMPATIBILITY_OF_RECOVERED_LANGUAGE_USE_FRAMES; DO_NOT_DECLARE_UNIVERSAL_SVO_CREATE_GENERAL_SUBJECT_OBJECT_GRAMMAR_CHANGE_INTERROGATIVE_ARCHITECTURE_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "proposed_decision":{
+    "id":"DEC-B16-001",
+    "state":"PENDING",
+    "proposal":"GOVERN_SCOPED_PERSON_PREDICATE_CONTENT_ORDER_COMPATIBILITY_NO_GENERAL_BASIC_ORDER",
+    "rule":"Recognize [PERSON_REFERENT] [ZAMI] [LANGUAGE_CONTENT] as a governed linear frame for the recovered/approved language-use microdomain. S-P-O may be used only as an analytical compatibility label for this frame; do not declare a universal HNK basic word order.",
+    "rationale":"PHR-002 and PHR-003 provide approximate semantic support, while PHR-007 and PHR-006 repeat the same linear distribution without recoverable exact glosses. PHR-001 has a different structure. The evidence supports a local frame more strongly than a universal SVO grammar.",
+    "provenance":"GOVERNED_SCOPED_LINEAR_FRAME_FROM_RECOVERED_DISTRIBUTION_NOT_HISTORICAL_UNIVERSAL_WORD_ORDER_RECOVERY"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B16-002","state":"PENDING","proposal":"Do not define AN/EN or other referents as universally obligatory grammatical subjects from this frame."},
+    {"id":"DEC-B16-003","state":"PENDING","proposal":"Do not define every post-ZAMI content expression as a universal grammatical object or create object case/marking."},
+    {"id":"DEC-B16-004","state":"PENDING","proposal":"Do not generalize ZAMI ordering to DAYI, SALI, VALI, PARAZAMI or other predicate classes without separate evidence."},
+    {"id":"DEC-B16-005","state":"PENDING","proposal":"Preserve B15: question-like uses may have final KE in their governed scope, but questions must not be generated from declarations merely by appending/removing KE."},
+    {"id":"DEC-B16-006","state":"PENDING","proposal":"B16 creates no universal SVO rule, movement rule, case system, tense/modal grammar, lexical authority changes, productivity changes or curriculum mappings."}
+  ],
+  "projected_if_approved":{
+    "scoped_language_use_linear_frame":"PERSON_REFERENT_ZAMI_LANGUAGE_CONTENT",
+    "SPO_label":"ANALYTICAL_COMPATIBILITY_ONLY",
+    "universal_basic_word_order":"UNRESOLVED",
+    "universal_SVO":false,
+    "subject_grammar_created":false,
+    "object_grammar_created":false,
+    "other_predicate_order_generalized":false,
+    "question_declaration_transform_created":false,
+    "new_phrase_glosses":0,
+    "grammar_changes_outside_scoped_frame":0,
+    "curriculum_changes":0,
+    "next_phase":"PREPARE_B17_ZAMO_LEXICAL_STATUS_HUMAN_GATE"
+  },
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V107",
+    "context_place_candidate_productive":true,
+    "context_place_candidate_productive_scope":"L03_CONTROLLED_CONTEXT_PLACE_LABEL_ONLY",
+    "context_place_candidate_curriculum_mapped":false,
+    "attributed_to_B16":false
+  },
+  "approval_rule":"A future SIGA may approve only DEC-B16-001 through DEC-B16-006 if this gate remains materially unchanged. The same SIGA must not approve B17, declare universal SVO, generalize ZAMI order to other predicates, or alter L03 curriculum."
+}

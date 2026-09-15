@@ -1,0 +1,45 @@
+{
+  "gate_id":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B12_GATE",
+  "source_review":"HNK_B12_VANI_SEMANTIC_STRATEGY_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_THE_VANI_SEMANTIC_GOVERNANCE_STRATEGY; DO_NOT_ASSIGN_VANI_LIVE_RESIDE_SEMANTICS_DERIVE_VANI_FROM_VAN_PLUS_I_CHANGE_LEXICAL_AUTHORITY_GRAMMAR_OR_CURRICULUM_WITH_THIS_APPROVAL",
+  "approved_decision":{
+    "id":"DEC-B12-001",
+    "state":"APPROVED",
+    "decision":"RECOVERY_FIRST_KEEP_GLOSSLESS_WATCH",
+    "rule":"Keep VANI as WATCH with unresolved semantics. Require targeted historical recovery/archaeology before any semantic assignment. If no historical meaning is recovered and a concrete need remains, a separate explicit semantic-authorship gate may later propose a meaning with historicalRecoveryClaim=false.",
+    "rationale":"B7 governs -VAN only as NONPRODUCTIVE_CLOSED_EVIDENCE and B9 governs final -I only as a nonmorphemic distributional tendency. Combining them does not justify VANI=live/reside as recovered semantics.",
+    "provenance":"GOVERNANCE_DECISION_TO_PRESERVE_UNRESOLVED_RECOVERED_FORM_SEMANTICS"
+  },
+  "governance_decisions":[
+    {"id":"DEC-B12-002","state":"APPROVED","decision":"Do not assign morar/residir, live/reside, residence or habitation semantics to VANI under B12."},
+    {"id":"DEC-B12-003","state":"APPROVED","decision":"Do not recognize VAN+I as a productive or nonproductive derivational analysis of VANI from this gate."},
+    {"id":"DEC-B12-004","state":"APPROVED","decision":"Preserve VANI authority WATCH and gloss UNRECOVERED until direct recovery or a separate explicit authorship decision."},
+    {"id":"DEC-B12-005","state":"APPROVED","decision":"If future authorship is considered, it must state historicalRecoveryClaim=false and must not retroactively reinterpret B7 or B9 as productive morphology."},
+    {"id":"DEC-B12-006","state":"APPROVED","decision":"B12 changes no individual lexical semantics, morphology productivity, grammar, authority levels, or curriculum slots."}
+  ],
+  "effects":{
+    "VANI_authority":"WATCH_UNCHANGED",
+    "VANI_semantics":"UNRESOLVED",
+    "VANI_live_reside_assigned":false,
+    "VAN_plus_I_derivation_approved":false,
+    "historicalRecoveryClaim_created":false,
+    "semantic_changes":0,
+    "authority_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0
+  },
+  "concurrency_observation":{
+    "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+    "context_place_candidate_validated":true,
+    "context_place_candidate_productive":false,
+    "context_place_candidate_curriculum_mapped":false,
+    "context_place_productivity_eligibility_gate_pending":true,
+    "attributed_to_B12":false
+  },
+  "next_phase":"B13_DAYI_SEMANTICS_AND_SYNTAX_HUMAN_GATE",
+  "same_approval_must_not_approve_B13_or_assign_any_VANI_meaning":true
+}

@@ -1,0 +1,193 @@
+{
+  "audit_id": "SWHNK-HNK-PHRASE-GRAMMAR-EVIDENCE-AUDIT-V1",
+  "status": "COMPLETE_INITIAL_PHRASE_GRAMMAR_AUDIT_NO_CANON_MUTATION",
+  "date": "2026-09-13",
+  "baseline": {
+    "cycle_snapshot": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+    "recovered_language_registry": "tehknesolutions/codex-hnk/packages/hnk-linguas/src/index.mjs",
+    "authored_language_registry": "tehknesolutions/codex-hnk/packages/hnk-linguas/src/authored.mjs",
+    "authored_registry_version": "1.7.0-candidate"
+  },
+  "classification_model": {
+    "RECOVERED": "The surface phrase/form is historically recovered in the project corpus. This does not imply exact token semantics.",
+    "SUPPORTED": "A distributional or contrastive analysis is supported by the corpus but is not automatically a canonical universal rule.",
+    "AUTHORED_CANDIDATE": "A governed semantic/function mapping exists in @hnk/linguas/authored as CANDIDATE and is explicitly not claimed as historical recovery.",
+    "PRODUCTIVE": "A rule may generate new well-formed language beyond a closed approved set. No general productive grammar is established by this audit."
+  },
+  "recovered_phrase_corpus": {
+    "total": 7,
+    "approximate_gloss": 3,
+    "unrecovered_gloss": 4,
+    "phrases": [
+      {"id":"PHR-001","form":"KALA YA EN ES KU KE","gloss_pt":"Qual é o seu nome?","gloss_state":"APPROXIMATE"},
+      {"id":"PHR-002","form":"AN ZAMI ZAMO","gloss_pt":"Eu falo / uso linguagem.","gloss_state":"APPROXIMATE"},
+      {"id":"PHR-003","form":"EN ZAMI HENUVOKODAN KE","gloss_pt":"Você fala HENUVOKODAN?","gloss_state":"APPROXIMATE"},
+      {"id":"PHR-004","form":"EN SARI LO KU KE","gloss_pt":null,"gloss_state":"UNRECOVERED"},
+      {"id":"PHR-005","form":"EN DA KU KE","gloss_pt":null,"gloss_state":"UNRECOVERED"},
+      {"id":"PHR-006","form":"EN ZAMI KU ZAMO KE","gloss_pt":null,"gloss_state":"UNRECOVERED"},
+      {"id":"PHR-007","form":"AN ZAMI HENUVOKODAN","gloss_pt":null,"gloss_state":"UNRECOVERED"}
+    ]
+  },
+  "token_and_pattern_assessments": [
+    {
+      "id":"GRAM-AUDIT-001",
+      "subject":"AN",
+      "recovered_surface_evidence":["PHR-002","PHR-007"],
+      "supported_role":"FIRST_PERSON_OR_FIRST_PERSON_SUBJECT",
+      "authored_registry":"AUTH-016 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "current_governed_scope":"scoped L01/L02 first-person referent use",
+      "boundary":"Not a recovered standalone gloss and not a complete person/number paradigm."
+    },
+    {
+      "id":"GRAM-AUDIT-002",
+      "subject":"EN",
+      "recovered_surface_evidence":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+      "supported_role":"SECOND_PERSON_OR_ADDRESSEE_REFERENT",
+      "authored_registry":"AUTH-017 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "current_governed_scope":"scoped L01/L02 second-person referent use",
+      "boundary":"Subject versus possessive behavior remains unresolved outside approved constructions; PHR-001 cannot by itself prove a possessive pronoun analysis."
+    },
+    {
+      "id":"GRAM-AUDIT-003",
+      "subject":"ZAMI",
+      "recovered_surface_evidence":["PHR-002","PHR-003","PHR-006","PHR-007"],
+      "supported_role":"SPEAK_OR_LANGUAGE_USE_PREDICATE",
+      "authored_registry":"AUTH-020 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "current_governed_scope":"scoped L01 communicative/language-use contexts",
+      "boundary":"Broader lexical semantics and general verbal grammar are not established."
+    },
+    {
+      "id":"GRAM-AUDIT-004",
+      "subject":"KE",
+      "recovered_surface_evidence":["PHR-001","PHR-003","PHR-004","PHR-005","PHR-006"],
+      "negative_distribution":["PHR-002","PHR-007"],
+      "supported_role":"CLAUSE_FINAL_QUESTION_OPERATOR_IN_RECOVERED_QUESTION_LIKE_CLASS",
+      "support_strength":"STRONG_DISTRIBUTIONAL",
+      "authored_registry":"AUTH-019 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "current_governed_scope":"scoped L01/L02 clause-final question behavior",
+      "boundary":"This does not establish KE as the universal HNK interrogative marker for every clause type."
+    },
+    {
+      "id":"GRAM-AUDIT-005",
+      "subject":"KU",
+      "recovered_surface_evidence":["PHR-001","PHR-004","PHR-005","PHR-006"],
+      "minimal_contrast":"PHR-003 EN ZAMI HENUVOKODAN KE vs PHR-006 EN ZAMI KU ZAMO KE",
+      "supported_role":"INTERROGATIVE_CONTENT_SELECTOR_COMPATIBLE_WITH_PRENOMINAL_POSITION",
+      "support_strength":"STRONGER_THAN_SINGLE_GLOSS_ALIGNMENT",
+      "authored_registry":"AUTH-018 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "current_governed_scope":"scoped L01/L02 content-selection use",
+      "boundary":"KU is not a fixed equivalent of WHAT, WHICH, WHO, WHERE or HOW."
+    },
+    {
+      "id":"GRAM-AUDIT-006",
+      "subject":"ZAMO",
+      "recovered_surface_evidence":["PHR-002","PHR-006"],
+      "supported_role":"LANGUAGE_OR_LANGUAGE_DOMAIN_NOUN_HYPOTHESIS",
+      "support_strength":"MODERATE_TO_STRONG_INFERENCE",
+      "authored_registry":null,
+      "boundary":"Exact standalone gloss and lexical range remain unrecovered; do not promote from approximate bilingual alignment alone."
+    },
+    {
+      "id":"GRAM-AUDIT-007",
+      "subject":"KALA",
+      "recovered_surface_evidence":["PHR-001"],
+      "supported_role":"NAME_QUESTION_COMPONENT_WITH_LEXICAL_FAMILY_SUPPORT_FROM_VAMAKALA",
+      "authored_registry":"AUTH-015 CANDIDATE / AUTHORED_EVIDENCE_MAPPING",
+      "boundary":"The governed mapping is newly authorized evidence mapping; it does not prove a historical standalone KALA=name gloss or a productive decomposition of VAMAKALA."
+    },
+    {
+      "id":"GRAM-AUDIT-008",
+      "subject":"YA_ES_SARI_LO_DA",
+      "state":"UNRESOLVED_TOKEN_SEMANTICS",
+      "evidence":"Recovered surface presence only; exact token alignment is unavailable.",
+      "boundary":"No lexical or grammatical meaning should be assigned from current phrase translations."
+    },
+    {
+      "id":"GRAM-AUDIT-009",
+      "subject":"LANGUAGE_USE_CLAUSE_ORDER",
+      "supported_pattern":"SUBJECT_PREDICATE_OBJECT_COMPATIBLE",
+      "evidence":["AN ZAMI ZAMO","EN ZAMI HENUVOKODAN KE","AN ZAMI HENUVOKODAN"],
+      "scope":"LANGUAGE_USE_MICRO_DOMAIN_ONLY",
+      "boundary":"Compatibility is not a universal basic word-order rule."
+    },
+    {
+      "id":"GRAM-AUDIT-010",
+      "subject":"INTERROGATIVE_ARCHITECTURE",
+      "supported_pattern":"CONTENT_SELECTOR_KU plus CLAUSE_FINAL_KE is compatible with recovered evidence",
+      "scope":"SCOPED_INTERROGATIVE_MICROGRAMMAR",
+      "boundary":"Recovered evidence does not authorize a complete WH paradigm, universal KE, or unrestricted KU compounding."
+    }
+  ],
+  "authored_candidate_layer_findings": [
+    {
+      "forms":["AN","EN","KU","KE","ZAMI","KALA"],
+      "state":"CANONICAL_AUTHORED_REGISTRY_CANDIDATES",
+      "meaning":"These forms occur in recovered evidence, but their standalone semantic/function mappings are governed authored CANDIDATE mappings, not recovered standalone lexeme definitions."
+    },
+    {
+      "form":"KUVAN",
+      "state":"AUTH-001_CANDIDATE",
+      "analysis":"Governed authored locative interrogative specialization KU+VAN; closed-list candidate; does not make KU a universal WH token or VAN globally productive."
+    },
+    {
+      "form":"KUON",
+      "state":"AUTH-003_CANDIDATE",
+      "analysis":"Governed authored human-referent interrogative candidate; depends on ON remaining GATE; does not promote ON or define KU globally."
+    },
+    {
+      "form":"NE",
+      "state":"AUTH-004_CANDIDATE",
+      "analysis":"Governed authored negation/absence primitive with scoped beginner uses; no historical negation claim and no automatic global productivity."
+    },
+    {
+      "form":"VALA",
+      "state":"AUTH-002_CANDIDATE_REQUIRES_REASSESSMENT",
+      "analysis":"The authored activity-noun back-analysis is not invalidated as an authored primitive candidate, but its claimed corpus-facing morphological rationale is weakened by FROZEN KALOVALA sharing final VALA with a non-activity meaning."
+    }
+  ],
+  "productive_grammar_assessment": {
+    "general_productive_rules_approved_by_this_audit": 0,
+    "finding":"The strongest current grammar consists of recovered distributional patterns plus closed/scoped authored candidates. The audit finds no basis to silently generalize these into universal HNK grammar.",
+    "supported_but_nonproductive":[
+      "AN/EN referent mappings in scoped constructions",
+      "ZAMI language-use predicate mapping",
+      "KE clause-final question behavior in scoped L01/L02 constructions",
+      "KU content-selector behavior in scoped L01/L02 constructions",
+      "S-P-O-compatible order in language-use micro-domain",
+      "closed-list KUVAN/KUON specializations",
+      "scoped NE negation/absence uses"
+    ]
+  },
+  "l03_v93_candidate_audit": {
+    "candidate":"SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CANDIDATE-V1",
+    "schema":"[ACTIVITY_LEXEME]",
+    "realizations":["VALI","PARAZAMI"],
+    "audit_result":"STRUCTURALLY_COMPATIBLE_WITH_NON_INVENTION_BOUNDARIES_BUT_NOT_VALIDATED_BY_THIS_AUDIT",
+    "positive_findings":[
+      "uses no new surface form",
+      "does not import AN, EN, KE, NE, KU, KUVAN or other scoped grammar tokens",
+      "explicitly refuses person, tense, aspect, modality, habituality, frequency, negation, interrogative and zero-pronoun inference",
+      "keeps VALI FROZEN and PARAZAMI WATCH lexical authorities unchanged"
+    ],
+    "remaining_question":"Whether a bare activity lexeme may count as a complete utterance in controlled L03 discourse is a scoped pragmatic/constructional validation question, not evidence for universal bare-predicate grammar.",
+    "current_human_gate":"SWHNK-L03-BINAH-MINIMAL-ACTIVITY-UTTERANCE-CANDIDATE-VALIDATION-HUMAN-BATCH-V1",
+    "gate_approved_by_this_audit":false
+  },
+  "sprint_b_decisions_required":[
+    {"id":"DEC-GRAM-001","question":"Should AN and EN remain scoped referent mappings, or should a broader pronoun/person system be authored later?"},
+    {"id":"DEC-GRAM-002","question":"Should KE remain a scoped clause-final question operator or be tested for broader interrogative productivity?"},
+    {"id":"DEC-GRAM-003","question":"Should KU remain a scoped content selector, and what explicitly governed closed specializations beyond KUVAN/KUON are allowed?"},
+    {"id":"DEC-GRAM-004","question":"Should S-P-O-compatible language-use order remain micro-domain evidence or enter a broader word-order design test?"},
+    {"id":"DEC-GRAM-005","question":"Should ZAMO receive a separately governed language-domain lexical mapping, or remain unrecovered pending stronger source evidence?"},
+    {"id":"DEC-GRAM-006","question":"How should authored candidate semantics be labeled so they can never be mistaken for historically recovered token definitions?"},
+    {"id":"DEC-GRAM-007","question":"Should the V93 L03 bare activity utterance candidate be validated as a scoped discourse construction while explicitly denying universal bare-predicate productivity?"}
+  ],
+  "effects": {
+    "canonical_changes": 0,
+    "authored_registry_changes": 0,
+    "new_grammar_rules": 0,
+    "productive_rule_promotions": 0,
+    "curriculum_slot_changes": 0,
+    "v93_gate_approved": false
+  }
+}

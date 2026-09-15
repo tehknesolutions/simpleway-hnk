@@ -1,0 +1,44 @@
+{
+  "note_id":"SWHNK-HNK-LANGUAGE-AUDIT-CONCURRENCY-NOTE-V6",
+  "status":"MAIN_ADVANCED_TO_V98_STR001_MAPPED_OUTSIDE_AUDIT",
+  "date":"2026-09-13",
+  "audit_branch":"audit/hnk-language-sprint-a-20260913",
+  "previous_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V97",
+  "current_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V98",
+  "observed_change": {
+    "candidate":"[ACTIVITY_LEXEME] -> VALI | PARAZAMI",
+    "productive":true,
+    "productive_scope":"L03_CONTROLLED_ACTIVITY_CONTEXT_ONLY",
+    "curriculum_mapping_eligible":true,
+    "previous_mapping_state":"ELIGIBLE_STRUCTURES_ONLY_NON_MAPPED",
+    "current_mapping_state":"MAPPED_STR001_UNAUTHORED_UNVALIDATED",
+    "mapped_slot":"STR001",
+    "curriculum_slot_assignments":1,
+    "STR001_authored":false,
+    "STR001_validated":false,
+    "OPI_unlocked":false,
+    "QA_unlocked":false,
+    "new_surface_forms":0,
+    "implementation_counts_changed":false
+  },
+  "audit_provenance": {
+    "sprint_a_created_productivity_promotion":false,
+    "sprint_a_approved_productivity_promotion":false,
+    "sprint_a_approved_mapping_eligibility":false,
+    "sprint_a_approved_exact_STR001_mapping":false,
+    "sprint_a_consumed_STR001_authoring_design_gate":false,
+    "interpretation":"V98 is observed concurrent main state, not Sprint A endorsement."
+  },
+  "current_main_gate": {
+    "id":"SWHNK-L03-BINAH-STR001-AUTHORING-DESIGN-HUMAN-BATCH-V1",
+    "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+    "rule":"APPROVE_OR_REVISE_ONLY_STR001_AUTHORING_DESIGN; DO_NOT_AUTHOR_OR_VALIDATE_STR001_WITH_THE_SAME_APPROVAL"
+  },
+  "audit_response": {
+    "auto_rollback_main":false,
+    "auto_accept_main_as_audit_decision":false,
+    "consume_current_main_gate":false,
+    "required_review":"B19 post-promotion/post-mapping review after B18/B20-B23 governance decisions, before audit endorsement of STR001 authoring progression."
+  },
+  "invariants":["SUPPORTED != PRODUCTIVE","CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR","one human gate at a time"]
+}

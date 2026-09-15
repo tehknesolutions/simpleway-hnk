@@ -1,22 +1,24 @@
-# HNK Phonotactic Profile V1 — Observed, Not Canon
+# HNK Phonotactic Profile V1 — Historical Prior
 
 **Profile ID:** `SWHNK-HNK-PHONOTACTIC-PROFILE-V1`  
-**State:** `OBSERVED_PROFILE / NOT_CANON`  
-**Corpus:** current 33-form recovered Master Lexicon snapshot
+**State:** `HISTORICAL_PRIOR / SUPERSEDED_BY_V2`  
+**Superseded by:** `SWHNK-HNK-PHONOTACTIC-PROFILE-V2` via approved gate `SWHNK-HNK-B6-PHONOTACTIC-PROFILE-V2-HUMAN-GATE-V1`  
+**Corpus:** current 33-form recovered Master Lexicon snapshot  
+**Historical note:** retained for provenance; not current phonotactic authority.
 
 ## 1. Purpose
 
-This profile records distributional facts from the recovered lexicon so newly authored candidates can avoid sounding unrelated to the existing language. It does **not** retroactively impose a phonotactic law on historical forms.
+This profile records the earlier distributional analysis used before B1–B6. It is preserved as historical provenance and must not override the current governed V2 profile.
 
-## 2. Primary observation
+## 2. Historical primary observation
 
-Using the current safe transliteration tokenization (`TS` treated as one consonantal unit):
+Using the then-current safe transliteration tokenization (`TS` treated as one consonantal unit):
 
 - total registry forms observed: **33**;
-- forms matching a strict alternating pattern `(CV)+(C)?`: **30**;
-- exceptions: **3**.
+- forms calculated as matching a strict alternating pattern `(CV)+(C)?`: **30**;
+- exceptions under that orthography-sensitive calculation: **3**.
 
-The three exceptions are not ordinary stable native evidence:
+The three exceptions listed at the time were:
 
 | Form | Pattern | Authority context |
 |---|---|---|
@@ -24,11 +26,11 @@ The three exceptions are not ordinary stable native evidence:
 | `ON` | `VC` | `GATE` |
 | `BANKA` | `CVCCV` | `GATE` |
 
-This makes CV alternation a strong **design prior** for new native candidates, while not proving it is an absolute canonical rule.
+This calculation is now known to have been orthography-sensitive because it treated romanized `Y` as consonant-like. Under authoritative G-ID/IPA classes, current V2 uses **26/33** strict `(CV)+(C)?` matches and recognizes FROZEN Y-bearing vowel-sequence exceptions.
 
-## 3. Observed shape distribution
+## 3. Historical shape distribution
 
-Across the 33 forms, safe-token patterns include:
+Across the 33 forms, safe-token patterns included:
 
 - `CVCVCVCV`: 12 forms;
 - `CVCV`: 10 forms;
@@ -37,16 +39,16 @@ Across the 33 forms, safe-token patterns include:
 - longer alternating forms also occur;
 - final consonants occur in recovered forms such as `VALIVAN`, `PAROVAN`, `SAROSAL` and `HENUVOKODAN`.
 
-Observed token lengths are concentrated at:
+Observed token lengths were concentrated at:
 
 - 4 tokens: 10 forms;
 - 8 tokens: 12 forms;
 - 7 tokens: 4 forms;
 - other lengths are less frequent.
 
-## 4. Provisional authoring recommendation
+## 4. Historical authoring recommendation
 
-For **new CANDIDATE native lexemes**, until a stronger phonotactic source is recovered or explicitly approved:
+The earlier profile recommended for new native candidates:
 
 1. prefer syllable-like `CV` sequencing;
 2. permit an optional final consonant only when it improves distinction or aligns with an approved morphological rationale;
@@ -57,27 +59,30 @@ For **new CANDIDATE native lexemes**, until a stronger phonotactic source is rec
 7. treat BRIDGE/loan forms separately from native candidate formation;
 8. do not use GATE exceptions as templates for new stable vocabulary.
 
-This recommendation is an authoring prior, **not yet a language law**.
+These are no longer current rules. V2 supersedes the avoid-hiatus recommendation, treats `CV` only as a statistical authoring preference, and evaluates initial-vowel/internal-cluster shapes case-by-case.
 
-## 5. Transliteration boundary
+## 5. Transliteration boundary retained historically
 
-The authoritative HNK40 runtime contains 40 phoneme IDs, but the current safe transliteration map exposes only explicitly mapped units. Therefore:
+The authoritative HNK40 runtime contains 40 phoneme IDs, but the safe transliteration map exposes only explicitly mapped units. Therefore:
 
 - a candidate may be composed in authoritative `G01–G40` IDs;
 - if every G-ID has an approved safe transliteration unit, a text transliteration may be generated and round-tripped;
-- if any selected G-ID lacks a governed romanization, the candidate's transliteration remains `null` until that mapping is separately approved;
+- if any selected G-ID lacks a governed romanization, the candidate's transliteration remains unresolved until that mapping is separately approved;
 - never invent Latin letters for unmapped G-IDs.
 
-## 6. Candidate quality checks
+B5 later formalized this as **20/40 governed human mappings + 40/40 lossless G-ID fallback**.
 
-Before any candidate proceeds to human review:
+## 6. Candidate quality checks retained where compatible
 
-- shape must be compared against this observed profile;
-- exact and near-form collisions must be checked against the Master Lexicon;
-- confusion risk with WATCH/GATE forms must be recorded;
-- IPA must come from authoritative G-IDs;
-- semantic rationale must be independent of sound symbolism unless such symbolism is explicitly authored as a rule.
+The following remain useful under V2:
 
-## 7. Next research layer
+- exact and near-form collision checks;
+- confusion-risk review with WATCH/GATE forms;
+- IPA from authoritative G-IDs;
+- semantic rationale independent of sound symbolism unless separately governed;
+- TS/G30 atomic treatment;
+- BRIDGE/loan separation.
 
-The lexicon also shows recurring families such as `VAMA-`, `PARA-`, `VALI-` and `SAR-`. Those repetitions may encode morphology or may be historical lexical clustering. They must be analyzed as **morphological hypotheses** before any new word is derived from them.
+## 7. Historical morphology note
+
+The lexicon shows recurring families such as `VAMA-`, `PARA-`, `VALI-` and `SAR-`. Those repetitions remain morphological hypotheses only until separately governed. B6 did not promote any morphology.

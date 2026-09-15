@@ -1,0 +1,180 @@
+{
+  "audit_id": "SWHNK-HNK-LANGUAGE-AUDIT-FINAL-CONSOLIDATION-V1",
+  "status": "SPRINT_A_COMPLETE_FINDINGS_FROZEN_NO_CANON_MUTATION",
+  "date": "2026-09-13",
+  "branch": "audit/hnk-language-sprint-a-20260913",
+  "audit_baseline": "SWHNK-C1-PROGRESS-SNAPSHOT-V93",
+  "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V98",
+  "purpose": "Freeze Sprint A findings, dependency graph, risk register and ordered Sprint B human-decision gates without mutating HNK canon or consuming concurrent curriculum gates.",
+  "completed_blocks": [
+    "A1_SEGMENTAL_PHONOLOGY_40_40",
+    "A2_PHONEMIC_SHAPE_33_33",
+    "A3_DAYI_INITIAL_AUDIT",
+    "A4_LEXICON_MORPHOLOGY",
+    "A5_PHRASE_GRAMMAR_EVIDENCE",
+    "A6_WORD_LEVEL_PHONOLOGY",
+    "A7_CURRICULUM_LANGUAGE_ASSUMPTIONS",
+    "A8_PROPOSAL_DEBT_REVIEW_20_20",
+    "A9_AUTHORED_REGISTRY_RECONCILIATION_SUPERSESSION_MAP",
+    "A10_FINAL_CONSOLIDATION"
+  ],
+  "frozen_invariants": [
+    "SUPPORTED != PRODUCTIVE",
+    "CURRICULUM_VALIDATED != LANGUAGE_CANONICAL != PRODUCTIVE_GRAMMAR",
+    "RECOVERED_SURFACE_OCCURRENCE != AUTHORED_STANDALONE_SEMANTICS",
+    "CURRICULUM_NEED_MAY_OPEN_AUTHORING_PROBLEM_BUT_IS_NOT_HISTORICAL_LANGUAGE_EVIDENCE",
+    "REFERENCE_LANGUAGES_ARE_COMPARATIVE_ONLY",
+    "NUMEROLOGY_MAY_GOVERN_COUNTS_ALLOCATION_BUT_MUST_NOT_SELECT_FORMS_OR_GRAMMAR",
+    "ONE_HUMAN_GATE_AT_A_TIME",
+    "A_CONCURRENT_MAIN_TRANSITION_IS_OBSERVED_STATE_NOT_RETROACTIVE_AUDIT_APPROVAL"
+  ],
+  "frozen_findings": {
+    "segmental_phonology": {
+      "glyph_phoneme_inventory": 40,
+      "safe_romanization_coverage": "20/40",
+      "G40": {"safe_unit":"Y","phoneme":"/y/","class":"VOWEL"},
+      "G16": {"phoneme":"/j/","class":"GLIDE_OR_CONSONANTAL_APPROXIMANT","safe_romanization":"UNRESOLVED"},
+      "boundary": "Do not silently merge G40 /y/ into G16 /j/."
+    },
+    "word_level_phonology": {
+      "strict_old_CV_profile_fit_recomputed": "26/33",
+      "old_orthography_sensitive_value": "30/33",
+      "governed_syllabification": false,
+      "governed_lexical_stress": false,
+      "governed_hiatus_diphthong_policy": false,
+      "governed_glide_formation": false,
+      "governed_allophony": false,
+      "DAYI": {"glyph_ids":["G19","G01","G40","G03"],"segmental":"/d a y i/","shape":"CVVV","whole_word_pronunciation":"UNRESOLVED"},
+      "FROZEN_Y_BEARING_EVIDENCE": ["SARADAYA","TAYOVAN"]
+    },
+    "lexicon_morphology": {
+      "recovered_registry_forms": 33,
+      "strongest_nonproductive_hypotheses": [
+        "-VAN place/location formative",
+        "PARAZAMO~PARAZAMI single-family final-vowel contrast",
+        "final -I action/verbal correlation"
+      ],
+      "weaker_clusters": ["PAR-","VAM-/VAMA-","SAR-"],
+      "VALA": "AUTHORED_CANDIDATE_RATIONALE_WEAKENED_BY_FROZEN_KALOVALA_COUNTEREXAMPLE",
+      "VANI": "WATCH_GLOSS_UNRECOVERED_RESIDENCE_READING_TEST_HYPOTHESIS_ONLY"
+    },
+    "phrase_grammar": {
+      "recovered_phrases": 7,
+      "approximate_glosses": 3,
+      "unrecovered_glosses": 4,
+      "scoped_supported_tokens": ["AN","EN","KU","KE","ZAMI","KALA"],
+      "SPO_compatibility": "LANGUAGE_USE_MICRODOMAIN_ONLY",
+      "general_productive_grammar_rules_approved_by_sprint_a": 0,
+      "ZAMO": "LANGUAGE_OR_LANGUAGE_DOMAIN_HYPOTHESIS_NOT_STANDALONE_MAPPING"
+    },
+    "authored_registry": {
+      "version": "1.7.0-candidate",
+      "candidate_count": 20,
+      "CURRENT": 9,
+      "CURRENT_SCOPED": 8,
+      "REVIEW_REQUIRED": 2,
+      "DEPENDENCY_BLOCKED": 1,
+      "immediate_deletions": 0,
+      "high_priority": {
+        "VALA": "B11_REVIEW_REQUIRED",
+        "HOYU": "B1_B4_PHONOLOGY_REVIEW_REQUIRED",
+        "KUON": "B15_DEPENDENCY_BLOCKED_ON_ON_GATE",
+        "KUVAN": "CURRENT_SCOPED_NOT_PROOF_OF_PRODUCTIVE_VAN"
+      }
+    },
+    "curriculum_language_governance": {
+      "four_axes_recommended": ["SOURCE_PROVENANCE","LANGUAGE_AUTHORITY","CURRICULUM_STATE","PRODUCTIVITY"],
+      "derived_story_activation_review_as_independent_language_evidence": false,
+      "cross_lesson_reuse_requires_scope_label": true
+    }
+  },
+  "dependency_graph": {
+    "B1": {"topic":"G40=/y/ identity vs G16=/j/ distinction","depends_on":[],"blocks":["B2","B3","B4","B5","B6","HOYU_REPAIR","DAYI_PRONUNCIATION"]},
+    "B2": {"topic":"syllable structure and adjacent vowels","depends_on":["B1"],"blocks":["B3","B4","B6"]},
+    "B3": {"topic":"diphthongs/glides/Y-bearing words","depends_on":["B1","B2"],"blocks":["B4","B6","HOYU_REPAIR","DAYI_PRONUNCIATION"]},
+    "B4": {"topic":"lexical stress and whole-word pronunciation","depends_on":["B1","B2","B3"],"blocks":["B6","DAYI_SEMANTICS_GATE_B13_PRONUNCIATION_PRECONDITION"]},
+    "B5": {"topic":"romanization coverage 40/40 strategy","depends_on":["B1"],"blocks":["B6"]},
+    "B6": {"topic":"phonotactic profile V2","depends_on":["B1","B2","B3","B4","B5"],"blocks":["MORPHOLOGY_AUTHORING_POLICY_STABILITY"]},
+    "B7": {"topic":"-VAN","depends_on":["B6"],"blocks":["KUVAN_RATIONALE_WIDENING","B12"]},
+    "B8": {"topic":"PARAZAMO/PARAZAMI","depends_on":["B6"],"blocks":["B9_CONTEXT"]},
+    "B9": {"topic":"final -I","depends_on":["B6","B8"],"blocks":["B12"]},
+    "B10": {"topic":"PAR/VAM/SAR semantic families","depends_on":["B7","B8","B9"],"blocks":[]},
+    "B11": {"topic":"VALA disposition","depends_on":["B6"],"blocks":[]},
+    "B12": {"topic":"VANI semantic strategy","depends_on":["B7","B9"],"blocks":["RESIDENCE_REBUILD_IF_ANY"]},
+    "B13": {"topic":"DAYI semantics and modal/complement syntax","depends_on":["B1","B2","B3","B4"],"blocks":[]},
+    "B14": {"topic":"AN/EN person-system scope","depends_on":[],"blocks":["CROSS_LESSON_PERSON_PRODUCTIVITY"]},
+    "B15": {"topic":"KU/KE/KUVAN/KUON interrogative architecture","depends_on":["B7"],"blocks":["KUON_UNBLOCKING","COMPOSITIONAL_INTERROGATIVE_V2"]},
+    "B16": {"topic":"basic clause order","depends_on":[],"blocks":["GENERAL_CLAUSE_DESIGN"]},
+    "B17": {"topic":"ZAMO","depends_on":[],"blocks":[]},
+    "B18": {"topic":"provenance + lifecycle/supersession policy","depends_on":[],"blocks":["CANONICAL_REGISTRY_METADATA_PATCH"]},
+    "B20": {"topic":"four-axis governance model","depends_on":["B18"],"blocks":["CANONICAL_SCHEMA_PATCH"]},
+    "B21": {"topic":"course-driven authorship threshold","depends_on":["B20"],"blocks":["FUTURE_L03_PLUS_AUTHORING_POLICY"]},
+    "B22": {"topic":"cross-lesson reuse taxonomy","depends_on":["B20"],"blocks":["FUTURE_REUSE"]},
+    "B23": {"topic":"derived-content evidence rule","depends_on":["B20"],"blocks":["STORY_ACTIVATION_REVIEW_EVIDENCE_ACCOUNTING"]},
+    "B19": {"topic":"post-promotion/post-mapping review of L03 activity utterance","depends_on":["B18","B20","B21","B22","B23"],"blocks":["AUDIT_ENDORSEMENT_OF_STR001_AUTHORING_DESIGN"]}
+  },
+  "risk_register": [
+    {"id":"RISK-01","severity":"HIGH","risk":"Treating orthographic Y as /j/ despite G40=/y/ causes phonology drift in DAYI, HOYU and FROZEN Y-bearing words.","owner":"B1-B4"},
+    {"id":"RISK-02","severity":"HIGH","risk":"Old proposal files may be mistaken for current authority and override later registry/audit state.","owner":"B18"},
+    {"id":"RISK-03","severity":"HIGH","risk":"Curriculum pressure may create or broaden grammar merely to fill slots.","owner":"B20-B23"},
+    {"id":"RISK-04","severity":"HIGH","risk":"KUON may back-define ON despite ON remaining GATE and historical KU+ON prohibition.","owner":"B15"},
+    {"id":"RISK-05","severity":"MEDIUM_HIGH","risk":"VALA may continue to be described as recovered activity morphology despite KALOVALA counterevidence.","owner":"B11"},
+    {"id":"RISK-06","severity":"HIGH","risk":"Concurrent main automation may advance L03 beyond language-audit review boundaries.","owner":"B19 plus human-gate discipline"},
+    {"id":"RISK-07","severity":"MEDIUM","risk":"Story/Activation/Review repetition may be miscounted as independent linguistic evidence.","owner":"B23"},
+    {"id":"RISK-08","severity":"HIGH","risk":"V98 STR001 mapping may be mistaken as Sprint A endorsement; Sprint A did not approve productivity, mapping eligibility or exact mapping transitions.","owner":"B19"}
+  ],
+  "ordered_sprint_b_gate_plan": [
+    {"order":1,"gate":"B1","topic":"G40 /y/ and G16 /j/ segmental identity"},
+    {"order":2,"gate":"B2","topic":"syllable structure and adjacent vowels"},
+    {"order":3,"gate":"B3","topic":"diphthongs, glide formation, DAYI/HOYU Y-bearing pronunciation"},
+    {"order":4,"gate":"B4","topic":"lexical stress and whole-word pronunciation"},
+    {"order":5,"gate":"B5","topic":"romanization coverage"},
+    {"order":6,"gate":"B6","topic":"phonotactic profile V2"},
+    {"order":7,"gate":"B7","topic":"-VAN"},
+    {"order":8,"gate":"B8","topic":"PARAZAMO/PARAZAMI"},
+    {"order":9,"gate":"B9","topic":"final -I"},
+    {"order":10,"gate":"B10","topic":"semantic families PAR/VAM/SAR"},
+    {"order":11,"gate":"B11","topic":"VALA disposition"},
+    {"order":12,"gate":"B12","topic":"VANI"},
+    {"order":13,"gate":"B13","topic":"DAYI semantics/syntax"},
+    {"order":14,"gate":"B14","topic":"AN/EN person scope"},
+    {"order":15,"gate":"B15","topic":"interrogative architecture and KUON dependency"},
+    {"order":16,"gate":"B16","topic":"basic clause order"},
+    {"order":17,"gate":"B17","topic":"ZAMO"},
+    {"order":18,"gate":"B18","topic":"provenance and proposal lifecycle/supersession"},
+    {"order":19,"gate":"B20","topic":"four-axis governance schema"},
+    {"order":20,"gate":"B21","topic":"course-driven authorship threshold"},
+    {"order":21,"gate":"B22","topic":"cross-lesson reuse taxonomy"},
+    {"order":22,"gate":"B23","topic":"derived-content evidence rule"},
+    {"order":23,"gate":"B19","topic":"post-promotion/post-mapping L03 activity-utterance review before audit endorsement of STR001 authoring"}
+  ],
+  "main_v98_observed_state": {
+    "candidate":"[ACTIVITY_LEXEME] -> VALI | PARAZAMI",
+    "scoped_productive":true,
+    "productive_scope":"L03_CONTROLLED_ACTIVITY_CONTEXT_ONLY",
+    "curriculum_mapping_eligible":true,
+    "curriculum_mapped":true,
+    "mapped_slot":"STR001",
+    "STR001_authored":false,
+    "STR001_validated":false,
+    "curriculum_slot_assignments":1,
+    "implementation_counts":{"GLOBAL":"703 MISSING / 0 AUTHORED / 305 VALIDATED / 0 FROZEN","L03":"128 MISSING / 0 AUTHORED / 11 VALIDATED / 0 FROZEN"},
+    "current_main_gate":"SWHNK-L03-BINAH-STR001-AUTHORING-DESIGN-HUMAN-BATCH-V1",
+    "sprint_a_endorsement":false,
+    "sprint_a_consumed_current_gate":false
+  },
+  "sprint_a_effects": {
+    "canonical_changes":0,
+    "authored_registry_changes":0,
+    "candidate_deletions":0,
+    "authority_promotions":0,
+    "new_lexemes":0,
+    "new_morpheme_rules":0,
+    "new_phonology_rules":0,
+    "new_grammar_rules":0,
+    "productivity_promotions":0,
+    "curriculum_slot_assignments_by_sprint_a":0
+  },
+  "next_human_gate": "SWHNK-HNK-B1-G40-Y-SEGMENTAL-IDENTITY-HUMAN-GATE-V1",
+  "next_gate_rule": "DECIDE_ONLY_G40_Y_AND_G16_J_SEGMENTAL_IDENTITY; DO_NOT_DECIDE_SYLLABIFICATION_STRESS_DIPHTHONGS_ROMANIZATION_DAYI_SEMANTICS_OR_L03_CURRICULUM_WITH_THE_SAME_APPROVAL"
+}

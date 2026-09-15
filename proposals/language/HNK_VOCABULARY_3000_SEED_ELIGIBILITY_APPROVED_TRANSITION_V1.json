@@ -1,0 +1,18 @@
+{
+  "transition_id": "SWHNK-HNK-VOCABULARY-3000-SEED-ELIGIBILITY-APPROVED-TRANSITION-V1",
+  "status": "APPROVED_39_CREDITED_10_HOLD_4_EXCLUDED_NO_LANGUAGE_AUTHORITY_CHANGE",
+  "date": "2026-09-14",
+  "source_gate": "SWHNK-HNK-VOCABULARY-3000-SEED-ELIGIBILITY-HUMAN-GATE-V1",
+  "credited_core_units": 39,
+  "remaining_to_3000": 2961,
+  "A1_credited": 36,
+  "A1_remaining": 464,
+  "A2_new_band_credited": 3,
+  "hold": 10,
+  "excluded_current_state": 4,
+  "language_authority_promotions": 0,
+  "new_words": 0,
+  "new_meanings": 0,
+  "next_phase": "HNK3000_A1_SEMANTIC_SLOT_BLUEPRINT_V1",
+  "boundary": "This transition governs HNK3000 counting only. It does not change lexical semantics, language authority, morphology, grammar, curriculum or runtime."
+}

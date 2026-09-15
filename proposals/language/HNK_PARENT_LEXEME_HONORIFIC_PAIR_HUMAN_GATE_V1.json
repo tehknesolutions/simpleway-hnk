@@ -1,0 +1,12 @@
+{
+  "gate_id":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-14",
+  "date_approved":"2026-09-15",
+  "approval_source":"CURRENT_USER_EXPLICIT_APPROVADO_SIGA_SCOPED_ONLY_TO_PARENT_LEXEME_GATE",
+  "decision_scope":"APPROVE_ONLY_CORE_FATHER_MOTHER_LEXEME_DIRECTION_AND_SELECTION; NO_REGISTRATION_NO_HNK3000_CREDIT_NO_DELETION_OF_HISTORICAL_PAPA_MAMA_NO_PRODUCTIVE_PARENT_MORPHOLOGY_NO_D03_L03_CHANGE",
+  "approved_decisions":["DEC-HNK-PARENT-001","DEC-HNK-PARENT-002","DEC-HNK-PARENT-003","DEC-HNK-PARENT-004","DEC-HNK-PARENT-005","DEC-HNK-PARENT-006"],
+  "selected_pair":{"father":"DARUNO","father_gid":["G19","G01","G15","G05","G12","G04"],"father_ipa":"/da.ru.no/","mother":"NELARA","mother_gid":["G12","G02","G14","G01","G15","G01"],"mother_ipa":"/ne.la.ra/"},
+  "governance":{"PAPA_MAMA_core_use":"REJECTED","PAPA_MAMA_historical_gate_preserved":true,"PATRO_MATRA_final_hnk_use":"REJECTED_EXTERNAL_RESEMBLANCE","NEKUVO_generic_parent_unchanged":true,"productive_parent_morphology_created":false,"theological_father_title_governed":false,"registered_new_candidates":0,"hnk3000_credit_change":0,"wave04_unchanged":true,"D03_unchanged":true,"L03_unchanged":true},
+  "next_phase":"HNK_PARENT_LEXEME_SELECTED_FORM_REGISTRATION_GATE"
+}

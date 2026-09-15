@@ -1,0 +1,30 @@
+{
+  "transition_id": "SWHNK-HNK-VOCABULARY-3000-ARCHITECTURE-APPROVED-TRANSITION-V1",
+  "status": "APPLIED_ARCHITECTURE_ONLY_NO_SEED_CREDIT_NO_LEXEME_AUTHORING",
+  "date": "2026-09-13",
+  "source_gate": "SWHNK-HNK-VOCABULARY-3000-ARCHITECTURE-HUMAN-GATE-V1",
+  "approved_architecture": {
+    "target_core_lexical_units": 3000,
+    "A1_cumulative": 500,
+    "A2_cumulative": 1000,
+    "B1_cumulative": 1800,
+    "B2_cumulative": 3000,
+    "primary_domains": 30,
+    "units_per_primary_domain": 100,
+    "single_primary_domain_counting": true,
+    "semantic_slot_first": true,
+    "GID_first": true
+  },
+  "boundaries": {
+    "new_hnk_forms_created": 0,
+    "new_semantics_assigned": 0,
+    "seed_progress_credit_assigned": 0,
+    "authority_promotions": 0,
+    "B16_approved": false,
+    "L03_curriculum_changed_by_transition": false,
+    "reference_languages_select_forms": false,
+    "numerology_selects_forms": false
+  },
+  "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V110",
+  "next_phase": "HNK3000_SEED_ELIGIBILITY_AUDIT_V1"
+}

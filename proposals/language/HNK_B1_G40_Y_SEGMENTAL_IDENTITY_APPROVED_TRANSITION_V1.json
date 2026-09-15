@@ -1,0 +1,28 @@
+{
+  "transition_id":"SWHNK-HNK-B1-G40-Y-SEGMENTAL-IDENTITY-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_B1_IDENTITY_AFFIRMATION_ONLY_NO_PHONEME_MUTATION",
+  "date":"2026-09-13",
+  "source_gate":"HNK_B1_G40_Y_SEGMENTAL_IDENTITY_HUMAN_GATE_V1.json",
+  "applied": {
+    "G40":{"safe_unit":"Y","phoneme":"/y/","class":"VOWEL","identity":"AFFIRMED"},
+    "G16":{"phoneme":"/j/","class":"GLIDE_OR_CONSONANTAL_APPROXIMANT","identity":"AFFIRMED_DISTINCT"}
+  },
+  "non_effects": {
+    "@hnk/glyphs_mutated":false,
+    "phoneme_reassignment":false,
+    "syllabification_rule_created":false,
+    "stress_rule_created":false,
+    "diphthong_rule_created":false,
+    "hiatus_rule_created":false,
+    "glide_formation_rule_created":false,
+    "allophony_rule_created":false,
+    "G16_romanization_assigned":false,
+    "DAYI_whole_word_pronunciation_approved":false,
+    "DAYI_semantics_changed":false,
+    "HOYU_semantics_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate":"SWHNK-HNK-B2-SYLLABLE-STRUCTURE-ADJACENT-VOWELS-HUMAN-GATE-V1",
+  "next_gate_requires_separate_explicit_human_approval":true
+}

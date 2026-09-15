@@ -1,0 +1,14 @@
+{
+  "gate_id":"SWHNK-HNK-PARENT-LEXEME-SELECTED-FORM-REGISTRATION-HUMAN-GATE-V1",
+  "status":"APPROVED_WITH_CANONICAL_INTEGRATION_PENDING",
+  "date_prepared":"2026-09-15",
+  "date_approved":"2026-09-15",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_PARENT_LEXEME_REGISTRATION_GATE",
+  "approved_decisions":["DEC-HNK-PARENT-REG-001","DEC-HNK-PARENT-REG-002","DEC-HNK-PARENT-REG-003","DEC-HNK-PARENT-REG-004","DEC-HNK-PARENT-REG-005","DEC-HNK-PARENT-REG-006"],
+  "selected_forms":{"father":"DARUNO","mother":"NELARA"},
+  "canonical_prewrite_observation":{"authored_registry_version":"1.10.0-candidate","authored_registry_count":140,"authored_registry_blob_sha":"f685640728d2e5bb7960edd824ec5ccd2ebc2133","material_drift":false,"next_auth_ids_if_integrated":"AUTH-141..AUTH-142"},
+  "registration":{"dedicated_registry":"tehknesolutions/codex-hnk/packages/hnk-linguas/src/parent-lexemes.mjs","commit":"98d18e3a47ebcfec04ce5f80f22639020bbed671","registered_candidates":2,"authority":"CANDIDATE","certainty":"AUTHORED_PRIMITIVE","productive_morphology":false,"curriculum_binding":false},
+  "canonical_integration":{"authored_mjs_updated":false,"reason":"Connector supports whole-file replacement only; do not risk destructive rewrite of the canonical 140-entry registry. Dedicated governed registry was created atomically and authored.mjs integration remains an explicit technical merge step.","required_next_step":"MERGE_PARENT_REGISTRY_INTO_AUTHORED_MJS_AS_AUTH_141_AUTH_142_AND_UPDATE_VALIDATOR_ATOMICALLY"},
+  "governance":{"PAPA_MAMA_historical_evidence_preserved":true,"PAPA_MAMA_core_use_rejected":true,"NEKUVO_unchanged":true,"hnk3000_credit_change":0,"frozen_promotions":0,"wave04_unchanged":true,"D03_unchanged":true,"L03_unchanged":true},
+  "next_phase":"HNK_PARENT_LEXEME_CANONICAL_AUTHORED_MJS_INTEGRATION"
+}

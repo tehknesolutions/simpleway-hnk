@@ -1,0 +1,62 @@
+{
+  "review_id":"SWHNK-HNK-B2-SYLLABLE-STRUCTURE-ADJACENT-VOWELS-REVIEW-V1",
+  "status":"READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date":"2026-09-13",
+  "depends_on":"B1_APPROVED_G40_/y/_DISTINCT_FROM_G16_/j/",
+  "scope":"Decide only the first governed syllable-structure policy and treatment of adjacent vowel phonemes. Do not decide diphthong inventory, glide formation, lexical stress, whole-word pronunciation, romanization redesign, DAYI semantics or curriculum.",
+  "evidence": {
+    "strict_old_CV_profile_fit_recomputed":"26/33",
+    "old_orthography_sensitive_value":"30/33",
+    "FROZEN_Y_bearing_forms":[
+      {"form":"SARADAYA","segmental_feature":"contains adjacent vowel sequence including G40 /y/"},
+      {"form":"TAYOVAN","segmental_feature":"contains adjacent vowel sequence including G40 /y/"}
+    ],
+    "candidate_Y_bearing_forms":["DAYI","VAMATAYA"],
+    "other_non_strict_CV_forms":["KALIFORNIA","ON","BANKA"],
+    "governed_syllabification_recovered":false,
+    "governed_hiatus_diphthong_policy_recovered":false
+  },
+  "analysis": [
+    "The language cannot adopt a blanket rule that adjacent vowels are forbidden, because FROZEN lexical material contains them under the affirmed G40=/y/ analysis.",
+    "The corpus supports allowing adjacent vowel phonemes, but does not yet determine whether each sequence is hiatus, diphthong or subject to glide formation.",
+    "A conservative first policy can govern permissible phoneme sequencing without prematurely fixing syllable boundaries or pronunciation."
+  ],
+  "options": [
+    {
+      "id":"B2-OPTION-A",
+      "decision":"ALLOW_ADJACENT_VOWEL_SEQUENCES_DEFER_SYLLABIFICATION",
+      "recommended":true,
+      "description":"Affirm that HNK lexical forms may contain adjacent vowel phonemes, including VVV sequences. Treat exact syllable boundaries, hiatus/diphthong status and glide formation as unresolved until B3/B4. Retire the blanket authoring preference 'avoid hiatus' as a canonical-language assumption, while preserving it as historical prior.",
+      "effect":"Preserves FROZEN Y-bearing forms without inventing word-level pronunciation; permits B3 to test diphthong/glide behavior."
+    },
+    {
+      "id":"B2-OPTION-B",
+      "decision":"DEFINE_IMMEDIATE_HIATUS_DEFAULT",
+      "recommended":false,
+      "description":"Treat every adjacent vowel phoneme as a separate syllabic nucleus unless a later exception is explicitly governed.",
+      "effect":"Creates a stronger syllabification rule now, including provisional multi-syllabic readings for DAYI and other Y-bearing forms."
+    },
+    {
+      "id":"B2-OPTION-C",
+      "decision":"REOPEN_SYLLABLE_MODEL_BEFORE_ANY_POLICY",
+      "recommended":false,
+      "description":"Do not govern adjacent vowels yet; open a broader syllable-system design investigation before allowing B3.",
+      "effect":"Blocks B3-B6 and leaves the old phonotactic conflict unresolved."
+    }
+  ],
+  "recommended_decision":"B2-OPTION-A",
+  "boundaries": {
+    "diphthong_inventory_created":false,
+    "glide_formation_rule_created":false,
+    "lexical_stress_created":false,
+    "DAYI_syllabification_fixed":false,
+    "DAYI_whole_word_pronunciation_fixed":false,
+    "phoneme_values_changed":false,
+    "semantics_changed":false,
+    "grammar_changed":false,
+    "curriculum_changed":false
+  },
+  "next_gate_if_option_A":"B3_DIPHTHONG_GLIDE_FORMATION_Y_BEARING_WORDS",
+  "next_gate_if_option_B":"B3_DIPHTHONG_GLIDE_FORMATION_Y_BEARING_WORDS_WITH_HIATUS_DEFAULT_AS_INPUT",
+  "next_gate_if_option_C":"PREPARE_BROADER_SYLLABLE_SYSTEM_EVIDENCE_DESIGN_GATE"
+}

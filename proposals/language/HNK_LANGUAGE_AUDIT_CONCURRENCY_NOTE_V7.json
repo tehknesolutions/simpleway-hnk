@@ -1,0 +1,21 @@
+{
+  "note_id":"SWHNK-HNK-LANGUAGE-AUDIT-CONCURRENCY-NOTE-V7",
+  "date":"2026-09-13",
+  "audit_branch":"audit/hnk-language-sprint-a-20260913",
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V100",
+  "main_state": {
+    "STR001_mapped":true,
+    "STR001_authored":true,
+    "STR001_validated":false,
+    "global_counts":"702 MISSING / 1 AUTHORED / 305 VALIDATED / 0 FROZEN",
+    "L03_counts":"127 MISSING / 1 AUTHORED / 11 VALIDATED / 0 FROZEN",
+    "current_main_gate":"SWHNK-L03-BINAH-STR001-VALIDATION-HUMAN-BATCH-V1"
+  },
+  "attribution": {
+    "B4_caused_main_transition":false,
+    "B5_preparation_caused_main_transition":false,
+    "audit_endorses_STR001_validation":false,
+    "audit_consumed_main_gate":false
+  },
+  "rule":"Continue Sprint B language decisions independently. Do not treat main curriculum automation as retroactive language-audit approval."
+}

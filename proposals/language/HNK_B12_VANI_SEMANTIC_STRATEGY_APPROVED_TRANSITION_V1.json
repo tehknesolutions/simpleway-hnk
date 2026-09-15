@@ -1,0 +1,25 @@
+{
+  "transition_id":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_RECOVERY_FIRST_VANI_REMAINS_GLOSSLESS_WATCH",
+  "date":"2026-09-13",
+  "source_gate":"SWHNK-HNK-B12-VANI-SEMANTIC-STRATEGY-HUMAN-GATE-V1",
+  "applied":{
+    "VANI_authority":"WATCH_UNCHANGED",
+    "VANI_semantics":"UNRESOLVED",
+    "VANI_live_reside_assigned":false,
+    "VAN_plus_I_derivation_approved":false,
+    "future_semantic_authorship_requires_separate_gate":true,
+    "future_authorship_historicalRecoveryClaim":false
+  },
+  "explicit_non_effects":{
+    "lexical_semantic_changes":0,
+    "authority_changes":0,
+    "morphology_productivity_changes":0,
+    "grammar_changes":0,
+    "curriculum_changes":0,
+    "codex_registry_mutation":false,
+    "B13_approved":false
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V105",
+  "next_gate":"SWHNK-HNK-B13-DAYI-SEMANTICS-SYNTAX-HUMAN-GATE-V1"
+}

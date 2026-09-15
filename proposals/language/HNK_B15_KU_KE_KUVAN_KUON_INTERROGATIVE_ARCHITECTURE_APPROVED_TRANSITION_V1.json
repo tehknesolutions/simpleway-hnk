@@ -1,0 +1,20 @@
+{
+  "transition_id":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-APPROVED-TRANSITION-V1",
+  "status":"APPLIED_SCOPED_INTERROGATIVE_ARCHITECTURE_NO_GENERAL_WH_SYSTEM",
+  "date":"2026-09-13",
+  "approved_gate":"SWHNK-HNK-B15-KU-KE-KUVAN-KUON-INTERROGATIVE-ARCHITECTURE-HUMAN-GATE-V1",
+  "effects":{
+    "KE":"SCOPED_CLAUSE_FINAL_INTERROGATIVE_OPERATOR",
+    "KU":"SCOPED_CONTENT_SELECTOR_NOT_FIXED_WH",
+    "KUVAN":"CANDIDATE_CLOSED_LOCATIVE_SPECIALIZATION_RETAINED",
+    "KUON":"DEPENDENCY_BLOCKED_FOR_ACTIVE_USE_RETAINED_FOR_PROVENANCE",
+    "ON":"GATE_UNCHANGED",
+    "productive_KU_domain_compounding":false,
+    "question_to_declaration_by_KE_deletion":false,
+    "general_clause_order_changed":false,
+    "authority_promotions":0,
+    "curriculum_changes":0
+  },
+  "latest_main_observed":"SWHNK-C1-PROGRESS-SNAPSHOT-V107",
+  "next_phase":"B16_BASIC_CLAUSE_ORDER_HUMAN_GATE"
+}

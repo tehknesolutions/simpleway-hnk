@@ -1,0 +1,52 @@
+{
+  "gate_id": "SWHNK-HNK-VOCABULARY-3000-SEED-ELIGIBILITY-HUMAN-GATE-V1",
+  "status": "APPROVED_ALL_DECISIONS",
+  "date_prepared": "2026-09-13",
+  "date_approved": "2026-09-14",
+  "approval_source": "CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_HNK3000_SEED_ELIGIBILITY_GATE",
+  "source_audit": "HNK_VOCABULARY_3000_SEED_ELIGIBILITY_AUDIT_V1.json",
+  "decision_scope": "APPROVE_OR_REVISE_ONLY_THE_HNK3000_COUNT_ELIGIBILITY_PRIMARY_DOMAIN_AND_LEVEL_PLACEMENT_OF_THE_EXISTING_53_SEEDS; DO_NOT_CHANGE_LEXICAL_MEANINGS_PROMOTE_LANGUAGE_AUTHORITY_GENERATE_NEW_WORDS_APPROVE_B16_OR_ALTER_L03_CURRICULUM_RUNTIME_WITH_THIS_APPROVAL",
+  "approved_decision": {
+    "id": "DEC-HNK3000-SEED-001",
+    "state": "APPROVED",
+    "decision": "ADOPT_39_ELIGIBLE_10_HOLD_4_EXCLUDED_SEED_PARTITION",
+    "rule": "Assign HNK3000 progress credit only to the 39 seeds classified COUNT_ELIGIBLE, with exactly one primary domain and one level per counted unit. Preserve 10 seeds on HOLD and exclude 4 provenance/reference/diagnostic forms from the core count in their current state. Counting does not change language authority."
+  },
+  "governance_decisions": [
+    {"id":"DEC-HNK3000-SEED-002","state":"APPROVED","decision":"Set initial HNK3000 credited core count to 39/3000, distributed as A1=36 and A2=3; B1=0 and B2=0 from current seeds."},
+    {"id":"DEC-HNK3000-SEED-003","state":"APPROVED","decision":"Approve the primary-domain placements for the 39 eligible units: D01=5, D04=1, D07=1, D09=3, D10=1, D11=2, D12=1, D13=3, D14=2, D15=1, D21=10, D22=1, D23=1, D24=3, D25=1, D30=3."},
+    {"id":"DEC-HNK3000-SEED-004","state":"APPROVED","decision":"Keep TA, PAPA, MAMA, VAMATAYA, VAME, ON, BANKA, VANUVALI, VANI and KUON at HOLD with zero HNK3000 credit until their respective semantic/authority/dependency issues are separately resolved."},
+    {"id":"DEC-HNK3000-SEED-005","state":"APPROVED","decision":"Exclude KALIFORNIA, VANUVALAKALU, SAROSAL and HENUVOKODAN from HNK3000 core count in their current BRIDGE/diagnostic/REFERENCE roles while retaining all four artifacts for provenance and system use."},
+    {"id":"DEC-HNK3000-SEED-006","state":"APPROVED","decision":"No seed-eligibility decision changes a lexeme meaning, recovered-vs-authored provenance, CANDIDATE/WATCH/FROZEN/GATE/BRIDGE/REFERENCE authority, morphology productivity, grammar, curriculum binding or runtime state."}
+  ],
+  "credited_forms": [
+    "VAMAKALA","SARADAYA","VALIVAN","PARAZAMO","VAMUSARO","SARASALA","VAMAVALA","VAMAZAMU","TAYOVAN","KALOVALA","PAROVAN","PARAZAMI","VALI","SAROSARI","PARI","DAYI","SALI","SARU","PA","PITSA","KUVAN","VALA","NE","BIZO","DUVE","HOYU","KETI","LUSO","MUPI","NURA","PEVU","TOMI","ZOKA","KALA","AN","EN","KU","KE","ZAMI"
+  ],
+  "hold_forms": ["TA","PAPA","MAMA","VAMATAYA","VAME","ON","BANKA","VANUVALI","VANI","KUON"],
+  "excluded_from_core": ["KALIFORNIA","VANUVALAKALU","SAROSAL","HENUVOKODAN"],
+  "effects": {
+    "HNK3000_credited_core_units": 39,
+    "HNK3000_remaining_to_3000": 2961,
+    "A1_credited": 36,
+    "A1_remaining_to_500": 464,
+    "A2_new_band_credited": 3,
+    "A2_new_band_remaining_to_500": 497,
+    "B1_new_band_credited": 0,
+    "B2_new_band_credited": 0,
+    "hold": 10,
+    "excluded_current_state": 4,
+    "language_authority_promotions": 0,
+    "new_words": 0,
+    "new_meanings": 0
+  },
+  "concurrency_observation": {
+    "latest_main_observed": "SWHNK-C1-PROGRESS-SNAPSHOT-V111",
+    "STR002_mapped": true,
+    "STR002_authored": true,
+    "STR002_validated": false,
+    "STR002_runtime_active": false,
+    "attributed_to_HNK3000_seed_audit": false
+  },
+  "next_phase": "HNK3000_A1_SEMANTIC_SLOT_BLUEPRINT_V1",
+  "same_approval_must_not_create_new_words_approve_B16_resolve_HOLD_change_authority_or_alter_L03": true
+}

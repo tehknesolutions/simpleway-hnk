@@ -1,0 +1,37 @@
+{
+  "gate_id":"SWHNK-HNK-B1-G40-Y-SEGMENTAL-IDENTITY-HUMAN-GATE-V1",
+  "status":"APPROVED_ALL_DECISIONS",
+  "date_prepared":"2026-09-13",
+  "date_approved":"2026-09-13",
+  "approval_source":"CURRENT_USER_EXPLICIT_SIGA_SCOPED_ONLY_TO_B1_GATE",
+  "source_review":"HNK_B1_G40_Y_SEGMENTAL_IDENTITY_REVIEW_V1.json",
+  "decision_scope":"APPROVE_OR_REVISE_ONLY_G40_Y_AND_G16_J_SEGMENTAL_IDENTITY; DO_NOT_DECIDE_SYLLABIFICATION_STRESS_DIPHTHONGS_ALLOPHONY_ROMANIZATION_DAYI_SEMANTICS_HOYU_SEMANTICS_OR_L03_CURRICULUM_WITH_THIS_APPROVAL",
+  "approved_decision": {
+    "id":"DEC-B1-001",
+    "state":"APPROVED",
+    "decision":"AFFIRM_CURRENT_SEGMENTAL_IDENTITY",
+    "G40":{"safe_unit":"Y","phoneme":"/y/","class":"VOWEL","action":"KEEP"},
+    "G16":{"phoneme":"/j/","class":"GLIDE_OR_CONSONANTAL_APPROXIMANT","action":"KEEP_DISTINCT"},
+    "rationale":"Current @hnk/glyphs authority distinguishes the two segments; FROZEN Y-bearing forms and DAYI depend on G40 identity; stale /j/ treatment in older HOYU metadata must be repaired downstream rather than used to rewrite G40 silently."
+  },
+  "governance_decisions": [
+    {"id":"DEC-B1-002","state":"APPROVED","decision":"B1 approval does not define syllable boundaries, diphthongs, hiatus, glide formation, lexical stress or allophony."},
+    {"id":"DEC-B1-003","state":"APPROVED","decision":"B1 approval does not change safe romanization coverage; G16 romanization remains unresolved for B5."},
+    {"id":"DEC-B1-004","state":"APPROVED","decision":"B1 approval does not approve a canonical whole-word pronunciation for DAYI, HOYU, SARADAYA, TAYOVAN or VAMATAYA."},
+    {"id":"DEC-B1-005","state":"APPROVED","decision":"B1 approval does not change DAYI semantics, HOYU numeral semantics, morphology, grammar, productivity or curriculum slots."},
+    {"id":"DEC-B1-006","state":"APPROVED","decision":"No G40 reassignment is needed under B1; any future reassignment would require a separate explicit evidence/design gate."}
+  ],
+  "effects": {
+    "G40_segmental_identity":"AFFIRMED_/y/_VOWEL",
+    "G16_segmental_identity":"AFFIRMED_DISTINCT_/j/",
+    "canonical_phoneme_mutations":0,
+    "new_word_level_phonology_rules":0,
+    "new_grammar_rules":0,
+    "authority_promotions":0,
+    "curriculum_slot_changes":0,
+    "DAYI_whole_word_pronunciation":"UNRESOLVED",
+    "G16_safe_romanization":"UNRESOLVED"
+  },
+  "next_phase":"B2_SYLLABLE_STRUCTURE_AND_ADJACENT_VOWELS_HUMAN_GATE",
+  "same_approval_must_not_approve_B2":true
+}
