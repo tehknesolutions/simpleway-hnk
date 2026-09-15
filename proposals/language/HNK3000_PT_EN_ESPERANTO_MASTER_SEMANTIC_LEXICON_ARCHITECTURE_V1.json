@@ -1,0 +1,27 @@
+{
+  "architecture_id":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-V1",
+  "status":"PREPARED_AWAITING_HUMAN_GATE",
+  "date_prepared":"2026-09-14",
+  "purpose":"Define a 3000-slot semantic master in Portuguese, English and Esperanto before Wave05+ HNK form generation.",
+  "target_semantic_slots":3000,
+  "levels":{"A1":{"cumulative":500,"increment":500},"A2":{"cumulative":1000,"increment":500},"B1":{"cumulative":1800,"increment":800},"B2":{"cumulative":3000,"increment":1200}},
+  "domains":["D01 Identidade e dados pessoais","D02 Pessoas, família e relações","D03 Corpo e saúde","D04 Ações cotidianas","D05 Movimento, posição e deslocamento","D06 Casa, ambientes e objetos","D07 Alimentação e bebidas","D08 Roupas e itens pessoais","D09 Tempo, calendário e frequência","D10 Espaço, localização e direções","D11 Cidade e serviços","D12 Transporte e viagem","D13 Educação e aprendizagem","D14 Trabalho e profissões","D15 Comunicação e linguagem","D16 Comércio, dinheiro e economia","D17 Natureza e ambiente","D18 Animais, plantas e vida","D19 Clima, território e geografia","D20 Cores, formas e propriedades","D21 Quantidade, medida e numeracia","D22 Sentidos e percepção","D23 Emoções e estados","D24 Lazer, arte e esporte","D25 Cognição, memória e opinião","D26 Sociedade, comunidade e cultura","D27 Tecnologia e mídia","D28 Ciência, ferramentas e materiais","D29 Ética, espiritualidade e filosofia","D30 Lógica, relações abstratas e conectores"],
+  "domain_level_allocation":{"D01_D15":{"A1":20,"A2":20,"B1":25,"B2":35},"D16_D24":{"A1":15,"A2":15,"B1":30,"B2":40},"D25_D29":{"A1":11,"A2":11,"B1":26,"B2":52},"D30":{"A1":10,"A2":10,"B1":25,"B2":55}},
+  "record_schema":["slot_id","domain_id","level","concept_definition_pt","pt_reference","en_reference","eo_reference","part_of_speech","semantic_notes","eo_root_or_base","eo_morphology","eo_lexicalization_type","eo_verification_status","en_ambiguity_notes","cross_language_one_to_one_status","existing_hnk_form","hnk_authority","hnk_registration_status","euphony_audit_status","err_status"],
+  "semantic_rules":[
+    "One slot represents one governed concept, not one orthographic word in every language.",
+    "English and Esperanto may use multiword expressions when the concept is not naturally represented by one lexical item.",
+    "Do not split one concept merely because English has multiple near-synonyms.",
+    "Do not merge distinct concepts merely because Esperanto can derive them transparently from one root.",
+    "Esperanto morphology is descriptive comparison only and never licenses HNK morphology.",
+    "Reference-language resemblance never selects HNK form, meaning, etymology or authority.",
+    "Existing recovered/authored/selected HNK forms are mapped onto compatible semantic slots only after sense review; no forced mapping.",
+    "Uncertain or polysemous mappings remain explicitly unresolved instead of being silently normalized."
+  ],
+  "esperanto_policy":{"role":"SEMANTIC_AND_MORPHOLOGICAL_REFERENCE","fields_required":["eo_reference","eo_root_or_base","eo_morphology","eo_lexicalization_type","eo_verification_status"],"allowed_lexicalization_types":["ROOT_LEMMA","TRANSPARENT_DERIVATION","COMPOUND","MULTIWORD_EXPRESSION","UNRESOLVED"],"authority_boundary":"ESPERANTO_NEVER_SELECTS_HNK_FORM_OR_MEANING"},
+  "english_policy":{"role":"INTERNATIONAL_SEMANTIC_PIVOT","authority_boundary":"ENGLISH_NEVER_SELECTS_HNK_FORM_OR_MEANING"},
+  "hnk_policy":{"wave05_plus_generation":"PAUSED_UNTIL_MASTER_AND_EUPHONY_ERR_CONTRACTS_ATTACHED","wave04_selected_forms":"PRESERVED_INDEPENDENT_REGISTRATION_GATE","new_hnk_forms_in_this_architecture":0},
+  "existing_state":{"HNK3000_core_credited":159,"A1_credited":156,"wave04_selected_pending_registration":40,"authored_registry_count":140},
+  "recommended_build_batches":{"batch_size":100,"batch_count":30,"ordering":"DOMAIN_ORDER_THEN_LEVEL_ALLOCATION_WITH_GLOBAL_SLOT_INDEX_0001_TO_3000"},
+  "next_gate":"SWHNK-HNK3000-PT-EN-ESPERANTO-MASTER-SEMANTIC-LEXICON-ARCHITECTURE-HUMAN-GATE-V1"
+}
