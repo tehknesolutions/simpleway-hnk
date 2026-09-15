@@ -1,31 +1,12 @@
 {
   "gate_id":"SWHNK-HNK-PARENT-LEXEME-HONORIFIC-PAIR-HUMAN-GATE-V1",
-  "status":"AWAITING_EXPLICIT_HUMAN_APPROVAL",
+  "status":"APPROVED_ALL_DECISIONS",
   "date_prepared":"2026-09-14",
-  "source_proposal":"HNK_PARENT_LEXEME_HONORIFIC_PAIR_PROPOSAL_V1.json",
-  "decision_scope":"APPROVE_OR_REVISE_ONLY_CORE_FATHER_MOTHER_LEXEME_DIRECTION_AND_SELECTION; DO_NOT_REGISTER_NEW_FORMS ASSIGN_HNK3000_CREDIT DELETE_RECOVERED_PAPA_MAMA CREATE_PRODUCTIVE_PARENT_MORPHOLOGY OR ALTER_D03_L03_WITH_THIS_APPROVAL",
-  "proposed_decisions":[
-    {"id":"DEC-HNK-PARENT-001","state":"PENDING","proposal":"Reject PAPA and MAMA as core HNK father/mother lexemes while retaining their recovered GATE evidence for historical traceability."},
-    {"id":"DEC-HNK-PARENT-002","state":"PENDING","proposal":"Reject exact PATRO and MATRA as final HNK forms because the external-resemblance risk is too high for HNK V3 lexical independence."},
-    {"id":"DEC-HNK-PARENT-003","state":"PENDING","proposal":"Select DARUNO as the authored primitive candidate for human father / pai."},
-    {"id":"DEC-HNK-PARENT-004","state":"PENDING","proposal":"Select NELARA as the authored primitive candidate for human mother / mãe."},
-    {"id":"DEC-HNK-PARENT-005","state":"PENDING","proposal":"Keep NEKUVO as generic parent/responsible-parent concept; DARUNO and NELARA do not establish a productive derivational paradigm from NEKUVO or from each other."},
-    {"id":"DEC-HNK-PARENT-006","state":"PENDING","proposal":"Treat DARUNO/NELARA as human-parent vocabulary only; theological titles such as God the Father require separate explicit governance."}
-  ],
-  "candidate_pair":{
-    "father":"DARUNO",
-    "father_gid":["G19","G01","G15","G05","G12","G04"],
-    "father_ipa":"/da.ru.no/",
-    "mother":"NELARA",
-    "mother_gid":["G12","G02","G14","G01","G15","G01"],
-    "mother_ipa":"/ne.la.ra/"
-  },
-  "external_resemblance_summary":{
-    "PATRO":"RED_EXACT_ESPERANTO_FATHER",
-    "MATRA":"ORANGE_RED_SANSKRIT_ADJACENT_MOTHER_AND_MEASURE_AMBIGUITY",
-    "DARUNO":"GREEN_YELLOW_PRELIMINARY",
-    "NELARA":"YELLOW_PRELIMINARY_RARE_UNRELATED_EXTERNAL_USES"
-  },
-  "effects_if_approved":{"selected_new_candidates":2,"registered_new_candidates":0,"hnk3000_credit_change":0,"PAPA_MAMA_core_status":"REJECTED_FOR_CORE_USE_BUT_HISTORICAL_GATE_PRESERVED","NEKUVO_changed":false,"next_phase":"HNK_PARENT_LEXEME_SELECTED_FORM_REGISTRATION_GATE"},
-  "approval_rule":"A future SIGA in this parent-lexeme thread may approve only DEC-HNK-PARENT-001 through DEC-HNK-PARENT-006 if this gate remains materially unchanged. The same SIGA must not register DARUNO/NELARA, assign HNK3000 credit, delete PAPA/MAMA historical evidence, create productive morphology, approve Wave04, approve B16 or alter L03/D03."
+  "date_approved":"2026-09-15",
+  "approval_source":"CURRENT_USER_EXPLICIT_APPROVADO_SIGA_SCOPED_ONLY_TO_PARENT_LEXEME_GATE",
+  "decision_scope":"APPROVE_ONLY_CORE_FATHER_MOTHER_LEXEME_DIRECTION_AND_SELECTION; NO_REGISTRATION_NO_HNK3000_CREDIT_NO_DELETION_OF_HISTORICAL_PAPA_MAMA_NO_PRODUCTIVE_PARENT_MORPHOLOGY_NO_D03_L03_CHANGE",
+  "approved_decisions":["DEC-HNK-PARENT-001","DEC-HNK-PARENT-002","DEC-HNK-PARENT-003","DEC-HNK-PARENT-004","DEC-HNK-PARENT-005","DEC-HNK-PARENT-006"],
+  "selected_pair":{"father":"DARUNO","father_gid":["G19","G01","G15","G05","G12","G04"],"father_ipa":"/da.ru.no/","mother":"NELARA","mother_gid":["G12","G02","G14","G01","G15","G01"],"mother_ipa":"/ne.la.ra/"},
+  "governance":{"PAPA_MAMA_core_use":"REJECTED","PAPA_MAMA_historical_gate_preserved":true,"PATRO_MATRA_final_hnk_use":"REJECTED_EXTERNAL_RESEMBLANCE","NEKUVO_generic_parent_unchanged":true,"productive_parent_morphology_created":false,"theological_father_title_governed":false,"registered_new_candidates":0,"hnk3000_credit_change":0,"wave04_unchanged":true,"D03_unchanged":true,"L03_unchanged":true},
+  "next_phase":"HNK_PARENT_LEXEME_SELECTED_FORM_REGISTRATION_GATE"
 }
