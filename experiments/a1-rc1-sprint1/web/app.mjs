@@ -1,4 +1,4 @@
-import { WORLD_1, WORLD_2, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
+import { WORLD_1, WORLD_2, WORLD_3, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
 import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
 import { validateDialogue, validateAgainstIntents } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
@@ -18,7 +18,7 @@ function loadState(){
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
 function level(){return levelsById.get(state.currentLevelId)??WORLD_1.levels[0];}
 function currentWorld(l=level()){return worldByLevelId.get(l.id)??WORLD_1;}
-function worldNumber(w){return w.id===WORLD_1.id?1:2;}
+function worldNumber(w){return Math.max(1,WORLDS.findIndex(x=>x.id===w.id)+1);}
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
@@ -30,7 +30,7 @@ function render(){
     <div class="shell">
       <header class="topbar">
         <div><div class="brand">HNK A1 · ${escapeHtml(w.title.toUpperCase())}</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
-        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/16</span></div>
+        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/24</span></div>
       </header>
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
@@ -44,7 +44,7 @@ function render(){
         <div class="hints" id="hints"></div>
         <div class="footer-actions">
           <button class="secondary" id="hintBtn">💡 Dica</button>
-          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Ver checkpoint':'Próxima fase →'}</button>`:''}
+          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Ver checkpoint':'Próxima fase →'}</button>`:''}
         </div>
         <div class="governance">Runtime: <strong>${escapeHtml(RUNTIME_STATUS)}</strong>. Conteúdo do A1 Lab não promove automaticamente léxico ou gramática a CANON.</div>
       </section>
@@ -59,6 +59,11 @@ function renderInteraction(l){
   const root=document.querySelector('#interaction');
   if(state.completedLevels.includes(l.id)){
     root.innerHTML='<div class="feedback ok">✅ Fase concluída. Skill registrada no estado local.</div>';
+    return;
+  }
+  if(l.mode==='contrast'){
+    root.innerHTML='<div class="choices">'+l.choices.map(c=>`<button class="choice" data-contrast="${c.id}">${escapeHtml(c.label)}</button>`).join('')+'</div>';
+    root.querySelectorAll('[data-contrast]').forEach(btn=>btn.addEventListener('click',()=>answerContrast(l,btn.dataset.contrast)));
     return;
   }
   if(l.mode==='choice'){
@@ -103,6 +108,17 @@ function renderInteraction(l){
     root.querySelector('#undoToken')?.addEventListener('click',()=>{composer.pop();render();});
     root.querySelector('#commitUtterance')?.addEventListener('click',()=>{if(composer.length){dialogue.push(composer.join(' '));composer=[];render();}});
     root.querySelector('#submitDialogue')?.addEventListener('click',()=>submitDialogue(l));
+  }
+}
+
+function answerContrast(l,id){
+  const selected=l.choices.find(c=>c.id===id);
+  const correct=Boolean(selected?.correct);
+  state=recordAttempt(state,l.id,correct);
+  if(correct){
+    complete(l);
+  }else{
+    fail(selected?.feedback||'💥 Armadilha gramatical ativada.',1);
   }
 }
 
@@ -192,8 +208,8 @@ function renderHints(l){
 }
 
 function goNext(l){
-  if(l.order===16){
-    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 2 CLEARED</strong><br>Construction Forge completo: Levels 09–16 concluídos.</div>`;
+  if(l.order===24){
+    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 3 CLEARED</strong><br>Grammar Dungeon completo: você aprendeu tanto construções válidas quanto fronteiras explícitas do RC1.</div>`;
     return;
   }
   const idx=campaignLevels.findIndex(x=>x.id===l.id);
