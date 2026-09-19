@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { lexemes, getConstructionByPattern } from '../experiments/a1-rc1-sprint1/core/registry.mjs';
 import { validateUtterance, evaluateMission, tokenize } from '../experiments/a1-rc1-sprint1/core/validator.mjs';
 import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../experiments/a1-rc1-sprint1/core/levels.mjs';
-import { createPlayerState, recordCodexUse, hasUsedCodex, getAssistanceCount, recordHint } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
+import { createPlayerState, recordAttempt, recordCodexUse, hasUsedCodex, getAssistanceCount, recordHint, penalizeHeart } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
 
 assert.equal(WORLDS.length,4);
 assert.deepEqual([WORLD_1.levels.length,WORLD_2.levels.length,WORLD_3.levels.length,WORLD_4.levels.length],[8,8,8,7]);
@@ -18,10 +18,20 @@ for (const level of WORLD_4.levels) {
   assert.equal(worldByLevelId.get(level.id),WORLD_4);
 }
 
-for (const form of ['DARUVI','KODERA','KURAVI','LURAVO','REVATI','KADURI']) {
+const openWorldGIds={
+  DARUVI:['G19','G01','G15','G05','G31','G03'],
+  KODERA:['G23','G04','G19','G02','G15','G01'],
+  KURAVI:['G23','G05','G15','G01','G31','G03'],
+  LURAVO:['G14','G05','G15','G01','G31','G04'],
+  REVATI:['G15','G02','G31','G01','G22','G03'],
+  KADURI:['G23','G01','G19','G05','G15','G03']
+};
+for (const [form,gIds] of Object.entries(openWorldGIds)) {
   assert.ok(lexemes[form], `missing Open World lexeme ${form}`);
   assert.deepEqual(lexemes[form].authority,['HNK_AUTHORED_CANDIDATE','LOCKED_FOR_TESTING']);
+  assert.deepEqual(lexemes[form].gIds,gIds);
 }
+assert.deepEqual(lexemes.KUVAN.gIds,['G23','G05','G31','G01','G12']);
 assert.deepEqual(lexemes.KUVAN.authority,['RECOVERED','VALIDATED']);
 
 const exactValid=[
@@ -93,6 +103,13 @@ assert.equal(hasUsedCodex(state,'L25_LOST'),true);
 assert.equal(getAssistanceCount(state,'L25_LOST'),1);
 state=recordHint(state,'L25_LOST');
 assert.equal(getAssistanceCount(state,'L25_LOST'),2);
+
+let attempts=createPlayerState();
+attempts=recordAttempt(attempts,'L25_LOST',false);
+assert.deepEqual(attempts.attempts.L25_LOST,{count:1,correct:0});
+assert.equal(attempts.hearts,5);
+attempts=penalizeHeart(attempts,.5);
+assert.equal(attempts.hearts,4.5);
 
 assert.equal(campaignLevels[23].id,'L24_QUESTION_TRAP');
 assert.equal(campaignLevels[24].id,'L25_LOST');
