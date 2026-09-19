@@ -15,6 +15,9 @@ export function createPlayerState({
     playerId,
     qaSessionId,
     telemetry:[],
+    qaSessionStatus:'NEW',
+    qaSessionStartedAt:null,
+    qaSessionCompletedAt:null,
     xp: 0,
     hearts: 5,
     currentLevelId: 'L01_FIRST_CONTACT',
@@ -108,6 +111,35 @@ export function hydratePlayerState(raw={}) {
     achievements:Array.isArray(raw.achievements)?raw.achievements:[],
     hintsUsed:raw.hintsUsed && typeof raw.hintsUsed==='object'?raw.hintsUsed:{},
     codexUsed:raw.codexUsed && typeof raw.codexUsed==='object'?raw.codexUsed:{},
-    attempts:raw.attempts && typeof raw.attempts==='object'?raw.attempts:{}
+    attempts:raw.attempts && typeof raw.attempts==='object'?raw.attempts:{},
+    qaSessionStatus:raw.qaSessionStatus || (raw.completedLevels?.length ? 'ACTIVE' : 'NEW'),
+    qaSessionStartedAt:raw.qaSessionStartedAt ?? null,
+    qaSessionCompletedAt:raw.qaSessionCompletedAt ?? null
   };
+}
+
+export function beginQaSession(state, timestamp=new Date().toISOString()) {
+  const next=structuredClone(state);
+  next.qaSessionStatus='ACTIVE';
+  next.qaSessionStartedAt=next.qaSessionStartedAt || timestamp;
+  next.qaSessionCompletedAt=null;
+  return next;
+}
+
+export function startNewQaSession(state, timestamp=new Date().toISOString()) {
+  const playerId=state?.playerId || createAnonymousId('PLAYER-QA');
+  const next=createPlayerState({
+    playerId,
+    qaSessionId:createAnonymousId('SESSION')
+  });
+  next.qaSessionStatus='ACTIVE';
+  next.qaSessionStartedAt=timestamp;
+  return next;
+}
+
+export function markQaSessionComplete(state, timestamp=new Date().toISOString()) {
+  const next=structuredClone(state);
+  next.qaSessionStatus='COMPLETE';
+  next.qaSessionCompletedAt=timestamp;
+  return next;
 }
