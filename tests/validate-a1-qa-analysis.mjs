@@ -9,7 +9,7 @@ function session(i,{completed=32,assisted=[],boss=true}={}){
   const hints=Object.fromEntries(assisted.map(id=>[id,1]));
   return {
     schemaVersion:1,
-    appVersion:'HNK-A1-APP-ALPHA-0.2.0',
+    appVersion:'HNK-A1-APP-ALPHA-0.2.1',
     languageVersion:'HNK-A1-RC1-CANDIDATE',
     playerId:`PLAYER-${i}`,
     sessionId:`SESSION-${i}`,
@@ -17,12 +17,12 @@ function session(i,{completed=32,assisted=[],boss=true}={}){
     runtimeIntegrity:{
       status:'SINGLE_RUNTIME',
       eligible:true,
-      sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.2.0',
-      observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.2.0'],
+      sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.2.1',
+      observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.2.1'],
       missingEventVersionCount:0
     },
     summary:{completedLevels:levels,hintsUsed:hints,codexUsed:{},attempts:{}},
-    events:[{runtimeAppVersion:'HNK-A1-APP-ALPHA-0.2.0',result:'COMPLETE'}]
+    events:[{runtimeAppVersion:'HNK-A1-APP-ALPHA-0.2.1',result:'COMPLETE'}]
   };
 }
 
@@ -77,13 +77,13 @@ const mixed={
   runtimeIntegrity:{
     status:'MIXED_RUNTIME',
     eligible:false,
-    sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.2.0',
-    observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.1.2','HNK-A1-APP-ALPHA-0.2.0'],
+    sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.2.1',
+    observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.1.2','HNK-A1-APP-ALPHA-0.2.1'],
     missingEventVersionCount:0
   },
   events:[
     {runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.2',result:'COMPLETE'},
-    {runtimeAppVersion:'HNK-A1-APP-ALPHA-0.2.0',result:'COMPLETE'}
+    {runtimeAppVersion:'HNK-A1-APP-ALPHA-0.2.1',result:'COMPLETE'}
   ]
 };
 report=analyzeSessions([...exportsList,mixed],annotations);
