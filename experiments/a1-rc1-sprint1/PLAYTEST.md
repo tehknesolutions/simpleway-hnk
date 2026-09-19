@@ -1,4 +1,4 @@
-# HNK A1 Alpha 0.1.3 — Playtest Instructions
+# HNK A1 Alpha 0.2.0 — Playtest Instructions
 
 ## Live Alpha
 
@@ -6,7 +6,7 @@
 
 Deployment fingerprint:
 
-- app: `HNK-A1-APP-ALPHA-0.1.3`
+- app: `HNK-A1-APP-ALPHA-0.2.0`
 - main release commit: `386325b6f9c8ff8e77356577e01c097c2acd16fb`
 - Railway deploy artifact: `7a1e13aebae494fef9178e1ff00a3e986b6835cc`
 - deployment: `bb1c31ae-9364-40b6-8df7-4ab6c383fad0` (`SUCCESS`)
@@ -37,7 +37,7 @@ Use **Nova sessão** only when starting a genuinely new playtest run. It resets 
 
 ## Status
 
-- App: HNK-A1-APP-ALPHA-0.1.3
+- App: HNK-A1-APP-ALPHA-0.2.0
 - Language: HNK-A1-RC1-CANDIDATE
 - 32/32 playable
 - Human-QA candidate only
@@ -64,4 +64,4 @@ The analyzer computes automated metrics but never infers `GRAMMAR_PROBLEM` from 
 
 ## Runtime integrity
 
-Do not begin the P01–P07 cohort on a version that may be hotfixed mid-session. Alpha 0.1.3 records the runtime version at session start and on every QA event. If a participant crosses a runtime update, the export is marked `MIXED_RUNTIME` and is automatically excluded from promotion metrics.
+Do not begin the P01–P07 cohort on a version that may be hotfixed mid-session. Alpha 0.2.0 records the runtime version at session start and on every QA event. If a participant crosses a runtime update, the export is marked `MIXED_RUNTIME` and is automatically excluded from promotion metrics.
