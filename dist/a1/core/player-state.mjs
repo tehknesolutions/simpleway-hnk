@@ -1,4 +1,4 @@
-export const PLAYER_STATE_VERSION = 2;
+export const PLAYER_STATE_VERSION = 3;
 
 export function createAnonymousId(prefix='PLAYER-QA') {
   const uuid=globalThis.crypto?.randomUUID?.();
@@ -17,6 +17,7 @@ export function createPlayerState({
     telemetry:[],
     qaSessionStatus:'NEW',
     qaSessionStartedAt:null,
+    qaSessionStartedAppVersion:null,
     qaSessionCompletedAt:null,
     xp: 0,
     hearts: 5,
@@ -114,19 +115,21 @@ export function hydratePlayerState(raw={}) {
     attempts:raw.attempts && typeof raw.attempts==='object'?raw.attempts:{},
     qaSessionStatus:raw.qaSessionStatus || (raw.completedLevels?.length ? 'ACTIVE' : 'NEW'),
     qaSessionStartedAt:raw.qaSessionStartedAt ?? null,
+    qaSessionStartedAppVersion:raw.qaSessionStartedAppVersion ?? null,
     qaSessionCompletedAt:raw.qaSessionCompletedAt ?? null
   };
 }
 
-export function beginQaSession(state, timestamp=new Date().toISOString()) {
+export function beginQaSession(state, appVersion, timestamp=new Date().toISOString()) {
   const next=structuredClone(state);
   next.qaSessionStatus='ACTIVE';
   next.qaSessionStartedAt=next.qaSessionStartedAt || timestamp;
+  next.qaSessionStartedAppVersion=next.qaSessionStartedAppVersion || appVersion || null;
   next.qaSessionCompletedAt=null;
   return next;
 }
 
-export function startNewQaSession(state, timestamp=new Date().toISOString()) {
+export function startNewQaSession(state, appVersion, timestamp=new Date().toISOString()) {
   const playerId=state?.playerId || createAnonymousId('PLAYER-QA');
   const next=createPlayerState({
     playerId,
@@ -134,6 +137,7 @@ export function startNewQaSession(state, timestamp=new Date().toISOString()) {
   });
   next.qaSessionStatus='ACTIVE';
   next.qaSessionStartedAt=timestamp;
+  next.qaSessionStartedAppVersion=appVersion || null;
   return next;
 }
 

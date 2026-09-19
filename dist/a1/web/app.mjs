@@ -5,6 +5,7 @@ import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mj
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
 import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 
+const APP_VERSION='HNK-A1-APP-ALPHA-0.1.3';
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
 let state=loadState();
@@ -27,13 +28,17 @@ function worldNumber(w){return Math.max(1,WORLDS.findIndex(x=>x.id===w.id)+1);}
 function worldLabel(w){return w.finalStage?'FINAL BOSS':`World ${worldNumber(w)}`;}
 function bossScenario(){return generateBossScenario(makeBossSeed(state.playerId,state.qaSessionId));}
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
+function sessionVersionWarning(){
+  if(state.qaSessionStatus==='NEW' || state.qaSessionStartedAppVersion===APP_VERSION) return '';
+  return `<div class="runtime-warning"><strong>⚠ MIXED_RUNTIME</strong> Esta sessão começou em outra versão ou não possui versão inicial verificável. Ela não contará para P01–P07. Use <strong>Nova sessão</strong> para iniciar um teste elegível na ${escapeHtml(APP_VERSION)}.</div>`;
+}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
 function renderQaStart(){
   app.innerHTML=`
     <div class="shell">
       <section class="card qa-start">
-        <div class="eyebrow">HNK A1 · ALPHA 0.1.2</div>
+        <div class="eyebrow">HNK A1 · ALPHA 0.1.3</div>
         <h1 class="title">Human QA Playtest</h1>
         <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
         <div class="qa-privacy">
@@ -48,7 +53,7 @@ function renderQaStart(){
       </section>
     </div>`;
   document.querySelector('#beginQaBtn')?.addEventListener('click',()=>{
-    state=beginQaSession(state);
+    state=beginQaSession(state,APP_VERSION);
     logQaEvent(level(),'SESSION_STARTED',{result:'ACTIVE'});
     save();
     render();
@@ -70,9 +75,10 @@ function render(){
         <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/32</span></div>
       </header>
       <div class="session-strip">
-        <span>${escapeHtml(state.qaSessionId)}</span>
+        <span>${escapeHtml(state.qaSessionId)} · ${escapeHtml(APP_VERSION)}</span>
         <button class="session-reset" id="newQaSessionBtn">🧪 Nova sessão</button>
       </div>
+      ${sessionVersionWarning()}
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
         <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · ${worldLabel(w)}</div>
@@ -97,7 +103,7 @@ function render(){
   document.querySelector('#newQaSessionBtn')?.addEventListener('click',()=>{
     const confirmed=window.confirm('Iniciar uma nova sessão QA? O progresso e a telemetria desta rodada serão zerados. Exporte a sessão atual antes, se quiser preservá-la.');
     if(!confirmed)return;
-    state=startNewQaSession(state);
+    state=startNewQaSession(state,APP_VERSION);
     composer=[];dialogue=[];missionUtterances=[];missionDraft='';codexOpen=false;
     logQaEvent(level(),'SESSION_STARTED',{result:'NEW_SESSION'});
     save();
@@ -119,6 +125,7 @@ function renderInteraction(l){
     const mission=evaluateMission(missionUtterances,objectives);
     root.innerHTML=`
       ${boss?`<div class="boss-seed">👹 Seed: <strong>${escapeHtml(scenario.seedHash)}</strong> · ${scenario.objectiveCount} objetivos</div><div class="boss-scenes">${scenario.scenes.map(s=>`<div>• ${escapeHtml(s)}</div>`).join('')}</div>`:''}
+      <div class="mission-rule"><strong>🧭 Uma fala por envio.</strong> Resolva um objetivo por vez e clique <strong>Usar fala</strong> antes de começar o próximo.</div>
       <div class="mission-objectives">
         ${objectives.map(o=>{
           const achieved=mission.achieved.includes(o.id)||mission.optionalAchieved.includes(o.id);
@@ -213,6 +220,7 @@ function logQaEvent(l,type,{input='',result=null,achieved=[],missing=[],seed=nul
     levelId:l.id,
     type,
     timestamp:new Date().toISOString(),
+    runtimeAppVersion:APP_VERSION,
     seed,
     inputTokens:sanitizeQaTokens(tokenize(input),token=>Boolean(getLexeme(token))),
     result,
@@ -265,7 +273,7 @@ function addMissionUtterance(l,objectives=l.objectives,scenario=null){
     state=recordAttempt(state,l.id,false);
     save();
     render();
-    feedback('🧪 UNMAPPED CONSTRUCTION: sem perda de coração, mas a tentativa deixa de contar como first-try.','info');
+    feedback('🧪 UNMAPPED CONSTRUCTION: sem perda de coração. Se você juntou dois objetivos, separe-os: uma construção por fala e um clique em “Usar fala” para cada envio.','info');
     return;
   }
   if(mission.status==='MISSION_COMPLETE'){
@@ -393,7 +401,7 @@ function renderHints(l){
 }
 
 function downloadQaExport(){
-  const payload=buildQaExport(state,{bossVersion:BOSS_VERSION});
+  const payload=buildQaExport(state,{appVersion:APP_VERSION,bossVersion:BOSS_VERSION});
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob);
   const a=document.createElement('a');
