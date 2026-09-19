@@ -169,13 +169,13 @@ function addMissionUtterance(l){
   const mission=evaluateMission(missionUtterances,l.objectives);
   const latest=mission.results.at(-1);
   if(latest?.status==='UNKNOWN_LEXEME'){
-    feedback(`🔎 Palavra ainda não reconhecida: ${latest.unknown.join(', ')}.`,'info');
     render();
+    feedback(`🔎 Palavra ainda não reconhecida: ${latest.unknown.join(', ')}.`,'info');
     return;
   }
   if(latest?.status==='UNMAPPED_CONSTRUCTION'){
-    feedback('🧪 UNMAPPED CONSTRUCTION: a tentativa foi registrada sem perda de coração.','info');
     render();
+    feedback('🧪 UNMAPPED CONSTRUCTION: a tentativa foi registrada sem perda de coração.','info');
     return;
   }
   if(mission.status==='MISSION_COMPLETE'){
@@ -186,13 +186,12 @@ function addMissionUtterance(l){
     codexOpen=false;
     return;
   }
-  state=recordAttempt(state,l.id,false);
+  render();
   if(mission.status==='MISSION_PARTIAL'){
     feedback(`🧭 Objetivo parcial. Ainda faltam: ${mission.missing.join(', ')}.`,'info');
   }else{
     feedback('🧭 A fala é válida, mas ainda não resolveu um objetivo obrigatório desta missão.','info');
   }
-  render();
 }
 
 function answerContrast(l,id){
