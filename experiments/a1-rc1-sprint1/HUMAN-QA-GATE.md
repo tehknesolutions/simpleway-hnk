@@ -119,6 +119,23 @@ Any runtime-code change after this freeze pauses P01–P07 and requires a new ap
 
 The cohort-launch audit found that Alpha 0.2.0 exposed Human QA export only after Level 32. That would exclude early-stop/failure sessions from ordinary collection and bias the gate metrics.
 
-Alpha 0.2.1 adds persistent partial-session export. P01–P07 is therefore **HOLD** until the exact 0.2.1 runtime completes a new Preview Freeze Gate.
+Alpha 0.2.1 adds persistent partial-session export. The exact 0.2.1 runtime has now passed Preview Freeze Gate V2 and is **READY FOR P01–P07**.
 
 This is a QA instrumentation/runtime change only. It does not alter HNK linguistic authority.
+
+
+### Alpha 0.2.1 Freeze record
+
+- runtime baseline commit: `a0b0e5382a92b817b9afe1250dfa87bbadd2dac6`;
+- preview packaging commit: `807ddba0426a8655c11ac5f9fb7321776f420080`;
+- Railway preview deployment: `e1c6e58c-7bfa-459a-ac04-dea729cd6599`;
+- preview URL: `https://hnk-a1-alpha-021-preview-production.up.railway.app`;
+- deployment healthcheck: PASS;
+- repository-loaded A1 validator lane: 7/7 PASS;
+- partial-session export contract: 8/8 PASS;
+- source interaction smoke: 23/23 PASS;
+- published `dist/a1` interaction smoke: 23/23 PASS;
+- deployed container content markers: PASS;
+- HNK linguistic authority changes: 0.
+
+Gate state: `FROZEN_HUMAN_QA_BASELINE / SINGLE_RUNTIME / READY_FOR_P01-P07`.
