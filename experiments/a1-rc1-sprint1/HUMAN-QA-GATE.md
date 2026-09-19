@@ -83,11 +83,11 @@ A gate-eligible session must be **SINGLE_RUNTIME** from start to export.
 - `MIXED_RUNTIME` sessions remain useful for smoke/debug research but contribute nothing to P01–P07 promotion metrics.
 
 
-## Alpha 0.2.0 acquisition pre-cohort gate
+## Alpha 0.2.0 frozen Human-QA baseline
 
-P01–P07 remains **HOLD** until Alpha 0.2.0 is frozen as a single runtime.
+Alpha 0.2.0 passed the Preview Freeze Gate and is **READY FOR P01–P07** as the frozen Human-QA baseline.
 
-Required before cohort start:
+Freeze evidence completed:
 
 - deterministic option/tray shuffling validated;
 - Codex exposes partial cues rather than a complete answer tray;
@@ -98,3 +98,18 @@ Required before cohort start:
 - no HNK lexeme, G-ID, construction, grammar authority or CANON status changes.
 
 After the 0.2.0 freeze, any blocking runtime bug pauses the cohort and requires a new baseline. No silent hotfix is gate-eligible.
+
+
+### Freeze record
+
+- runtime baseline commit: `7fa140e6aaaec0484e1be4911d6d606b46e8ff5f`;
+- deployment validation artifact: `9946b2b98c85b482b9e24b39f7c50c64eb8fc3b3`;
+- Railway validation deployment: `3e1c8590-4780-45cd-951b-89f59693435b`;
+- deployment healthcheck: PASS;
+- repository-loaded A1 validator lane: 7/7 PASS;
+- Alpha Release/build contract: 15/15 PASS;
+- headless DOM interaction smoke: 24/24 PASS;
+- deployed container content markers: PASS;
+- HNK linguistic authority changes: 0.
+
+Any runtime-code change after this freeze pauses P01–P07 and requires a new app-version baseline. Documentation-only changes do not invalidate already exported SINGLE_RUNTIME sessions.
