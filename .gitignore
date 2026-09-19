@@ -1,0 +1,8 @@
+node_modules/
+
+# HNK A1 Human QA — local participant evidence
+qa-exports/
+qa-annotations.json
+hnk-a1-qa-*.json
+experiments/a1-rc1-sprint1/HUMAN-QA-COHORT-DASHBOARD.local.md
+experiments/a1-rc1-sprint1/HUMAN-QA-COHORT-ANNOTATIONS.local.json
