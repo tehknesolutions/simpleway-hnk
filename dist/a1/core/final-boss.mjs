@@ -39,7 +39,7 @@ export function makeBossSeed(playerId='PLAYER-QA-LOCAL', sessionId='SESSION-001'
   return `${BOSS_VERSION}|${playerId}|${sessionId}`;
 }
 
-export function generateBossScenario(seedText) {
+export function generateBossScenario(seedText,{objectiveCount=null,priorityIntents=[]}={}) {
   const seed=hashSeed(seedText);
   const rand=mulberry32(seed);
   const shuffled=[...BOSS_OBJECTIVE_POOL];
@@ -48,8 +48,11 @@ export function generateBossScenario(seedText) {
     [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
   }
 
-  const objectiveCount=4+(seed%3);
-  const selected=shuffled.slice(0,objectiveCount);
+  const count=Math.max(4,Math.min(6,objectiveCount ?? (4+(seed%3))));
+  const priorities=new Set(priorityIntents);
+  const prioritized=shuffled.filter(item=>priorities.has(item.intent));
+  const remainder=shuffled.filter(item=>!priorities.has(item.intent));
+  const selected=[...prioritized,...remainder].slice(0,count);
   const objectives=selected.map(({id,intent,label})=>({id,intent,label}));
   const tokenTray=[...new Set(selected.flatMap(item=>item.tokens))];
 
@@ -57,7 +60,7 @@ export function generateBossScenario(seedText) {
     id:'L32_A1_FINAL_BOSS',
     seed:seedText,
     seedHash:seed.toString(16).padStart(8,'0'),
-    objectiveCount,
+    objectiveCount:count,
     objectives:Object.freeze(objectives),
     scenes:Object.freeze(selected.map(item=>item.scene)),
     tokenTray:Object.freeze(tokenTray),

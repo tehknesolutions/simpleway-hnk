@@ -1,4 +1,4 @@
-export const PLAYER_STATE_VERSION = 3;
+export const PLAYER_STATE_VERSION = 4;
 
 export function createAnonymousId(prefix='PLAYER-QA') {
   const uuid=globalThis.crypto?.randomUUID?.();
@@ -28,7 +28,13 @@ export function createPlayerState({
     hintsUsed: {},
     codexUsed: {},
     attempts: {},
-    achievements: []
+    achievements: [],
+    acquisition: {
+      recallAttempts: {},
+      reviewHistory: {},
+      reviewActiveLevelId: null,
+      reviewReturnLevelId: null
+    }
   };
 }
 
@@ -113,6 +119,14 @@ export function hydratePlayerState(raw={}) {
     hintsUsed:raw.hintsUsed && typeof raw.hintsUsed==='object'?raw.hintsUsed:{},
     codexUsed:raw.codexUsed && typeof raw.codexUsed==='object'?raw.codexUsed:{},
     attempts:raw.attempts && typeof raw.attempts==='object'?raw.attempts:{},
+    acquisition:{
+      ...base.acquisition,
+      ...(raw.acquisition && typeof raw.acquisition==='object'?raw.acquisition:{}),
+      recallAttempts:raw.acquisition?.recallAttempts && typeof raw.acquisition.recallAttempts==='object'?raw.acquisition.recallAttempts:{},
+      reviewHistory:raw.acquisition?.reviewHistory && typeof raw.acquisition.reviewHistory==='object'?raw.acquisition.reviewHistory:{},
+      reviewActiveLevelId:raw.acquisition?.reviewActiveLevelId ?? null,
+      reviewReturnLevelId:raw.acquisition?.reviewReturnLevelId ?? null
+    },
     qaSessionStatus:raw.qaSessionStatus || (raw.completedLevels?.length ? 'ACTIVE' : 'NEW'),
     qaSessionStartedAt:raw.qaSessionStartedAt ?? null,
     qaSessionStartedAppVersion:raw.qaSessionStartedAppVersion ?? null,
@@ -145,5 +159,41 @@ export function markQaSessionComplete(state, timestamp=new Date().toISOString())
   const next=structuredClone(state);
   next.qaSessionStatus='COMPLETE';
   next.qaSessionCompletedAt=timestamp;
+  return next;
+}
+
+export function recordRecallAttempt(state, levelId) {
+  const next=structuredClone(state);
+  next.acquisition ??= {recallAttempts:{},reviewHistory:{},reviewActiveLevelId:null,reviewReturnLevelId:null};
+  next.acquisition.recallAttempts ??= {};
+  next.acquisition.recallAttempts[levelId]=(next.acquisition.recallAttempts[levelId]??0)+1;
+  return next;
+}
+
+export function beginReview(state, reviewLevelId, returnLevelId) {
+  const next=structuredClone(state);
+  next.acquisition ??= {recallAttempts:{},reviewHistory:{},reviewActiveLevelId:null,reviewReturnLevelId:null};
+  next.acquisition.reviewActiveLevelId=reviewLevelId;
+  next.acquisition.reviewReturnLevelId=returnLevelId;
+  next.currentLevelId=reviewLevelId;
+  next.hearts=5;
+  return next;
+}
+
+export function isReviewActive(state, levelId) {
+  return state.acquisition?.reviewActiveLevelId===levelId;
+}
+
+export function completeReview(state, levelId, atOrder) {
+  const next=structuredClone(state);
+  next.acquisition ??= {recallAttempts:{},reviewHistory:{},reviewActiveLevelId:null,reviewReturnLevelId:null};
+  next.acquisition.reviewHistory ??= {};
+  next.acquisition.reviewHistory[levelId] ??= [];
+  next.acquisition.reviewHistory[levelId].push(atOrder);
+  const returnLevelId=next.acquisition.reviewReturnLevelId;
+  next.acquisition.reviewActiveLevelId=null;
+  next.acquisition.reviewReturnLevelId=null;
+  if(returnLevelId) next.currentLevelId=returnLevelId;
+  next.hearts=5;
   return next;
 }

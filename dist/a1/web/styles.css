@@ -52,3 +52,12 @@
 .mission-rule{margin:14px 0;padding:12px 14px;border-radius:13px;background:#eef6ff;border:1px solid #cfe0f5;color:#24466f;line-height:1.45;font-size:.86rem}
 
 .runtime-warning{margin:8px 2px 14px;padding:11px 13px;border-radius:12px;background:#fff3cd;border:1px solid #f0d98a;color:#684f00;font-size:.8rem;line-height:1.45}
+
+
+.acquisition-panel{margin:14px 0;padding:12px 14px;border:1px solid #d8e4fb;border-radius:14px;background:#f7f9ff;color:#344054;display:grid;gap:7px}
+.acquisition-panel strong{color:#14305f}.acquisition-panel small{line-height:1.4;color:var(--muted)}
+.review-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.review-row>span{font-size:.78rem;font-weight:900;color:#465467}
+.review-chip{border:1px solid #b9c8df;background:#fff;border-radius:999px;padding:7px 10px;cursor:pointer;font:inherit;font-size:.75rem;font-weight:850;color:#24466f}
+.review-chip:hover{box-shadow:0 4px 12px rgba(0,0,0,.07);transform:translateY(-1px)}
+.review-active{padding:8px 10px;border-radius:10px;background:#fff8df;color:#684f00;font-size:.8rem;font-weight:850}
