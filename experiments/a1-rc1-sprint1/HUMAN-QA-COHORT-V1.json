@@ -1,0 +1,91 @@
+{
+  "schema": "HNK-A1-HUMAN-QA-COHORT-V1",
+  "status": "OPEN_FOR_P01-P07",
+  "appVersion": "HNK-A1-APP-ALPHA-0.2.1",
+  "languageVersion": "HNK-A1-RC1-CANDIDATE",
+  "acquisitionEngineVersion": "HNK-A1-ACQUISITION-ENGINE-V1",
+  "runtimeBaselineCommit": "a0b0e5382a92b817b9afe1250dfa87bbadd2dac6",
+  "freezeMetadataMainCommit": "8cfa05e2591cba43b2364a0289cb3ce72ddd9728",
+  "finalArtifactCommit": "b81004d7716927afe11b100e33cd5ecb703a579f",
+  "finalDeploymentId": "8639272c-cdaf-46ce-b843-5cb7676f8cae",
+  "finalUrl": "https://hnk-a1-alpha-021-freeze-production.up.railway.app",
+  "freezeGate": "PREVIEW_FREEZE_GATE_V2_PASS",
+  "runtimeIntegrityRequired": "SINGLE_RUNTIME",
+  "blockingFix": "PARTIAL_SESSION_EXPORT_RESOLVED",
+  "healthcheck": "PASS",
+  "runtimeBlobParity": {
+    "comparedWithPreviewArtifact": "807ddba0426a8655c11ac5f9fb7321776f420080",
+    "checkedAppCoreStyleBlobs": 10,
+    "differences": 0
+  },
+  "railwayMetadataNote": "Railway deployment metadata labels the exact-SHA deployment branch as main. Eligibility is pinned to exact finalArtifactCommit + finalDeploymentId + verified served container contents.",
+  "participantEvidence": {
+    "captured": 0,
+    "target": 7,
+    "source": "HUMAN_ONLY",
+    "note": "No human playtest evidence is prefilled or simulated."
+  },
+  "slots": [
+    {
+      "slot": "P01",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P02",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P03",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P04",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P05",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P06",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    },
+    {
+      "slot": "P07",
+      "status": "READY_TO_ASSIGN",
+      "playerId": null,
+      "sessionId": null
+    }
+  ],
+  "privacy": {
+    "commitRealNames": false,
+    "commitRawExports": false,
+    "commitCompletedAnnotations": false,
+    "forbiddenFields": [
+      "real_name",
+      "email",
+      "phone",
+      "home_address",
+      "precise_location",
+      "health_information",
+      "unrestricted_personal_text"
+    ]
+  },
+  "promotionBoundary": {
+    "target": "HNK-A1-RC2 — HUMAN-PLAYTEST-VALIDATED-CANDIDATE",
+    "automaticCanonPromotion": false,
+    "externalCefrCertification": false
+  }
+}

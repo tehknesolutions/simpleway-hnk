@@ -49,3 +49,17 @@ SINGLE_RUNTIME
 READY_FOR_P01-P07
 CANON_PROMOTION = FALSE
 ```
+
+
+## Final cohort publication fingerprint
+
+- freeze metadata main commit: `8cfa05e2591cba43b2364a0289cb3ce72ddd9728`;
+- final packaging commit: `b81004d7716927afe11b100e33cd5ecb703a579f`;
+- final Railway deployment: `8639272c-cdaf-46ce-b843-5cb7676f8cae`;
+- final cohort URL: `https://hnk-a1-alpha-021-freeze-production.up.railway.app`;
+- exact deployment status: **SUCCESS**;
+- healthcheck: **PASS**;
+- served `release.json`: **FROZEN_HUMAN_QA_BASELINE / READY_FOR_P01-P07**;
+- preview → final runtime parity: **10 app/core/style blobs checked, 0 differences**.
+
+Railway labels the exact-SHA deployment branch as `main` in deployment metadata despite the service source configuration. This is recorded as a provider metadata quirk. The accepted fingerprint is the exact final artifact SHA + deployment ID + verified served container contents.
