@@ -1,5 +1,5 @@
 import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, FINAL_STAGE, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
-import { createPlayerState, hydratePlayerState, createAnonymousId, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
+import { createPlayerState, hydratePlayerState, createAnonymousId, beginQaSession, startNewQaSession, markQaSessionComplete, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
 import { validateDialogue, validateAgainstIntents, evaluateMission, tokenize } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mjs';
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
@@ -29,7 +29,37 @@ function bossScenario(){return generateBossScenario(makeBossSeed(state.playerId,
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
+function renderQaStart(){
+  app.innerHTML=`
+    <div class="shell">
+      <section class="card qa-start">
+        <div class="eyebrow">HNK A1 · ALPHA 0.1</div>
+        <h1 class="title">Human QA Playtest</h1>
+        <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
+        <div class="qa-privacy">
+          <strong>🔐 Privacidade</strong>
+          <p>Não pedimos nome real, endereço ou texto pessoal. Tokens não reconhecidos pelo HNK não entram no export de pesquisa.</p>
+        </div>
+        <div class="qa-session-meta">
+          <span>Player: <strong>${escapeHtml(state.playerId)}</strong></span>
+          <span>Session: <strong>${escapeHtml(state.qaSessionId)}</strong></span>
+        </div>
+        <button class="primary qa-start-button" id="beginQaBtn">▶ Iniciar sessão QA</button>
+      </section>
+    </div>`;
+  document.querySelector('#beginQaBtn')?.addEventListener('click',()=>{
+    state=beginQaSession(state);
+    logQaEvent(level(),'SESSION_STARTED',{result:'ACTIVE'});
+    save();
+    render();
+  });
+}
+
 function render(){
+  if(state.qaSessionStatus==='NEW'){
+    renderQaStart();
+    return;
+  }
   const l=level();
   const w=currentWorld(l);
   const finished=state.completedLevels.includes(l.id);
@@ -39,6 +69,10 @@ function render(){
         <div><div class="brand">HNK A1 · ${escapeHtml(w.title.toUpperCase())}</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
         <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/32</span></div>
       </header>
+      <div class="session-strip">
+        <span>${escapeHtml(state.qaSessionId)}</span>
+        <button class="session-reset" id="newQaSessionBtn">🧪 Nova sessão</button>
+      </div>
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
         <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · ${worldLabel(w)}</div>
@@ -60,6 +94,15 @@ function render(){
   renderHints(l);
   document.querySelector('#hintBtn')?.addEventListener('click',()=>showHint(l));
   document.querySelector('#nextBtn')?.addEventListener('click',()=>goNext(l));
+  document.querySelector('#newQaSessionBtn')?.addEventListener('click',()=>{
+    const confirmed=window.confirm('Iniciar uma nova sessão QA? O progresso e a telemetria desta rodada serão zerados. Exporte a sessão atual antes, se quiser preservá-la.');
+    if(!confirmed)return;
+    state=startNewQaSession(state);
+    composer=[];dialogue=[];missionUtterances=[];missionDraft='';codexOpen=false;
+    logQaEvent(level(),'SESSION_STARTED',{result:'NEW_SESSION'});
+    save();
+    render();
+  });
 }
 
 function renderInteraction(l){
@@ -355,6 +398,8 @@ function downloadQaExport(){
 
 function goNext(l){
   if(l.order===32){
+    state=markQaSessionComplete(state);
+    save();
     downloadQaExport();
     document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 A1 SURVIVOR</strong><br>32/32 concluídos. Export Human QA gerado para esta sessão anônima.</div>`;
     return;
