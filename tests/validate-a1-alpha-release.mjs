@@ -9,7 +9,7 @@ import {
 } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
 
 const release=JSON.parse(await readFile(new URL('../experiments/a1-rc1-sprint1/release.json',import.meta.url),'utf8'));
-assert.equal(release.appVersion,'HNK-A1-APP-ALPHA-0.1.1');
+assert.equal(release.appVersion,'HNK-A1-APP-ALPHA-0.1.2');
 assert.equal(release.languageVersion,'HNK-A1-RC1-CANDIDATE');
 assert.equal(release.playableLevels,32);
 assert.equal(release.runtimeStatus,'EXPERIMENTAL_HUMAN_QA_ONLY');
