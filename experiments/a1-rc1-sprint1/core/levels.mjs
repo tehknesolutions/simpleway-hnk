@@ -295,7 +295,7 @@ export const WORLD_4 = Object.freeze({
       objectives:[
         {id:'TOMORROW_TRIP',intent:'STATE_TOMORROW_NEED_GO_STATION',label:'Expressar que amanhã eu preciso ir à estação'}
       ],
-      tokenTray:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA','PA'],
+      tokenTray:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA'],
       hints:['Empilhe tempo + pessoa + necessidade + ação.','A cadeia continua exigindo VEMI.','TAMURI AN KORUME VEMI LOKANI KODERA.'],
       unlocks:['SKILL_OPEN_WORLD_ACTION_STACK'], xp:10
     },
