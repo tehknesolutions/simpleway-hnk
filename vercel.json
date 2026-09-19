@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build:a1-alpha",
   "outputDirectory": "dist/a1",
-  "framework": null,
   "cleanUrls": true,
   "headers": [
     {
