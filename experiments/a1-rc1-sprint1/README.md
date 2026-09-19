@@ -10,7 +10,8 @@ A playable learning-runtime experiment for the user-approved **HNK A1 RC1 candid
 
 - World 1: The Awakening
 - World 2: The Construction Forge
-- Levels 01–16
+- World 3: The Grammar Dungeon
+- Levels 01–24
 - scoped linguistic registry
 - deterministic construction validator
 - local player state
@@ -36,7 +37,7 @@ It does **not**:
 From repository root:
 
 ```
-npm run a1:sprint2
+npm run a1:sprint3
 ```
 
 Then open the local URL printed by the server.
@@ -46,6 +47,7 @@ Then open the local URL printed by the server.
 ```
 npm run validate:a1-sprint1
 npm run validate:a1-sprint2
+npm run validate:a1-sprint3
 ```
 
 The test suite explicitly checks the two most important guards for this sprint:
