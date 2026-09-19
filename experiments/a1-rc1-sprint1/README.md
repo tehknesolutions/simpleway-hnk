@@ -12,7 +12,8 @@ A playable learning-runtime experiment for the user-approved **HNK A1 RC1 candid
 - World 2: The Construction Forge
 - World 3: The Grammar Dungeon
 - World 4: The Open World
-- Levels 01–31
+- Final Boss: Level 32
+- Levels 01–32
 - scoped linguistic registry
 - deterministic construction validator
 - local player state
@@ -38,7 +39,7 @@ It does **not**:
 From repository root:
 
 ```
-npm run a1:sprint4
+npm run a1:sprint5
 ```
 
 Then open the local URL printed by the server.
@@ -50,6 +51,7 @@ npm run validate:a1-sprint1
 npm run validate:a1-sprint2
 npm run validate:a1-sprint3
 npm run validate:a1-sprint4
+npm run validate:a1-sprint5
 ```
 
 The test suite explicitly checks the two most important guards for this sprint:
@@ -64,3 +66,16 @@ The test suite explicitly checks the two most important guards for this sprint:
 - Runtime status: `EXPERIMENTAL_HUMAN_QA_ONLY`
 
 A future promotion requires explicit linguistic review; gameplay success alone is not canonical evidence.
+
+
+## Alpha 0.1 Human QA
+
+After Level 32, use **Exportar Human QA** to download the anonymous session JSON.
+
+Target release:
+- app: HNK-A1-APP-ALPHA-0.1
+- language: HNK-A1-RC1-CANDIDATE
+- campaign: HNK-A1-CAMPAIGN-V1
+- boss: HNK-A1-FINAL-BOSS-V1
+
+This is a Human-QA candidate, not CANON and not external CEFR certification.
