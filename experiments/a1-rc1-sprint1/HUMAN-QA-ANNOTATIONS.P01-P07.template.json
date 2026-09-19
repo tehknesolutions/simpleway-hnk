@@ -1,0 +1,371 @@
+{
+  "schema": "HNK-A1-HUMAN-QA-ANNOTATIONS-P01-P07-V1",
+  "appVersion": "HNK-A1-APP-ALPHA-0.2.1",
+  "languageVersion": "HNK-A1-RC1-CANDIDATE",
+  "status": "TEMPLATE_ONLY",
+  "annotations": [
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P01",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P02",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P03",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P04",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P05",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P06",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "PERSON",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "NE",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "VEMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "NUMBER_NOUN",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "RUMI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "HAVORI",
+      "classification": "PENDING",
+      "note": ""
+    },
+    {
+      "slot": "P07",
+      "playerId": null,
+      "skill": "COMMUNICATION_REPAIR",
+      "classification": "PENDING",
+      "note": ""
+    }
+  ],
+  "allowedSkills": [
+    "PERSON",
+    "NE",
+    "VEMI",
+    "NUMBER_NOUN",
+    "RUMI",
+    "HAVORI",
+    "COMMUNICATION_REPAIR"
+  ],
+  "draftClassification": "PENDING",
+  "allowedFinalClassifications": [
+    "PASS",
+    "LEARNING_PROBLEM",
+    "VOCABULARY_PROBLEM",
+    "GRAMMAR_PROBLEM",
+    "UX_PROBLEM",
+    "CONTENT_PROBLEM",
+    "UNMAPPED_CONSTRUCTION"
+  ],
+  "instructions": "Replace playerId and PENDING only after matching each slot to an eligible anonymous export. Completed annotation data should remain local and must not be committed."
+}
