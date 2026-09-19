@@ -6,10 +6,10 @@ import { WORLD_1, WORLD_2, WORLD_3, WORLDS, campaignLevels, levelsById, worldByL
 assert.equal(WORLD_1.levels.length,8);
 assert.equal(WORLD_2.levels.length,8);
 assert.equal(WORLD_3.levels.length,8);
-assert.equal(WORLDS.length,3);
-assert.equal(campaignLevels.length,24);
+assert.equal(WORLDS.length,5);
+assert.equal(campaignLevels.length,32);
 assert.deepEqual(WORLD_3.levels.map(l=>l.order),[17,18,19,20,21,22,23,24]);
-assert.equal(new Set(campaignLevels.map(l=>l.id)).size,24);
+assert.equal(new Set(campaignLevels.map(l=>l.id)).size,32);
 
 for (const level of WORLD_3.levels) {
   assert.equal(level.mode,'contrast');
