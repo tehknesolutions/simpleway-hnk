@@ -163,6 +163,30 @@ export const constructions = Object.freeze([
     guards:['TEMPORAL_PERSON_PREDICATE_SCOPED']
   },
   {
+    id:'A1_WE_WORK',
+    pattern:['NEMA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WE_WORK',
+    generalizes:false,
+    guards:['PERSON_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
+    id:'A1_THEY_WORK',
+    pattern:['VOMA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THEY_WORK',
+    generalizes:false,
+    guards:['PERSON_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
+    id:'A1_THEY_NOT_WORK',
+    pattern:['VOMA','NE','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THEY_NOT_WORK',
+    generalizes:false,
+    guards:['PERSON_NEGATION_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
     id:'A1_THEY_STUDY',
     pattern:['VOMA','PELUKI'],
     authority:[A.AUTHORED,A.LOCKED],
