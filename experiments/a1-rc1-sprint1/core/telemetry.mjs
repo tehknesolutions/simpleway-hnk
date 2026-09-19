@@ -1,4 +1,4 @@
-export const QA_SCHEMA_VERSION = 1;
+export const QA_SCHEMA_VERSION = 2;
 
 export function sanitizeQaTokens(tokens=[], isKnown=()=>false) {
   return tokens.filter(token=>isKnown(token));
@@ -11,6 +11,7 @@ export function createQaEvent({
   levelId,
   type,
   timestamp,
+  runtimeAppVersion=null,
   seed=null,
   inputTokens=[],
   result=null,
@@ -28,6 +29,7 @@ export function createQaEvent({
     levelId,
     type,
     timestamp,
+    runtimeAppVersion,
     seed,
     inputTokens:[...inputTokens],
     result,
@@ -46,8 +48,29 @@ export function appendQaEvent(state,event) {
   return next;
 }
 
+export function assessRuntimeIntegrity(state, appVersion) {
+  const events=Array.isArray(state.telemetry)?state.telemetry:[];
+  const eventVersions=[...new Set(events.map(e=>e?.runtimeAppVersion).filter(Boolean))];
+  const missingEventVersionCount=events.filter(e=>!e?.runtimeAppVersion).length;
+  const started=state.qaSessionStartedAppVersion ?? null;
+  const versionSet=new Set([started,...eventVersions].filter(Boolean));
+  const mixedRuntime=
+    !started ||
+    started!==appVersion ||
+    missingEventVersionCount>0 ||
+    eventVersions.some(v=>v!==appVersion) ||
+    versionSet.size>1;
+  return {
+    status:mixedRuntime?'MIXED_RUNTIME':'SINGLE_RUNTIME',
+    eligible:!mixedRuntime,
+    sessionStartedAppVersion:started,
+    observedRuntimeAppVersions:eventVersions,
+    missingEventVersionCount
+  };
+}
+
 export function buildQaExport(state,{
-  appVersion='HNK-A1-APP-ALPHA-0.1.2',
+  appVersion='HNK-A1-APP-ALPHA-0.1.3',
   languageVersion='HNK-A1-RC1-CANDIDATE',
   campaignVersion='HNK-A1-CAMPAIGN-V1',
   bossVersion='HNK-A1-FINAL-BOSS-V1'
@@ -61,6 +84,7 @@ export function buildQaExport(state,{
     playerId:state.playerId,
     sessionId:state.qaSessionId,
     exportedAt:new Date().toISOString(),
+    runtimeIntegrity:assessRuntimeIntegrity(state,appVersion),
     summary:{
       xp:state.xp,
       hearts:state.hearts,
