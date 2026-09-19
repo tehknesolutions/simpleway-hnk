@@ -9,10 +9,14 @@ import {
 } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
 
 const release=JSON.parse(await readFile(new URL('../experiments/a1-rc1-sprint1/release.json',import.meta.url),'utf8'));
+const appSource=await readFile(new URL('../experiments/a1-rc1-sprint1/web/app.mjs',import.meta.url),'utf8');
 assert.equal(release.appVersion,'HNK-A1-APP-ALPHA-0.1.3');
 assert.equal(release.languageVersion,'HNK-A1-RC1-CANDIDATE');
 assert.equal(release.playableLevels,32);
 assert.equal(release.runtimeStatus,'EXPERIMENTAL_HUMAN_QA_ONLY');
+assert.ok(appSource.includes("const APP_VERSION='HNK-A1-APP-ALPHA-0.1.3'"));
+assert.ok(appSource.includes('Uma fala por envio.'));
+assert.ok(appSource.includes('MIXED_RUNTIME'));
 
 let state=createPlayerState({playerId:'PLAYER-QA-TEST',qaSessionId:'SESSION-A'});
 assert.equal(state.version,PLAYER_STATE_VERSION);
