@@ -6,7 +6,7 @@
 
 Deployment fingerprint:
 
-- app: `HNK-A1-APP-ALPHA-0.1.2`
+- app: `HNK-A1-APP-ALPHA-0.1.3`
 - release source: `5f4527b1918437a7b6373eff8578f40efdd2d05d`
 - Railway deploy artifact: `99e6c3e59fe507d8a6cf6d1169dc9990597ba468`
 - deployment: `f6014fa4-36f4-4aea-90d8-19e227dd54b2` (`SUCCESS`)
@@ -23,7 +23,7 @@ The Railway artifact is packaging-only; it does not introduce new HNK grammar or
 ## During the playtest
 
 - Try to understand before using a hint.
-- In Open World / Final Boss, type HNK freely.
+- In Open World / Final Boss, type HNK freely, but send **one communicative construction per “Usar fala”**.
 - If you reach an UNMAPPED CONSTRUCTION, do not force a translation; try another known strategy.
 - Do not refresh to erase a mistake. The session is designed to observe learning behavior.
 
@@ -37,7 +37,7 @@ Use **Nova sessão** only when starting a genuinely new playtest run. It resets 
 
 ## Status
 
-- App: HNK-A1-APP-ALPHA-0.1.2
+- App: HNK-A1-APP-ALPHA-0.1.3
 - Language: HNK-A1-RC1-CANDIDATE
 - 32/32 playable
 - Human-QA candidate only
@@ -60,3 +60,8 @@ npm run qa:a1:analyze -- ./qa-exports --annotations=./qa-annotations.json
 ```
 
 The analyzer computes automated metrics but never infers `GRAMMAR_PROBLEM` from learner behavior on its own.
+
+
+## Runtime integrity
+
+Do not begin the P01–P07 cohort on a version that may be hotfixed mid-session. Alpha 0.1.3 records the runtime version at session start and on every QA event. If a participant crosses a runtime update, the export is marked `MIXED_RUNTIME` and is automatically excluded from promotion metrics.
