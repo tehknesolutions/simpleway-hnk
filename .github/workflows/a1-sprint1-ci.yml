@@ -1,4 +1,4 @@
-name: A1 Sprint 1 CI
+name: A1 Lab CI
 
 on:
   pull_request:
@@ -17,7 +17,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Validate A1 playable core
+      - name: Validate A1 World 1
         run: npm run validate:a1-sprint1
+      - name: Validate A1 World 2
+        run: npm run validate:a1-sprint2
       - name: Run governed repository suite
         run: npm test
