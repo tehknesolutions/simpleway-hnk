@@ -72,3 +72,46 @@ export function validateDialogue(utterances, requiredIntents) {
     communicativeSuccess: missing.length === 0 && orderValid
   };
 }
+
+
+export function evaluateMission(utterances=[], objectives=[]) {
+  const results = utterances.map((utterance,index)=>({
+    index,
+    utterance,
+    ...validateUtterance(utterance)
+  }));
+
+  const validIntents = results
+    .filter(r=>r.status==='VALID')
+    .map(r=>r.construction.intent);
+
+  const required = objectives.filter(o=>o.required!==false);
+  const optional = objectives.filter(o=>o.required===false);
+
+  const achieved = required.filter(o=>validIntents.includes(o.intent)).map(o=>o.id);
+  const missing = required.filter(o=>!validIntents.includes(o.intent)).map(o=>o.id);
+  const optionalAchieved = optional.filter(o=>validIntents.includes(o.intent)).map(o=>o.id);
+
+  const unmapped = results.filter(r=>r.status==='UNMAPPED_CONSTRUCTION');
+  const unknown = results.filter(r=>r.status==='UNKNOWN_LEXEME');
+
+  const requiredCount = required.length;
+  const score = requiredCount === 0 ? 1 : achieved.length / requiredCount;
+
+  let status='MISSION_INCOMPLETE';
+  if (missing.length===0) status='MISSION_COMPLETE';
+  else if (achieved.length>0) status='MISSION_PARTIAL';
+
+  return {
+    status,
+    communicativeSuccess: missing.length===0,
+    score,
+    achieved,
+    missing,
+    optionalAchieved,
+    validIntents,
+    results,
+    unmapped,
+    unknown
+  };
+}
