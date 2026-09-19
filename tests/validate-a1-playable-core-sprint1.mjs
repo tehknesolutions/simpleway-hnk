@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import { lexemes, constructions, LANGUAGE_VERSION, RUNTIME_STATUS, getConstructionByPattern } from '../experiments/a1-rc1-sprint1/core/registry.mjs';
 import { validateUtterance, validateDialogue, tokenize } from '../experiments/a1-rc1-sprint1/core/validator.mjs';
 import { WORLD_1 } from '../experiments/a1-rc1-sprint1/core/levels.mjs';
-import { createPlayerState, awardLevel, recordAttempt, penalizeHeart } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
+import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, penalizeHeart } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
+import { routeForPathname } from '../experiments/a1-rc1-sprint1/core/http-routing.mjs';
 
 assert.equal(LANGUAGE_VERSION,'HNK-A1-RC1-CANDIDATE');
 assert.equal(RUNTIME_STATUS,'EXPERIMENTAL_HUMAN_QA_ONLY');
@@ -46,6 +47,11 @@ const dialogue=validateDialogue(['PUMEK.','AN ZAMI HNK.'],['YES_RESPONSE','STATE
 assert.equal(dialogue.status,'VALID');
 assert.equal(dialogue.communicativeSuccess,true);
 
+const reversed=validateDialogue(['AN ZAMI HNK.','PUMEK.'],['YES_RESPONSE','STATE_SPEAK_HNK']);
+assert.equal(reversed.status,'INVALID_INTENT_ORDER');
+assert.equal(reversed.orderValid,false);
+assert.equal(reversed.communicativeSuccess,false);
+
 const partial=validateDialogue(['PUMEK.'],['YES_RESPONSE','STATE_SPEAK_HNK']);
 assert.equal(partial.status,'COMMUNICATIVE_PARTIAL');
 assert.deepEqual(partial.missing,['STATE_SPEAK_HNK']);
@@ -57,8 +63,19 @@ assert.equal(player.completedLevels.includes('L01_FIRST_CONTACT'),true);
 assert.equal(player.xp,25);
 assert.ok(player.unlocked.includes('VODEMI'));
 
+let hinted=createPlayerState();
+hinted=recordHint(hinted,'L01_FIRST_CONTACT');
+assert.equal(getHintCount(hinted,'L01_FIRST_CONTACT'),1);
+hinted=recordAttempt(hinted,'L01_FIRST_CONTACT',true);
+hinted=awardLevel(hinted,WORLD_1.levels[0],{perfect:true,hintsUsed:getHintCount(hinted,'L01_FIRST_CONTACT'),firstTry:true});
+assert.equal(hinted.xp,20);
+
 player=penalizeHeart(player,1);
 assert.equal(player.hearts,4);
+
+assert.deepEqual(routeForPathname('/'),{type:'redirect',location:'/web/'});
+assert.deepEqual(routeForPathname('/web/'),{type:'file',path:'/web/index.html'});
+assert.deepEqual(routeForPathname('/web/styles.css'),{type:'file',path:'/web/styles.css'});
 
 for (const c of constructions) {
   assert.ok(c.id);
