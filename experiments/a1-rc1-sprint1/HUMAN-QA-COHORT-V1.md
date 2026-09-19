@@ -1,6 +1,17 @@
 # HNK A1 — P01–P07 Human QA Cohort V1
 
-Status: **PREPARED — opens only on the frozen Alpha 0.2.1 final deployment**
+Status: **OPEN_FOR_P01-P07 — frozen Alpha 0.2.1 final deployment verified**
+
+## Frozen cohort runtime
+
+- URL: `https://hnk-a1-alpha-021-freeze-production.up.railway.app`
+- app: `HNK-A1-APP-ALPHA-0.2.1`
+- runtime baseline: `a0b0e5382a92b817b9afe1250dfa87bbadd2dac6`
+- final artifact: `b81004d7716927afe11b100e33cd5ecb703a579f`
+- final Railway deployment: `8639272c-cdaf-46ce-b843-5cb7676f8cae`
+- state: `FROZEN_HUMAN_QA_BASELINE / SINGLE_RUNTIME / READY_FOR_P01-P07`
+
+Human evidence at cohort opening: **0/7 captured**.
 
 ## Purpose
 
