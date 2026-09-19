@@ -47,7 +47,7 @@ export function appendQaEvent(state,event) {
 }
 
 export function buildQaExport(state,{
-  appVersion='HNK-A1-APP-ALPHA-0.1',
+  appVersion='HNK-A1-APP-ALPHA-0.1.1',
   languageVersion='HNK-A1-RC1-CANDIDATE',
   campaignVersion='HNK-A1-CAMPAIGN-V1',
   bossVersion='HNK-A1-FINAL-BOSS-V1'
