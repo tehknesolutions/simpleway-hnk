@@ -1,7 +1,7 @@
 import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, FINAL_STAGE, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
 import { createPlayerState, hydratePlayerState, createAnonymousId, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
 import { validateDialogue, validateAgainstIntents, evaluateMission, tokenize } from '../core/validator.mjs';
-import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
+import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mjs';
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
 import { createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 
@@ -167,7 +167,7 @@ function logQaEvent(l,type,{input='',result=null,achieved=[],missing=[],seed=nul
     type,
     timestamp:new Date().toISOString(),
     seed,
-    inputTokens:tokenize(input),
+    inputTokens:tokenize(input).filter(token=>getLexeme(token)),
     result,
     achieved,
     missing,
