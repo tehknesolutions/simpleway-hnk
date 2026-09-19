@@ -33,7 +33,7 @@ function renderQaStart(){
   app.innerHTML=`
     <div class="shell">
       <section class="card qa-start">
-        <div class="eyebrow">HNK A1 · ALPHA 0.1.1</div>
+        <div class="eyebrow">HNK A1 · ALPHA 0.1.2</div>
         <h1 class="title">Human QA Playtest</h1>
         <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
         <div class="qa-privacy">
