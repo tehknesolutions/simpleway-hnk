@@ -47,6 +47,21 @@ const dialogue=validateDialogue(['PUMEK.','AN ZAMI HNK.'],['YES_RESPONSE','STATE
 assert.equal(dialogue.status,'VALID');
 assert.equal(dialogue.communicativeSuccess,true);
 
+const repeatedBeforeSuccess=validateDialogue(
+  ['PUMEK.','PUMEK.','AN ZAMI HNK.'],
+  ['YES_RESPONSE','STATE_SPEAK_HNK']
+);
+assert.equal(repeatedBeforeSuccess.status,'VALID');
+assert.equal(repeatedBeforeSuccess.orderValid,true);
+assert.equal(repeatedBeforeSuccess.communicativeSuccess,true);
+
+const unmappedBeforeSuccess=validateDialogue(
+  ['PUMEK AN ZAMI HNK.','PUMEK.','AN ZAMI HNK.'],
+  ['YES_RESPONSE','STATE_SPEAK_HNK']
+);
+assert.equal(unmappedBeforeSuccess.status,'VALID');
+assert.equal(unmappedBeforeSuccess.communicativeSuccess,true);
+
 const reversed=validateDialogue(['AN ZAMI HNK.','PUMEK.'],['YES_RESPONSE','STATE_SPEAK_HNK']);
 assert.equal(reversed.status,'INVALID_INTENT_ORDER');
 assert.equal(reversed.orderValid,false);
