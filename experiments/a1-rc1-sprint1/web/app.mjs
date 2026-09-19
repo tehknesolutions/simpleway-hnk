@@ -1,7 +1,9 @@
-import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
-import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
-import { validateDialogue, validateAgainstIntents, evaluateMission } from '../core/validator.mjs';
-import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
+import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, FINAL_STAGE, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
+import { createPlayerState, hydratePlayerState, createAnonymousId, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
+import { validateDialogue, validateAgainstIntents, evaluateMission, tokenize } from '../core/validator.mjs';
+import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mjs';
+import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
+import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
@@ -15,13 +17,15 @@ let codexOpen=false;
 function loadState(){
   try{
     const raw=localStorage.getItem(STORAGE_KEY);
-    return raw?JSON.parse(raw):createPlayerState();
+    return raw?hydratePlayerState(JSON.parse(raw)):createPlayerState();
   }catch{return createPlayerState();}
 }
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
 function level(){return levelsById.get(state.currentLevelId)??WORLD_1.levels[0];}
 function currentWorld(l=level()){return worldByLevelId.get(l.id)??WORLD_1;}
 function worldNumber(w){return Math.max(1,WORLDS.findIndex(x=>x.id===w.id)+1);}
+function worldLabel(w){return w.finalStage?'FINAL BOSS':`World ${worldNumber(w)}`;}
+function bossScenario(){return generateBossScenario(makeBossSeed(state.playerId,state.qaSessionId));}
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
@@ -33,11 +37,11 @@ function render(){
     <div class="shell">
       <header class="topbar">
         <div><div class="brand">HNK A1 · ${escapeHtml(w.title.toUpperCase())}</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
-        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/31</span></div>
+        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/32</span></div>
       </header>
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
-        <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · World ${worldNumber(w)}</div>
+        <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · ${worldLabel(w)}</div>
         <h1 class="title">${escapeHtml(l.title)}</h1>
         <p class="subtitle">${escapeHtml(w.subtitle)}</p>
         ${l.npc?`<div class="npc">${escapeHtml(l.npc)}</div>`:''}
@@ -47,7 +51,7 @@ function render(){
         <div class="hints" id="hints"></div>
         <div class="footer-actions">
           <button class="secondary" id="hintBtn">💡 Dica</button>
-          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Entrar no Open World →':l.order===31?'Ver checkpoint':'Próxima fase →'}</button>`:''}
+          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Entrar no Open World →':l.order===31?'Enfrentar o Final Boss →':l.order===32?'Exportar Human QA':'Próxima fase →'}</button>`:''}
         </div>
         <div class="governance">Runtime: <strong>${escapeHtml(RUNTIME_STATUS)}</strong>. Conteúdo do A1 Lab não promove automaticamente léxico ou gramática a CANON.</div>
       </section>
@@ -64,11 +68,16 @@ function renderInteraction(l){
     root.innerHTML='<div class="feedback ok">✅ Fase concluída. Skill registrada no estado local.</div>';
     return;
   }
-  if(l.mode==='open_world'){
-    const mission=evaluateMission(missionUtterances,l.objectives);
+  if(l.mode==='open_world' || l.mode==='final_boss'){
+    const boss=l.mode==='final_boss';
+    const scenario=boss?bossScenario():null;
+    const objectives=boss?scenario.objectives:l.objectives;
+    const tokenTray=boss?scenario.tokenTray:l.tokenTray;
+    const mission=evaluateMission(missionUtterances,objectives);
     root.innerHTML=`
+      ${boss?`<div class="boss-seed">👹 Seed: <strong>${escapeHtml(scenario.seedHash)}</strong> · ${scenario.objectiveCount} objetivos</div><div class="boss-scenes">${scenario.scenes.map(s=>`<div>• ${escapeHtml(s)}</div>`).join('')}</div>`:''}
       <div class="mission-objectives">
-        ${l.objectives.map(o=>{
+        ${objectives.map(o=>{
           const achieved=mission.achieved.includes(o.id)||mission.optionalAchieved.includes(o.id);
           const optional=o.required===false?' · bônus':'';
           return `<div class="mission-objective ${achieved?'done':''}"><span>${achieved?'✅':'⬜'}</span><span>${escapeHtml(o.label)}${optional}</span></div>`;
@@ -84,12 +93,12 @@ function renderInteraction(l){
         <button class="secondary" id="undoMissionUtterance">↩ Remover última</button>
         <button class="secondary" id="codexToggle">📖 ${codexOpen?'Fechar':'Abrir'} Codex</button>
       </div>
-      ${codexOpen?`<div class="codex-tray"><div class="codex-note">Abrir o Codex conta como assistência, mas nunca bloqueia a missão.</div><div class="token-tray">${l.tokenTray.map(t=>`<button class="token" data-codex-token="${t}">${t}</button>`).join('')}</div></div>`:''}
+      ${codexOpen?`<div class="codex-tray"><div class="codex-note">Abrir o Codex conta como assistência, mas nunca bloqueia a missão.</div><div class="token-tray">${tokenTray.map(t=>`<button class="token" data-codex-token="${t}">${t}</button>`).join('')}</div></div>`:''}
     `;
     const input=root.querySelector('#missionInput');
     input?.addEventListener('input',e=>{missionDraft=e.target.value;});
-    input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addMissionUtterance(l);}});
-    root.querySelector('#addMissionUtterance')?.addEventListener('click',()=>addMissionUtterance(l));
+    input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addMissionUtterance(l,objectives,scenario);}});
+    root.querySelector('#addMissionUtterance')?.addEventListener('click',()=>addMissionUtterance(l,objectives,scenario));
     root.querySelector('#undoMissionUtterance')?.addEventListener('click',()=>{missionUtterances.pop();render();});
     root.querySelector('#codexToggle')?.addEventListener('click',()=>toggleCodex(l));
     root.querySelectorAll('[data-codex-token]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -149,16 +158,38 @@ function renderInteraction(l){
   }
 }
 
+function logQaEvent(l,type,{input='',result=null,achieved=[],missing=[],seed=null}={}){
+  const event=createQaEvent({
+    eventId:createAnonymousId('EVT'),
+    sessionId:state.qaSessionId,
+    playerId:state.playerId,
+    levelId:l.id,
+    type,
+    timestamp:new Date().toISOString(),
+    seed,
+    inputTokens:sanitizeQaTokens(tokenize(input),token=>Boolean(getLexeme(token))),
+    result,
+    achieved,
+    missing,
+    hintsUsed:getHintCount(state,l.id),
+    codexUsed:hasUsedCodex(state,l.id),
+    hearts:state.hearts
+  });
+  state=appendQaEvent(state,event);
+  save();
+}
+
 function toggleCodex(l){
   if(!codexOpen){
     state=recordCodexUse(state,l.id);
+    logQaEvent(l,'CODEX_OPENED',{seed:l.mode==='final_boss'?bossScenario().seedHash:null});
     save();
   }
   codexOpen=!codexOpen;
   render();
 }
 
-function addMissionUtterance(l){
+function addMissionUtterance(l,objectives=l.objectives,scenario=null){
   const utterance=missionDraft.trim();
   if(!utterance){
     feedback('Digite uma fala em HNK antes de usar.','info');
@@ -166,8 +197,15 @@ function addMissionUtterance(l){
   }
   missionUtterances.push(utterance);
   missionDraft='';
-  const mission=evaluateMission(missionUtterances,l.objectives);
+  const mission=evaluateMission(missionUtterances,objectives);
   const latest=mission.results.at(-1);
+  logQaEvent(l,'MISSION_UTTERANCE',{
+    input:utterance,
+    result:latest?.status??mission.status,
+    achieved:mission.achieved,
+    missing:mission.missing,
+    seed:scenario?.seedHash??null
+  });
   if(latest?.status==='UNKNOWN_LEXEME'){
     state=recordAttempt(state,l.id,false);
     state=penalizeHeart(state,.5);
@@ -203,6 +241,7 @@ function answerContrast(l,id){
   const selected=l.choices.find(c=>c.id===id);
   const correct=Boolean(selected?.correct);
   state=recordAttempt(state,l.id,correct);
+  logQaEvent(l,'CONTRAST_ATTEMPT',{result:correct?'CORRECT':'INCORRECT'});
   if(correct){
     complete(l);
   }else{
@@ -214,12 +253,14 @@ function answerChoice(l,id){
   const selected=l.choices.find(c=>c.id===id);
   const correct=Boolean(selected?.correct);
   state=recordAttempt(state,l.id,correct);
+  logQaEvent(l,'CHOICE_ATTEMPT',{result:correct?'CORRECT':'INCORRECT'});
   if(correct) complete(l);
   else fail('💥 Estrutura/ interpretação incorreta. Use o contexto ou uma dica.',1);
 }
 
 function answerMapping(l,correct){
   state=recordAttempt(state,l.id,correct);
+  logQaEvent(l,'MAPPING_ATTEMPT',{result:correct?'CORRECT':'INCORRECT'});
   if(correct) complete(l);
   else fail('💥 PUMEK e MUNASE foram invertidos. Lembre: MUNASE é resposta negativa independente; não é NE.',.5);
 }
@@ -229,6 +270,7 @@ function submitBuilder(l){
   const result=validateAgainstIntents(utterance,[l.targetIntent]);
   const correct=result.status==='VALID';
   state=recordAttempt(state,l.id,correct);
+  logQaEvent(l,'BUILDER_ATTEMPT',{input:utterance,result:result.status});
   if(correct){
     composer=[];
     complete(l);
@@ -250,6 +292,7 @@ function submitDialogue(l){
   const result=validateDialogue(dialogue,l.requiredIntents);
   const correct=result.status==='VALID';
   state=recordAttempt(state,l.id,correct);
+  logQaEvent(l,'DIALOGUE_ATTEMPT',{input:dialogue.join(' '),result:result.status,missing:result.missing});
   if(correct){
     complete(l);
     dialogue=[];
@@ -262,6 +305,7 @@ function complete(l){
   const attempts=state.attempts[l.id]?.count??1;
   const assistance=getAssistanceCount(state,l.id);
   state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:assistance,firstTry:attempts===1});
+  logQaEvent(l,'LEVEL_COMPLETE',{result:'COMPLETE',seed:l.mode==='final_boss'?bossScenario().seedHash:null});
   save();
   feedback('✅ CLEAR! Skill desbloqueada e XP registrado.','ok');
   setTimeout(render,300);
@@ -284,6 +328,7 @@ function showHint(l){
   const used=getHintCount(state,l.id);
   if(used>=l.hints.length)return;
   state=recordHint(state,l.id);
+  logQaEvent(l,'HINT_USED',{result:`HINT_${getHintCount(state,l.id)}`,seed:l.mode==='final_boss'?bossScenario().seedHash:null});
   save();
   render();
 }
@@ -295,9 +340,23 @@ function renderHints(l){
   el.innerHTML=l.hints.slice(0,used).map((h,i)=>`<div class="hint-box">💡 Hint ${i+1}: ${escapeHtml(h)}</div>`).join('');
 }
 
+function downloadQaExport(){
+  const payload=buildQaExport(state,{bossVersion:BOSS_VERSION});
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=`hnk-a1-qa-${state.qaSessionId}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 function goNext(l){
-  if(l.order===31){
-    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 4 CLEARED</strong><br>Open World completo: 31 fases jogáveis. O próximo gate é o Final Boss.</div>`;
+  if(l.order===32){
+    downloadQaExport();
+    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 A1 SURVIVOR</strong><br>32/32 concluídos. Export Human QA gerado para esta sessão anônima.</div>`;
     return;
   }
   const idx=campaignLevels.findIndex(x=>x.id===l.id);

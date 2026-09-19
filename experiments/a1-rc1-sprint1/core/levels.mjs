@@ -334,7 +334,27 @@ export const WORLD_4 = Object.freeze({
   ]
 });
 
-export const WORLDS = Object.freeze([WORLD_1,WORLD_2,WORLD_3,WORLD_4]);
+export const FINAL_STAGE = Object.freeze({
+  id:'FINAL_STAGE_A1',
+  title:'The A1 Final Boss',
+  subtitle:'Sobreviva a um cenário inédito usando somente ferramentas já desbloqueadas.',
+  finalStage:true,
+  levels:[
+    {
+      id:'L32_A1_FINAL_BOSS', order:32, title:'The A1 Final Boss', mode:'final_boss',
+      prompt:'👹 Resolva todos os objetivos do cenário sem uma resposta-modelo.',
+      dynamicScenario:true,
+      hints:[
+        'Resolva um objetivo comunicativo por vez; a ordem é livre.',
+        'O Codex mostra apenas ferramentas que já existem no RC1.',
+        'Não invente gramática: contorne limites usando frames que você já desbloqueou.'
+      ],
+      unlocks:['ACH_A1_SURVIVOR','HUMAN_QA_EXPORT_READY'], xp:100
+    }
+  ]
+});
+
+export const WORLDS = Object.freeze([WORLD_1,WORLD_2,WORLD_3,WORLD_4,FINAL_STAGE]);
 export const campaignLevels = Object.freeze(WORLDS.flatMap(w=>w.levels));
 export const levelsById = new Map(campaignLevels.map(l=>[l.id,l]));
 export const worldByLevelId = new Map(WORLDS.flatMap(w=>w.levels.map(l=>[l.id,w])));
