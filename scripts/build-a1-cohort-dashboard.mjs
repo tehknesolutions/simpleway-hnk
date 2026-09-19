@@ -132,7 +132,7 @@ ${slotRows}
 - Promotion review ready: **${d.promotionReviewReady?'YES':'NO'}**
 - RC2 promotion gate: **${d.promotionGatePass?'PASS':'NOT PASSED'}**
 
-A dashboard value never promotes HNK content to CANON automatically. \\`GRAMMAR_PROBLEM\\` requires explicit human annotation.
+A dashboard value never promotes HNK content to CANON automatically. GRAMMAR_PROBLEM requires explicit human annotation.
 `;
 }
 
