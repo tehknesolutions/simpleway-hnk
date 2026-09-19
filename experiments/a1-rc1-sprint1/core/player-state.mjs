@@ -1,8 +1,20 @@
-export const PLAYER_STATE_VERSION = 1;
+export const PLAYER_STATE_VERSION = 2;
 
-export function createPlayerState() {
+export function createAnonymousId(prefix='PLAYER-QA') {
+  const uuid=globalThis.crypto?.randomUUID?.();
+  if(uuid) return `${prefix}-${uuid.slice(0,8).toUpperCase()}`;
+  return `${prefix}-${Math.random().toString(36).slice(2,10).toUpperCase()}`;
+}
+
+export function createPlayerState({
+  playerId=createAnonymousId('PLAYER-QA'),
+  qaSessionId=createAnonymousId('SESSION')
+}={}) {
   return {
     version: PLAYER_STATE_VERSION,
+    playerId,
+    qaSessionId,
+    telemetry:[],
     xp: 0,
     hearts: 5,
     currentLevelId: 'L01_FIRST_CONTACT',
@@ -75,4 +87,27 @@ export function penalizeHeart(state, amount=1) {
 export function nextLevelId(world, currentId) {
   const idx = world.levels.findIndex(l=>l.id===currentId);
   return idx >= 0 && idx < world.levels.length - 1 ? world.levels[idx+1].id : currentId;
+}
+
+
+export function hydratePlayerState(raw={}) {
+  const base=createPlayerState({
+    playerId:raw.playerId || createAnonymousId('PLAYER-QA'),
+    qaSessionId:raw.qaSessionId || createAnonymousId('SESSION')
+  });
+  return {
+    ...base,
+    ...raw,
+    version:PLAYER_STATE_VERSION,
+    playerId:raw.playerId || base.playerId,
+    qaSessionId:raw.qaSessionId || base.qaSessionId,
+    telemetry:Array.isArray(raw.telemetry)?raw.telemetry:[],
+    completedLevels:Array.isArray(raw.completedLevels)?raw.completedLevels:[],
+    perfectLevels:Array.isArray(raw.perfectLevels)?raw.perfectLevels:[],
+    unlocked:Array.isArray(raw.unlocked)?raw.unlocked:[],
+    achievements:Array.isArray(raw.achievements)?raw.achievements:[],
+    hintsUsed:raw.hintsUsed && typeof raw.hintsUsed==='object'?raw.hintsUsed:{},
+    codexUsed:raw.codexUsed && typeof raw.codexUsed==='object'?raw.codexUsed:{},
+    attempts:raw.attempts && typeof raw.attempts==='object'?raw.attempts:{}
+  };
 }
