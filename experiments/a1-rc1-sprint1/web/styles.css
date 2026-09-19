@@ -48,3 +48,5 @@
 .session-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 2px 16px;color:var(--muted);font-size:.74rem}
 .session-reset{border:1px solid #ccd5e2;background:#fff;border-radius:999px;padding:7px 10px;cursor:pointer;font:inherit;font-weight:800;color:#344054}
 @media (max-width:520px){.session-strip{align-items:flex-start;flex-direction:column}.session-reset{width:100%}}
+
+.mission-rule{margin:14px 0;padding:12px 14px;border-radius:13px;background:#eef6ff;border:1px solid #cfe0f5;color:#24466f;line-height:1.45;font-size:.86rem}
