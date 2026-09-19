@@ -79,3 +79,18 @@ Target release:
 - boss: HNK-A1-FINAL-BOSS-V1
 
 This is a Human-QA candidate, not CANON and not external CEFR certification.
+
+
+## Alpha 0.2.0 — Acquisition Engine
+
+The next Human-QA baseline adds learning mechanics without changing HNK linguistic authority:
+
+- deterministic option and token-tray shuffling;
+- progressive support stages: GUIDED → SUPPORTED → FADED → RECALL;
+- recall-before-help for hints and Codex;
+- partial Codex cues instead of answer trays;
+- spaced review of already-completed challenges;
+- adaptive Final Boss selection based on pre-Boss learning evidence;
+- acquisition telemetry in the anonymous QA export.
+
+P01–P07 starts only after this runtime is frozen as **HNK-A1-APP-ALPHA-0.2.0 / SINGLE_RUNTIME**.
