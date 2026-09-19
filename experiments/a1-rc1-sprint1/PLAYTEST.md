@@ -2,14 +2,14 @@
 
 ## Live Alpha
 
-**Playtest URL:** https://hnk-a1-alpha-static-production.up.railway.app
+**Playtest URL:** https://hnk-a1-alpha-020-freeze-production.up.railway.app
 
 Deployment fingerprint:
 
 - app: `HNK-A1-APP-ALPHA-0.2.0`
-- main release commit: `386325b6f9c8ff8e77356577e01c097c2acd16fb`
-- Railway deploy artifact: `7a1e13aebae494fef9178e1ff00a3e986b6835cc`
-- deployment: `bb1c31ae-9364-40b6-8df7-4ab6c383fad0` (`SUCCESS`)
+- runtime baseline commit: `7fa140e6aaaec0484e1be4911d6d606b46e8ff5f`
+- freeze-validation deploy artifact: `9946b2b98c85b482b9e24b39f7c50c64eb8fc3b3`
+- freeze-validation deployment: `3e1c8590-4780-45cd-951b-89f59693435b` (`SUCCESS`)
 
 The Railway artifact is packaging-only; it does not introduce new HNK grammar or vocabulary.
 
@@ -40,7 +40,7 @@ Use **Nova sessão** only when starting a genuinely new playtest run. It resets 
 - App: HNK-A1-APP-ALPHA-0.2.0
 - Language: HNK-A1-RC1-CANDIDATE
 - 32/32 playable
-- Human-QA candidate only
+- Frozen Human-QA baseline · READY FOR P01–P07
 - Not CANON
 - Not external CEFR certification
 
