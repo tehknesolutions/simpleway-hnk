@@ -33,7 +33,7 @@ function renderQaStart(){
   app.innerHTML=`
     <div class="shell">
       <section class="card qa-start">
-        <div class="eyebrow">HNK A1 · ALPHA 0.1</div>
+        <div class="eyebrow">HNK A1 · ALPHA 0.1.1</div>
         <h1 class="title">Human QA Playtest</h1>
         <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
         <div class="qa-privacy">
@@ -192,11 +192,15 @@ function renderInteraction(l){
       <div class="actions">
         <button class="secondary" id="undoToken">↩ Desfazer token</button>
         <button class="secondary" id="commitUtterance">✓ Fechar fala</button>
+        <button class="secondary" id="undoDialogueUtterance">↩ Remover última fala</button>
+        <button class="secondary" id="clearDialogue">Limpar falas</button>
         <button class="primary" id="submitDialogue">⚔️ Responder</button>
       </div>`;
     root.querySelectorAll('[data-token]').forEach(btn=>btn.addEventListener('click',()=>{composer.push(btn.dataset.token);render();}));
     root.querySelector('#undoToken')?.addEventListener('click',()=>{composer.pop();render();});
     root.querySelector('#commitUtterance')?.addEventListener('click',()=>{if(composer.length){dialogue.push(composer.join(' '));composer=[];render();}});
+    root.querySelector('#undoDialogueUtterance')?.addEventListener('click',()=>{dialogue.pop();render();});
+    root.querySelector('#clearDialogue')?.addEventListener('click',()=>{dialogue=[];composer=[];render();});
     root.querySelector('#submitDialogue')?.addEventListener('click',()=>submitDialogue(l));
   }
 }
@@ -340,7 +344,11 @@ function submitDialogue(l){
     complete(l);
     dialogue=[];
   }else{
-    fail(`⚔️ Ainda faltam atos comunicativos: ${result.missing.join(', ')||'estrutura válida'}.`,1);
+    const hasUnmapped=result.results.some(r=>r.status==='UNMAPPED_CONSTRUCTION');
+    const message=hasUnmapped
+      ? '🧭 Cada ato precisa ser uma fala separada. Use “Fechar fala” entre os atos; você também pode remover ou limpar falas.'
+      : `⚔️ Ainda faltam atos comunicativos: ${result.missing.join(', ')||'ordem dos atos'}.`;
+    fail(message,1);
   }
 }
 

@@ -56,8 +56,16 @@ export function validateDialogue(utterances, requiredIntents) {
   const results = utterances.map(u => validateUtterance(u));
   const intents = results.filter(r=>r.status==='VALID').map(r=>r.construction.intent);
   const missing = requiredIntents.filter(i=>!intents.includes(i));
-  const orderValid = missing.length === 0
-    && requiredIntents.every((intent,index)=>intents[index]===intent);
+
+  // A dialogue attempt must preserve the required intent order, but previous
+  // valid attempts must not permanently poison the level. Treat the required
+  // intents as an ordered subsequence of the accumulated valid intents.
+  let requiredCursor = 0;
+  for (const intent of intents) {
+    if (intent === requiredIntents[requiredCursor]) requiredCursor += 1;
+    if (requiredCursor === requiredIntents.length) break;
+  }
+  const orderValid = missing.length === 0 && requiredCursor === requiredIntents.length;
   return {
     status: missing.length
       ? 'COMMUNICATIVE_PARTIAL'

@@ -85,7 +85,7 @@ export const WORLD_1 = Object.freeze({
       prompt:'Responda afirmativamente e depois declare que você fala HNK.',
       requiredIntents:['YES_RESPONSE','STATE_SPEAK_HNK'],
       tokenTray:['PUMEK','AN','ZAMI','HNK','MUNASE','NE'],
-      hints:['A resposta possui dois atos.','Primeiro responda; depois faça a declaração.','PUMEK. / AN ZAMI HNK.'],
+      hints:['A resposta possui dois atos.','Primeiro responda; use “Fechar fala”; depois faça a declaração.','PUMEK. → Fechar fala → AN ZAMI HNK.'],
       unlocks:['ACH_FIRST_CONVERSATION','WORLD_02_READY'], xp:25
     }
   ]
