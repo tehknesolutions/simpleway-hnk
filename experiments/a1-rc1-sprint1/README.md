@@ -68,12 +68,12 @@ The test suite explicitly checks the two most important guards for this sprint:
 A future promotion requires explicit linguistic review; gameplay success alone is not canonical evidence.
 
 
-## Alpha 0.1 Human QA
+## Alpha 0.2.0 Human QA — pre-cohort
 
 After Level 32, use **Exportar Human QA** to download the anonymous session JSON.
 
 Target release:
-- app: HNK-A1-APP-ALPHA-0.1
+- app: HNK-A1-APP-ALPHA-0.2.0
 - language: HNK-A1-RC1-CANDIDATE
 - campaign: HNK-A1-CAMPAIGN-V1
 - boss: HNK-A1-FINAL-BOSS-V1

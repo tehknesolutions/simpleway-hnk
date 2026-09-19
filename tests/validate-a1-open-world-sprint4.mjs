@@ -4,9 +4,9 @@ import { validateUtterance, evaluateMission, tokenize } from '../experiments/a1-
 import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../experiments/a1-rc1-sprint1/core/levels.mjs';
 import { createPlayerState, recordAttempt, recordCodexUse, hasUsedCodex, getAssistanceCount, recordHint, penalizeHeart } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
 
-assert.equal(WORLDS.length,4);
+assert.equal(WORLDS.length,5);
 assert.deepEqual([WORLD_1.levels.length,WORLD_2.levels.length,WORLD_3.levels.length,WORLD_4.levels.length],[8,8,8,7]);
-assert.equal(campaignLevels.length,31);
+assert.equal(campaignLevels.length,32);
 assert.deepEqual(WORLD_4.levels.map(l=>l.order),[25,26,27,28,29,30,31]);
 
 for (const level of WORLD_4.levels) {
