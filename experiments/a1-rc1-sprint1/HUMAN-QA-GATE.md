@@ -67,7 +67,7 @@ A repeated learner failure can be a learning, vocabulary, UX, content, or gramma
 
 Promotion metrics are player-based, not raw-session-based.
 
-- Only exports matching `HNK-A1-APP-ALPHA-0.1.1` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
+- Only exports matching `HNK-A1-APP-ALPHA-0.1.2` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
 - A player is identified only by the anonymous `PLAYER-QA-...` identifier.
 - If the same player starts several QA sessions, only that player's **first eligible session** contributes to the promotion percentages.
 - Later sessions remain research evidence but cannot inflate the seven-player sample, completion rate, or Final Boss defeat rate.

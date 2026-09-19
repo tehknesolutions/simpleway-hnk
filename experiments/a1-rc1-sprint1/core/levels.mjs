@@ -291,11 +291,11 @@ export const WORLD_4 = Object.freeze({
     },
     {
       id:'L28_TOMORROWS_TRIP', order:28, title:"Tomorrow's Trip", mode:'open_world',
-      prompt:'🌅 Amanhã você precisa ir para a estação.',
+      prompt:'🌅 Amanhã eu preciso ir para a estação.',
       objectives:[
-        {id:'TOMORROW_TRIP',intent:'STATE_TOMORROW_NEED_GO_STATION',label:'Expressar a necessidade de ir amanhã à estação'}
+        {id:'TOMORROW_TRIP',intent:'STATE_TOMORROW_NEED_GO_STATION',label:'Expressar que amanhã eu preciso ir à estação'}
       ],
-      tokenTray:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA','PA'],
+      tokenTray:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA'],
       hints:['Empilhe tempo + pessoa + necessidade + ação.','A cadeia continua exigindo VEMI.','TAMURI AN KORUME VEMI LOKANI KODERA.'],
       unlocks:['SKILL_OPEN_WORLD_ACTION_STACK'], xp:10
     },

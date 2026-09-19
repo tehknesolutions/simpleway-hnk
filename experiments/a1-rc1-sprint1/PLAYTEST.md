@@ -6,7 +6,7 @@
 
 Deployment fingerprint:
 
-- app: `HNK-A1-APP-ALPHA-0.1`
+- app: `HNK-A1-APP-ALPHA-0.1.2`
 - release source: `5f4527b1918437a7b6373eff8578f40efdd2d05d`
 - Railway deploy artifact: `99e6c3e59fe507d8a6cf6d1169dc9990597ba468`
 - deployment: `f6014fa4-36f4-4aea-90d8-19e227dd54b2` (`SUCCESS`)
@@ -37,7 +37,7 @@ Use **Nova sessão** only when starting a genuinely new playtest run. It resets 
 
 ## Status
 
-- App: HNK-A1-APP-ALPHA-0.1
+- App: HNK-A1-APP-ALPHA-0.1.2
 - Language: HNK-A1-RC1-CANDIDATE
 - 32/32 playable
 - Human-QA candidate only
