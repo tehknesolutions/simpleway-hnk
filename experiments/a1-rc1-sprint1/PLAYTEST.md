@@ -1,4 +1,4 @@
-# HNK A1 Alpha 0.1 — Playtest Instructions
+# HNK A1 Alpha 0.1.3 — Playtest Instructions
 
 ## Live Alpha
 
@@ -7,9 +7,9 @@
 Deployment fingerprint:
 
 - app: `HNK-A1-APP-ALPHA-0.1.3`
-- release source: `5f4527b1918437a7b6373eff8578f40efdd2d05d`
-- Railway deploy artifact: `99e6c3e59fe507d8a6cf6d1169dc9990597ba468`
-- deployment: `f6014fa4-36f4-4aea-90d8-19e227dd54b2` (`SUCCESS`)
+- main release commit: `386325b6f9c8ff8e77356577e01c097c2acd16fb`
+- Railway deploy artifact: `7a1e13aebae494fef9178e1ff00a3e986b6835cc`
+- deployment: `bb1c31ae-9364-40b6-8df7-4ab6c383fad0` (`SUCCESS`)
 
 The Railway artifact is packaging-only; it does not introduce new HNK grammar or vocabulary.
 
