@@ -252,7 +252,89 @@ export const WORLD_3 = Object.freeze({
   ]
 });
 
-export const WORLDS = Object.freeze([WORLD_1,WORLD_2,WORLD_3]);
+export const WORLD_4 = Object.freeze({
+  id:'WORLD_04_OPEN_WORLD',
+  title:'The Open World',
+  subtitle:'Resolva a situação. Não existe mais uma resposta única exibida para você.',
+  levels:[
+    {
+      id:'L25_LOST', order:25, title:'Lost', mode:'open_world',
+      prompt:'🚉 Você está perdido. Descubra como chegar à estação.',
+      objectives:[
+        {id:'ROUTE_STATION',intent:'REQUEST_ROUTE_STATION',label:'Pedir rota para a estação'}
+      ],
+      tokenTray:['DARUVI','KODERA','KUVAN','RUMI'],
+      hints:['Você precisa pedir uma rota.','Use a fórmula de navegação com um lugar.','DARUVI KODERA?'],
+      unlocks:['DARUVI','KODERA','SKILL_ROUTE_REQUEST'], xp:10
+    },
+    {
+      id:'L26_DONT_UNDERSTAND', order:26, title:"I Don't Understand", mode:'open_world',
+      prompt:'🗣️ O NPC falou algo que você não entendeu. Faça a conversa continuar.',
+      objectives:[
+        {id:'NONUNDERSTANDING',intent:'SIGNAL_NONUNDERSTANDING',label:'Sinalizar que não entendeu'},
+        {id:'REPEAT',intent:'REQUEST_REPEAT',label:'Pedir repetição'},
+        {id:'POLITENESS',intent:'POLITENESS',label:'Usar cortesia',required:false}
+      ],
+      tokenTray:['AN','NE','KURAVI','LURAVO','REVATI','MUNASE'],
+      hints:['Você precisa sinalizar o problema e pedir uma nova tentativa.','Há um predicate de compreender e uma fórmula de repetição.','AN NE KURAVI. / LURAVO. / REVATI?'],
+      unlocks:['KURAVI','LURAVO','REVATI','SKILL_COMMUNICATION_REPAIR'], xp:10
+    },
+    {
+      id:'L27_WATER_FOR_TWO', order:27, title:'Water for Two', mode:'open_world',
+      prompt:'💧 Peça duas garrafas de água.',
+      objectives:[
+        {id:'WANT_WATER_TWO',intent:'STATE_WANT_TWO_BOTTLES_WATER',label:'Pedir duas garrafas de água'}
+      ],
+      tokenTray:['AN','MORAKU','HIZEP','KOPERA','SAVETA','KAVESO'],
+      hints:['Não conte SAVETA diretamente.','Conte o recipiente e depois indique o conteúdo.','AN MORAKU HIZEP KOPERA SAVETA.'],
+      unlocks:['SKILL_OPEN_WORLD_CONTAINER'], xp:10
+    },
+    {
+      id:'L28_TOMORROWS_TRIP', order:28, title:"Tomorrow's Trip", mode:'open_world',
+      prompt:'🌅 Amanhã você precisa ir para a estação.',
+      objectives:[
+        {id:'TOMORROW_TRIP',intent:'STATE_TOMORROW_NEED_GO_STATION',label:'Expressar a necessidade de ir amanhã à estação'}
+      ],
+      tokenTray:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA','PA'],
+      hints:['Empilhe tempo + pessoa + necessidade + ação.','A cadeia continua exigindo VEMI.','TAMURI AN KORUME VEMI LOKANI KODERA.'],
+      unlocks:['SKILL_OPEN_WORLD_ACTION_STACK'], xp:10
+    },
+    {
+      id:'L29_LOST_BOOK', order:29, title:'Lost Book', mode:'open_world',
+      prompt:'📕 Seu livro sumiu. Descubra onde ele está.',
+      objectives:[
+        {id:'LOCATE_BOOK',intent:'REQUEST_LOCATION_MY_BOOK',label:'Perguntar onde está seu livro'}
+      ],
+      tokenTray:['AN','LENU','KAVESO','RUMI','KUVAN','KE','SEVAI'],
+      hints:['Comece pelo NP possessivo já aprendido.','Combine posse + localização + WHERE no frame escopado.','AN LENU KAVESO RUMI KUVAN KE?'],
+      unlocks:['KUVAN','SKILL_OPEN_WORLD_LOCATION_QUESTION'], xp:10
+    },
+    {
+      id:'L30_HOTEL_PROBLEM', order:30, title:'Hotel Problem', mode:'open_world',
+      prompt:'🚻 O hotel não tem banheiro. Expresse essa situação.',
+      objectives:[
+        {id:'NO_BATHROOM',intent:'STATE_NO_BATHROOM_AT_HOTEL',label:'Expressar ausência de banheiro no hotel'}
+      ],
+      tokenTray:['NE','HAVORI','TUMERA','RUMI','HAVENU','ERU'],
+      hints:['Use o patch existencial, não o frame pessoal.','A existência negativa começa com NE.','NE HAVORI TUMERA RUMI HAVENU.'],
+      unlocks:['SKILL_OPEN_WORLD_NEGATIVE_EXISTENCE'], xp:10
+    },
+    {
+      id:'L31_MARKET_SURVIVAL', order:31, title:'Market Survival', mode:'open_world',
+      prompt:'🛍️ Saia da loja com dois livros e descubra o preço. Você pode usar várias falas.',
+      objectives:[
+        {id:'IDENTIFY_BOOK',intent:'IDENTIFY_THIS_BOOK',label:'Identificar o livro'},
+        {id:'WANT_TWO_BOOKS',intent:'STATE_WANT_TWO_BOOKS',label:'Pedir dois livros'},
+        {id:'ASK_PRICE',intent:'REQUEST_PRICE',label:'Perguntar o preço'}
+      ],
+      tokenTray:['SEVAI','KAVESO','AN','MORAKU','HIZEP','KADURI','GAVURI','PUMEK'],
+      hints:['A missão tem três objetivos independentes.','Você pode usar uma fala para cada objetivo.','SEVAI KAVESO. / AN MORAKU HIZEP KAVESO. / KADURI?'],
+      unlocks:['KADURI','SKILL_MARKET_SURVIVAL','FINAL_BOSS_READY'], xp:25
+    }
+  ]
+});
+
+export const WORLDS = Object.freeze([WORLD_1,WORLD_2,WORLD_3,WORLD_4]);
 export const campaignLevels = Object.freeze(WORLDS.flatMap(w=>w.levels));
 export const levelsById = new Map(campaignLevels.map(l=>[l.id,l]));
 export const worldByLevelId = new Map(WORLDS.flatMap(w=>w.levels.map(l=>[l.id,w])));
