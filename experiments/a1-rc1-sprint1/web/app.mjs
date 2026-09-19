@@ -93,7 +93,7 @@ function render(){
   }
   const l=level();
   const w=currentWorld(l);
-  const finished=state.completedLevels.includes(l.id);
+  const finished=state.completedLevels.includes(l.id) && !isReviewActive(state,l.id);
   app.innerHTML=`
     <div class="shell">
       <header class="topbar">
