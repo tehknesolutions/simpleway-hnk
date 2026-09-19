@@ -6,7 +6,7 @@ import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-
 import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 import { ACQUISITION_ENGINE_VERSION, acquisitionStage, presentationPolicy, shuffleSurface, buildCodexCueTray, canUseHelp, getRecallAttemptCount, getDueReviewLevelIds, adaptiveBossProfile } from '../core/acquisition.mjs';
 
-const APP_VERSION='HNK-A1-APP-ALPHA-0.2.0';
+const APP_VERSION='HNK-A1-APP-ALPHA-0.2.1';
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
 let state=loadState();
@@ -64,7 +64,7 @@ function renderQaStart(){
   app.innerHTML=`
     <div class="shell">
       <section class="card qa-start">
-        <div class="eyebrow">HNK A1 · ALPHA 0.2.0</div>
+        <div class="eyebrow">HNK A1 · ALPHA 0.2.1</div>
         <h1 class="title">Human QA Playtest</h1>
         <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
         <div class="qa-privacy">
@@ -102,7 +102,10 @@ function render(){
       </header>
       <div class="session-strip">
         <span>${escapeHtml(state.qaSessionId)} · ${escapeHtml(APP_VERSION)}</span>
-        <button class="session-reset" id="newQaSessionBtn">🧪 Nova sessão</button>
+        <div class="session-actions">
+          <button class="secondary session-export" id="exportQaBtn">⬇ Exportar sessão</button>
+          <button class="session-reset" id="newQaSessionBtn">🧪 Nova sessão</button>
+        </div>
       </div>
       ${sessionVersionWarning()}
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
@@ -128,6 +131,11 @@ function render(){
   document.querySelectorAll('[data-review-level]').forEach(btn=>btn.addEventListener('click',()=>startSpacedReview(btn.dataset.reviewLevel,l)));
   document.querySelector('#hintBtn')?.addEventListener('click',()=>showHint(l));
   document.querySelector('#nextBtn')?.addEventListener('click',()=>goNext(l));
+  document.querySelector('#exportQaBtn')?.addEventListener('click',()=>{
+    logQaEvent(l,'SESSION_EXPORT_REQUESTED',{result:state.qaSessionStatus});
+    downloadQaExport();
+    feedback('⬇ Export Human QA gerado com o progresso atual.','ok');
+  });
   document.querySelector('#newQaSessionBtn')?.addEventListener('click',()=>{
     const confirmed=window.confirm('Iniciar uma nova sessão QA? O progresso e a telemetria desta rodada serão zerados. Exporte a sessão atual antes, se quiser preservá-la.');
     if(!confirmed)return;

@@ -46,8 +46,11 @@
 .qa-session-meta{display:grid;gap:6px;margin:18px 0;font-size:.8rem;color:var(--muted);word-break:break-word}
 .qa-start-button{width:100%;margin-top:6px}
 .session-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 2px 16px;color:var(--muted);font-size:.74rem}
-.session-reset{border:1px solid #ccd5e2;background:#fff;border-radius:999px;padding:7px 10px;cursor:pointer;font:inherit;font-weight:800;color:#344054}
-@media (max-width:520px){.session-strip{align-items:flex-start;flex-direction:column}.session-reset{width:100%}}
+.session-actions{display:flex;align-items:center;gap:8px}
+.session-export,.session-reset{border-radius:999px;padding:7px 10px;cursor:pointer;font:inherit;font-weight:800}
+.session-export{font-size:.78rem}
+.session-reset{border:1px solid #ccd5e2;background:#fff;color:#344054}
+@media (max-width:520px){.session-strip{align-items:flex-start;flex-direction:column}.session-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}.session-export,.session-reset{width:100%}}
 
 .mission-rule{margin:14px 0;padding:12px 14px;border-radius:13px;background:#eef6ff;border:1px solid #cfe0f5;color:#24466f;line-height:1.45;font-size:.86rem}
 

@@ -72,7 +72,7 @@ export function assessRuntimeIntegrity(state, appVersion) {
 }
 
 export function buildQaExport(state,{
-  appVersion='HNK-A1-APP-ALPHA-0.2.0',
+  appVersion='HNK-A1-APP-ALPHA-0.2.1',
   languageVersion='HNK-A1-RC1-CANDIDATE',
   campaignVersion='HNK-A1-CAMPAIGN-V1',
   bossVersion='HNK-A1-FINAL-BOSS-V1'
