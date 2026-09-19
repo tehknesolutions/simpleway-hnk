@@ -38,6 +38,30 @@ const duplicate={...exportsList[0],exportedAt:'2026-09-19T23:00:00.000Z'};
 report=analyzeSessions([...exportsList,duplicate],annotations);
 assert.equal(report.sessions,7);
 
+// A second QA session from the same player is research data, not an eighth gate player.
+const repeatSession={
+  ...session(1,{completed:1,boss:false}),
+  sessionId:'SESSION-1-REPEAT',
+  exportedAt:'2026-09-20T10:00:00.000Z'
+};
+report=analyzeSessions([...exportsList,repeatSession],annotations);
+assert.equal(report.uniquePlayers,7);
+assert.equal(report.sessions,8);
+assert.equal(report.gateSessions,7);
+assert.equal(report.metrics.finalBossDefeatRate,100);
+
+// Wrong-version exports are visible as mismatches but excluded from the eligible gate cohort.
+const stale={
+  ...session(99),
+  appVersion:'HNK-A1-APP-ALPHA-OLD',
+  sessionId:'SESSION-OLD',
+  playerId:'PLAYER-OLD'
+};
+report=analyzeSessions([...exportsList,stale],annotations);
+assert.equal(report.uniquePlayers,7);
+assert.equal(report.eligibleSessions,7);
+assert.deepEqual(report.versionMismatches,['SESSION-OLD']);
+
 const assisted=Array.from({length:7},(_,i)=>session(i+1,{assisted:['L01_X','L02_X','L03_X','L04_X','L05_X','L06_X','L07_X']}));
 report=analyzeSessions(assisted,annotations);
 assert.ok(report.metrics.averageUnassistedCompletionRate<80);
