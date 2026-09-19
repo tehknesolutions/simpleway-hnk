@@ -41,7 +41,16 @@ export const lexemes = Object.freeze({
   VOMA: { id:'LEX_VOMA', form:'VOMA', function:'THIRD_PERSON_PLURAL_CANDIDATE', gIds:['G31','G04','G11','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   PELUKI: { id:'LEX_PELUKI', form:'PELUKI', function:'STUDY_PREDICATE_SCOPED', gIds:['G21','G02','G14','G05','G23','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   LENU: { id:'LEX_LENU', form:'LENU', function:'POSSESSIVE_LINKER_SCOPED', gIds:['G14','G02','G12','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  MAVERA: { id:'LEX_MAVERA', form:'MAVERA', function:'MOTHER_KINSHIP', gIds:['G11','G01','G31','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
+  MAVERA: { id:'LEX_MAVERA', form:'MAVERA', function:'MOTHER_KINSHIP', gIds:['G11','G01','G31','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  ERU: { id:'LEX_ERU', form:'ERU', function:'THIRD_PERSON_SINGULAR_CONTEXTUAL', gIds:['G02','G15','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  RUMI: { id:'LEX_RUMI', form:'RUMI', function:'GENERAL_LOCATIVE_RELATION_SCOPED', gIds:['G15','G05','G11','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  HAVORI: { id:'LEX_HAVORI', form:'HAVORI', function:'EXISTENCE_FRAME_HEAD', gIds:['G07','G01','G31','G04','G15','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  TUMERA: { id:'LEX_TUMERA', form:'TUMERA', function:'BATHROOM_PLACE', gIds:['G22','G05','G11','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  HAVENU: { id:'LEX_HAVENU', form:'HAVENU', function:'HOTEL_PLACE', gIds:['G07','G01','G31','G02','G12','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  MISERO: { id:'LEX_MISERO', form:'MISERO', function:'SMALL_DESCRIPTOR', gIds:['G11','G03','G26','G02','G15','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  LIKADO: { id:'LEX_LIKADO', form:'LIKADO', function:'LIKE_PREDICATE_SCOPED', gIds:['G14','G03','G23','G01','G19','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  SEVAI: { id:'LEX_SEVAI', form:'SEVAI', function:'PROXIMAL_DEICTIC_FRAME', gIds:['G26','G02','G31','G01','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KOPERA: { id:'LEX_KOPERA', form:'KOPERA', function:'CONTAINER_BOTTLE_SCOPED', gIds:['G23','G04','G21','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
 });
 
 export const constructions = Object.freeze([
@@ -200,6 +209,38 @@ export const constructions = Object.freeze([
     intent:'STATE_MY_MOTHER_WORKS',
     generalizes:false,
     guards:['COMPLEX_POSSESSIVE_NP_SUBJECT_SCOPED']
+  },
+  {
+    id:'A1_NEGATED_LOCATION_THIRD_PERSON_HOME',
+    pattern:['ERU','NE','RUMI','DOMERA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THIRD_PERSON_NOT_AT_HOME',
+    generalizes:false,
+    guards:['NEGATED_LOCATION_PATCH_SCOPED']
+  },
+  {
+    id:'A1_NEGATED_EXISTENCE_BATHROOM_HOTEL',
+    pattern:['NE','HAVORI','TUMERA','RUMI','HAVENU'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_NO_BATHROOM_AT_HOTEL',
+    generalizes:false,
+    guards:['NEGATED_EXISTENCE_PATCH_SCOPED']
+  },
+  {
+    id:'A1_BOOK_SMALL_DESCRIPTION',
+    pattern:['KAVESO','MISERO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'DESCRIBE_BOOK_SMALL',
+    generalizes:false,
+    guards:['PREDICATIVE_DESCRIPTION_ONLY','ATTRIBUTIVE_NP_NOT_LICENSED']
+  },
+  {
+    id:'A1_WANT_TWO_BOTTLES_WATER',
+    pattern:['AN','MORAKU','HIZEP','KOPERA','SAVETA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WANT_TWO_BOTTLES_WATER',
+    generalizes:false,
+    guards:['CONTAINER_MASS_CONTENT_SCOPED','MASS_NOUN_NOT_DIRECTLY_COUNTED']
   }
 ]);
 

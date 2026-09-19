@@ -21,5 +21,7 @@ jobs:
         run: npm run validate:a1-sprint1
       - name: Validate A1 World 2
         run: npm run validate:a1-sprint2
+      - name: Validate A1 World 3
+        run: npm run validate:a1-sprint3
       - name: Run governed repository suite
         run: npm test
