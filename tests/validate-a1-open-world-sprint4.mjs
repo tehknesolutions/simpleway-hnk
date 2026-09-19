@@ -116,3 +116,10 @@ assert.equal(campaignLevels[24].id,'L25_LOST');
 assert.equal(campaignLevels[30].id,'L31_MARKET_SURVIVAL');
 
 console.log('PASS HNK-A1-OPEN-WORLD-SPRINT4');
+
+const level28=WORLD_4.levels.find(l=>l.id==='L28_TOMORROWS_TRIP');
+assert.equal(level28.prompt.includes('Amanhã eu preciso'),true);
+assert.equal(level28.prompt.includes('Amanhã você precisa'),false);
+assert.equal(level28.tokenTray.includes('AN'),true);
+assert.equal(level28.tokenTray.includes('PA'),false);
+assert.equal(validateUtterance('TAMURI AN KORUME VEMI LOKANI KODERA.').status,'VALID');
