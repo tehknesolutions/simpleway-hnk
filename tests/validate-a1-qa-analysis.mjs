@@ -9,7 +9,7 @@ function session(i,{completed=32,assisted=[],boss=true}={}){
   const hints=Object.fromEntries(assisted.map(id=>[id,1]));
   return {
     schemaVersion:1,
-    appVersion:'HNK-A1-APP-ALPHA-0.1',
+    appVersion:'HNK-A1-APP-ALPHA-0.1.1',
     languageVersion:'HNK-A1-RC1-CANDIDATE',
     playerId:`PLAYER-${i}`,
     sessionId:`SESSION-${i}`,
