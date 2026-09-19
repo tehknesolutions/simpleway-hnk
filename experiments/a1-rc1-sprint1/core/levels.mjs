@@ -163,7 +163,96 @@ export const WORLD_2 = Object.freeze({
   ]
 });
 
-export const WORLDS = Object.freeze([WORLD_1,WORLD_2]);
+export const WORLD_3 = Object.freeze({
+  id:'WORLD_03_GRAMMAR_DUNGEON',
+  title:'The Grammar Dungeon',
+  subtitle:'Aprenda também onde o HNK RC1 não permite generalizar.',
+  levels:[
+    {
+      id:'L17_NE_TRAP', order:17, title:'NE Trap', mode:'contrast',
+      prompt:'Qual forma mantém a posição de NE no frame aprendido?',
+      choices:[
+        {id:'a',label:'AN NE ZAMI HNK.',correct:true,feedback:'VALID: NE precede o predicate frame neste padrão.'},
+        {id:'b',label:'AN ZAMI NE HNK.',correct:false,feedback:'ORDER ERROR: esta ordem não está licenciada.'}
+      ],
+      hints:['Compare com AN NE VALI.','NE não flutua livremente.','Escolha AN NE ZAMI HNK.'],
+      unlocks:['SKILL_NEGATION_CONTRAST'], xp:10
+    },
+    {
+      id:'L18_NUMBER_TRAP', order:18, title:'Number Trap', mode:'contrast',
+      prompt:'Qual ordem está licenciada para “dois livros” neste RC1?',
+      choices:[
+        {id:'a',label:'HIZEP KAVESO',correct:true,feedback:'VALID: CARDINAL + COUNTABLE_OBJECT no frame testado.'},
+        {id:'b',label:'KAVESO HIZEP',correct:false,feedback:'UNMAPPED: a ordem inversa não foi licenciada.'}
+      ],
+      hints:['O numeral entra antes do objeto neste frame.','Não assuma ordem livre.','HIZEP KAVESO.'],
+      unlocks:['SKILL_QUANTITY_CONTRAST'], xp:10
+    },
+    {
+      id:'L19_VEMI_TRAP', order:19, title:'VEMI Trap', mode:'contrast',
+      prompt:'Qual cadeia de ações está licenciada?',
+      choices:[
+        {id:'a',label:'AN KORUME VEMI LOKANI DOMERA.',correct:true,feedback:'VALID: VEMI conecta o predicate de controle à ação.'},
+        {id:'b',label:'AN KORUME LOKANI DOMERA.',correct:false,feedback:'MISSING LINK: este frame exige VEMI.'}
+      ],
+      hints:['Duas ações estão conectadas.','Use a skill da Forge.','KORUME + VEMI + LOKANI.'],
+      unlocks:['SKILL_VEMI_CONTRAST'], xp:10
+    },
+    {
+      id:'L20_WATER_TRAP', order:20, title:'The Water Trap', mode:'contrast',
+      prompt:'Qual forma expressa duas garrafas de água sem contar SAVETA diretamente?',
+      choices:[
+        {id:'a',label:'AN MORAKU HIZEP KOPERA SAVETA.',correct:true,feedback:'VALID: quantidade + recipiente + conteúdo massivo.'},
+        {id:'b',label:'AN MORAKU HIZEP SAVETA.',correct:false,feedback:'MASS-NOUN TRAP: SAVETA não foi licenciado como nome diretamente contável.'}
+      ],
+      hints:['Água é conteúdo massivo neste RC1.','Conte um recipiente, não SAVETA diretamente.','HIZEP KOPERA SAVETA.'],
+      unlocks:['KOPERA','SKILL_CONTAINER_MASS'], xp:10
+    },
+    {
+      id:'L21_LOCATION_SHADOW', order:21, title:'Location Shadow', mode:'contrast',
+      prompt:'Qual forma está licenciada para “ele/ela não está em casa”?',
+      choices:[
+        {id:'a',label:'ERU NE RUMI DOMERA.',correct:true,feedback:'VALID: patch de negação locativa escopado.'},
+        {id:'b',label:'ERU RUMI NE DOMERA.',correct:false,feedback:'ORDER ERROR: NE não foi licenciado depois de RUMI.'}
+      ],
+      hints:['RUMI possui um patch negativo próprio.','NE aparece antes de RUMI neste frame.','ERU NE RUMI DOMERA.'],
+      unlocks:['ERU','RUMI','SKILL_NEGATED_LOCATION'], xp:10
+    },
+    {
+      id:'L22_NOTHING_HERE', order:22, title:'Nothing Here', mode:'contrast',
+      prompt:'Qual padrão expressa “não há banheiro no hotel”?',
+      choices:[
+        {id:'a',label:'NE HAVORI TUMERA RUMI HAVENU.',correct:true,feedback:'VALID: existência negativa possui seu próprio padrão.'},
+        {id:'b',label:'HAVORI NE TUMERA RUMI HAVENU.',correct:false,feedback:'EXISTENCE TRAP: esta posição de NE não está licenciada.'}
+      ],
+      hints:['Existência não copia mecanicamente o frame pessoal.','O patch existencial começa por NE.','NE HAVORI TUMERA RUMI HAVENU.'],
+      unlocks:['HAVORI','TUMERA','HAVENU','SKILL_NEGATED_EXISTENCE'], xp:10
+    },
+    {
+      id:'L23_ADJECTIVE_DOOR', order:23, title:'The Adjective Door', mode:'contrast',
+      prompt:'Qual opção descreve corretamente o estado do RC1 para “livro pequeno” como NP interno?',
+      choices:[
+        {id:'a',label:'MISERO KAVESO já é um NP atributivo licenciado.',correct:false,feedback:'LOCKED: esta ordem atributiva não foi licenciada.'},
+        {id:'b',label:'KAVESO MISERO já é um NP atributivo licenciado.',correct:false,feedback:'TRAP: KAVESO MISERO é descrição predicativa no frame conhecido, não um NP atributivo livre.'},
+        {id:'c',label:'Nenhuma ordem atributiva está licenciada ainda.',correct:true,feedback:'BOUNDARY FOUND: use KAVESO MISERO como descrição separada; NP atributivo continua bloqueado.'}
+      ],
+      hints:['Uma frase descritiva não é automaticamente um NP.','KAVESO MISERO tem uso predicativo escopado.','A resposta correta é que o NP atributivo continua bloqueado.'],
+      unlocks:['MISERO','SKILL_ATTRIBUTIVE_BOUNDARY'], xp:10
+    },
+    {
+      id:'L24_QUESTION_TRAP', order:24, title:'The Question Trap', mode:'contrast',
+      prompt:'A forma “VOMA LIKADO SEVAI HAVENU KE?” já está licenciada como pergunta geral no RC1?',
+      choices:[
+        {id:'yes',label:'Sim. KE transforma qualquer sentença em pergunta.',correct:false,feedback:'OVERGENERALIZATION: KE não é universal no RC1.'},
+        {id:'no',label:'Não. Esta pergunta continua não licenciada.',correct:true,feedback:'BOUNDARY FOUND: KE permanece escopado aos frames interrogativos registrados.'}
+      ],
+      hints:['Lembre do Question Seal do World 1.','KE foi descoberto em frames específicos.','Não generalize KE para qualquer pessoa/predicado.'],
+      unlocks:['LIKADO','SEVAI','SKILL_QUESTION_BOUNDARY','WORLD_04_READY'], xp:25
+    }
+  ]
+});
+
+export const WORLDS = Object.freeze([WORLD_1,WORLD_2,WORLD_3]);
 export const campaignLevels = Object.freeze(WORLDS.flatMap(w=>w.levels));
 export const levelsById = new Map(campaignLevels.map(l=>[l.id,l]));
 export const worldByLevelId = new Map(WORLDS.flatMap(w=>w.levels.map(l=>[l.id,w])));
