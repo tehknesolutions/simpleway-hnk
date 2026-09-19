@@ -4,7 +4,7 @@ import { evaluateMission } from '../experiments/a1-rc1-sprint1/core/validator.mj
 import { FINAL_STAGE, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../experiments/a1-rc1-sprint1/core/levels.mjs';
 import { BOSS_VERSION, BOSS_OBJECTIVE_POOL, makeBossSeed, generateBossScenario } from '../experiments/a1-rc1-sprint1/core/final-boss.mjs';
 import { createPlayerState, hydratePlayerState, PLAYER_STATE_VERSION } from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
-import { QA_SCHEMA_VERSION, sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../experiments/a1-rc1-sprint1/core/telemetry.mjs';
+import { QA_SCHEMA_VERSION, sanitizeQaTokens, createQaEvent, appendQaEvent, assessRuntimeIntegrity, buildQaExport } from '../experiments/a1-rc1-sprint1/core/telemetry.mjs';
 
 assert.equal(WORLDS.length,5);
 assert.equal(FINAL_STAGE.finalStage,true);
@@ -101,6 +101,7 @@ const event=createQaEvent({
   levelId:'L32_A1_FINAL_BOSS',
   type:'MISSION_UTTERANCE',
   timestamp:'2026-09-19T12:00:00.000Z',
+  runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.3',
   seed:scenarioA.seedHash,
   inputTokens:sanitized,
   result:'VALID',
@@ -115,22 +116,32 @@ assert.deepEqual(event.inputTokens,['AN','ZAMI','HNK']);
 assert.equal(JSON.stringify(event).includes('PRIVATE_NAME'),false);
 
 let qaState=createPlayerState({playerId:'PLAYER-QA-FIXED',qaSessionId:'SESSION-FIXED'});
+qaState.qaSessionStartedAppVersion='HNK-A1-APP-ALPHA-0.1.3';
 qaState=appendQaEvent(qaState,event);
 assert.equal(qaState.telemetry.length,1);
 
 const exported=buildQaExport(qaState,{
-  appVersion:'HNK-A1-APP-ALPHA-0.1',
+  appVersion:'HNK-A1-APP-ALPHA-0.1.3',
   languageVersion:'HNK-A1-RC1-CANDIDATE',
   campaignVersion:'HNK-A1-CAMPAIGN-V1',
   bossVersion:BOSS_VERSION
 });
 assert.equal(exported.schemaVersion,QA_SCHEMA_VERSION);
-assert.equal(exported.appVersion,'HNK-A1-APP-ALPHA-0.1');
+assert.equal(exported.appVersion,'HNK-A1-APP-ALPHA-0.1.3');
 assert.equal(exported.languageVersion,'HNK-A1-RC1-CANDIDATE');
 assert.equal(exported.bossVersion,BOSS_VERSION);
 assert.equal(exported.playerId,'PLAYER-QA-FIXED');
 assert.equal(exported.sessionId,'SESSION-FIXED');
 assert.equal(exported.events.length,1);
+assert.equal(exported.runtimeIntegrity.status,'SINGLE_RUNTIME');
+assert.equal(exported.runtimeIntegrity.eligible,true);
+assert.deepEqual(exported.runtimeIntegrity.observedRuntimeAppVersions,['HNK-A1-APP-ALPHA-0.1.3']);
 assert.ok(Array.isArray(exported.summary.completedLevels));
+
+const mixedState=structuredClone(qaState);
+mixedState.telemetry.push({...event,eventId:'EVT-OLD',runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.2'});
+const mixedIntegrity=assessRuntimeIntegrity(mixedState,'HNK-A1-APP-ALPHA-0.1.3');
+assert.equal(mixedIntegrity.status,'MIXED_RUNTIME');
+assert.equal(mixedIntegrity.eligible,false);
 
 console.log('PASS HNK-A1-FINAL-BOSS-SPRINT5');
