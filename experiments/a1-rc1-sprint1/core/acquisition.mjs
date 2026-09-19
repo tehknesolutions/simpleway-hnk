@@ -142,8 +142,11 @@ export function deriveWeakIntents(state={}, levels=[], limit=6) {
 }
 
 export function adaptiveBossProfile(state={}, levels=[]) {
-  const weakIntents=deriveWeakIntents(state,levels,6);
-  const attempted=Object.values(state.attempts??{});
+  const preBossLevels=levels.filter(level=>level.order<32);
+  const weakIntents=deriveWeakIntents(state,preBossLevels,6);
+  const attempted=preBossLevels
+    .map(level=>state.attempts?.[level.id])
+    .filter(Boolean);
   const total=attempted.reduce((sum,a)=>sum+(a?.count??0),0);
   const correct=attempted.reduce((sum,a)=>sum+(a?.correct??0),0);
   const accuracy=total ? correct/total : 1;
