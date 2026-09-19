@@ -8,8 +8,9 @@ Deployment fingerprint:
 
 - app: `HNK-A1-APP-ALPHA-0.2.0`
 - runtime baseline commit: `7fa140e6aaaec0484e1be4911d6d606b46e8ff5f`
-- freeze-validation deploy artifact: `9946b2b98c85b482b9e24b39f7c50c64eb8fc3b3`
-- freeze-validation deployment: `3e1c8590-4780-45cd-951b-89f59693435b` (`SUCCESS`)
+- freeze metadata main commit: `b0a137941bf46b1790ff664860242cac65a4584e`
+- final Railway deploy artifact: `2449c6078da5153a29d619cbaa1fc920a873288f`
+- final Railway deployment: `5eaa7e95-8ddd-4531-8972-d9269f027391` (`SUCCESS`)
 
 The Railway artifact is packaging-only; it does not introduce new HNK grammar or vocabulary.
 
