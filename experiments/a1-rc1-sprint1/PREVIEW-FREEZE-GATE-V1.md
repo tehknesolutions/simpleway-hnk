@@ -95,3 +95,19 @@ SINGLE_RUNTIME
 READY_FOR_P01-P07
 CANON_PROMOTION = FALSE
 ```
+
+
+## Final publication fingerprint
+
+After the freeze metadata was merged, the frozen baseline was repackaged without runtime-code changes and published again.
+
+- freeze metadata main commit: `b0a137941bf46b1790ff664860242cac65a4584e`;
+- final deployment artifact: `2449c6078da5153a29d619cbaa1fc920a873288f`;
+- final Railway deployment: `5eaa7e95-8ddd-4531-8972-d9269f027391`;
+- final URL: `https://hnk-a1-alpha-020-freeze-production.up.railway.app`;
+- deployment status: **SUCCESS**;
+- healthcheck: **PASS**;
+- served release manifest: **FROZEN_HUMAN_QA_BASELINE / READY_FOR_P01-P07**;
+- runtime baseline remains `7fa140e6aaaec0484e1be4911d6d606b46e8ff5f`.
+
+This publication step changed packaging/freeze metadata only; the validated application/core runtime remains the frozen runtime baseline.
