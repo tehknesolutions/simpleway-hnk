@@ -2,7 +2,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-export const EXPECTED_APP='HNK-A1-APP-ALPHA-0.1';
+export const EXPECTED_APP='HNK-A1-APP-ALPHA-0.1.1';
 export const EXPECTED_LANGUAGE='HNK-A1-RC1-CANDIDATE';
 export const TOTAL_LEVELS=32;
 export const FINAL_BOSS_LEVEL='L32_A1_FINAL_BOSS';
