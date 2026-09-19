@@ -38,3 +38,13 @@
 
 .boss-seed{margin:18px 0 10px;padding:10px 12px;border-radius:12px;background:#181820;color:#fff;font-size:.82rem;letter-spacing:.03em}
 .boss-scenes{display:grid;gap:7px;margin:10px 0 18px;padding:15px;border-radius:16px;background:#fff3f4;border:1px solid #f1c8cd;color:#712b34;line-height:1.4;font-weight:750}
+
+.qa-start{margin-top:8vh;text-align:center}
+.qa-start .subtitle{max-width:520px;margin:0 auto}
+.qa-privacy{text-align:left;margin:22px 0;padding:16px;border-radius:14px;background:#eef4ff;color:#14305f;line-height:1.45}
+.qa-privacy p{margin:7px 0 0}
+.qa-session-meta{display:grid;gap:6px;margin:18px 0;font-size:.8rem;color:var(--muted);word-break:break-word}
+.qa-start-button{width:100%;margin-top:6px}
+.session-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 2px 16px;color:var(--muted);font-size:.74rem}
+.session-reset{border:1px solid #ccd5e2;background:#fff;border-radius:999px;padding:7px 10px;cursor:pointer;font:inherit;font-weight:800;color:#344054}
+@media (max-width:520px){.session-strip{align-items:flex-start;flex-direction:column}.session-reset{width:100%}}

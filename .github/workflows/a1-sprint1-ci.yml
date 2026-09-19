@@ -27,5 +27,9 @@ jobs:
         run: npm run validate:a1-sprint4
       - name: Validate A1 Final Boss
         run: npm run validate:a1-sprint5
+      - name: Validate A1 Alpha release
+        run: npm run validate:a1-release
+      - name: Build Alpha deploy artifact
+        run: npm run build:a1-alpha
       - name: Run governed repository suite
         run: npm test
