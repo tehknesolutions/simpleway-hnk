@@ -3,7 +3,7 @@ import { createPlayerState, hydratePlayerState, createAnonymousId, awardLevel, r
 import { validateDialogue, validateAgainstIntents, evaluateMission, tokenize } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mjs';
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
-import { createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
+import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
@@ -167,7 +167,7 @@ function logQaEvent(l,type,{input='',result=null,achieved=[],missing=[],seed=nul
     type,
     timestamp:new Date().toISOString(),
     seed,
-    inputTokens:tokenize(input).filter(token=>getLexeme(token)),
+    inputTokens:sanitizeQaTokens(tokenize(input),token=>Boolean(getLexeme(token))),
     result,
     achieved,
     missing,
