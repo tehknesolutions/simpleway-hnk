@@ -1,4 +1,4 @@
-export const QA_SCHEMA_VERSION = 2;
+export const QA_SCHEMA_VERSION = 3;
 
 export function sanitizeQaTokens(tokens=[], isKnown=()=>false) {
   return tokens.filter(token=>isKnown(token));
@@ -19,7 +19,8 @@ export function createQaEvent({
   missing=[],
   hintsUsed=0,
   codexUsed=false,
-  hearts=null
+  hearts=null,
+  acquisition=null
 }) {
   return {
     schemaVersion:QA_SCHEMA_VERSION,
@@ -37,7 +38,8 @@ export function createQaEvent({
     missing:[...missing],
     hintsUsed,
     codexUsed:Boolean(codexUsed),
-    hearts
+    hearts,
+    acquisition:acquisition ? structuredClone(acquisition) : null
   };
 }
 
@@ -70,7 +72,7 @@ export function assessRuntimeIntegrity(state, appVersion) {
 }
 
 export function buildQaExport(state,{
-  appVersion='HNK-A1-APP-ALPHA-0.1.3',
+  appVersion='HNK-A1-APP-ALPHA-0.2.0',
   languageVersion='HNK-A1-RC1-CANDIDATE',
   campaignVersion='HNK-A1-CAMPAIGN-V1',
   bossVersion='HNK-A1-FINAL-BOSS-V1'
@@ -92,7 +94,8 @@ export function buildQaExport(state,{
       completedCount:(state.completedLevels??[]).length,
       hintsUsed:{...(state.hintsUsed??{})},
       codexUsed:{...(state.codexUsed??{})},
-      attempts:structuredClone(state.attempts??{})
+      attempts:structuredClone(state.attempts??{}),
+      acquisition:structuredClone(state.acquisition??{})
     },
     events:structuredClone(state.telemetry??[])
   };
