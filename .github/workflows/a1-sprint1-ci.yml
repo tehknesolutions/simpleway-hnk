@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - 'experiments/a1-rc1-sprint1/**'
-      - 'tests/validate-a1-playable-core-sprint1.mjs'
+      - 'tests/validate-a1-*.mjs'
       - 'package.json'
       - '.github/workflows/a1-sprint1-ci.yml'
   workflow_dispatch:
@@ -25,5 +25,7 @@ jobs:
         run: npm run validate:a1-sprint3
       - name: Validate A1 World 4
         run: npm run validate:a1-sprint4
+      - name: Validate A1 Final Boss
+        run: npm run validate:a1-sprint5
       - name: Run governed repository suite
         run: npm test
