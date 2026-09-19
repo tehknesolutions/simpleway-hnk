@@ -40,6 +40,10 @@ const validCases=[
   ['AN LENU MAVERA VALI.','STATE_MY_MOTHER_WORKS']
 ];
 
+assert.equal(validateAgainstIntents('NEMA VALI.',['STATE_WE_WORK']).status,'VALID');
+assert.equal(validateAgainstIntents('VOMA VALI.',['STATE_THEY_WORK']).status,'VALID');
+assert.equal(validateAgainstIntents('VOMA NE VALI.',['STATE_THEY_NOT_WORK']).status,'VALID');
+
 for (const [input,intent] of validCases) {
   const result=validateAgainstIntents(input,[intent]);
   assert.equal(result.status,'VALID',input);
@@ -54,7 +58,6 @@ const invalidCases=[
   'AN KORUME LOKANI DOMERA.',
   'AN VEMI LOKANI DOMERA.',
   'NEMA TAMURI VALI.',
-  'VOMA VALI.',
   'AN MAVERA LENU VALI.',
   'AN LENU MAVERA GAVURI.'
 ];
