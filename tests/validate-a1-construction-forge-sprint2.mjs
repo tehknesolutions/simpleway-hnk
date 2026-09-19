@@ -5,9 +5,9 @@ import { WORLD_1, WORLD_2, campaignLevels, levelsById, worldByLevelId } from '..
 
 assert.equal(WORLD_1.levels.length,8);
 assert.equal(WORLD_2.levels.length,8);
-assert.equal(campaignLevels.length,16);
+assert.equal(campaignLevels.length,32);
 assert.deepEqual(WORLD_2.levels.map(l=>l.order),[9,10,11,12,13,14,15,16]);
-assert.equal(new Set(campaignLevels.map(l=>l.id)).size,16);
+assert.equal(new Set(campaignLevels.map(l=>l.id)).size,32);
 
 for (const level of WORLD_2.levels) {
   assert.equal(level.mode,'builder');
