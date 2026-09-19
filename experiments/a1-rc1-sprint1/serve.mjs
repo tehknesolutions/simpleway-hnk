@@ -9,7 +9,13 @@ const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8'
 
 const server=http.createServer(async(req,res)=>{
   try{
-    const requested=req.url==='/'?'/web/index.html':req.url.split('?')[0];
+    const pathname=req.url.split('?')[0];
+    if(pathname==='/'){
+      res.writeHead(302,{location:'/web/','cache-control':'no-store'});
+      res.end();
+      return;
+    }
+    const requested=pathname==='/web/'?'/web/index.html':pathname;
     const safe=normalize(requested).replace(/^([.][.][/\\])+/, '');
     const path=join(root,safe);
     const info=await stat(path);
