@@ -56,11 +56,19 @@ export function validateDialogue(utterances, requiredIntents) {
   const results = utterances.map(u => validateUtterance(u));
   const intents = results.filter(r=>r.status==='VALID').map(r=>r.construction.intent);
   const missing = requiredIntents.filter(i=>!intents.includes(i));
+  const orderValid = missing.length === 0
+    && requiredIntents.every((intent,index)=>intents[index]===intent);
   return {
-    status: missing.length ? 'COMMUNICATIVE_PARTIAL' : 'VALID',
+    status: missing.length
+      ? 'COMMUNICATIVE_PARTIAL'
+      : orderValid
+        ? 'VALID'
+        : 'INVALID_INTENT_ORDER',
     results,
     intents,
     missing,
-    communicativeSuccess: missing.length === 0
+    expectedOrder:[...requiredIntents],
+    orderValid,
+    communicativeSuccess: missing.length === 0 && orderValid
   };
 }
