@@ -28,6 +28,10 @@ function worldNumber(w){return Math.max(1,WORLDS.findIndex(x=>x.id===w.id)+1);}
 function worldLabel(w){return w.finalStage?'FINAL BOSS':`World ${worldNumber(w)}`;}
 function bossScenario(){return generateBossScenario(makeBossSeed(state.playerId,state.qaSessionId));}
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
+function sessionVersionWarning(){
+  if(state.qaSessionStatus==='NEW' || state.qaSessionStartedAppVersion===APP_VERSION) return '';
+  return `<div class="runtime-warning"><strong>⚠ MIXED_RUNTIME</strong> Esta sessão começou em outra versão ou não possui versão inicial verificável. Ela não contará para P01–P07. Use <strong>Nova sessão</strong> para iniciar um teste elegível na ${escapeHtml(APP_VERSION)}.</div>`;
+}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
 function renderQaStart(){
@@ -71,9 +75,10 @@ function render(){
         <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/32</span></div>
       </header>
       <div class="session-strip">
-        <span>${escapeHtml(state.qaSessionId)}</span>
+        <span>${escapeHtml(state.qaSessionId)} · ${escapeHtml(APP_VERSION)}</span>
         <button class="session-reset" id="newQaSessionBtn">🧪 Nova sessão</button>
       </div>
+      ${sessionVersionWarning()}
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
         <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · ${worldLabel(w)}</div>
