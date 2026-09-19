@@ -169,13 +169,18 @@ function addMissionUtterance(l){
   const mission=evaluateMission(missionUtterances,l.objectives);
   const latest=mission.results.at(-1);
   if(latest?.status==='UNKNOWN_LEXEME'){
+    state=recordAttempt(state,l.id,false);
+    state=penalizeHeart(state,.5);
+    save();
     render();
-    feedback(`🔎 Palavra ainda não reconhecida: ${latest.unknown.join(', ')}.`,'info');
+    feedback(`🔎 Palavra ainda não reconhecida: ${latest.unknown.join(', ')}. −½ ❤️`,'info');
     return;
   }
   if(latest?.status==='UNMAPPED_CONSTRUCTION'){
+    state=recordAttempt(state,l.id,false);
+    save();
     render();
-    feedback('🧪 UNMAPPED CONSTRUCTION: a tentativa foi registrada sem perda de coração.','info');
+    feedback('🧪 UNMAPPED CONSTRUCTION: sem perda de coração, mas a tentativa deixa de contar como first-try.','info');
     return;
   }
   if(mission.status==='MISSION_COMPLETE'){
