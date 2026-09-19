@@ -1,5 +1,5 @@
 import { WORLD_1, levelsById } from '../core/levels.mjs';
-import { createPlayerState, awardLevel, recordAttempt, recordHint, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
+import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
 import { validateDialogue } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
 
@@ -117,7 +117,7 @@ function submitDialogue(l){
 
 function complete(l){
   const attempts=state.attempts[l.id]?.count??1;
-  const persistedHints=state.hintsUsed[l.id]??0;
+  const persistedHints=getHintCount(state,l.id);
   state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:persistedHints,firstTry:attempts===1});
   save();
   feedback('✅ CLEAR! Skill desbloqueada e XP registrado.','ok');
@@ -138,7 +138,7 @@ function feedback(message,type='info'){
 }
 
 function showHint(l){
-  const used=state.hintsUsed[l.id]??0;
+  const used=getHintCount(state,l.id);
   if(used>=l.hints.length)return;
   state=recordHint(state,l.id);
   save();
@@ -148,7 +148,7 @@ function showHint(l){
 function renderHints(l){
   const el=document.querySelector('#hints');
   if(!el)return;
-  const used=state.hintsUsed[l.id]??0;
+  const used=getHintCount(state,l.id);
   el.innerHTML=l.hints.slice(0,used).map((h,i)=>`<div class="hint-box">💡 Hint ${i+1}: ${escapeHtml(h)}</div>`).join('');
 }
 
