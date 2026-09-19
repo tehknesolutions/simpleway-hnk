@@ -1,5 +1,9 @@
 export const QA_SCHEMA_VERSION = 1;
 
+export function sanitizeQaTokens(tokens=[], isKnown=()=>false) {
+  return tokens.filter(token=>isKnown(token));
+}
+
 export function createQaEvent({
   eventId,
   sessionId,
