@@ -67,7 +67,17 @@ A repeated learner failure can be a learning, vocabulary, UX, content, or gramma
 
 Promotion metrics are player-based, not raw-session-based.
 
-- Only exports matching `HNK-A1-APP-ALPHA-0.1.2` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
+- Only exports matching `HNK-A1-APP-ALPHA-0.1.3` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
 - A player is identified only by the anonymous `PLAYER-QA-...` identifier.
 - If the same player starts several QA sessions, only that player's **first eligible session** contributes to the promotion percentages.
 - Later sessions remain research evidence but cannot inflate the seven-player sample, completion rate, or Final Boss defeat rate.
+
+
+## Runtime integrity rule
+
+A gate-eligible session must be **SINGLE_RUNTIME** from start to export.
+
+- `qaSessionStartedAppVersion` must equal `HNK-A1-APP-ALPHA-0.1.3`.
+- Every telemetry event must include `runtimeAppVersion = HNK-A1-APP-ALPHA-0.1.3`.
+- Any missing runtime version, older/newer event version, or mixed version set marks the session `MIXED_RUNTIME`.
+- `MIXED_RUNTIME` sessions remain useful for smoke/debug research but contribute nothing to P01–P07 promotion metrics.

@@ -2,7 +2,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-export const EXPECTED_APP='HNK-A1-APP-ALPHA-0.1.2';
+export const EXPECTED_APP='HNK-A1-APP-ALPHA-0.1.3';
 export const EXPECTED_LANGUAGE='HNK-A1-RC1-CANDIDATE';
 export const TOTAL_LEVELS=32;
 export const FINAL_BOSS_LEVEL='L32_A1_FINAL_BOSS';
@@ -28,13 +28,42 @@ export function normalizeSessions(exportsList=[]){
   return [...bySession.values()];
 }
 
+export function inspectRuntimeIntegrity(session){
+  const events=Array.isArray(session?.events)?session.events:[];
+  const eventVersions=[...new Set(events.map(e=>e?.runtimeAppVersion).filter(Boolean))];
+  const missingEventVersionCount=events.filter(e=>!e?.runtimeAppVersion).length;
+  const started=session?.runtimeIntegrity?.sessionStartedAppVersion ?? null;
+  const declaredStatus=session?.runtimeIntegrity?.status ?? null;
+  const singleRuntime=
+    session?.appVersion===EXPECTED_APP &&
+    session?.languageVersion===EXPECTED_LANGUAGE &&
+    started===EXPECTED_APP &&
+    eventVersions.length===1 &&
+    eventVersions[0]===EXPECTED_APP &&
+    missingEventVersionCount===0 &&
+    declaredStatus==='SINGLE_RUNTIME';
+  return {
+    status:singleRuntime?'SINGLE_RUNTIME':'MIXED_RUNTIME',
+    eligible:singleRuntime,
+    sessionStartedAppVersion:started,
+    observedRuntimeAppVersions:eventVersions,
+    missingEventVersionCount
+  };
+}
+
 export function analyzeSessions(exportsList=[],annotations=[]){
   const sessions=normalizeSessions(exportsList);
   const versionMismatches=sessions.filter(s=>
     s.appVersion!==EXPECTED_APP || s.languageVersion!==EXPECTED_LANGUAGE
   ).map(s=>s.sessionId);
+  const runtimeIntegrityBySession=Object.fromEntries(
+    sessions.map(s=>[s.sessionId,inspectRuntimeIntegrity(s)])
+  );
+  const mixedRuntimeSessions=sessions
+    .filter(s=>runtimeIntegrityBySession[s.sessionId]?.status==='MIXED_RUNTIME')
+    .map(s=>s.sessionId);
   const eligibleSessions=sessions.filter(s=>
-    s.appVersion===EXPECTED_APP && s.languageVersion===EXPECTED_LANGUAGE && s.playerId
+    s.playerId && runtimeIntegrityBySession[s.sessionId]?.eligible
   );
   const players=new Set(eligibleSessions.map(s=>s.playerId));
   const firstSessionByPlayer=new Map();
@@ -60,7 +89,8 @@ export function analyzeSessions(exportsList=[],annotations=[]){
       bossDefeated:completed.has(FINAL_BOSS_LEVEL),
       assistedLevels:assisted.length,
       unmappedEvents:events.filter(e=>e.result==='UNMAPPED_CONSTRUCTION').length,
-      unknownLexemeEvents:events.filter(e=>e.result==='UNKNOWN_LEXEME').length
+      unknownLexemeEvents:events.filter(e=>e.result==='UNKNOWN_LEXEME').length,
+      runtimeIntegrity:runtimeIntegrityBySession[s.sessionId]?.status??'MIXED_RUNTIME'
     };
   });
 
@@ -111,6 +141,8 @@ export function analyzeSessions(exportsList=[],annotations=[]){
     eligibleSessions:eligibleSessions.length,
     gateSessions:gateSessions.length,
     versionMismatches,
+    mixedRuntimeSessions,
+    runtimeIntegrityBySession,
     gateSessionIds:[...gateSessionIds],
     perSession,
     totals:{

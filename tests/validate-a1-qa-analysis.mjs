@@ -9,13 +9,20 @@ function session(i,{completed=32,assisted=[],boss=true}={}){
   const hints=Object.fromEntries(assisted.map(id=>[id,1]));
   return {
     schemaVersion:1,
-    appVersion:'HNK-A1-APP-ALPHA-0.1.2',
+    appVersion:'HNK-A1-APP-ALPHA-0.1.3',
     languageVersion:'HNK-A1-RC1-CANDIDATE',
     playerId:`PLAYER-${i}`,
     sessionId:`SESSION-${i}`,
     exportedAt:`2026-09-19T1${i}:00:00.000Z`,
+    runtimeIntegrity:{
+      status:'SINGLE_RUNTIME',
+      eligible:true,
+      sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.1.3',
+      observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.1.3'],
+      missingEventVersionCount:0
+    },
     summary:{completedLevels:levels,hintsUsed:hints,codexUsed:{},attempts:{}},
-    events:[]
+    events:[{runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.3',result:'COMPLETE'}]
   };
 }
 
@@ -61,6 +68,38 @@ report=analyzeSessions([...exportsList,stale],annotations);
 assert.equal(report.uniquePlayers,7);
 assert.equal(report.eligibleSessions,7);
 assert.deepEqual(report.versionMismatches,['SESSION-OLD']);
+
+// A top-level current version is not enough: old/missing event versions invalidate the session.
+const mixed={
+  ...session(98),
+  sessionId:'SESSION-MIXED',
+  playerId:'PLAYER-MIXED',
+  runtimeIntegrity:{
+    status:'MIXED_RUNTIME',
+    eligible:false,
+    sessionStartedAppVersion:'HNK-A1-APP-ALPHA-0.1.3',
+    observedRuntimeAppVersions:['HNK-A1-APP-ALPHA-0.1.2','HNK-A1-APP-ALPHA-0.1.3'],
+    missingEventVersionCount:0
+  },
+  events:[
+    {runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.2',result:'COMPLETE'},
+    {runtimeAppVersion:'HNK-A1-APP-ALPHA-0.1.3',result:'COMPLETE'}
+  ]
+};
+report=analyzeSessions([...exportsList,mixed],annotations);
+assert.equal(report.uniquePlayers,7);
+assert.equal(report.eligibleSessions,7);
+assert.ok(report.mixedRuntimeSessions.includes('SESSION-MIXED'));
+
+const missingVersion={
+  ...session(97),
+  sessionId:'SESSION-MISSING-VERSION',
+  playerId:'PLAYER-MISSING',
+  events:[{result:'COMPLETE'}]
+};
+report=analyzeSessions([...exportsList,missingVersion],annotations);
+assert.equal(report.eligibleSessions,7);
+assert.ok(report.mixedRuntimeSessions.includes('SESSION-MISSING-VERSION'));
 
 const assisted=Array.from({length:7},(_,i)=>session(i+1,{assisted:['L01_X','L02_X','L03_X','L04_X','L05_X','L06_X','L07_X']}));
 report=analyzeSessions(assisted,annotations);
