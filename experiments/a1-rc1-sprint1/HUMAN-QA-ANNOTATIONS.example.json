@@ -1,0 +1,18 @@
+{
+  "annotations": [
+    {
+      "playerId": "PLAYER-QA-EXAMPLE",
+      "skill": "VEMI",
+      "classification": "PASS",
+      "note": "Learner used the linker correctly after instruction."
+    },
+    {
+      "playerId": "PLAYER-QA-EXAMPLE",
+      "skill": "RUMI",
+      "classification": "UX_PROBLEM",
+      "note": "Meaning was understood; button wording caused the hesitation."
+    }
+  ],
+  "allowedSkills": ["PERSON","NE","VEMI","NUMBER_NOUN","RUMI","HAVORI","COMMUNICATION_REPAIR"],
+  "allowedClassifications": ["PASS","LEARNING_PROBLEM","VOCABULARY_PROBLEM","GRAMMAR_PROBLEM","UX_PROBLEM","CONTENT_PROBLEM","UNMAPPED_CONSTRUCTION"]
+}
