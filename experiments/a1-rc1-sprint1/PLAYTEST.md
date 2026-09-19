@@ -1,12 +1,12 @@
-# HNK A1 Alpha 0.2.0 — Playtest Instructions
+# HNK A1 Alpha 0.2.1 — Pre-Cohort Playtest Instructions
 
 ## Live Alpha
 
-**Playtest URL:** https://hnk-a1-alpha-020-freeze-production.up.railway.app
+**Cohort URL:** pending Alpha 0.2.1 refreeze. The previous 0.2.0 URL is not eligible for P01–P07.
 
 Deployment fingerprint:
 
-- app: `HNK-A1-APP-ALPHA-0.2.0`
+- app: `HNK-A1-APP-ALPHA-0.2.1`
 - runtime baseline commit: `7fa140e6aaaec0484e1be4911d6d606b46e8ff5f`
 - freeze metadata main commit: `b0a137941bf46b1790ff664860242cac65a4584e`
 - final Railway deploy artifact: `2449c6078da5153a29d619cbaa1fc920a873288f`
@@ -30,7 +30,7 @@ The Railway artifact is packaging-only; it does not introduce new HNK grammar or
 
 ## Finish
 
-After Level 32, click **Exportar Human QA** and return the generated JSON file to the researcher.
+Use **Exportar sessão** whenever the playtest ends, even if the participant stops before Level 32. After Level 32, the final export remains available as well. Return the generated JSON file to the researcher.
 
 ## New test session
 
@@ -38,10 +38,10 @@ Use **Nova sessão** only when starting a genuinely new playtest run. It resets 
 
 ## Status
 
-- App: HNK-A1-APP-ALPHA-0.2.0
+- App: HNK-A1-APP-ALPHA-0.2.1
 - Language: HNK-A1-RC1-CANDIDATE
 - 32/32 playable
-- Frozen Human-QA baseline · READY FOR P01–P07
+- Pre-cohort candidate · HOLD until Alpha 0.2.1 refreeze
 - Not CANON
 - Not external CEFR certification
 
@@ -65,4 +65,4 @@ The analyzer computes automated metrics but never infers `GRAMMAR_PROBLEM` from 
 
 ## Runtime integrity
 
-Do not begin the P01–P07 cohort on a version that may be hotfixed mid-session. Alpha 0.2.0 records the runtime version at session start and on every QA event. If a participant crosses a runtime update, the export is marked `MIXED_RUNTIME` and is automatically excluded from promotion metrics.
+Do not begin the P01–P07 cohort until Alpha 0.2.1 is refrozen. Alpha 0.2.1 records the runtime version at session start and on every QA event. If a participant crosses a runtime update, the export is marked `MIXED_RUNTIME` and is automatically excluded from promotion metrics.
