@@ -1,11 +1,12 @@
 import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, FINAL_STAGE, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
-import { createPlayerState, hydratePlayerState, createAnonymousId, beginQaSession, startNewQaSession, markQaSessionComplete, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
+import { createPlayerState, hydratePlayerState, createAnonymousId, beginQaSession, startNewQaSession, markQaSessionComplete, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, hasUsedCodex, penalizeHeart, recordRecallAttempt, beginReview, isReviewActive, completeReview } from '../core/player-state.mjs';
 import { validateDialogue, validateAgainstIntents, evaluateMission, tokenize } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mjs';
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
 import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
+import { ACQUISITION_ENGINE_VERSION, acquisitionStage, presentationPolicy, shuffleSurface, buildCodexCueTray, canUseHelp, getRecallAttemptCount, getDueReviewLevelIds, adaptiveBossProfile } from '../core/acquisition.mjs';
 
-const APP_VERSION='HNK-A1-APP-ALPHA-0.1.3';
+const APP_VERSION='HNK-A1-APP-ALPHA-0.2.0';
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
 let state=loadState();
@@ -26,19 +27,44 @@ function level(){return levelsById.get(state.currentLevelId)??WORLD_1.levels[0];
 function currentWorld(l=level()){return worldByLevelId.get(l.id)??WORLD_1;}
 function worldNumber(w){return Math.max(1,WORLDS.findIndex(x=>x.id===w.id)+1);}
 function worldLabel(w){return w.finalStage?'FINAL BOSS':`World ${worldNumber(w)}`;}
-function bossScenario(){return generateBossScenario(makeBossSeed(state.playerId,state.qaSessionId));}
+function bossScenario(){
+  const profile=adaptiveBossProfile(state,campaignLevels);
+  return generateBossScenario(makeBossSeed(state.playerId,state.qaSessionId),{
+    objectiveCount:profile.objectiveCount,
+    priorityIntents:profile.weakIntents
+  });
+}
 function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
 function sessionVersionWarning(){
   if(state.qaSessionStatus==='NEW' || state.qaSessionStartedAppVersion===APP_VERSION) return '';
   return `<div class="runtime-warning"><strong>⚠ MIXED_RUNTIME</strong> Esta sessão começou em outra versão ou não possui versão inicial verificável. Ela não contará para P01–P07. Use <strong>Nova sessão</strong> para iniciar um teste elegível na ${escapeHtml(APP_VERSION)}.</div>`;
 }
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function acquisitionPanel(l){
+  const policy=presentationPolicy(l.order);
+  const reviewActive=isReviewActive(state,l.id);
+  const due=reviewActive?[]:getDueReviewLevelIds(state,campaignLevels,l.order,2);
+  const reviewButtons=due.map(id=>{
+    const target=levelsById.get(id);
+    return target?`<button class="review-chip" data-review-level="${escapeHtml(id)}">↻ ${escapeHtml(target.title)}</button>`:'';
+  }).join('');
+  return `
+    <div class="acquisition-panel">
+      <div><strong>🧠 ${escapeHtml(policy.stage)}</strong> · ${escapeHtml(ACQUISITION_ENGINE_VERSION)}</div>
+      <small>Opções e trays variam deterministicamente. Ajuda só abre após uma tentativa de recall.</small>
+      ${reviewActive
+        ? '<div class="review-active">🔁 Revisão espaçada ativa — sem XP extra.</div>'
+        : reviewButtons
+          ? `<div class="review-row"><span>Revisões devidas:</span>${reviewButtons}</div>`
+          : ''}
+    </div>`;
+}
 
 function renderQaStart(){
   app.innerHTML=`
     <div class="shell">
       <section class="card qa-start">
-        <div class="eyebrow">HNK A1 · ALPHA 0.1.3</div>
+        <div class="eyebrow">HNK A1 · ALPHA 0.2.0</div>
         <h1 class="title">Human QA Playtest</h1>
         <p class="subtitle">32 desafios. Seus dados ficam locais e usam apenas IDs anônimos.</p>
         <div class="qa-privacy">
@@ -67,7 +93,7 @@ function render(){
   }
   const l=level();
   const w=currentWorld(l);
-  const finished=state.completedLevels.includes(l.id);
+  const finished=state.completedLevels.includes(l.id) && !isReviewActive(state,l.id);
   app.innerHTML=`
     <div class="shell">
       <header class="topbar">
@@ -84,6 +110,7 @@ function render(){
         <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · ${worldLabel(w)}</div>
         <h1 class="title">${escapeHtml(l.title)}</h1>
         <p class="subtitle">${escapeHtml(w.subtitle)}</p>
+        ${acquisitionPanel(l)}
         ${l.npc?`<div class="npc">${escapeHtml(l.npc)}</div>`:''}
         <div class="prompt">${escapeHtml(l.prompt)}</div>
         <div id="interaction"></div>
@@ -98,6 +125,7 @@ function render(){
     </div>`;
   renderInteraction(l);
   renderHints(l);
+  document.querySelectorAll('[data-review-level]').forEach(btn=>btn.addEventListener('click',()=>startSpacedReview(btn.dataset.reviewLevel,l)));
   document.querySelector('#hintBtn')?.addEventListener('click',()=>showHint(l));
   document.querySelector('#nextBtn')?.addEventListener('click',()=>goNext(l));
   document.querySelector('#newQaSessionBtn')?.addEventListener('click',()=>{
@@ -113,7 +141,7 @@ function render(){
 
 function renderInteraction(l){
   const root=document.querySelector('#interaction');
-  if(state.completedLevels.includes(l.id)){
+  if(state.completedLevels.includes(l.id) && !isReviewActive(state,l.id)){
     root.innerHTML='<div class="feedback ok">✅ Fase concluída. Skill registrada no estado local.</div>';
     return;
   }
@@ -122,6 +150,7 @@ function renderInteraction(l){
     const scenario=boss?bossScenario():null;
     const objectives=boss?scenario.objectives:l.objectives;
     const tokenTray=boss?scenario.tokenTray:l.tokenTray;
+    const codexTokens=buildCodexCueTray(tokenTray,state,l);
     const mission=evaluateMission(missionUtterances,objectives);
     root.innerHTML=`
       ${boss?`<div class="boss-seed">👹 Seed: <strong>${escapeHtml(scenario.seedHash)}</strong> · ${scenario.objectiveCount} objetivos</div><div class="boss-scenes">${scenario.scenes.map(s=>`<div>• ${escapeHtml(s)}</div>`).join('')}</div>`:''}
@@ -143,7 +172,7 @@ function renderInteraction(l){
         <button class="secondary" id="undoMissionUtterance">↩ Remover última</button>
         <button class="secondary" id="codexToggle">📖 ${codexOpen?'Fechar':'Abrir'} Codex</button>
       </div>
-      ${codexOpen?`<div class="codex-tray"><div class="codex-note">Abrir o Codex conta como assistência, mas nunca bloqueia a missão.</div><div class="token-tray">${tokenTray.map(t=>`<button class="token" data-codex-token="${t}">${t}</button>`).join('')}</div></div>`:''}
+      ${codexOpen?`<div class="codex-tray"><div class="codex-note">Codex de aquisição: pistas parciais, nunca a bandeja completa da resposta. Abrir conta como assistência.</div><div class="token-tray">${codexTokens.map(t=>`<button class="token" data-codex-token="${t}">${t}</button>`).join('')}</div></div>`:''}
     `;
     const input=root.querySelector('#missionInput');
     input?.addEventListener('input',e=>{missionDraft=e.target.value;});
@@ -159,27 +188,31 @@ function renderInteraction(l){
     return;
   }
   if(l.mode==='contrast'){
-    root.innerHTML='<div class="choices">'+l.choices.map(c=>`<button class="choice" data-contrast="${c.id}">${escapeHtml(c.label)}</button>`).join('')+'</div>';
+    const choices=shuffleSurface(l.choices,state,l.id,'CONTRAST_CHOICES');
+    root.innerHTML='<div class="choices">'+choices.map(c=>`<button class="choice" data-contrast="${c.id}">${escapeHtml(c.label)}</button>`).join('')+'</div>';
     root.querySelectorAll('[data-contrast]').forEach(btn=>btn.addEventListener('click',()=>answerContrast(l,btn.dataset.contrast)));
     return;
   }
   if(l.mode==='choice'){
-    root.innerHTML='<div class="choices">'+l.choices.map(c=>`<button class="choice" data-choice="${c.id}">${escapeHtml(c.label)}</button>`).join('')+'</div>';
+    const choices=shuffleSurface(l.choices,state,l.id,'CHOICES');
+    root.innerHTML='<div class="choices">'+choices.map(c=>`<button class="choice" data-choice="${c.id}">${escapeHtml(c.label)}</button>`).join('')+'</div>';
     root.querySelectorAll('[data-choice]').forEach(btn=>btn.addEventListener('click',()=>answerChoice(l,btn.dataset.choice)));
     return;
   }
   if(l.mode==='mapping'){
-    root.innerHTML=`<div class="mapping">
-      <button class="map-card" data-map="correct">PUMEK → Sim<br>MUNASE → Não</button>
-      <button class="map-card" data-map="wrong">PUMEK → Não<br>MUNASE → Sim</button>
-    </div>`;
+    const mappingChoices=shuffleSurface([
+      {id:'correct',label:'PUMEK → Sim<br>MUNASE → Não'},
+      {id:'wrong',label:'PUMEK → Não<br>MUNASE → Sim'}
+    ],state,l.id,'MAPPING_CHOICES');
+    root.innerHTML='<div class="mapping">'+mappingChoices.map(c=>`<button class="map-card" data-map="${c.id}">${c.label}</button>`).join('')+'</div>';
     root.querySelectorAll('[data-map]').forEach(btn=>btn.addEventListener('click',()=>answerMapping(l,btn.dataset.map==='correct')));
     return;
   }
   if(l.mode==='builder'){
+    const tray=shuffleSurface(l.tokenTray,state,l.id,'BUILDER_TRAY');
     root.innerHTML=`
       <div class="composer" id="composer">${composer.map(t=>`<span class="token">${escapeHtml(t)}</span>`).join('')}</div>
-      <div class="token-tray">${l.tokenTray.map(t=>`<button class="token" data-token="${t}">${t}</button>`).join('')}</div>
+      <div class="token-tray">${tray.map(t=>`<button class="token" data-token="${t}">${t}</button>`).join('')}</div>
       <div class="actions">
         <button class="secondary" id="undoToken">↩ Desfazer</button>
         <button class="secondary" id="clearTokens">Limpar</button>
@@ -192,10 +225,11 @@ function renderInteraction(l){
     return;
   }
   if(l.mode==='dialogue'){
+    const tray=shuffleSurface(l.tokenTray,state,l.id,'DIALOGUE_TRAY');
     root.innerHTML=`
       <div class="utterances" id="utterances">${dialogue.map(u=>`<div class="utterance">${escapeHtml(u)}</div>`).join('')}</div>
       <div class="composer" id="composer">${composer.map(t=>`<span class="token">${escapeHtml(t)}</span>`).join('')}</div>
-      <div class="token-tray">${l.tokenTray.map(t=>`<button class="token" data-token="${t}">${t}</button>`).join('')}</div>
+      <div class="token-tray">${tray.map(t=>`<button class="token" data-token="${t}">${t}</button>`).join('')}</div>
       <div class="actions">
         <button class="secondary" id="undoToken">↩ Desfazer token</button>
         <button class="secondary" id="commitUtterance">✓ Fechar fala</button>
@@ -228,13 +262,24 @@ function logQaEvent(l,type,{input='',result=null,achieved=[],missing=[],seed=nul
     missing,
     hintsUsed:getHintCount(state,l.id),
     codexUsed:hasUsedCodex(state,l.id),
-    hearts:state.hearts
+    hearts:state.hearts,
+    acquisition:{
+      stage:acquisitionStage(l.order),
+      recallAttempts:getRecallAttemptCount(state,l.id),
+      reviewActive:isReviewActive(state,l.id),
+      dueReviewLevelIds:getDueReviewLevelIds(state,campaignLevels,l.order,2)
+    }
   });
   state=appendQaEvent(state,event);
   save();
 }
 
 function toggleCodex(l){
+  if(!codexOpen && !canUseHelp(state,l.id)){
+    logQaEvent(l,'HELP_BLOCKED_RECALL_REQUIRED',{result:'CODEX'});
+    feedback('🧠 Primeiro tente lembrar e responder por conta própria. Depois o Codex libera pistas parciais.','info');
+    return;
+  }
   if(!codexOpen){
     state=recordCodexUse(state,l.id);
     logQaEvent(l,'CODEX_OPENED',{seed:l.mode==='final_boss'?bossScenario().seedHash:null});
@@ -250,6 +295,7 @@ function addMissionUtterance(l,objectives=l.objectives,scenario=null){
     feedback('Digite uma fala em HNK antes de usar.','info');
     return;
   }
+  state=recordRecallAttempt(state,l.id);
   missionUtterances.push(utterance);
   missionDraft='';
   const mission=evaluateMission(missionUtterances,objectives);
@@ -293,6 +339,7 @@ function addMissionUtterance(l,objectives=l.objectives,scenario=null){
 }
 
 function answerContrast(l,id){
+  state=recordRecallAttempt(state,l.id);
   const selected=l.choices.find(c=>c.id===id);
   const correct=Boolean(selected?.correct);
   state=recordAttempt(state,l.id,correct);
@@ -305,6 +352,7 @@ function answerContrast(l,id){
 }
 
 function answerChoice(l,id){
+  state=recordRecallAttempt(state,l.id);
   const selected=l.choices.find(c=>c.id===id);
   const correct=Boolean(selected?.correct);
   state=recordAttempt(state,l.id,correct);
@@ -314,6 +362,7 @@ function answerChoice(l,id){
 }
 
 function answerMapping(l,correct){
+  state=recordRecallAttempt(state,l.id);
   state=recordAttempt(state,l.id,correct);
   logQaEvent(l,'MAPPING_ATTEMPT',{result:correct?'CORRECT':'INCORRECT'});
   if(correct) complete(l);
@@ -321,6 +370,7 @@ function answerMapping(l,correct){
 }
 
 function submitBuilder(l){
+  state=recordRecallAttempt(state,l.id);
   const utterance=composer.join(' ');
   const result=validateAgainstIntents(utterance,[l.targetIntent]);
   const correct=result.status==='VALID';
@@ -343,6 +393,7 @@ function submitBuilder(l){
 }
 
 function submitDialogue(l){
+  state=recordRecallAttempt(state,l.id);
   if(composer.length){dialogue.push(composer.join(' '));composer=[];}
   const result=validateDialogue(dialogue,l.requiredIntents);
   const correct=result.status==='VALID';
@@ -361,6 +412,17 @@ function submitDialogue(l){
 }
 
 function complete(l){
+  if(isReviewActive(state,l.id)){
+    const returnLevel=levelsById.get(state.acquisition?.reviewReturnLevelId);
+    const reviewAtOrder=returnLevel?.order ?? l.order;
+    logQaEvent(l,'SPACED_REVIEW_COMPLETE',{result:'COMPLETE'});
+    state=completeReview(state,l.id,reviewAtOrder);
+    composer=[];dialogue=[];missionUtterances=[];missionDraft='';codexOpen=false;
+    save();
+    feedback('🔁 Revisão concluída. Retornando à missão atual.','ok');
+    setTimeout(render,300);
+    return;
+  }
   const attempts=state.attempts[l.id]?.count??1;
   const assistance=getAssistanceCount(state,l.id);
   state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:assistance,firstTry:attempts===1});
@@ -385,6 +447,11 @@ function feedback(message,type='info'){
 }
 
 function showHint(l){
+  if(!canUseHelp(state,l.id)){
+    logQaEvent(l,'HELP_BLOCKED_RECALL_REQUIRED',{result:'HINT'});
+    feedback('🧠 Faça uma tentativa de recall antes de abrir a primeira dica.','info');
+    return;
+  }
   const used=getHintCount(state,l.id);
   if(used>=l.hints.length)return;
   state=recordHint(state,l.id);
@@ -398,6 +465,16 @@ function renderHints(l){
   if(!el)return;
   const used=getHintCount(state,l.id);
   el.innerHTML=l.hints.slice(0,used).map((h,i)=>`<div class="hint-box">💡 Hint ${i+1}: ${escapeHtml(h)}</div>`).join('');
+}
+
+function startSpacedReview(levelId,returnLevel){
+  const target=levelsById.get(levelId);
+  if(!target)return;
+  state=beginReview(state,levelId,returnLevel.id);
+  composer=[];dialogue=[];missionUtterances=[];missionDraft='';codexOpen=false;
+  logQaEvent(target,'SPACED_REVIEW_STARTED',{result:`RETURN_${returnLevel.id}`});
+  save();
+  render();
 }
 
 function downloadQaExport(){

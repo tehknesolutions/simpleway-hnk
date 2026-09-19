@@ -1,0 +1,21 @@
+{
+  "visualSystem": "HNK-A1-VISUAL-SYSTEM-V1",
+  "assetStatus": "PEDAGOGICAL_VISUAL_ONLY",
+  "linguisticAuthority": "NONE",
+  "style": "bright colorful anime/cartoon fantasy academy; recurring learner, guide and owl mascot",
+  "notes": [
+    "Visual assets support comprehension, recall and contextual learning.",
+    "Images do not create, validate, generalize or promote HNK lexicon or grammar.",
+    "Any visible decorative symbol or text inside an image has no linguistic authority."
+  ],
+  "world1": {
+    "L01_FIRST_CONTACT": "./world1/L01-first-contact.webp",
+    "L02_THE_GIFT": "./world1/L02-the-gift.webp",
+    "L03_TWO_DOORS": "./world1/L03-two-doors.webp",
+    "L04_THE_SPEAKER": "./world1/L04-the-speaker.webp",
+    "L05_THE_SHADOW": "./world1/L05-the-shadow.webp",
+    "L06_YESTERDAYS_ECHO": "./world1/L06-yesterdays-echo.webp",
+    "L07_QUESTION_SEAL": "./world1/L07-question-seal.webp",
+    "L08_FIRST_CONVERSATION": "./world1/L08-first-conversation.webp"
+  }
+}
