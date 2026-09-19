@@ -1,6 +1,6 @@
-import { WORLD_1, WORLD_2, WORLD_3, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
-import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
-import { validateDialogue, validateAgainstIntents } from '../core/validator.mjs';
+import { WORLD_1, WORLD_2, WORLD_3, WORLD_4, WORLDS, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
+import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, getAssistanceCount, recordCodexUse, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
+import { validateDialogue, validateAgainstIntents, evaluateMission } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
 
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
@@ -8,6 +8,9 @@ const app=document.querySelector('#app');
 let state=loadState();
 let composer=[];
 let dialogue=[];
+let missionUtterances=[];
+let missionDraft='';
+let codexOpen=false;
 
 function loadState(){
   try{
@@ -30,7 +33,7 @@ function render(){
     <div class="shell">
       <header class="topbar">
         <div><div class="brand">HNK A1 · ${escapeHtml(w.title.toUpperCase())}</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
-        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/24</span></div>
+        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/31</span></div>
       </header>
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
@@ -44,7 +47,7 @@ function render(){
         <div class="hints" id="hints"></div>
         <div class="footer-actions">
           <button class="secondary" id="hintBtn">💡 Dica</button>
-          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Ver checkpoint':'Próxima fase →'}</button>`:''}
+          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Entrar no Open World →':l.order===31?'Ver checkpoint':'Próxima fase →'}</button>`:''}
         </div>
         <div class="governance">Runtime: <strong>${escapeHtml(RUNTIME_STATUS)}</strong>. Conteúdo do A1 Lab não promove automaticamente léxico ou gramática a CANON.</div>
       </section>
@@ -59,6 +62,41 @@ function renderInteraction(l){
   const root=document.querySelector('#interaction');
   if(state.completedLevels.includes(l.id)){
     root.innerHTML='<div class="feedback ok">✅ Fase concluída. Skill registrada no estado local.</div>';
+    return;
+  }
+  if(l.mode==='open_world'){
+    const mission=evaluateMission(missionUtterances,l.objectives);
+    root.innerHTML=`
+      <div class="mission-objectives">
+        ${l.objectives.map(o=>{
+          const achieved=mission.achieved.includes(o.id)||mission.optionalAchieved.includes(o.id);
+          const optional=o.required===false?' · bônus':'';
+          return `<div class="mission-objective ${achieved?'done':''}"><span>${achieved?'✅':'⬜'}</span><span>${escapeHtml(o.label)}${optional}</span></div>`;
+        }).join('')}
+      </div>
+      <div class="utterances">
+        ${mission.results.map(r=>`<div class="utterance mission-line"><span>${escapeHtml(r.utterance)}</span><small>${escapeHtml(r.status)}</small></div>`).join('')}
+      </div>
+      <label class="mission-input-label" for="missionInput">Sua fala em HNK</label>
+      <input id="missionInput" class="mission-input" autocomplete="off" spellcheck="false" value="${escapeHtml(missionDraft)}" placeholder="Digite uma fala..." />
+      <div class="actions">
+        <button class="primary" id="addMissionUtterance">🗣️ Usar fala</button>
+        <button class="secondary" id="undoMissionUtterance">↩ Remover última</button>
+        <button class="secondary" id="codexToggle">📖 ${codexOpen?'Fechar':'Abrir'} Codex</button>
+      </div>
+      ${codexOpen?`<div class="codex-tray"><div class="codex-note">Abrir o Codex conta como assistência, mas nunca bloqueia a missão.</div><div class="token-tray">${l.tokenTray.map(t=>`<button class="token" data-codex-token="${t}">${t}</button>`).join('')}</div></div>`:''}
+    `;
+    const input=root.querySelector('#missionInput');
+    input?.addEventListener('input',e=>{missionDraft=e.target.value;});
+    input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addMissionUtterance(l);}});
+    root.querySelector('#addMissionUtterance')?.addEventListener('click',()=>addMissionUtterance(l));
+    root.querySelector('#undoMissionUtterance')?.addEventListener('click',()=>{missionUtterances.pop();render();});
+    root.querySelector('#codexToggle')?.addEventListener('click',()=>toggleCodex(l));
+    root.querySelectorAll('[data-codex-token]').forEach(btn=>btn.addEventListener('click',()=>{
+      missionDraft=(missionDraft+' '+btn.dataset.codexToken).trim();
+      render();
+      queueMicrotask(()=>document.querySelector('#missionInput')?.focus());
+    }));
     return;
   }
   if(l.mode==='contrast'){
@@ -108,6 +146,56 @@ function renderInteraction(l){
     root.querySelector('#undoToken')?.addEventListener('click',()=>{composer.pop();render();});
     root.querySelector('#commitUtterance')?.addEventListener('click',()=>{if(composer.length){dialogue.push(composer.join(' '));composer=[];render();}});
     root.querySelector('#submitDialogue')?.addEventListener('click',()=>submitDialogue(l));
+  }
+}
+
+function toggleCodex(l){
+  if(!codexOpen){
+    state=recordCodexUse(state,l.id);
+    save();
+  }
+  codexOpen=!codexOpen;
+  render();
+}
+
+function addMissionUtterance(l){
+  const utterance=missionDraft.trim();
+  if(!utterance){
+    feedback('Digite uma fala em HNK antes de usar.','info');
+    return;
+  }
+  missionUtterances.push(utterance);
+  missionDraft='';
+  const mission=evaluateMission(missionUtterances,l.objectives);
+  const latest=mission.results.at(-1);
+  if(latest?.status==='UNKNOWN_LEXEME'){
+    state=recordAttempt(state,l.id,false);
+    state=penalizeHeart(state,.5);
+    save();
+    render();
+    feedback(`🔎 Palavra ainda não reconhecida: ${latest.unknown.join(', ')}. −½ ❤️`,'info');
+    return;
+  }
+  if(latest?.status==='UNMAPPED_CONSTRUCTION'){
+    state=recordAttempt(state,l.id,false);
+    save();
+    render();
+    feedback('🧪 UNMAPPED CONSTRUCTION: sem perda de coração, mas a tentativa deixa de contar como first-try.','info');
+    return;
+  }
+  if(mission.status==='MISSION_COMPLETE'){
+    state=recordAttempt(state,l.id,true);
+    complete(l);
+    missionUtterances=[];
+    missionDraft='';
+    codexOpen=false;
+    return;
+  }
+  render();
+  if(mission.status==='MISSION_PARTIAL'){
+    feedback(`🧭 Objetivo parcial. Ainda faltam: ${mission.missing.join(', ')}.`,'info');
+  }else{
+    feedback('🧭 A fala é válida, mas ainda não resolveu um objetivo obrigatório desta missão.','info');
   }
 }
 
@@ -172,8 +260,8 @@ function submitDialogue(l){
 
 function complete(l){
   const attempts=state.attempts[l.id]?.count??1;
-  const persistedHints=getHintCount(state,l.id);
-  state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:persistedHints,firstTry:attempts===1});
+  const assistance=getAssistanceCount(state,l.id);
+  state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:assistance,firstTry:attempts===1});
   save();
   feedback('✅ CLEAR! Skill desbloqueada e XP registrado.','ok');
   setTimeout(render,300);
@@ -208,15 +296,15 @@ function renderHints(l){
 }
 
 function goNext(l){
-  if(l.order===24){
-    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 3 CLEARED</strong><br>Grammar Dungeon completo: você aprendeu tanto construções válidas quanto fronteiras explícitas do RC1.</div>`;
+  if(l.order===31){
+    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 4 CLEARED</strong><br>Open World completo: 31 fases jogáveis. O próximo gate é o Final Boss.</div>`;
     return;
   }
   const idx=campaignLevels.findIndex(x=>x.id===l.id);
   const next=campaignLevels[idx+1];
   if(next) state.currentLevelId=next.id;
   state.hearts=5;
-  composer=[];dialogue=[];
+  composer=[];dialogue=[];missionUtterances=[];missionDraft='';codexOpen=false;
   save();render();
 }
 

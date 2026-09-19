@@ -24,3 +24,14 @@
 .governance{font-size:.78rem;color:var(--muted);margin-top:18px;padding-top:14px;border-top:1px solid #edf0f4}
 .mapping{display:grid;gap:10px}.map-card{border:1px solid #d8e0ea;border-radius:14px;padding:14px;background:#fafcff;cursor:pointer;font-weight:800}
 @media (max-width:520px){.topbar{align-items:flex-start;flex-direction:column}.stats{width:100%;justify-content:space-between}.card{padding:18px}.footer-actions{flex-direction:column}}
+
+.mission-objectives{display:grid;gap:8px;margin:16px 0}
+.mission-objective{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid #d8e0ea;border-radius:12px;background:#fafcff;color:#465467;font-weight:750}
+.mission-objective.done{background:#e8f7ef;border-color:#b9e3ca;color:#11633c}
+.mission-input-label{display:block;margin:16px 0 6px;font-size:.82rem;font-weight:900;color:#344054;text-transform:uppercase;letter-spacing:.06em}
+.mission-input{width:100%;border:2px solid #cbd5e1;border-radius:14px;padding:14px 15px;font:inherit;font-weight:800;text-transform:uppercase;background:#fff;outline:none}
+.mission-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,87,216,.1)}
+.mission-line{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.mission-line small{font-size:.66rem;color:var(--muted);font-weight:900}
+.codex-tray{margin-top:14px;padding:14px;border-radius:14px;background:#f2f6ff;border:1px solid #d8e4fb}
+.codex-note{font-size:.8rem;color:#465467;font-weight:700;margin-bottom:8px}

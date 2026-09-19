@@ -50,7 +50,14 @@ export const lexemes = Object.freeze({
   MISERO: { id:'LEX_MISERO', form:'MISERO', function:'SMALL_DESCRIPTOR', gIds:['G11','G03','G26','G02','G15','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   LIKADO: { id:'LEX_LIKADO', form:'LIKADO', function:'LIKE_PREDICATE_SCOPED', gIds:['G14','G03','G23','G01','G19','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   SEVAI: { id:'LEX_SEVAI', form:'SEVAI', function:'PROXIMAL_DEICTIC_FRAME', gIds:['G26','G02','G31','G01','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  KOPERA: { id:'LEX_KOPERA', form:'KOPERA', function:'CONTAINER_BOTTLE_SCOPED', gIds:['G23','G04','G21','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
+  KOPERA: { id:'LEX_KOPERA', form:'KOPERA', function:'CONTAINER_BOTTLE_SCOPED', gIds:['G23','G04','G21','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  DARUVI: { id:'LEX_DARUVI', form:'DARUVI', function:'REQUEST_ROUTE_FORMULA_SCOPED', gIds:['G19','G01','G15','G05','G31','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KODERA: { id:'LEX_KODERA', form:'KODERA', function:'STATION_PLACE', gIds:['G23','G04','G19','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KURAVI: { id:'LEX_KURAVI', form:'KURAVI', function:'UNDERSTAND_PREDICATE_SCOPED', gIds:['G23','G05','G15','G01','G31','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  LURAVO: { id:'LEX_LURAVO', form:'LURAVO', function:'POLITENESS_FORMULA', gIds:['G14','G05','G15','G01','G31','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  REVATI: { id:'LEX_REVATI', form:'REVATI', function:'REQUEST_REPEAT_FORMULA', gIds:['G15','G02','G31','G01','G22','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KUVAN: { id:'LEX_KUVAN', form:'KUVAN', function:'WHERE_SCOPED', gIds:['G23','G05','G31','G01','G12'], authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
+  KADURI: { id:'LEX_KADURI', form:'KADURI', function:'REQUEST_PRICE_FORMULA', gIds:['G23','G01','G19','G05','G15','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
 });
 
 export const constructions = Object.freeze([
@@ -241,6 +248,74 @@ export const constructions = Object.freeze([
     intent:'STATE_WANT_TWO_BOTTLES_WATER',
     generalizes:false,
     guards:['CONTAINER_MASS_CONTENT_SCOPED','MASS_NOUN_NOT_DIRECTLY_COUNTED']
+  },
+  {
+    id:'A1_ROUTE_TO_STATION',
+    pattern:['DARUVI','KODERA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'REQUEST_ROUTE_STATION',
+    generalizes:false,
+    guards:['DARUVI_PLACE_FORMULA_SCOPED']
+  },
+  {
+    id:'A1_NOT_UNDERSTAND_SELF',
+    pattern:['AN','NE','KURAVI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'SIGNAL_NONUNDERSTANDING',
+    generalizes:false
+  },
+  {
+    id:'A1_POLITENESS_FORMULA',
+    pattern:['LURAVO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'POLITENESS',
+    generalizes:false
+  },
+  {
+    id:'A1_REQUEST_REPEAT',
+    pattern:['REVATI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'REQUEST_REPEAT',
+    generalizes:false
+  },
+  {
+    id:'A1_TOMORROW_NEED_GO_STATION',
+    pattern:['TAMURI','AN','KORUME','VEMI','LOKANI','KODERA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_TOMORROW_NEED_GO_STATION',
+    generalizes:false,
+    guards:['TEMPORAL_ACTION_CHAIN_EXACT_FRAME']
+  },
+  {
+    id:'A1_LOCATE_MY_BOOK',
+    pattern:['AN','LENU','KAVESO','RUMI','KUVAN','KE'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'REQUEST_LOCATION_MY_BOOK',
+    generalizes:false,
+    guards:['POSSESSIVE_NP_LOCATION_WH_SCOPED','KE_NOT_GENERALIZED']
+  },
+  {
+    id:'A1_DEICTIC_BOOK',
+    pattern:['SEVAI','KAVESO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'IDENTIFY_THIS_BOOK',
+    generalizes:false,
+    guards:['DEICTIC_NP_SCOPED']
+  },
+  {
+    id:'A1_WANT_TWO_BOOKS',
+    pattern:['AN','MORAKU','HIZEP','KAVESO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WANT_TWO_BOOKS',
+    generalizes:false,
+    guards:['WANT_COUNTED_OBJECT_SCOPED']
+  },
+  {
+    id:'A1_REQUEST_PRICE',
+    pattern:['KADURI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'REQUEST_PRICE',
+    generalizes:false
   }
 ]);
 

@@ -10,6 +10,7 @@ export function createPlayerState() {
     perfectLevels: [],
     unlocked: [],
     hintsUsed: {},
+    codexUsed: {},
     attempts: {},
     achievements: []
   };
@@ -40,13 +41,29 @@ export function recordAttempt(state, levelId, correct) {
 }
 
 export function getHintCount(state, levelId) {
-  return state.hintsUsed[levelId] ?? 0;
+  return state.hintsUsed?.[levelId] ?? 0;
 }
 
 export function recordHint(state, levelId) {
   const next = structuredClone(state);
+  next.hintsUsed ??= {};
   next.hintsUsed[levelId] = (next.hintsUsed[levelId] ?? 0) + 1;
   return next;
+}
+
+export function hasUsedCodex(state, levelId) {
+  return Boolean(state.codexUsed?.[levelId]);
+}
+
+export function recordCodexUse(state, levelId) {
+  const next = structuredClone(state);
+  next.codexUsed ??= {};
+  next.codexUsed[levelId] = true;
+  return next;
+}
+
+export function getAssistanceCount(state, levelId) {
+  return getHintCount(state, levelId) + (hasUsedCodex(state, levelId) ? 1 : 0);
 }
 
 export function penalizeHeart(state, amount=1) {
