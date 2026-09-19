@@ -75,7 +75,7 @@ export const constructions = Object.freeze([
   {
     id:'A1_NEG_VALI_SELF',
     pattern:['AN','NE','VALI'],
-    authority:[A.RECOVERED,A.VALIDATED],
+    authority:[A.CANDIDATE,A.LOCKED],
     intent:'STATE_NOT_WORK_SCOPED',
     generalizes:false
   },
