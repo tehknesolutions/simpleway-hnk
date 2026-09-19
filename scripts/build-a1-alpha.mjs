@@ -18,7 +18,7 @@ const original=await readFile(resolve(source,'web/index.html'),'utf8');
 const rootIndex=original
   .replace('./styles.css','./web/styles.css')
   .replace('./app.mjs','./web/app.mjs')
-  .replace('<title>HNK A1 — The Awakening</title>','<title>HNK A1 — Human QA Alpha 0.2.0</title>');
+  .replace(/<title>.*?<\/title>/,'<title>HNK A1 — Human QA Alpha 0.2.1</title>');
 await writeFile(resolve(out,'index.html'),rootIndex);
 
-console.log('BUILD HNK-A1-APP-ALPHA-0.2.0 -> dist/a1');
+console.log('BUILD HNK-A1-APP-ALPHA-0.2.1 -> dist/a1');

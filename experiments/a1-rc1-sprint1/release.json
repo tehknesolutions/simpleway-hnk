@@ -1,5 +1,5 @@
 {
-  "appVersion": "HNK-A1-APP-ALPHA-0.2.0",
+  "appVersion": "HNK-A1-APP-ALPHA-0.2.1",
   "languageVersion": "HNK-A1-RC1-CANDIDATE",
   "campaignVersion": "HNK-A1-CAMPAIGN-V1",
   "bossVersion": "HNK-A1-FINAL-BOSS-V1",
@@ -10,8 +10,9 @@
   "canonPromotion": false,
   "externalCefrCertification": false,
   "acquisitionEngineVersion": "HNK-A1-ACQUISITION-ENGINE-V1",
-  "acquisitionStatus": "FROZEN_HUMAN_QA_BASELINE",
-  "humanQaCohort": "READY_FOR_P01-P07",
-  "freezeGate": "PREVIEW_FREEZE_GATE_V1_PASS",
-  "runtimeBaselineCommit": "7fa140e6aaaec0484e1be4911d6d606b46e8ff5f"
+  "acquisitionStatus": "PRE_COHORT_VALIDATION",
+  "humanQaCohort": "HOLD_UNTIL_0.2.1_FREEZE",
+  "freezeGate": "REFREEZE_REQUIRED_AFTER_PARTIAL_EXPORT_FIX",
+  "runtimeBaselineCommit": null,
+  "blockingFix": "PARTIAL_SESSION_EXPORT"
 }

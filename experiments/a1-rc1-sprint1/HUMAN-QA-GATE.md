@@ -67,7 +67,7 @@ A repeated learner failure can be a learning, vocabulary, UX, content, or gramma
 
 Promotion metrics are player-based, not raw-session-based.
 
-- Only exports matching `HNK-A1-APP-ALPHA-0.2.0` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
+- Only exports matching `HNK-A1-APP-ALPHA-0.2.1` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
 - A player is identified only by the anonymous `PLAYER-QA-...` identifier.
 - If the same player starts several QA sessions, only that player's **first eligible session** contributes to the promotion percentages.
 - Later sessions remain research evidence but cannot inflate the seven-player sample, completion rate, or Final Boss defeat rate.
@@ -77,8 +77,8 @@ Promotion metrics are player-based, not raw-session-based.
 
 A gate-eligible session must be **SINGLE_RUNTIME** from start to export.
 
-- `qaSessionStartedAppVersion` must equal `HNK-A1-APP-ALPHA-0.2.0`.
-- Every telemetry event must include `runtimeAppVersion = HNK-A1-APP-ALPHA-0.2.0`.
+- `qaSessionStartedAppVersion` must equal `HNK-A1-APP-ALPHA-0.2.1`.
+- Every telemetry event must include `runtimeAppVersion = HNK-A1-APP-ALPHA-0.2.1`.
 - Any missing runtime version, older/newer event version, or mixed version set marks the session `MIXED_RUNTIME`.
 - `MIXED_RUNTIME` sessions remain useful for smoke/debug research but contribute nothing to P01–P07 promotion metrics.
 
@@ -113,3 +113,12 @@ After the 0.2.0 freeze, any blocking runtime bug pauses the cohort and requires 
 - HNK linguistic authority changes: 0.
 
 Any runtime-code change after this freeze pauses P01–P07 and requires a new app-version baseline. Documentation-only changes do not invalidate already exported SINGLE_RUNTIME sessions.
+
+
+## Alpha 0.2.1 refreeze requirement
+
+The cohort-launch audit found that Alpha 0.2.0 exposed Human QA export only after Level 32. That would exclude early-stop/failure sessions from ordinary collection and bias the gate metrics.
+
+Alpha 0.2.1 adds persistent partial-session export. P01–P07 is therefore **HOLD** until the exact 0.2.1 runtime completes a new Preview Freeze Gate.
+
+This is a QA instrumentation/runtime change only. It does not alter HNK linguistic authority.
