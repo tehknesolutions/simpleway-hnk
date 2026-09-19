@@ -348,6 +348,7 @@ function complete(l){
   const attempts=state.attempts[l.id]?.count??1;
   const assistance=getAssistanceCount(state,l.id);
   state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:assistance,firstTry:attempts===1});
+  if(l.order===32) state=markQaSessionComplete(state);
   logQaEvent(l,'LEVEL_COMPLETE',{result:'COMPLETE',seed:l.mode==='final_boss'?bossScenario().seedHash:null});
   save();
   feedback('✅ CLEAR! Skill desbloqueada e XP registrado.','ok');
@@ -398,8 +399,6 @@ function downloadQaExport(){
 
 function goNext(l){
   if(l.order===32){
-    state=markQaSessionComplete(state);
-    save();
     downloadQaExport();
     document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 A1 SURVIVOR</strong><br>32/32 concluídos. Export Human QA gerado para esta sessão anônima.</div>`;
     return;
