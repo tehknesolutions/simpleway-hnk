@@ -51,13 +51,13 @@ export const lexemes = Object.freeze({
   LIKADO: { id:'LEX_LIKADO', form:'LIKADO', function:'LIKE_PREDICATE_SCOPED', gIds:['G14','G03','G23','G01','G19','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   SEVAI: { id:'LEX_SEVAI', form:'SEVAI', function:'PROXIMAL_DEICTIC_FRAME', gIds:['G26','G02','G31','G01','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   KOPERA: { id:'LEX_KOPERA', form:'KOPERA', function:'CONTAINER_BOTTLE_SCOPED', gIds:['G23','G04','G21','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  DARUVI: { id:'LEX_DARUVI', form:'DARUVI', function:'REQUEST_ROUTE_FORMULA_SCOPED', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  KODERA: { id:'LEX_KODERA', form:'KODERA', function:'STATION_PLACE', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  KURAVI: { id:'LEX_KURAVI', form:'KURAVI', function:'UNDERSTAND_PREDICATE_SCOPED', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  LURAVO: { id:'LEX_LURAVO', form:'LURAVO', function:'POLITENESS_FORMULA', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  REVATI: { id:'LEX_REVATI', form:'REVATI', function:'REQUEST_REPEAT_FORMULA', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  KUVAN: { id:'LEX_KUVAN', form:'KUVAN', function:'WHERE_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
-  KADURI: { id:'LEX_KADURI', form:'KADURI', function:'REQUEST_PRICE_FORMULA', authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
+  DARUVI: { id:'LEX_DARUVI', form:'DARUVI', function:'REQUEST_ROUTE_FORMULA_SCOPED', gIds:['G19','G01','G15','G05','G31','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KODERA: { id:'LEX_KODERA', form:'KODERA', function:'STATION_PLACE', gIds:['G23','G04','G19','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KURAVI: { id:'LEX_KURAVI', form:'KURAVI', function:'UNDERSTAND_PREDICATE_SCOPED', gIds:['G23','G05','G15','G01','G31','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  LURAVO: { id:'LEX_LURAVO', form:'LURAVO', function:'POLITENESS_FORMULA', gIds:['G14','G05','G15','G01','G31','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  REVATI: { id:'LEX_REVATI', form:'REVATI', function:'REQUEST_REPEAT_FORMULA', gIds:['G15','G02','G31','G01','G22','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KUVAN: { id:'LEX_KUVAN', form:'KUVAN', function:'WHERE_SCOPED', gIds:['G23','G05','G31','G01','G12'], authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
+  KADURI: { id:'LEX_KADURI', form:'KADURI', function:'REQUEST_PRICE_FORMULA', gIds:['G23','G01','G19','G05','G15','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
 });
 
 export const constructions = Object.freeze([
