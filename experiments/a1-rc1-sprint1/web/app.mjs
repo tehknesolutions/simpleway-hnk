@@ -6,7 +6,6 @@ import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
 const app=document.querySelector('#app');
 let state=loadState();
-let revealedHints=0;
 let composer=[];
 let dialogue=[];
 
@@ -118,7 +117,8 @@ function submitDialogue(l){
 
 function complete(l){
   const attempts=state.attempts[l.id]?.count??1;
-  state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:revealedHints,firstTry:attempts===1});
+  const persistedHints=state.hintsUsed[l.id]??0;
+  state=awardLevel(state,l,{perfect:state.hearts===5,hintsUsed:persistedHints,firstTry:attempts===1});
   save();
   feedback('✅ CLEAR! Skill desbloqueada e XP registrado.','ok');
   setTimeout(render,300);
@@ -138,8 +138,8 @@ function feedback(message,type='info'){
 }
 
 function showHint(l){
-  if(revealedHints>=l.hints.length)return;
-  revealedHints++;
+  const used=state.hintsUsed[l.id]??0;
+  if(used>=l.hints.length)return;
   state=recordHint(state,l.id);
   save();
   render();
@@ -148,7 +148,8 @@ function showHint(l){
 function renderHints(l){
   const el=document.querySelector('#hints');
   if(!el)return;
-  el.innerHTML=l.hints.slice(0,revealedHints).map((h,i)=>`<div class="hint-box">💡 Hint ${i+1}: ${escapeHtml(h)}</div>`).join('');
+  const used=state.hintsUsed[l.id]??0;
+  el.innerHTML=l.hints.slice(0,used).map((h,i)=>`<div class="hint-box">💡 Hint ${i+1}: ${escapeHtml(h)}</div>`).join('');
 }
 
 function goNext(l){
@@ -158,7 +159,7 @@ function goNext(l){
   }
   state.currentLevelId=nextLevelId(WORLD_1,l.id);
   state.hearts=5;
-  revealedHints=0;composer=[];dialogue=[];
+  composer=[];dialogue=[];
   save();render();
 }
 
