@@ -1,0 +1,12 @@
+{
+  "appVersion": "HNK-A1-APP-ALPHA-0.1.3",
+  "languageVersion": "HNK-A1-RC1-CANDIDATE",
+  "campaignVersion": "HNK-A1-CAMPAIGN-V1",
+  "bossVersion": "HNK-A1-FINAL-BOSS-V1",
+  "runtimeStatus": "EXPERIMENTAL_HUMAN_QA_ONLY",
+  "playableLevels": 32,
+  "worlds": 4,
+  "finalBoss": true,
+  "canonPromotion": false,
+  "externalCefrCertification": false
+}
