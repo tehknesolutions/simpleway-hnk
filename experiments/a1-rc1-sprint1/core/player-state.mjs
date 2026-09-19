@@ -39,6 +39,10 @@ export function recordAttempt(state, levelId, correct) {
   return next;
 }
 
+export function getHintCount(state, levelId) {
+  return state.hintsUsed[levelId] ?? 0;
+}
+
 export function recordHint(state, levelId) {
   const next = structuredClone(state);
   next.hintsUsed[levelId] = (next.hintsUsed[levelId] ?? 0) + 1;
