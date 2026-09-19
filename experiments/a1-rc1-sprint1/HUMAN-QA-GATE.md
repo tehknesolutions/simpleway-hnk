@@ -67,7 +67,7 @@ A repeated learner failure can be a learning, vocabulary, UX, content, or gramma
 
 Promotion metrics are player-based, not raw-session-based.
 
-- Only exports matching `HNK-A1-APP-ALPHA-0.1.3` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
+- Only exports matching `HNK-A1-APP-ALPHA-0.2.0` + `HNK-A1-RC1-CANDIDATE` are gate-eligible.
 - A player is identified only by the anonymous `PLAYER-QA-...` identifier.
 - If the same player starts several QA sessions, only that player's **first eligible session** contributes to the promotion percentages.
 - Later sessions remain research evidence but cannot inflate the seven-player sample, completion rate, or Final Boss defeat rate.
@@ -77,7 +77,24 @@ Promotion metrics are player-based, not raw-session-based.
 
 A gate-eligible session must be **SINGLE_RUNTIME** from start to export.
 
-- `qaSessionStartedAppVersion` must equal `HNK-A1-APP-ALPHA-0.1.3`.
-- Every telemetry event must include `runtimeAppVersion = HNK-A1-APP-ALPHA-0.1.3`.
+- `qaSessionStartedAppVersion` must equal `HNK-A1-APP-ALPHA-0.2.0`.
+- Every telemetry event must include `runtimeAppVersion = HNK-A1-APP-ALPHA-0.2.0`.
 - Any missing runtime version, older/newer event version, or mixed version set marks the session `MIXED_RUNTIME`.
 - `MIXED_RUNTIME` sessions remain useful for smoke/debug research but contribute nothing to P01–P07 promotion metrics.
+
+
+## Alpha 0.2.0 acquisition pre-cohort gate
+
+P01–P07 remains **HOLD** until Alpha 0.2.0 is frozen as a single runtime.
+
+Required before cohort start:
+
+- deterministic option/tray shuffling validated;
+- Codex exposes partial cues rather than a complete answer tray;
+- first hint/Codex access requires one recall attempt;
+- spaced-review state survives hydration and returns to the active mission;
+- Final Boss adaptation uses only pre-Boss evidence and remains stable during Level 32;
+- acquisition telemetry is exported with the anonymous QA envelope;
+- no HNK lexeme, G-ID, construction, grammar authority or CANON status changes.
+
+After the 0.2.0 freeze, any blocking runtime bug pauses the cohort and requires a new baseline. No silent hotfix is gate-eligible.
