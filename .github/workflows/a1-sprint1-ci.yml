@@ -1,0 +1,23 @@
+name: A1 Sprint 1 CI
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/a1-rc1-sprint1/**'
+      - 'tests/validate-a1-playable-core-sprint1.mjs'
+      - 'package.json'
+      - '.github/workflows/a1-sprint1-ci.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate A1 playable core
+        run: npm run validate:a1-sprint1
+      - name: Run governed repository suite
+        run: npm test
