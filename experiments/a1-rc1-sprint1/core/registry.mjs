@@ -26,7 +26,22 @@ export const lexemes = Object.freeze({
   VALI: { id:'LEX_VALI', form:'VALI', function:'ACTIVITY_LEXEME_SCOPED', authority:[A.FROZEN], a1Enabled:true },
   NE: { id:'LEX_NE', form:'NE', function:'NEGATION_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true, notes:['Not a universal negator outside licensed constructions.'] },
   PA: { id:'LEX_PA', form:'PA', function:'YESTERDAY_TEMPORAL_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
-  KE: { id:'LEX_KE', form:'KE', function:'QUESTION_MARKER_SCOPED', authority:[A.CANDIDATE], a1Enabled:true, notes:['KE is not generalized as a universal interrogative marker.'] }
+  KE: { id:'LEX_KE', form:'KE', function:'QUESTION_MARKER_SCOPED', authority:[A.CANDIDATE], a1Enabled:true, notes:['KE is not generalized as a universal interrogative marker.'] },
+  GAVURI: { id:'LEX_GAVURI', form:'GAVURI', function:'POSSESSION_PREDICATE_SCOPED', gIds:['G20','G01','G31','G05','G15','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KAVESO: { id:'LEX_KAVESO', form:'KAVESO', function:'BOOK_OBJECT', gIds:['G23','G01','G31','G02','G26','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  HIZEP: { id:'LEX_HIZEP', form:'HIZEP', function:'CARDINAL_TWO', gIds:['G07','G03','G32','G02','G21'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  MORAKU: { id:'LEX_MORAKU', form:'MORAKU', function:'WANT_PREDICATE_SCOPED', gIds:['G11','G04','G15','G01','G23','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  SAVETA: { id:'LEX_SAVETA', form:'SAVETA', function:'WATER_MASS_CONTENT', gIds:['G26','G01','G31','G02','G22','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KORUME: { id:'LEX_KORUME', form:'KORUME', function:'NEED_PREDICATE_SCOPED', gIds:['G23','G04','G15','G05','G11','G02'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  VEMI: { id:'LEX_VEMI', form:'VEMI', function:'ACTION_COMPLEMENT_LINKER_SCOPED', gIds:['G31','G02','G11','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  LOKANI: { id:'LEX_LOKANI', form:'LOKANI', function:'GO_PREDICATE_SCOPED', gIds:['G14','G04','G23','G01','G12','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  DOMERA: { id:'LEX_DOMERA', form:'DOMERA', function:'HOME_PLACE', gIds:['G19','G04','G11','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  TAMURI: { id:'LEX_TAMURI', form:'TAMURI', function:'TOMORROW_TEMPORAL_SCOPED', gIds:['G22','G01','G11','G05','G15','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  NEMA: { id:'LEX_NEMA', form:'NEMA', function:'FIRST_PERSON_PLURAL_CANDIDATE', gIds:['G12','G02','G11','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  VOMA: { id:'LEX_VOMA', form:'VOMA', function:'THIRD_PERSON_PLURAL_CANDIDATE', gIds:['G31','G04','G11','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  PELUKI: { id:'LEX_PELUKI', form:'PELUKI', function:'STUDY_PREDICATE_SCOPED', gIds:['G21','G02','G14','G05','G23','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  LENU: { id:'LEX_LENU', form:'LENU', function:'POSSESSIVE_LINKER_SCOPED', gIds:['G14','G02','G12','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  MAVERA: { id:'LEX_MAVERA', form:'MAVERA', function:'MOTHER_KINSHIP', gIds:['G11','G01','G31','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
 });
 
 export const constructions = Object.freeze([
@@ -100,6 +115,91 @@ export const constructions = Object.freeze([
     intent:'ASK_SPEAK_HNK',
     generalizes:false,
     guards:['KE_NOT_GENERALIZED','QUESTION_NOT_DERIVED_FROM_DECLARATIVE']
+  },
+  {
+    id:'A1_HAVE_BOOK',
+    pattern:['AN','GAVURI','KAVESO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_HAVE_BOOK',
+    generalizes:false
+  },
+  {
+    id:'A1_HAVE_TWO_BOOKS',
+    pattern:['AN','GAVURI','HIZEP','KAVESO'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_HAVE_TWO_BOOKS',
+    generalizes:false,
+    guards:['COUNTABLE_OBJECT_FRAME_ONLY']
+  },
+  {
+    id:'A1_WANT_WATER',
+    pattern:['AN','MORAKU','SAVETA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WANT_WATER',
+    generalizes:false
+  },
+  {
+    id:'A1_NOT_WANT_WATER',
+    pattern:['AN','NE','MORAKU','SAVETA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_NOT_WANT_WATER',
+    generalizes:false,
+    guards:['NE_SCOPED_TO_LICENSED_FRAME']
+  },
+  {
+    id:'A1_NEED_GO_HOME',
+    pattern:['AN','KORUME','VEMI','LOKANI','DOMERA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_NEED_GO_HOME',
+    generalizes:false,
+    guards:['VEMI_CONTROLLED_ACTION_COMPLEMENT']
+  },
+  {
+    id:'A1_TOMORROW_WE_WORK',
+    pattern:['TAMURI','NEMA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_TOMORROW_WE_WORK',
+    generalizes:false,
+    guards:['TEMPORAL_PERSON_PREDICATE_SCOPED']
+  },
+  {
+    id:'A1_WE_WORK',
+    pattern:['NEMA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WE_WORK',
+    generalizes:false,
+    guards:['PERSON_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
+    id:'A1_THEY_WORK',
+    pattern:['VOMA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THEY_WORK',
+    generalizes:false,
+    guards:['PERSON_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
+    id:'A1_THEY_NOT_WORK',
+    pattern:['VOMA','NE','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THEY_NOT_WORK',
+    generalizes:false,
+    guards:['PERSON_NEGATION_PREDICATE_EXACT_FRAME_ONLY']
+  },
+  {
+    id:'A1_THEY_STUDY',
+    pattern:['VOMA','PELUKI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_THEY_STUDY',
+    generalizes:false
+  },
+  {
+    id:'A1_MY_MOTHER_WORKS',
+    pattern:['AN','LENU','MAVERA','VALI'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_MY_MOTHER_WORKS',
+    generalizes:false,
+    guards:['COMPLEX_POSSESSIVE_NP_SUBJECT_SCOPED']
   }
 ]);
 

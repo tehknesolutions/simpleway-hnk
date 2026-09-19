@@ -91,4 +91,80 @@ export const WORLD_1 = Object.freeze({
   ]
 });
 
-export const levelsById = new Map(WORLD_1.levels.map(l=>[l.id,l]));
+export const WORLD_2 = Object.freeze({
+  id:'WORLD_02_CONSTRUCTION_FORGE',
+  title:'The Construction Forge',
+  subtitle:'Agora você constrói as estruturas.',
+  levels:[
+    {
+      id:'L09_I_HAVE_A_BOOK', order:9, title:'I Have a Book', mode:'builder',
+      prompt:'Monte o frame “Eu tenho um livro.”',
+      targetIntent:'STATE_HAVE_BOOK',
+      tokenTray:['AN','GAVURI','KAVESO','NE'],
+      hints:['Comece pelo falante.','Use o predicate de posse antes do objeto.','AN GAVURI KAVESO.'],
+      unlocks:['GAVURI','KAVESO','SKILL_POSSESSION_PREDICATE'], xp:10
+    },
+    {
+      id:'L10_TWO_BOOKS', order:10, title:'Two Books', mode:'builder',
+      prompt:'Monte o frame “Eu tenho dois livros.”',
+      targetIntent:'STATE_HAVE_TWO_BOOKS',
+      tokenTray:['AN','GAVURI','HIZEP','KAVESO','NE'],
+      hints:['A quantidade entra junto do objeto.','Neste frame: CARDINAL + COUNTABLE_OBJECT.','AN GAVURI HIZEP KAVESO.'],
+      unlocks:['HIZEP','SKILL_COUNTED_OBJECT'], xp:10
+    },
+    {
+      id:'L11_I_WANT_WATER', order:11, title:'I Want Water', mode:'builder',
+      prompt:'Monte o frame “Eu quero água.”',
+      targetIntent:'STATE_WANT_WATER',
+      tokenTray:['AN','MORAKU','SAVETA','NE'],
+      hints:['Identifique o predicate de querer.','A água entra como conteúdo/objeto neste frame.','AN MORAKU SAVETA.'],
+      unlocks:['MORAKU','SAVETA','SKILL_WANT_OBJECT'], xp:10
+    },
+    {
+      id:'L12_I_DO_NOT_WANT_WATER', order:12, title:'I Do Not Want Water', mode:'builder',
+      prompt:'Monte o frame negativo “Eu não quero água.”',
+      targetIntent:'STATE_NOT_WANT_WATER',
+      tokenTray:['AN','NE','MORAKU','SAVETA'],
+      hints:['A negação já foi descoberta no World 1.','NE precede MORAKU neste frame licenciado.','AN NE MORAKU SAVETA.'],
+      unlocks:['SKILL_NEGATION_ACTION'], xp:10
+    },
+    {
+      id:'L13_THE_MISSING_LINK', order:13, title:'The Missing Link', mode:'builder',
+      prompt:'Monte “Preciso ir para casa.”',
+      targetIntent:'STATE_NEED_GO_HOME',
+      tokenTray:['AN','KORUME','VEMI','LOKANI','DOMERA'],
+      hints:['Há duas ações relacionadas.','Use VEMI entre o predicate de controle e a ação.','AN KORUME VEMI LOKANI DOMERA.'],
+      unlocks:['KORUME','VEMI','LOKANI','DOMERA','SKILL_ACTION_CHAIN'], xp:10
+    },
+    {
+      id:'L14_TOMORROW_WE_WORK', order:14, title:'Tomorrow We Work', mode:'builder',
+      prompt:'Monte “Amanhã nós trabalhamos.”',
+      targetIntent:'STATE_TOMORROW_WE_WORK',
+      tokenTray:['TAMURI','NEMA','VALI','AN','PA'],
+      hints:['Comece pela referência temporal.','Depois use a pessoa plural e o predicate.','TAMURI NEMA VALI.'],
+      unlocks:['TAMURI','NEMA','SKILL_TIME_PERSON_STACK'], xp:10
+    },
+    {
+      id:'L15_THEY_STUDY', order:15, title:'They Study', mode:'builder',
+      prompt:'Monte “Eles/elas estudam.”',
+      targetIntent:'STATE_THEY_STUDY',
+      tokenTray:['VOMA','PELUKI','NEMA','VALI'],
+      hints:['Escolha a terceira pessoa plural candidata.','O predicate não recebe flexão neste frame.','VOMA PELUKI.'],
+      unlocks:['VOMA','PELUKI','SKILL_THIRD_PLURAL'], xp:10
+    },
+    {
+      id:'L16_MY_MOTHER_WORKS', order:16, title:'My Mother Works', mode:'builder',
+      prompt:'Mini Boss: monte “Minha mãe trabalha.”',
+      targetIntent:'STATE_MY_MOTHER_WORKS',
+      tokenTray:['AN','LENU','MAVERA','VALI','GAVURI'],
+      hints:['Construa primeiro o NP possessivo.','AN LENU MAVERA funciona como bloco sujeito neste frame.','AN LENU MAVERA VALI.'],
+      unlocks:['LENU','MAVERA','SKILL_COMPLEX_NP_SUBJECT','WORLD_03_READY'], xp:25
+    }
+  ]
+});
+
+export const WORLDS = Object.freeze([WORLD_1,WORLD_2]);
+export const campaignLevels = Object.freeze(WORLDS.flatMap(w=>w.levels));
+export const levelsById = new Map(campaignLevels.map(l=>[l.id,l]));
+export const worldByLevelId = new Map(WORLDS.flatMap(w=>w.levels.map(l=>[l.id,w])));
+

@@ -1,6 +1,6 @@
-import { WORLD_1, levelsById } from '../core/levels.mjs';
+import { WORLD_1, WORLD_2, campaignLevels, levelsById, worldByLevelId } from '../core/levels.mjs';
 import { createPlayerState, awardLevel, recordAttempt, recordHint, getHintCount, penalizeHeart, nextLevelId } from '../core/player-state.mjs';
-import { validateDialogue } from '../core/validator.mjs';
+import { validateDialogue, validateAgainstIntents } from '../core/validator.mjs';
 import { LANGUAGE_VERSION, RUNTIME_STATUS } from '../core/registry.mjs';
 
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
@@ -17,23 +17,26 @@ function loadState(){
 }
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
 function level(){return levelsById.get(state.currentLevelId)??WORLD_1.levels[0];}
-function progressPct(){return Math.round((state.completedLevels.length/WORLD_1.levels.length)*100);}
+function currentWorld(l=level()){return worldByLevelId.get(l.id)??WORLD_1;}
+function worldNumber(w){return w.id===WORLD_1.id?1:2;}
+function progressPct(){return Math.round((state.completedLevels.length/campaignLevels.length)*100);}
 function escapeHtml(s=''){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 
 function render(){
   const l=level();
+  const w=currentWorld(l);
   const finished=state.completedLevels.includes(l.id);
   app.innerHTML=`
     <div class="shell">
       <header class="topbar">
-        <div><div class="brand">HNK A1 · THE AWAKENING</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
-        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/8</span></div>
+        <div><div class="brand">HNK A1 · ${escapeHtml(w.title.toUpperCase())}</div><small>${escapeHtml(LANGUAGE_VERSION)}</small></div>
+        <div class="stats"><span>🔥 ${state.xp} XP</span><span>❤️ ${state.hearts}/5</span><span>${state.completedLevels.length}/16</span></div>
       </header>
       <div class="progress" aria-label="Progresso"><span style="width:${progressPct()}%"></span></div>
       <section class="card">
-        <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · World 1</div>
+        <div class="eyebrow">Level ${String(l.order).padStart(2,'0')} · World ${worldNumber(w)}</div>
         <h1 class="title">${escapeHtml(l.title)}</h1>
-        <p class="subtitle">${escapeHtml(WORLD_1.subtitle)}</p>
+        <p class="subtitle">${escapeHtml(w.subtitle)}</p>
         ${l.npc?`<div class="npc">${escapeHtml(l.npc)}</div>`:''}
         <div class="prompt">${escapeHtml(l.prompt)}</div>
         <div id="interaction"></div>
@@ -41,7 +44,7 @@ function render(){
         <div class="hints" id="hints"></div>
         <div class="footer-actions">
           <button class="secondary" id="hintBtn">💡 Dica</button>
-          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Ver checkpoint':'Próxima fase →'}</button>`:''}
+          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Ver checkpoint':'Próxima fase →'}</button>`:''}
         </div>
         <div class="governance">Runtime: <strong>${escapeHtml(RUNTIME_STATUS)}</strong>. Conteúdo do A1 Lab não promove automaticamente léxico ou gramática a CANON.</div>
       </section>
@@ -69,6 +72,21 @@ function renderInteraction(l){
       <button class="map-card" data-map="wrong">PUMEK → Não<br>MUNASE → Sim</button>
     </div>`;
     root.querySelectorAll('[data-map]').forEach(btn=>btn.addEventListener('click',()=>answerMapping(l,btn.dataset.map==='correct')));
+    return;
+  }
+  if(l.mode==='builder'){
+    root.innerHTML=`
+      <div class="composer" id="composer">${composer.map(t=>`<span class="token">${escapeHtml(t)}</span>`).join('')}</div>
+      <div class="token-tray">${l.tokenTray.map(t=>`<button class="token" data-token="${t}">${t}</button>`).join('')}</div>
+      <div class="actions">
+        <button class="secondary" id="undoToken">↩ Desfazer</button>
+        <button class="secondary" id="clearTokens">Limpar</button>
+        <button class="primary" id="submitBuilder">⚒️ Forjar frase</button>
+      </div>`;
+    root.querySelectorAll('[data-token]').forEach(btn=>btn.addEventListener('click',()=>{composer.push(btn.dataset.token);render();}));
+    root.querySelector('#undoToken')?.addEventListener('click',()=>{composer.pop();render();});
+    root.querySelector('#clearTokens')?.addEventListener('click',()=>{composer=[];render();});
+    root.querySelector('#submitBuilder')?.addEventListener('click',()=>submitBuilder(l));
     return;
   }
   if(l.mode==='dialogue'){
@@ -100,6 +118,27 @@ function answerMapping(l,correct){
   state=recordAttempt(state,l.id,correct);
   if(correct) complete(l);
   else fail('💥 PUMEK e MUNASE foram invertidos. Lembre: MUNASE é resposta negativa independente; não é NE.',.5);
+}
+
+function submitBuilder(l){
+  const utterance=composer.join(' ');
+  const result=validateAgainstIntents(utterance,[l.targetIntent]);
+  const correct=result.status==='VALID';
+  state=recordAttempt(state,l.id,correct);
+  if(correct){
+    composer=[];
+    complete(l);
+    return;
+  }
+  let message='💥 Estrutura ainda não corresponde ao frame desta fase.';
+  if(l.id==='L13_THE_MISSING_LINK' && !composer.includes('VEMI')){
+    message='🔒 MISSING LINK: duas ações precisam da ponte VEMI neste frame.';
+  } else if(result.status==='VALID_WRONG_INTENT'){
+    message='🧭 A frase é licenciada em outro frame, mas não resolve esta missão.';
+  } else if(result.status==='UNMAPPED_CONSTRUCTION'){
+    message='🧪 Combinação não mapeada no HNK A1 RC1. Reorganize os blocos.';
+  }
+  fail(message,1);
 }
 
 function submitDialogue(l){
@@ -153,11 +192,13 @@ function renderHints(l){
 }
 
 function goNext(l){
-  if(l.order===8){
-    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 1 CLEARED</strong><br>Playable Core Sprint 1 completo. O progresso permanece salvo neste navegador.</div>`;
+  if(l.order===16){
+    document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 WORLD 2 CLEARED</strong><br>Construction Forge completo: Levels 09–16 concluídos.</div>`;
     return;
   }
-  state.currentLevelId=nextLevelId(WORLD_1,l.id);
+  const idx=campaignLevels.findIndex(x=>x.id===l.id);
+  const next=campaignLevels[idx+1];
+  if(next) state.currentLevelId=next.id;
   state.hearts=5;
   composer=[];dialogue=[];
   save();render();

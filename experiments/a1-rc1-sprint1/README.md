@@ -6,10 +6,11 @@ This directory is intentionally isolated from the governed Cycle 1 curriculum an
 
 ## What this is
 
-A playable learning-runtime experiment for the user-approved **HNK A1 RC1 candidate**:
+A playable learning-runtime experiment for the user-approved **HNK A1 RC1 candidate**. The directory name originated in Sprint 1; it now hosts the evolving isolated A1 Lab runtime:
 
 - World 1: The Awakening
-- Levels 01–08
+- World 2: The Construction Forge
+- Levels 01–16
 - scoped linguistic registry
 - deterministic construction validator
 - local player state
@@ -35,7 +36,7 @@ It does **not**:
 From repository root:
 
 ```
-npm run a1:sprint1
+npm run a1:sprint2
 ```
 
 Then open the local URL printed by the server.
@@ -44,6 +45,7 @@ Then open the local URL printed by the server.
 
 ```
 npm run validate:a1-sprint1
+npm run validate:a1-sprint2
 ```
 
 The test suite explicitly checks the two most important guards for this sprint:
