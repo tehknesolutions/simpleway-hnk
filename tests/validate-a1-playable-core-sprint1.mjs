@@ -26,6 +26,8 @@ assert.ok(lexemes.MUNASE.notes.some(n=>n.includes('not NE')));
 
 assert.equal(validateUtterance('AN ZAMI HNK.').status,'VALID');
 assert.equal(validateUtterance('AN NE VALI.').status,'VALID');
+const negVali=getConstructionByPattern(tokenize('AN NE VALI.'));
+assert.deepEqual(negVali.authority,['CANDIDATE','LOCKED_FOR_TESTING']);
 assert.equal(validateUtterance('PA AN VALI.').status,'VALID');
 assert.equal(validateUtterance('EN ZAMI HNK KE?').status,'VALID');
 
