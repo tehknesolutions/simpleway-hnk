@@ -49,7 +49,8 @@ export const lexemes = Object.freeze({
   HAVENU: { id:'LEX_HAVENU', form:'HAVENU', function:'HOTEL_PLACE', gIds:['G07','G01','G31','G02','G12','G05'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   MISERO: { id:'LEX_MISERO', form:'MISERO', function:'SMALL_DESCRIPTOR', gIds:['G11','G03','G26','G02','G15','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
   LIKADO: { id:'LEX_LIKADO', form:'LIKADO', function:'LIKE_PREDICATE_SCOPED', gIds:['G14','G03','G23','G01','G19','G04'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
-  SEVAI: { id:'LEX_SEVAI', form:'SEVAI', function:'PROXIMAL_DEICTIC_FRAME', gIds:['G26','G02','G31','G01','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
+  SEVAI: { id:'LEX_SEVAI', form:'SEVAI', function:'PROXIMAL_DEICTIC_FRAME', gIds:['G26','G02','G31','G01','G03'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true },
+  KOPERA: { id:'LEX_KOPERA', form:'KOPERA', function:'CONTAINER_BOTTLE_SCOPED', gIds:['G23','G04','G21','G02','G15','G01'], authority:[A.AUTHORED,A.LOCKED], a1Enabled:true }
 });
 
 export const constructions = Object.freeze([
@@ -232,6 +233,14 @@ export const constructions = Object.freeze([
     intent:'DESCRIBE_BOOK_SMALL',
     generalizes:false,
     guards:['PREDICATIVE_DESCRIPTION_ONLY','ATTRIBUTIVE_NP_NOT_LICENSED']
+  },
+  {
+    id:'A1_WANT_TWO_BOTTLES_WATER',
+    pattern:['AN','MORAKU','HIZEP','KOPERA','SAVETA'],
+    authority:[A.AUTHORED,A.LOCKED],
+    intent:'STATE_WANT_TWO_BOTTLES_WATER',
+    generalizes:false,
+    guards:['CONTAINER_MASS_CONTENT_SCOPED','MASS_NOUN_NOT_DIRECTLY_COUNTED']
   }
 ]);
 
