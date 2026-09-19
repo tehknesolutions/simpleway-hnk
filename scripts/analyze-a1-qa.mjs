@@ -30,10 +30,18 @@ export function normalizeSessions(exportsList=[]){
 
 export function analyzeSessions(exportsList=[],annotations=[]){
   const sessions=normalizeSessions(exportsList);
-  const players=new Set(sessions.map(s=>s.playerId).filter(Boolean));
   const versionMismatches=sessions.filter(s=>
     s.appVersion!==EXPECTED_APP || s.languageVersion!==EXPECTED_LANGUAGE
   ).map(s=>s.sessionId);
+  const eligibleSessions=sessions.filter(s=>
+    s.appVersion===EXPECTED_APP && s.languageVersion===EXPECTED_LANGUAGE && s.playerId
+  );
+  const players=new Set(eligibleSessions.map(s=>s.playerId));
+  const firstSessionByPlayer=new Map();
+  for(const s of [...eligibleSessions].sort((a,b)=>String(a.exportedAt??'').localeCompare(String(b.exportedAt??'')))){
+    if(!firstSessionByPlayer.has(s.playerId)) firstSessionByPlayer.set(s.playerId,s);
+  }
+  const gateSessionIds=new Set([...firstSessionByPlayer.values()].map(s=>s.sessionId));
 
   const perSession=sessions.map(s=>{
     const completed=new Set(s.summary?.completedLevels??[]);
@@ -56,11 +64,12 @@ export function analyzeSessions(exportsList=[],annotations=[]){
     };
   });
 
-  const avgUnassisted=perSession.length
-    ? Number((perSession.reduce((a,s)=>a+s.unassistedCompletionRate,0)/perSession.length).toFixed(1))
+  const gateSessions=perSession.filter(s=>gateSessionIds.has(s.sessionId));
+  const avgUnassisted=gateSessions.length
+    ? Number((gateSessions.reduce((a,s)=>a+s.unassistedCompletionRate,0)/gateSessions.length).toFixed(1))
     : 0;
-  const bosses=perSession.filter(s=>s.bossDefeated).length;
-  const bossRate=pct(bosses,perSession.length);
+  const bosses=gateSessions.filter(s=>s.bossDefeated).length;
+  const bossRate=pct(bosses,gateSessions.length);
 
   const reviewed=annotations.filter(a=>
     a?.playerId && a?.skill && (a.classification==='PASS'||PROBLEM_CLASSES.includes(a.classification))
@@ -83,7 +92,7 @@ export function analyzeSessions(exportsList=[],annotations=[]){
   );
 
   const gates={
-    minimumSevenPlayers:{pass:players.size>=7,value:players.size,target:'>=7 unique players'},
+    minimumSevenPlayers:{pass:players.size>=7,value:players.size,target:'>=7 unique eligible players'},
     averageUnassistedCompletion:{pass:avgUnassisted>=80,value:avgUnassisted,target:'>=80%'},
     finalBossDefeat:{pass:bossRate>=70,value:bossRate,target:'>=70%'},
     criticalGrammar:{
@@ -99,7 +108,10 @@ export function analyzeSessions(exportsList=[],annotations=[]){
     languageVersion:EXPECTED_LANGUAGE,
     uniquePlayers:players.size,
     sessions:sessions.length,
+    eligibleSessions:eligibleSessions.length,
+    gateSessions:gateSessions.length,
     versionMismatches,
+    gateSessionIds:[...gateSessionIds],
     perSession,
     totals:{
       unmappedEvents:perSession.reduce((a,s)=>a+s.unmappedEvents,0),
