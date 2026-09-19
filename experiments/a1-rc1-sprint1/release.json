@@ -10,9 +10,11 @@
   "canonPromotion": false,
   "externalCefrCertification": false,
   "acquisitionEngineVersion": "HNK-A1-ACQUISITION-ENGINE-V1",
-  "acquisitionStatus": "PRE_COHORT_VALIDATION",
-  "humanQaCohort": "HOLD_UNTIL_0.2.1_FREEZE",
-  "freezeGate": "REFREEZE_REQUIRED_AFTER_PARTIAL_EXPORT_FIX",
-  "runtimeBaselineCommit": null,
-  "blockingFix": "PARTIAL_SESSION_EXPORT"
+  "acquisitionStatus": "FROZEN_HUMAN_QA_BASELINE",
+  "humanQaCohort": "READY_FOR_P01-P07",
+  "freezeGate": "PREVIEW_FREEZE_GATE_V2_PASS",
+  "runtimeBaselineCommit": "a0b0e5382a92b817b9afe1250dfa87bbadd2dac6",
+  "blockingFix": "PARTIAL_SESSION_EXPORT_RESOLVED",
+  "previewArtifactCommit": "807ddba0426a8655c11ac5f9fb7321776f420080",
+  "previewDeploymentId": "e1c6e58c-7bfa-459a-ac04-dea729cd6599"
 }
