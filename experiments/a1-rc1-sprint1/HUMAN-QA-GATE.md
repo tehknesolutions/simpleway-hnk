@@ -36,3 +36,28 @@ Use exported anonymous QA sessions. Do not request real names, addresses, precis
 ## Promotion boundary
 
 Passing this gate does not make the language CANON and does not constitute external CEFR certification.
+
+
+## Automated vs human-reviewed gates
+
+The QA analyzer may calculate directly:
+
+- unique player count;
+- per-session completion;
+- completion without hints/Codex;
+- Final Boss defeat rate;
+- UNMAPPED and UNKNOWN_LEXEME event counts.
+
+It must **not** infer `GRAMMAR_PROBLEM`. The critical-grammar gate remains pending until all seven critical skill families have explicit reviewer annotations for the participating players.
+
+Critical skill families:
+
+- PERSON
+- NE
+- VEMI
+- NUMBER_NOUN
+- RUMI
+- HAVORI
+- COMMUNICATION_REPAIR
+
+A repeated learner failure can be a learning, vocabulary, UX, content, or grammar problem; promotion requires preserving that distinction.
