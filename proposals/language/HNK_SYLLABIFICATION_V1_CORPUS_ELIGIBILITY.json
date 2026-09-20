@@ -1,0 +1,312 @@
+{
+  "artifact_id": "SWHNK-HNK-SYLLABIFICATION-V1-CORPUS-ELIGIBILITY",
+  "status": "DERIVED_FROM_APPROVED_SYL1_OPTION_A",
+  "date": "2026-09-20",
+  "method": "Apply approved V1 boundary algorithm to audited C/V shapes. This artifact does not invent G-ID sequences absent from its source audit.",
+  "summary": {
+    "total": 33,
+    "governed": 31,
+    "clusterBlocked": 1,
+    "bridgeExcluded": 1
+  },
+  "forms": [
+    {
+      "id": "LEX-001",
+      "form": "VAMAKALA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-002",
+      "form": "SARADAYA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVVV",
+      "strict_match": false,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-003",
+      "form": "VALIVAN",
+      "authority": "FROZEN",
+      "shape": "CVCVCVC",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-004",
+      "form": "PARAZAMO",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-005",
+      "form": "VAMUSARO",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-006",
+      "form": "SARASALA",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-007",
+      "form": "VAMAVALA",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-008",
+      "form": "VAMAZAMU",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-009",
+      "form": "TAYOVAN",
+      "authority": "FROZEN",
+      "shape": "CVVVCVC",
+      "strict_match": false,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-010",
+      "form": "KALOVALA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-011",
+      "form": "PAROVAN",
+      "authority": "FROZEN",
+      "shape": "CVCVCVC",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-012",
+      "form": "PARAZAMI",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-013",
+      "form": "VALI",
+      "authority": "FROZEN",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-014",
+      "form": "SAROSARI",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-015",
+      "form": "PARI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-016",
+      "form": "DAYI",
+      "authority": "CANDIDATE",
+      "shape": "CVVV",
+      "strict_match": false,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-017",
+      "form": "SALI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-018",
+      "form": "SARU",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-019",
+      "form": "TA",
+      "authority": "CANDIDATE",
+      "shape": "CV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-020",
+      "form": "PA",
+      "authority": "WATCH",
+      "shape": "CV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-021",
+      "form": "PAPA",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-022",
+      "form": "MAMA",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-023",
+      "form": "VAMATAYA",
+      "authority": "CANDIDATE",
+      "shape": "CVCVCVVV",
+      "strict_match": false,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-024",
+      "form": "KALIFORNIA",
+      "authority": "BRIDGE",
+      "shape": "CVCVCVCCVV",
+      "strict_match": false,
+      "syllabification_status": "BRIDGE_EXCLUDED",
+      "mix_glyph_multi_root_eligibility": "BLOCKED"
+    },
+    {
+      "id": "LEX-025",
+      "form": "VAME",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-026",
+      "form": "ON",
+      "authority": "GATE",
+      "shape": "VC",
+      "strict_match": false,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-027",
+      "form": "BANKA",
+      "authority": "GATE",
+      "shape": "CVCCV",
+      "strict_match": false,
+      "syllabification_status": "UNRESOLVED_CLUSTER",
+      "mix_glyph_multi_root_eligibility": "BLOCKED"
+    },
+    {
+      "id": "LEX-028",
+      "form": "VANUVALAKALU",
+      "authority": "GATE",
+      "shape": "CVCVCVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-029",
+      "form": "SAROSAL",
+      "authority": "GATE",
+      "shape": "CVCVCVC",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-030",
+      "form": "VANUVALI",
+      "authority": "GATE",
+      "shape": "CVCVCVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-031",
+      "form": "VANI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-032",
+      "form": "PITSA",
+      "authority": "FROZEN",
+      "shape": "CVCV",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    },
+    {
+      "id": "LEX-033",
+      "form": "HENUVOKODAN",
+      "authority": "REFERENCE",
+      "shape": "CVCVCVCVCVC",
+      "strict_match": true,
+      "syllabification_status": "GOVERNED_V1",
+      "mix_glyph_multi_root_eligibility": "ELIGIBLE_BY_SHAPE_PENDING_GID_PARSE"
+    }
+  ],
+  "important_limit": "Exact per-syllable G-ID/MX1 keys require authoritative lexeme-to-G-ID tokenization. Shape eligibility alone does not generate glyph sequences."
+}
