@@ -1,0 +1,51 @@
+{
+  "validation_id": "SWHNK-L04-CHESED-V2-DAYI-OPTION-A-LINGUISTIC-VALIDATION-V1",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "date_validated": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "validatedScope": "CONTROLLED_THIRD_PERSON_BARE_INTENTION_YES_NO_QUESTION_ONLY",
+  "validatedSurface": {
+    "surface": "ERU DAYI KE",
+    "pedagogicalReading": "Does he/she want? / Is there third-person intention?",
+    "validation": "PASS_SCOPED"
+  },
+  "microgrammar": {
+    "schema": "ERU + DAYI + KE",
+    "productivity": "EXACT_SURFACE_ONLY",
+    "DAYIContract": "DAYI expresses querer/intenção only in this validated bare-intention L04 question surface; no object or action complement licensed.",
+    "ERUContract": "Contextual third-person singular reference; no gender distinction or universal pronoun rule.",
+    "KEContract": "Clause-final question marking only in this exact surface; no universal interrogative rule.",
+    "objectComplementLicensed": false,
+    "vemiComplementLicensed": false,
+    "declarativeCounterpartLicensed": false
+  },
+  "authorityPreservation": {
+    "DAYI": "CANDIDATE",
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "KE": "CANDIDATE",
+    "lexicalAuthorityPromoted": false,
+    "universalGrammarPromoted": false
+  },
+  "writingCoverage": {
+    "surfaces": 1,
+    "fullyWritable": 1,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "runtimeActive": false,
+  "explicitNonInference": [
+    "NO_DAYI_EQUALS_MORAKU",
+    "NO_DAYI_OBJECT_COMPLEMENT",
+    "NO_DAYI_VEMI_COMPLEMENT",
+    "NO_UNIVERSAL_ERU_PRONOUN_RULE",
+    "NO_UNIVERSAL_KE_QUESTION_RULE",
+    "NO_DECLARATIVE_BY_REMOVING_KE",
+    "NO_TENSE_ASPECT_INFERENCE"
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-SALI-NEED-MICROGRAMMAR-PROPOSAL-V1",
+    "purpose": "Open SALI as an independent need microgrammar; compare KORUME/VEMI evidence without transferring it."
+  }
+}
