@@ -1,0 +1,27 @@
+{
+  "gate_id": "SWHNK-MX1-DERIVED-VISUAL-CANON-V1-HUMAN-GATE",
+  "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
+  "date": "2026-09-20",
+  "rootAuthority": "HNK40 VISUAL-CANON-V2",
+  "candidateCount": 52,
+  "reviewDimensions": [
+    "root identity preservation",
+    "PRE/NUCLEUS/POST spatial clarity",
+    "component collisions",
+    "optical balance",
+    "family recognition",
+    "small-size legibility"
+  ],
+  "decisionRequested": "Approve the current deterministic 52 derived MX1 compositions as MX1-DERIVED-VISUAL-CANON-V1, or return them for layout refinement.",
+  "effectsIfApproved": [
+    "Freeze current role-layout grammar for these 52 MX1 identities.",
+    "Allow font/PUA engineering to include approved derived MX1 cells in a separate allocation gate."
+  ],
+  "nonEffects": [
+    "No change to HNK40 roots.",
+    "No grammar/lexicon/phonology change.",
+    "No automatic Unicode assignment.",
+    "No claim of legacy Mix-Glifo recovery."
+  ],
+  "approvalToken": "A.S. / AS / APROVADO. SIGA."
+}
