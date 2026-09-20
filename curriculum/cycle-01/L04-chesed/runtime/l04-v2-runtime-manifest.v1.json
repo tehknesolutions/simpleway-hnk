@@ -1,7 +1,7 @@
 {
   "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-MANIFEST-V1",
-  "status": "READINESS_CONTRACT_APPROVED_RUNTIME_STILL_HOLD",
-  "runtimeActive": false,
+  "status": "V2_RUNTIME_ACTIVE_ALLOWLIST_ONLY",
+  "runtimeActive": true,
   "exposureModel": "ALLOWLIST_ONLY_EXACT_SURFACES",
   "legacyManifestMutation": false,
   "structures": [
@@ -73,5 +73,15 @@
     "NO_SARU_WITH_DAYI_OR_SALI",
     "NO_UNIVERSAL_RUMI_OR_COPULA",
     "NO_UNIVERSAL_TEMPORAL_ORDER"
-  ]
+  ],
+  "promotion": {
+    "gate": "SWHNK-L04-CHESED-V2-RUNTIME-PROMOTION-HUMAN-GATE-V1",
+    "humanDecision": "APPROVED_BY_A.S.",
+    "date": "2026-09-20",
+    "scope": "EXACT_EIGHT_SURFACES_ONLY",
+    "runtime07Evidence": "SWHNK-L04-CHESED-V2-RUNTIME-07-LOCAL-EXECUTION-EVIDENCE-V1",
+    "lexicalAuthorityPromotion": false,
+    "universalGrammarPromotion": false,
+    "legacyManifestMutation": false
+  }
 }

@@ -1,0 +1,64 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-PROMOTION-V1",
+  "status": "V2_RUNTIME_ACTIVE_ALLOWLIST_ONLY",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "date": "2026-09-20",
+  "preconditions": {
+    "runtime01to06": "PASS",
+    "runtime07": "PASS_VERIFIED_LOCAL_EXECUTION",
+    "writing": "8/8",
+    "unresolved": 0
+  },
+  "activeSurfaces": [
+    "ERU VALI KE",
+    "ERU PARAZAMI KE",
+    "ERU RUMI VALIVAN KE",
+    "ERU RUMI PARAZAMO KE",
+    "ERU DAYI KE",
+    "ERU SALI KE",
+    "SARU ERU VALI KE",
+    "SARU ERU PARAZAMI KE"
+  ],
+  "activeStructures": [
+    "L04-V2-STR001",
+    "L04-V2-STR002",
+    "L04-V2-STR003",
+    "L04-V2-STR004",
+    "L04-V2-STR005"
+  ],
+  "authoritiesPreserved": {
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "RUMI": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALI": "FROZEN",
+    "PARAZAMI": "WATCH",
+    "VALIVAN": "FROZEN",
+    "PARAZAMO": "FROZEN",
+    "DAYI": "CANDIDATE",
+    "SALI": "WATCH",
+    "SARU": "WATCH",
+    "KE": "CANDIDATE"
+  },
+  "negativeSpacePreserved": [
+    "NO_UNIVERSAL_ERU",
+    "NO_UNIVERSAL_KE",
+    "NO_DECLARATIVE_BY_REMOVING_KE",
+    "NO_DAYI_OBJECT_OR_VEMI_COMPLEMENT",
+    "NO_SALI_OBJECT_OR_VEMI_COMPLEMENT",
+    "SARU_NOT_USUALLY",
+    "NO_SARU_WITH_DAYI_OR_SALI",
+    "NO_UNIVERSAL_RUMI_OR_COPULA",
+    "NO_UNIVERSAL_TEMPORAL_ORDER"
+  ],
+  "legacyStatePreserved": {
+    "mutation": false,
+    "historicalRecoveryRewritten": false
+  },
+  "nonEffects": [
+    "No lexical authority promotion.",
+    "No universal grammar promotion.",
+    "No generated L04 variants outside allowlist.",
+    "No historical recovery claim.",
+    "No L05/L06/L07 changes."
+  ],
+  "nextRecommendedGate": "SWHNK-L04-CHESED-V2-RUNTIME-INTEGRATION-SMOKE-QA-V1"
+}
