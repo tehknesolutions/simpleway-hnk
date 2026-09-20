@@ -1,13 +1,835 @@
 {
   "schema": "HNK-A1-GLYPH-PHONOLOGY-MATRIX-V1",
-  "status": "SOURCE_LOCKED_AWAITING_EVIDENCE",
-  "glyphInventoryTarget": 40,
-  "authorityPolicy": {
-    "canonicalGlyph": "Requires confirmed glyph authority.",
-    "phoneticMapping": "Requires confirmed phonetic evidence.",
-    "mixGlyph": "Derived output only after segmentation and composition rules are approved.",
-    "unresolved": "Default when evidence is absent."
+  "status": "HNK40_STRUCTURAL_PHONEME_REGISTRY_IMPORTED__MIX_RULES_SOURCE_LOCKED",
+  "source": {
+    "repository": "tehknesolutions/codex-hnk",
+    "ref": "main",
+    "path": "packages/hnk-glyphs/reference/HNK40_REFERENCE_MATRIX_V1.json",
+    "matrixId": "HNK40-REFERENCE-MATRIX-V1",
+    "sourceStatus": "SCAFFOLD_NO_REFERENCE_EQUIVALENCE_CLAIMS",
+    "authority": {
+      "glyph_ids": "@hnk/glyphs HNK40_ENTRIES",
+      "phonemes": "@hnk/glyphs HNK40_IPA",
+      "candidate_pua": "@hnk/glyphs HNK40_CANDIDATE_PUA_RANGE",
+      "visual_state": "PREPRODUCTION_NOT_OFFICIAL",
+      "reference_language_mappings": "UNAUTHORED_PENDING_RESEARCH"
+    }
   },
+  "glyphInventoryTarget": 40,
+  "glyphInventoryRecovered": 40,
+  "authorityPolicy": {
+    "glyphIds": "G01-G40 authoritative per @hnk/glyphs.",
+    "phonemes": "Imported from @hnk/glyphs HNK40_IPA/reference matrix.",
+    "visualForms": "PREPRODUCTION / NOT OFFICIAL VISUAL CANON. Candidate D is not promoted here.",
+    "candidatePua": "Transport-only candidate mapping; not official visual identity.",
+    "mixGlyph": "DERIVED only after approved syllabification/segmentation and composition geometry.",
+    "unresolved": "Default for any rule not explicitly present in authority sources."
+  },
+  "glyphs": [
+    {
+      "glyphId": "G01",
+      "phonemeIpa": "/a/",
+      "worldId": "W1",
+      "protoglyphColumn": 1,
+      "safeTransliteration": "A",
+      "candidatePua": "U+E100",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G02",
+      "phonemeIpa": "/e/",
+      "worldId": "W1",
+      "protoglyphColumn": 2,
+      "safeTransliteration": "E",
+      "candidatePua": "U+E101",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G03",
+      "phonemeIpa": "/i/",
+      "worldId": "W1",
+      "protoglyphColumn": 3,
+      "safeTransliteration": "I",
+      "candidatePua": "U+E102",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G04",
+      "phonemeIpa": "/o/",
+      "worldId": "W1",
+      "protoglyphColumn": 4,
+      "safeTransliteration": "O",
+      "candidatePua": "U+E103",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G05",
+      "phonemeIpa": "/u/",
+      "worldId": "W1",
+      "protoglyphColumn": 5,
+      "safeTransliteration": "U",
+      "candidatePua": "U+E104",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G06",
+      "phonemeIpa": "/ə/",
+      "worldId": "W1",
+      "protoglyphColumn": 6,
+      "safeTransliteration": null,
+      "candidatePua": "U+E105",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G07",
+      "phonemeIpa": "/h/",
+      "worldId": "W1",
+      "protoglyphColumn": 7,
+      "safeTransliteration": "H",
+      "candidatePua": "U+E106",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G08",
+      "phonemeIpa": "/ʔ/",
+      "worldId": "W1",
+      "protoglyphColumn": 8,
+      "safeTransliteration": null,
+      "candidatePua": "U+E107",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G09",
+      "phonemeIpa": "/ʕ/",
+      "worldId": "W1",
+      "protoglyphColumn": 9,
+      "safeTransliteration": null,
+      "candidatePua": "U+E108",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G10",
+      "phonemeIpa": "/ħ/",
+      "worldId": "W1",
+      "protoglyphColumn": 10,
+      "safeTransliteration": null,
+      "candidatePua": "U+E109",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G11",
+      "phonemeIpa": "/m/",
+      "worldId": "W2",
+      "protoglyphColumn": 1,
+      "safeTransliteration": "M",
+      "candidatePua": "U+E10A",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G12",
+      "phonemeIpa": "/n/",
+      "worldId": "W2",
+      "protoglyphColumn": 2,
+      "safeTransliteration": "N",
+      "candidatePua": "U+E10B",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G13",
+      "phonemeIpa": "/ŋ/",
+      "worldId": "W2",
+      "protoglyphColumn": 3,
+      "safeTransliteration": null,
+      "candidatePua": "U+E10C",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G14",
+      "phonemeIpa": "/l/",
+      "worldId": "W2",
+      "protoglyphColumn": 4,
+      "safeTransliteration": "L",
+      "candidatePua": "U+E10D",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G15",
+      "phonemeIpa": "/r/",
+      "worldId": "W2",
+      "protoglyphColumn": 5,
+      "safeTransliteration": "R",
+      "candidatePua": "U+E10E",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G16",
+      "phonemeIpa": "/j/",
+      "worldId": "W2",
+      "protoglyphColumn": 6,
+      "safeTransliteration": null,
+      "candidatePua": "U+E10F",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G17",
+      "phonemeIpa": "/w/",
+      "worldId": "W2",
+      "protoglyphColumn": 7,
+      "safeTransliteration": null,
+      "candidatePua": "U+E110",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G18",
+      "phonemeIpa": "/b/",
+      "worldId": "W2",
+      "protoglyphColumn": 8,
+      "safeTransliteration": "B",
+      "candidatePua": "U+E111",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G19",
+      "phonemeIpa": "/d/",
+      "worldId": "W2",
+      "protoglyphColumn": 9,
+      "safeTransliteration": "D",
+      "candidatePua": "U+E112",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G20",
+      "phonemeIpa": "/g/",
+      "worldId": "W2",
+      "protoglyphColumn": 10,
+      "safeTransliteration": null,
+      "candidatePua": "U+E113",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G21",
+      "phonemeIpa": "/p/",
+      "worldId": "W3",
+      "protoglyphColumn": 1,
+      "safeTransliteration": "P",
+      "candidatePua": "U+E114",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G22",
+      "phonemeIpa": "/t/",
+      "worldId": "W3",
+      "protoglyphColumn": 2,
+      "safeTransliteration": "T",
+      "candidatePua": "U+E115",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G23",
+      "phonemeIpa": "/k/",
+      "worldId": "W3",
+      "protoglyphColumn": 3,
+      "safeTransliteration": "K",
+      "candidatePua": "U+E116",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G24",
+      "phonemeIpa": "/q/",
+      "worldId": "W3",
+      "protoglyphColumn": 4,
+      "safeTransliteration": null,
+      "candidatePua": "U+E117",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G25",
+      "phonemeIpa": "/f/",
+      "worldId": "W3",
+      "protoglyphColumn": 5,
+      "safeTransliteration": null,
+      "candidatePua": "U+E118",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G26",
+      "phonemeIpa": "/s/",
+      "worldId": "W3",
+      "protoglyphColumn": 6,
+      "safeTransliteration": "S",
+      "candidatePua": "U+E119",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G27",
+      "phonemeIpa": "/ʃ/",
+      "worldId": "W3",
+      "protoglyphColumn": 7,
+      "safeTransliteration": null,
+      "candidatePua": "U+E11A",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G28",
+      "phonemeIpa": "/x/",
+      "worldId": "W3",
+      "protoglyphColumn": 8,
+      "safeTransliteration": null,
+      "candidatePua": "U+E11B",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G29",
+      "phonemeIpa": "/θ/",
+      "worldId": "W3",
+      "protoglyphColumn": 9,
+      "safeTransliteration": null,
+      "candidatePua": "U+E11C",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G30",
+      "phonemeIpa": "/ts/",
+      "worldId": "W3",
+      "protoglyphColumn": 10,
+      "safeTransliteration": "TS",
+      "candidatePua": "U+E11D",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G31",
+      "phonemeIpa": "/v/",
+      "worldId": "W4",
+      "protoglyphColumn": 1,
+      "safeTransliteration": "V",
+      "candidatePua": "U+E11E",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G32",
+      "phonemeIpa": "/z/",
+      "worldId": "W4",
+      "protoglyphColumn": 2,
+      "safeTransliteration": "Z",
+      "candidatePua": "U+E11F",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G33",
+      "phonemeIpa": "/ʒ/",
+      "worldId": "W4",
+      "protoglyphColumn": 3,
+      "safeTransliteration": null,
+      "candidatePua": "U+E120",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G34",
+      "phonemeIpa": "/ð/",
+      "worldId": "W4",
+      "protoglyphColumn": 4,
+      "safeTransliteration": null,
+      "candidatePua": "U+E121",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G35",
+      "phonemeIpa": "/tʃ/",
+      "worldId": "W4",
+      "protoglyphColumn": 5,
+      "safeTransliteration": null,
+      "candidatePua": "U+E122",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G36",
+      "phonemeIpa": "/dʒ/",
+      "worldId": "W4",
+      "protoglyphColumn": 6,
+      "safeTransliteration": null,
+      "candidatePua": "U+E123",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G37",
+      "phonemeIpa": "/sˤ/",
+      "worldId": "W4",
+      "protoglyphColumn": 7,
+      "safeTransliteration": null,
+      "candidatePua": "U+E124",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G38",
+      "phonemeIpa": "/tˤ/",
+      "worldId": "W4",
+      "protoglyphColumn": 8,
+      "safeTransliteration": null,
+      "candidatePua": "U+E125",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G39",
+      "phonemeIpa": "/ɣ/",
+      "worldId": "W4",
+      "protoglyphColumn": 9,
+      "safeTransliteration": null,
+      "candidatePua": "U+E126",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    },
+    {
+      "glyphId": "G40",
+      "phonemeIpa": "/y/",
+      "worldId": "W4",
+      "protoglyphColumn": 10,
+      "safeTransliteration": "Y",
+      "candidatePua": "U+E127",
+      "structuralAuthority": "AUTHORITATIVE_G_ID_AND_PHONEME",
+      "visualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON",
+      "mixGlyphAuthority": "NONE"
+    }
+  ],
+  "phoneticUnits": [
+    {
+      "unitId": "ROOT_G01",
+      "ipa": "/a/",
+      "glyphIds": [
+        "G01"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G02",
+      "ipa": "/e/",
+      "glyphIds": [
+        "G02"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G03",
+      "ipa": "/i/",
+      "glyphIds": [
+        "G03"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G04",
+      "ipa": "/o/",
+      "glyphIds": [
+        "G04"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G05",
+      "ipa": "/u/",
+      "glyphIds": [
+        "G05"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G06",
+      "ipa": "/ə/",
+      "glyphIds": [
+        "G06"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G07",
+      "ipa": "/h/",
+      "glyphIds": [
+        "G07"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G08",
+      "ipa": "/ʔ/",
+      "glyphIds": [
+        "G08"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G09",
+      "ipa": "/ʕ/",
+      "glyphIds": [
+        "G09"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G10",
+      "ipa": "/ħ/",
+      "glyphIds": [
+        "G10"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G11",
+      "ipa": "/m/",
+      "glyphIds": [
+        "G11"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G12",
+      "ipa": "/n/",
+      "glyphIds": [
+        "G12"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G13",
+      "ipa": "/ŋ/",
+      "glyphIds": [
+        "G13"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G14",
+      "ipa": "/l/",
+      "glyphIds": [
+        "G14"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G15",
+      "ipa": "/r/",
+      "glyphIds": [
+        "G15"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G16",
+      "ipa": "/j/",
+      "glyphIds": [
+        "G16"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G17",
+      "ipa": "/w/",
+      "glyphIds": [
+        "G17"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G18",
+      "ipa": "/b/",
+      "glyphIds": [
+        "G18"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G19",
+      "ipa": "/d/",
+      "glyphIds": [
+        "G19"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G20",
+      "ipa": "/g/",
+      "glyphIds": [
+        "G20"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G21",
+      "ipa": "/p/",
+      "glyphIds": [
+        "G21"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G22",
+      "ipa": "/t/",
+      "glyphIds": [
+        "G22"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G23",
+      "ipa": "/k/",
+      "glyphIds": [
+        "G23"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G24",
+      "ipa": "/q/",
+      "glyphIds": [
+        "G24"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G25",
+      "ipa": "/f/",
+      "glyphIds": [
+        "G25"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G26",
+      "ipa": "/s/",
+      "glyphIds": [
+        "G26"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G27",
+      "ipa": "/ʃ/",
+      "glyphIds": [
+        "G27"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G28",
+      "ipa": "/x/",
+      "glyphIds": [
+        "G28"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G29",
+      "ipa": "/θ/",
+      "glyphIds": [
+        "G29"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G30",
+      "ipa": "/ts/",
+      "glyphIds": [
+        "G30"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G31",
+      "ipa": "/v/",
+      "glyphIds": [
+        "G31"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G32",
+      "ipa": "/z/",
+      "glyphIds": [
+        "G32"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G33",
+      "ipa": "/ʒ/",
+      "glyphIds": [
+        "G33"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G34",
+      "ipa": "/ð/",
+      "glyphIds": [
+        "G34"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G35",
+      "ipa": "/tʃ/",
+      "glyphIds": [
+        "G35"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G36",
+      "ipa": "/dʒ/",
+      "glyphIds": [
+        "G36"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G37",
+      "ipa": "/sˤ/",
+      "glyphIds": [
+        "G37"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G38",
+      "ipa": "/tˤ/",
+      "glyphIds": [
+        "G38"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G39",
+      "ipa": "/ɣ/",
+      "glyphIds": [
+        "G39"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    },
+    {
+      "unitId": "ROOT_G40",
+      "ipa": "/y/",
+      "glyphIds": [
+        "G40"
+      ],
+      "unitType": "ROOT_PHONEME",
+      "authority": "IMPORTED_FROM_HNK40"
+    }
+  ],
+  "compositionRules": [],
   "confirmedConstraints": [
     {
       "id": "PITSA_TS_G30",
@@ -15,16 +837,21 @@
       "statement": "PITSA preserves TS = G30 as an atomic structural unit.",
       "productivePhonologyLicensed": false,
       "mixGlyphRuleLicensed": false
+    },
+    {
+      "id": "HNK40_ROOT_REGISTRY",
+      "scope": "ROOT_GLYPH_PHONEME_BINDING",
+      "statement": "G01-G40 and their 40 root IPA bindings are authoritative in @hnk/glyphs.",
+      "productiveSyllableCompositionLicensed": false,
+      "visualCanonLicensed": false
     }
   ],
-  "glyphs": [],
-  "phoneticUnits": [],
-  "compositionRules": [],
   "unresolved": [
-    "Complete authoritative Glifos-40 inventory is not present in the simpleway-hnk default branch evidence reviewed for this package.",
-    "Complete HNK phoneme/syllable inventory is not established by this package.",
-    "Phonetic segmentation rules are not established by this package.",
-    "Glyph composition geometry is not established by this package.",
-    "Rotation, mirroring, stacking, overlap, ligature and reduction permissions are not established by this package."
+    "Productive HNK syllabification rules are not established by this import.",
+    "Rules deciding when multiple phonemes form one syllable are not established by this import.",
+    "Mix-Glifo geometry is not established by the authoritative HNK40 registry.",
+    "Rotation, mirroring, stacking, overlap, ligature and reduction permissions remain unresolved.",
+    "Candidate D visual forms remain PREPRODUCTION / NOT OFFICIAL VISUAL CANON until human visual promotion.",
+    "Candidate PUA U+E100-U+E127 is transport-only and must not be treated as official visual identity."
   ]
 }
