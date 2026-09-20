@@ -1,0 +1,434 @@
+{
+  "review_id": "SWHNK-HNK-SYLLABIFICATION-AUTHORITY-V1-REVIEW",
+  "status": "READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date": "2026-09-20",
+  "purpose": "Create the smallest governed syllabification layer needed for multi-root Mix-Glifos while preserving existing B1-B6 phonology.",
+  "source_facts": {
+    "audited_forms": 33,
+    "strict_cv_family_matches": 26,
+    "exceptions": 7,
+    "adjacent_vowels_allowed": true,
+    "vvv_allowed": true,
+    "adjacent_vowels_careful_default": "DISTINCT_VOWEL_NUCLEI",
+    "productive_diphthongs": false,
+    "automatic_y_to_j": false,
+    "final_consonants_allowed": true,
+    "ts_g30_atomic": true,
+    "complete_syllable_template_grammar": false
+  },
+  "key_problem": "26/33 forms matching (CV)+(C)? is corpus evidence and an authoring preference, not yet authority that every C attaches to the following V or that final C is a coda. Multi-root Mix-Glifos require exactly that missing boundary authority.",
+  "options": [
+    {
+      "id": "SYL1-OPTION-A",
+      "decision": "CONSERVATIVE_MAXIMAL_ONSET_WITH_SINGLE_CONSONANT_ONLY",
+      "recommended": true,
+      "proposed_rules": [
+        "Every governed vowel nucleus heads exactly one syllable in careful pronunciation.",
+        "Adjacent vowels already governed as distinct nuclei therefore create distinct syllables unless a later explicit exception is approved.",
+        "A single consonant between two vowel nuclei attaches to the following nucleus (V.CV).",
+        "A word-initial consonant before a vowel is onset of that vowel.",
+        "A word-final consonant after a vowel is coda of the final syllable.",
+        "G30 /ts/ counts as one consonant for these rules.",
+        "Internal clusters of two or more consonants remain unresolved case-by-case; do not split them automatically.",
+        "BRIDGE forms do not induce native syllabification rules."
+      ],
+      "expected_effect": "Licenses deterministic syllabification for simple CV-rich native forms, final-C forms and adjacent-vowel nuclei without inventing cluster phonotactics."
+    },
+    {
+      "id": "SYL1-OPTION-B",
+      "decision": "CV_ONLY_BOUNDARY_AUTHORITY",
+      "recommended": false,
+      "proposed_rules": [
+        "Approve only repeated CV boundaries in strict-profile forms; keep final consonants, vowel-initial forms and all exceptions unresolved."
+      ],
+      "expected_effect": "Safer but leaves many attested structures unavailable to Mix-Glifo composition."
+    },
+    {
+      "id": "SYL1-OPTION-C",
+      "decision": "KEEP_ALL_SYLLABLE_BOUNDARIES_LEXICAL",
+      "recommended": false,
+      "proposed_rules": [
+        "No productive boundary algorithm; approve each lexeme manually."
+      ],
+      "expected_effect": "Maximum preservation but poor scalability for A1 and Mix-Glifo generation."
+    }
+  ],
+  "recommended_decision": "SYL1-OPTION-A",
+  "boundaries": {
+    "no_new_phonemes": true,
+    "no_new_diphthongs": true,
+    "no_new_glide_rules": true,
+    "no_stress_rule": true,
+    "no_visual_canon_promotion": true,
+    "no_semantics": true,
+    "no_morphology": true,
+    "no_grammar": true,
+    "internal_cluster_rule_created": false
+  },
+  "corpus_batch": [
+    {
+      "id": "LEX-001",
+      "form": "VAMAKALA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-002",
+      "form": "SARADAYA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVVV",
+      "evidence": "ADJACENT_VOWEL_NUCLEI_GOVERNED",
+      "status": "PARTIAL_NUCLEUS_EVIDENCE",
+      "candidate_analysis": "EACH_ADJACENT_VOWEL_IS_DISTINCT_NUCLEUS_IN_CAREFUL_PRONUNCIATION; consonant attachment unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-003",
+      "form": "VALIVAN",
+      "authority": "FROZEN",
+      "shape": "CVCVCVC",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV_PLUS_FINAL_C",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-004",
+      "form": "PARAZAMO",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-005",
+      "form": "VAMUSARO",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-006",
+      "form": "SARASALA",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-007",
+      "form": "VAMAVALA",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-008",
+      "form": "VAMAZAMU",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-009",
+      "form": "TAYOVAN",
+      "authority": "FROZEN",
+      "shape": "CVVVCVC",
+      "evidence": "ADJACENT_VOWEL_NUCLEI_GOVERNED",
+      "status": "PARTIAL_NUCLEUS_EVIDENCE",
+      "candidate_analysis": "EACH_ADJACENT_VOWEL_IS_DISTINCT_NUCLEUS_IN_CAREFUL_PRONUNCIATION; consonant attachment unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-010",
+      "form": "KALOVALA",
+      "authority": "FROZEN",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-011",
+      "form": "PAROVAN",
+      "authority": "FROZEN",
+      "shape": "CVCVCVC",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV_PLUS_FINAL_C",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-012",
+      "form": "PARAZAMI",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-013",
+      "form": "VALI",
+      "authority": "FROZEN",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-014",
+      "form": "SAROSARI",
+      "authority": "WATCH",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-015",
+      "form": "PARI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-016",
+      "form": "DAYI",
+      "authority": "CANDIDATE",
+      "shape": "CVVV",
+      "evidence": "ADJACENT_VOWEL_NUCLEI_GOVERNED",
+      "status": "PARTIAL_NUCLEUS_EVIDENCE",
+      "candidate_analysis": "EACH_ADJACENT_VOWEL_IS_DISTINCT_NUCLEUS_IN_CAREFUL_PRONUNCIATION; consonant attachment unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-017",
+      "form": "SALI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-018",
+      "form": "SARU",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-019",
+      "form": "TA",
+      "authority": "CANDIDATE",
+      "shape": "CV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-020",
+      "form": "PA",
+      "authority": "WATCH",
+      "shape": "CV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-021",
+      "form": "PAPA",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-022",
+      "form": "MAMA",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-023",
+      "form": "VAMATAYA",
+      "authority": "CANDIDATE",
+      "shape": "CVCVCVVV",
+      "evidence": "ADJACENT_VOWEL_NUCLEI_GOVERNED",
+      "status": "PARTIAL_NUCLEUS_EVIDENCE",
+      "candidate_analysis": "EACH_ADJACENT_VOWEL_IS_DISTINCT_NUCLEUS_IN_CAREFUL_PRONUNCIATION; consonant attachment unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-024",
+      "form": "KALIFORNIA",
+      "authority": "BRIDGE",
+      "shape": "CVCVCVCCVV",
+      "evidence": "SEGMENTAL_SHAPE_ONLY",
+      "status": "BRIDGE_EXCLUDED_FROM_NATIVE_RULE_INDUCTION",
+      "candidate_analysis": "BRIDGE form; do not use to author native syllabification",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-025",
+      "form": "VAME",
+      "authority": "GATE",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-026",
+      "form": "ON",
+      "authority": "GATE",
+      "shape": "VC",
+      "evidence": "SEGMENTAL_SHAPE_ONLY",
+      "status": "UNRESOLVED",
+      "candidate_analysis": "V.C? or VC? exact syllable count/boundary unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-027",
+      "form": "BANKA",
+      "authority": "GATE",
+      "shape": "CVCCV",
+      "evidence": "SEGMENTAL_SHAPE_ONLY",
+      "status": "UNRESOLVED",
+      "candidate_analysis": "BAN.KA vs BA.NKA etc unresolved; cluster attachment unresolved",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-028",
+      "form": "VANUVALAKALU",
+      "authority": "GATE",
+      "shape": "CVCVCVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-029",
+      "form": "SAROSAL",
+      "authority": "GATE",
+      "shape": "CVCVCVC",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV_PLUS_FINAL_C",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-030",
+      "form": "VANUVALI",
+      "authority": "GATE",
+      "shape": "CVCVCVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-031",
+      "form": "VANI",
+      "authority": "WATCH",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-032",
+      "form": "PITSA",
+      "authority": "FROZEN",
+      "shape": "CVCV",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    },
+    {
+      "id": "LEX-033",
+      "form": "HENUVOKODAN",
+      "authority": "REFERENCE",
+      "shape": "CVCVCVCVCVC",
+      "evidence": "STRICT_CV_FAMILY_MATCH",
+      "status": "CANDIDATE_BOUNDARIES_NOT_AUTHORITY",
+      "candidate_analysis": "REPEATED_CV_PLUS_FINAL_C",
+      "approved_syllable_boundaries": null,
+      "mix_glyph_multi_root_licensed": false
+    }
+  ],
+  "if_approved_next": "Generate governed syllable parses for eligible native forms, mark cluster/bridge residue unresolved, then enable only corresponding MX1 multi-root profiles."
+}

@@ -1,0 +1,20 @@
+{
+  "gate_id": "SWHNK-HNK-SYLLABIFICATION-AUTHORITY-V1-HUMAN-GATE",
+  "status": "READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "source_review": "HNK_SYLLABIFICATION_AUTHORITY_V1_REVIEW.json",
+  "recommended_decision": "SYL1-OPTION-A",
+  "approval_scope": "Approve only conservative syllable-boundary rules: nucleus-per-syllable, initial/single-intervocalic onset, final coda, G30 atomic, clusters unresolved, bridges excluded.",
+  "approval_token": "A.S. / AS / APROVADO. SIGA.",
+  "effects_if_approved": {
+    "syllabification_authority": "V1_CONSERVATIVE",
+    "internal_clusters": "UNRESOLVED",
+    "productive_diphthongs": 0,
+    "automatic_glide_rules": 0,
+    "stress_rules": 0,
+    "visual_canon_promotions": 0,
+    "semantics_changes": 0,
+    "morphology_changes": 0,
+    "grammar_changes": 0
+  },
+  "next_artifact": "HNK_SYLLABIFICATION_RUNTIME_V1_AND_MX1_MULTIROOT_ELIGIBILITY"
+}
