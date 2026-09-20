@@ -1,0 +1,104 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-SALI-OPTION-A-CANDIDATE-MATERIALIZATION-V1",
+  "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+  "date": "2026-09-20",
+  "selectedOption": "A",
+  "scope": "CONTROLLED_THIRD_PERSON_BARE_NEED_YES_NO_QUESTION_ONLY",
+  "surface": {
+    "surface": "ERU SALI KE",
+    "pedagogicalTarget": "Does he/she need? / Is there third-person need?",
+    "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+  },
+  "writingCoverage": {
+    "inventory": "MX1-59 / HNK Font cmap v1.1",
+    "words": {
+      "ERU": {
+        "gIds": [
+          "G02",
+          "G15",
+          "G05"
+        ],
+        "syllables": [
+          [
+            "G02"
+          ],
+          [
+            "G15",
+            "G05"
+          ]
+        ],
+        "mx1": [
+          "MX1:ROOT:G02",
+          "MX1:CV:G15+G05"
+        ],
+        "codepoints": [
+          "U+E201",
+          "U+E218"
+        ],
+        "fullyWritable": true
+      },
+      "SALI": {
+        "gIds": [
+          "G26",
+          "G01",
+          "G14",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G26",
+            "G01"
+          ],
+          [
+            "G14",
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G26+G01",
+          "MX1:CV:G14+G03"
+        ],
+        "codepoints": [
+          "U+E229",
+          "U+E211"
+        ],
+        "fullyWritable": true
+      },
+      "KE": {
+        "gIds": [
+          "G23",
+          "G02"
+        ],
+        "syllables": [
+          [
+            "G23",
+            "G02"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G23+G02"
+        ],
+        "codepoints": [
+          "U+E225"
+        ],
+        "fullyWritable": true
+      }
+    },
+    "summary": {
+      "surfaces": 1,
+      "fullyWritableSurfaces": 1,
+      "newMx1Required": 0,
+      "unresolved": 0
+    }
+  },
+  "guards": [
+    "SALI remains WATCH lexical authority.",
+    "Bare need reading only; no object complement licensed.",
+    "No KORUME syntax transfer.",
+    "No VEMI complement licensed.",
+    "ERU remains contextual/gender-neutral.",
+    "KE remains scoped.",
+    "No declarative counterpart inferred."
+  ],
+  "nextGate": "SWHNK-L04-CHESED-V2-SALI-OPTION-A-LINGUISTIC-VALIDATION-HUMAN-GATE-V1"
+}
