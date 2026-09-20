@@ -1,0 +1,141 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-NINE-SLOT-AUTHORING-BATCH-V1",
+  "status": "HUMAN_BATCH_AWAITING_APPROVAL",
+  "date": "2026-09-20",
+  "releaseIdentity": "HNK-L04-CHESED-V2-NEW-AUTHORING",
+  "historicalRecoveryClaim": false,
+  "designGoal": "Prepare nine evidence-linked authoring slots for Chesed without yet asserting a compositional L04 HNK sentence.",
+  "curriculumTarget": {
+    "english": "Does he/she...?",
+    "hnkSurface": null
+  },
+  "slots": [
+    {
+      "slot": "L04-V2-001",
+      "pedagogicalFunction": "THIRD_PERSON_REFERENCE",
+      "englishAnchor": "Does he/she...?",
+      "lexicalCandidate": "ERU",
+      "reuseStatus": "REUSE_EXISTING_AUTHORED_LOCKED",
+      "grammarRisk": "VERY_HIGH",
+      "boundary": "ERU is only THIRD_PERSON_SINGULAR_CONTEXTUAL; no gender split or universal pronoun status.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-002",
+      "pedagogicalFunction": "ACTIVITY_WORK",
+      "englishAnchor": "work",
+      "lexicalCandidate": "VALI",
+      "reuseStatus": "REUSE_FROZEN",
+      "grammarRisk": "LOW",
+      "boundary": "Lexical reuse only; no person/question composition licensed.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-003",
+      "pedagogicalFunction": "ACTIVITY_STUDY",
+      "englishAnchor": "study",
+      "lexicalCandidate": "PARAZAMI",
+      "reuseStatus": "REUSE_WATCH",
+      "grammarRisk": "MEDIUM",
+      "boundary": "WATCH authority preserved.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-004",
+      "pedagogicalFunction": "PLACE_OFFICE",
+      "englishAnchor": "office",
+      "lexicalCandidate": "VALIVAN",
+      "reuseStatus": "REUSE_FROZEN",
+      "grammarRisk": "LOW",
+      "boundary": "Context/place label only; no locative relation inferred.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-005",
+      "pedagogicalFunction": "PLACE_SCHOOL_STUDY_DOMAIN",
+      "englishAnchor": "school / study domain",
+      "lexicalCandidate": "PARAZAMO",
+      "reuseStatus": "REUSE_FROZEN",
+      "grammarRisk": "LOW",
+      "boundary": "Context/place label only.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-006",
+      "pedagogicalFunction": "WANT_INTENTION",
+      "englishAnchor": "want / intention",
+      "lexicalCandidate": "DAYI",
+      "reuseStatus": "REUSE_CANDIDATE",
+      "grammarRisk": "HIGH",
+      "boundary": "Candidate lexical authority preserved; no complement syntax inferred.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-007",
+      "pedagogicalFunction": "NEED",
+      "englishAnchor": "need",
+      "lexicalCandidate": "SALI",
+      "reuseStatus": "REUSE_WATCH",
+      "grammarRisk": "HIGH",
+      "boundary": "WATCH authority preserved; no complement syntax inferred.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-008",
+      "pedagogicalFunction": "HABITUAL_EVERY_DAY",
+      "englishAnchor": "every day / habituality",
+      "lexicalCandidate": "SARU",
+      "reuseStatus": "REUSE_WATCH",
+      "grammarRisk": "HIGH",
+      "boundary": "Not equivalent to usually.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "slot": "L04-V2-009",
+      "pedagogicalFunction": "QUESTION_FUNCTION",
+      "englishAnchor": "direct-question function",
+      "lexicalCandidate": "KE",
+      "reuseStatus": "REUSE_CANDIDATE_SCOPED_EVIDENCE_ONLY",
+      "grammarRisk": "VERY_HIGH",
+      "boundary": "KE is not generalized; no L04 question surface licensed.",
+      "proposedHnkSurface": null,
+      "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    }
+  ],
+  "summary": {
+    "slots": 9,
+    "existingLexicalCandidates": 9,
+    "newLexemesProposed": 0,
+    "hnkSurfacesProposed": 0,
+    "veryHighRisk": 2,
+    "highRisk": 3
+  },
+  "compositionCandidates": {
+    "status": "NOT_YET_AUTHORIZED",
+    "forbiddenExamples": [
+      "ERU VALI KE",
+      "ERU PARAZAMI KE"
+    ],
+    "reason": "These strings would combine separately scoped evidence into a new L04 interrogative grammar without an approved composition rule."
+  },
+  "humanDecision": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Approve the nine-slot semantic/lexical allocation as the design basis for V2. Does not approve any sentence surface.",
+    "nextIfApproved": "Open a focused L04 third-person direct-question microgrammar proposal comparing bounded options while preserving ERU and KE scope."
+  },
+  "nonEffects": [
+    "No new lexeme canon.",
+    "No new grammar canon.",
+    "No HNK translation of Does he/she...?",
+    "No runtime activation.",
+    "No historical payload claim."
+  ]
+}
