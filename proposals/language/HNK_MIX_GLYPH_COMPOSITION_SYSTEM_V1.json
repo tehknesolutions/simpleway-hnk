@@ -1,0 +1,230 @@
+{
+  "proposal_id": "SWHNK-HNK-MIX-GLYPH-COMPOSITION-SYSTEM-V1",
+  "status": "PROPOSED_AWAITING_HUMAN_GATE",
+  "date": "2026-09-20",
+  "scope": "Define a deterministic compositional writing layer above authoritative G01-G40 without changing phoneme identity, lexicon, grammar, morphology, curriculum authority or visual canon.",
+  "inputs": [
+    "experiments/a1-rc1-sprint1/HNK-A1-GLYPH-PHONOLOGY-MATRIX-V1.json",
+    "proposals/language/HNK_PHONOTACTIC_PROFILE_V2.md",
+    "proposals/language/HNK_PHONOLOGICAL_IDENTITY_V3_APPROVED_TRANSITION_V1.json",
+    "proposals/language/HNK_B2_SYLLABLE_STRUCTURE_ADJACENT_VOWELS_APPROVED_TRANSITION_V1.json",
+    "proposals/language/HNK_B3_DIPHTHONG_GLIDE_Y_BEARING_PRONUNCIATION_APPROVED_TRANSITION_V1.json",
+    "proposals/language/HNK40_PHONEME_CLASSIFICATION_AUDIT_V1.json",
+    "proposals/language/HNK33_PHONEMIC_SHAPE_AUDIT_V1.json"
+  ],
+  "source_facts": {
+    "root_glyphs": 40,
+    "root_phoneme_bindings": 40,
+    "vowels": 7,
+    "consonantal_or_glide_segments": 33,
+    "ts_g30_atomic": true,
+    "g40_y_is_vowel": true,
+    "g16_j_is_distinct_glide": true,
+    "adjacent_vowels_allowed": true,
+    "vvv_allowed": true,
+    "adjacent_vowels_default": "DISTINCT_VOWEL_NUCLEI_IN_CAREFUL_PRONUNCIATION",
+    "productive_diphthong_inventory": false,
+    "automatic_y_to_j": false,
+    "final_consonants_allowed": true,
+    "mandatory_cv_alternation": false,
+    "universal_stress_rule": false,
+    "strict_cv_family_matches": "26/33 audited forms; statistical authoring preference only"
+  },
+  "three_levels": [
+    {
+      "level": 1,
+      "id": "PHONOLOGICAL_GROUPING",
+      "authority": "PROPOSAL",
+      "rules": [
+        {
+          "id": "L1-R1",
+          "proposal": "A Mix-Glifo encodes one explicitly resolved phonological grouping, never a guessed grouping."
+        },
+        {
+          "id": "L1-R2",
+          "proposal": "A single root phoneme may occupy a Mix-Glifo cell by itself."
+        },
+        {
+          "id": "L1-R3",
+          "proposal": "Adjacent vowel phonemes remain separate nuclei by default; no automatic VV/VVV fusion into one Mix-Glifo."
+        },
+        {
+          "id": "L1-R4",
+          "proposal": "G30 /ts/ is one atomic root and must never be split into T+S."
+        },
+        {
+          "id": "L1-R5",
+          "proposal": "G40 /y/ must never be silently reinterpreted as G16 /j/."
+        },
+        {
+          "id": "L1-R6",
+          "proposal": "CV, VC, CVC, clusters and other multi-root groupings require explicit syllabification/grouping authority before being compressed into one Mix-Glifo."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "id": "GEOMETRIC_COMPOSITION",
+      "authority": "PROPOSAL",
+      "rules": [
+        {
+          "id": "L2-R1",
+          "proposal": "Canonical Mix-Glifo geometry is role-based, not arbitrary: NUCLEUS occupies the central anchor; PRE_NUCLEAR material occupies ordered satellite anchors; POST_NUCLEAR material occupies ordered terminal anchors."
+        },
+        {
+          "id": "L2-R2",
+          "proposal": "Root identity must remain recoverable from the composite; destructive deformation is forbidden."
+        },
+        {
+          "id": "L2-R3",
+          "proposal": "Rotation and mirroring are forbidden in V1 unless a future visual-canon gate proves they preserve identity."
+        },
+        {
+          "id": "L2-R4",
+          "proposal": "Overlap may not erase a diagnostic stroke or make two distinct root sequences visually identical."
+        },
+        {
+          "id": "L2-R5",
+          "proposal": "V1 maximum compressed payload is four authoritative root G-IDs; longer groupings remain sequential until separately governed."
+        },
+        {
+          "id": "L2-R6",
+          "proposal": "Because current root drawings are PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON, V1 geometry is a layout contract only; it does not promote Candidate D."
+        }
+      ],
+      "candidate_anchor_model": {
+        "canvas": "normalized 1000x1000 cell",
+        "NUCLEUS": "centered primary anchor; largest visual share",
+        "PRE1": "upper-left satellite",
+        "PRE2": "lower-left satellite",
+        "POST1": "upper-right satellite",
+        "POST2": "lower-right satellite",
+        "note": "Anchor coordinates/sizes remain implementation parameters until visual review; semantic meaning is not assigned to direction."
+      }
+    },
+    {
+      "level": 3,
+      "id": "DETERMINISTIC_ENCODING",
+      "authority": "PROPOSAL",
+      "rules": [
+        {
+          "id": "L3-R1",
+          "proposal": "Composite identity is derived from ordered root G-IDs plus an explicit grouping profile; transliteration is never the primary key."
+        },
+        {
+          "id": "L3-R2",
+          "proposal": "Canonical candidate key format: MX1:<PROFILE>:<GID>[+<GID>...]."
+        },
+        {
+          "id": "L3-R3",
+          "proposal": "Same ordered G-ID sequence + same grouping profile must produce the same Mix-Glifo layout."
+        },
+        {
+          "id": "L3-R4",
+          "proposal": "Different ordered sequences must not share one composite key."
+        },
+        {
+          "id": "L3-R5",
+          "proposal": "A decoder must recover the exact ordered G-ID sequence and grouping metadata losslessly."
+        },
+        {
+          "id": "L3-R6",
+          "proposal": "PUA allocation for Mix-Glifos is deferred; composite keys are transport-safe identifiers until a separate encoding/font gate."
+        }
+      ]
+    }
+  ],
+  "profiles": {
+    "ROOT": {
+      "licensed_now": true,
+      "payload": "exactly 1 G-ID",
+      "requires_syllabification": false
+    },
+    "NUCLEUS_SEQUENCE": {
+      "licensed_now": false,
+      "reason": "B3 preserves adjacent vowels as distinct nuclei by default; no productive fusion inventory."
+    },
+    "CV": {
+      "licensed_now": false,
+      "reason": "CV is common but not a mandatory syllable grammar; explicit grouping authority still required."
+    },
+    "VC": {
+      "licensed_now": false,
+      "reason": "Attestation of VC word shape does not itself establish syllable-compression authority."
+    },
+    "CVC": {
+      "licensed_now": false,
+      "reason": "Final consonants are legal, but exact syllabification/grouping remains unresolved."
+    },
+    "CLUSTERED": {
+      "licensed_now": false,
+      "reason": "Internal clusters are case-by-case and cannot become a generic compression template from attestation alone."
+    }
+  },
+  "examples": {
+    "licensed": [
+      {
+        "input": [
+          "G30"
+        ],
+        "key": "MX1:ROOT:G30",
+        "interpretation": "atomic /ts/ root; no T+S decomposition"
+      }
+    ],
+    "illustrative_not_licensed": [
+      {
+        "input": [
+          "G21",
+          "G03"
+        ],
+        "candidate_key": "MX1:CV:G21+G03",
+        "note": "Demonstrates deterministic syntax only; does not assert that this sequence is an approved HNK syllable."
+      },
+      {
+        "input": [
+          "G19",
+          "G01",
+          "G40",
+          "G03"
+        ],
+        "candidate_key": null,
+        "note": "DAYI-related sequence must not be collapsed by inference; approved careful nuclei A|Y|I and unresolved syllabification are preserved."
+      }
+    ]
+  },
+  "human_gate_decisions": [
+    {
+      "id": "DEC-MX1-001",
+      "decision": "Approve Mix-Glifo as a compositional writing layer above G01-G40, not a replacement for root G-IDs."
+    },
+    {
+      "id": "DEC-MX1-002",
+      "decision": "Approve ROOT profile immediately; all multi-root compression remains gated by explicit grouping/syllabification authority."
+    },
+    {
+      "id": "DEC-MX1-003",
+      "decision": "Approve the role-based geometry contract NUCLEUS/PRE/POST while keeping exact coordinates and current Candidate D visuals noncanonical."
+    },
+    {
+      "id": "DEC-MX1-004",
+      "decision": "Forbid rotation/mirroring and destructive deformation in V1."
+    },
+    {
+      "id": "DEC-MX1-005",
+      "decision": "Approve maximum four root G-IDs per compressed V1 cell."
+    },
+    {
+      "id": "DEC-MX1-006",
+      "decision": "Approve lossless deterministic MX1 keying and defer PUA/font allocation."
+    }
+  ],
+  "non_rules": [
+    "No new syllable boundaries are inferred from spelling.",
+    "No semantic value is assigned to glyph position, direction, size or overlap.",
+    "No diphthong or glide rule is created.",
+    "No universal CV/CVC grammar is created.",
+    "No Candidate D drawing becomes official visual canon.",
+    "No lexeme, meaning, grammar rule, morphology rule or curriculum slot is promoted."
+  ],
+  "next_if_approved": "Implement MX1 encoder/decoder + geometry validator using ROOT as executable profile and multi-root profiles as gated fixtures; then open a separate syllabification authority batch based on governed corpus evidence."
+}

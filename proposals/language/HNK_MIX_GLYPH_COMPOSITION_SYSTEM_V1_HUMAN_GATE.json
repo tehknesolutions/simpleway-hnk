@@ -1,0 +1,43 @@
+{
+  "gate_id": "SWHNK-HNK-MIX-GLYPH-COMPOSITION-SYSTEM-V1-HUMAN-GATE",
+  "status": "READY_FOR_HUMAN_REVIEW_NO_CANON_MUTATION",
+  "date_prepared": "2026-09-20",
+  "source_proposal": "HNK_MIX_GLYPH_COMPOSITION_SYSTEM_V1.json",
+  "decision_scope": "Approve or revise only the compositional writing architecture. Do not create syllabification, diphthongs, glide rules, visual canon, semantics, morphology, grammar or curriculum authority.",
+  "recommended_decisions": [
+    {
+      "id": "DEC-MX1-001",
+      "decision": "Approve Mix-Glifo as a compositional writing layer above G01-G40, not a replacement for root G-IDs."
+    },
+    {
+      "id": "DEC-MX1-002",
+      "decision": "Approve ROOT profile immediately; all multi-root compression remains gated by explicit grouping/syllabification authority."
+    },
+    {
+      "id": "DEC-MX1-003",
+      "decision": "Approve the role-based geometry contract NUCLEUS/PRE/POST while keeping exact coordinates and current Candidate D visuals noncanonical."
+    },
+    {
+      "id": "DEC-MX1-004",
+      "decision": "Forbid rotation/mirroring and destructive deformation in V1."
+    },
+    {
+      "id": "DEC-MX1-005",
+      "decision": "Approve maximum four root G-IDs per compressed V1 cell."
+    },
+    {
+      "id": "DEC-MX1-006",
+      "decision": "Approve lossless deterministic MX1 keying and defer PUA/font allocation."
+    }
+  ],
+  "approval_token": "A.S. / AS / APROVADO. SIGA.",
+  "effects_if_approved": {
+    "root_profile_executable": true,
+    "multi_root_profiles_executable": false,
+    "new_phoneme_assignments": 0,
+    "new_syllabification_rules": 0,
+    "new_visual_canon_promotions": 0,
+    "new_lexical_or_grammar_authority": 0
+  },
+  "next_artifact": "HNK_MIX_GLYPH_RUNTIME_V1"
+}
