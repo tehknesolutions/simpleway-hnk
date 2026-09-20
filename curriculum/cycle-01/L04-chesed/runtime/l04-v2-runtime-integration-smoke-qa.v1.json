@@ -1,0 +1,26 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-INTEGRATION-SMOKE-QA-V1",
+  "status": "IMPLEMENTED_AWAITING_EXECUTION",
+  "runtimeExpectedState": "V2_RUNTIME_ACTIVE_ALLOWLIST_ONLY",
+  "checks": [
+    "promotion manifest active",
+    "exact 8-surface allowlist",
+    "all 5 structures present",
+    "writing 8/8 and zero unresolved",
+    "authorities unchanged",
+    "legacy EVIDENCE_GATE preserved",
+    "forbidden generated variants rejected",
+    "UX remains controlled teaching only"
+  ],
+  "forbiddenProbes": [
+    "ERU VALI",
+    "ERU PARAZAMI",
+    "ERU DAYI VEMI LOKANI KE",
+    "ERU SALI SAVETA KE",
+    "SARU ERU DAYI KE",
+    "SARU ERU SALI KE",
+    "ERU RUMI KE",
+    "SARU VALI KE"
+  ],
+  "nextOnPass": "L04_V2_RUNTIME_INTEGRATION_CONFIRMED"
+}
