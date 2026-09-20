@@ -1,0 +1,54 @@
+{
+  "artifact_id": "SWHNK-HNK-GENERATIVE-WRITING-SYSTEM-V1",
+  "status": "ACTIVE_IMPLEMENTATION_BASELINE",
+  "date": "2026-09-20",
+  "purpose": "Deterministically transform governed HNK phonological sequences into visual writing cells without inventing phonology, grammar, lexicon, or glyph semantics.",
+  "authorities": {
+    "roots": "HNK40 VISUAL-CANON-V2",
+    "derivedAtlas": "MX1-DERIVED-VISUAL-CANON-V1",
+    "syllabification": "HNK SYLLABIFICATION AUTHORITY V1",
+    "tokenization": "HNK LEXEME -> G-ID TOKENIZATION V1",
+    "fontTransport": "HNK FONT CMAP V1"
+  },
+  "pipeline": [
+    "INPUT_HNK_FORM",
+    "TOKENIZE_TO_GIDS",
+    "SYLLABIFY_GIDS",
+    "CLASSIFY_EACH_SYLLABLE",
+    "RESOLVE_EXISTING_MX1_KEY_OR_GENERATE_DETERMINISTIC_CELL",
+    "RENDER_FROM_CANONICAL_ROOTS",
+    "ENCODE_WITH_EXISTING_PUA_IF_ALLOCATED_ELSE_RUNTIME_COMPOSITION",
+    "OUTPUT_VISUAL_SEQUENCE"
+  ],
+  "rules": {
+    "carefulPronunciation": true,
+    "adjacentVowelsRemainDistinctNuclei": true,
+    "g30TsAtomic": true,
+    "g40YVowelDistinctFromG16JGlide": true,
+    "internalClustersTwoPlus": "UNRESOLVED_CLUSTER",
+    "bridgeForms": "EXCLUDED_FROM_NATIVE_RULE_INDUCTION",
+    "rotation": false,
+    "mirroring": false,
+    "destructiveDeformation": false,
+    "maxRootsPerCompressedCell": 4,
+    "semanticInferenceFromGeometry": false
+  },
+  "resolution": {
+    "known52": "Use frozen MX1-DERIVED-VISUAL-CANON-V1 cell and its assigned PUA.",
+    "governedNewSyllable": "Generate deterministic runtime composition using the frozen role-layout grammar; mark GENERATED_CANDIDATE until separately promoted/allocated.",
+    "unresolved": "Preserve ordered G-ID fallback; do not fabricate a cell."
+  },
+  "outputStatuses": [
+    "CANONICAL_ROOT",
+    "CANONICAL_DERIVED_MX1",
+    "GENERATED_CANDIDATE",
+    "UNRESOLVED_GID_SEQUENCE"
+  ],
+  "nonEffects": [
+    "No automatic new lexemes.",
+    "No new grammar.",
+    "No new phoneme mappings.",
+    "No Unicode-standard claim.",
+    "No recovery claim for lost legacy glyphs."
+  ]
+}
