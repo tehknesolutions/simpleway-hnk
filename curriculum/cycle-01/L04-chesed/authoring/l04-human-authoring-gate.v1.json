@@ -1,0 +1,122 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-HUMAN-AUTHORING-GATE-V1",
+  "status": "READY_FOR_HUMAN_AUTHORING_DECISIONS",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04",
+  "sphere": "Chesed",
+  "sourceState": {
+    "languageBindingsDeclared": 9,
+    "recoveredPhrases": 0,
+    "authorityDistribution": {
+      "WATCH": 1,
+      "GATE": 8
+    },
+    "automatedDecision": "HOLD_INSUFFICIENT_EVIDENCE",
+    "runtimePromotionAllowed": false
+  },
+  "curriculumTarget": {
+    "english": "Does he/she...?",
+    "hnkSurface": null,
+    "authority": "UNRESOLVED"
+  },
+  "authoringPolicy": {
+    "reuseAllowed": [
+      "Previously governed lexical items may be proposed only with their existing scoped authority preserved.",
+      "Previously governed KE behavior may be cited as evidence but cannot be generalized automatically to L04.",
+      "Existing G-IDs and MX1 writing may be attached only after an HNK surface is separately approved."
+    ],
+    "forbidden": [
+      "Inferring a third-person pronoun from English he/she.",
+      "Assuming English auxiliary does has an HNK morpheme.",
+      "Assuming KE is a universal question particle or copying an L01/L02/L03 word order into L04.",
+      "Creating nine HNK phrases merely because the manifest declares nine language bindings.",
+      "Promoting WATCH/GATE material to FROZEN or runtime without human validation."
+    ]
+  },
+  "decisionSlots": [
+    {
+      "slot": "L04-AUTH-001",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "Does he/she...?",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-002",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-003",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-004",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-005",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-006",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-007",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-008",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    },
+    {
+      "slot": "L04-AUTH-009",
+      "sourceBindingIdentity": "UNRECOVERED",
+      "englishFunction": "UNRECOVERED",
+      "proposedHnkSurface": null,
+      "proposalStatus": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "requiresHumanDecision": true
+    }
+  ],
+  "humanGate": {
+    "required": true,
+    "approvalToken": "A.S.",
+    "approvalMeaning": "Approve the authoring framework and permission to materialize proposals; it does NOT approve any HNK surface because none is proposed in this gate.",
+    "nextActionIfApproved": "Recover identities of the nine declared bindings from deeper evidence if possible; only then create a batched surface proposal with explicit source/evidence per slot."
+  },
+  "boundaries": [
+    "This artifact authorizes a governed authoring process, not linguistic content.",
+    "Zero new HNK words or phrases are created here.",
+    "The English target remains untranslated.",
+    "No runtime promotion occurs."
+  ]
+}
