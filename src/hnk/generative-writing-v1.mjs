@@ -1,0 +1,4 @@
+const VOWELS=new Set(['G01','G02','G03','G04','G05','G06','G40']);
+export function classifySyllable(gids){const p=gids.map(g=>VOWELS.has(g)?'V':'C').join('');return ['CV','VC','CVC'].includes(p)?p:(gids.length===1?'ROOT':'OTHER')}
+export function mx1Key(profile,gids){return 'MX1:'+profile+':'+gids.join('+')}
+export function encodeWriting(syllables,cmap){const byId=new Map(cmap.mappings.filter(x=>x.kind==='MX1').map(x=>[x.id,x]));return syllables.map(gids=>{const profile=classifySyllable(gids),key=mx1Key(profile,gids),hit=byId.get(key);if(hit)return{status:'CANONICAL_DERIVED_MX1',profile,key,gIds:gids,codepoint:hit.codepoint};if(['ROOT','CV','VC','CVC'].includes(profile)&&gids.length<=4)return{status:'GENERATED_CANDIDATE',profile,key,gIds:gids,codepoint:null};return{status:'UNRESOLVED_GID_SEQUENCE',profile,key,gIds:gids,codepoint:null}})}
