@@ -1,0 +1,26 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-INTEGRATION-SMOKE-EXECUTION-EVIDENCE-V1",
+  "status": "SMOKE_EXECUTION_BLOCKED_INFRASTRUCTURE_NO_TEST_RESULT",
+  "date": "2026-09-20",
+  "runtimeState": "V2_RUNTIME_ACTIVE_ALLOWLIST_ONLY",
+  "targetTest": "tests/validate-hnk-l04-v2-runtime-integration-smoke-v1.mjs",
+  "attempts": [
+    {
+      "environment": "GitHub Actions",
+      "runId": 35543547770,
+      "result": "WORKFLOW_FAILURE_BEFORE_OBSERVABLE_TEST_EVIDENCE"
+    },
+    {
+      "environment": "TW-DA-VINCI-HNK-TEHKNE",
+      "result": "REMOTE_EXECUTOR_TIMEOUT",
+      "note": "Device reports online, but direct Node smoke invocation timed out at the remote command transport."
+    }
+  ],
+  "claims": {
+    "smokePass": false,
+    "smokeLinguisticFail": false,
+    "runtimeRollbackRequired": false
+  },
+  "decision": "KEEP_EXACT_EIGHT_SURFACE_RUNTIME_ACTIVE; DO_NOT_MARK_INTEGRATION_CONFIRMED UNTIL OBSERVABLE SMOKE RESULT",
+  "nextGate": "RETRY_SAME_SMOKE_WHEN_EXECUTION_TRANSPORT_RECOVERS"
+}
