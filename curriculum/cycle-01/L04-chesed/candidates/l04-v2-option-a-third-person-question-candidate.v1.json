@@ -1,0 +1,162 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-OPTION-A-CANDIDATE-MATERIALIZATION-V1",
+  "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "selectedOption": "A",
+  "scope": "CONTROLLED_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+  "surfaces": [
+    {
+      "surface": "ERU VALI KE",
+      "pedagogicalTarget": "Does he/she work?",
+      "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "surface": "ERU PARAZAMI KE",
+      "pedagogicalTarget": "Does he/she study?",
+      "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    }
+  ],
+  "semanticGuards": {
+    "ERU": "Contextual third-person singular; no gender distinction or universal pronoun claim.",
+    "KE": "Scoped candidate question marking only; not generalized.",
+    "englishDoes": "No HNK morpheme created.",
+    "wordOrder": "Exact candidate surfaces only; no productive order rule."
+  },
+  "writingCoverage": {
+    "inventory": "MX1-59 / HNK Font cmap v1.1",
+    "words": {
+      "ERU": {
+        "gIds": [
+          "G02",
+          "G15",
+          "G05"
+        ],
+        "syllables": [
+          [
+            "G02"
+          ],
+          [
+            "G15",
+            "G05"
+          ]
+        ],
+        "mx1": [
+          "MX1:ROOT:G02",
+          "MX1:CV:G15+G05"
+        ],
+        "codepoints": [
+          "U+E201",
+          "U+E218"
+        ],
+        "fullyWritable": true
+      },
+      "VALI": {
+        "gIds": [
+          "G31",
+          "G01",
+          "G14",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G31",
+            "G01"
+          ],
+          [
+            "G14",
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G31+G01",
+          "MX1:CV:G14+G03"
+        ],
+        "codepoints": [
+          "U+E22C",
+          "U+E211"
+        ],
+        "fullyWritable": true
+      },
+      "PARAZAMI": {
+        "gIds": [
+          "G21",
+          "G01",
+          "G15",
+          "G01",
+          "G32",
+          "G01",
+          "G11",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G21",
+            "G01"
+          ],
+          [
+            "G15",
+            "G01"
+          ],
+          [
+            "G32",
+            "G01"
+          ],
+          [
+            "G11",
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G21+G01",
+          "MX1:CV:G15+G01",
+          "MX1:CV:G32+G01",
+          "MX1:CV:G11+G03"
+        ],
+        "codepoints": [
+          "U+E21E",
+          "U+E214",
+          "U+E232",
+          "U+E209"
+        ],
+        "fullyWritable": true
+      },
+      "KE": {
+        "gIds": [
+          "G23",
+          "G02"
+        ],
+        "syllables": [
+          [
+            "G23",
+            "G02"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G23+G02"
+        ],
+        "codepoints": [
+          "U+E225"
+        ],
+        "fullyWritable": true
+      }
+    },
+    "summary": {
+      "surfaces": 2,
+      "fullyWritableSurfaces": 2,
+      "newMx1Required": 0,
+      "unresolved": 0
+    }
+  },
+  "validationGate": {
+    "required": true,
+    "next": "SWHNK-L04-CHESED-V2-OPTION-A-LINGUISTIC-VALIDATION-HUMAN-GATE-V1"
+  },
+  "nonEffects": [
+    "Not VALIDATED.",
+    "Not runtime active.",
+    "No universal HNK grammar.",
+    "No ERU gender semantics.",
+    "No KE generalization."
+  ]
+}
