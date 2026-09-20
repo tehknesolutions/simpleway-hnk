@@ -1,0 +1,120 @@
+{
+  "artifact_id": "SWHNK-L04-DAYI-INTENTION-MICROGRAMMAR-PROPOSAL-V1",
+  "status": "HUMAN_DECISION_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "focus": "DAYI",
+  "lexicalEvidence": {
+    "form": "DAYI",
+    "gloss": "querer / intenção",
+    "authority": "CANDIDATE",
+    "boundary": "No complement syntax is licensed by L03 lexical validation."
+  },
+  "comparisonEvidence": {
+    "MORAKU": {
+      "function": "WANT_PREDICATE_SCOPED",
+      "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+      "exactFrames": [
+        "AN MORAKU SAVETA",
+        "AN MORAKU HIZEP KAVESO"
+      ],
+      "transferPolicy": "COMPARISON_ONLY_NO_AUTOMATIC_TRANSFER"
+    },
+    "ERU": {
+      "function": "THIRD_PERSON_SINGULAR_CONTEXTUAL",
+      "scope": "Already validated in two closed L04 question microgrammars."
+    },
+    "KE": {
+      "function": "QUESTION_MARKER_SCOPED",
+      "scope": "Already validated clause-final only inside closed L04 allowlists."
+    }
+  },
+  "options": [
+    {
+      "id": "A",
+      "schema": "ERU + DAYI + KE",
+      "examples": [
+        "ERU DAYI KE"
+      ],
+      "intendedReading": "Does he/she want? / Is there third-person intention?",
+      "risk": "HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Tests DAYI first as an intransitive/bare intention frame without inventing complement syntax.",
+        "Reuses the already bounded ERU...KE envelope while keeping DAYI semantics isolated."
+      ],
+      "risks": [
+        "Gloss querer may naturally invite a complement, but none is licensed.",
+        "Reading must remain intentionally broad until human validation."
+      ]
+    },
+    {
+      "id": "B",
+      "schema": "ERU + DAYI + OBJECT + KE",
+      "examples": [
+        "ERU DAYI SAVETA KE"
+      ],
+      "intendedReading": "Does he/she want water?",
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Pedagogically concrete."
+      ],
+      "risks": [
+        "Would transfer MORAKU-like object complementation to DAYI without evidence.",
+        "Introduces SAVETA into a new DAYI frame."
+      ]
+    },
+    {
+      "id": "C",
+      "schema": "ERU + DAYI + VEMI + ACTION + KE",
+      "examples": [
+        "ERU DAYI VEMI LOKANI KE"
+      ],
+      "intendedReading": "Does he/she want/intend to go?",
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Could represent intention toward action."
+      ],
+      "risks": [
+        "Would borrow VEMI complement syntax from KORUME-like evidence without DAYI authority.",
+        "Creates multiple new relations at once."
+      ]
+    },
+    {
+      "id": "D",
+      "schema": "NO DAYI SENTENCE YET",
+      "examples": [
+        "DAYI"
+      ],
+      "intendedReading": "Lexical item only: querer / intenção",
+      "risk": "LOW",
+      "classification": "EXISTING_LEXICAL_EVIDENCE_ONLY",
+      "pros": [
+        "No grammar creation."
+      ],
+      "risks": [
+        "Does not advance L04 communicative use."
+      ]
+    }
+  ],
+  "recommendation": {
+    "selectedForHumanReview": "A",
+    "reason": "Option A is the minimum authoring experiment: it tests whether DAYI can occupy a bounded intention slot inside the already controlled L04 third-person question envelope, without importing MORAKU object syntax or VEMI action-complement syntax.",
+    "scopeIfApproved": "L04_CHESed_V2_CONTROLLED_THIRD_PERSON_BARE_INTENTION_YES_NO_QUESTION_ONLY"
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Select Option A for one exact candidate surface `ERU DAYI KE`. This does not validate DAYI as a productive predicate or license complements.",
+    "nextIfApproved": "Materialize `ERU DAYI KE`, run writing coverage, and open a separate linguistic validation gate."
+  },
+  "forbiddenGeneralizations": [
+    "DAYI is not MORAKU.",
+    "DAYI does not automatically take objects.",
+    "DAYI does not automatically take VEMI complements.",
+    "ERU remains contextual/gender-neutral.",
+    "KE remains scoped.",
+    "No declarative counterpart is inferred by removing KE."
+  ]
+}
