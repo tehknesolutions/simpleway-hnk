@@ -1,0 +1,932 @@
+{
+  "artifact_id": "SWHNK-A1-SENTENCE-WRITING-CORPUS-V1",
+  "status": "PARTIAL_EVIDENCE_PRESERVING_CORPUS",
+  "date": "2026-09-20",
+  "sources": [
+    "Canonical project utterance EN ZAMI HNK KE",
+    "L01 validated OPI transitions",
+    "L02 OPI 001-010 validated scoped course use",
+    "HNK-A1-WRITING-ATLAS-V1"
+  ],
+  "summary": {
+    "utterances": 20,
+    "fullyWritable": 3,
+    "partial": 17,
+    "unresolvedTokenTypes": [
+      "KALOVALA",
+      "KU",
+      "KUON",
+      "PARAZAMI",
+      "PARI",
+      "PITSA",
+      "SARADAYA",
+      "SARASALA",
+      "SAROSARI",
+      "TAYOVAN",
+      "VALA",
+      "VAMAKALA",
+      "VAMAVALA",
+      "VAMAZAMU",
+      "VAME",
+      "VAMUSARO",
+      "VANI"
+    ]
+  },
+  "utterances": [
+    {
+      "id": "CANON-HNK-QUESTION",
+      "hnk": "EN ZAMI HNK KE",
+      "gloss": "Você fala HNK?",
+      "authority": "CANONICAL_PROJECT_UTTERANCE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "ZAMI",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E232",
+            "U+E209"
+          ]
+        },
+        {
+          "form": "HNK",
+          "status": "CONTENT_TOKEN_PRESERVED",
+          "writing": "HNK"
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 4,
+        "unresolved": []
+      },
+      "writingDisplay": "  HNK "
+    },
+    {
+      "id": "L01-OPI-002",
+      "hnk": "EN VAMAKALA KE",
+      "gloss": null,
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VAMAKALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 3,
+        "writable": 2,
+        "unresolved": [
+          "VAMAKALA"
+        ]
+      },
+      "writingDisplay": " VAMAKALA "
+    },
+    {
+      "id": "L01-OPI-003",
+      "hnk": "EN KU SARASALA KE",
+      "gloss": "How old are you?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "SARASALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "KU",
+          "SARASALA"
+        ]
+      },
+      "writingDisplay": " KU SARASALA "
+    },
+    {
+      "id": "L01-OPI-004",
+      "hnk": "EN SARADAYA KUVAN KE",
+      "gloss": "Where were you born?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "SARADAYA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KUVAN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E228",
+            "U+E22D"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 3,
+        "unresolved": [
+          "SARADAYA"
+        ]
+      },
+      "writingDisplay": " SARADAYA  "
+    },
+    {
+      "id": "L01-OPI-005",
+      "hnk": "EN VALI KUVAN KE",
+      "gloss": "Where do you work?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VALI",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E22C",
+            "U+E211"
+          ]
+        },
+        {
+          "form": "KUVAN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E228",
+            "U+E22D"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 4,
+        "unresolved": []
+      },
+      "writingDisplay": "   "
+    },
+    {
+      "id": "L01-OPI-006",
+      "hnk": "EN KU VALA KE",
+      "gloss": "What do you do at work/school?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "VALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "KU",
+          "VALA"
+        ]
+      },
+      "writingDisplay": " KU VALA "
+    },
+    {
+      "id": "L01-OPI-007A",
+      "hnk": "EN VANI KUVAN KE",
+      "gloss": null,
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VANI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KUVAN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E228",
+            "U+E22D"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 3,
+        "unresolved": [
+          "VANI"
+        ]
+      },
+      "writingDisplay": " VANI  "
+    },
+    {
+      "id": "L01-OPI-007B",
+      "hnk": "EN VANI KUON KE",
+      "gloss": null,
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VANI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KUON",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "VANI",
+          "KUON"
+        ]
+      },
+      "writingDisplay": " VANI KUON "
+    },
+    {
+      "id": "L01-OPI-008",
+      "hnk": "EN KU VAMAVALA KE",
+      "gloss": "What are your hobbies?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "VAMAVALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "KU",
+          "VAMAVALA"
+        ]
+      },
+      "writingDisplay": " KU VAMAVALA "
+    },
+    {
+      "id": "L01-OPI-009",
+      "hnk": "EN VAME VAMAZAMU KE",
+      "gloss": null,
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VAME",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "VAMAZAMU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "VAME",
+          "VAMAZAMU"
+        ]
+      },
+      "writingDisplay": " VAME VAMAZAMU "
+    },
+    {
+      "id": "L01-OPI-010",
+      "hnk": "VAMUSARO | EN KU VALA KE",
+      "gloss": "What do you do on weekends?",
+      "authority": "VALIDATED_APPROXIMATE_CONTEXTUAL_EQUIVALENT",
+      "tokens": [
+        {
+          "form": "VAMUSARO",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "|",
+          "status": "SEPARATOR"
+        },
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "VALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 5,
+        "writable": 2,
+        "unresolved": [
+          "VAMUSARO",
+          "KU",
+          "VALA"
+        ]
+      },
+      "writingDisplay": "VAMUSARO |  KU VALA "
+    },
+    {
+      "id": "L02-OPI-001",
+      "hnk": "EN PARI TAYOVAN KE",
+      "gloss": "Você vê a cidade?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "PARI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "TAYOVAN",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "PARI",
+          "TAYOVAN"
+        ]
+      },
+      "writingDisplay": " PARI TAYOVAN "
+    },
+    {
+      "id": "L02-OPI-002",
+      "hnk": "EN VALI KUVAN KE",
+      "gloss": "Onde você trabalha?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "VALI",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E22C",
+            "U+E211"
+          ]
+        },
+        {
+          "form": "KUVAN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E228",
+            "U+E22D"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 4,
+        "unresolved": []
+      },
+      "writingDisplay": "   "
+    },
+    {
+      "id": "L02-OPI-003",
+      "hnk": "EN PARAZAMI KUVAN KE",
+      "gloss": "Onde você estuda?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "PARAZAMI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KUVAN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E228",
+            "U+E22D"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 3,
+        "unresolved": [
+          "PARAZAMI"
+        ]
+      },
+      "writingDisplay": " PARAZAMI  "
+    },
+    {
+      "id": "L02-OPI-004",
+      "hnk": "EN KU PARAZAMI KE",
+      "gloss": "O que você estuda? / Qual é o conteúdo do seu estudo?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "PARAZAMI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "KU",
+          "PARAZAMI"
+        ]
+      },
+      "writingDisplay": " KU PARAZAMI "
+    },
+    {
+      "id": "L02-OPI-005",
+      "hnk": "EN KU VALI KE",
+      "gloss": "Que trabalho/atividade de trabalho você faz?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "KU",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "VALI",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E22C",
+            "U+E211"
+          ]
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 3,
+        "unresolved": [
+          "KU"
+        ]
+      },
+      "writingDisplay": " KU  "
+    },
+    {
+      "id": "L02-OPI-006",
+      "hnk": "EN SAROSARI KE",
+      "gloss": "Você viaja?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "SAROSARI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 3,
+        "writable": 2,
+        "unresolved": [
+          "SAROSARI"
+        ]
+      },
+      "writingDisplay": " SAROSARI "
+    },
+    {
+      "id": "L02-OPI-007",
+      "hnk": "EN PARI KALOVALA KE",
+      "gloss": "Você vê o prédio?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "PARI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KALOVALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "PARI",
+          "KALOVALA"
+        ]
+      },
+      "writingDisplay": " PARI KALOVALA "
+    },
+    {
+      "id": "L02-OPI-008",
+      "hnk": "PA EN PARI KALOVALA KE",
+      "gloss": "Ontem, você viu o prédio?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "PA",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E21E"
+          ]
+        },
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "PARI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KALOVALA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 5,
+        "writable": 3,
+        "unresolved": [
+          "PARI",
+          "KALOVALA"
+        ]
+      },
+      "writingDisplay": "  PARI KALOVALA "
+    },
+    {
+      "id": "L02-OPI-009",
+      "hnk": "EN PARI PITSA KE",
+      "gloss": "Você vê a pizza?",
+      "authority": "VALIDATED_SCOPED_COURSE_USE",
+      "tokens": [
+        {
+          "form": "EN",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E202"
+          ]
+        },
+        {
+          "form": "PARI",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "PITSA",
+          "status": "NOT_IN_A1_WRITING_ATLAS",
+          "writing": null
+        },
+        {
+          "form": "KE",
+          "status": "WRITABLE_FROM_A1_ATLAS",
+          "writing": "",
+          "codepoints": [
+            "U+E225"
+          ]
+        }
+      ],
+      "coverage": {
+        "total": 4,
+        "writable": 2,
+        "unresolved": [
+          "PARI",
+          "PITSA"
+        ]
+      },
+      "writingDisplay": " PARI PITSA "
+    }
+  ],
+  "boundaries": [
+    "No missing token is invented or spelling-tokenized.",
+    "HNK is preserved as a content token, not equated with HENUVOKODAN and not spelling-inferred.",
+    "Scoped L01/L02 course validation does not become universal HNK grammar.",
+    "Natural-language glosses are copied only where source artifacts explicitly supplied them."
+  ]
+}
