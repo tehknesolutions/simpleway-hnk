@@ -1,0 +1,19 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-UX-CONTRACT-V1",
+  "status": "IMPLEMENTED_READINESS_ONLY",
+  "runtimeActive": false,
+  "allowedContent": [
+    "validated pedagogical reading",
+    "exact allowlisted HNK surface",
+    "governed writing representation",
+    "scope-specific feedback"
+  ],
+  "forbiddenContent": [
+    "universal ERU/KE formula",
+    "unvalidated DAYI/SALI complements",
+    "SARU as usually",
+    "surface generation outside allowlist",
+    "V2 described as recovered historical L04"
+  ],
+  "feedbackPolicy": "Feedback must describe the local validated surface/scope, never infer a productive universal rule."
+}
