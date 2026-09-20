@@ -1,0 +1,20 @@
+{
+  "gate_id": "SWHNK-HNK40-V2-CANDIDATE-D-FINAL-HUMAN-PROMOTION-GATE",
+  "status": "READY_FOR_EXPLICIT_HUMAN_DECISION",
+  "candidate": "V2-RECONSTITUTED-D",
+  "exactSpriteSha256": "87ee43f3785165397752a21eaceffcda8b3240748125062ca275bf8d46234ca4",
+  "exactOrderedSetSha256": "78668df0f707952b7c280de52526abaa2b7900597fb8ff362a3a08641fd1bce5",
+  "decision": "Promote the exact frozen Candidate D 40/40 vector set to VISUAL-CANON-V2.",
+  "effectsIfApproved": [
+    "Candidate D exact frozen hashes become HNK40 VISUAL-CANON-V2.",
+    "MX1 renderer may use these 40 roots as canonical visual inputs.",
+    "PUA/font-cmap work may begin as a separate governed implementation step."
+  ],
+  "nonEffects": [
+    "Does not claim recovery of the lost legacy alphabet.",
+    "Does not alter G01-G40 phoneme bindings.",
+    "Does not itself allocate Unicode/PUA.",
+    "Does not alter HNK language grammar or lexicon."
+  ],
+  "approvalToken": "A.S. / AS / APROVADO. SIGA."
+}
