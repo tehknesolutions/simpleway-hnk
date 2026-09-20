@@ -1,0 +1,63 @@
+{
+  "validation_id": "SWHNK-L04-CHESED-V2-PLACE-OPTION-A-LINGUISTIC-VALIDATION-V1",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "date_validated": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "validatedScope": "CONTROLLED_THIRD_PERSON_LOCATIVE_YES_NO_QUESTION_ONLY",
+  "validatedSurfaces": [
+    {
+      "surface": "ERU RUMI VALIVAN KE",
+      "pedagogicalReading": "Is he/she at the office?",
+      "validation": "PASS_SCOPED"
+    },
+    {
+      "surface": "ERU RUMI PARAZAMO KE",
+      "pedagogicalReading": "Is he/she at school / study domain?",
+      "validation": "PASS_SCOPED"
+    }
+  ],
+  "microgrammar": {
+    "schema": "ERU + RUMI + PLACE + KE",
+    "productivity": "CLOSED_ALLOWLIST_ONLY",
+    "allowedPlaceFillers": [
+      "VALIVAN",
+      "PARAZAMO"
+    ],
+    "RUMIContract": "Positive locative relation is validated only inside these exact L04 surfaces; no universal positive-locative rule.",
+    "placeContract": "VALIVAN/PARAZAMO remain FROZEN context/place labels serving as place arguments here; they are not promoted to locative predicates.",
+    "ERUContract": "Contextual third-person singular reference; no gender distinction or universal pronoun rule.",
+    "KEContract": "Clause-final question marking only in these exact surfaces; no universal interrogative rule.",
+    "copulaAsserted": false
+  },
+  "authorityPreservation": {
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "RUMI": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALIVAN": "FROZEN",
+    "PARAZAMO": "FROZEN",
+    "KE": "CANDIDATE",
+    "lexicalAuthorityPromoted": false,
+    "universalGrammarPromoted": false
+  },
+  "writingCoverage": {
+    "surfaces": 2,
+    "fullyWritable": 2,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "runtimeActive": false,
+  "explicitNonInference": [
+    "NO_UNIVERSAL_POSITIVE_RUMI_RULE",
+    "NO_PLACE_PREDICATE_PROMOTION",
+    "NO_HE_SHE_GENDER_SPLIT",
+    "NO_UNIVERSAL_ERU_PRONOUN_RULE",
+    "NO_UNIVERSAL_KE_QUESTION_RULE",
+    "NO_COPULA_INFERENCE",
+    "NO_UNIVERSAL_WORD_ORDER"
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-V2-DAYI-SALI-SARU-SEMANTIC-MICROGRAMMAR-TRIAGE-V1",
+    "purpose": "Separate intention, need and habituality into evidence-safe authoring lanes without importing activity or locative syntax."
+  }
+}
