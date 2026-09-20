@@ -187,3 +187,6 @@ jobs:
 
       - name: Validate lexeme G-ID tokenization
         run: npm run validate:lexeme-gids
+
+      - name: Validate HNK canon distinction
+        run: npm run validate:hnk-canon
