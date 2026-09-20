@@ -86,7 +86,8 @@
     "validate:syllabification": "node tests/validate-hnk-syllabification-runtime-v1.mjs",
     "validate:lexeme-gids": "node tests/validate-hnk-lexeme-gid-tokenization-v1.mjs",
     "validate:hnk-canon": "node tests/validate-hnk-canon-distinction.mjs",
-    "validate:a1-mx1-catalog": "node tests/validate-a1-mx1-syllable-catalog.mjs"
+    "validate:a1-mx1-catalog": "node tests/validate-a1-mx1-syllable-catalog.mjs",
+    "validate:mx1-visual": "node tests/validate-mx1-visual-renderer-v1.mjs"
   },
   "engines": {
     "node": ">=20"
