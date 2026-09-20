@@ -1,0 +1,259 @@
+{
+  "artifact_id": "SWHNK-WRITING-GAP-RESOLUTION-BATCH-V1",
+  "status": "EVIDENCE_RESOLUTION_COMPLETE",
+  "date": "2026-09-20",
+  "inputGapCount": 17,
+  "summary": {
+    "resolved": 17,
+    "unresolved": 0
+  },
+  "rows": [
+    {
+      "form": "KALOVALA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G01",
+        "G14",
+        "G04",
+        "G31",
+        "G01",
+        "G14",
+        "G01"
+      ],
+      "source": "L02 L02-OPI-PAT-008 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "KU",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G05"
+      ],
+      "source": "L02 L02-OPI-PAT-005 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "KUON",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G05",
+        "G04",
+        "G12"
+      ],
+      "source": "L01 L01-OPI-007 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "PARAZAMI",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G01",
+        "G15",
+        "G01",
+        "G32",
+        "G01",
+        "G11",
+        "G03"
+      ],
+      "source": "L02 L02-OPI-PAT-004 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "PARI",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G01",
+        "G15",
+        "G03"
+      ],
+      "source": "L02 L02-OPI-PAT-009 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "PITSA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G03",
+        "G30",
+        "G01"
+      ],
+      "source": "L02 L02-OPI-PAT-009 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "SARADAYA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G26",
+        "G01",
+        "G15",
+        "G01",
+        "G19",
+        "G01",
+        "G40",
+        "G01"
+      ],
+      "source": "L01 L01-OPI-004 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "SARASALA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G26",
+        "G01",
+        "G15",
+        "G01",
+        "G26",
+        "G01",
+        "G14",
+        "G01"
+      ],
+      "source": "L01 L01-OPI-003 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "SAROSARI",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G26",
+        "G01",
+        "G15",
+        "G04",
+        "G26",
+        "G01",
+        "G15",
+        "G03"
+      ],
+      "source": "L02 L02-OPI-PAT-006 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "TAYOVAN",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G22",
+        "G01",
+        "G40",
+        "G04",
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "source": "L02 L02-OPI-PAT-001 explicit structural G-ID expansion",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VALA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G14",
+        "G01"
+      ],
+      "source": "L01 L01-OPI-010 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VAMAKALA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G11",
+        "G01",
+        "G23",
+        "G01",
+        "G14",
+        "G01"
+      ],
+      "source": "L01 L01-OPI-002 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VAMAVALA",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G11",
+        "G01",
+        "G31",
+        "G01",
+        "G14",
+        "G01"
+      ],
+      "source": "L01 L01-OPI-008 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VAMAZAMU",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G11",
+        "G01",
+        "G32",
+        "G01",
+        "G11",
+        "G05"
+      ],
+      "source": "L01 L01-OPI-009 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VAME",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G11",
+        "G02"
+      ],
+      "source": "L01 L01-OPI-009 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VAMUSARO",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G11",
+        "G05",
+        "G26",
+        "G01",
+        "G15",
+        "G04"
+      ],
+      "source": "L01 L01-OPI-010 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    },
+    {
+      "form": "VANI",
+      "resolution": "RESOLVED_GID_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G12",
+        "G03"
+      ],
+      "source": "L01 L01-OPI-007 governed glyph IDs / safe segmentation",
+      "authorityEffect": "NONE"
+    }
+  ],
+  "boundaries": [
+    "G-ID resolution does not promote lexical or grammatical authority.",
+    "L01 scoped/watch/gate/candidate statuses remain unchanged.",
+    "L02 structural G-ID expansion creates no new surface forms.",
+    "No visual cell or PUA is invented by this audit."
+  ]
+}
