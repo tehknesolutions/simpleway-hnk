@@ -1,0 +1,89 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-POST-VALIDATION-EXPANSION-V1",
+  "status": "CLASSIFIED_NO_AUTOMATIC_EXPANSION",
+  "date": "2026-09-20",
+  "validatedMicrogrammar": {
+    "schema": "ERU + ACTIVITY + KE",
+    "productivity": "CLOSED_ALLOWLIST_ONLY",
+    "allowedActivityFillers": [
+      "VALI",
+      "PARAZAMI"
+    ]
+  },
+  "classification": {
+    "admissibleWithoutNewGrammar": [
+      {
+        "slot": "L04-V2-002",
+        "form": "VALI",
+        "reason": "Already admitted filler in validated closed allowlist."
+      },
+      {
+        "slot": "L04-V2-003",
+        "form": "PARAZAMI",
+        "reason": "Already admitted filler in validated closed allowlist."
+      }
+    ],
+    "requiresNewMicrogrammar": [
+      {
+        "slot": "L04-V2-004",
+        "form": "VALIVAN",
+        "reason": "Place/context label is not an ACTIVITY filler; admitting it would create a different predicate/question function."
+      },
+      {
+        "slot": "L04-V2-005",
+        "form": "PARAZAMO",
+        "reason": "Place/context label is not an ACTIVITY filler; admitting it would create a different predicate/question function."
+      },
+      {
+        "slot": "L04-V2-006",
+        "form": "DAYI",
+        "reason": "Want/intention candidate requires semantic/complement behavior not licensed by the activity-question microgrammar."
+      },
+      {
+        "slot": "L04-V2-007",
+        "form": "SALI",
+        "reason": "Need WATCH item requires semantic/complement behavior not licensed by the activity-question microgrammar."
+      },
+      {
+        "slot": "L04-V2-008",
+        "form": "SARU",
+        "reason": "Habitual/every-day item is not an activity filler and its scope/position relative to ERU/ACTIVITY/KE is unresolved."
+      }
+    ],
+    "blockedByAuthorityOrRole": [
+      {
+        "slot": "L04-V2-001",
+        "form": "ERU",
+        "reason": "Already structural third-person contextual element; cannot also be admitted as ACTIVITY filler."
+      },
+      {
+        "slot": "L04-V2-009",
+        "form": "KE",
+        "reason": "Already scoped interrogative marker; cannot be recursively admitted as ACTIVITY filler and remains non-generalized."
+      }
+    ]
+  },
+  "counts": {
+    "admissibleWithoutNewGrammar": 2,
+    "requiresNewMicrogrammar": 5,
+    "blockedByAuthorityOrRole": 2,
+    "total": 9,
+    "newAutomaticallyAdmittedFillers": 0
+  },
+  "decision": "KEEP_CLOSED_ALLOWLIST_VALI_PARAZAMI",
+  "recommendedNextGate": {
+    "id": "SWHNK-L04-CHESED-V2-PLACE-QUESTION-MICROGRAMMAR-PROPOSAL-V1",
+    "focus": [
+      "VALIVAN",
+      "PARAZAMO"
+    ],
+    "reason": "Both are FROZEN context/place labels, making them the lowest-authority-risk pair for a separately bounded L04 expansion. Their use must not infer a locative relation or copy the ACTIVITY schema automatically."
+  },
+  "nonInference": [
+    "DAYI is not admitted as a verb merely from its gloss querer/intenção.",
+    "SALI is not admitted as a verb merely from its gloss precisar.",
+    "SARU is not treated as usually and receives no inferred syntactic position.",
+    "VALIVAN/PARAZAMO do not become locative predicates automatically.",
+    "No new ERU/KE productivity is created."
+  ]
+}
