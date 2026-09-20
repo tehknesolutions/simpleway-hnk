@@ -1,0 +1,18 @@
+{
+  "transition_id": "SWHNK-MX1-VISUAL-COMPOSITION-RENDERER-V1-APPROVED",
+  "status": "ACTIVE_PREPRODUCTION_ONLY",
+  "date": "2026-09-20",
+  "approval_source": "CURRENT_USER_EXPLICIT_AS_SCOPED_TO_VIS-MX1-001..006",
+  "approved": [
+    "VIS-MX1-001",
+    "VIS-MX1-002",
+    "VIS-MX1-003",
+    "VIS-MX1-004",
+    "VIS-MX1-005",
+    "VIS-MX1-006"
+  ],
+  "visualCanon": false,
+  "rootVisualCanon": false,
+  "rendererAuthority": "PREPRODUCTION_LAYOUT_GRAMMAR_ONLY",
+  "secondHumanVisualGateRequired": true
+}
