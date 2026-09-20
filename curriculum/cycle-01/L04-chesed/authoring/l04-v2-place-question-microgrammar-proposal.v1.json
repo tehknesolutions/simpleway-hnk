@@ -1,0 +1,127 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-PLACE-QUESTION-MICROGRAMMAR-PROPOSAL-V1",
+  "status": "HUMAN_DECISION_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "focus": [
+    "VALIVAN",
+    "PARAZAMO"
+  ],
+  "evidence": {
+    "placeLabels": {
+      "VALIVAN": {
+        "gloss": "escritório",
+        "authority": "FROZEN"
+      },
+      "PARAZAMO": {
+        "gloss": "escola / domínio de estudo",
+        "authority": "FROZEN"
+      },
+      "l03Contract": "CONTEXT_PLACE_LABEL_ONLY; no locative relation, copula, subject, person, tense, aspect or interrogative inferred."
+    },
+    "availableLocativeEvidence": {
+      "RUMI": {
+        "function": "GENERAL_LOCATIVE_RELATION_SCOPED",
+        "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING"
+      },
+      "existingExactConstruction": "ERU NE RUMI DOMERA",
+      "scope": "NEGATED_LOCATION_PATCH_SCOPED"
+    },
+    "KE": {
+      "authority": "CANDIDATE",
+      "generalized": false
+    }
+  },
+  "options": [
+    {
+      "id": "A",
+      "schema": "ERU + RUMI + PLACE + KE",
+      "examples": [
+        "ERU RUMI VALIVAN KE",
+        "ERU RUMI PARAZAMO KE"
+      ],
+      "intendedReading": [
+        "Is he/she at the office?",
+        "Is he/she at school / study domain?"
+      ],
+      "risk": "HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Uses an existing explicitly locative relation token instead of turning place labels into predicates.",
+        "Preserves ERU first and KE final, matching separately scoped structural evidence."
+      ],
+      "risks": [
+        "Positive ERU+RUMI+PLACE is not currently licensed by the negated-location patch.",
+        "Adding KE creates a new locative yes/no question microgrammar."
+      ]
+    },
+    {
+      "id": "B",
+      "schema": "ERU + PLACE + KE",
+      "examples": [
+        "ERU VALIVAN KE",
+        "ERU PARAZAMO KE"
+      ],
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Short."
+      ],
+      "risks": [
+        "Would effectively turn context/place labels into predicates without RUMI.",
+        "Conflicts with L03 no-locative-inference boundary."
+      ]
+    },
+    {
+      "id": "C",
+      "schema": "RUMI + ERU + PLACE + KE",
+      "examples": [
+        "RUMI ERU VALIVAN KE",
+        "RUMI ERU PARAZAMO KE"
+      ],
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Makes RUMI explicit."
+      ],
+      "risks": [
+        "No evidence supports RUMI-initial order.",
+        "Creates more novel ordering than necessary."
+      ]
+    },
+    {
+      "id": "D",
+      "schema": "NO NEW PLACE QUESTION; retain labels only",
+      "examples": [
+        "VALIVAN",
+        "PARAZAMO"
+      ],
+      "risk": "LOW",
+      "classification": "EXISTING_L03_LABEL_USE_ONLY",
+      "pros": [
+        "Creates no grammar."
+      ],
+      "risks": [
+        "Does not expand L04 question capability."
+      ]
+    }
+  ],
+  "recommendation": {
+    "selectedForHumanReview": "A",
+    "reason": "A is the only proposed expansion that keeps VALIVAN/PARAZAMO as place arguments rather than silently converting them into locative predicates, because it makes the already-existing scoped locative relation RUMI explicit.",
+    "scopeIfApproved": "L04_CHESed_V2_CONTROLLED_THIRD_PERSON_LOCATIVE_YES_NO_QUESTION_ONLY"
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Select Option A for candidate materialization only. It does not validate positive RUMI syntax or locative question grammar.",
+    "nextIfApproved": "Materialize exactly ERU RUMI VALIVAN KE and ERU RUMI PARAZAMO KE, run writing coverage, then open separate linguistic validation."
+  },
+  "forbiddenGeneralizations": [
+    "VALIVAN/PARAZAMO do not become locative predicates.",
+    "RUMI is not generalized to every location construction.",
+    "KE is not generalized.",
+    "ERU remains contextual/gender-neutral.",
+    "No copula is inferred.",
+    "No universal word order is inferred."
+  ]
+}
