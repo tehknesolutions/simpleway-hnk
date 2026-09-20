@@ -81,7 +81,10 @@
     "validate:a1-cohort": "node tests/validate-a1-cohort-launch.mjs",
     "qa:a1:p01-intake": "node scripts/validate-a1-p01-intake.mjs",
     "validate:a1-p01": "node tests/validate-a1-p01-activation.mjs",
-    "validate:a1-immersive-glyph": "node tests/validate-a1-immersive-glyph-learning.mjs"
+    "validate:a1-immersive-glyph": "node tests/validate-a1-immersive-glyph-learning.mjs",
+    "validate:mx1": "node tests/validate-hnk-mix-glyph-runtime-v1.mjs",
+    "validate:syllabification": "node tests/validate-hnk-syllabification-runtime-v1.mjs",
+    "validate:lexeme-gids": "node tests/validate-hnk-lexeme-gid-tokenization-v1.mjs"
   },
   "engines": {
     "node": ">=20"
