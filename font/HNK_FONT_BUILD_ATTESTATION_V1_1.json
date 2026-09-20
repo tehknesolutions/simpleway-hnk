@@ -1,0 +1,38 @@
+{
+  "artifact_id": "SWHNK-HNK-FONT-V1.1-BUILD-ATTESTATION",
+  "status": "VERIFIED_BUILD",
+  "date": "2026-09-20",
+  "sourceCommit": "788eedbfbbd4e7984b09084613c7731362ce50c7",
+  "device": "TW-DA-VINCI-HNK-TEHKNE",
+  "fontFamily": "HNK Visual Canon V2",
+  "fontVersion": "1.1.0",
+  "glyphMappings": 99,
+  "inventory": {
+    "roots": 40,
+    "mx1": 59
+  },
+  "verification": {
+    "ttf": "PASS 99",
+    "otf": "PASS 99",
+    "woff2": "PASS 99",
+    "svgTableRequired": true
+  },
+  "files": {
+    "HNKVisualCanonV2-Regular.ttf": {
+      "bytes": 1310472,
+      "sha256": "7073e6cc5cd97a4535e2799c45ed179086687c5708230a5459f8fa4bcad0d4d0"
+    },
+    "HNKVisualCanonV2-Regular.otf": {
+      "bytes": 1310716,
+      "sha256": "dbe7c9f225f7855acf618123298173dce044b35652cc0689dd57d3b4d8e9cea8"
+    },
+    "HNKVisualCanonV2-Regular.woff2": {
+      "bytes": 2688,
+      "sha256": "454d5b1a4156daa67251f246908c6e21838e4cc6fe84b49c4c36d4df5b691b40"
+    }
+  },
+  "boundaries": [
+    "Attestation records a verified local build; it does not itself publish binary font files.",
+    "PUA mappings remain transport-only and are not Unicode-standard semantics."
+  ]
+}
