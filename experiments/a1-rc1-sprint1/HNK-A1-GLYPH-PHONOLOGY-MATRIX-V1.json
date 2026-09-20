@@ -1,0 +1,30 @@
+{
+  "schema": "HNK-A1-GLYPH-PHONOLOGY-MATRIX-V1",
+  "status": "SOURCE_LOCKED_AWAITING_EVIDENCE",
+  "glyphInventoryTarget": 40,
+  "authorityPolicy": {
+    "canonicalGlyph": "Requires confirmed glyph authority.",
+    "phoneticMapping": "Requires confirmed phonetic evidence.",
+    "mixGlyph": "Derived output only after segmentation and composition rules are approved.",
+    "unresolved": "Default when evidence is absent."
+  },
+  "confirmedConstraints": [
+    {
+      "id": "PITSA_TS_G30",
+      "scope": "STRUCTURAL_ONLY",
+      "statement": "PITSA preserves TS = G30 as an atomic structural unit.",
+      "productivePhonologyLicensed": false,
+      "mixGlyphRuleLicensed": false
+    }
+  ],
+  "glyphs": [],
+  "phoneticUnits": [],
+  "compositionRules": [],
+  "unresolved": [
+    "Complete authoritative Glifos-40 inventory is not present in the simpleway-hnk default branch evidence reviewed for this package.",
+    "Complete HNK phoneme/syllable inventory is not established by this package.",
+    "Phonetic segmentation rules are not established by this package.",
+    "Glyph composition geometry is not established by this package.",
+    "Rotation, mirroring, stacking, overlap, ligature and reduction permissions are not established by this package."
+  ]
+}
