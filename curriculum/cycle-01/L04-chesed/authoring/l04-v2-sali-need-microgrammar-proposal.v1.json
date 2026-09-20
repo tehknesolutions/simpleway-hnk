@@ -1,0 +1,125 @@
+{
+  "artifact_id": "SWHNK-L04-SALI-NEED-MICROGRAMMAR-PROPOSAL-V1",
+  "status": "HUMAN_DECISION_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "focus": "SALI",
+  "lexicalEvidence": {
+    "form": "SALI",
+    "gloss": "precisar",
+    "authority": "WATCH",
+    "boundary": "No complement syntax is licensed by L03 lexical validation."
+  },
+  "comparisonEvidence": {
+    "KORUME": {
+      "function": "NEED_PREDICATE_SCOPED",
+      "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+      "exactFrames": [
+        "AN KORUME VEMI LOKANI DOMERA",
+        "TAMURI AN KORUME VEMI LOKANI KODERA"
+      ],
+      "transferPolicy": "COMPARISON_ONLY_NO_AUTOMATIC_TRANSFER"
+    },
+    "VEMI": {
+      "function": "ACTION_COMPLEMENT_LINKER_SCOPED",
+      "transferPolicy": "NOT_LICENSED_WITH_SALI"
+    },
+    "ERU": {
+      "function": "THIRD_PERSON_SINGULAR_CONTEXTUAL",
+      "scope": "Validated only in closed L04 question microgrammars."
+    },
+    "KE": {
+      "function": "QUESTION_MARKER_SCOPED",
+      "scope": "Clause-final only in closed L04 allowlists."
+    }
+  },
+  "options": [
+    {
+      "id": "A",
+      "schema": "ERU + SALI + KE",
+      "examples": [
+        "ERU SALI KE"
+      ],
+      "intendedReading": "Does he/she need? / Is there third-person need?",
+      "risk": "HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Tests SALI as a bare need frame without importing KORUME/VEMI complement syntax.",
+        "Smallest possible L04 experiment."
+      ],
+      "risks": [
+        "SALI remains WATCH.",
+        "Bare need may be semantically incomplete outside controlled pedagogy."
+      ]
+    },
+    {
+      "id": "B",
+      "schema": "ERU + SALI + VEMI + ACTION + KE",
+      "examples": [
+        "ERU SALI VEMI LOKANI KE"
+      ],
+      "intendedReading": "Does he/she need to go?",
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Concrete need-to-action reading."
+      ],
+      "risks": [
+        "Transfers VEMI complement behavior without SALI evidence.",
+        "Creates several new relations at once."
+      ]
+    },
+    {
+      "id": "C",
+      "schema": "ERU + SALI + OBJECT + KE",
+      "examples": [
+        "ERU SALI SAVETA KE"
+      ],
+      "intendedReading": "Does he/she need water?",
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Concrete object reading."
+      ],
+      "risks": [
+        "No source licenses SALI object complementation.",
+        "Would invent a new argument frame."
+      ]
+    },
+    {
+      "id": "D",
+      "schema": "NO SALI SENTENCE YET",
+      "examples": [
+        "SALI"
+      ],
+      "intendedReading": "Lexical item only: precisar",
+      "risk": "LOW",
+      "classification": "EXISTING_LEXICAL_EVIDENCE_ONLY",
+      "pros": [
+        "No grammar creation."
+      ],
+      "risks": [
+        "Does not advance L04 communicative use."
+      ]
+    }
+  ],
+  "recommendation": {
+    "selectedForHumanReview": "A",
+    "reason": "Option A isolates the only question we need to test first: whether SALI can function as a bare need head in one exact third-person question. It avoids importing KORUME/VEMI or object-complement syntax.",
+    "scopeIfApproved": "L04_CHESed_V2_CONTROLLED_THIRD_PERSON_BARE_NEED_YES_NO_QUESTION_ONLY"
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Select Option A for one exact candidate surface `ERU SALI KE`. This does not promote SALI beyond WATCH or license complements.",
+    "nextIfApproved": "Materialize `ERU SALI KE`, run writing coverage, then open separate linguistic validation."
+  },
+  "forbiddenGeneralizations": [
+    "SALI is not KORUME.",
+    "SALI does not automatically license VEMI.",
+    "SALI does not automatically take objects.",
+    "SALI remains WATCH unless separately promoted.",
+    "ERU remains contextual/gender-neutral.",
+    "KE remains scoped.",
+    "No declarative counterpart is inferred by removing KE."
+  ]
+}
