@@ -1,0 +1,35 @@
+{
+  "transition_id": "SWHNK-HNK-FONT-ENGINEERING-V1-APPROVED",
+  "status": "ACTIVE",
+  "date": "2026-09-20",
+  "approval_source": "CURRENT_USER_EXPLICIT_AS_SCOPED_TO_SWHNK-HNK-FONT-ENGINEERING-V1-HUMAN-GATE",
+  "pua": {
+    "roots": "U+E100..U+E127",
+    "mx1": "U+E200..U+E233",
+    "count": 92
+  },
+  "formats": [
+    "OTF",
+    "TTF",
+    "WOFF2"
+  ],
+  "targets": [
+    "Windows/notebook",
+    "Web",
+    "Android"
+  ],
+  "fontFamily": "HNK Visual Canon V2",
+  "version": "1.0.0",
+  "requirements": [
+    "deterministic generation",
+    "92/92 cmap verification",
+    "output hashes",
+    "cross-render smoke contracts"
+  ],
+  "boundaries": [
+    "PUA is transport-only.",
+    "No Unicode-standard claim.",
+    "Old 12-token HENUVOKODAN PUA mapping excluded.",
+    "Visual authority remains source canon."
+  ]
+}
