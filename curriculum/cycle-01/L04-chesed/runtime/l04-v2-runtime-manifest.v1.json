@@ -1,0 +1,77 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-MANIFEST-V1",
+  "status": "READINESS_CONTRACT_APPROVED_RUNTIME_STILL_HOLD",
+  "runtimeActive": false,
+  "exposureModel": "ALLOWLIST_ONLY_EXACT_SURFACES",
+  "legacyManifestMutation": false,
+  "structures": [
+    {
+      "id": "L04-V2-STR001",
+      "surfaces": [
+        "ERU VALI KE",
+        "ERU PARAZAMI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR002",
+      "surfaces": [
+        "ERU RUMI VALIVAN KE",
+        "ERU RUMI PARAZAMO KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR003",
+      "surfaces": [
+        "ERU DAYI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR004",
+      "surfaces": [
+        "ERU SALI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR005",
+      "surfaces": [
+        "SARU ERU VALI KE",
+        "SARU ERU PARAZAMI KE"
+      ]
+    }
+  ],
+  "authorities": {
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "RUMI": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALI": "FROZEN",
+    "PARAZAMI": "WATCH",
+    "VALIVAN": "FROZEN",
+    "PARAZAMO": "FROZEN",
+    "DAYI": "CANDIDATE",
+    "SALI": "WATCH",
+    "SARU": "WATCH",
+    "KE": "CANDIDATE"
+  },
+  "writing": {
+    "mx1Inventory": 59,
+    "validatedSurfaces": 8,
+    "fullyWritableSurfaces": 8,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "ux": {
+    "mode": "CONTROLLED_TEACHING_ONLY",
+    "universalGrammarPresentation": false,
+    "historicalRecoveryClaim": false
+  },
+  "negativeSpace": [
+    "NO_UNIVERSAL_ERU",
+    "NO_UNIVERSAL_KE",
+    "NO_DECLARATIVE_BY_REMOVING_KE",
+    "NO_DAYI_OBJECT_OR_VEMI_COMPLEMENT",
+    "NO_SALI_OBJECT_OR_VEMI_COMPLEMENT",
+    "SARU_NOT_USUALLY",
+    "NO_SARU_WITH_DAYI_OR_SALI",
+    "NO_UNIVERSAL_RUMI_OR_COPULA",
+    "NO_UNIVERSAL_TEMPORAL_ORDER"
+  ]
+}
