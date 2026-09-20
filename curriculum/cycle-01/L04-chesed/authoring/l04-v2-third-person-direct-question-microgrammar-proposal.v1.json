@@ -1,0 +1,120 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-THIRD-PERSON-DIRECT-QUESTION-MICROGRAMMAR-PROPOSAL-V1",
+  "status": "HUMAN_DECISION_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "historicalRecoveryClaim": false,
+  "target": "Does he/she...?",
+  "evidence": {
+    "ERU": {
+      "form": "ERU",
+      "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+      "function": "THIRD_PERSON_SINGULAR_CONTEXTUAL",
+      "genderDistinctionLicensed": false
+    },
+    "KE": {
+      "form": "KE",
+      "authority": "CANDIDATE",
+      "l03Role": "YES_NO_INTERROGATIVE_MARKER",
+      "evidenceLedPosition": "CLAUSE_FINAL",
+      "automaticProductivity": false
+    },
+    "l03ExactPackage": [
+      "VALI KE",
+      "PARAZAMI KE"
+    ],
+    "l03SubjectPersonContract": "NO_SUBJECT_PERSON_VALUE_ENCODED_OR_INFERRED"
+  },
+  "options": [
+    {
+      "id": "A",
+      "schema": "ERU + ACTIVITY + KE",
+      "examples": [
+        "ERU VALI KE",
+        "ERU PARAZAMI KE"
+      ],
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "risk": "HIGH",
+      "pros": [
+        "Reuses ERU contextual third-person evidence.",
+        "Keeps KE clause-final, consistent with evidence-led L03 position.",
+        "Reuses VALI/PARAZAMI without creating new lexemes."
+      ],
+      "risks": [
+        "Creates a new subject/person + activity + question composition rule.",
+        "Could be misread as universal SVO-like HNK order.",
+        "Does not license he/she gender distinction."
+      ]
+    },
+    {
+      "id": "B",
+      "schema": "ACTIVITY + ERU + KE",
+      "examples": [
+        "VALI ERU KE",
+        "PARAZAMI ERU KE"
+      ],
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "risk": "VERY_HIGH",
+      "pros": [
+        "Keeps KE final."
+      ],
+      "risks": [
+        "No source evidence supports ERU after activity.",
+        "Introduces a novel token order with weaker continuity."
+      ]
+    },
+    {
+      "id": "C",
+      "schema": "ERU + KE + ACTIVITY",
+      "examples": [
+        "ERU KE VALI",
+        "ERU KE PARAZAMI"
+      ],
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "risk": "VERY_HIGH",
+      "pros": [
+        "Keeps ERU explicit."
+      ],
+      "risks": [
+        "Conflicts with evidence-led clause-final KE position.",
+        "No source package supports medial KE."
+      ]
+    },
+    {
+      "id": "D",
+      "schema": "NO PERSON MARKING; reuse L03 ACTIVITY + KE",
+      "examples": [
+        "VALI KE",
+        "PARAZAMI KE"
+      ],
+      "classification": "EXISTING_SCOPED_L03_EVIDENCE_NOT_L04_TRANSLATION",
+      "risk": "MEDIUM",
+      "pros": [
+        "No new surface forms."
+      ],
+      "risks": [
+        "Cannot encode/infer third-person according to L03 contract.",
+        "Therefore cannot by itself satisfy Does he/she...?"
+      ]
+    }
+  ],
+  "recommendation": {
+    "selectedForHumanReview": "A",
+    "reason": "Option A is the smallest bounded extension that can express an explicit third-person contextual element while preserving clause-final KE and reusing existing activity lexemes. This is a design recommendation, not an HNK rule.",
+    "scopeIfApproved": "L04_CHESed_V2_CONTROLLED_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+    "genderSemantics": "ERU remains gender-neutral/contextual unless separately authored; no he/she distinction is created."
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Select Option A as a NEW_AUTHORED_CANDIDATE for bounded L04 validation. Approval does not create universal HNK grammar and does not promote ERU or KE authority.",
+    "nextIfApproved": "Materialize exactly ERU VALI KE and ERU PARAZAMI KE as L04 V2 candidate surfaces, then run writing coverage and a separate validation gate."
+  },
+  "forbiddenGeneralizations": [
+    "ERU is not declared a universal third-person pronoun.",
+    "ERU does not mean specifically he or she.",
+    "KE is not generalized beyond the bounded candidate.",
+    "No English auxiliary does morpheme is created.",
+    "No declarative form is derived by removing KE.",
+    "No word-order rule is generalized from Option A."
+  ]
+}
