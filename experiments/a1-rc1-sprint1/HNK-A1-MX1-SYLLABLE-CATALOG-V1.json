@@ -1,0 +1,2200 @@
+{
+  "artifact_id": "SWHNK-A1-MX1-SYLLABLE-CATALOG-V1",
+  "status": "DERIVED_RUNTIME_CATALOG",
+  "date": "2026-09-20",
+  "sources": [
+    "A1 registry explicit gIds",
+    "B5 safe romanization tokenizer",
+    "Syllabification Authority V1",
+    "MX1 Runtime V1"
+  ],
+  "summary": {
+    "registryEntries": 43,
+    "wordsMx1Eligible": 42,
+    "contentExcluded": 1,
+    "unresolvedWords": 0,
+    "uniqueSyllables": 52,
+    "uniqueMx1Licensed": 52,
+    "profiles": {
+      "ROOT": 2,
+      "CV": 45,
+      "VC": 2,
+      "CVC": 3
+    }
+  },
+  "catalog": [
+    {
+      "gIds": [
+        "G01",
+        "G12"
+      ],
+      "pattern": "VC",
+      "profile": "VC",
+      "mx1Key": "MX1:VC:G01+G12",
+      "occurrences": 1,
+      "forms": [
+        "AN"
+      ]
+    },
+    {
+      "gIds": [
+        "G02"
+      ],
+      "pattern": "V",
+      "profile": "ROOT",
+      "mx1Key": "MX1:ROOT:G02",
+      "occurrences": 1,
+      "forms": [
+        "ERU"
+      ]
+    },
+    {
+      "gIds": [
+        "G02",
+        "G12"
+      ],
+      "pattern": "VC",
+      "profile": "VC",
+      "mx1Key": "MX1:VC:G02+G12",
+      "occurrences": 1,
+      "forms": [
+        "EN"
+      ]
+    },
+    {
+      "gIds": [
+        "G03"
+      ],
+      "pattern": "V",
+      "profile": "ROOT",
+      "mx1Key": "MX1:ROOT:G03",
+      "occurrences": 1,
+      "forms": [
+        "SEVAI"
+      ]
+    },
+    {
+      "gIds": [
+        "G07",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G07+G01",
+      "occurrences": 2,
+      "forms": [
+        "HAVORI",
+        "HAVENU"
+      ]
+    },
+    {
+      "gIds": [
+        "G07",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G07+G03",
+      "occurrences": 1,
+      "forms": [
+        "HIZEP"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G11+G01",
+      "occurrences": 4,
+      "forms": [
+        "TUMAVI",
+        "NEMA",
+        "VOMA",
+        "MAVERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G11+G02",
+      "occurrences": 3,
+      "forms": [
+        "KORUME",
+        "DOMERA",
+        "TUMERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G02",
+        "G23"
+      ],
+      "pattern": "CVC",
+      "profile": "CVC",
+      "mx1Key": "MX1:CVC:G11+G02+G23",
+      "occurrences": 1,
+      "forms": [
+        "PUMEK"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G11+G03",
+      "occurrences": 5,
+      "forms": [
+        "VODEMI",
+        "ZAMI",
+        "VEMI",
+        "RUMI",
+        "MISERO"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G11+G04",
+      "occurrences": 1,
+      "forms": [
+        "MORAKU"
+      ]
+    },
+    {
+      "gIds": [
+        "G11",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G11+G05",
+      "occurrences": 2,
+      "forms": [
+        "MUNASE",
+        "TAMURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G12",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G12+G01",
+      "occurrences": 1,
+      "forms": [
+        "MUNASE"
+      ]
+    },
+    {
+      "gIds": [
+        "G12",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G12+G02",
+      "occurrences": 2,
+      "forms": [
+        "NE",
+        "NEMA"
+      ]
+    },
+    {
+      "gIds": [
+        "G12",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G12+G03",
+      "occurrences": 1,
+      "forms": [
+        "LOKANI"
+      ]
+    },
+    {
+      "gIds": [
+        "G12",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G12+G05",
+      "occurrences": 2,
+      "forms": [
+        "LENU",
+        "HAVENU"
+      ]
+    },
+    {
+      "gIds": [
+        "G14",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G14+G02",
+      "occurrences": 1,
+      "forms": [
+        "LENU"
+      ]
+    },
+    {
+      "gIds": [
+        "G14",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G14+G03",
+      "occurrences": 2,
+      "forms": [
+        "VALI",
+        "LIKADO"
+      ]
+    },
+    {
+      "gIds": [
+        "G14",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G14+G04",
+      "occurrences": 1,
+      "forms": [
+        "LOKANI"
+      ]
+    },
+    {
+      "gIds": [
+        "G14",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G14+G05",
+      "occurrences": 2,
+      "forms": [
+        "PELUKI",
+        "LURAVO"
+      ]
+    },
+    {
+      "gIds": [
+        "G15",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G15+G01",
+      "occurrences": 8,
+      "forms": [
+        "MORAKU",
+        "DOMERA",
+        "MAVERA",
+        "TUMERA",
+        "KOPERA",
+        "KODERA",
+        "KURAVI",
+        "LURAVO"
+      ]
+    },
+    {
+      "gIds": [
+        "G15",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G15+G02",
+      "occurrences": 1,
+      "forms": [
+        "REVATI"
+      ]
+    },
+    {
+      "gIds": [
+        "G15",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G15+G03",
+      "occurrences": 4,
+      "forms": [
+        "GAVURI",
+        "TAMURI",
+        "HAVORI",
+        "KADURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G15",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G15+G04",
+      "occurrences": 1,
+      "forms": [
+        "MISERO"
+      ]
+    },
+    {
+      "gIds": [
+        "G15",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G15+G05",
+      "occurrences": 4,
+      "forms": [
+        "KORUME",
+        "ERU",
+        "RUMI",
+        "DARUVI"
+      ]
+    },
+    {
+      "gIds": [
+        "G19",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G19+G01",
+      "occurrences": 1,
+      "forms": [
+        "DARUVI"
+      ]
+    },
+    {
+      "gIds": [
+        "G19",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G19+G02",
+      "occurrences": 2,
+      "forms": [
+        "VODEMI",
+        "KODERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G19",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G19+G04",
+      "occurrences": 2,
+      "forms": [
+        "DOMERA",
+        "LIKADO"
+      ]
+    },
+    {
+      "gIds": [
+        "G19",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G19+G05",
+      "occurrences": 1,
+      "forms": [
+        "KADURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G20",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G20+G01",
+      "occurrences": 1,
+      "forms": [
+        "GAVURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G21",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G21+G01",
+      "occurrences": 1,
+      "forms": [
+        "PA"
+      ]
+    },
+    {
+      "gIds": [
+        "G21",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G21+G02",
+      "occurrences": 2,
+      "forms": [
+        "PELUKI",
+        "KOPERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G21",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G21+G05",
+      "occurrences": 1,
+      "forms": [
+        "PUMEK"
+      ]
+    },
+    {
+      "gIds": [
+        "G22",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G22+G01",
+      "occurrences": 2,
+      "forms": [
+        "SAVETA",
+        "TAMURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G22",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G22+G03",
+      "occurrences": 1,
+      "forms": [
+        "REVATI"
+      ]
+    },
+    {
+      "gIds": [
+        "G22",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G22+G05",
+      "occurrences": 2,
+      "forms": [
+        "TUMAVI",
+        "TUMERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G23",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G23+G01",
+      "occurrences": 4,
+      "forms": [
+        "KAVESO",
+        "LOKANI",
+        "LIKADO",
+        "KADURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G23",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G23+G02",
+      "occurrences": 1,
+      "forms": [
+        "KE"
+      ]
+    },
+    {
+      "gIds": [
+        "G23",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G23+G03",
+      "occurrences": 1,
+      "forms": [
+        "PELUKI"
+      ]
+    },
+    {
+      "gIds": [
+        "G23",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G23+G04",
+      "occurrences": 3,
+      "forms": [
+        "KORUME",
+        "KOPERA",
+        "KODERA"
+      ]
+    },
+    {
+      "gIds": [
+        "G23",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G23+G05",
+      "occurrences": 3,
+      "forms": [
+        "MORAKU",
+        "KURAVI",
+        "KUVAN"
+      ]
+    },
+    {
+      "gIds": [
+        "G26",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G26+G01",
+      "occurrences": 1,
+      "forms": [
+        "SAVETA"
+      ]
+    },
+    {
+      "gIds": [
+        "G26",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G26+G02",
+      "occurrences": 3,
+      "forms": [
+        "MUNASE",
+        "MISERO",
+        "SEVAI"
+      ]
+    },
+    {
+      "gIds": [
+        "G26",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G26+G04",
+      "occurrences": 1,
+      "forms": [
+        "KAVESO"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G31+G01",
+      "occurrences": 3,
+      "forms": [
+        "VALI",
+        "SEVAI",
+        "REVATI"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "pattern": "CVC",
+      "profile": "CVC",
+      "mx1Key": "MX1:CVC:G31+G01+G12",
+      "occurrences": 1,
+      "forms": [
+        "KUVAN"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G02"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G31+G02",
+      "occurrences": 5,
+      "forms": [
+        "KAVESO",
+        "SAVETA",
+        "VEMI",
+        "MAVERA",
+        "HAVENU"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G03"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G31+G03",
+      "occurrences": 3,
+      "forms": [
+        "TUMAVI",
+        "DARUVI",
+        "KURAVI"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G04"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G31+G04",
+      "occurrences": 4,
+      "forms": [
+        "VODEMI",
+        "VOMA",
+        "HAVORI",
+        "LURAVO"
+      ]
+    },
+    {
+      "gIds": [
+        "G31",
+        "G05"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G31+G05",
+      "occurrences": 1,
+      "forms": [
+        "GAVURI"
+      ]
+    },
+    {
+      "gIds": [
+        "G32",
+        "G01"
+      ],
+      "pattern": "CV",
+      "profile": "CV",
+      "mx1Key": "MX1:CV:G32+G01",
+      "occurrences": 1,
+      "forms": [
+        "ZAMI"
+      ]
+    },
+    {
+      "gIds": [
+        "G32",
+        "G02",
+        "G21"
+      ],
+      "pattern": "CVC",
+      "profile": "CVC",
+      "mx1Key": "MX1:CVC:G32+G02+G21",
+      "occurrences": 1,
+      "forms": [
+        "HIZEP"
+      ]
+    }
+  ],
+  "words": [
+    {
+      "id": "LEX_VODEMI",
+      "form": "VODEMI",
+      "gIds": [
+        "G31",
+        "G04",
+        "G19",
+        "G02",
+        "G11",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04"
+        },
+        {
+          "gIds": [
+            "G19",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G02"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_TUMAVI",
+      "form": "TUMAVI",
+      "gIds": [
+        "G22",
+        "G05",
+        "G11",
+        "G01",
+        "G31",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G05"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_PUMEK",
+      "form": "PUMEK",
+      "gIds": [
+        "G21",
+        "G05",
+        "G11",
+        "G02",
+        "G23"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G05"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02",
+            "G23"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G11+G02+G23"
+        }
+      ]
+    },
+    {
+      "id": "LEX_MUNASE",
+      "form": "MUNASE",
+      "gIds": [
+        "G11",
+        "G05",
+        "G12",
+        "G01",
+        "G26",
+        "G02"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G05"
+        },
+        {
+          "gIds": [
+            "G12",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G01"
+        },
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02"
+        }
+      ]
+    },
+    {
+      "id": "LEX_AN",
+      "form": "AN",
+      "gIds": [
+        "G01",
+        "G12"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G01",
+            "G12"
+          ],
+          "profile": "VC",
+          "mx1Key": "MX1:VC:G01+G12"
+        }
+      ]
+    },
+    {
+      "id": "LEX_EN",
+      "form": "EN",
+      "gIds": [
+        "G02",
+        "G12"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G02",
+            "G12"
+          ],
+          "profile": "VC",
+          "mx1Key": "MX1:VC:G02+G12"
+        }
+      ]
+    },
+    {
+      "id": "LEX_ZAMI",
+      "form": "ZAMI",
+      "gIds": [
+        "G32",
+        "G01",
+        "G11",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G32+G01"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03"
+        }
+      ]
+    },
+    {
+      "id": "CONTENT_HNK",
+      "form": "HNK",
+      "gIds": null,
+      "status": "CONTENT_TOKEN_EXCLUDED"
+    },
+    {
+      "id": "LEX_VALI",
+      "form": "VALI",
+      "gIds": [
+        "G31",
+        "G01",
+        "G14",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01"
+        },
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_NE",
+      "form": "NE",
+      "gIds": [
+        "G12",
+        "G02"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G12",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G02"
+        }
+      ]
+    },
+    {
+      "id": "LEX_PA",
+      "form": "PA",
+      "gIds": [
+        "G21",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KE",
+      "form": "KE",
+      "gIds": [
+        "G23",
+        "G02"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G02"
+        }
+      ]
+    },
+    {
+      "id": "LEX_GAVURI",
+      "form": "GAVURI",
+      "gIds": [
+        "G20",
+        "G01",
+        "G31",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G20",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G20+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G05"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KAVESO",
+      "form": "KAVESO",
+      "gIds": [
+        "G23",
+        "G01",
+        "G31",
+        "G02",
+        "G26",
+        "G04"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02"
+        },
+        {
+          "gIds": [
+            "G26",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G04"
+        }
+      ]
+    },
+    {
+      "id": "LEX_HIZEP",
+      "form": "HIZEP",
+      "gIds": [
+        "G07",
+        "G03",
+        "G32",
+        "G02",
+        "G21"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G03"
+        },
+        {
+          "gIds": [
+            "G32",
+            "G02",
+            "G21"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G32+G02+G21"
+        }
+      ]
+    },
+    {
+      "id": "LEX_MORAKU",
+      "form": "MORAKU",
+      "gIds": [
+        "G11",
+        "G04",
+        "G15",
+        "G01",
+        "G23",
+        "G05"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G04"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        },
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05"
+        }
+      ]
+    },
+    {
+      "id": "LEX_SAVETA",
+      "form": "SAVETA",
+      "gIds": [
+        "G26",
+        "G01",
+        "G31",
+        "G02",
+        "G22",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02"
+        },
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KORUME",
+      "form": "KORUME",
+      "gIds": [
+        "G23",
+        "G04",
+        "G15",
+        "G05",
+        "G11",
+        "G02"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02"
+        }
+      ]
+    },
+    {
+      "id": "LEX_VEMI",
+      "form": "VEMI",
+      "gIds": [
+        "G31",
+        "G02",
+        "G11",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_LOKANI",
+      "form": "LOKANI",
+      "gIds": [
+        "G14",
+        "G04",
+        "G23",
+        "G01",
+        "G12",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G04"
+        },
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01"
+        },
+        {
+          "gIds": [
+            "G12",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_DOMERA",
+      "form": "DOMERA",
+      "gIds": [
+        "G19",
+        "G04",
+        "G11",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G19",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G04"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_TAMURI",
+      "form": "TAMURI",
+      "gIds": [
+        "G22",
+        "G01",
+        "G11",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G01"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G05"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_NEMA",
+      "form": "NEMA",
+      "gIds": [
+        "G12",
+        "G02",
+        "G11",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G12",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G02"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_VOMA",
+      "form": "VOMA",
+      "gIds": [
+        "G31",
+        "G04",
+        "G11",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_PELUKI",
+      "form": "PELUKI",
+      "gIds": [
+        "G21",
+        "G02",
+        "G14",
+        "G05",
+        "G23",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G02"
+        },
+        {
+          "gIds": [
+            "G14",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G05"
+        },
+        {
+          "gIds": [
+            "G23",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_LENU",
+      "form": "LENU",
+      "gIds": [
+        "G14",
+        "G02",
+        "G12",
+        "G05"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G02"
+        },
+        {
+          "gIds": [
+            "G12",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G05"
+        }
+      ]
+    },
+    {
+      "id": "LEX_MAVERA",
+      "form": "MAVERA",
+      "gIds": [
+        "G11",
+        "G01",
+        "G31",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_ERU",
+      "form": "ERU",
+      "gIds": [
+        "G02",
+        "G15",
+        "G05"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G02"
+          ],
+          "profile": "ROOT",
+          "mx1Key": "MX1:ROOT:G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05"
+        }
+      ]
+    },
+    {
+      "id": "LEX_RUMI",
+      "form": "RUMI",
+      "gIds": [
+        "G15",
+        "G05",
+        "G11",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_HAVORI",
+      "form": "HAVORI",
+      "gIds": [
+        "G07",
+        "G01",
+        "G31",
+        "G04",
+        "G15",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_TUMERA",
+      "form": "TUMERA",
+      "gIds": [
+        "G22",
+        "G05",
+        "G11",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G05"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_HAVENU",
+      "form": "HAVENU",
+      "gIds": [
+        "G07",
+        "G01",
+        "G31",
+        "G02",
+        "G12",
+        "G05"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02"
+        },
+        {
+          "gIds": [
+            "G12",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G05"
+        }
+      ]
+    },
+    {
+      "id": "LEX_MISERO",
+      "form": "MISERO",
+      "gIds": [
+        "G11",
+        "G03",
+        "G26",
+        "G02",
+        "G15",
+        "G04"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03"
+        },
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G04"
+        }
+      ]
+    },
+    {
+      "id": "LEX_LIKADO",
+      "form": "LIKADO",
+      "gIds": [
+        "G14",
+        "G03",
+        "G23",
+        "G01",
+        "G19",
+        "G04"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G03"
+        },
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01"
+        },
+        {
+          "gIds": [
+            "G19",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G04"
+        }
+      ]
+    },
+    {
+      "id": "LEX_SEVAI",
+      "form": "SEVAI",
+      "gIds": [
+        "G26",
+        "G02",
+        "G31",
+        "G01",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01"
+        },
+        {
+          "gIds": [
+            "G03"
+          ],
+          "profile": "ROOT",
+          "mx1Key": "MX1:ROOT:G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KOPERA",
+      "form": "KOPERA",
+      "gIds": [
+        "G23",
+        "G04",
+        "G21",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04"
+        },
+        {
+          "gIds": [
+            "G21",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_DARUVI",
+      "form": "DARUVI",
+      "gIds": [
+        "G19",
+        "G01",
+        "G15",
+        "G05",
+        "G31",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G19",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G01"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KODERA",
+      "form": "KODERA",
+      "gIds": [
+        "G23",
+        "G04",
+        "G19",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04"
+        },
+        {
+          "gIds": [
+            "G19",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G02"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KURAVI",
+      "form": "KURAVI",
+      "gIds": [
+        "G23",
+        "G05",
+        "G15",
+        "G01",
+        "G31",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_LURAVO",
+      "form": "LURAVO",
+      "gIds": [
+        "G14",
+        "G05",
+        "G15",
+        "G01",
+        "G31",
+        "G04"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G05"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04"
+        }
+      ]
+    },
+    {
+      "id": "LEX_REVATI",
+      "form": "REVATI",
+      "gIds": [
+        "G15",
+        "G02",
+        "G31",
+        "G01",
+        "G22",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G15",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G02"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01"
+        },
+        {
+          "gIds": [
+            "G22",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G03"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KUVAN",
+      "form": "KUVAN",
+      "gIds": [
+        "G23",
+        "G05",
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01",
+            "G12"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G31+G01+G12"
+        }
+      ]
+    },
+    {
+      "id": "LEX_KADURI",
+      "form": "KADURI",
+      "gIds": [
+        "G23",
+        "G01",
+        "G19",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "status": "MX1_ELIGIBLE",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01"
+        },
+        {
+          "gIds": [
+            "G19",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G05"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03"
+        }
+      ]
+    }
+  ],
+  "boundaries": [
+    "Catalog is derived from governed G-ID sequences/tokenization and approved V1 syllabification.",
+    "MX1 keys identify compositional cells; they do not claim official visual glyph artwork.",
+    "HNK content token is excluded from spelling inference and remains HNK."
+  ]
+}

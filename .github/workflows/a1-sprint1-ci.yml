@@ -33,5 +33,7 @@ jobs:
         run: npm run validate:a1-release
       - name: Build Alpha deploy artifact
         run: npm run build:a1-alpha
+      - name: Validate A1 MX1 syllable catalog
+        run: npm run validate:a1-mx1-catalog
       - name: Run governed repository suite
         run: npm test

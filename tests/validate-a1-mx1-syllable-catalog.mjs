@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
+const c=JSON.parse(await readFile(new URL('../experiments/a1-rc1-sprint1/HNK-A1-MX1-SYLLABLE-CATALOG-V1.json',import.meta.url),'utf8'));
+assert.equal(c.summary.registryEntries,43);assert.equal(c.summary.wordsMx1Eligible,42);assert.equal(c.summary.contentExcluded,1);assert.equal(c.summary.unresolvedWords,0);
+assert.equal(c.summary.uniqueSyllables,52);assert.equal(c.summary.uniqueMx1Licensed,52);
+assert.deepEqual(c.summary.profiles,{ROOT:2,CV:45,VC:2,CVC:3});
+assert.equal(c.words.find(x=>x.form==='HNK').status,'CONTENT_TOKEN_EXCLUDED');
+assert.deepEqual(c.words.find(x=>x.form==='GAVURI').gIds,['G20','G01','G31','G05','G15','G03']);
+assert.deepEqual(c.words.find(x=>x.form==='KUVAN').syllables.map(x=>x.profile),['CV','CVC']);
+assert.ok(c.catalog.every(x=>x.mx1Key?.startsWith('MX1:')));
+console.log('PASS HNK-A1-MX1-SYLLABLE-CATALOG-V1');
