@@ -178,3 +178,15 @@ jobs:
 
       - name: Validate L03 Binah evidence/rebind review gate
         run: npm run validate:l03-binah-evidence-rebind-review
+
+      - name: Validate MX1 runtime
+        run: npm run validate:mx1
+
+      - name: Validate syllabification runtime
+        run: npm run validate:syllabification
+
+      - name: Validate lexeme G-ID tokenization
+        run: npm run validate:lexeme-gids
+
+      - name: Validate HNK canon distinction
+        run: npm run validate:hnk-canon

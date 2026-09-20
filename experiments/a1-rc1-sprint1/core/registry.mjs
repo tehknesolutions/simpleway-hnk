@@ -22,7 +22,7 @@ export const lexemes = Object.freeze({
   AN: { id:'LEX_AN', form:'AN', function:'SPEAKER_SELF_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
   EN: { id:'LEX_EN', form:'EN', function:'ADDRESSEE_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
   ZAMI: { id:'LEX_ZAMI', form:'ZAMI', function:'LANGUAGE_USE_FRAME_HEAD', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
-  HNK: { id:'CONTENT_HNK', form:'HNK', function:'LANGUAGE_CONTENT_HENUVOKODAN', authority:[A.VALIDATED], a1Enabled:true, notes:['HNK is the abbreviation of HENUVOKODAN.'] },
+  HNK: { id:'CONTENT_HNK', form:'HNK', function:'LANGUAGE_CONTENT_HNK', authority:[A.VALIDATED], a1Enabled:true, notes:['HNK is HNK. HENUVOKODAN is a distinct term; no synonymy, expansion or equivalence is licensed here.'] },
   VALI: { id:'LEX_VALI', form:'VALI', function:'ACTIVITY_LEXEME_SCOPED', authority:[A.FROZEN], a1Enabled:true },
   NE: { id:'LEX_NE', form:'NE', function:'NEGATION_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true, notes:['Not a universal negator outside licensed constructions.'] },
   PA: { id:'LEX_PA', form:'PA', function:'YESTERDAY_TEMPORAL_SCOPED', authority:[A.RECOVERED,A.VALIDATED], a1Enabled:true },
