@@ -1,0 +1,131 @@
+{
+  "artifact_id": "SWHNK-MX1-SEVEN-CANDIDATE-HUMAN-VISUAL-GATE-V1",
+  "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
+  "date": "2026-09-20",
+  "candidateCount": 7,
+  "rootAuthority": "HNK40 VISUAL-CANON-V2",
+  "compositionAuthority": "MX1 VISUAL COMPOSITION RENDERER V1",
+  "approvalToken": "A.S.",
+  "dimensions": [
+    "root identity preservation",
+    "spatial clarity",
+    "collision/interference",
+    "optical balance",
+    "family recognition",
+    "small-size legibility"
+  ],
+  "items": [
+    {
+      "index": 1,
+      "mx1Key": "MX1:CV:G14+G01",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G01"
+      ],
+      "forms": [
+        "KALOVALA",
+        "SARASALA",
+        "VALA",
+        "VAMAKALA",
+        "VAMAVALA"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 2,
+      "mx1Key": "MX1:CV:G21+G03",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G03"
+      ],
+      "forms": [
+        "PITSA"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 3,
+      "mx1Key": "MX1:CV:G30+G01",
+      "profile": "CV",
+      "gIds": [
+        "G30",
+        "G01"
+      ],
+      "forms": [
+        "PITSA"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 4,
+      "mx1Key": "MX1:ROOT:G01",
+      "profile": "ROOT",
+      "gIds": [
+        "G01"
+      ],
+      "forms": [
+        "SARADAYA"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 5,
+      "mx1Key": "MX1:ROOT:G04",
+      "profile": "ROOT",
+      "gIds": [
+        "G04"
+      ],
+      "forms": [
+        "TAYOVAN"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 6,
+      "mx1Key": "MX1:ROOT:G40",
+      "profile": "ROOT",
+      "gIds": [
+        "G40"
+      ],
+      "forms": [
+        "SARADAYA",
+        "TAYOVAN"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 7,
+      "mx1Key": "MX1:VC:G04+G12",
+      "profile": "VC",
+      "gIds": [
+        "G04",
+        "G12"
+      ],
+      "forms": [
+        "KUON"
+      ],
+      "visualStatus": "GENERATED_CANDIDATE_AWAITING_HUMAN_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    }
+  ],
+  "effectsIfApproved": [
+    "Promote exactly these seven deterministic compositions to the governed derived MX1 visual set.",
+    "Permit separate PUA/font allocation step.",
+    "Enable sentence-corpus writing expansion after cmap/font update."
+  ],
+  "nonEffects": [
+    "No new lexeme authority.",
+    "No grammar promotion.",
+    "No phonology change.",
+    "No Unicode-standard assignment.",
+    "No legacy recovery claim."
+  ]
+}
