@@ -1,0 +1,55 @@
+{
+  "artifact_id": "SWHNK-HNK40-VISUAL-SOURCE-AUDIT-V2",
+  "status": "SOURCE_RECOVERED_AS_FROZEN_CANDIDATE_D__FINAL_HUMAN_PROMOTION_PENDING",
+  "date": "2026-09-20",
+  "source_repo": "tehknesolutions/codex-hnk",
+  "findings": {
+    "legacyOriginal": {
+      "recovered": false,
+      "status": "LEGACY_RUNTIME_MISSING_BUT_EXISTENCE_PROVEN"
+    },
+    "reconstitutedCandidateD": {
+      "recovered": true,
+      "count": 40,
+      "status": "VISUAL_FROZEN_CANDIDATE_40_OF_40",
+      "officialVisualCanon": false
+    },
+    "candidateDIntegrity": {
+      "spriteSha256": "87ee43f3785165397752a21eaceffcda8b3240748125062ca275bf8d46234ca4",
+      "orderedSetSha256": "78668df0f707952b7c280de52526abaa2b7900597fb8ff362a3a08641fd1bce5"
+    },
+    "automatedEvidence": {
+      "maxJaccardSimilarity": 0.549,
+      "highRiskPairs": 0,
+      "mediumRiskPairs": 0,
+      "smallSizeUnique40At": [
+        16,
+        24,
+        32,
+        48
+      ],
+      "result": "PASS"
+    },
+    "exactRuntimeSource": "packages/hnk-glyphs/src/frozen-sprite.mjs",
+    "promotionGate": "docs/architecture/HNK40_V2_FINAL_VISUAL_PROMOTION_GATE.md"
+  },
+  "correctionToPriorAssumption": "The visual source is not absent. The original legacy alphabet remains unrecovered, but an exact 40/40 reconstituted Candidate D vector set is frozen and hash-identified in codex-hnk. It may be used as candidate artwork, not official visual canon, until explicit final human promotion.",
+  "mx1Integration": {
+    "allowedNow": "Import exact Candidate D frozen sprite as CANDIDATE_D visual dependency and render the 52 MX1 compositions for human review.",
+    "forbiddenNow": [
+      "Label Candidate D OFFICIAL_VISUAL_CANON",
+      "Allocate PUA/Unicode as official",
+      "Generate official font cmap",
+      "Claim Candidate D recovers the lost legacy alphabet"
+    ],
+    "nextGate": "FINAL_HUMAN_VISUAL_PROMOTION_FOR_HNK40_V2_CANDIDATE_D"
+  },
+  "evidence": [
+    "docs/architecture/HNK40_SOURCE_ARCHAEOLOGY_V1.json",
+    "docs/architecture/HNK40_V2_CANDIDATE_D.md",
+    "docs/architecture/HNK40_V2_CANDIDATE_D_AUTOMATED_GATE.json",
+    "docs/architecture/HNK40_V2_VISUAL_FREEZE_PASS1.json",
+    "docs/architecture/HNK40_V2_FINAL_VISUAL_PROMOTION_GATE.md",
+    "packages/hnk-glyphs/src/frozen-sprite.mjs"
+  ]
+}
