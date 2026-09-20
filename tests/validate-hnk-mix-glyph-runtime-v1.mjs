@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {encodeMx1,decodeMx1,validateMx1,geometryPlan,MX1_PROFILES} from '../src/hnk/mix-glyph-runtime-v1.mjs';
+assert.equal(encodeMx1({gids:['G30']}),'MX1:ROOT:G30');
+assert.deepEqual(decodeMx1('MX1:ROOT:G30'),{version:'MX1',profile:'ROOT',gids:['G30'],licensed:true});
+assert.equal(validateMx1('MX1:ROOT:G01').valid,true);
+assert.deepEqual(geometryPlan('MX1:ROOT:G40').roots,[{gid:'G40',role:'NUCLEUS',anchor:'CENTER',rotation:0,mirrored:false}]);
+assert.throws(()=>encodeMx1({profile:'CV',gids:['G21','G03']}),e=>e.code==='PROFILE_GATED');
+assert.deepEqual(decodeMx1('MX1:CV:G21+G03'),{version:'MX1',profile:'CV',gids:['G21','G03'],licensed:false});
+assert.equal(validateMx1('MX1:CV:G21+G03').code,'PROFILE_GATED');
+assert.equal(validateMx1('MX1:CV:G21+G03',{requireLicensed:false}).valid,true);
+assert.throws(()=>encodeMx1({gids:['G00']}),e=>e.code==='INVALID_GID');
+assert.throws(()=>decodeMx1('MX1:ROOT:G41'),e=>e.code==='INVALID_KEY');
+assert.equal(Object.values(MX1_PROFILES).filter(x=>x.licensed).length,1);
+console.log('PASS HNK-MIX-GLYPH-RUNTIME-V1');
