@@ -1,0 +1,14 @@
+{
+  "structure_id": "L04-V2-STR003",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "authority": "CANDIDATE",
+  "scope": "CONTROLLED_THIRD_PERSON_BARE_INTENTION_YES_NO_QUESTION_ONLY",
+  "surface_schema": "ERU + DAYI + KE",
+  "allowed_realizations": [
+    "ERU DAYI KE"
+  ],
+  "productivity": "EXACT_SURFACE_ONLY",
+  "runtime_active": false,
+  "universal": false,
+  "validation_artifact": "../validation/l04-v2-dayi-option-a-linguistic-validation.v1.json"
+}
