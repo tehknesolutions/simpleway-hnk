@@ -1,0 +1,28 @@
+{
+  "transition_id": "SWHNK-HNK-SYLLABIFICATION-AUTHORITY-V1-APPROVED-TRANSITION",
+  "status": "ACTIVE",
+  "date": "2026-09-20",
+  "approval_source": "CURRENT_USER_EXPLICIT_AS_SCOPED_TO_SYL1_HUMAN_GATE",
+  "source_gate": "HNK_SYLLABIFICATION_AUTHORITY_V1_HUMAN_GATE.json",
+  "approved_decision": "SYL1-OPTION-A",
+  "rules": [
+    "Every governed vowel nucleus heads exactly one syllable in careful pronunciation.",
+    "Adjacent vowels are distinct nuclei/syllables by default unless a later explicit exception is approved.",
+    "Word-initial single consonant before a vowel is onset.",
+    "Single intervocalic consonant attaches to following vowel nucleus (V.CV).",
+    "Word-final single consonant after a vowel is coda of final syllable.",
+    "G30 /ts/ is one atomic consonant.",
+    "Internal clusters of two or more consonants remain unresolved.",
+    "BRIDGE forms do not induce native syllabification rules."
+  ],
+  "effects": {
+    "new_diphthongs": 0,
+    "new_glide_rules": 0,
+    "new_stress_rules": 0,
+    "visual_canon_promotions": 0,
+    "semantics_changes": 0,
+    "morphology_changes": 0,
+    "grammar_changes": 0
+  },
+  "next_artifact": "HNK_SYLLABIFICATION_RUNTIME_V1_AND_MX1_MULTIROOT_ELIGIBILITY"
+}

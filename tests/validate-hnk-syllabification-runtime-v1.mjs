@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {syllabifyGids,mx1Eligibility} from '../src/hnk/syllabification-runtime-v1.mjs';
+assert.deepEqual(syllabifyGids(['G31','G01','G11','G01']),{status:'GOVERNED_V1',syllables:[['G31','G01'],['G11','G01']]});
+assert.deepEqual(syllabifyGids(['G21','G03','G30','G01']),{status:'GOVERNED_V1',syllables:[['G21','G03'],['G30','G01']]});
+assert.deepEqual(syllabifyGids(['G19','G01','G40','G03']),{status:'GOVERNED_V1',syllables:[['G19','G01'],['G40'],['G03']]});
+assert.equal(syllabifyGids(['G18','G01','G12','G23','G01']).status,'UNRESOLVED_CLUSTER');
+assert.equal(syllabifyGids(['G23','G01'],{bridge:true}).status,'BRIDGE_EXCLUDED');
+const e=mx1Eligibility(syllabifyGids(['G21','G03','G30','G01']));
+assert.equal(e.eligible,true);assert.deepEqual(e.syllables.map(x=>x.profile),['CV','CV']);
+assert.equal(e.syllables.every(x=>x.mx1MultiRootLicensed),true);
+console.log('PASS HNK-SYLLABIFICATION-RUNTIME-V1');
