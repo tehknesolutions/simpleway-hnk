@@ -1,0 +1,126 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-CONSOLIDATED-CHECKPOINT-V1",
+  "status": "VALIDATED_SCOPED_LANGUAGE__RUNTIME_HOLD",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "sourceManifestState": {
+    "legacyLessonManifestStatus": "EVIDENCE_GATE",
+    "automatedDecision": "HOLD_INSUFFICIENT_EVIDENCE",
+    "runtimePromotionAllowed": false,
+    "recoveredHistoricalPhrases": 0,
+    "note": "V2 is deliberate new authoring after historical payload recovery was exhausted in available GitHub authorities; it does not rewrite the legacy manifest as recovered evidence."
+  },
+  "validatedMicrogrammars": [
+    {
+      "id": "L04-V2-STR001",
+      "schema": "ERU + ACTIVITY + KE",
+      "productivity": "CLOSED_ALLOWLIST_ONLY",
+      "surfaces": [
+        "ERU VALI KE",
+        "ERU PARAZAMI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR002",
+      "schema": "ERU + RUMI + PLACE + KE",
+      "productivity": "CLOSED_ALLOWLIST_ONLY",
+      "surfaces": [
+        "ERU RUMI VALIVAN KE",
+        "ERU RUMI PARAZAMO KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR003",
+      "schema": "ERU + DAYI + KE",
+      "productivity": "EXACT_SURFACE_ONLY",
+      "surfaces": [
+        "ERU DAYI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR004",
+      "schema": "ERU + SALI + KE",
+      "productivity": "EXACT_SURFACE_ONLY",
+      "surfaces": [
+        "ERU SALI KE"
+      ]
+    },
+    {
+      "id": "L04-V2-STR005",
+      "schema": "SARU + ERU + ACTIVITY + KE",
+      "productivity": "CLOSED_ALLOWLIST_ONLY",
+      "surfaces": [
+        "SARU ERU VALI KE",
+        "SARU ERU PARAZAMI KE"
+      ]
+    }
+  ],
+  "metrics": {
+    "validatedMicrogrammars": 5,
+    "validatedExactSurfaces": 8,
+    "fullyWritableSurfaces": 8,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "writingUnresolved": 0,
+    "runtimeActiveStructures": 0
+  },
+  "lexicalAuthorities": {
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "RUMI": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALI": "FROZEN",
+    "PARAZAMI": "WATCH",
+    "VALIVAN": "FROZEN",
+    "PARAZAMO": "FROZEN",
+    "DAYI": "CANDIDATE",
+    "SALI": "WATCH",
+    "SARU": "WATCH",
+    "KE": "CANDIDATE"
+  },
+  "validatedCapabilities": [
+    "Third-person contextual yes/no activity questions with VALI/PARAZAMI.",
+    "Third-person contextual locative yes/no questions with RUMI + VALIVAN/PARAZAMO.",
+    "One exact bare-intention question with DAYI.",
+    "One exact bare-need question with SALI.",
+    "Habitual every-day activity questions with left-edge SARU and VALI/PARAZAMI."
+  ],
+  "stillBlocked": [
+    "Universal ERU pronoun grammar or he/she gender distinction.",
+    "Universal KE interrogative grammar.",
+    "Productive subject-predicate-KE template beyond allowlists.",
+    "Question-to-declarative derivation by removing KE.",
+    "Universal positive RUMI/location grammar or copula.",
+    "DAYI object/VEMI complements.",
+    "SALI object/VEMI complements.",
+    "SARU with DAYI or SALI.",
+    "SARU = usually.",
+    "Universal habitual/temporal position or TAMURI->SARU transfer.",
+    "Tense/aspect inference.",
+    "Runtime activation.",
+    "Promotion of WATCH/CANDIDATE lexemes merely because scoped surfaces validated.",
+    "Claim that V2 surfaces are recovered historical L04 phrases."
+  ],
+  "releaseAssessment": {
+    "languageAuthoring": "SCOPED_VALIDATION_COMPLETE_FOR_CURRENT_V2_BATCH",
+    "writing": "PASS_8_OF_8_DERIVED_COVERAGE",
+    "runtime": "HOLD",
+    "legacyManifest": "UNCHANGED_EVIDENCE_GATE",
+    "releaseCandidate": "NOT_YET_RUNTIME_RELEASE_CANDIDATE",
+    "blockers": [
+      "No explicit runtime promotion gate has been approved.",
+      "Legacy L04 manifest still forbids runtime promotion.",
+      "Scoped validations intentionally preserve non-universal lexical/grammar authority.",
+      "Automated validator/CI execution is not asserted by this checkpoint."
+    ]
+  },
+  "recommendedNextGate": {
+    "id": "SWHNK-L04-CHESED-V2-RUNTIME-READINESS-PROPOSAL-V1",
+    "purpose": "Define a non-promotional runtime-readiness contract for the eight validated surfaces, reconcile the V2 authored layer with the legacy EVIDENCE_GATE manifest without falsifying historical recovery, and specify tests/UX exposure required before any runtime activation."
+  },
+  "nonEffects": [
+    "No runtime activation.",
+    "No lexical authority promotion.",
+    "No universal grammar promotion.",
+    "No rewrite of historical recovery state.",
+    "No L05/L06/L07 changes."
+  ]
+}
