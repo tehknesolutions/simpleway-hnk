@@ -1,0 +1,66 @@
+{
+  "validation_id": "SWHNK-L04-CHESED-V2-SARU-OPTION-A-LINGUISTIC-VALIDATION-V1",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "date_validated": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "validatedScope": "CONTROLLED_HABITUAL_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+  "validatedSurfaces": [
+    {
+      "surface": "SARU ERU VALI KE",
+      "pedagogicalReading": "Does he/she work every day?",
+      "validation": "PASS_SCOPED"
+    },
+    {
+      "surface": "SARU ERU PARAZAMI KE",
+      "pedagogicalReading": "Does he/she study every day?",
+      "validation": "PASS_SCOPED"
+    }
+  ],
+  "microgrammar": {
+    "schema": "SARU + ERU + ACTIVITY + KE",
+    "productivity": "CLOSED_ALLOWLIST_ONLY",
+    "allowedActivityFillers": [
+      "VALI",
+      "PARAZAMI"
+    ],
+    "SARUContract": "SARU expresses todos os dias / habitualidade at left edge only in these exact L04 activity-question surfaces. It is explicitly not equivalent to 'usually'.",
+    "ERUContract": "Contextual third-person singular reference; no gender distinction or universal pronoun rule.",
+    "KEContract": "Clause-final question marking only in these exact surfaces; no universal interrogative rule.",
+    "tamuriTransfer": false,
+    "dayiCompatibilityLicensed": false,
+    "saliCompatibilityLicensed": false,
+    "declarativeCounterpartLicensed": false
+  },
+  "authorityPreservation": {
+    "SARU": "WATCH",
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALI": "FROZEN",
+    "PARAZAMI": "WATCH",
+    "KE": "CANDIDATE",
+    "lexicalAuthorityPromoted": false,
+    "universalTemporalGrammarPromoted": false
+  },
+  "writingCoverage": {
+    "surfaces": 2,
+    "fullyWritable": 2,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "runtimeActive": false,
+  "explicitNonInference": [
+    "SARU_NOT_USUALLY",
+    "NO_SARU_EQUALS_TAMURI",
+    "NO_TAMURI_POSITION_TRANSFER",
+    "NO_SARU_WITH_DAYI",
+    "NO_SARU_WITH_SALI",
+    "NO_UNIVERSAL_HABITUAL_MARKER",
+    "NO_UNIVERSAL_TEMPORAL_WORD_ORDER",
+    "NO_DECLARATIVE_BY_REMOVING_KE"
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-V2-CONSOLIDATED-CHECKPOINT-V1",
+    "purpose": "Consolidate validated L04 V2 microgrammars, exact surfaces, lexical authorities, writing coverage, unresolved boundaries and remaining release blockers."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "structure_id": "L04-V2-STR005",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "authority": "CANDIDATE",
+  "scope": "CONTROLLED_HABITUAL_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+  "surface_schema": "SARU + ERU + [ACTIVITY] + KE",
+  "allowed_realizations": [
+    "SARU ERU VALI KE",
+    "SARU ERU PARAZAMI KE"
+  ],
+  "allowed_activity_fillers": [
+    "VALI",
+    "PARAZAMI"
+  ],
+  "productivity": "CLOSED_ALLOWLIST_ONLY",
+  "runtime_active": false,
+  "universal": false,
+  "validation_artifact": "../validation/l04-v2-saru-option-a-linguistic-validation.v1.json"
+}
