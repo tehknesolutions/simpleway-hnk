@@ -1,0 +1,97 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-DAYI-SALI-SARU-SEMANTIC-MICROGRAMMAR-TRIAGE-V1",
+  "status": "TRIAGED_HUMAN_NEXT_GATE_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "principle": "Do not force DAYI, SALI and SARU into one grammar. Preserve their L03 lexical authority and separate semantic behavior.",
+  "items": [
+    {
+      "form": "DAYI",
+      "gloss": "querer / intenção",
+      "authority": "CANDIDATE",
+      "classification": "INTENTION_PREDICATE_OR_FRAME_HEAD_REQUIRES_AUTHORING",
+      "risk": "HIGH",
+      "existingParallelEvidence": {
+        "form": "MORAKU",
+        "function": "WANT_PREDICATE_SCOPED",
+        "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+        "exactFrames": [
+          "AN MORAKU SAVETA",
+          "AN MORAKU HIZEP KAVESO"
+        ]
+      },
+      "decision": "SEPARATE_MICROGRAMMAR_REQUIRED",
+      "guard": "MORAKU evidence may inform comparison but cannot be transferred to DAYI automatically."
+    },
+    {
+      "form": "SALI",
+      "gloss": "precisar",
+      "authority": "WATCH",
+      "classification": "NEED_PREDICATE_OR_FRAME_HEAD_REQUIRES_AUTHORING",
+      "risk": "HIGH",
+      "existingParallelEvidence": {
+        "form": "KORUME",
+        "function": "NEED_PREDICATE_SCOPED",
+        "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+        "exactFrames": [
+          "AN KORUME VEMI LOKANI DOMERA",
+          "TAMURI AN KORUME VEMI LOKANI KODERA"
+        ]
+      },
+      "decision": "SEPARATE_MICROGRAMMAR_REQUIRED",
+      "guard": "KORUME/VEMI evidence may inform comparison but cannot be transferred to SALI automatically."
+    },
+    {
+      "form": "SARU",
+      "gloss": "todos os dias / habitualidade",
+      "authority": "WATCH",
+      "classification": "HABITUAL_TEMPORAL_MODIFIER_REQUIRES_POSITION_SCOPE_AUTHORING",
+      "risk": "VERY_HIGH",
+      "existingParallelEvidence": {
+        "form": "TAMURI",
+        "function": "TOMORROW_TEMPORAL_SCOPED",
+        "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+        "exactFrame": "TAMURI NEMA VALI"
+      },
+      "decision": "SEPARATE_TEMPORAL_SCOPE_GATE_REQUIRED",
+      "guard": "SARU is not equivalent to usually; TAMURI position cannot be copied automatically."
+    }
+  ],
+  "triageSummary": {
+    "items": 3,
+    "automaticAdmissions": 0,
+    "separateMicrogrammarsRequired": 2,
+    "separateTemporalScopeGatesRequired": 1
+  },
+  "recommendedSequence": [
+    {
+      "order": 1,
+      "id": "SWHNK-L04-DAYI-INTENTION-MICROGRAMMAR-PROPOSAL-V1",
+      "reason": "DAYI has CANDIDATE lexical authority and can be compared against existing MORAKU exact-frame evidence without conflating the two."
+    },
+    {
+      "order": 2,
+      "id": "SWHNK-L04-SALI-NEED-MICROGRAMMAR-PROPOSAL-V1",
+      "reason": "SALI remains WATCH and should be treated more conservatively; compare against KORUME/VEMI only as bounded evidence."
+    },
+    {
+      "order": 3,
+      "id": "SWHNK-L04-SARU-HABITUAL-SCOPE-PROPOSAL-V1",
+      "reason": "SARU requires independent position/scope decisions and must preserve the explicit NOT usually boundary."
+    }
+  ],
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Approve the triage and open DAYI intention microgrammar proposal first. Does not approve any DAYI/SALI/SARU sentence.",
+    "nextIfApproved": "Compare bounded DAYI options against existing MORAKU evidence, with zero automatic grammar transfer."
+  },
+  "nonInference": [
+    "DAYI is not MORAKU.",
+    "SALI is not KORUME.",
+    "SARU is not TAMURI.",
+    "SARU is not usually.",
+    "No complement syntax is transferred.",
+    "No temporal position is transferred.",
+    "No new L04 surface is validated by this triage."
+  ]
+}
