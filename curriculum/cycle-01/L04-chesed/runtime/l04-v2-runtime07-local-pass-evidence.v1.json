@@ -1,0 +1,51 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-07-LOCAL-EXECUTION-EVIDENCE-V1",
+  "status": "RUNTIME_07_PASS_VERIFIED_LOCAL_EXECUTION",
+  "date": "2026-09-20",
+  "executionEnvironment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "os": "Windows",
+    "node": "v24.18.0",
+    "repositoryCommit": "3bcb15a63edd4b8395aff5c3e514faba96947bc5"
+  },
+  "results": [
+    [
+      "validate-hnk-l04-v2-runtime-readiness-implementation-v1.mjs",
+      "PASS"
+    ],
+    [
+      "validate-hnk-l04-v2-runtime-readiness-proposal-v1.mjs",
+      "PASS"
+    ],
+    [
+      "validate-hnk-l04-v2-consolidated-checkpoint-v1.mjs",
+      "PASS"
+    ],
+    [
+      "validate-hnk-l04-saru-option-a-linguistic-validation-v1.mjs",
+      "PASS"
+    ],
+    [
+      "validate-hnk-l04-saru-option-a-materialization-v1.mjs",
+      "PASS"
+    ]
+  ],
+  "terminalSentinel": "RUNTIME07_LOCAL_SUITE_PASS",
+  "exitCode": 0,
+  "interpretation": "Dedicated L04 V2 readiness suite produced observable stdout and exit code 0 on the authorized connected Windows device. This satisfies RUNTIME-07 execution evidence for the scoped readiness contract. Prior GitHub Actions infrastructure failures remain separate and do not override this successful execution.",
+  "gateState": {
+    "RUNTIME_01": "PASS_IMPLEMENTED_AND_ASSERTED",
+    "RUNTIME_02": "PASS",
+    "RUNTIME_03": "PASS",
+    "RUNTIME_04": "PASS_8_OF_8_WRITING",
+    "RUNTIME_05": "PASS_CONTRACT_ASSERTED",
+    "RUNTIME_06": "PASS_NEGATIVE_SPACE",
+    "RUNTIME_07": "PASS_VERIFIED_LOCAL_EXECUTION",
+    "RUNTIME_08": "READY_FOR_HUMAN_RUNTIME_PROMOTION_GATE"
+  },
+  "runtimeActive": false,
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-V2-RUNTIME-PROMOTION-HUMAN-GATE-V1",
+    "effectIfApproved": "Activate only the exact eight-surface V2 runtime allowlist. Preserve lexical authorities, negative-space guards and legacy historical EVIDENCE_GATE state."
+  }
+}
