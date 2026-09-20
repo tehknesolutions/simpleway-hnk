@@ -1,0 +1,61 @@
+{
+  "validation_id": "SWHNK-L04-CHESED-V2-OPTION-A-LINGUISTIC-VALIDATION-V1",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "date_validated": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "validatedScope": "CONTROLLED_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+  "validatedSurfaces": [
+    {
+      "surface": "ERU VALI KE",
+      "pedagogicalReading": "Does he/she work?",
+      "validation": "PASS_SCOPED"
+    },
+    {
+      "surface": "ERU PARAZAMI KE",
+      "pedagogicalReading": "Does he/she study?",
+      "validation": "PASS_SCOPED"
+    }
+  ],
+  "microgrammar": {
+    "schema": "ERU + ACTIVITY + KE",
+    "productivity": "CLOSED_ALLOWLIST_ONLY",
+    "allowedActivityFillers": [
+      "VALI",
+      "PARAZAMI"
+    ],
+    "ERUContract": "Contextual third-person singular reference in these exact L04 surfaces; no gender distinction and no universal pronoun rule.",
+    "KEContract": "Clause-final question marking in these exact L04 surfaces; no universal interrogative rule.",
+    "englishDoesContract": "No corresponding HNK morpheme is asserted.",
+    "declarativeDerivation": false
+  },
+  "authorityPreservation": {
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "VALI": "FROZEN",
+    "PARAZAMI": "WATCH",
+    "KE": "CANDIDATE",
+    "lexicalAuthorityPromoted": false,
+    "universalGrammarPromoted": false
+  },
+  "writingCoverage": {
+    "surfaces": 2,
+    "fullyWritable": 2,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "runtimeActive": false,
+  "explicitNonInference": [
+    "NO_HE_SHE_GENDER_SPLIT",
+    "NO_UNIVERSAL_ERU_PRONOUN_RULE",
+    "NO_UNIVERSAL_KE_QUESTION_RULE",
+    "NO_PRODUCTIVE_SUBJECT_PREDICATE_KE_RULE",
+    "NO_QUESTION_TO_DECLARATIVE_DERIVATION",
+    "NO_TENSE_ASPECT_INFERENCE",
+    "NO_ENGLISH_DOES_MORPHEME"
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-V2-POST-VALIDATION-EXPANSION-V1",
+    "purpose": "Determine whether any additional L04 activity fillers or pedagogical slots can be admitted without expanding the validated microgrammar beyond evidence."
+  }
+}
