@@ -1,0 +1,149 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-READINESS-PROPOSAL-V1",
+  "status": "PROPOSED_NON_PROMOTIONAL_RUNTIME_READINESS",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "purpose": "Define what must be true before the eight scoped validated V2 surfaces may be exposed in runtime, without rewriting the legacy L04 evidence history or promoting lexical/universal grammar authority.",
+  "inputs": {
+    "checkpoint": "SWHNK-L04-CHESED-V2-CONSOLIDATED-CHECKPOINT-V1",
+    "validatedMicrogrammars": 5,
+    "validatedSurfaces": 8,
+    "fullyWritableSurfaces": 8,
+    "mx1Inventory": 59,
+    "legacyManifest": {
+      "status": "EVIDENCE_GATE",
+      "automatedDecision": "HOLD_INSUFFICIENT_EVIDENCE",
+      "runtimePromotionAllowed": false,
+      "recoveredPhrases": 0
+    }
+  },
+  "architecture": {
+    "legacyLayer": {
+      "id": "HNK-L04",
+      "role": "HISTORICAL_EVIDENCE_STATE",
+      "mutationPolicy": "DO_NOT_REWRITE_AS_RECOVERED",
+      "runtimeActive": false
+    },
+    "v2Layer": {
+      "id": "HNK-L04-CHESED-V2-NEW-AUTHORING",
+      "role": "DELIBERATE_HUMAN_VALIDATED_SCOPED_AUTHORING",
+      "runtimeActive": false,
+      "promotionRequiresSeparateGate": true
+    },
+    "runtimeExposureModel": "ALLOWLIST_ONLY_EXACT_SURFACES"
+  },
+  "runtimeAllowlist": [
+    {
+      "structure": "L04-V2-STR001",
+      "surfaces": [
+        "ERU VALI KE",
+        "ERU PARAZAMI KE"
+      ]
+    },
+    {
+      "structure": "L04-V2-STR002",
+      "surfaces": [
+        "ERU RUMI VALIVAN KE",
+        "ERU RUMI PARAZAMO KE"
+      ]
+    },
+    {
+      "structure": "L04-V2-STR003",
+      "surfaces": [
+        "ERU DAYI KE"
+      ]
+    },
+    {
+      "structure": "L04-V2-STR004",
+      "surfaces": [
+        "ERU SALI KE"
+      ]
+    },
+    {
+      "structure": "L04-V2-STR005",
+      "surfaces": [
+        "SARU ERU VALI KE",
+        "SARU ERU PARAZAMI KE"
+      ]
+    }
+  ],
+  "requiredPrePromotionGates": [
+    {
+      "id": "RUNTIME-01",
+      "name": "Machine-readable V2 runtime manifest",
+      "requirement": "Create a separate V2 runtime manifest referencing only the eight validated surfaces; do not alter legacy recovered_phrases."
+    },
+    {
+      "id": "RUNTIME-02",
+      "name": "Exact allowlist validator",
+      "requirement": "Reject any generated L04 surface outside the eight-item allowlist, including filler substitution and KE-removal derivations."
+    },
+    {
+      "id": "RUNTIME-03",
+      "name": "Authority guard validator",
+      "requirement": "Assert SALI/SARU/PARAZAMI remain WATCH, DAYI/KE remain CANDIDATE, and ERU/RUMI remain authored-candidate locked; runtime exposure must not mutate authority."
+    },
+    {
+      "id": "RUNTIME-04",
+      "name": "Writing/rendering verification",
+      "requirement": "Verify all eight runtime surfaces resolve through governed G-ID/syllabification/MX1-59/font-cmap v1.1 with zero unresolved."
+    },
+    {
+      "id": "RUNTIME-05",
+      "name": "Pedagogical UX contract",
+      "requirement": "Expose the eight surfaces only in controlled L04 activities whose prompts/readings match their validated scope; do not present the schemas as universal grammar rules."
+    },
+    {
+      "id": "RUNTIME-06",
+      "name": "Negative-space regression suite",
+      "requirement": "Explicitly reject universal ERU/KE, declarative-by-KE-removal, DAYI/SALI complements, SARU=usually, SARU+DAYI/SALI, universal RUMI/copoly/temporal-order inferences."
+    },
+    {
+      "id": "RUNTIME-07",
+      "name": "Automated execution evidence",
+      "requirement": "Run the dedicated L04 V2 validators and record actual PASS/FAIL. Existing repository-wide red baseline must not be reinterpreted as L04 V2 failure without inspecting causes."
+    },
+    {
+      "id": "RUNTIME-08",
+      "name": "Human runtime promotion decision",
+      "requirement": "After RUNTIME-01..07 evidence, require explicit A.S. to change V2 runtime state. This proposal itself cannot activate runtime."
+    }
+  ],
+  "uxExposure": {
+    "mode": "CONTROLLED_TEACHING_ONLY",
+    "mayShow": [
+      "validated pedagogical reading",
+      "exact HNK surface",
+      "governed writing representation",
+      "scope-specific feedback"
+    ],
+    "mustNotShow": [
+      "ERU/KE as universal formula",
+      "SALI/DAYI complement examples not validated",
+      "SARU translated as usually",
+      "generated variants outside allowlist",
+      "historical-recovery claim for V2"
+    ]
+  },
+  "promotionStateMachine": {
+    "current": "RUNTIME_HOLD",
+    "afterProposalApproval": "READINESS_CONTRACT_APPROVED_RUNTIME_STILL_HOLD",
+    "afterImplementationAndPassingEvidence": "READY_FOR_HUMAN_RUNTIME_PROMOTION_GATE",
+    "afterExplicitHumanPromotion": "V2_RUNTIME_ACTIVE_ALLOWLIST_ONLY"
+  },
+  "releaseDecision": {
+    "recommendation": "APPROVE_READINESS_CONTRACT_NOT_RUNTIME",
+    "reason": "The language batch and derived writing coverage are scoped and complete, but runtime safety needs a separate machine-readable allowlist, negative-space guards, actual validator execution, and explicit promotion."
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Approve this readiness contract and authorize implementation of RUNTIME-01 through RUNTIME-07. Runtime remains HOLD.",
+    "doesNotApprove": [
+      "runtime activation",
+      "lexical authority promotion",
+      "universal grammar promotion",
+      "legacy manifest rewrite"
+    ],
+    "nextIfApproved": "Implement V2 runtime manifest + exact allowlist/authority/writing/negative-space validators and UX exposure contract, then execute dedicated checks and report evidence before a runtime promotion gate."
+  }
+}
