@@ -1,0 +1,108 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-DAYI-OPTION-A-CANDIDATE-MATERIALIZATION-V1",
+  "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+  "date": "2026-09-20",
+  "selectedOption": "A",
+  "scope": "CONTROLLED_THIRD_PERSON_BARE_INTENTION_YES_NO_QUESTION_ONLY",
+  "surface": {
+    "surface": "ERU DAYI KE",
+    "pedagogicalTarget": "Does he/she want? / Is there third-person intention?",
+    "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+  },
+  "writingCoverage": {
+    "inventory": "MX1-59 / HNK Font cmap v1.1",
+    "words": {
+      "ERU": {
+        "gIds": [
+          "G02",
+          "G15",
+          "G05"
+        ],
+        "syllables": [
+          [
+            "G02"
+          ],
+          [
+            "G15",
+            "G05"
+          ]
+        ],
+        "mx1": [
+          "MX1:ROOT:G02",
+          "MX1:CV:G15+G05"
+        ],
+        "codepoints": [
+          "U+E201",
+          "U+E218"
+        ],
+        "fullyWritable": true
+      },
+      "DAYI": {
+        "gIds": [
+          "G19",
+          "G01",
+          "G40",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G19",
+            "G01"
+          ],
+          [
+            "G40"
+          ],
+          [
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G19+G01",
+          "MX1:ROOT:G40",
+          "MX1:ROOT:G03"
+        ],
+        "codepoints": [
+          "U+E219",
+          "U+E239",
+          "U+E203"
+        ],
+        "fullyWritable": true
+      },
+      "KE": {
+        "gIds": [
+          "G23",
+          "G02"
+        ],
+        "syllables": [
+          [
+            "G23",
+            "G02"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G23+G02"
+        ],
+        "codepoints": [
+          "U+E225"
+        ],
+        "fullyWritable": true
+      }
+    },
+    "summary": {
+      "surfaces": 1,
+      "fullyWritableSurfaces": 1,
+      "newMx1Required": 0,
+      "unresolved": 0
+    }
+  },
+  "guards": [
+    "DAYI remains CANDIDATE lexical authority.",
+    "Bare intention reading only; no object complement licensed.",
+    "No MORAKU syntax transfer.",
+    "No VEMI complement licensed.",
+    "ERU remains contextual/gender-neutral.",
+    "KE remains scoped.",
+    "No declarative counterpart inferred."
+  ],
+  "nextGate": "SWHNK-L04-CHESED-V2-DAYI-OPTION-A-LINGUISTIC-VALIDATION-HUMAN-GATE-V1"
+}
