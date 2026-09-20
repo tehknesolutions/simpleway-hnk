@@ -1,0 +1,145 @@
+{
+  "artifact_id": "SWHNK-L04-SARU-HABITUAL-SCOPE-PROPOSAL-V1",
+  "status": "HUMAN_DECISION_REQUIRED",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "focus": "SARU",
+  "lexicalEvidence": {
+    "form": "SARU",
+    "gloss": "todos os dias / habitualidade",
+    "authority": "WATCH",
+    "explicitBoundary": "SARU IS NOT EQUIVALENT TO 'usually'.",
+    "unresolved": [
+      "syntactic position",
+      "scope",
+      "compatibility with L04 interrogatives",
+      "whether it modifies activity only or wider proposition"
+    ]
+  },
+  "comparisonEvidence": {
+    "TAMURI": {
+      "function": "TOMORROW_TEMPORAL_SCOPED",
+      "authority": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+      "exactFrames": [
+        "TAMURI NEMA VALI",
+        "TAMURI AN KORUME VEMI LOKANI KODERA"
+      ],
+      "transferPolicy": "COMPARISON_ONLY_NO_POSITION_TRANSFER"
+    },
+    "activityMicrogrammar": {
+      "schema": "ERU + ACTIVITY + KE",
+      "allowedFillers": [
+        "VALI",
+        "PARAZAMI"
+      ],
+      "authority": "VALIDATED_L04_ONLY_NON_RUNTIME_CLOSED_ALLOWLIST"
+    },
+    "ERU": {
+      "scope": "contextual third-person singular only"
+    },
+    "KE": {
+      "scope": "clause-final only in exact/closed L04 question evidence"
+    }
+  },
+  "options": [
+    {
+      "id": "A",
+      "schema": "SARU + ERU + ACTIVITY + KE",
+      "examples": [
+        "SARU ERU VALI KE",
+        "SARU ERU PARAZAMI KE"
+      ],
+      "intendedReading": [
+        "Does he/she work every day?",
+        "Does he/she study every day?"
+      ],
+      "risk": "HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Makes habitual scope overt at the left edge.",
+        "Keeps the validated ERU + ACTIVITY + KE sequence intact as an embedded contiguous envelope."
+      ],
+      "risks": [
+        "Left-edge position resembles TAMURI evidence but is not licensed for SARU; human authoring is required.",
+        "Creates a new temporal/habitual scope relation."
+      ]
+    },
+    {
+      "id": "B",
+      "schema": "ERU + SARU + ACTIVITY + KE",
+      "examples": [
+        "ERU SARU VALI KE",
+        "ERU SARU PARAZAMI KE"
+      ],
+      "intendedReading": [
+        "Does he/she work every day?",
+        "Does he/she study every day?"
+      ],
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Places habituality near activity."
+      ],
+      "risks": [
+        "Breaks the already validated contiguous ERU + ACTIVITY + KE envelope.",
+        "No evidence supports SARU between ERU and activity."
+      ]
+    },
+    {
+      "id": "C",
+      "schema": "ERU + ACTIVITY + SARU + KE",
+      "examples": [
+        "ERU VALI SARU KE",
+        "ERU PARAZAMI SARU KE"
+      ],
+      "intendedReading": [
+        "Does he/she work every day?",
+        "Does he/she study every day?"
+      ],
+      "risk": "VERY_HIGH",
+      "classification": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+      "pros": [
+        "Keeps SARU near the questioned proposition."
+      ],
+      "risks": [
+        "No evidence supports pre-KE SARU position.",
+        "Changes the internal shape of the validated activity question envelope."
+      ]
+    },
+    {
+      "id": "D",
+      "schema": "NO SARU SENTENCE YET",
+      "examples": [
+        "SARU"
+      ],
+      "intendedReading": "Lexical item only: todos os dias / habitualidade",
+      "risk": "LOW",
+      "classification": "EXISTING_LEXICAL_EVIDENCE_ONLY",
+      "pros": [
+        "No grammar creation."
+      ],
+      "risks": [
+        "Does not advance habitual questions in L04."
+      ]
+    }
+  ],
+  "recommendation": {
+    "selectedForHumanReview": "A",
+    "reason": "Option A is the least disruptive authored experiment because it preserves `ERU + ACTIVITY + KE` contiguously and adds SARU as an external habitual-scope element. Its left-edge position is still NEW AUTHORING and is not justified merely by TAMURI.",
+    "scopeIfApproved": "L04_CHESed_V2_CONTROLLED_HABITUAL_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY"
+  },
+  "humanGate": {
+    "approvalToken": "A.S.",
+    "approvalEffect": "Select Option A for exactly two candidate surfaces: `SARU ERU VALI KE` and `SARU ERU PARAZAMI KE`. This does not validate SARU position or general temporal syntax.",
+    "nextIfApproved": "Materialize the two surfaces, run writing coverage, then open separate linguistic validation."
+  },
+  "forbiddenGeneralizations": [
+    "SARU is not usually.",
+    "SARU is not TAMURI.",
+    "TAMURI position does not prove SARU position.",
+    "SARU is not licensed with DAYI or SALI by this proposal.",
+    "SARU does not become a universal habitual marker.",
+    "No declarative counterpart is inferred by removing KE.",
+    "No universal temporal word order is inferred."
+  ]
+}
