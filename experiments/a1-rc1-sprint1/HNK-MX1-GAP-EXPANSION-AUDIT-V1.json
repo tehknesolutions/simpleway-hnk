@@ -1,0 +1,657 @@
+{
+  "artifact_id": "SWHNK-MX1-GAP-EXPANSION-AUDIT-V1",
+  "status": "DERIVED_AUDIT_NO_VISUAL_PROMOTION",
+  "date": "2026-09-20",
+  "sources": [
+    "HNK-WRITING-GAP-RESOLUTION-BATCH-V1",
+    "HNK SYLLABIFICATION AUTHORITY V1",
+    "HNK FONT CMAP V1"
+  ],
+  "summary": {
+    "words": 17,
+    "governedWords": 17,
+    "syllabificationUnresolved": 0,
+    "uniqueNewMx1Candidates": 7,
+    "allGapWordsWritingResolvable": true
+  },
+  "newMx1Candidates": [
+    "MX1:CV:G14+G01",
+    "MX1:CV:G21+G03",
+    "MX1:CV:G30+G01",
+    "MX1:ROOT:G01",
+    "MX1:ROOT:G04",
+    "MX1:ROOT:G40",
+    "MX1:VC:G04+G12"
+  ],
+  "rows": [
+    {
+      "form": "KALOVALA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G23+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G04"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G04",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G14+G01"
+      ]
+    },
+    {
+      "form": "KU",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G23+G05",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "KUON",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G23+G05",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G04",
+            "G12"
+          ],
+          "profile": "VC",
+          "key": "MX1:VC:G04+G12",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:VC:G04+G12"
+      ]
+    },
+    {
+      "form": "PARAZAMI",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G21+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G32+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G03",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "PARI",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G21+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G03",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "PITSA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G03"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G21+G03",
+          "known": false
+        },
+        {
+          "gIds": [
+            "G30",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G30+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G21+G03",
+        "MX1:CV:G30+G01"
+      ]
+    },
+    {
+      "form": "SARADAYA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G19",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G19+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G40"
+          ],
+          "profile": "ROOT",
+          "key": "MX1:ROOT:G40",
+          "known": false
+        },
+        {
+          "gIds": [
+            "G01"
+          ],
+          "profile": "ROOT",
+          "key": "MX1:ROOT:G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:ROOT:G40",
+        "MX1:ROOT:G01"
+      ]
+    },
+    {
+      "form": "SARASALA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G14+G01"
+      ]
+    },
+    {
+      "form": "SAROSARI",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G04"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G04",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G03",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "TAYOVAN",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G22+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G40"
+          ],
+          "profile": "ROOT",
+          "key": "MX1:ROOT:G40",
+          "known": false
+        },
+        {
+          "gIds": [
+            "G04"
+          ],
+          "profile": "ROOT",
+          "key": "MX1:ROOT:G04",
+          "known": false
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01",
+            "G12"
+          ],
+          "profile": "CVC",
+          "key": "MX1:CVC:G31+G01+G12",
+          "known": true
+        }
+      ],
+      "missing": [
+        "MX1:ROOT:G40",
+        "MX1:ROOT:G04"
+      ]
+    },
+    {
+      "form": "VALA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G14+G01"
+      ]
+    },
+    {
+      "form": "VAMAKALA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G23+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G14+G01"
+      ]
+    },
+    {
+      "form": "VAMAVALA",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G14",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G14+G01",
+          "known": false
+        }
+      ],
+      "missing": [
+        "MX1:CV:G14+G01"
+      ]
+    },
+    {
+      "form": "VAMAZAMU",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G32+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G05",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "VAME",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G02",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "VAMUSARO",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G11+G05",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G26+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G15",
+            "G04"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G15+G04",
+          "known": true
+        }
+      ],
+      "missing": []
+    },
+    {
+      "form": "VANI",
+      "syllabification": "GOVERNED_V1",
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G31+G01",
+          "known": true
+        },
+        {
+          "gIds": [
+            "G12",
+            "G03"
+          ],
+          "profile": "CV",
+          "key": "MX1:CV:G12+G03",
+          "known": true
+        }
+      ],
+      "missing": []
+    }
+  ],
+  "boundaries": [
+    "Missing MX1 identities are GENERATED_CANDIDATE only.",
+    "No PUA allocation is performed.",
+    "No visual-canon promotion is performed.",
+    "No lexical or grammatical authority changes."
+  ]
+}
