@@ -16,7 +16,8 @@
     "tokenizableBySafeRomanization": 41,
     "unresolved": 2,
     "explicitMatches": 30,
-    "explicitMismatches": 1
+    "explicitMismatches": 0,
+    "explicitUnverifiableBySafeRomanization": 1
   },
   "rows": [
     {
@@ -212,7 +213,7 @@
       ],
       "derivedStatus": "UNRESOLVED_ROMANIZATION",
       "derivedGids": null,
-      "registryMatchesDerived": false,
+      "registryMatchesDerived": null,
       "reason": "No governed safe romanization for 'G'"
     },
     {
