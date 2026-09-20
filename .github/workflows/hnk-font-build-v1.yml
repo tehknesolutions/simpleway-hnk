@@ -23,14 +23,24 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install 'fonttools[woff]>=4.55' brotli
-      - run: python scripts/compile-hnk-font-v1.py
+      - name: Compile font
+        id: compile
+        continue-on-error: true
+        run: python scripts/compile-hnk-font-v1.py > font-build.log 2>&1
       - name: Verify 92/92 cmap
+        if: steps.compile.outcome == 'success'
         run: python scripts/verify-hnk-font-v1.py
       - uses: actions/upload-artifact@v4
         with:
           name: HNKVisualCanonV2-1.0.0
+          if-no-files-found: warn
           path: |
+            font-build.log
             font/dist/HNKVisualCanonV2-Regular.ttf
             font/dist/HNKVisualCanonV2-Regular.otf
             font/dist/HNKVisualCanonV2-Regular.woff2
             font/dist/HNK_FONT_BUILD_REPORT_V1.json
+
+      - name: Fail if compile failed
+        if: steps.compile.outcome != 'success'
+        run: exit 1
