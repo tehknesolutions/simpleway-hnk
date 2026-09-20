@@ -1,5 +1,12 @@
 name: HNK Font Build V1
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'font/**'
+      - 'src/hnk/hnk40-visual-canon-v2.mjs'
+      - 'scripts/compile-hnk-font-v1.py'
+      - '.github/workflows/hnk-font-build-v1.yml'
   pull_request:
     paths:
       - 'font/**'
