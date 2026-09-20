@@ -1,0 +1,98 @@
+{
+  "artifact_id": "SWHNK-A1-READING-WRITING-ATLAS-L03-BINAH-EVIDENCE-V1",
+  "status": "EVIDENCE_FIRST_PARTIAL_EXPANSION",
+  "date": "2026-09-20",
+  "lesson": "L03",
+  "sphere": "Binah",
+  "validatedVocabulary": [
+    {
+      "transliteration": "VALIVAN",
+      "gloss_pt": "escritório",
+      "authority": "FROZEN"
+    },
+    {
+      "transliteration": "PARAZAMO",
+      "gloss_pt": "escola / domínio de estudo",
+      "authority": "FROZEN"
+    },
+    {
+      "transliteration": "PARAZAMI",
+      "gloss_pt": "estudo / estudar",
+      "authority": "WATCH"
+    },
+    {
+      "transliteration": "VALI",
+      "gloss_pt": "trabalho / trabalhar",
+      "authority": "FROZEN"
+    },
+    {
+      "transliteration": "DAYI",
+      "gloss_pt": "querer / intenção",
+      "authority": "CANDIDATE"
+    },
+    {
+      "transliteration": "SALI",
+      "gloss_pt": "precisar",
+      "authority": "WATCH"
+    },
+    {
+      "transliteration": "SARU",
+      "gloss_pt": "todos os dias / habitualidade",
+      "authority": "WATCH"
+    },
+    {
+      "transliteration": "TA",
+      "gloss_pt": "destino / propósito",
+      "authority": "CANDIDATE"
+    }
+  ],
+  "validatedStructures": [
+    {
+      "id": "L03-STR001",
+      "title_pt": "Enunciado mínimo de atividade",
+      "surfaces": [
+        "VALI",
+        "PARAZAMI"
+      ],
+      "scope": "L03_CONTROLLED_ACTIVITY_UTTERANCE_USE_ONLY",
+      "translationContract": "LEXICAL_GLOSS_ONLY_NO_PERSON_TENSE_ASPECT_INFERENCE"
+    },
+    {
+      "id": "L03-STR002",
+      "title_pt": "Rótulo contextual de lugar",
+      "surfaces": [
+        "VALIVAN",
+        "PARAZAMO"
+      ],
+      "scope": "L03_CONTROLLED_CONTEXT_PLACE_LABEL_USE_ONLY",
+      "translationContract": "CONTEXT_LABEL_ONLY_NO_LOCATIVE_RELATION_OR_COPULA_INFERENCE"
+    },
+    {
+      "id": "L03-OPI-POS1",
+      "surfaces": [
+        "VALI KE",
+        "PARAZAMI KE"
+      ],
+      "scope": "VALIDATED_SCOPED_NONPRODUCTIVE_NONRUNTIME",
+      "translationContract": "UNRESOLVED_NOT_ASSERTED"
+    }
+  ],
+  "blockedVocabularySlots": [
+    "L03-VOC-009",
+    "L03-VOC-010",
+    "L03-VOC-011",
+    "L03-VOC-012",
+    "L03-VOC-013",
+    "L03-VOC-014",
+    "L03-VOC-015",
+    "L03-VOC-016"
+  ],
+  "boundaries": [
+    "SARU is todos os dias / habitualidade and is not equivalent to usually.",
+    "VALI/PARAZAMI bare activity utterances encode no subject, person, tense, aspect, modality, habituality, frequency, negation or interrogative.",
+    "VALIVAN/PARAZAMO context labels encode no locative relation, copula, subject, person, tense, aspect or interrogative.",
+    "VALI KE and PARAZAMI KE have no asserted natural-language translation.",
+    "No blocked vocabulary slot is filled.",
+    "No L04-L07 content is inferred from L03."
+  ]
+}
