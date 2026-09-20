@@ -1,0 +1,44 @@
+{
+  "transition_id": "SWHNK-HNK-MIX-GLYPH-COMPOSITION-SYSTEM-V1-APPROVED-TRANSITION",
+  "status": "ACTIVE",
+  "date": "2026-09-20",
+  "approval_source": "CURRENT_USER_EXPLICIT_AS_SCOPED_TO_MX1_HUMAN_GATE",
+  "source_gate": "HNK_MIX_GLYPH_COMPOSITION_SYSTEM_V1_HUMAN_GATE.json",
+  "source_proposal": "HNK_MIX_GLYPH_COMPOSITION_SYSTEM_V1.json",
+  "approved_decisions": [
+    "DEC-MX1-001",
+    "DEC-MX1-002",
+    "DEC-MX1-003",
+    "DEC-MX1-004",
+    "DEC-MX1-005",
+    "DEC-MX1-006"
+  ],
+  "governed_effect": {
+    "mix_glyph_layer": "APPROVED_COMPOSITIONAL_WRITING_LAYER",
+    "root_profile": "EXECUTABLE",
+    "multi_root_profiles": "GATED_PENDING_EXPLICIT_GROUPING_SYLLABIFICATION_AUTHORITY",
+    "geometry_roles": [
+      "NUCLEUS",
+      "PRE",
+      "POST"
+    ],
+    "rotation": false,
+    "mirroring": false,
+    "destructive_deformation": false,
+    "max_compressed_roots": 4,
+    "key_format": "MX1:<PROFILE>:<GID>[+<GID>...]",
+    "pua_allocation": "DEFERRED"
+  },
+  "preserved_boundaries": {
+    "new_phoneme_assignments": 0,
+    "new_syllabification_rules": 0,
+    "new_diphthong_rules": 0,
+    "new_glide_rules": 0,
+    "visual_canon_promotions": 0,
+    "new_lexical_authority": 0,
+    "new_grammar_authority": 0,
+    "new_morphology_authority": 0,
+    "curriculum_changes": 0
+  },
+  "next_artifact": "HNK_MIX_GLYPH_RUNTIME_V1"
+}
