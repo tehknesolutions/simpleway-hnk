@@ -1,0 +1,124 @@
+{
+  "artifact_id": "SWHNK-MX1-SEVEN-VISUAL-PROMOTION-APPROVED-TRANSITION-V1",
+  "status": "ACTIVE",
+  "date": "2026-09-20",
+  "approval": {
+    "token": "A.S.",
+    "humanDecision": "APPROVED_7_OF_7",
+    "sourceGate": "SWHNK-MX1-SEVEN-CANDIDATE-HUMAN-VISUAL-GATE-V1",
+    "candidateCount": 7
+  },
+  "promoted": [
+    {
+      "mx1Key": "MX1:CV:G14+G01",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G01"
+      ],
+      "forms": [
+        "KALOVALA",
+        "SARASALA",
+        "VALA",
+        "VAMAKALA",
+        "VAMAVALA"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:CV:G21+G03",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G03"
+      ],
+      "forms": [
+        "PITSA"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:CV:G30+G01",
+      "profile": "CV",
+      "gIds": [
+        "G30",
+        "G01"
+      ],
+      "forms": [
+        "PITSA"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:ROOT:G01",
+      "profile": "ROOT",
+      "gIds": [
+        "G01"
+      ],
+      "forms": [
+        "SARADAYA"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:ROOT:G04",
+      "profile": "ROOT",
+      "gIds": [
+        "G04"
+      ],
+      "forms": [
+        "TAYOVAN"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:ROOT:G40",
+      "profile": "ROOT",
+      "gIds": [
+        "G40"
+      ],
+      "forms": [
+        "SARADAYA",
+        "TAYOVAN"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "mx1Key": "MX1:VC:G04+G12",
+      "profile": "VC",
+      "gIds": [
+        "G04",
+        "G12"
+      ],
+      "forms": [
+        "KUON"
+      ],
+      "visualStatus": "CANONICAL_DERIVED_MX1",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    }
+  ],
+  "result": {
+    "previousDerivedMx1Count": 52,
+    "promotedCount": 7,
+    "newDerivedMx1Count": 59
+  },
+  "effects": [
+    "The exact seven deterministic visual compositions are promoted to CANONICAL_DERIVED_MX1.",
+    "They may enter a separately governed PUA/cmap/font allocation step.",
+    "They may be used by the sentence-writing corpus after transport allocation."
+  ],
+  "nonEffects": [
+    "No lexical authority promotion.",
+    "No grammar promotion.",
+    "No phonology change.",
+    "No Unicode-standard assignment.",
+    "No legacy recovery claim.",
+    "No PUA is assigned by this transition."
+  ]
+}
