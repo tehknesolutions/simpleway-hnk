@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict';import{readFile}from'node:fs/promises';import{HNK40_SPRITE_SVG,HNK40_VISUAL_CANON_V2}from'../src/hnk/hnk40-visual-canon-v2.mjs';import{renderCanonicalMx1Svg}from'../src/hnk/mx1-canonical-visual-renderer-v2.mjs';
+assert.equal(HNK40_VISUAL_CANON_V2.status,'VISUAL-CANON-V2');assert.equal(HNK40_VISUAL_CANON_V2.glyphCount,40);assert.equal(HNK40_VISUAL_CANON_V2.legacyRecoveryClaim,false);
+for(let i=1;i<=40;i++)assert.match(HNK40_SPRITE_SVG,new RegExp('id="G'+String(i).padStart(2,'0')+'"'));
+const m=JSON.parse(await readFile(new URL('../experiments/a1-rc1-sprint1/HNK-MX1-VISUAL-MANIFEST-V2.json',import.meta.url),'utf8'));assert.equal(m.items.length,52);assert.equal(m.rootArt,'HNK40_VISUAL-CANON-V2');for(const x of m.items){const s=renderCanonicalMx1Svg(x);for(const g of x.gIds)assert.ok(s.includes('#'+g));}
+console.log('PASS HNK40-VISUAL-CANON-V2 + MX1 52/52');

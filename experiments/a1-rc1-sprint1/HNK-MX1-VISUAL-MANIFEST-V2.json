@@ -1,0 +1,865 @@
+{
+  "artifact_id": "SWHNK-MX1-VISUAL-MANIFEST-V1",
+  "status": "DERIVED_MIX_GLYPH_USING_HNK40_VISUAL_CANON_V2_ROOTS",
+  "date": "2026-09-20",
+  "visualCanon": "ROOTS_CANONICAL__DERIVED_MX1_PENDING_SECOND_VISUAL_GATE",
+  "rootArt": "HNK40_VISUAL-CANON-V2",
+  "canvas": {
+    "width": 1000,
+    "height": 1000
+  },
+  "slots": {
+    "NUCLEUS": {
+      "x": 500,
+      "y": 500,
+      "scale": 0.62
+    },
+    "PRE1": {
+      "x": 250,
+      "y": 500,
+      "scale": 0.42
+    },
+    "POST1": {
+      "x": 750,
+      "y": 500,
+      "scale": 0.42
+    }
+  },
+  "items": [
+    {
+      "index": 1,
+      "mx1Key": "MX1:VC:G01+G12",
+      "profile": "VC",
+      "gIds": [
+        "G01",
+        "G12"
+      ],
+      "pattern": "VC",
+      "forms": [
+        "AN"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 2,
+      "mx1Key": "MX1:ROOT:G02",
+      "profile": "ROOT",
+      "gIds": [
+        "G02"
+      ],
+      "pattern": "V",
+      "forms": [
+        "ERU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 3,
+      "mx1Key": "MX1:VC:G02+G12",
+      "profile": "VC",
+      "gIds": [
+        "G02",
+        "G12"
+      ],
+      "pattern": "VC",
+      "forms": [
+        "EN"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 4,
+      "mx1Key": "MX1:ROOT:G03",
+      "profile": "ROOT",
+      "gIds": [
+        "G03"
+      ],
+      "pattern": "V",
+      "forms": [
+        "SEVAI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 5,
+      "mx1Key": "MX1:CV:G07+G01",
+      "profile": "CV",
+      "gIds": [
+        "G07",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "HAVORI",
+        "HAVENU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 6,
+      "mx1Key": "MX1:CV:G07+G03",
+      "profile": "CV",
+      "gIds": [
+        "G07",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "HIZEP"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 7,
+      "mx1Key": "MX1:CV:G11+G01",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "TUMAVI",
+        "NEMA",
+        "VOMA",
+        "MAVERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 8,
+      "mx1Key": "MX1:CV:G11+G02",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KORUME",
+        "DOMERA",
+        "TUMERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 9,
+      "mx1Key": "MX1:CVC:G11+G02+G23",
+      "profile": "CVC",
+      "gIds": [
+        "G11",
+        "G02",
+        "G23"
+      ],
+      "pattern": "CVC",
+      "forms": [
+        "PUMEK"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 10,
+      "mx1Key": "MX1:CV:G11+G03",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "VODEMI",
+        "ZAMI",
+        "VEMI",
+        "RUMI",
+        "MISERO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 11,
+      "mx1Key": "MX1:CV:G11+G04",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MORAKU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 12,
+      "mx1Key": "MX1:CV:G11+G05",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MUNASE",
+        "TAMURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 13,
+      "mx1Key": "MX1:CV:G12+G01",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MUNASE"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 14,
+      "mx1Key": "MX1:CV:G12+G02",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "NE",
+        "NEMA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 15,
+      "mx1Key": "MX1:CV:G12+G03",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "LOKANI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 16,
+      "mx1Key": "MX1:CV:G12+G05",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "LENU",
+        "HAVENU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 17,
+      "mx1Key": "MX1:CV:G14+G02",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "LENU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 18,
+      "mx1Key": "MX1:CV:G14+G03",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "VALI",
+        "LIKADO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 19,
+      "mx1Key": "MX1:CV:G14+G04",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "LOKANI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 20,
+      "mx1Key": "MX1:CV:G14+G05",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "PELUKI",
+        "LURAVO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 21,
+      "mx1Key": "MX1:CV:G15+G01",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MORAKU",
+        "DOMERA",
+        "MAVERA",
+        "TUMERA",
+        "KOPERA",
+        "KODERA",
+        "KURAVI",
+        "LURAVO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 22,
+      "mx1Key": "MX1:CV:G15+G02",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "REVATI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 23,
+      "mx1Key": "MX1:CV:G15+G03",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "GAVURI",
+        "TAMURI",
+        "HAVORI",
+        "KADURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 24,
+      "mx1Key": "MX1:CV:G15+G04",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MISERO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 25,
+      "mx1Key": "MX1:CV:G15+G05",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KORUME",
+        "ERU",
+        "RUMI",
+        "DARUVI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 26,
+      "mx1Key": "MX1:CV:G19+G01",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "DARUVI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 27,
+      "mx1Key": "MX1:CV:G19+G02",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "VODEMI",
+        "KODERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 28,
+      "mx1Key": "MX1:CV:G19+G04",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "DOMERA",
+        "LIKADO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 29,
+      "mx1Key": "MX1:CV:G19+G05",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KADURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 30,
+      "mx1Key": "MX1:CV:G20+G01",
+      "profile": "CV",
+      "gIds": [
+        "G20",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "GAVURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 31,
+      "mx1Key": "MX1:CV:G21+G01",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "PA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 32,
+      "mx1Key": "MX1:CV:G21+G02",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "PELUKI",
+        "KOPERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 33,
+      "mx1Key": "MX1:CV:G21+G05",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "PUMEK"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 34,
+      "mx1Key": "MX1:CV:G22+G01",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "SAVETA",
+        "TAMURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 35,
+      "mx1Key": "MX1:CV:G22+G03",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "REVATI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 36,
+      "mx1Key": "MX1:CV:G22+G05",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "TUMAVI",
+        "TUMERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 37,
+      "mx1Key": "MX1:CV:G23+G01",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KAVESO",
+        "LOKANI",
+        "LIKADO",
+        "KADURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 38,
+      "mx1Key": "MX1:CV:G23+G02",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KE"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 39,
+      "mx1Key": "MX1:CV:G23+G03",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "PELUKI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 40,
+      "mx1Key": "MX1:CV:G23+G04",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KORUME",
+        "KOPERA",
+        "KODERA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 41,
+      "mx1Key": "MX1:CV:G23+G05",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MORAKU",
+        "KURAVI",
+        "KUVAN"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 42,
+      "mx1Key": "MX1:CV:G26+G01",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "SAVETA"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 43,
+      "mx1Key": "MX1:CV:G26+G02",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "MUNASE",
+        "MISERO",
+        "SEVAI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 44,
+      "mx1Key": "MX1:CV:G26+G04",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KAVESO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 45,
+      "mx1Key": "MX1:CV:G31+G01",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "VALI",
+        "SEVAI",
+        "REVATI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 46,
+      "mx1Key": "MX1:CVC:G31+G01+G12",
+      "profile": "CVC",
+      "gIds": [
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "pattern": "CVC",
+      "forms": [
+        "KUVAN"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 47,
+      "mx1Key": "MX1:CV:G31+G02",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G02"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "KAVESO",
+        "SAVETA",
+        "VEMI",
+        "MAVERA",
+        "HAVENU"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 48,
+      "mx1Key": "MX1:CV:G31+G03",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G03"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "TUMAVI",
+        "DARUVI",
+        "KURAVI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 49,
+      "mx1Key": "MX1:CV:G31+G04",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G04"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "VODEMI",
+        "VOMA",
+        "HAVORI",
+        "LURAVO"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 50,
+      "mx1Key": "MX1:CV:G31+G05",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G05"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "GAVURI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 51,
+      "mx1Key": "MX1:CV:G32+G01",
+      "profile": "CV",
+      "gIds": [
+        "G32",
+        "G01"
+      ],
+      "pattern": "CV",
+      "forms": [
+        "ZAMI"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    },
+    {
+      "index": 52,
+      "mx1Key": "MX1:CVC:G32+G02+G21",
+      "profile": "CVC",
+      "gIds": [
+        "G32",
+        "G02",
+        "G21"
+      ],
+      "pattern": "CVC",
+      "forms": [
+        "HIZEP"
+      ],
+      "visualStatus": "DERIVED_MIX_GLYPH_PENDING_SECOND_VISUAL_GATE",
+      "rootArtStatus": "HNK40_VISUAL-CANON-V2"
+    }
+  ],
+  "rootSpriteSha256": "87ee43f3785165397752a21eaceffcda8b3240748125062ca275bf8d46234ca4"
+}

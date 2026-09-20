@@ -1,0 +1,25 @@
+{
+  "transition_id": "SWHNK-HNK40-VISUAL-CANON-V2-PROMOTION",
+  "status": "ACTIVE",
+  "date": "2026-09-20",
+  "approval_source": "CURRENT_USER_EXPLICIT_AS_SCOPED_TO_HNK40_V2_CANDIDATE_D_FINAL_HUMAN_PROMOTION_GATE",
+  "visualCanon": "VISUAL-CANON-V2",
+  "candidate": "V2-RECONSTITUTED-D",
+  "exactSpriteSha256": "87ee43f3785165397752a21eaceffcda8b3240748125062ca275bf8d46234ca4",
+  "exactOrderedSetSha256": "78668df0f707952b7c280de52526abaa2b7900597fb8ff362a3a08641fd1bce5",
+  "glyphCount": 40,
+  "legacyRecoveryClaim": false,
+  "puaAssigned": false,
+  "unicodeAssigned": false,
+  "fontCmapAssigned": false,
+  "bindingsChanged": false,
+  "effects": [
+    "Exact frozen Candidate D G01-G40 vector set is promoted to HNK40 VISUAL-CANON-V2.",
+    "MX1 may consume this exact vector set as canonical root artwork."
+  ],
+  "boundaries": [
+    "No claim that Candidate D recovers the lost legacy alphabet.",
+    "No PUA/Unicode allocation in this transition.",
+    "No phoneme, grammar, lexicon or syllabification change."
+  ]
+}
