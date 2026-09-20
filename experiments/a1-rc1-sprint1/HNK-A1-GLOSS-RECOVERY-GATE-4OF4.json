@@ -1,0 +1,42 @@
+{
+  "artifact_id": "SWHNK-A1-GLOSS-RECOVERY-GATE-4OF4",
+  "status": "EVIDENCE_RECOVERED_4_OF_4",
+  "date": "2026-09-20",
+  "recovered": [
+    {
+      "id": "L01-OPI-002",
+      "gloss": "Do you have a nickname?",
+      "source": "L01 authoring opi-002 possession/existential design; validated scoped nominal/existential interview frame",
+      "qualification": "COURSE_READING_SCOPED_NO_HAVE_CALQUE"
+    },
+    {
+      "id": "L01-OPI-007A",
+      "gloss": "Where do you live?",
+      "source": "L01 authoring opi-007 residence frame; validated course interpretation only",
+      "qualification": "COURSE_INTERPRETATION_ONLY_VANI_WATCH"
+    },
+    {
+      "id": "L01-OPI-007B",
+      "gloss": "Who do you live with?",
+      "source": "L01 authoring opi-007 residence frame; validated co-resident valency only",
+      "qualification": "COURSE_INTERPRETATION_ONLY_NO_GLOBAL_COMITATIVE"
+    },
+    {
+      "id": "L01-OPI-009",
+      "gloss": "Do you like to sing?",
+      "source": "L01 opi-009 preference frame; validated functional equivalent for governed L01 v1.1 interview card",
+      "qualification": "FUNCTIONAL_EQUIVALENT_SCOPED_L01"
+    }
+  ],
+  "summary": {
+    "requested": 4,
+    "recovered": 4,
+    "unresolved": 0
+  },
+  "nonEffects": [
+    "No master lexicon meaning promotion.",
+    "No universal grammar promotion.",
+    "No historical recovery claim beyond source statements.",
+    "No HNK/HENUVOKODAN equivalence."
+  ]
+}
