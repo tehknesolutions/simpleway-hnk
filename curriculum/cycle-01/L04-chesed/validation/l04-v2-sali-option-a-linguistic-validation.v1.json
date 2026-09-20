@@ -1,0 +1,51 @@
+{
+  "validation_id": "SWHNK-L04-CHESED-V2-SALI-OPTION-A-LINGUISTIC-VALIDATION-V1",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "date_validated": "2026-09-20",
+  "lesson": "HNK-L04-CHESED-V2",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "validatedScope": "CONTROLLED_THIRD_PERSON_BARE_NEED_YES_NO_QUESTION_ONLY",
+  "validatedSurface": {
+    "surface": "ERU SALI KE",
+    "pedagogicalReading": "Does he/she need? / Is there third-person need?",
+    "validation": "PASS_SCOPED"
+  },
+  "microgrammar": {
+    "schema": "ERU + SALI + KE",
+    "productivity": "EXACT_SURFACE_ONLY",
+    "SALIContract": "SALI expresses precisar only in this validated bare-need L04 question surface; no object or action complement licensed.",
+    "ERUContract": "Contextual third-person singular reference; no gender distinction or universal pronoun rule.",
+    "KEContract": "Clause-final question marking only in this exact surface; no universal interrogative rule.",
+    "objectComplementLicensed": false,
+    "vemiComplementLicensed": false,
+    "declarativeCounterpartLicensed": false
+  },
+  "authorityPreservation": {
+    "SALI": "WATCH",
+    "ERU": "HNK_AUTHORED_CANDIDATE + LOCKED_FOR_TESTING",
+    "KE": "CANDIDATE",
+    "lexicalAuthorityPromoted": false,
+    "universalGrammarPromoted": false
+  },
+  "writingCoverage": {
+    "surfaces": 1,
+    "fullyWritable": 1,
+    "mx1Inventory": 59,
+    "newMx1Required": 0,
+    "unresolved": 0
+  },
+  "runtimeActive": false,
+  "explicitNonInference": [
+    "NO_SALI_EQUALS_KORUME",
+    "NO_SALI_OBJECT_COMPLEMENT",
+    "NO_SALI_VEMI_COMPLEMENT",
+    "NO_UNIVERSAL_ERU_PRONOUN_RULE",
+    "NO_UNIVERSAL_KE_QUESTION_RULE",
+    "NO_DECLARATIVE_BY_REMOVING_KE",
+    "NO_TENSE_ASPECT_INFERENCE"
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-SARU-HABITUAL-SCOPE-PROPOSAL-V1",
+    "purpose": "Open SARU as an independent habituality/temporal scope gate; preserve SARU = todos os dias / habitualidade and explicitly NOT usually."
+  }
+}
