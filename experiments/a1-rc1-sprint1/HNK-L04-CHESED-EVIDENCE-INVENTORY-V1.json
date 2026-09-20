@@ -1,0 +1,40 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-EVIDENCE-INVENTORY-V1",
+  "status": "HOLD_INSUFFICIENT_EVIDENCE",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04",
+  "sphere": "Chesed",
+  "source": "curriculum/cycle-01/L04-chesed/manifest.json",
+  "inventory": {
+    "sourceFilesFound": 1,
+    "languageBindingsDeclared": 9,
+    "recoveredPhrases": 0,
+    "authorityDistribution": {
+      "WATCH": 1,
+      "GATE": 8
+    },
+    "humanEvidenceClaimed": false,
+    "runtimePromotionAllowed": false
+  },
+  "writingCoverage": {
+    "status": "NOT_EXECUTED_NO_RECOVERED_HNK_SURFACES",
+    "auditableSurfaces": 0,
+    "fullyWritable": 0,
+    "missingMx1": null
+  },
+  "curriculumTarget": {
+    "english": "Does he/she...?",
+    "hnkTranslation": "UNAUTHORIZED_BY_INFERENCE"
+  },
+  "decision": "PRESERVE_EVIDENCE_GATE",
+  "requirementsToAdvance": [
+    "Recover or author source-backed HNK surfaces under an explicit governed authoring/human-validation process.",
+    "Do not derive HNK interrogatives from the English target.",
+    "Human review is required before runtime promotion."
+  ],
+  "boundaries": [
+    "GATE is not FROZEN.",
+    "Nine declared language bindings are not equivalent to nine recovered HNK phrases.",
+    "No lexeme, phrase, grammar, G-ID sequence, MX1 cell, translation or runtime binding is invented by this inventory."
+  ]
+}
