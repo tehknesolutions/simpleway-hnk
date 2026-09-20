@@ -1,0 +1,181 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-SARU-OPTION-A-CANDIDATE-MATERIALIZATION-V1",
+  "status": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+  "date": "2026-09-20",
+  "selectedOption": "A",
+  "scope": "CONTROLLED_HABITUAL_THIRD_PERSON_ACTIVITY_YES_NO_QUESTION_ONLY",
+  "surfaces": [
+    {
+      "surface": "SARU ERU VALI KE",
+      "pedagogicalTarget": "Does he/she work every day?",
+      "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    },
+    {
+      "surface": "SARU ERU PARAZAMI KE",
+      "pedagogicalTarget": "Does he/she study every day?",
+      "authority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION"
+    }
+  ],
+  "writingCoverage": {
+    "inventory": "MX1-59 / HNK Font cmap v1.1",
+    "words": {
+      "SARU": {
+        "gIds": [
+          "G26",
+          "G01",
+          "G15",
+          "G05"
+        ],
+        "syllables": [
+          [
+            "G26",
+            "G01"
+          ],
+          [
+            "G15",
+            "G05"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G26+G01",
+          "MX1:CV:G15+G05"
+        ],
+        "codepoints": [
+          "U+E229",
+          "U+E218"
+        ],
+        "fullyWritable": true
+      },
+      "ERU": {
+        "gIds": [
+          "G02",
+          "G15",
+          "G05"
+        ],
+        "syllables": [
+          [
+            "G02"
+          ],
+          [
+            "G15",
+            "G05"
+          ]
+        ],
+        "mx1": [
+          "MX1:ROOT:G02",
+          "MX1:CV:G15+G05"
+        ],
+        "codepoints": [
+          "U+E201",
+          "U+E218"
+        ],
+        "fullyWritable": true
+      },
+      "VALI": {
+        "gIds": [
+          "G31",
+          "G01",
+          "G14",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G31",
+            "G01"
+          ],
+          [
+            "G14",
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G31+G01",
+          "MX1:CV:G14+G03"
+        ],
+        "codepoints": [
+          "U+E22C",
+          "U+E211"
+        ],
+        "fullyWritable": true
+      },
+      "PARAZAMI": {
+        "gIds": [
+          "G21",
+          "G01",
+          "G15",
+          "G01",
+          "G32",
+          "G01",
+          "G11",
+          "G03"
+        ],
+        "syllables": [
+          [
+            "G21",
+            "G01"
+          ],
+          [
+            "G15",
+            "G01"
+          ],
+          [
+            "G32",
+            "G01"
+          ],
+          [
+            "G11",
+            "G03"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G21+G01",
+          "MX1:CV:G15+G01",
+          "MX1:CV:G32+G01",
+          "MX1:CV:G11+G03"
+        ],
+        "codepoints": [
+          "U+E21E",
+          "U+E214",
+          "U+E232",
+          "U+E209"
+        ],
+        "fullyWritable": true
+      },
+      "KE": {
+        "gIds": [
+          "G23",
+          "G02"
+        ],
+        "syllables": [
+          [
+            "G23",
+            "G02"
+          ]
+        ],
+        "mx1": [
+          "MX1:CV:G23+G02"
+        ],
+        "codepoints": [
+          "U+E225"
+        ],
+        "fullyWritable": true
+      }
+    },
+    "summary": {
+      "surfaces": 2,
+      "fullyWritableSurfaces": 2,
+      "newMx1Required": 0,
+      "unresolved": 0
+    }
+  },
+  "guards": [
+    "SARU remains WATCH lexical authority.",
+    "SARU means todos os dias / habitualidade; it is not usually.",
+    "Left-edge SARU remains candidate pending linguistic validation.",
+    "TAMURI position was not transferred as authority.",
+    "SARU is not licensed with DAYI or SALI.",
+    "ERU and KE remain scoped.",
+    "No declarative counterpart inferred."
+  ],
+  "nextGate": "SWHNK-L04-CHESED-V2-SARU-OPTION-A-LINGUISTIC-VALIDATION-HUMAN-GATE-V1"
+}
