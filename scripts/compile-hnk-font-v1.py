@@ -25,7 +25,10 @@ for i,x in enumerate(cmap['mappings']):
 def common(fb):
  fb.setupGlyphOrder(glyphOrder); fb.setupCharacterMap(cmapMap); fb.setupHorizontalMetrics({g:(1000,0) for g in glyphOrder}); fb.setupHorizontalHeader(ascent=900,descent=-100); fb.setupNameTable({'familyName':'HNK Visual Canon V2','styleName':'Regular','uniqueFontIdentifier':'HNKVisualCanonV2-1.0.0','fullName':'HNK Visual Canon V2','psName':'HNKVisualCanonV2-Regular','version':'Version 1.0.0'}); fb.setupOS2(sTypoAscender=900,sTypoDescender=-100,usWinAscent=900,usWinDescent=100); fb.setupPost(); fb.setupMaxp()
 def addsvg(font):
- t=newTable('SVG '); t.docList=[SVGDocument(d,c,c,False) for c,d in sorted(docs.items())]; font['SVG ']=t
+ t=newTable('SVG ')
+ glyphIndex={name:i for i,name in enumerate(glyphOrder)}
+ t.docList=[SVGDocument(d,glyphIndex[cmapMap[c]],glyphIndex[cmapMap[c]],False) for c,d in sorted(docs.items())]
+ font['SVG ']=t
 fb=FontBuilder(1000,isTTF=True); common(fb); fb.setupGlyf({g:TTGlyphPen(None).glyph() for g in glyphOrder}); addsvg(fb.font); ttf=OUT/'HNKVisualCanonV2-Regular.ttf'; fb.save(ttf)
 font=fb.font; font.flavor='woff2'; font.save(OUT/'HNKVisualCanonV2-Regular.woff2')
 fb2=FontBuilder(1000,isTTF=False); common(fb2); cs={g:T2CharStringPen(1000,None).getCharString() for g in glyphOrder}; fb2.setupCFF('HNKVisualCanonV2-Regular',{'FullName':'HNK Visual Canon V2','FamilyName':'HNK Visual Canon V2','Weight':'Regular'},cs,{}); addsvg(fb2.font); fb2.save(OUT/'HNKVisualCanonV2-Regular.otf')
