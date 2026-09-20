@@ -1,0 +1,50 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-EXPANDED-SOURCE-RECOVERY-V1",
+  "status": "SOURCE_RECOVERY_EXHAUSTED_IN_AVAILABLE_GITHUB_AUTHORITIES",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04",
+  "sphere": "Chesed",
+  "repositoriesSearched": [
+    "tehknesolutions/simpleway-hnk",
+    "tehknesolutions/codex-hnk"
+  ],
+  "searchTargets": [
+    "L04",
+    "HNK-L04",
+    "Chesed",
+    "Does he/she...?",
+    "Lesson 4",
+    "L04 language bindings",
+    "known adjacent L03 lexical clusters"
+  ],
+  "results": {
+    "historicalBindingIdentitiesRecovered": 0,
+    "historicalHnkSurfacesRecovered": 0,
+    "existingCountEvidence": {
+      "languageBindings": 9,
+      "recoveredBindings": 9
+    },
+    "originalPayloadAvailable": false
+  },
+  "classification": "ORIGINAL_L04_BINDING_PAYLOAD_NOT_AVAILABLE_IN_SEARCHED_GITHUB_AUTHORITIES",
+  "decision": "NEW_AUTHORING_PATH_ELIGIBLE_WITH_NEW_VERSION_IDENTITY",
+  "newAuthoringGuard": {
+    "mustNotImpersonateHistoricalPayload": true,
+    "mustUseNewVersion": true,
+    "initialAuthority": "NEW_AUTHORED_CANDIDATE_AWAITING_VALIDATION",
+    "slots": 9,
+    "automaticGrammarTransfer": false,
+    "automaticLexemeTransfer": false,
+    "runtimePromotion": false
+  },
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-V2-NINE-SLOT-AUTHORING-BATCH-V1",
+    "purpose": "Create a deliberate new L04 Chesed V2 proposal for nine slots, each with explicit pedagogical function, evidence dependencies, lexical reuse/new-lexeme status, grammar risk and human decision.",
+    "approvalRequired": true
+  },
+  "limitations": [
+    "This exhaustion statement covers the two currently available GitHub language authorities searched; it is not proof that no historical copy exists elsewhere.",
+    "No external/private/local source was claimed searched unless present in those repositories.",
+    "The historical 9/9 count remains provenance evidence, not content evidence."
+  ]
+}
