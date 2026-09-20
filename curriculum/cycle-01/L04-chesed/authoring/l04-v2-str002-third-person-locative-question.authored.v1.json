@@ -1,0 +1,19 @@
+{
+  "structure_id": "L04-V2-STR002",
+  "status": "VALIDATED_L04_ONLY_NON_RUNTIME",
+  "authority": "CANDIDATE",
+  "scope": "CONTROLLED_THIRD_PERSON_LOCATIVE_YES_NO_QUESTION_ONLY",
+  "surface_schema": "ERU + RUMI + [PLACE] + KE",
+  "allowed_realizations": [
+    "ERU RUMI VALIVAN KE",
+    "ERU RUMI PARAZAMO KE"
+  ],
+  "allowed_place_fillers": [
+    "VALIVAN",
+    "PARAZAMO"
+  ],
+  "productivity": "CLOSED_ALLOWLIST_ONLY",
+  "runtime_active": false,
+  "universal": false,
+  "validation_artifact": "../validation/l04-v2-place-option-a-linguistic-validation.v1.json"
+}
