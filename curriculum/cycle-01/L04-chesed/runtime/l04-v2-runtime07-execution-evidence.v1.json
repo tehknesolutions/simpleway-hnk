@@ -1,0 +1,45 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-07-EXECUTION-EVIDENCE-V1",
+  "status": "RUNTIME_07_BLOCKED_BY_CI_INFRASTRUCTURE",
+  "date": "2026-09-20",
+  "runtimeActive": false,
+  "sourceBaseCommit": "9b91d1a6b4f2f86766a59270820eeb2d062e8e6a",
+  "attempts": [
+    {
+      "runId": 35542649399,
+      "headSha": "108722b35b9e9a98b87beca0f9ae302e1d47de55",
+      "conclusion": "failure",
+      "note": "Workflow terminated within seconds; job step summaries/log artifact were unavailable, so no validator PASS/FAIL can be attributed."
+    },
+    {
+      "runId": 35542686074,
+      "headSha": "705a941a447adc5aa68890d6cc9f3b66274f20c9",
+      "conclusion": "failure",
+      "note": "Retried after aligning contents:read permissions and Node 22 with baseline workflow; again terminated within seconds before usable validator evidence."
+    }
+  ],
+  "validatorEvidence": {
+    "executedWithObservableResults": false,
+    "passClaim": false,
+    "failClaimForLanguageValidators": false,
+    "infrastructureConclusion": "CI workflow could not provide observable test-step evidence."
+  },
+  "otherObservedStatus": {
+    "mainMergeCommit": "9b91d1a6b4f2f86766a59270820eeb2d062e8e6a",
+    "vercelStatus": "failure",
+    "vercelTargetReasonObserved": "upgradeToPro=build-rate-limit",
+    "interpretation": "Deployment/build quota failure is infrastructure evidence, not an L04 linguistic validator result."
+  },
+  "gateState": {
+    "RUNTIME_01": "IMPLEMENTED",
+    "RUNTIME_02": "IMPLEMENTED",
+    "RUNTIME_03": "IMPLEMENTED",
+    "RUNTIME_04": "IMPLEMENTED_ASSERTIONS_PENDING_EXECUTION",
+    "RUNTIME_05": "IMPLEMENTED",
+    "RUNTIME_06": "IMPLEMENTED",
+    "RUNTIME_07": "BLOCKED_INFRASTRUCTURE_NO_TEST_RESULT",
+    "RUNTIME_08": "NOT_REACHED"
+  },
+  "decision": "DO_NOT_PROMOTE_RUNTIME",
+  "nextRequiredAction": "Restore/obtain an execution environment that can run the dedicated Node validators with observable stdout/exit codes, then rerun RUNTIME-07. Only an actual passing evidence record may open RUNTIME-08."
+}

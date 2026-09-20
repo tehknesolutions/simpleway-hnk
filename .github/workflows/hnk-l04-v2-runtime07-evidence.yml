@@ -1,0 +1,27 @@
+name: HNK L04 V2 Runtime-07 Evidence
+on:
+  push:
+    branches:
+      - qa/hnk-l04-v2-runtime07-evidence-v1
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  l04-v2-runtime07:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Runtime readiness implementation
+        run: node tests/validate-hnk-l04-v2-runtime-readiness-implementation-v1.mjs
+      - name: Runtime readiness proposal
+        run: node tests/validate-hnk-l04-v2-runtime-readiness-proposal-v1.mjs
+      - name: Consolidated checkpoint
+        run: node tests/validate-hnk-l04-v2-consolidated-checkpoint-v1.mjs
+      - name: SARU linguistic validation
+        run: node tests/validate-hnk-l04-saru-option-a-linguistic-validation-v1.mjs
+      - name: SARU materialization
+        run: node tests/validate-hnk-l04-saru-option-a-materialization-v1.mjs
