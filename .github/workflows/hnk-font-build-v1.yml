@@ -24,14 +24,7 @@ jobs:
       - run: pip install 'fonttools[woff]>=4.55' brotli
       - run: python scripts/compile-hnk-font-v1.py
       - name: Verify 92/92 cmap
-        run: python - <<'PY'
-          from fontTools.ttLib import TTFont
-          for f in ['font/dist/HNKVisualCanonV2-Regular.ttf','font/dist/HNKVisualCanonV2-Regular.otf','font/dist/HNKVisualCanonV2-Regular.woff2']:
-              x=TTFont(f); c={k:v for t in x['cmap'].tables for k,v in t.cmap.items() if 0xE100<=k<=0xE233}
-              assert len(c)==92,(f,len(c))
-              assert 'SVG ' in x,f
-              print('PASS',f,len(c))
-          PY
+        run: python scripts/verify-hnk-font-v1.py
       - uses: actions/upload-artifact@v4
         with:
           name: HNKVisualCanonV2-1.0.0
