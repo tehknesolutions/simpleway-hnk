@@ -1,0 +1,48 @@
+{
+  "gate_id": "SWHNK-HNK-FONT-ENGINEERING-V1-HUMAN-GATE",
+  "status": "READY_FOR_HUMAN_DECISION",
+  "date": "2026-09-20",
+  "inputs": {
+    "rootGlyphs": 40,
+    "rootVisualAuthority": "HNK40 VISUAL-CANON-V2",
+    "derivedMx1Glyphs": 52,
+    "derivedAuthority": "MX1-DERIVED-VISUAL-CANON-V1"
+  },
+  "proposal": {
+    "strategy": "PRIVATE_USE_AREA_V1",
+    "rootRange": {
+      "start": "U+E100",
+      "end": "U+E127",
+      "count": 40,
+      "order": "G01..G40"
+    },
+    "mx1Range": {
+      "start": "U+E200",
+      "end": "U+E233",
+      "count": 52,
+      "order": "catalog index 1..52"
+    },
+    "formats": [
+      "OTF",
+      "TTF",
+      "WOFF2"
+    ],
+    "targets": [
+      "Windows/notebook",
+      "Web",
+      "Android"
+    ],
+    "cmapRule": "Stable bijective mapping; codepoints are transport/implementation identifiers, not linguistic semantics.",
+    "fontFamilyCandidate": "HNK Visual Canon V2",
+    "versionCandidate": "1.0.0"
+  },
+  "requirements": [
+    "Generate source-of-truth cmap JSON.",
+    "Generate font deterministically from canonical vector sources.",
+    "Verify 92/92 glyph mappings.",
+    "Cross-render smoke test Web + desktop font parser; Android packaging contract.",
+    "Record output hashes.",
+    "Do not reuse old 12-token HENUVOKODAN PUA mappings."
+  ],
+  "decisionRequested": "Approve the proposed PUA ranges and font-engineering contract. Font binaries remain implementation artifacts; visual authority stays with HNK40/MX1 canon sources."
+}
