@@ -1,0 +1,1901 @@
+{
+  "artifact_id": "SWHNK-A1-WRITING-ATLAS-V1",
+  "status": "DERIVED_FROM_GOVERNED_A1_AND_VISUAL_CANON",
+  "date": "2026-09-20",
+  "authorities": [
+    "HNK-A1-MX1-SYLLABLE-CATALOG-V1",
+    "MX1-DERIVED-VISUAL-CANON-V1",
+    "HNK FONT CMAP V1",
+    "HNK GENERATIVE WRITING SYSTEM V1"
+  ],
+  "summary": {
+    "registryEntries": 43,
+    "renderableWords": 42,
+    "excludedContentTokens": 1,
+    "missingCodepoints": 0
+  },
+  "words": [
+    {
+      "id": "LEX_VODEMI",
+      "form": "VODEMI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G04",
+        "G19",
+        "G02",
+        "G11",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04",
+          "codepoint": "U+E230",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G19",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G02",
+          "codepoint": "U+E21A",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E230",
+        "U+E21A",
+        "U+E209"
+      ]
+    },
+    {
+      "id": "LEX_TUMAVI",
+      "form": "TUMAVI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G22",
+        "G05",
+        "G11",
+        "G01",
+        "G31",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G05",
+          "codepoint": "U+E223",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01",
+          "codepoint": "U+E206",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03",
+          "codepoint": "U+E22F",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E223",
+        "U+E206",
+        "U+E22F"
+      ]
+    },
+    {
+      "id": "LEX_PUMEK",
+      "form": "PUMEK",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G05",
+        "G11",
+        "G02",
+        "G23"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G05",
+          "codepoint": "U+E220",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02",
+            "G23"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G11+G02+G23",
+          "codepoint": "U+E208",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E220",
+        "U+E208"
+      ]
+    },
+    {
+      "id": "LEX_MUNASE",
+      "form": "MUNASE",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G11",
+        "G05",
+        "G12",
+        "G01",
+        "G26",
+        "G02"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G05",
+          "codepoint": "U+E20B",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G12",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G01",
+          "codepoint": "U+E20C",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02",
+          "codepoint": "U+E22A",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E20B",
+        "U+E20C",
+        "U+E22A"
+      ]
+    },
+    {
+      "id": "LEX_AN",
+      "form": "AN",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G01",
+        "G12"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G01",
+            "G12"
+          ],
+          "profile": "VC",
+          "mx1Key": "MX1:VC:G01+G12",
+          "codepoint": "U+E200",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E200"
+      ]
+    },
+    {
+      "id": "LEX_EN",
+      "form": "EN",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G02",
+        "G12"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G02",
+            "G12"
+          ],
+          "profile": "VC",
+          "mx1Key": "MX1:VC:G02+G12",
+          "codepoint": "U+E202",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E202"
+      ]
+    },
+    {
+      "id": "LEX_ZAMI",
+      "form": "ZAMI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G32",
+        "G01",
+        "G11",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G32+G01",
+          "codepoint": "U+E232",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E232",
+        "U+E209"
+      ]
+    },
+    {
+      "id": "CONTENT_HNK",
+      "form": "HNK",
+      "status": "CONTENT_TOKEN_EXCLUDED",
+      "note": "HNK remains HNK; no spelling inference."
+    },
+    {
+      "id": "LEX_VALI",
+      "form": "VALI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G01",
+        "G14",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01",
+          "codepoint": "U+E22C",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G03",
+          "codepoint": "U+E211",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E22C",
+        "U+E211"
+      ]
+    },
+    {
+      "id": "LEX_NE",
+      "form": "NE",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G12",
+        "G02"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G12",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G02",
+          "codepoint": "U+E20D",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E20D"
+      ]
+    },
+    {
+      "id": "LEX_PA",
+      "form": "PA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G01",
+          "codepoint": "U+E21E",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E21E"
+      ]
+    },
+    {
+      "id": "LEX_KE",
+      "form": "KE",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G02"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G02",
+          "codepoint": "U+E225",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E225"
+      ]
+    },
+    {
+      "id": "LEX_GAVURI",
+      "form": "GAVURI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G20",
+        "G01",
+        "G31",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G20",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G20+G01",
+          "codepoint": "U+E21D",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G05",
+          "codepoint": "U+E231",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03",
+          "codepoint": "U+E216",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E21D",
+        "U+E231",
+        "U+E216"
+      ]
+    },
+    {
+      "id": "LEX_KAVESO",
+      "form": "KAVESO",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G01",
+        "G31",
+        "G02",
+        "G26",
+        "G04"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01",
+          "codepoint": "U+E224",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02",
+          "codepoint": "U+E22E",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G26",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G04",
+          "codepoint": "U+E22B",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E224",
+        "U+E22E",
+        "U+E22B"
+      ]
+    },
+    {
+      "id": "LEX_HIZEP",
+      "form": "HIZEP",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G07",
+        "G03",
+        "G32",
+        "G02",
+        "G21"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G03",
+          "codepoint": "U+E205",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G32",
+            "G02",
+            "G21"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G32+G02+G21",
+          "codepoint": "U+E233",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E205",
+        "U+E233"
+      ]
+    },
+    {
+      "id": "LEX_MORAKU",
+      "form": "MORAKU",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G11",
+        "G04",
+        "G15",
+        "G01",
+        "G23",
+        "G05"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G04",
+          "codepoint": "U+E20A",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05",
+          "codepoint": "U+E228",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E20A",
+        "U+E214",
+        "U+E228"
+      ]
+    },
+    {
+      "id": "LEX_SAVETA",
+      "form": "SAVETA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G26",
+        "G01",
+        "G31",
+        "G02",
+        "G22",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G01",
+          "codepoint": "U+E229",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02",
+          "codepoint": "U+E22E",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G01",
+          "codepoint": "U+E221",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E229",
+        "U+E22E",
+        "U+E221"
+      ]
+    },
+    {
+      "id": "LEX_KORUME",
+      "form": "KORUME",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G04",
+        "G15",
+        "G05",
+        "G11",
+        "G02"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04",
+          "codepoint": "U+E227",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05",
+          "codepoint": "U+E218",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02",
+          "codepoint": "U+E207",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E227",
+        "U+E218",
+        "U+E207"
+      ]
+    },
+    {
+      "id": "LEX_VEMI",
+      "form": "VEMI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G02",
+        "G11",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02",
+          "codepoint": "U+E22E",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E22E",
+        "U+E209"
+      ]
+    },
+    {
+      "id": "LEX_LOKANI",
+      "form": "LOKANI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G14",
+        "G04",
+        "G23",
+        "G01",
+        "G12",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G04",
+          "codepoint": "U+E212",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01",
+          "codepoint": "U+E224",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G12",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G03",
+          "codepoint": "U+E20E",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E212",
+        "U+E224",
+        "U+E20E"
+      ]
+    },
+    {
+      "id": "LEX_DOMERA",
+      "form": "DOMERA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G19",
+        "G04",
+        "G11",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G19",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G04",
+          "codepoint": "U+E21B",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02",
+          "codepoint": "U+E207",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E21B",
+        "U+E207",
+        "U+E214"
+      ]
+    },
+    {
+      "id": "LEX_TAMURI",
+      "form": "TAMURI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G22",
+        "G01",
+        "G11",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G01",
+          "codepoint": "U+E221",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G05",
+          "codepoint": "U+E20B",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03",
+          "codepoint": "U+E216",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E221",
+        "U+E20B",
+        "U+E216"
+      ]
+    },
+    {
+      "id": "LEX_NEMA",
+      "form": "NEMA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G12",
+        "G02",
+        "G11",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G12",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G02",
+          "codepoint": "U+E20D",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01",
+          "codepoint": "U+E206",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E20D",
+        "U+E206"
+      ]
+    },
+    {
+      "id": "LEX_VOMA",
+      "form": "VOMA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G31",
+        "G04",
+        "G11",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04",
+          "codepoint": "U+E230",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01",
+          "codepoint": "U+E206",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E230",
+        "U+E206"
+      ]
+    },
+    {
+      "id": "LEX_PELUKI",
+      "form": "PELUKI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G21",
+        "G02",
+        "G14",
+        "G05",
+        "G23",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G21",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G02",
+          "codepoint": "U+E21F",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G14",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G05",
+          "codepoint": "U+E213",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G23",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G03",
+          "codepoint": "U+E226",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E21F",
+        "U+E213",
+        "U+E226"
+      ]
+    },
+    {
+      "id": "LEX_LENU",
+      "form": "LENU",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G14",
+        "G02",
+        "G12",
+        "G05"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G02",
+          "codepoint": "U+E210",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G12",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G05",
+          "codepoint": "U+E20F",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E210",
+        "U+E20F"
+      ]
+    },
+    {
+      "id": "LEX_MAVERA",
+      "form": "MAVERA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G11",
+        "G01",
+        "G31",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G01",
+          "codepoint": "U+E206",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02",
+          "codepoint": "U+E22E",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E206",
+        "U+E22E",
+        "U+E214"
+      ]
+    },
+    {
+      "id": "LEX_ERU",
+      "form": "ERU",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G02",
+        "G15",
+        "G05"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G02"
+          ],
+          "profile": "ROOT",
+          "mx1Key": "MX1:ROOT:G02",
+          "codepoint": "U+E201",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05",
+          "codepoint": "U+E218",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E201",
+        "U+E218"
+      ]
+    },
+    {
+      "id": "LEX_RUMI",
+      "form": "RUMI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G15",
+        "G05",
+        "G11",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05",
+          "codepoint": "U+E218",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E218",
+        "U+E209"
+      ]
+    },
+    {
+      "id": "LEX_HAVORI",
+      "form": "HAVORI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G07",
+        "G01",
+        "G31",
+        "G04",
+        "G15",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G01",
+          "codepoint": "U+E204",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04",
+          "codepoint": "U+E230",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03",
+          "codepoint": "U+E216",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E204",
+        "U+E230",
+        "U+E216"
+      ]
+    },
+    {
+      "id": "LEX_TUMERA",
+      "form": "TUMERA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G22",
+        "G05",
+        "G11",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G22",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G05",
+          "codepoint": "U+E223",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G11",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G02",
+          "codepoint": "U+E207",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E223",
+        "U+E207",
+        "U+E214"
+      ]
+    },
+    {
+      "id": "LEX_HAVENU",
+      "form": "HAVENU",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G07",
+        "G01",
+        "G31",
+        "G02",
+        "G12",
+        "G05"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G07",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G07+G01",
+          "codepoint": "U+E204",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G02",
+          "codepoint": "U+E22E",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G12",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G12+G05",
+          "codepoint": "U+E20F",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E204",
+        "U+E22E",
+        "U+E20F"
+      ]
+    },
+    {
+      "id": "LEX_MISERO",
+      "form": "MISERO",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G11",
+        "G03",
+        "G26",
+        "G02",
+        "G15",
+        "G04"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02",
+          "codepoint": "U+E22A",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G04",
+          "codepoint": "U+E217",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E209",
+        "U+E22A",
+        "U+E217"
+      ]
+    },
+    {
+      "id": "LEX_LIKADO",
+      "form": "LIKADO",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G14",
+        "G03",
+        "G23",
+        "G01",
+        "G19",
+        "G04"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G03",
+          "codepoint": "U+E211",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01",
+          "codepoint": "U+E224",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G19",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G04",
+          "codepoint": "U+E21B",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E211",
+        "U+E224",
+        "U+E21B"
+      ]
+    },
+    {
+      "id": "LEX_SEVAI",
+      "form": "SEVAI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G26",
+        "G02",
+        "G31",
+        "G01",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G26",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G26+G02",
+          "codepoint": "U+E22A",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01",
+          "codepoint": "U+E22C",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G03"
+          ],
+          "profile": "ROOT",
+          "mx1Key": "MX1:ROOT:G03",
+          "codepoint": "U+E203",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E22A",
+        "U+E22C",
+        "U+E203"
+      ]
+    },
+    {
+      "id": "LEX_KOPERA",
+      "form": "KOPERA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G04",
+        "G21",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04",
+          "codepoint": "U+E227",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G21",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G21+G02",
+          "codepoint": "U+E21F",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E227",
+        "U+E21F",
+        "U+E214"
+      ]
+    },
+    {
+      "id": "LEX_DARUVI",
+      "form": "DARUVI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G19",
+        "G01",
+        "G15",
+        "G05",
+        "G31",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G19",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G01",
+          "codepoint": "U+E219",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G05",
+          "codepoint": "U+E218",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03",
+          "codepoint": "U+E22F",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E219",
+        "U+E218",
+        "U+E22F"
+      ]
+    },
+    {
+      "id": "LEX_KODERA",
+      "form": "KODERA",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G04",
+        "G19",
+        "G02",
+        "G15",
+        "G01"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G04",
+          "codepoint": "U+E227",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G19",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G02",
+          "codepoint": "U+E21A",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E227",
+        "U+E21A",
+        "U+E214"
+      ]
+    },
+    {
+      "id": "LEX_KURAVI",
+      "form": "KURAVI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G05",
+        "G15",
+        "G01",
+        "G31",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05",
+          "codepoint": "U+E228",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G03",
+          "codepoint": "U+E22F",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E228",
+        "U+E214",
+        "U+E22F"
+      ]
+    },
+    {
+      "id": "LEX_LURAVO",
+      "form": "LURAVO",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G14",
+        "G05",
+        "G15",
+        "G01",
+        "G31",
+        "G04"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G14",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G14+G05",
+          "codepoint": "U+E213",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G04"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G04",
+          "codepoint": "U+E230",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E213",
+        "U+E214",
+        "U+E230"
+      ]
+    },
+    {
+      "id": "LEX_REVATI",
+      "form": "REVATI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G15",
+        "G02",
+        "G31",
+        "G01",
+        "G22",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G15",
+            "G02"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G02",
+          "codepoint": "U+E215",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G31+G01",
+          "codepoint": "U+E22C",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G22",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G22+G03",
+          "codepoint": "U+E222",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E215",
+        "U+E22C",
+        "U+E222"
+      ]
+    },
+    {
+      "id": "LEX_KUVAN",
+      "form": "KUVAN",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G05",
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G05",
+          "codepoint": "U+E228",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01",
+            "G12"
+          ],
+          "profile": "CVC",
+          "mx1Key": "MX1:CVC:G31+G01+G12",
+          "codepoint": "U+E22D",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E228",
+        "U+E22D"
+      ]
+    },
+    {
+      "id": "LEX_KADURI",
+      "form": "KADURI",
+      "status": "CANONICAL_A1_WRITING_SEQUENCE",
+      "gIds": [
+        "G23",
+        "G01",
+        "G19",
+        "G05",
+        "G15",
+        "G03"
+      ],
+      "syllables": [
+        {
+          "gIds": [
+            "G23",
+            "G01"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G23+G01",
+          "codepoint": "U+E224",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G19",
+            "G05"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G19+G05",
+          "codepoint": "U+E21C",
+          "char": ""
+        },
+        {
+          "gIds": [
+            "G15",
+            "G03"
+          ],
+          "profile": "CV",
+          "mx1Key": "MX1:CV:G15+G03",
+          "codepoint": "U+E216",
+          "char": ""
+        }
+      ],
+      "writing": "",
+      "codepoints": [
+        "U+E224",
+        "U+E21C",
+        "U+E216"
+      ]
+    }
+  ],
+  "boundaries": [
+    "Atlas is derived; it does not create lexemes or meanings.",
+    "HNK content token remains excluded from spelling inference.",
+    "PUA characters are transport identifiers, not Unicode-standard semantics."
+  ]
+}
