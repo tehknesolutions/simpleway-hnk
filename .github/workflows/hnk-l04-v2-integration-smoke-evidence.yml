@@ -1,0 +1,17 @@
+name: HNK L04 V2 Integration Smoke Evidence
+on:
+  push:
+    branches:
+      - qa/hnk-l04-v2-runtime-integration-smoke-execution-v1
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute L04 V2 integration smoke
+        run: node tests/validate-hnk-l04-v2-runtime-integration-smoke-v1.mjs
