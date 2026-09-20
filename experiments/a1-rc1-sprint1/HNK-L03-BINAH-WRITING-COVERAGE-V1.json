@@ -1,0 +1,368 @@
+{
+  "artifact_id": "SWHNK-L03-BINAH-WRITING-COVERAGE-V1",
+  "status": "DERIVED_COVERAGE_AUDIT",
+  "date": "2026-09-20",
+  "summary": {
+    "lexicalForms": 9,
+    "fullyWritableLexicalForms": 9,
+    "controlledSurfaces": 6,
+    "fullyWritableControlledSurfaces": 6,
+    "uniqueMissingMx1": 0
+  },
+  "rows": [
+    {
+      "form": "VALIVAN",
+      "gIds": [
+        "G31",
+        "G01",
+        "G14",
+        "G03",
+        "G31",
+        "G01",
+        "G12"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G31+G01",
+          "codepoint": "U+E22C",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "mx1Key": "MX1:CV:G14+G03",
+          "codepoint": "U+E211",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G31",
+            "G01",
+            "G12"
+          ],
+          "mx1Key": "MX1:CVC:G31+G01+G12",
+          "codepoint": "U+E22D",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "PARAZAMO",
+      "gIds": [
+        "G21",
+        "G01",
+        "G15",
+        "G01",
+        "G32",
+        "G01",
+        "G11",
+        "G04"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G21+G01",
+          "codepoint": "U+E21E",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G32+G01",
+          "codepoint": "U+E232",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G04"
+          ],
+          "mx1Key": "MX1:CV:G11+G04",
+          "codepoint": "U+E20A",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "PARAZAMI",
+      "gIds": [
+        "G21",
+        "G01",
+        "G15",
+        "G01",
+        "G32",
+        "G01",
+        "G11",
+        "G03"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G21",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G21+G01",
+          "codepoint": "U+E21E",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G15+G01",
+          "codepoint": "U+E214",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G32",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G32+G01",
+          "codepoint": "U+E232",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G11",
+            "G03"
+          ],
+          "mx1Key": "MX1:CV:G11+G03",
+          "codepoint": "U+E209",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "VALI",
+      "gIds": [
+        "G31",
+        "G01",
+        "G14",
+        "G03"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G31",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G31+G01",
+          "codepoint": "U+E22C",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "mx1Key": "MX1:CV:G14+G03",
+          "codepoint": "U+E211",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "DAYI",
+      "gIds": [
+        "G19",
+        "G01",
+        "G40",
+        "G03"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G19",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G19+G01",
+          "codepoint": "U+E219",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G40"
+          ],
+          "mx1Key": "MX1:ROOT:G40",
+          "codepoint": "U+E239",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G03"
+          ],
+          "mx1Key": "MX1:ROOT:G03",
+          "codepoint": "U+E203",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "SALI",
+      "gIds": [
+        "G26",
+        "G01",
+        "G14",
+        "G03"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G26+G01",
+          "codepoint": "U+E229",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G14",
+            "G03"
+          ],
+          "mx1Key": "MX1:CV:G14+G03",
+          "codepoint": "U+E211",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "SARU",
+      "gIds": [
+        "G26",
+        "G01",
+        "G15",
+        "G05"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G26",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G26+G01",
+          "codepoint": "U+E229",
+          "status": "CANONICAL_MX1_59"
+        },
+        {
+          "gIds": [
+            "G15",
+            "G05"
+          ],
+          "mx1Key": "MX1:CV:G15+G05",
+          "codepoint": "U+E218",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "TA",
+      "gIds": [
+        "G22",
+        "G01"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G22",
+            "G01"
+          ],
+          "mx1Key": "MX1:CV:G22+G01",
+          "codepoint": "U+E221",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    },
+    {
+      "form": "KE",
+      "gIds": [
+        "G23",
+        "G02"
+      ],
+      "syllabification": "GOVERNED_V1",
+      "cells": [
+        {
+          "gIds": [
+            "G23",
+            "G02"
+          ],
+          "mx1Key": "MX1:CV:G23+G02",
+          "codepoint": "U+E225",
+          "status": "CANONICAL_MX1_59"
+        }
+      ],
+      "fullyWritable": true
+    }
+  ],
+  "surfaces": [
+    {
+      "surface": "VALI",
+      "fullyWritable": true
+    },
+    {
+      "surface": "PARAZAMI",
+      "fullyWritable": true
+    },
+    {
+      "surface": "VALIVAN",
+      "fullyWritable": true
+    },
+    {
+      "surface": "PARAZAMO",
+      "fullyWritable": true
+    },
+    {
+      "surface": "VALI KE",
+      "fullyWritable": true
+    },
+    {
+      "surface": "PARAZAMI KE",
+      "fullyWritable": true
+    }
+  ],
+  "missingMx1Candidates": [],
+  "boundaries": [
+    "Safe B5 romanization only; no unmapped phoneme is invented.",
+    "Missing MX1 identities remain candidates only.",
+    "Writing coverage does not promote lexical or grammatical authority.",
+    "VALI KE / PARAZAMI KE retain unresolved natural-language translation."
+  ]
+}
