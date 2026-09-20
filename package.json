@@ -80,7 +80,8 @@
     "qa:a1:cohort-dashboard": "node scripts/build-a1-cohort-dashboard.mjs",
     "validate:a1-cohort": "node tests/validate-a1-cohort-launch.mjs",
     "qa:a1:p01-intake": "node scripts/validate-a1-p01-intake.mjs",
-    "validate:a1-p01": "node tests/validate-a1-p01-activation.mjs"
+    "validate:a1-p01": "node tests/validate-a1-p01-activation.mjs",
+    "validate:a1-immersive-glyph": "node tests/validate-a1-immersive-glyph-learning.mjs"
   },
   "engines": {
     "node": ">=20"
