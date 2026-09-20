@@ -1,0 +1,794 @@
+{
+  "artifact_id": "SWHNK-HNK-FONT-CMAP-V1",
+  "status": "ACTIVE_PUA_IMPLEMENTATION_MAPPING",
+  "date": "2026-09-20",
+  "fontFamily": "HNK Visual Canon V2",
+  "fontVersion": "1.0.0",
+  "authority": {
+    "roots": "HNK40 VISUAL-CANON-V2",
+    "mx1": "MX1-DERIVED-VISUAL-CANON-V1"
+  },
+  "ranges": {
+    "roots": "U+E100..U+E127",
+    "mx1": "U+E200..U+E233"
+  },
+  "transportOnly": true,
+  "linguisticSemantics": false,
+  "legacyHenuvokodan12TokenPuaExcluded": true,
+  "count": 92,
+  "mappings": [
+    {
+      "kind": "ROOT",
+      "id": "G01",
+      "codepoint": "U+E100"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G02",
+      "codepoint": "U+E101"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G03",
+      "codepoint": "U+E102"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G04",
+      "codepoint": "U+E103"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G05",
+      "codepoint": "U+E104"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G06",
+      "codepoint": "U+E105"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G07",
+      "codepoint": "U+E106"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G08",
+      "codepoint": "U+E107"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G09",
+      "codepoint": "U+E108"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G10",
+      "codepoint": "U+E109"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G11",
+      "codepoint": "U+E10A"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G12",
+      "codepoint": "U+E10B"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G13",
+      "codepoint": "U+E10C"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G14",
+      "codepoint": "U+E10D"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G15",
+      "codepoint": "U+E10E"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G16",
+      "codepoint": "U+E10F"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G17",
+      "codepoint": "U+E110"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G18",
+      "codepoint": "U+E111"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G19",
+      "codepoint": "U+E112"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G20",
+      "codepoint": "U+E113"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G21",
+      "codepoint": "U+E114"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G22",
+      "codepoint": "U+E115"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G23",
+      "codepoint": "U+E116"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G24",
+      "codepoint": "U+E117"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G25",
+      "codepoint": "U+E118"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G26",
+      "codepoint": "U+E119"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G27",
+      "codepoint": "U+E11A"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G28",
+      "codepoint": "U+E11B"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G29",
+      "codepoint": "U+E11C"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G30",
+      "codepoint": "U+E11D"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G31",
+      "codepoint": "U+E11E"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G32",
+      "codepoint": "U+E11F"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G33",
+      "codepoint": "U+E120"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G34",
+      "codepoint": "U+E121"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G35",
+      "codepoint": "U+E122"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G36",
+      "codepoint": "U+E123"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G37",
+      "codepoint": "U+E124"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G38",
+      "codepoint": "U+E125"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G39",
+      "codepoint": "U+E126"
+    },
+    {
+      "kind": "ROOT",
+      "id": "G40",
+      "codepoint": "U+E127"
+    },
+    {
+      "kind": "MX1",
+      "index": 1,
+      "id": "MX1:VC:G01+G12",
+      "codepoint": "U+E200",
+      "profile": "VC",
+      "gIds": [
+        "G01",
+        "G12"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 2,
+      "id": "MX1:ROOT:G02",
+      "codepoint": "U+E201",
+      "profile": "ROOT",
+      "gIds": [
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 3,
+      "id": "MX1:VC:G02+G12",
+      "codepoint": "U+E202",
+      "profile": "VC",
+      "gIds": [
+        "G02",
+        "G12"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 4,
+      "id": "MX1:ROOT:G03",
+      "codepoint": "U+E203",
+      "profile": "ROOT",
+      "gIds": [
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 5,
+      "id": "MX1:CV:G07+G01",
+      "codepoint": "U+E204",
+      "profile": "CV",
+      "gIds": [
+        "G07",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 6,
+      "id": "MX1:CV:G07+G03",
+      "codepoint": "U+E205",
+      "profile": "CV",
+      "gIds": [
+        "G07",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 7,
+      "id": "MX1:CV:G11+G01",
+      "codepoint": "U+E206",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 8,
+      "id": "MX1:CV:G11+G02",
+      "codepoint": "U+E207",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 9,
+      "id": "MX1:CVC:G11+G02+G23",
+      "codepoint": "U+E208",
+      "profile": "CVC",
+      "gIds": [
+        "G11",
+        "G02",
+        "G23"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 10,
+      "id": "MX1:CV:G11+G03",
+      "codepoint": "U+E209",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 11,
+      "id": "MX1:CV:G11+G04",
+      "codepoint": "U+E20A",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 12,
+      "id": "MX1:CV:G11+G05",
+      "codepoint": "U+E20B",
+      "profile": "CV",
+      "gIds": [
+        "G11",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 13,
+      "id": "MX1:CV:G12+G01",
+      "codepoint": "U+E20C",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 14,
+      "id": "MX1:CV:G12+G02",
+      "codepoint": "U+E20D",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 15,
+      "id": "MX1:CV:G12+G03",
+      "codepoint": "U+E20E",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 16,
+      "id": "MX1:CV:G12+G05",
+      "codepoint": "U+E20F",
+      "profile": "CV",
+      "gIds": [
+        "G12",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 17,
+      "id": "MX1:CV:G14+G02",
+      "codepoint": "U+E210",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 18,
+      "id": "MX1:CV:G14+G03",
+      "codepoint": "U+E211",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 19,
+      "id": "MX1:CV:G14+G04",
+      "codepoint": "U+E212",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 20,
+      "id": "MX1:CV:G14+G05",
+      "codepoint": "U+E213",
+      "profile": "CV",
+      "gIds": [
+        "G14",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 21,
+      "id": "MX1:CV:G15+G01",
+      "codepoint": "U+E214",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 22,
+      "id": "MX1:CV:G15+G02",
+      "codepoint": "U+E215",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 23,
+      "id": "MX1:CV:G15+G03",
+      "codepoint": "U+E216",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 24,
+      "id": "MX1:CV:G15+G04",
+      "codepoint": "U+E217",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 25,
+      "id": "MX1:CV:G15+G05",
+      "codepoint": "U+E218",
+      "profile": "CV",
+      "gIds": [
+        "G15",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 26,
+      "id": "MX1:CV:G19+G01",
+      "codepoint": "U+E219",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 27,
+      "id": "MX1:CV:G19+G02",
+      "codepoint": "U+E21A",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 28,
+      "id": "MX1:CV:G19+G04",
+      "codepoint": "U+E21B",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 29,
+      "id": "MX1:CV:G19+G05",
+      "codepoint": "U+E21C",
+      "profile": "CV",
+      "gIds": [
+        "G19",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 30,
+      "id": "MX1:CV:G20+G01",
+      "codepoint": "U+E21D",
+      "profile": "CV",
+      "gIds": [
+        "G20",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 31,
+      "id": "MX1:CV:G21+G01",
+      "codepoint": "U+E21E",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 32,
+      "id": "MX1:CV:G21+G02",
+      "codepoint": "U+E21F",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 33,
+      "id": "MX1:CV:G21+G05",
+      "codepoint": "U+E220",
+      "profile": "CV",
+      "gIds": [
+        "G21",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 34,
+      "id": "MX1:CV:G22+G01",
+      "codepoint": "U+E221",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 35,
+      "id": "MX1:CV:G22+G03",
+      "codepoint": "U+E222",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 36,
+      "id": "MX1:CV:G22+G05",
+      "codepoint": "U+E223",
+      "profile": "CV",
+      "gIds": [
+        "G22",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 37,
+      "id": "MX1:CV:G23+G01",
+      "codepoint": "U+E224",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 38,
+      "id": "MX1:CV:G23+G02",
+      "codepoint": "U+E225",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 39,
+      "id": "MX1:CV:G23+G03",
+      "codepoint": "U+E226",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 40,
+      "id": "MX1:CV:G23+G04",
+      "codepoint": "U+E227",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 41,
+      "id": "MX1:CV:G23+G05",
+      "codepoint": "U+E228",
+      "profile": "CV",
+      "gIds": [
+        "G23",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 42,
+      "id": "MX1:CV:G26+G01",
+      "codepoint": "U+E229",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 43,
+      "id": "MX1:CV:G26+G02",
+      "codepoint": "U+E22A",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 44,
+      "id": "MX1:CV:G26+G04",
+      "codepoint": "U+E22B",
+      "profile": "CV",
+      "gIds": [
+        "G26",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 45,
+      "id": "MX1:CV:G31+G01",
+      "codepoint": "U+E22C",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 46,
+      "id": "MX1:CVC:G31+G01+G12",
+      "codepoint": "U+E22D",
+      "profile": "CVC",
+      "gIds": [
+        "G31",
+        "G01",
+        "G12"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 47,
+      "id": "MX1:CV:G31+G02",
+      "codepoint": "U+E22E",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G02"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 48,
+      "id": "MX1:CV:G31+G03",
+      "codepoint": "U+E22F",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G03"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 49,
+      "id": "MX1:CV:G31+G04",
+      "codepoint": "U+E230",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G04"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 50,
+      "id": "MX1:CV:G31+G05",
+      "codepoint": "U+E231",
+      "profile": "CV",
+      "gIds": [
+        "G31",
+        "G05"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 51,
+      "id": "MX1:CV:G32+G01",
+      "codepoint": "U+E232",
+      "profile": "CV",
+      "gIds": [
+        "G32",
+        "G01"
+      ]
+    },
+    {
+      "kind": "MX1",
+      "index": 52,
+      "id": "MX1:CVC:G32+G02+G21",
+      "codepoint": "U+E233",
+      "profile": "CVC",
+      "gIds": [
+        "G32",
+        "G02",
+        "G21"
+      ]
+    }
+  ]
+}
