@@ -1,0 +1,120 @@
+{
+  "proposal_id": "SWHNK-MX1-VISUAL-COMPOSITION-RENDERER-V1",
+  "status": "PROPOSED_AWAITING_HUMAN_VISUAL_GATE",
+  "date": "2026-09-20",
+  "purpose": "Define a deterministic preproduction renderer for the 52 licensed A1 MX1 identities without promoting any current root drawing or composition to official visual canon.",
+  "inputs": {
+    "a1Mx1Catalog": "HNK-A1-MX1-SYLLABLE-CATALOG-V1",
+    "uniqueIdentities": 52,
+    "profiles": {
+      "ROOT": 2,
+      "CV": 45,
+      "VC": 2,
+      "CVC": 3
+    },
+    "rootInventory": "G01-G40 structural/phoneme authority",
+    "rootVisualAuthority": "PREPRODUCTION_NOT_OFFICIAL_VISUAL_CANON"
+  },
+  "rendererContract": {
+    "canvas": {
+      "width": 1000,
+      "height": 1000,
+      "viewBox": "0 0 1000 1000"
+    },
+    "invariants": [
+      "Ordered G-ID identity is never changed.",
+      "No rotation.",
+      "No mirroring.",
+      "No destructive deformation.",
+      "No semantic meaning is inferred from geometry.",
+      "Root drawings remain replaceable assets; layout is independent from root artwork."
+    ],
+    "slots": {
+      "NUCLEUS": {
+        "x": 500,
+        "y": 500,
+        "scale": 0.62,
+        "role": "vowel nucleus or sole ROOT"
+      },
+      "PRE1": {
+        "x": 250,
+        "y": 500,
+        "scale": 0.42,
+        "role": "pre-nuclear consonant"
+      },
+      "POST1": {
+        "x": 750,
+        "y": 500,
+        "scale": 0.42,
+        "role": "post-nuclear consonant"
+      }
+    },
+    "profileLayouts": {
+      "ROOT": [
+        "NUCLEUS"
+      ],
+      "CV": [
+        "PRE1",
+        "NUCLEUS"
+      ],
+      "VC": [
+        "NUCLEUS",
+        "POST1"
+      ],
+      "CVC": [
+        "PRE1",
+        "NUCLEUS",
+        "POST1"
+      ]
+    },
+    "compositionTechnique": "SVG symbol/use composition; root source paths are external replaceable assets.",
+    "visualStatus": "PREPRODUCTION_DERIVED_MIX_GLYPH"
+  },
+  "rootAssetPolicy": {
+    "currentState": "NO_OFFICIAL_ROOT_VECTOR_SHAPES_IMPORTED_IN_SIMPLEWAY_HNK",
+    "placeholderMode": "LABELED_STRUCTURAL_PLACEHOLDER_ONLY",
+    "placeholderRule": "When a governed root vector is unavailable, render its G-ID in a bounded neutral placeholder. Never present placeholder geometry as the HNK glyph.",
+    "promotionRequirement": "Human Visual Gate must review actual governed root artwork before any derived composition can become visual canon."
+  },
+  "outputs": [
+    "52 deterministic SVG composition specs",
+    "contact sheet/index HTML or SVG",
+    "machine-readable manifest",
+    "visual-gate review artifact"
+  ],
+  "humanGateDecisions": [
+    {
+      "id": "VIS-MX1-001",
+      "decision": "Approve 1000x1000 normalized composition cell and role-based slots."
+    },
+    {
+      "id": "VIS-MX1-002",
+      "decision": "Approve PRE-left / NUCLEUS-center / POST-right as V1 visual grammar with no semantic direction claim."
+    },
+    {
+      "id": "VIS-MX1-003",
+      "decision": "Approve relative scales 0.42 / 0.62 / 0.42 for preproduction testing."
+    },
+    {
+      "id": "VIS-MX1-004",
+      "decision": "Keep rotation and mirroring forbidden."
+    },
+    {
+      "id": "VIS-MX1-005",
+      "decision": "Allow labeled placeholders only when root vector artwork is absent, clearly noncanonical."
+    },
+    {
+      "id": "VIS-MX1-006",
+      "decision": "Require a second Human Visual Gate after actual 52 compositions are rendered with governed root art."
+    }
+  ],
+  "boundaries": {
+    "newGlyphCanon": 0,
+    "newPhonology": 0,
+    "newLexicon": 0,
+    "newGrammar": 0,
+    "newSemantics": 0,
+    "newSyllabification": 0
+  },
+  "nextIfApproved": "Implement renderer + 52-spec manifest; if root vector source remains unavailable, generate structural contact sheet explicitly marked PLACEHOLDER/NONCANON and open root-art import gate."
+}
