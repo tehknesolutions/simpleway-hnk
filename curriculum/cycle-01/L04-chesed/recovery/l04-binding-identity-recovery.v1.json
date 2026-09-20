@@ -1,0 +1,121 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-BINDING-IDENTITY-RECOVERY-V1",
+  "status": "RECOVERED_COUNT_ONLY_IDENTITIES_UNAVAILABLE",
+  "date": "2026-09-20",
+  "lesson": "HNK-L04",
+  "sphere": "Chesed",
+  "sources": [
+    "curriculum/cycle-01/cycle.manifest.json",
+    "curriculum/cycle-01/L04-chesed/manifest.json",
+    "docs/SWHNK_C1_BASELINE_V1.md"
+  ],
+  "findings": {
+    "cycleManifest": {
+      "languageBindings": 9,
+      "recoveredBindings": 9,
+      "governedRebinds": 0,
+      "recoveredPhrases": 0,
+      "state": "EVIDENCE_GATE"
+    },
+    "lessonManifest": {
+      "languageBindings": 9,
+      "recoveredPhrases": 0,
+      "authorityDistribution": {
+        "WATCH": 1,
+        "GATE": 8
+      },
+      "automatedDecision": "HOLD_INSUFFICIENT_EVIDENCE"
+    },
+    "repositoryArchaeology": {
+      "bindingIdentityArtifactsFound": 0,
+      "individualBindingNamesRecovered": 0,
+      "hnkSurfacesRecovered": 0
+    }
+  },
+  "classification": "COUNT_PROVEN_IDENTITIES_NOT_MATERIALIZED",
+  "slotResolution": [
+    {
+      "slot": "L04-AUTH-001",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-002",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-003",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-004",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-005",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-006",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-007",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-008",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    },
+    {
+      "slot": "L04-AUTH-009",
+      "bindingCountMembership": "PROVEN_BY_CYCLE_MANIFEST",
+      "bindingIdentity": "UNAVAILABLE_IN_CURRENT_REPOSITORY",
+      "hnkSurface": null,
+      "status": "BLOCKED_PENDING_SOURCE_RECOVERY_OR_NEW_AUTHORING"
+    }
+  ],
+  "interpretation": [
+    "The cycle manifest proves that nine L04 bindings were counted as recovered at baseline assembly time.",
+    "The current repository does not materialize the nine individual binding identities or HNK surfaces.",
+    "The count 9/9 must not be converted into guessed lexical items, pronouns, structures or phrases.",
+    "The English target Does he/she...? remains a curriculum target only and cannot identify the nine bindings."
+  ],
+  "nextGate": {
+    "id": "SWHNK-L04-CHESED-SOURCE-RECOVERY-OR-NEW-RELEASE-DECISION-V1",
+    "options": [
+      "SOURCE_RECOVERY: locate an external/original governed source that materializes the nine identities.",
+      "NEW_AUTHORING: deliberately author a new L04 release/version without impersonating recovered historical content."
+    ],
+    "recommended": "SOURCE_RECOVERY_FIRST_THEN_NEW_AUTHORING_IF_NOT_RECOVERABLE"
+  },
+  "nonEffects": [
+    "No new HNK content.",
+    "No historical identity invented.",
+    "No authority promotion.",
+    "No runtime activation."
+  ]
+}
