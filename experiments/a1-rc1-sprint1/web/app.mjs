@@ -5,6 +5,7 @@ import { LANGUAGE_VERSION, RUNTIME_STATUS, getLexeme } from '../core/registry.mj
 import { BOSS_VERSION, makeBossSeed, generateBossScenario } from '../core/final-boss.mjs';
 import { sanitizeQaTokens, createQaEvent, appendQaEvent, buildQaExport } from '../core/telemetry.mjs';
 import { ACQUISITION_ENGINE_VERSION, acquisitionStage, presentationPolicy, shuffleSurface, buildCodexCueTray, canUseHelp, getRecallAttemptCount, getDueReviewLevelIds, adaptiveBossProfile } from '../core/acquisition.mjs';
+import { deriveL04V2BridgeProgress, routeAfterCampaignLevel, completeL04V2BridgeMission } from '../core/l04-v2-student-flow-router.mjs';
 
 const APP_VERSION='HNK-A1-APP-ALPHA-0.2.1';
 const STORAGE_KEY='hnk-a1-rc1-sprint1-player';
@@ -15,6 +16,7 @@ let dialogue=[];
 let missionUtterances=[];
 let missionDraft='';
 let codexOpen=false;
+let bridgeMode=false;
 
 function loadState(){
   try{
@@ -87,6 +89,7 @@ function renderQaStart(){
 }
 
 function render(){
+  if(bridgeMode){ renderL04V2Bridge(); return; }
   if(state.qaSessionStatus==='NEW'){
     renderQaStart();
     return;
@@ -121,7 +124,7 @@ function render(){
         <div class="hints" id="hints"></div>
         <div class="footer-actions">
           <button class="secondary" id="hintBtn">💡 Dica</button>
-          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?'Entrar no Dungeon →':l.order===24?'Entrar no Open World →':l.order===31?'Enfrentar o Final Boss →':l.order===32?'Exportar Human QA':'Próxima fase →'}</button>`:''}
+          ${finished?`<button class="primary" id="nextBtn">${l.order===8?'Entrar na Forge →':l.order===16?(deriveL04V2BridgeProgress(state).status==='COMPLETED'?'Entrar no Dungeon →':'Entrar na Ponte Chesed →'):l.order===24?'Entrar no Open World →':l.order===31?'Enfrentar o Final Boss →':l.order===32?'Exportar Human QA':'Próxima fase →'}</button>`:''}
         </div>
         <div class="governance">Runtime: <strong>${escapeHtml(RUNTIME_STATUS)}</strong>. Conteúdo do A1 Lab não promove automaticamente léxico ou gramática a CANON.</div>
       </section>
@@ -145,6 +148,29 @@ function render(){
     save();
     render();
   });
+}
+
+
+function renderL04V2Bridge(){
+  const route=routeAfterCampaignLevel(state,'L16_MY_MOTHER_WORKS');
+  if(route.kind==='CAMPAIGN_LEVEL'){ bridgeMode=false; state.currentLevelId=route.levelId; save(); render(); return; }
+  const progress=deriveL04V2BridgeProgress(state);
+  const mission=route.missions.find(m=>!progress.completedMissionIds.includes(m.id));
+  if(!mission){ bridgeMode=false; state.currentLevelId='L17_NE_TRAP'; save(); render(); return; }
+  const n=route.missions.findIndex(m=>m.id===mission.id)+1;
+  app.innerHTML=`
+    <div class="shell"><header class="topbar"><div><div class="brand">HNK A1 · PONTE CHESED</div><small>L04 V2 · conteúdo governado</small></div><div class="stats"><span>🧭 ${n}/5</span><span>${state.completedLevels.length}/32</span></div></header>
+    <div class="progress" aria-label="Progresso da ponte"><span style="width:${Math.round(((n-1)/5)*100)}%"></span></div>
+    <section class="card"><div class="eyebrow">Ponte intersticial · Missão ${n}/5 · ${escapeHtml(mission.family)}</div><h1 class="title">Chesed V2</h1>
+    <p class="subtitle">Observe as formas licenciadas e reconheça também o limite: a forma próxima não é automaticamente válida.</p>
+    <div class="npc">${mission.surfaces.map(escapeHtml).join('<br>')}</div>
+    <div class="prompt">EXPOSURE → COMPREHENSION → NOTICE → RETRIEVAL → TRANSFER-BOUNDARY</div>
+    <div class="choices"><button class="choice" id="bridgeLicensed">✓ Reconheço as formas licenciadas</button><button class="choice" id="bridgeBoundary">🛡️ Rejeito: ${escapeHtml(mission.forbidden)}</button></div>
+    <div id="feedback"></div><div class="governance">Esta ponte usa somente a allowlist exata do L04 V2. Não cria níveis nem promove gramática universal.</div></section></div>`;
+  let licensed=false,boundary=false;
+  const finish=()=>{if(!(licensed&&boundary))return; state=completeL04V2BridgeMission(state,mission.id); save(); const done=deriveL04V2BridgeProgress(state).status==='COMPLETED'; if(done){bridgeMode=false;state.currentLevelId='L17_NE_TRAP';save();} render();};
+  document.querySelector('#bridgeLicensed')?.addEventListener('click',()=>{licensed=true;document.querySelector('#bridgeLicensed').disabled=true;finish();});
+  document.querySelector('#bridgeBoundary')?.addEventListener('click',()=>{boundary=true;document.querySelector('#bridgeBoundary').disabled=true;finish();});
 }
 
 function renderInteraction(l){
@@ -499,6 +525,11 @@ function downloadQaExport(){
 }
 
 function goNext(l){
+  if(l.id==='L16_MY_MOTHER_WORKS'){
+    const route=routeAfterCampaignLevel(state,l.id);
+    if(route.kind==='L04_V2_BRIDGE'){ bridgeMode=true; save(); render(); return; }
+    if(route.kind==='CAMPAIGN_LEVEL'){ state.currentLevelId=route.levelId; state.hearts=5; save(); render(); return; }
+  }
   if(l.order===32){
     downloadQaExport();
     document.querySelector('#interaction').innerHTML=`<div class="feedback ok"><strong>🏆 A1 SURVIVOR</strong><br>32/32 concluídos. Export Human QA gerado para esta sessão anônima.</div>`;
