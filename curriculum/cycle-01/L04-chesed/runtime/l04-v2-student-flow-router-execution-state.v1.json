@@ -1,0 +1,42 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-STUDENT-FLOW-ROUTER-EXECUTION-STATE-V1",
+  "status": "ROUTER_EXECUTION_PASS__STATE_MIGRATION_PASS__A1_REGRESSION_PASS",
+  "executedCommit": "5c731d04fa947b78efd6f867bc33abf554185919",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "router": {
+    "states": "LOCKED→AVAILABLE→IN_PROGRESS→COMPLETED",
+    "missions": "5/5",
+    "exit": "L17_NE_TRAP",
+    "legacyStateCompatible": true,
+    "result": "PASS"
+  },
+  "bridge": {
+    "missions": "5/5",
+    "surfaces": "8/8",
+    "defaultOff": true,
+    "result": "PASS"
+  },
+  "adapter": {
+    "exact": "8/8",
+    "forbiddenRejected": "8/8",
+    "defaultOff": true,
+    "result": "PASS"
+  },
+  "a1Regression": {
+    "alpha": "PASS",
+    "world1": "PASS",
+    "world2": "PASS",
+    "world3": "PASS",
+    "world4": "PASS",
+    "finalBoss": "PASS",
+    "levels": 32
+  },
+  "live": {
+    "webUiWired": false,
+    "studentFlowActive": false
+  },
+  "nextGate": "L04_V2_WEB_UI_WIRING_IMPLEMENTATION"
+}
