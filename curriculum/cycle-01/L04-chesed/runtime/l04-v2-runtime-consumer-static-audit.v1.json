@@ -1,0 +1,20 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-CONSUMER-STATIC-AUDIT-V1",
+  "status": "STATIC_AUDIT_COMPLETE_EXECUTION_PENDING",
+  "auditedCommit": "f86b8f4a9d0951a9858c8b44920de920d0ba4041",
+  "findings": {
+    "consumerModulePresent": true,
+    "consumerImportsPromotedManifest": true,
+    "exactSurfaceCardinalityGuard": 8,
+    "exactUniquenessGuard": 8,
+    "forbiddenProbeCount": 8,
+    "returnsNullOutsideAllowlist": true,
+    "noGeneratedVariants": true,
+    "lexicalAuthorityPromotion": false,
+    "universalGrammarPromotion": false,
+    "legacyManifestMutation": false
+  },
+  "executionEvidence": false,
+  "decision": "STATIC_CONTRACT_READY; DO NOT CLAIM EXECUTION PASS",
+  "nextGate": "EXECUTE_CONSUMER_TEST_AND_INTEGRATION_SMOKE"
+}
