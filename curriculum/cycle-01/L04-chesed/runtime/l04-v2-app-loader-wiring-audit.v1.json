@@ -1,0 +1,25 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-APP-LOADER-WIRING-AUDIT-V1",
+  "status": "APP_LOADER_WIRING_GAP_CONFIRMED",
+  "auditedCommit": "e6d768a15739bc84844218fdfccc75ea7d1586a3",
+  "scope": "A1_ALPHA_APP_COURSE_LOADER",
+  "evidence": {
+    "runtimeConsumer": "src/hnk/l04-v2-runtime-consumer-v1.mjs",
+    "a1Build": "scripts/build-a1-alpha.mjs",
+    "a1CourseDefinition": "experiments/a1-rc1-sprint1/core/levels.mjs",
+    "a1Registry": "experiments/a1-rc1-sprint1/core/registry.mjs"
+  },
+  "findings": [
+    "The A1 alpha build copies experiments/a1-rc1-sprint1 core/web/release into dist/a1.",
+    "The A1 course is driven by experiments/a1-rc1-sprint1/core/levels.mjs and registry.mjs.",
+    "No inspected A1 loader/build path imports src/hnk/l04-v2-runtime-consumer-v1.mjs.",
+    "Therefore L04 V2 governance/runtime-contract integration is confirmed, but end-user A1 course-loader consumption is not yet wired."
+  ],
+  "nonEffects": [
+    "NO_LANGUAGE_CONTENT_CHANGE",
+    "NO_LEXICAL_AUTHORITY_PROMOTION",
+    "NO_UNIVERSAL_GRAMMAR",
+    "NO_L05_L06_L07_CHANGE"
+  ],
+  "nextRecommendedGate": "L04_V2_A1_LOADER_ADAPTER_PROPOSAL"
+}
