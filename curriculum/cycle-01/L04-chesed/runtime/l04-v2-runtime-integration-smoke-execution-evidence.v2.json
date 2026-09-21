@@ -1,0 +1,25 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-INTEGRATION-SMOKE-EXECUTION-EVIDENCE-V2",
+  "status": "L04_V2_RUNTIME_INTEGRATION_CONFIRMED",
+  "executedCommit": "3836be387cb3e77dc17f519be988fde400ca1e4a",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "command": "node tests/validate-hnk-l04-v2-runtime-integration-smoke-v1.mjs",
+  "stdout": "PASS L04 V2 RUNTIME INTEGRATION SMOKE: 5 structures / 8 exact surfaces active; 8 forbidden probes rejected; writing 8/8; authorities + legacy state preserved",
+  "exitCode": 0,
+  "confirmed": {
+    "structures": 5,
+    "exactSurfaces": 8,
+    "forbiddenProbesRejected": 8,
+    "writing": "8/8",
+    "authoritiesPreserved": true,
+    "legacyStatePreserved": true
+  },
+  "scope": "GOVERNANCE_RUNTIME_CONTRACT_INTEGRATION",
+  "limitations": [
+    "This confirms the governed runtime contract and importable consumer path; it does not by itself prove a separate end-user app/course loader renders these surfaces."
+  ],
+  "nextRecommendedGate": "L04_V2_APP_LOADER_WIRING_AUDIT"
+}
