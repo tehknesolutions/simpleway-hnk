@@ -1,0 +1,9 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-WEB-UI-WIRING-V1",
+  "status": "IMPLEMENTED_AWAITING_EXECUTION",
+  "route": "L16 → 5-mission Chesed bridge UI → L17",
+  "campaignLevels": 32,
+  "liveActivation": false,
+  "qaNote": "Bridge completion currently persists through existing local save(); no PLAYER_STATE_VERSION bump in this gate.",
+  "nextGate": "WEB_UI_WIRING_EXECUTION_AND_END_TO_END_QA"
+}
