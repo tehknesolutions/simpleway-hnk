@@ -1,0 +1,91 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-PEDAGOGICAL-PLACEMENT-PROPOSAL-V1",
+  "status": "PROPOSED_HUMAN_DECISION_REQUIRED",
+  "baseline": {
+    "campaignLevels": 32,
+    "mutation": "NONE",
+    "adapterDefaultEnabled": false
+  },
+  "principle": "Introduce L04 V2 as a governed optional bridge/review layer, not by rewriting the frozen 32-level campaign.",
+  "recommendedPlacement": {
+    "model": "INTERSTITIAL_BRIDGE_AFTER_WORLD_2_BEFORE_WORLD_3",
+    "reasoning": [
+      "World 2 already establishes construction practice with VALI/PARAZAMI and prepares learners for controlled composition.",
+      "L04 V2 introduces scoped third-person questions and habituality before World 3 explicitly teaches anti-overgeneralization boundaries.",
+      "Keeping it interstitial avoids renumbering or replacing the frozen 32-level baseline."
+    ],
+    "activation": "HUMAN_GATE_REQUIRED"
+  },
+  "sequence": [
+    {
+      "step": 1,
+      "family": "STR001",
+      "surfaces": [
+        "ERU VALI KE",
+        "ERU PARAZAMI KE"
+      ],
+      "goal": "controlled third-person activity questions"
+    },
+    {
+      "step": 2,
+      "family": "STR002",
+      "surfaces": [
+        "ERU RUMI VALIVAN KE",
+        "ERU RUMI PARAZAMO KE"
+      ],
+      "goal": "controlled third-person place questions"
+    },
+    {
+      "step": 3,
+      "family": "STR003",
+      "surfaces": [
+        "ERU DAYI KE"
+      ],
+      "goal": "exact bare intention question"
+    },
+    {
+      "step": 4,
+      "family": "STR004",
+      "surfaces": [
+        "ERU SALI KE"
+      ],
+      "goal": "exact bare need question"
+    },
+    {
+      "step": 5,
+      "family": "STR005",
+      "surfaces": [
+        "SARU ERU VALI KE",
+        "SARU ERU PARAZAMI KE"
+      ],
+      "goal": "controlled habitual third-person activity questions; SARU remains every-day/habituality, never usually"
+    }
+  ],
+  "pedagogy": [
+    "EXPOSURE: encounter exact surface in a contextual micro-scene.",
+    "COMPREHENSION: choose the licensed local reading.",
+    "NOTICE: highlight only the scoped structure, not a universal formula.",
+    "RETRIEVAL: reconstruct/select the exact allowlisted surface.",
+    "TRANSFER-BOUNDARY: reject one nearby forbidden variant to teach negative space."
+  ],
+  "forbidden": [
+    "No removal of KE to derive declarations.",
+    "No DAYI/SALI object or VEMI complements.",
+    "No SARU with DAYI or SALI.",
+    "No universal ERU/KE/RUMI/temporal-order rule.",
+    "No SARU=usually.",
+    "No generated variants outside the eight-surface allowlist."
+  ],
+  "assessment": {
+    "completionUnit": "5 micro-missions / 8 exact surfaces",
+    "passCondition": "All five families demonstrated without accepting forbidden variants",
+    "xp": "UNRESOLVED_NON_LINGUISTIC_DESIGN_DECISION"
+  },
+  "nonEffects": [
+    "NO_32_LEVEL_RENUMBERING",
+    "NO_EXISTING_LEVEL_REPLACEMENT",
+    "NO_LANGUAGE_AUTHORITY_PROMOTION",
+    "NO_L05_L06_L07_CHANGE"
+  ],
+  "nextGate": "EXPLICIT_HUMAN_PEDAGOGICAL_PLACEMENT_APPROVAL"
+}
