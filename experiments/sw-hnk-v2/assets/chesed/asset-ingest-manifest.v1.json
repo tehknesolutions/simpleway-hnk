@@ -1,0 +1,12 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-ASSET-INGEST-MANIFEST-V1",
+  "status": "BINARY_INGEST_PENDING",
+  "target_root": "experiments/sw-hnk-v2/assets/chesed",
+  "assets": [
+    {"slot":"HNK-L04-CONTEXT-ACTIVITY","file":"hnk-l04-chesed-activity.webp","bytes":54462,"sha256":"99166ed7631fc2b482b862cefd4ee50141591333a9394cbcd1a083e93089fce0"},
+    {"slot":"HNK-L04-CONTEXT-PLACE","file":"hnk-l04-chesed-place.webp","bytes":84222,"sha256":"701e72652c484203f53a58b8a97a94e53e7c1ad24e6e842c3a5d5215dfe63c7f"},
+    {"slot":"HNK-L04-CONTEXT-INTENTION","file":"hnk-l04-chesed-intention.webp","bytes":49412,"sha256":"737cbd96b58c09ab0efe80704a0618d1e940087a61fad5388f23e35579101e14"},
+    {"slot":"HNK-L04-CONTEXT-NEED","file":"hnk-l04-chesed-need.webp","bytes":57256,"sha256":"24eda1971728c8222b47b81da29c8cb6b39f3654eafe6de0b1d61ff8efbb7e92"},
+    {"slot":"HNK-L04-CONTEXT-HABITUAL","file":"hnk-l04-chesed-habitual.webp","bytes":34486,"sha256":"f45d27c24ca5e97b760fc25e308e1ab071b9345fa8c00ae8b561370057c84c55"}
+  ]
+}
