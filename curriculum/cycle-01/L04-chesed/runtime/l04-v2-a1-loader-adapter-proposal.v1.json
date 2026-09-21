@@ -1,0 +1,39 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-A1-LOADER-ADAPTER-PROPOSAL-V1",
+  "status": "PROPOSED_NON_PROMOTIONAL_ADAPTER",
+  "purpose": "Connect the A1 alpha course loader to the already-promoted L04 V2 exact-surface runtime without duplicating or expanding language authority.",
+  "sourceOfTruth": "src/hnk/l04-v2-runtime-consumer-v1.mjs",
+  "target": "experiments/a1-rc1-sprint1/core",
+  "design": {
+    "adapter": "core/l04-v2-adapter.mjs",
+    "contract": [
+      "Import the governed runtime consumer; do not duplicate the eight-surface allowlist.",
+      "Expose only exact-surface lookup and metadata needed by A1 pedagogy.",
+      "Reject every surface not accepted by isL04V2RuntimeSurface().",
+      "Do not derive declarations by removing KE or generate token permutations.",
+      "Keep existing 32-level frozen baseline unchanged until a separate human activation gate authorizes placement.",
+      "Adapter activation must be feature-gated and default OFF during implementation validation."
+    ],
+    "activation": {
+      "default": false,
+      "scope": "L04_V2_EXACT_EIGHT_SURFACES_ONLY",
+      "placement": "UNRESOLVED_PENDING_PEDAGOGICAL_MAPPING"
+    }
+  },
+  "requiredGates": [
+    "ADAPTER_IMPLEMENTATION",
+    "ADAPTER_STATIC_VALIDATION",
+    "ADAPTER_EXECUTION_PASS",
+    "A1_32_LEVEL_REGRESSION_PASS",
+    "PEDAGOGICAL_PLACEMENT_PROPOSAL",
+    "EXPLICIT_HUMAN_ACTIVATION"
+  ],
+  "nonEffects": [
+    "NO_NEW_HNK_SURFACES",
+    "NO_LEXICAL_AUTHORITY_PROMOTION",
+    "NO_UNIVERSAL_GRAMMAR",
+    "NO_AUTOMATIC_REPLACEMENT_OF_EXISTING_A1_LEVELS",
+    "NO_L05_L06_L07_CHANGE"
+  ],
+  "nextRecommendedGate": "L04_V2_A1_LOADER_ADAPTER_IMPLEMENTATION"
+}
