@@ -1,0 +1,30 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-A1-ADAPTER-EXECUTION-REGRESSION-V1",
+  "status": "ADAPTER_EXECUTION_PASS__A1_BASELINE_REGRESSION_PASS",
+  "executedCommit": "1b025806dc1cdc3fead0c0f937314fa503472413",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "adapter": {
+    "result": "PASS",
+    "defaultOff": true,
+    "exactSurfacesResolvedWhenExplicitlyEnabled": "8/8",
+    "forbiddenProbesRejected": "8/8"
+  },
+  "a1Regression": {
+    "alphaRelease": "PASS",
+    "world1Sprint1": "PASS",
+    "world2Sprint2": "PASS",
+    "world3Sprint3": "PASS",
+    "world4Sprint4": "PASS",
+    "finalBossSprint5": "PASS",
+    "campaignBaseline": "32_LEVEL_BASELINE_PRESERVED"
+  },
+  "claims": {
+    "pedagogicalPlacementApproved": false,
+    "adapterActivatedByDefault": false,
+    "newLanguageContent": false
+  },
+  "nextGate": "L04_V2_PEDAGOGICAL_PLACEMENT_PROPOSAL"
+}
