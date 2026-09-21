@@ -1,0 +1,40 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-PEDAGOGICAL-BRIDGE-EXECUTION-REGRESSION-V1",
+  "status": "BRIDGE_EXECUTION_PASS__A1_32_LEVEL_REGRESSION_PASS",
+  "executedCommit": "ad1d995e821bd71f4723dbf37b144735babfde34",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "bridge": {
+    "microMissions": "5/5",
+    "governedSurfaces": "8/8",
+    "defaultEnabled": false,
+    "result": "PASS"
+  },
+  "adapter": {
+    "exactSurfaces": "8/8",
+    "forbiddenProbesRejected": "8/8",
+    "defaultEnabled": false,
+    "result": "PASS"
+  },
+  "a1Regression": {
+    "alphaRelease": "PASS",
+    "world1": "PASS",
+    "world2": "PASS",
+    "world3": "PASS",
+    "world4": "PASS",
+    "finalBoss": "PASS",
+    "baselineLevels": 32
+  },
+  "activation": {
+    "studentFlowActive": false,
+    "reason": "Execution validates the bridge contract; explicit student-flow wiring remains a separate gate."
+  },
+  "nonEffects": [
+    "NO_LANGUAGE_AUTHORITY_PROMOTION",
+    "NO_32_LEVEL_RENUMBERING",
+    "NO_L05_L06_L07_CHANGE"
+  ],
+  "nextGate": "L04_V2_STUDENT_FLOW_ACTIVATION_PROPOSAL"
+}
