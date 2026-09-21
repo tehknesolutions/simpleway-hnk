@@ -1,0 +1,34 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-LIVE-ACTIVATION-V1",
+  "status": "LIVE_ACTIVATION_APPROVED_BY_HUMAN",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "approvedDate": "2026-09-21",
+  "preconditions": {
+    "webUiWiring": "PASS",
+    "buildA1Alpha": "PASS",
+    "routeContract": "PASS",
+    "a1Regression": "PASS",
+    "bridgeMissions": "5/5",
+    "governedSurfaces": "8/8",
+    "baselineLevels": 32
+  },
+  "activatedScope": {
+    "route": "L16_MY_MOTHER_WORKS → L04 V2 bridge → L17_NE_TRAP",
+    "bridgeRequiredOnce": true,
+    "replayAfterCompletion": true,
+    "adapterScope": "BRIDGE_CONTEXT_ONLY",
+    "campaignLevelCount": 32
+  },
+  "languageGovernance": {
+    "lexicalAuthorityPromotion": false,
+    "universalGrammarPromotion": false,
+    "generatedVariants": false,
+    "l05l06l07Change": false
+  },
+  "limitations": [
+    "Human live activation approves the governed student-flow feature for release use; it is not human usability evidence.",
+    "P01–P07 evidence remains separate and must come from eligible human sessions.",
+    "Visual browser click-through remains a separate QA evidence class unless explicitly executed."
+  ],
+  "nextRecommendedGate": "L04_V2_RELEASE_ARTIFACT_AND_DEPLOYMENT_VERIFICATION"
+}
