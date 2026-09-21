@@ -1,0 +1,32 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-WEB-UI-BUILD-E2E-EVIDENCE-V1",
+  "status": "WEB_UI_WIRING_PASS__BUILD_PASS__ROUTE_CONTRACT_PASS__A1_REGRESSION_PASS",
+  "executedCommit": "2f543003cc3eb671e22f29b951fcc4416db9c1b7",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "results": {
+    "webUiStaticContract": "PASS",
+    "studentFlowRouter": "PASS",
+    "pedagogicalBridge": "PASS",
+    "loaderAdapter": "PASS",
+    "buildA1Alpha": "PASS",
+    "alphaRelease": "PASS",
+    "world1": "PASS",
+    "world2": "PASS",
+    "world3": "PASS",
+    "world4": "PASS",
+    "finalBoss": "PASS"
+  },
+  "route": "L16 → Chesed bridge 5 missions → L17",
+  "surfaces": "8/8 governed",
+  "forbiddenProbes": "8/8 rejected by adapter contract",
+  "baselineLevels": 32,
+  "limitations": [
+    "This run verifies source wiring, core route execution, build output, and campaign validators. It is not a visual browser click-through or human usability test.",
+    "Live student activation remains behind the explicit human live-activation gate."
+  ],
+  "liveActivation": false,
+  "nextGate": "EXPLICIT_HUMAN_LIVE_ACTIVATION"
+}
