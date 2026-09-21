@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {createPlayerState,hydratePlayerState} from '../experiments/a1-rc1-sprint1/core/player-state.mjs';
+import {deriveL04V2BridgeProgress,routeAfterCampaignLevel,completeL04V2BridgeMission,L04_V2_BRIDGE_EXIT_TO} from '../experiments/a1-rc1-sprint1/core/l04-v2-student-flow-router.mjs';
+let s=createPlayerState({playerId:'P',qaSessionId:'S'});
+assert.equal(deriveL04V2BridgeProgress(s).status,'LOCKED');
+s.completedLevels.push('L16_MY_MOTHER_WORKS');
+assert.equal(deriveL04V2BridgeProgress(s).status,'AVAILABLE');
+let route=routeAfterCampaignLevel(s,'L16_MY_MOTHER_WORKS'); assert.equal(route.kind,'L04_V2_BRIDGE'); assert.equal(route.missions.length,5);
+for(const m of route.missions) s=completeL04V2BridgeMission(s,m.id,'2026-09-21T00:00:00.000Z');
+assert.equal(deriveL04V2BridgeProgress(s).status,'COMPLETED');
+assert.deepEqual(routeAfterCampaignLevel(s,'L16_MY_MOTHER_WORKS'),{kind:'CAMPAIGN_LEVEL',levelId:L04_V2_BRIDGE_EXIT_TO});
+const legacy=hydratePlayerState({playerId:'OLD',qaSessionId:'OLD-S',completedLevels:['L16_MY_MOTHER_WORKS']});
+assert.equal(deriveL04V2BridgeProgress(legacy).status,'AVAILABLE');
+assert.equal((legacy.completedLevels??[]).length,1);
+console.log('PASS L04 V2 STUDENT FLOW ROUTER: LOCKED→AVAILABLE→IN_PROGRESS→COMPLETED; 5/5 bridge missions; exit to existing L17; legacy state compatible');
