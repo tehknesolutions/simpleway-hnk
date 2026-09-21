@@ -1,0 +1,70 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-STUDENT-FLOW-ACTIVATION-PROPOSAL-V1",
+  "status": "PROPOSED_HUMAN_DECISION_REQUIRED",
+  "preconditions": {
+    "bridgeExecution": "PASS_5_OF_5",
+    "governedSurfaces": "PASS_8_OF_8",
+    "forbiddenProbes": "REJECTED_8_OF_8",
+    "a1Baseline": "PASS_32_LEVELS"
+  },
+  "route": {
+    "entry": "AFTER_WORLD_2_COMPLETION",
+    "bridge": "L04_V2_PEDAGOGICAL_BRIDGE_V1",
+    "exit": "BEFORE_WORLD_3_ENTRY",
+    "campaignLevelMutation": "NONE"
+  },
+  "activation": {
+    "mode": "INTERSTITIAL_REQUIRED_ONCE_PER_PLAYER_AFTER_WORLD_2",
+    "adapterEnabledOnlyInsideBridge": true,
+    "globalAdapterDefault": false,
+    "reentry": "ALLOW_REPLAY_AFTER_COMPLETION_WITHOUT_BLOCKING_WORLD_3",
+    "skip": "NOT_IN_INITIAL_ACTIVATION"
+  },
+  "progress": {
+    "storage": "PLAYER_STATE_EXTENSION_REQUIRED",
+    "fields": [
+      "l04V2Bridge.status",
+      "l04V2Bridge.completedMissionIds",
+      "l04V2Bridge.completedAt"
+    ],
+    "states": [
+      "LOCKED",
+      "AVAILABLE",
+      "IN_PROGRESS",
+      "COMPLETED"
+    ],
+    "migration": "Backward-compatible: existing player state without l04V2Bridge derives AVAILABLE only if World 2 is complete; otherwise LOCKED."
+  },
+  "completion": {
+    "requires": [
+      "5/5 micro-missions completed",
+      "8/8 governed surfaces encountered",
+      "transfer-boundary checks completed"
+    ],
+    "effect": "Unlock normal World 3 entry; no campaign level number is created."
+  },
+  "failure": {
+    "effect": "Remain inside/re-enter bridge; do not mutate linguistic authority or campaign level completion."
+  },
+  "ux": {
+    "entryCue": "Diegetic Chesed bridge event after World 2 completion.",
+    "progressCue": "5 micro-mission progress, not level numbers.",
+    "exitCue": "Bridge completion returns to existing World 3 entry."
+  },
+  "guards": [
+    "No generated variants.",
+    "No adapter activation outside bridge context.",
+    "No 32-level renumbering.",
+    "No XP decision in this proposal.",
+    "No L05/L06/L07 changes.",
+    "No lexical or universal grammar promotion."
+  ],
+  "implementationGates": [
+    "STUDENT_FLOW_ROUTER_IMPLEMENTATION",
+    "PLAYER_STATE_MIGRATION_VALIDATION",
+    "BRIDGE_ROUTE_EXECUTION_PASS",
+    "32_LEVEL_REGRESSION_PASS",
+    "EXPLICIT_HUMAN_LIVE_ACTIVATION"
+  ],
+  "nextGate": "L04_V2_STUDENT_FLOW_ROUTER_IMPLEMENTATION"
+}
