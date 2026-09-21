@@ -1,0 +1,16 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-A1-LOADER-ADAPTER-IMPLEMENTATION-V1",
+  "status": "IMPLEMENTED_DEFAULT_OFF_AWAITING_EXECUTION",
+  "sourceRuntime": "src/hnk/l04-v2-runtime-consumer-v1.mjs",
+  "adapter": "experiments/a1-rc1-sprint1/core/l04-v2-adapter.mjs",
+  "defaultEnabled": false,
+  "scope": "L04_V2_EXACT_EIGHT_SURFACES_ONLY",
+  "surfaceDuplication": false,
+  "baselineMutation": false,
+  "claims": {
+    "executionPass": false,
+    "a1RegressionPass": false,
+    "pedagogicalPlacementApproved": false
+  },
+  "nextGate": "ADAPTER_EXECUTION_AND_A1_32_LEVEL_REGRESSION"
+}
