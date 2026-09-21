@@ -1,0 +1,12 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-PEDAGOGICAL-BRIDGE-MATERIALIZATION-V1",
+  "status": "MATERIALIZED_DEFAULT_OFF_AWAITING_EXECUTION",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "placement": "AFTER_WORLD_2_BEFORE_WORLD_3",
+  "microMissions": 5,
+  "exactSurfaces": 8,
+  "baselineLevels": 32,
+  "defaultEnabled": false,
+  "languageAuthorityPromotion": false,
+  "nextGate": "PEDAGOGICAL_BRIDGE_EXECUTION_AND_32_LEVEL_REGRESSION"
+}
