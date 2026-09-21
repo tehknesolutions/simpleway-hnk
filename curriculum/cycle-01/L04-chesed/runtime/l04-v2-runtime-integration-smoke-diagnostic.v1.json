@@ -1,0 +1,17 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-RUNTIME-INTEGRATION-SMOKE-DIAGNOSTIC-V1",
+  "status": "TEST_DEFECT_IDENTIFIED_AND_PATCHED_AWAITING_REEXECUTION",
+  "executedCommit": "f542241094f3ead3b775118ae1c7150afaa7594f",
+  "environment": {
+    "device": "TW-DA-VINCI-HNK-TEHKNE",
+    "node": "v24.18.0"
+  },
+  "observed": {
+    "consumer": "PASS",
+    "integrationSmoke": "FAIL_TEST_ASSERTION_SCHEMA_MISMATCH",
+    "promotion": "PASS"
+  },
+  "diagnosis": "Smoke expected ux.mode=CONTROLLED_TEACHING_ONLY, but the governed UX contract expresses control through status, feedbackPolicy and forbiddenContent; no linguistic/runtime contract failure was observed.",
+  "correction": "Assert the actual governed UX contract fields without changing language content or runtime authority.",
+  "nextGate": "REEXECUTE_PATCHED_INTEGRATION_SMOKE"
+}
