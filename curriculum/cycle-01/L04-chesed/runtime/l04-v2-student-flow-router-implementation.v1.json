@@ -1,0 +1,13 @@
+{
+  "artifact_id": "SWHNK-L04-CHESED-V2-STUDENT-FLOW-ROUTER-IMPLEMENTATION-V1",
+  "status": "IMPLEMENTED_CORE_ROUTER_AWAITING_EXECUTION",
+  "humanDecision": "APPROVED_BY_A.S.",
+  "entryAfter": "L16_MY_MOTHER_WORKS",
+  "exitTo": "L17_NE_TRAP",
+  "bridgeMissions": 5,
+  "campaignLevelMutation": false,
+  "webUiWiring": false,
+  "liveActivation": false,
+  "playerStateStrategy": "Backward-compatible derived extension; no PLAYER_STATE_VERSION bump until persistence/UI wiring gate.",
+  "nextGate": "STUDENT_FLOW_ROUTER_EXECUTION_AND_STATE_MIGRATION_VALIDATION"
+}
